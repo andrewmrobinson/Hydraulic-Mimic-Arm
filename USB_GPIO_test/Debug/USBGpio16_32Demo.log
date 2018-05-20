@@ -1,0 +1,9 @@
+﻿  USBGpio16_32Demo.cpp
+c:\users\arobo\desktop\project\usbgpio16_32demo\usbgpio16_32demo.cpp(72): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
+c:\users\arobo\desktop\project\usbgpio16_32demo\usbgpio16_32demo.cpp(124): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
+c:\users\arobo\desktop\project\usbgpio16_32demo\usbgpio16_32demo.cpp(104): warning C4101: 'pos': unreferenced local variable
+c:\users\arobo\desktop\project\usbgpio16_32demo\usbgpio16_32demo.cpp(106): warning C4101: 'int_str': unreferenced local variable
+c:\users\arobo\desktop\project\usbgpio16_32demo\usbgpio16_32demo.cpp(105): warning C4101: 'read_com': unreferenced local variable
+  USBGpio16_32Demo.vcxproj -> C:\Users\arobo\Desktop\Project\USBGpio16_32Demo\Debug\USBGpio16_32Demo.exe

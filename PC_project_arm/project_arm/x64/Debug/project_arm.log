@@ -1,0 +1,7 @@
+﻿D:\Programs\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (project_arm.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  stdafx.cpp
+  PC_project_arm.cpp
+c:\users\arobo\desktop\project\project_arm\pc_project_arm\project_arm\pc_project_arm.cpp(262): warning C4101: 'psoc_status': unreferenced local variable
+  project_arm.vcxproj -> C:\Users\arobo\Desktop\Project\project_arm\PC_project_arm\x64\Debug\PC_project_arm.exe
+  C:\Users\arobo\Desktop\Project\LeapSDK\lib\x64\Leap.dll
+  1 File(s) copied
