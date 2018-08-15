@@ -40,8 +40,9 @@ volatile int new_angle = 0;
 volatile int new_angle_set = 0;
 int angle = 0;
 int isNegative=0;
-char sendValue[8];
-int16 adcValue;
+char sendValue[12];
+int16 adcValue1;
+int16 adcValue2;
 
 CY_ISR(RxIsr)
 {
@@ -91,8 +92,8 @@ CY_ISR(RxIsr)
                         if(new_angle_set==0)
                             new_angle_set = 1;
                         isNegative = 0;
-                        adcValue = ADC_SAR_1_GetResult16() ;
-                        sprintf(sendValue,"%08d",adcValue);
+                        //adcValue = ADC_SAR_1_GetResult16() ;
+                        //sprintf(sendValue,"%08d",adcValue);
                         UART_PutString(sendValue);
                         angle_read_mode=0;
                     }
@@ -136,6 +137,8 @@ int main()
     PWM_1_Start();
     ADC_SAR_1_Start(); 
     ADC_SAR_1_StartConvert(); 
+    ADC_SAR_2_Start(); 
+    ADC_SAR_2_StartConvert(); 
     
     uint8 button = 0u;
     uint8 buttonPre = 0u;
@@ -155,15 +158,19 @@ int main()
     int up = 1;
     int cycle = 1000;
 
-PWM_1_WriteCompare(dutycyclelength(-45));
-CyDelay(1000);
-PWM_1_WriteCompare(dutycyclelength(0));
-CyDelay(1000);
-PWM_1_WriteCompare(dutycyclelength(45));
-CyDelay(1000);
     for(;;)
     {
         
+        adcValue1 = ADC_SAR_1_GetResult16() ;
+        adcValue2 = ADC_SAR_2_GetResult16() ;
+        sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
+        UART_PutString(sendValue);
+        
+        //angle = ((float)adcValue/4096.00)*90.00 - 45.00;
+        //PWM_1_WriteCompare(dutycyclelength(angle));
+        
+        //PWM_1_WriteCompare(dutycyclelength(0));
+        /*
         if(new_angle_set){
             angle = new_angle;
             new_angle_set = 0;
@@ -173,10 +180,10 @@ CyDelay(1000);
                 PWM_1_WriteCompare(dutycyclelength(angle));
             }
         }
-        
+        */
         
         //PWM_1_WriteCompare(dutycyclelength(angle))
-        CyDelay(1);
+        CyDelay(100);
         
         
         /***********************************************************************
