@@ -137,16 +137,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_2_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_2_theACLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_2_theACLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1_Ext_CP_Clk.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1_Ext_CP_Clk.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1_IRQ.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1_IRQ.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1_theACLK.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_DelSig_1_theACLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\pwm1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\pwm1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\pwm1.h</File>

@@ -46,7 +46,7 @@ int16 adcValue1;
 int16 adcValue2;
 char temp[6];
 int nn=0;
-double pid[3] = {0,0,0};
+double pid[3] = {1,0,0};
 char help[1000];
 int tt = 0;
 int pos;
@@ -216,7 +216,7 @@ int main()
         sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
         UART_PutString(sendValue);
         */
-        PWM_1_WriteCompare(dutycyclelength(0));
+        //PWM_1_WriteCompare(dutycyclelength(0));
         if(new_pos_set){
             pos = new_pos;
             new_pos_set = 0;
@@ -228,7 +228,7 @@ int main()
             angle = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
 
             //angle = ((float)pos/4096.00)*90.00 - 45.00;
-            angle = 0;
+            //angle = 0;
             //Limit angles of proportional valve
             if(angle>45){angle=45;}
             if(angle<-45){angle=-45;}
