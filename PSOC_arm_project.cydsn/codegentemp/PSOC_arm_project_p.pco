@@ -40,7 +40,7 @@ set_location "\UART:BUART:rx_postpoll\" macrocell 0 0 0 1
 set_location "\UART:BUART:sRX:RxShifter:u0\" datapathcell 0 0 2 
 set_location "\UART:BUART:rx_status_3\" macrocell 0 0 1 2
 set_location "\ADC_DelSig_1:DSM\" dsmodcell -1 -1 0
-set_io "Pin_2(0)" iocell 1 6
+set_io "pwm1(0)" iocell 1 6
 set_location "\ADC_SAR_2:ADC_SAR\" sarcell -1 -1 1
 set_location "\PWM_1:PWMUDB:genblk1:ctrlreg\" controlcell 0 2 6 
 set_location "\ADC_SAR_1:IRQ\" interrupt -1 -1 0

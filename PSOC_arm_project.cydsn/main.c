@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "common.h"
 #include <math.h>
+#include <stdlib.h>     /* strtod */
 
 #define	Frequency 1000000.0			// Frequency of PWMClock
 #define	One_ms (Frequency/1000.0)	// 1 ms constant
@@ -35,15 +36,21 @@ uint16 dutycyclelength(int angle)
 *  None.
 *
 *******************************************************************************/
-int angle_read_mode = 0;
+int data_read_mode = 0;
 volatile int new_angle = 0;
-volatile int new_angle_set = 0;
+volatile int new_pos_set = 0;
 int angle = 0;
 int isNegative=0;
 char sendValue[12];
 int16 adcValue1;
 int16 adcValue2;
-
+char temp[6];
+int nn=0;
+double pid[3] = {0,0,0};
+char help[1000];
+int tt = 0;
+int pos;
+int new_pos;
 CY_ISR(RxIsr)
 {
     uint8 rxStatus;         
@@ -66,43 +73,83 @@ CY_ISR(RxIsr)
         {
             /* Read data from the RX data register */
             rxData = UART_RXDATA_REG;
+            help[tt] = rxData;
+            tt++;
             
-            switch(angle_read_mode)
+            switch(data_read_mode)
             {
                 case 0:
                     if(rxData=='{' )
                     {
                         new_angle = 0;
-                        angle_read_mode++;
+                        data_read_mode++;
                     }
                 break;
                 case 1:
-                    if(rxData<=0x39 & rxData>=0x30)
-                    {
-                        if(new_angle_set==0)
-                            new_angle = new_angle*10 + (rxData-48);
+                    if(rxData=='x'){
+                        data_read_mode = 2;}
+                    else if(rxData=='p'){
+                        data_read_mode = 3;}
+                    else if(rxData=='i'){
+                        data_read_mode = 4;}
+                    else if(rxData=='d'){
+                        data_read_mode = 5;}
+                break;
+                case 2:
+                    if(rxData != '}'){
+                        temp[nn] = rxData;
+                        nn++;
                     }
-                    else if(rxData == '-')
-                    {
-                        isNegative = 1;
-                    }
-                    else if(rxData=='}')
-                    {
-                        if(isNegative){new_angle = -new_angle;}
-                        if(new_angle_set==0)
-                            new_angle_set = 1;
-                        isNegative = 0;
-                        //adcValue = ADC_SAR_1_GetResult16() ;
-                        //sprintf(sendValue,"%08d",adcValue);
+                    else {
+                        new_pos = (int) strtol(temp, (char **)NULL, 10);
+                        new_pos_set = 1;
+                        nn=0;
+                        char temp[] = "      ";
+                        adcValue1 = ADC_SAR_1_GetResult16() ;
+                        sprintf(sendValue,"%08d",adcValue1);
                         UART_PutString(sendValue);
-                        angle_read_mode=0;
+                        data_read_mode = 0;
                     }
-                    else 
-                    {
-                        new_angle = 0;
-                        angle_read_mode=0;
-                        isNegative = 0;
+                  
+                break;
+                case 3:
+                    if(rxData != '}'){
+                        temp[nn] = rxData;
+                        nn++;
                     }
+                    else {
+                        pid[0] = strtod(temp, NULL);
+                        nn=0;
+                        char temp[] = "      ";
+                        data_read_mode = 0;
+                    }
+                    
+                break;
+                case 4:
+                    if(rxData != '}'){
+                        temp[nn] = rxData;
+                        nn++;
+                    }
+                    else {
+                        pid[1] = strtod(temp, NULL);
+                        nn=0;
+                        char temp[] = "      ";
+                        data_read_mode = 0;
+                    }
+                    
+                break;
+                case 5:
+                    if(rxData != '}'){
+                        temp[nn] = rxData;
+                        nn++;
+                    }
+                    else {
+                        pid[2] = strtod(temp, NULL);
+                        nn=0;
+                        char temp[] = "      ";
+                        data_read_mode = 0;
+                    }
+                    
                 break;
             }
             
@@ -137,8 +184,8 @@ int main()
     PWM_1_Start();
     ADC_SAR_1_Start(); 
     ADC_SAR_1_StartConvert(); 
-    ADC_SAR_2_Start(); 
-    ADC_SAR_2_StartConvert(); 
+    //ADC_SAR_2_Start(); 
+    //ADC_SAR_2_StartConvert(); 
     
     uint8 button = 0u;
     uint8 buttonPre = 0u;
@@ -158,31 +205,38 @@ int main()
     int up = 1;
     int cycle = 1000;
 
+    double der, err, prev_err, pid_integral,dt;
+    der = 0; prev_err = 0; pid_integral = 0; 
+    dt = 0.01; //assumes cydelay = 10 below for a 100Hz frequency.
     for(;;)
     {
         
-        adcValue1 = ADC_SAR_1_GetResult16() ;
+        /*adcValue1 = ADC_SAR_1_GetResult16() ;
         adcValue2 = ADC_SAR_2_GetResult16() ;
         sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
         UART_PutString(sendValue);
-        
-        //angle = ((float)adcValue/4096.00)*90.00 - 45.00;
-        //PWM_1_WriteCompare(dutycyclelength(angle));
-        
-        //PWM_1_WriteCompare(dutycyclelength(0));
-        /*
-        if(new_angle_set){
-            angle = new_angle;
-            new_angle_set = 0;
+        */
+        PWM_1_WriteCompare(dutycyclelength(0));
+        if(new_pos_set){
+            pos = new_pos;
+            new_pos_set = 0;
             new_angle = 0;
             
+            err = pos - ADC_SAR_1_GetResult16() ;
+            der = err - prev_err;
+            pid_integral += err;
+            angle = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
+
+            //angle = ((float)pos/4096.00)*90.00 - 45.00;
+            angle = 0;
+            //Limit angles of proportional valve
+            if(angle>45){angle=45;}
+            if(angle<-45){angle=-45;}
             if(angle<46 & angle>-46){
                 PWM_1_WriteCompare(dutycyclelength(angle));
             }
+            prev_err = err;
         }
-        */
-        
-        //PWM_1_WriteCompare(dutycyclelength(angle))
         CyDelay(100);
         
         

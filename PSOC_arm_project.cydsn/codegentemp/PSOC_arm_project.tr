@@ -77,10 +77,10 @@ Port Name  Setup to Clk  Clock Name:Phase
 -----------------------3.2::Clock to Out
 ----------------------------------------
 
-Port Name     Clock to Out  Clock Name:Phase  
-------------  ------------  ----------------  
-Pin_2(0)_PAD  23660         Clock_1:R         
-Tx(0)_PAD     31341         UART_IntClock:R   
+Port Name    Clock to Out  Clock Name:Phase  
+-----------  ------------  ----------------  
+Tx(0)_PAD    31341         UART_IntClock:R   
+pwm1(0)_PAD  23660         Clock_1:R         
 
 
                          3.3::Pad to Pad

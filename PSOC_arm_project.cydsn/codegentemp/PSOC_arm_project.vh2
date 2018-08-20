@@ -2,7 +2,7 @@
 --	Conversion of PSOC_arm_project.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Aug 15 17:48:10 2018
+--	Mon Aug 20 15:07:03 2018
 --
 
 USE cypress.cypress.all;
@@ -800,11 +800,11 @@ SIGNAL Net_139 : bit;
 SIGNAL \PWM_1:Net_113\ : bit;
 SIGNAL \PWM_1:Net_107\ : bit;
 SIGNAL \PWM_1:Net_114\ : bit;
-SIGNAL tmpOE__Pin_2_net_0 : bit;
-SIGNAL tmpFB_0__Pin_2_net_0 : bit;
-SIGNAL tmpIO_0__Pin_2_net_0 : bit;
-TERMINAL tmpSIOVREF__Pin_2_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Pin_2_net_0 : bit;
+SIGNAL tmpOE__pwm1_net_0 : bit;
+SIGNAL tmpFB_0__pwm1_net_0 : bit;
+SIGNAL tmpIO_0__pwm1_net_0 : bit;
+TERMINAL tmpSIOVREF__pwm1_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__pwm1_net_0 : bit;
 TERMINAL \ADC_SAR_1:Net_248\ : bit;
 TERMINAL \ADC_SAR_1:Net_235\ : bit;
 SIGNAL Net_270 : bit;
@@ -1933,7 +1933,7 @@ Clock_1:cy_clock_v1_0
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_77,
 		dig_domain_out=>open);
-Pin_2:cy_psoc3_pins_v1_10
+pwm1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"acebabe9-8532-47ae-ace2-42b4b3268468",
 		drive_mode=>"110",
 		ibuf_enabled=>"1",
@@ -1991,10 +1991,10 @@ Pin_2:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>Net_75,
-		fb=>(tmpFB_0__Pin_2_net_0),
+		fb=>(tmpFB_0__pwm1_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Pin_2_net_0),
-		siovref=>(tmpSIOVREF__Pin_2_net_0),
+		io=>(tmpIO_0__pwm1_net_0),
+		siovref=>(tmpSIOVREF__pwm1_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -2002,7 +2002,7 @@ Pin_2:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Pin_2_net_0);
+		interrupt=>tmpINTERRUPT_0__pwm1_net_0);
 \ADC_SAR_1:cy_analog_virtualmux_3_connect\:cy_connect_v1_0
 	GENERIC MAP(sig_width=>1,
 		is_net_join=>'0')

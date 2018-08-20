@@ -1,6 +1,6 @@
 // ======================================================================
 // PSOC_arm_project.v generated from TopDesign.cysch
-// 08/15/2018 at 17:48
+// 08/20/2018 at 15:06
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1378,11 +1378,11 @@ module top ;
 		 (.clock_out(Net_77));
 
 
-	wire [0:0] tmpOE__Pin_2_net;
-	wire [0:0] tmpFB_0__Pin_2_net;
-	wire [0:0] tmpIO_0__Pin_2_net;
-	wire [0:0] tmpINTERRUPT_0__Pin_2_net;
-	electrical [0:0] tmpSIOVREF__Pin_2_net;
+	wire [0:0] tmpOE__pwm1_net;
+	wire [0:0] tmpFB_0__pwm1_net;
+	wire [0:0] tmpIO_0__pwm1_net;
+	wire [0:0] tmpINTERRUPT_0__pwm1_net;
+	electrical [0:0] tmpSIOVREF__pwm1_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("acebabe9-8532-47ae-ace2-42b4b3268468"),
@@ -1437,13 +1437,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Pin_2
-		 (.oe(tmpOE__Pin_2_net),
+		pwm1
+		 (.oe(tmpOE__pwm1_net),
 		  .y({Net_75}),
-		  .fb({tmpFB_0__Pin_2_net[0:0]}),
-		  .io({tmpIO_0__Pin_2_net[0:0]}),
-		  .siovref(tmpSIOVREF__Pin_2_net),
-		  .interrupt({tmpINTERRUPT_0__Pin_2_net[0:0]}),
+		  .fb({tmpFB_0__pwm1_net[0:0]}),
+		  .io({tmpIO_0__pwm1_net[0:0]}),
+		  .siovref(tmpSIOVREF__pwm1_net),
+		  .interrupt({tmpINTERRUPT_0__pwm1_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1451,7 +1451,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Pin_2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__pwm1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
     ADC_SAR_v3_10_2 ADC_SAR_1 (
         .vplus(Net_266),
