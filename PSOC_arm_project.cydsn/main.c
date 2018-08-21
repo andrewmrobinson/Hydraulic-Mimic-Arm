@@ -41,16 +41,17 @@ volatile int new_angle = 0;
 volatile int new_pos_set = 0;
 int angle = 0;
 int isNegative=0;
-char sendValue[12];
-int16 adcValue1;
-int16 adcValue2;
+char sendValue[26];
+uint16 adcValue1;
+uint16 adcValue2;
 char temp[6];
 int nn=0;
 double pid[3] = {1,0,0};
 char help[1000];
 int tt = 0;
-int pos;
+int pos=1600;
 int new_pos;
+double err;
 CY_ISR(RxIsr)
 {
     uint8 rxStatus;         
@@ -103,10 +104,9 @@ CY_ISR(RxIsr)
                     else {
                         new_pos = (int) strtol(temp, (char **)NULL, 10);
                         new_pos_set = 1;
-                        nn=0;
-                        char temp[] = "      ";
-                        adcValue1 = ADC_SAR_1_GetResult16() ;
-                        sprintf(sendValue,"%08d",adcValue1);
+                        nn=0; 
+                        
+                        sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angle);
                         UART_PutString(sendValue);
                         data_read_mode = 0;
                     }
@@ -205,7 +205,7 @@ int main()
     int up = 1;
     int cycle = 1000;
 
-    double der, err, prev_err, pid_integral,dt;
+    double der, prev_err, pid_integral,dt;
     der = 0; prev_err = 0; pid_integral = 0; 
     dt = 0.01; //assumes cydelay = 10 below for a 100Hz frequency.
     for(;;)
@@ -216,17 +216,28 @@ int main()
         sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
         UART_PutString(sendValue);
         */
+        adcValue1 = ADC_SAR_1_GetResult16();
+                        
+        /* ADC ERROR BANDAID */
+        //ADC value for some reason is offset by 33923
+        if(adcValue1>30000)
+        {
+            adcValue1 = adcValue1 - 57232;
+        }
+        
+        /* END ADC ERROR BANDAID */
+                 
         //PWM_1_WriteCompare(dutycyclelength(0));
         if(new_pos_set){
             pos = new_pos;
             new_pos_set = 0;
             new_angle = 0;
             
-            err = pos - ADC_SAR_1_GetResult16() ;
+            err = pos - adcValue1;
             der = err - prev_err;
             pid_integral += err;
             angle = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
-
+            //angle=angle*-1;
             //angle = ((float)pos/4096.00)*90.00 - 45.00;
             //angle = 0;
             //Limit angles of proportional valve
@@ -236,6 +247,7 @@ int main()
                 PWM_1_WriteCompare(dutycyclelength(angle));
             }
             prev_err = err;
+            
         }
         CyDelay(100);
         

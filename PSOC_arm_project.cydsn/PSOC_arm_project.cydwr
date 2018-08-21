@@ -3704,13 +3704,13 @@
     <Data key="CYDEV_USE_BUNDLED_CMSIS" value="True" />
     <Data key="CYDEV_VARIABLE_VDDA" value="True" />
     <Data key="CYDEV_VBUS" value="5.0" />
-    <Data key="CYDEV_VDDA" value="3.3" />
-    <Data key="CYDEV_VDDD" value="3.3" />
+    <Data key="CYDEV_VDDA" value="5" />
+    <Data key="CYDEV_VDDD" value="5" />
     <Data key="CYDEV_VDDIO" value="3.3" />
-    <Data key="CYDEV_VDDIO0" value="3.3" />
-    <Data key="CYDEV_VDDIO1" value="3.3" />
-    <Data key="CYDEV_VDDIO2" value="3.3" />
-    <Data key="CYDEV_VDDIO3" value="3.3" />
+    <Data key="CYDEV_VDDIO0" value="5" />
+    <Data key="CYDEV_VDDIO1" value="5" />
+    <Data key="CYDEV_VDDIO2" value="5" />
+    <Data key="CYDEV_VDDIO3" value="5" />
     <Data key="CYDEV_VDDR" value="3.3" />
     <Data key="CYDEV_WO_NVL_ENABLED" value="False" />
   </Group>

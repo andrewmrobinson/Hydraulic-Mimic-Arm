@@ -1,7 +1,7 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (project_arm.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (project_arm.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   PC_project_arm.cpp
-c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(276): warning C4101: 'temp': unreferenced local variable
-c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(262): warning C4101: 'psoc_status': unreferenced local variable
-  project_arm.vcxproj -> C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PC_project_arm\x64\Debug\PC_project_arm.exe
-  C:\Users\Andrew\Documents\LEAP_SDK\lib\x64\Leap.dll
+c:\users\kevan\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(277): warning C4101: 'temp': unreferenced local variable
+c:\users\kevan\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(262): warning C4101: 'psoc_status': unreferenced local variable
+  project_arm.vcxproj -> C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PC_project_arm\x64\Debug\PC_project_arm.exe
+  C:\Program Files\Leap Motion\LeapDeveloperKit_3.2.1+45911_win\LeapSDK\\lib\x64\Leap.dll
   1 File(s) copied

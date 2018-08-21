@@ -48,6 +48,7 @@ set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 0
 set_io "SW2(0)" iocell 2 2
 set_location "isr_rx" interrupt -1 -1 2
 set_io "LED(0)" iocell 2 1
+set_io "\ADC_SAR_1:Bypass(0)\" iocell 0 4
 set_io "adc_in(0)" iocell 2 0
 set_io "adc_in_1(0)" iocell 2 3
 # Note: port 12 is the logical name for port 7

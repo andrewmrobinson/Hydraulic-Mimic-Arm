@@ -23,7 +23,7 @@
     <ProjectGuid>{8723F542-D415-4B15-8842-23951453044F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>projectarm</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ProjectName>PC_project_arm</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
