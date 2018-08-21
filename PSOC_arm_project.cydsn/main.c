@@ -219,7 +219,7 @@ int main()
         adcValue1 = ADC_SAR_1_GetResult16();
                         
         /* ADC ERROR BANDAID */
-        //ADC value for some reason is offset by 33923
+        //ADC value for some reason is offset by 57232
         if(adcValue1>30000)
         {
             adcValue1 = adcValue1 - 57232;
