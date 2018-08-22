@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: ADC_SAR_2_theACLK.c
+* File Name: ADC_DelSig_1_Ext_CP_Clk.c
 * Version 2.20
 *
 *  Description:
@@ -15,7 +15,7 @@
 *******************************************************************************/
 
 #include <cydevice_trm.h>
-#include "ADC_SAR_2_theACLK.h"
+#include "ADC_DelSig_1_Ext_CP_Clk.h"
 
 /* Clock Distribution registers. */
 #define CLK_DIST_LD              (* (reg8 *) CYREG_CLKDIST_LD)
@@ -28,7 +28,7 @@
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_Start
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_Start
 ********************************************************************************
 *
 * Summary:
@@ -42,16 +42,16 @@
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_Start(void) 
+void ADC_DelSig_1_Ext_CP_Clk_Start(void) 
 {
     /* Set the bit to enable the clock. */
-    ADC_SAR_2_theACLK_CLKEN |= ADC_SAR_2_theACLK_CLKEN_MASK;
-	ADC_SAR_2_theACLK_CLKSTBY |= ADC_SAR_2_theACLK_CLKSTBY_MASK;
+    ADC_DelSig_1_Ext_CP_Clk_CLKEN |= ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK;
+	ADC_DelSig_1_Ext_CP_Clk_CLKSTBY |= ADC_DelSig_1_Ext_CP_Clk_CLKSTBY_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_Stop
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_Stop
 ********************************************************************************
 *
 * Summary:
@@ -68,11 +68,11 @@ void ADC_SAR_2_theACLK_Start(void)
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_Stop(void) 
+void ADC_DelSig_1_Ext_CP_Clk_Stop(void) 
 {
     /* Clear the bit to disable the clock. */
-    ADC_SAR_2_theACLK_CLKEN &= (uint8)(~ADC_SAR_2_theACLK_CLKEN_MASK);
-	ADC_SAR_2_theACLK_CLKSTBY &= (uint8)(~ADC_SAR_2_theACLK_CLKSTBY_MASK);
+    ADC_DelSig_1_Ext_CP_Clk_CLKEN &= (uint8)(~ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK);
+	ADC_DelSig_1_Ext_CP_Clk_CLKSTBY &= (uint8)(~ADC_DelSig_1_Ext_CP_Clk_CLKSTBY_MASK);
 }
 
 
@@ -80,7 +80,7 @@ void ADC_SAR_2_theACLK_Stop(void)
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_StopBlock
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_StopBlock
 ********************************************************************************
 *
 * Summary:
@@ -97,9 +97,9 @@ void ADC_SAR_2_theACLK_Stop(void)
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_StopBlock(void) 
+void ADC_DelSig_1_Ext_CP_Clk_StopBlock(void) 
 {
-    if ((ADC_SAR_2_theACLK_CLKEN & ADC_SAR_2_theACLK_CLKEN_MASK) != 0u)
+    if ((ADC_DelSig_1_Ext_CP_Clk_CLKEN & ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK) != 0u)
     {
 #if HAS_CLKDIST_LD_DISABLE
         uint16 oldDivider;
@@ -107,18 +107,18 @@ void ADC_SAR_2_theACLK_StopBlock(void)
         CLK_DIST_LD = 0u;
 
         /* Clear all the mask bits except ours. */
-#if defined(ADC_SAR_2_theACLK__CFG3)
-        CLK_DIST_AMASK = ADC_SAR_2_theACLK_CLKEN_MASK;
+#if defined(ADC_DelSig_1_Ext_CP_Clk__CFG3)
+        CLK_DIST_AMASK = ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK;
         CLK_DIST_DMASK = 0x00u;
 #else
-        CLK_DIST_DMASK = ADC_SAR_2_theACLK_CLKEN_MASK;
+        CLK_DIST_DMASK = ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK;
         CLK_DIST_AMASK = 0x00u;
-#endif /* ADC_SAR_2_theACLK__CFG3 */
+#endif /* ADC_DelSig_1_Ext_CP_Clk__CFG3 */
 
         /* Clear mask of bus clock. */
         CLK_DIST_BCFG2 &= (uint8)(~BCFG2_MASK);
 
-        oldDivider = CY_GET_REG16(ADC_SAR_2_theACLK_DIV_PTR);
+        oldDivider = CY_GET_REG16(ADC_DelSig_1_Ext_CP_Clk_DIV_PTR);
         CY_SET_REG16(CYREG_CLKDIST_WRK0, oldDivider);
         CLK_DIST_LD = CYCLK_LD_DISABLE | CYCLK_LD_SYNC_EN | CYCLK_LD_LOAD;
 
@@ -127,13 +127,13 @@ void ADC_SAR_2_theACLK_StopBlock(void)
 #endif /* HAS_CLKDIST_LD_DISABLE */
 
         /* Clear the bit to disable the clock. */
-        ADC_SAR_2_theACLK_CLKEN &= (uint8)(~ADC_SAR_2_theACLK_CLKEN_MASK);
-        ADC_SAR_2_theACLK_CLKSTBY &= (uint8)(~ADC_SAR_2_theACLK_CLKSTBY_MASK);
+        ADC_DelSig_1_Ext_CP_Clk_CLKEN &= (uint8)(~ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK);
+        ADC_DelSig_1_Ext_CP_Clk_CLKSTBY &= (uint8)(~ADC_DelSig_1_Ext_CP_Clk_CLKSTBY_MASK);
 
 #if HAS_CLKDIST_LD_DISABLE
         /* Clear the disable bit */
         CLK_DIST_LD = 0x00u;
-        CY_SET_REG16(ADC_SAR_2_theACLK_DIV_PTR, oldDivider);
+        CY_SET_REG16(ADC_DelSig_1_Ext_CP_Clk_DIV_PTR, oldDivider);
 #endif /* HAS_CLKDIST_LD_DISABLE */
     }
 }
@@ -141,7 +141,7 @@ void ADC_SAR_2_theACLK_StopBlock(void)
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_StandbyPower
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_StandbyPower
 ********************************************************************************
 *
 * Summary:
@@ -154,21 +154,21 @@ void ADC_SAR_2_theACLK_StopBlock(void)
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_StandbyPower(uint8 state) 
+void ADC_DelSig_1_Ext_CP_Clk_StandbyPower(uint8 state) 
 {
     if(state == 0u)
     {
-        ADC_SAR_2_theACLK_CLKSTBY &= (uint8)(~ADC_SAR_2_theACLK_CLKSTBY_MASK);
+        ADC_DelSig_1_Ext_CP_Clk_CLKSTBY &= (uint8)(~ADC_DelSig_1_Ext_CP_Clk_CLKSTBY_MASK);
     }
     else
     {
-        ADC_SAR_2_theACLK_CLKSTBY |= ADC_SAR_2_theACLK_CLKSTBY_MASK;
+        ADC_DelSig_1_Ext_CP_Clk_CLKSTBY |= ADC_DelSig_1_Ext_CP_Clk_CLKSTBY_MASK;
     }
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_SetDividerRegister
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_SetDividerRegister
 ********************************************************************************
 *
 * Summary:
@@ -190,17 +190,17 @@ void ADC_SAR_2_theACLK_StandbyPower(uint8 state)
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
+void ADC_DelSig_1_Ext_CP_Clk_SetDividerRegister(uint16 clkDivider, uint8 restart)
                                 
 {
     uint8 enabled;
 
-    uint8 currSrc = ADC_SAR_2_theACLK_GetSourceRegister();
-    uint16 oldDivider = ADC_SAR_2_theACLK_GetDividerRegister();
+    uint8 currSrc = ADC_DelSig_1_Ext_CP_Clk_GetSourceRegister();
+    uint16 oldDivider = ADC_DelSig_1_Ext_CP_Clk_GetDividerRegister();
 
     if (clkDivider != oldDivider)
     {
-        enabled = ADC_SAR_2_theACLK_CLKEN & ADC_SAR_2_theACLK_CLKEN_MASK;
+        enabled = ADC_DelSig_1_Ext_CP_Clk_CLKEN & ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK;
 
         if ((currSrc == (uint8)CYCLK_SRC_SEL_CLK_SYNC_D) && ((oldDivider == 0u) || (clkDivider == 0u)))
         {
@@ -210,15 +210,15 @@ void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
                 /* Moving away from SSS, set the divider first so when SSS is cleared we    */
                 /* don't halt the clock.  Using the shadow load isn't required as the       */
                 /* divider is ignored while SSS is set.                                     */
-                CY_SET_REG16(ADC_SAR_2_theACLK_DIV_PTR, clkDivider);
-                ADC_SAR_2_theACLK_MOD_SRC &= (uint8)(~CYCLK_SSS);
+                CY_SET_REG16(ADC_DelSig_1_Ext_CP_Clk_DIV_PTR, clkDivider);
+                ADC_DelSig_1_Ext_CP_Clk_MOD_SRC &= (uint8)(~CYCLK_SSS);
             }
             else
             {
                 /* Moving to SSS, set SSS which then ignores the divider and we can set     */
                 /* it without bothering with the shadow load.                               */
-                ADC_SAR_2_theACLK_MOD_SRC |= CYCLK_SSS;
-                CY_SET_REG16(ADC_SAR_2_theACLK_DIV_PTR, clkDivider);
+                ADC_DelSig_1_Ext_CP_Clk_MOD_SRC |= CYCLK_SSS;
+                CY_SET_REG16(ADC_DelSig_1_Ext_CP_Clk_DIV_PTR, clkDivider);
             }
         }
         else
@@ -229,18 +229,18 @@ void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
                 CLK_DIST_LD = 0x00u;
 
                 /* Clear all the mask bits except ours. */
-#if defined(ADC_SAR_2_theACLK__CFG3)
-                CLK_DIST_AMASK = ADC_SAR_2_theACLK_CLKEN_MASK;
+#if defined(ADC_DelSig_1_Ext_CP_Clk__CFG3)
+                CLK_DIST_AMASK = ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK;
                 CLK_DIST_DMASK = 0x00u;
 #else
-                CLK_DIST_DMASK = ADC_SAR_2_theACLK_CLKEN_MASK;
+                CLK_DIST_DMASK = ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK;
                 CLK_DIST_AMASK = 0x00u;
-#endif /* ADC_SAR_2_theACLK__CFG3 */
+#endif /* ADC_DelSig_1_Ext_CP_Clk__CFG3 */
                 /* Clear mask of bus clock. */
                 CLK_DIST_BCFG2 &= (uint8)(~BCFG2_MASK);
 
                 /* If clock is currently enabled, disable it if async or going from N-to-1*/
-                if (((ADC_SAR_2_theACLK_MOD_SRC & CYCLK_SYNC) == 0u) || (clkDivider == 0u))
+                if (((ADC_DelSig_1_Ext_CP_Clk_MOD_SRC & CYCLK_SYNC) == 0u) || (clkDivider == 0u))
                 {
 #if HAS_CLKDIST_LD_DISABLE
                     CY_SET_REG16(CYREG_CLKDIST_WRK0, oldDivider);
@@ -250,7 +250,7 @@ void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
                     while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
 #endif /* HAS_CLKDIST_LD_DISABLE */
 
-                    ADC_SAR_2_theACLK_CLKEN &= (uint8)(~ADC_SAR_2_theACLK_CLKEN_MASK);
+                    ADC_DelSig_1_Ext_CP_Clk_CLKEN &= (uint8)(~ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK);
 
 #if HAS_CLKDIST_LD_DISABLE
                     /* Clear the disable bit */
@@ -260,7 +260,7 @@ void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
             }
 
             /* Load divide value. */
-            if ((ADC_SAR_2_theACLK_CLKEN & ADC_SAR_2_theACLK_CLKEN_MASK) != 0u)
+            if ((ADC_DelSig_1_Ext_CP_Clk_CLKEN & ADC_DelSig_1_Ext_CP_Clk_CLKEN_MASK) != 0u)
             {
                 /* If the clock is still enabled, use the shadow registers */
                 CY_SET_REG16(CYREG_CLKDIST_WRK0, clkDivider);
@@ -271,8 +271,8 @@ void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
             else
             {
                 /* If the clock is disabled, set the divider directly */
-                CY_SET_REG16(ADC_SAR_2_theACLK_DIV_PTR, clkDivider);
-				ADC_SAR_2_theACLK_CLKEN |= enabled;
+                CY_SET_REG16(ADC_DelSig_1_Ext_CP_Clk_DIV_PTR, clkDivider);
+				ADC_DelSig_1_Ext_CP_Clk_CLKEN |= enabled;
             }
         }
     }
@@ -280,7 +280,7 @@ void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_GetDividerRegister
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_GetDividerRegister
 ********************************************************************************
 *
 * Summary:
@@ -294,14 +294,14 @@ void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
 *  divide by 2, the return value will be 1.
 *
 *******************************************************************************/
-uint16 ADC_SAR_2_theACLK_GetDividerRegister(void) 
+uint16 ADC_DelSig_1_Ext_CP_Clk_GetDividerRegister(void) 
 {
-    return CY_GET_REG16(ADC_SAR_2_theACLK_DIV_PTR);
+    return CY_GET_REG16(ADC_DelSig_1_Ext_CP_Clk_DIV_PTR);
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_SetModeRegister
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_SetModeRegister
 ********************************************************************************
 *
 * Summary:
@@ -329,14 +329,14 @@ uint16 ADC_SAR_2_theACLK_GetDividerRegister(void)
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_SetModeRegister(uint8 modeBitMask) 
+void ADC_DelSig_1_Ext_CP_Clk_SetModeRegister(uint8 modeBitMask) 
 {
-    ADC_SAR_2_theACLK_MOD_SRC |= modeBitMask & (uint8)ADC_SAR_2_theACLK_MODE_MASK;
+    ADC_DelSig_1_Ext_CP_Clk_MOD_SRC |= modeBitMask & (uint8)ADC_DelSig_1_Ext_CP_Clk_MODE_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_ClearModeRegister
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_ClearModeRegister
 ********************************************************************************
 *
 * Summary:
@@ -364,14 +364,14 @@ void ADC_SAR_2_theACLK_SetModeRegister(uint8 modeBitMask)
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_ClearModeRegister(uint8 modeBitMask) 
+void ADC_DelSig_1_Ext_CP_Clk_ClearModeRegister(uint8 modeBitMask) 
 {
-    ADC_SAR_2_theACLK_MOD_SRC &= (uint8)(~modeBitMask) | (uint8)(~(uint8)(ADC_SAR_2_theACLK_MODE_MASK));
+    ADC_DelSig_1_Ext_CP_Clk_MOD_SRC &= (uint8)(~modeBitMask) | (uint8)(~(uint8)(ADC_DelSig_1_Ext_CP_Clk_MODE_MASK));
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_GetModeRegister
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_GetModeRegister
 ********************************************************************************
 *
 * Summary:
@@ -385,14 +385,14 @@ void ADC_SAR_2_theACLK_ClearModeRegister(uint8 modeBitMask)
 *  ClearModeRegister descriptions for details about the mode bits.
 *
 *******************************************************************************/
-uint8 ADC_SAR_2_theACLK_GetModeRegister(void) 
+uint8 ADC_DelSig_1_Ext_CP_Clk_GetModeRegister(void) 
 {
-    return ADC_SAR_2_theACLK_MOD_SRC & (uint8)(ADC_SAR_2_theACLK_MODE_MASK);
+    return ADC_DelSig_1_Ext_CP_Clk_MOD_SRC & (uint8)(ADC_DelSig_1_Ext_CP_Clk_MODE_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_SetSourceRegister
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_SetSourceRegister
 ********************************************************************************
 *
 * Summary:
@@ -416,39 +416,39 @@ uint8 ADC_SAR_2_theACLK_GetModeRegister(void)
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_SetSourceRegister(uint8 clkSource) 
+void ADC_DelSig_1_Ext_CP_Clk_SetSourceRegister(uint8 clkSource) 
 {
-    uint16 currDiv = ADC_SAR_2_theACLK_GetDividerRegister();
-    uint8 oldSrc = ADC_SAR_2_theACLK_GetSourceRegister();
+    uint16 currDiv = ADC_DelSig_1_Ext_CP_Clk_GetDividerRegister();
+    uint8 oldSrc = ADC_DelSig_1_Ext_CP_Clk_GetSourceRegister();
 
     if (((oldSrc != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D)) && 
         (clkSource == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
     {
         /* Switching to Master and divider is 1, set SSS, which will output master, */
         /* then set the source so we are consistent.                                */
-        ADC_SAR_2_theACLK_MOD_SRC |= CYCLK_SSS;
-        ADC_SAR_2_theACLK_MOD_SRC =
-            (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
+        ADC_DelSig_1_Ext_CP_Clk_MOD_SRC |= CYCLK_SSS;
+        ADC_DelSig_1_Ext_CP_Clk_MOD_SRC =
+            (ADC_DelSig_1_Ext_CP_Clk_MOD_SRC & (uint8)(~ADC_DelSig_1_Ext_CP_Clk_SRC_SEL_MSK)) | clkSource;
     }
     else if (((oldSrc == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D)) && 
             (clkSource != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
     {
         /* Switching from Master to not and divider is 1, set source, so we don't   */
         /* lock when we clear SSS.                                                  */
-        ADC_SAR_2_theACLK_MOD_SRC =
-            (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
-        ADC_SAR_2_theACLK_MOD_SRC &= (uint8)(~CYCLK_SSS);
+        ADC_DelSig_1_Ext_CP_Clk_MOD_SRC =
+            (ADC_DelSig_1_Ext_CP_Clk_MOD_SRC & (uint8)(~ADC_DelSig_1_Ext_CP_Clk_SRC_SEL_MSK)) | clkSource;
+        ADC_DelSig_1_Ext_CP_Clk_MOD_SRC &= (uint8)(~CYCLK_SSS);
     }
     else
     {
-        ADC_SAR_2_theACLK_MOD_SRC =
-            (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
+        ADC_DelSig_1_Ext_CP_Clk_MOD_SRC =
+            (ADC_DelSig_1_Ext_CP_Clk_MOD_SRC & (uint8)(~ADC_DelSig_1_Ext_CP_Clk_SRC_SEL_MSK)) | clkSource;
     }
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_GetSourceRegister
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_GetSourceRegister
 ********************************************************************************
 *
 * Summary:
@@ -461,17 +461,17 @@ void ADC_SAR_2_theACLK_SetSourceRegister(uint8 clkSource)
 *  The input source of the clock. See SetSourceRegister for details.
 *
 *******************************************************************************/
-uint8 ADC_SAR_2_theACLK_GetSourceRegister(void) 
+uint8 ADC_DelSig_1_Ext_CP_Clk_GetSourceRegister(void) 
 {
-    return ADC_SAR_2_theACLK_MOD_SRC & ADC_SAR_2_theACLK_SRC_SEL_MSK;
+    return ADC_DelSig_1_Ext_CP_Clk_MOD_SRC & ADC_DelSig_1_Ext_CP_Clk_SRC_SEL_MSK;
 }
 
 
-#if defined(ADC_SAR_2_theACLK__CFG3)
+#if defined(ADC_DelSig_1_Ext_CP_Clk__CFG3)
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_SetPhaseRegister
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_SetPhaseRegister
 ********************************************************************************
 *
 * Summary:
@@ -489,14 +489,14 @@ uint8 ADC_SAR_2_theACLK_GetSourceRegister(void)
 *  None
 *
 *******************************************************************************/
-void ADC_SAR_2_theACLK_SetPhaseRegister(uint8 clkPhase) 
+void ADC_DelSig_1_Ext_CP_Clk_SetPhaseRegister(uint8 clkPhase) 
 {
-    ADC_SAR_2_theACLK_PHASE = clkPhase & ADC_SAR_2_theACLK_PHASE_MASK;
+    ADC_DelSig_1_Ext_CP_Clk_PHASE = clkPhase & ADC_DelSig_1_Ext_CP_Clk_PHASE_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: ADC_SAR_2_theACLK_GetPhase
+* Function Name: ADC_DelSig_1_Ext_CP_Clk_GetPhase
 ********************************************************************************
 *
 * Summary:
@@ -510,12 +510,12 @@ void ADC_SAR_2_theACLK_SetPhaseRegister(uint8 clkPhase)
 *  Phase of the analog clock. See SetPhaseRegister for details.
 *
 *******************************************************************************/
-uint8 ADC_SAR_2_theACLK_GetPhaseRegister(void) 
+uint8 ADC_DelSig_1_Ext_CP_Clk_GetPhaseRegister(void) 
 {
-    return ADC_SAR_2_theACLK_PHASE & ADC_SAR_2_theACLK_PHASE_MASK;
+    return ADC_DelSig_1_Ext_CP_Clk_PHASE & ADC_DelSig_1_Ext_CP_Clk_PHASE_MASK;
 }
 
-#endif /* ADC_SAR_2_theACLK__CFG3 */
+#endif /* ADC_DelSig_1_Ext_CP_Clk__CFG3 */
 
 
 /* [] END OF FILE */
