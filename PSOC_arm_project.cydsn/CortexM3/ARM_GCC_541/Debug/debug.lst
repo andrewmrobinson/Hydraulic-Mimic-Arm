@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
   28:debug.c       **** * EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT, IMPLIED 
   29:debug.c       **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Cypress 
   30:debug.c       **** * reserves the right to make changes to the Software without notice. Cypress 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 2
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 2
 
 
   31:debug.c       **** * does not assume any liability arising out of the application or use of the 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
   85:debug.c       ****                 UART_PutChar(ch);
   86:debug.c       ****                 ret = ch ;
   87:debug.c       ****                 break ;
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 3
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 3
 
 
   88:debug.c       **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
   38              		.cfi_offset 14, -4
   39 0002 1646     		mov	r6, r2
   40              	.LVL1:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 4
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 4
 
 
  132:debug.c       ****         int i;
@@ -231,45 +231,45 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
   78 0006 00000000 		.4byte	.Ldebug_abbrev0
   79 000a 04       		.byte	0x4
   80 000b 01       		.uleb128 0x1
-  81 000c 23000000 		.4byte	.LASF17
+  81 000c 6E000000 		.4byte	.LASF17
   82 0010 0C       		.byte	0xc
   83 0011 0E000000 		.4byte	.LASF18
-  84 0015 79010000 		.4byte	.LASF19
+  84 0015 23000000 		.4byte	.LASF19
   85 0019 00000000 		.4byte	.Ldebug_ranges0+0
   86 001d 00000000 		.4byte	0
   87 0021 00000000 		.4byte	.Ldebug_line0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 5
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 5
 
 
   88 0025 02       		.uleb128 0x2
   89 0026 01       		.byte	0x1
   90 0027 06       		.byte	0x6
-  91 0028 36010000 		.4byte	.LASF0
+  91 0028 81010000 		.4byte	.LASF0
   92 002c 02       		.uleb128 0x2
   93 002d 01       		.byte	0x1
   94 002e 08       		.byte	0x8
-  95 002f F9000000 		.4byte	.LASF1
+  95 002f 44010000 		.4byte	.LASF1
   96 0033 02       		.uleb128 0x2
   97 0034 02       		.byte	0x2
   98 0035 05       		.byte	0x5
-  99 0036 5E010000 		.4byte	.LASF2
+  99 0036 A9010000 		.4byte	.LASF2
  100 003a 02       		.uleb128 0x2
  101 003b 02       		.byte	0x2
  102 003c 07       		.byte	0x7
- 103 003d DA000000 		.4byte	.LASF3
+ 103 003d 25010000 		.4byte	.LASF3
  104 0041 03       		.uleb128 0x3
- 105 0042 4E010000 		.4byte	.LASF9
+ 105 0042 99010000 		.4byte	.LASF9
  106 0046 02       		.byte	0x2
  107 0047 3F       		.byte	0x3f
  108 0048 4C000000 		.4byte	0x4c
  109 004c 02       		.uleb128 0x2
  110 004d 04       		.byte	0x4
  111 004e 05       		.byte	0x5
- 112 004f 0C010000 		.4byte	.LASF4
+ 112 004f 57010000 		.4byte	.LASF4
  113 0053 02       		.uleb128 0x2
  114 0054 04       		.byte	0x4
  115 0055 07       		.byte	0x7
- 116 0056 B1000000 		.4byte	.LASF5
+ 116 0056 FC000000 		.4byte	.LASF5
  117 005a 02       		.uleb128 0x2
  118 005b 08       		.byte	0x8
  119 005c 05       		.byte	0x5
@@ -277,7 +277,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  121 0061 02       		.uleb128 0x2
  122 0062 08       		.byte	0x8
  123 0063 07       		.byte	0x7
- 124 0064 C3000000 		.4byte	.LASF7
+ 124 0064 0E010000 		.4byte	.LASF7
  125 0068 04       		.uleb128 0x4
  126 0069 04       		.byte	0x4
  127 006a 05       		.byte	0x5
@@ -287,38 +287,38 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  131 0071 07       		.byte	0x7
  132 0072 16000000 		.4byte	.LASF8
  133 0076 03       		.uleb128 0x3
- 134 0077 68010000 		.4byte	.LASF10
+ 134 0077 B3010000 		.4byte	.LASF10
  135 007b 03       		.byte	0x3
  136 007c 2C       		.byte	0x2c
  137 007d 41000000 		.4byte	0x41
  138 0081 02       		.uleb128 0x2
  139 0082 04       		.byte	0x4
  140 0083 04       		.byte	0x4
- 141 0084 58010000 		.4byte	.LASF11
+ 141 0084 A3010000 		.4byte	.LASF11
  142 0088 02       		.uleb128 0x2
  143 0089 08       		.byte	0x8
  144 008a 04       		.byte	0x4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 6
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 6
 
 
- 145 008b 22010000 		.4byte	.LASF12
+ 145 008b 6D010000 		.4byte	.LASF12
  146 008f 02       		.uleb128 0x2
  147 0090 01       		.byte	0x1
  148 0091 08       		.byte	0x8
- 149 0092 07010000 		.4byte	.LASF13
+ 149 0092 52010000 		.4byte	.LASF13
  150 0096 02       		.uleb128 0x2
  151 0097 08       		.byte	0x8
  152 0098 04       		.byte	0x4
- 153 0099 42010000 		.4byte	.LASF14
+ 153 0099 8D010000 		.4byte	.LASF14
  154 009d 02       		.uleb128 0x2
  155 009e 04       		.byte	0x4
  156 009f 07       		.byte	0x7
- 157 00a0 70010000 		.4byte	.LASF15
+ 157 00a0 BB010000 		.4byte	.LASF15
  158 00a4 05       		.uleb128 0x5
  159 00a5 04       		.byte	0x4
  160 00a6 8F000000 		.4byte	0x8f
  161 00aa 06       		.uleb128 0x6
- 162 00ab F2000000 		.4byte	.LASF20
+ 162 00ab 3D010000 		.4byte	.LASF20
  163 00af 01       		.byte	0x1
  164 00b0 82       		.byte	0x82
  165 00b1 68000000 		.4byte	0x68
@@ -328,7 +328,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  169 00be 9C       		.byte	0x9c
  170 00bf 07010000 		.4byte	0x107
  171 00c3 07       		.uleb128 0x7
- 172 00c4 ED000000 		.4byte	.LASF16
+ 172 00c4 38010000 		.4byte	.LASF16
  173 00c8 01       		.byte	0x1
  174 00c9 82       		.byte	0x82
  175 00ca 68000000 		.4byte	0x68
@@ -356,9 +356,9 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  197 0102 18010000 		.4byte	0x118
  198 0106 00       		.byte	0
  199 0107 0B       		.uleb128 0xb
- 200 0108 29010000 		.4byte	.LASF21
+ 200 0108 74010000 		.4byte	.LASF21
  201 010c 04       		.byte	0x4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 7
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 7
 
 
  202 010d 1207     		.2byte	0x712
@@ -366,8 +366,8 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  204 0113 0C       		.uleb128 0xc
  205 0114 76000000 		.4byte	0x76
  206 0118 0D       		.uleb128 0xd
- 207 0119 15010000 		.4byte	.LASF22
- 208 011d 15010000 		.4byte	.LASF22
+ 207 0119 60010000 		.4byte	.LASF22
+ 208 011d 60010000 		.4byte	.LASF22
  209 0121 05       		.byte	0x5
  210 0122 8A       		.byte	0x8a
  211 0123 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  256 002a 00       		.byte	0
  257 002b 04       		.uleb128 0x4
  258 002c 24       		.uleb128 0x24
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 8
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 8
 
 
  259 002d 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  313 0064 49       		.uleb128 0x49
  314 0065 13       		.uleb128 0x13
  315 0066 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 9
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 9
 
 
  316 0067 17       		.uleb128 0x17
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  370 009f 19       		.uleb128 0x19
  371 00a0 3C       		.uleb128 0x3c
  372 00a1 19       		.uleb128 0x19
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 10
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 10
 
 
  373 00a2 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  427 003f 0100     		.2byte	0x1
  428 0041 51       		.byte	0x51
  429 0042 00000000 		.4byte	0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 11
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 11
 
 
  430 0046 00000000 		.4byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  477              	.LASF18:
  478 000e 64656275 		.ascii	"debug.c\000"
  478      672E6300 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 12
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 12
 
 
  479              	.LASF8:
@@ -666,109 +666,109 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 1
  480      676E6564 
  480      20696E74 
  480      00
- 481              	.LASF17:
- 482 0023 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 482      43313120 
- 482      352E342E 
- 482      31203230 
- 482      31363036 
- 483 0056 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 483      20726576 
- 483      6973696F 
- 483      6E203233 
- 483      37373135 
- 484 0089 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 484      66756E63 
- 484      74696F6E 
- 484      2D736563 
- 484      74696F6E 
- 485              	.LASF5:
- 486 00b1 6C6F6E67 		.ascii	"long unsigned int\000"
- 486      20756E73 
- 486      69676E65 
- 486      6420696E 
- 486      7400
- 487              	.LASF7:
- 488 00c3 6C6F6E67 		.ascii	"long long unsigned int\000"
- 488      206C6F6E 
- 488      6720756E 
- 488      7369676E 
- 488      65642069 
- 489              	.LASF3:
- 490 00da 73686F72 		.ascii	"short unsigned int\000"
- 490      7420756E 
- 490      7369676E 
- 490      65642069 
- 490      6E7400
- 491              	.LASF16:
- 492 00ed 66696C65 		.ascii	"file\000"
- 492      00
- 493              	.LASF20:
- 494 00f2 5F777269 		.ascii	"_write\000"
- 494      746500
- 495              	.LASF1:
- 496 00f9 756E7369 		.ascii	"unsigned char\000"
- 496      676E6564 
- 496      20636861 
- 496      7200
- 497              	.LASF13:
- 498 0107 63686172 		.ascii	"char\000"
- 498      00
- 499              	.LASF4:
- 500 010c 6C6F6E67 		.ascii	"long int\000"
- 500      20696E74 
- 500      00
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccsLzoho.s 			page 13
+ 481              	.LASF19:
+ 482 0023 433A5C55 		.ascii	"C:\\Users\\kevan\\Documents\\GitHub\\Hydraulic-Mimi"
+ 482      73657273 
+ 482      5C6B6576 
+ 482      616E5C44 
+ 482      6F63756D 
+ 483 0051 632D4172 		.ascii	"c-Arm\\PSOC_arm_project.cydsn\000"
+ 483      6D5C5053 
+ 483      4F435F61 
+ 483      726D5F70 
+ 483      726F6A65 
+ 484              	.LASF17:
+ 485 006e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 485      43313120 
+ 485      352E342E 
+ 485      31203230 
+ 485      31363036 
+ 486 00a1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 486      20726576 
+ 486      6973696F 
+ 486      6E203233 
+ 486      37373135 
+ 487 00d4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 487      66756E63 
+ 487      74696F6E 
+ 487      2D736563 
+ 487      74696F6E 
+ 488              	.LASF5:
+ 489 00fc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 489      20756E73 
+ 489      69676E65 
+ 489      6420696E 
+ 489      7400
+ 490              	.LASF7:
+ 491 010e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 491      206C6F6E 
+ 491      6720756E 
+ 491      7369676E 
+ 491      65642069 
+ 492              	.LASF3:
+ 493 0125 73686F72 		.ascii	"short unsigned int\000"
+ 493      7420756E 
+ 493      7369676E 
+ 493      65642069 
+ 493      6E7400
+ 494              	.LASF16:
+ 495 0138 66696C65 		.ascii	"file\000"
+ 495      00
+ 496              	.LASF20:
+ 497 013d 5F777269 		.ascii	"_write\000"
+ 497      746500
+ 498              	.LASF1:
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc4Pb7Qq.s 			page 13
 
 
- 501              	.LASF22:
- 502 0115 55415254 		.ascii	"UART_PutChar\000"
- 502      5F507574 
- 502      43686172 
- 502      00
- 503              	.LASF12:
- 504 0122 646F7562 		.ascii	"double\000"
- 504      6C6500
- 505              	.LASF21:
- 506 0129 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 506      52784275 
- 506      66666572 
- 506      00
- 507              	.LASF0:
- 508 0136 7369676E 		.ascii	"signed char\000"
- 508      65642063 
- 508      68617200 
- 509              	.LASF14:
- 510 0142 6C6F6E67 		.ascii	"long double\000"
- 510      20646F75 
- 510      626C6500 
- 511              	.LASF9:
- 512 014e 5F5F696E 		.ascii	"__int32_t\000"
- 512      7433325F 
- 512      7400
- 513              	.LASF11:
- 514 0158 666C6F61 		.ascii	"float\000"
- 514      7400
- 515              	.LASF2:
- 516 015e 73686F72 		.ascii	"short int\000"
- 516      7420696E 
- 516      7400
- 517              	.LASF10:
- 518 0168 696E7433 		.ascii	"int32_t\000"
- 518      325F7400 
- 519              	.LASF15:
- 520 0170 73697A65 		.ascii	"sizetype\000"
- 520      74797065 
- 520      00
- 521              	.LASF19:
- 522 0179 433A5C55 		.ascii	"C:\\Users\\Andrew\\Documents\\GitHub\\Hydraulic-Mim"
- 522      73657273 
- 522      5C416E64 
- 522      7265775C 
- 522      446F6375 
- 523 01a7 69632D41 		.ascii	"ic-Arm\\PSOC_arm_project.cydsn\000"
- 523      726D5C50 
- 523      534F435F 
- 523      61726D5F 
- 523      70726F6A 
+ 499 0144 756E7369 		.ascii	"unsigned char\000"
+ 499      676E6564 
+ 499      20636861 
+ 499      7200
+ 500              	.LASF13:
+ 501 0152 63686172 		.ascii	"char\000"
+ 501      00
+ 502              	.LASF4:
+ 503 0157 6C6F6E67 		.ascii	"long int\000"
+ 503      20696E74 
+ 503      00
+ 504              	.LASF22:
+ 505 0160 55415254 		.ascii	"UART_PutChar\000"
+ 505      5F507574 
+ 505      43686172 
+ 505      00
+ 506              	.LASF12:
+ 507 016d 646F7562 		.ascii	"double\000"
+ 507      6C6500
+ 508              	.LASF21:
+ 509 0174 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 509      52784275 
+ 509      66666572 
+ 509      00
+ 510              	.LASF0:
+ 511 0181 7369676E 		.ascii	"signed char\000"
+ 511      65642063 
+ 511      68617200 
+ 512              	.LASF14:
+ 513 018d 6C6F6E67 		.ascii	"long double\000"
+ 513      20646F75 
+ 513      626C6500 
+ 514              	.LASF9:
+ 515 0199 5F5F696E 		.ascii	"__int32_t\000"
+ 515      7433325F 
+ 515      7400
+ 516              	.LASF11:
+ 517 01a3 666C6F61 		.ascii	"float\000"
+ 517      7400
+ 518              	.LASF2:
+ 519 01a9 73686F72 		.ascii	"short int\000"
+ 519      7420696E 
+ 519      7400
+ 520              	.LASF10:
+ 521 01b3 696E7433 		.ascii	"int32_t\000"
+ 521      325F7400 
+ 522              	.LASF15:
+ 523 01bb 73697A65 		.ascii	"sizetype\000"
+ 523      74797065 
+ 523      00
  524              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

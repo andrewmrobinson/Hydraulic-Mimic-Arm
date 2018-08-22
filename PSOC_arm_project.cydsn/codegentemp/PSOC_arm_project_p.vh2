@@ -1,5 +1,5 @@
 -- Project:   PSOC_arm_project
--- Generated: 08/22/2018 15:03:08
+-- Generated: 08/21/2018 16:32:09
 -- PSoC Creator  4.2
 
 ENTITY PSOC_arm_project IS
@@ -40,9 +40,10 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     SIGNAL LED(0)__PA : bit;
     SIGNAL Net_102 : bit;
     SIGNAL Net_104 : bit;
-    SIGNAL Net_313 : bit;
-    SIGNAL Net_319 : bit;
-    SIGNAL Net_322 : bit;
+    SIGNAL Net_270 : bit;
+    SIGNAL Net_273 : bit;
+    SIGNAL Net_277 : bit;
+    SIGNAL Net_280 : bit;
     SIGNAL Net_75 : bit;
     SIGNAL Net_77 : bit;
     ATTRIBUTE udbclken_assigned OF Net_77 : SIGNAL IS "True";
@@ -52,28 +53,6 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     SIGNAL Rx(0)__PA : bit;
     SIGNAL SW2(0)__PA : bit;
     SIGNAL Tx(0)__PA : bit;
-    SIGNAL \ADC_DelSig_1:Net_245_0\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_245_1\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_245_2\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_245_3\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_245_4\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_245_5\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_245_6\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_245_7\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_488\ : bit;
-    ATTRIBUTE global_signal OF \ADC_DelSig_1:Net_488\ : SIGNAL IS true;
-    SIGNAL \ADC_DelSig_1:Net_488_adig\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_488_adig_local\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_488_local\ : bit;
-    SIGNAL \ADC_DelSig_1:Net_93\ : bit;
-    ATTRIBUTE global_signal OF \ADC_DelSig_1:Net_93\ : SIGNAL IS true;
-    SIGNAL \ADC_DelSig_1:Net_93_local\ : bit;
-    SIGNAL \ADC_DelSig_1:aclock\ : bit;
-    SIGNAL \ADC_DelSig_1:mod_dat_0\ : bit;
-    SIGNAL \ADC_DelSig_1:mod_dat_1\ : bit;
-    SIGNAL \ADC_DelSig_1:mod_dat_2\ : bit;
-    SIGNAL \ADC_DelSig_1:mod_dat_3\ : bit;
-    SIGNAL \ADC_DelSig_1:mod_reset\ : bit;
     SIGNAL \\\ADC_SAR_1:Bypass(0)\\__PA\ : bit;
     SIGNAL \ADC_SAR_1:Net_207_0\ : bit;
     SIGNAL \ADC_SAR_1:Net_207_10\ : bit;
@@ -93,6 +72,24 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     SIGNAL \ADC_SAR_1:Net_385\ : bit;
     ATTRIBUTE global_signal OF \ADC_SAR_1:Net_385\ : SIGNAL IS true;
     SIGNAL \ADC_SAR_1:Net_385_local\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_0\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_10\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_11\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_1\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_2\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_3\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_4\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_5\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_6\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_7\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_8\ : bit;
+    SIGNAL \ADC_SAR_2:Net_207_9\ : bit;
+    SIGNAL \ADC_SAR_2:Net_252\ : bit;
+    SIGNAL \ADC_SAR_2:Net_381\ : bit;
+    SIGNAL \ADC_SAR_2:Net_381_local\ : bit;
+    SIGNAL \ADC_SAR_2:Net_385\ : bit;
+    ATTRIBUTE global_signal OF \ADC_SAR_2:Net_385\ : SIGNAL IS true;
+    SIGNAL \ADC_SAR_2:Net_385_local\ : bit;
     SIGNAL \PWM_1:PWMUDB:cmp1_less\ : bit;
     SIGNAL \PWM_1:PWMUDB:control_0\ : bit;
     SIGNAL \PWM_1:PWMUDB:control_1\ : bit;
@@ -187,7 +184,7 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE lib_model OF pwm1(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF pwm1(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF \ADC_SAR_1:Bypass(0)\ : LABEL IS "iocell6";
-    ATTRIBUTE Location OF \ADC_SAR_1:Bypass(0)\ : LABEL IS "P0[2]";
+    ATTRIBUTE Location OF \ADC_SAR_1:Bypass(0)\ : LABEL IS "P0[4]";
     ATTRIBUTE lib_model OF adc_in(0) : LABEL IS "iocell7";
     ATTRIBUTE Location OF adc_in(0) : LABEL IS "P2[0]";
     ATTRIBUTE lib_model OF adc_in_1(0) : LABEL IS "iocell8";
@@ -201,7 +198,6 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE lib_model OF \UART:BUART:rx_status_4\ : LABEL IS "macrocell7";
     ATTRIBUTE lib_model OF \UART:BUART:rx_status_5\ : LABEL IS "macrocell8";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_2\ : LABEL IS "macrocell9";
-    ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell10";
     ATTRIBUTE lib_model OF \UART:BUART:sTX:TxShifter:u0\ : LABEL IS "datapathcell1";
     ATTRIBUTE lib_model OF \UART:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "datapathcell2";
     ATTRIBUTE lib_model OF \UART:BUART:sTX:TxSts\ : LABEL IS "statusicell1";
@@ -211,28 +207,28 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell3";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell4";
     ATTRIBUTE lib_model OF \PWM_1:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell5";
-    ATTRIBUTE Location OF \ADC_SAR_1:ADC_SAR\ : LABEL IS "F(SAR,1)";
-    ATTRIBUTE Location OF \ADC_DelSig_1:DSM\ : LABEL IS "F(DSM,0)";
-    ATTRIBUTE lib_model OF \UART:BUART:txn\ : LABEL IS "macrocell11";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_state_1\ : LABEL IS "macrocell12";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_state_0\ : LABEL IS "macrocell13";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_state_2\ : LABEL IS "macrocell14";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_bitclk\ : LABEL IS "macrocell15";
-    ATTRIBUTE lib_model OF \UART:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell16";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_0\ : LABEL IS "macrocell17";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_load_fifo\ : LABEL IS "macrocell18";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_3\ : LABEL IS "macrocell19";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_2\ : LABEL IS "macrocell20";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "macrocell21";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell22";
-    ATTRIBUTE lib_model OF \UART:BUART:pollcount_1\ : LABEL IS "macrocell23";
-    ATTRIBUTE lib_model OF \UART:BUART:pollcount_0\ : LABEL IS "macrocell24";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_status_3\ : LABEL IS "macrocell25";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_last\ : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell27";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell28";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_0\ : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF Net_75 : LABEL IS "macrocell30";
+    ATTRIBUTE Location OF \ADC_SAR_1:ADC_SAR\ : LABEL IS "F(SAR,0)";
+    ATTRIBUTE Location OF \ADC_SAR_2:ADC_SAR\ : LABEL IS "F(SAR,1)";
+    ATTRIBUTE lib_model OF \UART:BUART:txn\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_state_1\ : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_state_0\ : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_state_2\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_bitclk\ : LABEL IS "macrocell14";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_0\ : LABEL IS "macrocell16";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_load_fifo\ : LABEL IS "macrocell17";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_3\ : LABEL IS "macrocell18";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_2\ : LABEL IS "macrocell19";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF \UART:BUART:pollcount_1\ : LABEL IS "macrocell22";
+    ATTRIBUTE lib_model OF \UART:BUART:pollcount_0\ : LABEL IS "macrocell23";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_status_3\ : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_last\ : LABEL IS "macrocell25";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_0\ : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF Net_75 : LABEL IS "macrocell29";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -453,39 +449,6 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE udb_chain OF datapathcell : COMPONENT IS "ce0i,ce0,cl0i,cl0,z0i,z0,ff0i,ff0,ce1i,ce1,cl1i,cl1,z1i,z1,ff1i,ff1,cap0i,cap0,cap1i,cap1,ci,co_msb,sir,sol_msb,cfbi,cfbo,sil,sor,cmsbi,cmsbo";
     ATTRIBUTE chain_lsb OF datapathcell : COMPONENT IS "ce0i,cl0i,z0i,ff0i,ce1i,cl1i,z1i,ff1i,cap0i,cap1i,ci,sir,cfbi,sor,cmsbo";
     ATTRIBUTE chain_msb OF datapathcell : COMPONENT IS "ce0,cl0,z0,ff0,ce1,cl1,z1,ff1,cap0,cap1,co_msb,sol_msb,cfbo,sil,cmsbi";
-    COMPONENT decimatorcell
-        PORT (
-            aclock : IN std_ulogic;
-            mod_dat_0 : IN std_ulogic;
-            mod_dat_1 : IN std_ulogic;
-            mod_dat_2 : IN std_ulogic;
-            mod_dat_3 : IN std_ulogic;
-            ext_start : IN std_ulogic;
-            modrst : OUT std_ulogic;
-            interrupt : OUT std_ulogic);
-    END COMPONENT;
-    COMPONENT dsmodcell
-        PORT (
-            aclock : IN std_ulogic;
-            modbitin_udb : IN std_ulogic;
-            reset_udb : IN std_ulogic;
-            reset_dec : IN std_ulogic;
-            dec_clock : OUT std_ulogic;
-            mod_dat_0 : OUT std_ulogic;
-            mod_dat_1 : OUT std_ulogic;
-            mod_dat_2 : OUT std_ulogic;
-            mod_dat_3 : OUT std_ulogic;
-            dout_udb_0 : OUT std_ulogic;
-            dout_udb_1 : OUT std_ulogic;
-            dout_udb_2 : OUT std_ulogic;
-            dout_udb_3 : OUT std_ulogic;
-            dout_udb_4 : OUT std_ulogic;
-            dout_udb_5 : OUT std_ulogic;
-            dout_udb_6 : OUT std_ulogic;
-            dout_udb_7 : OUT std_ulogic;
-            extclk_cp_udb : IN std_ulogic;
-            clk_udb : IN std_ulogic);
-    END COMPONENT;
     COMPONENT interrupt
         PORT (
             interrupt : IN std_ulogic;
@@ -641,20 +604,18 @@ BEGIN
             aclk_0 => ClockBlock_ScBoostClk_local,
             clk_a_dig_glb_0 => ClockBlock_ScBoostClk_adig,
             clk_a_dig_0 => ClockBlock_ScBoostClk_adig_local,
-            dclk_glb_0 => \ADC_DelSig_1:Net_93\,
-            dclk_0 => \ADC_DelSig_1:Net_93_local\,
             aclk_glb_1 => \ADC_SAR_1:Net_385\,
             aclk_1 => \ADC_SAR_1:Net_385_local\,
             clk_a_dig_glb_1 => \ADC_SAR_1:Net_381\,
             clk_a_dig_1 => \ADC_SAR_1:Net_381_local\,
-            dclk_glb_1 => Net_77,
-            dclk_1 => Net_77_local,
-            dclk_glb_2 => \UART:Net_9\,
-            dclk_2 => \UART:Net_9_local\,
-            aclk_glb_2 => \ADC_DelSig_1:Net_488\,
-            aclk_2 => \ADC_DelSig_1:Net_488_local\,
-            clk_a_dig_glb_2 => \ADC_DelSig_1:Net_488_adig\,
-            clk_a_dig_2 => \ADC_DelSig_1:Net_488_adig_local\,
+            aclk_glb_2 => \ADC_SAR_2:Net_385\,
+            aclk_2 => \ADC_SAR_2:Net_385_local\,
+            clk_a_dig_glb_2 => \ADC_SAR_2:Net_381\,
+            clk_a_dig_2 => \ADC_SAR_2:Net_381_local\,
+            dclk_glb_0 => Net_77,
+            dclk_0 => Net_77_local,
+            dclk_glb_1 => \UART:Net_9\,
+            dclk_1 => \UART:Net_9_local\,
             aclk_glb_ff_1 => \ClockBlock.aclk_glb_ff_1__sig\,
             aclk_glb_ff_2 => \ClockBlock.aclk_glb_ff_2__sig\);
 
@@ -1481,14 +1442,6 @@ BEGIN
             main_0 => \PWM_1:PWMUDB:runmode_enable\,
             main_1 => \PWM_1:PWMUDB:tc_i\);
 
-    __ONE__:macrocell
-        GENERIC MAP(
-            eqn_main => "1'b0",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => __ONE__);
-
     \UART:BUART:sTX:TxShifter:u0\:datapathcell
         GENERIC MAP(
             a0_init => "00000000",
@@ -1807,7 +1760,7 @@ BEGIN
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_319,
+            interrupt => Net_270,
             clock => ClockBlock_BUS_CLK);
 
     \ADC_SAR_1:ADC_SAR\:sarcell
@@ -1826,7 +1779,7 @@ BEGIN
             vn_ctl_udb_1 => open,
             vn_ctl_udb_0 => open,
             irq => \ADC_SAR_1:Net_252\,
-            next => Net_322,
+            next => Net_273,
             data_out_udb_11 => \ADC_SAR_1:Net_207_11\,
             data_out_udb_10 => \ADC_SAR_1:Net_207_10\,
             data_out_udb_9 => \ADC_SAR_1:Net_207_9\,
@@ -1839,52 +1792,46 @@ BEGIN
             data_out_udb_2 => \ADC_SAR_1:Net_207_2\,
             data_out_udb_1 => \ADC_SAR_1:Net_207_1\,
             data_out_udb_0 => \ADC_SAR_1:Net_207_0\,
-            eof_udb => Net_319);
+            eof_udb => Net_270);
 
-    \ADC_DelSig_1:DSM\:dsmodcell
-        GENERIC MAP(
-            cy_registers => "",
-            resolution => 14)
-        PORT MAP(
-            aclock => \ClockBlock.aclk_glb_ff_2__sig\,
-            modbitin_udb => open,
-            reset_udb => open,
-            reset_dec => \ADC_DelSig_1:mod_reset\,
-            extclk_cp_udb => \ADC_DelSig_1:Net_93_local\,
-            dec_clock => \ADC_DelSig_1:aclock\,
-            mod_dat_3 => \ADC_DelSig_1:mod_dat_3\,
-            mod_dat_2 => \ADC_DelSig_1:mod_dat_2\,
-            mod_dat_1 => \ADC_DelSig_1:mod_dat_1\,
-            mod_dat_0 => \ADC_DelSig_1:mod_dat_0\,
-            dout_udb_7 => \ADC_DelSig_1:Net_245_7\,
-            dout_udb_6 => \ADC_DelSig_1:Net_245_6\,
-            dout_udb_5 => \ADC_DelSig_1:Net_245_5\,
-            dout_udb_4 => \ADC_DelSig_1:Net_245_4\,
-            dout_udb_3 => \ADC_DelSig_1:Net_245_3\,
-            dout_udb_2 => \ADC_DelSig_1:Net_245_2\,
-            dout_udb_1 => \ADC_DelSig_1:Net_245_1\,
-            dout_udb_0 => \ADC_DelSig_1:Net_245_0\);
-
-    \ADC_DelSig_1:IRQ\:interrupt
+    \ADC_SAR_2:IRQ\:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_313,
+            interrupt => Net_277,
             clock => ClockBlock_BUS_CLK);
 
-    \ADC_DelSig_1:DEC\:decimatorcell
+    \ADC_SAR_2:ADC_SAR\:sarcell
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            aclock => \ADC_DelSig_1:aclock\,
-            mod_dat_3 => \ADC_DelSig_1:mod_dat_3\,
-            mod_dat_2 => \ADC_DelSig_1:mod_dat_2\,
-            mod_dat_1 => \ADC_DelSig_1:mod_dat_1\,
-            mod_dat_0 => \ADC_DelSig_1:mod_dat_0\,
-            ext_start => __ONE__,
-            modrst => \ADC_DelSig_1:mod_reset\,
-            interrupt => Net_313);
+            clock => \ClockBlock.aclk_glb_ff_2__sig\,
+            pump_clock => \ClockBlock.aclk_glb_ff_2__sig\,
+            sof_udb => open,
+            vp_ctl_udb_3 => open,
+            vp_ctl_udb_2 => open,
+            vp_ctl_udb_1 => open,
+            vp_ctl_udb_0 => open,
+            vn_ctl_udb_3 => open,
+            vn_ctl_udb_2 => open,
+            vn_ctl_udb_1 => open,
+            vn_ctl_udb_0 => open,
+            irq => \ADC_SAR_2:Net_252\,
+            next => Net_280,
+            data_out_udb_11 => \ADC_SAR_2:Net_207_11\,
+            data_out_udb_10 => \ADC_SAR_2:Net_207_10\,
+            data_out_udb_9 => \ADC_SAR_2:Net_207_9\,
+            data_out_udb_8 => \ADC_SAR_2:Net_207_8\,
+            data_out_udb_7 => \ADC_SAR_2:Net_207_7\,
+            data_out_udb_6 => \ADC_SAR_2:Net_207_6\,
+            data_out_udb_5 => \ADC_SAR_2:Net_207_5\,
+            data_out_udb_4 => \ADC_SAR_2:Net_207_4\,
+            data_out_udb_3 => \ADC_SAR_2:Net_207_3\,
+            data_out_udb_2 => \ADC_SAR_2:Net_207_2\,
+            data_out_udb_1 => \ADC_SAR_2:Net_207_1\,
+            data_out_udb_0 => \ADC_SAR_2:Net_207_0\,
+            eof_udb => Net_277);
 
     \UART:BUART:txn\:macrocell
         GENERIC MAP(

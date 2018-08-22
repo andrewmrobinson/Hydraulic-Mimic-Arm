@@ -1,5 +1,5 @@
 # PSOC_arm_project
-# 2018-08-22 05:03:08Z
+# 2018-08-21 06:32:09Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -10,8 +10,8 @@ set_io "SW2(0)" iocell 2 2
 set_io "Rx(0)" iocell 12 6
 set_io "Tx(0)" iocell 12 7
 set_io "pwm1(0)" iocell 1 6
-set_io "\ADC_SAR_1:Bypass(0)\" iocell 0 2
+set_io "\ADC_SAR_1:Bypass(0)\" iocell 0 4
 set_io "adc_in(0)" iocell 2 0
 set_io "adc_in_1(0)" iocell 2 3
-set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 1
-set_location "\ADC_DelSig_1:DSM\" dsmodcell -1 -1 0
+set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 0
+set_location "\ADC_SAR_2:ADC_SAR\" sarcell -1 -1 1

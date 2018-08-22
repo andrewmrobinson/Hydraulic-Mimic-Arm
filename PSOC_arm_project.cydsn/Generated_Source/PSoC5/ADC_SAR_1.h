@@ -165,13 +165,13 @@ extern volatile int16 ADC_SAR_1_shift;
 
 /* Default config values from user parameters */
 #define ADC_SAR_1_DEFAULT_RESOLUTION     (12u)   /* ADC resolution selected with parameters.*/
-#define ADC_SAR_1_DEFAULT_CONV_MODE      (1u)        /* Default conversion method */
+#define ADC_SAR_1_DEFAULT_CONV_MODE      (0u)        /* Default conversion method */
 #define ADC_SAR_1_DEFAULT_INTERNAL_CLK   (1u)             /* Default clock selection */
 #define ADC_SAR_1_DEFAULT_REFERENCE      (1u)         /* Default reference */
 #define ADC_SAR_1_DEFAULT_RANGE          (1u)       /* ADC Input Range selection */
-#define ADC_SAR_1_CLOCK_FREQUENCY        (9000000u)   /* Clock frequency */
-#define ADC_SAR_1_NOMINAL_CLOCK_FREQ     (8000000)  /* Nominal Clock Frequency */
-#define ADC_SAR_1_HIGH_POWER_PULSE       (0u)        /* Not zero when clock pulse > 50 ns */
+#define ADC_SAR_1_CLOCK_FREQUENCY        (1800000u)   /* Clock frequency */
+#define ADC_SAR_1_NOMINAL_CLOCK_FREQ     (1846154)  /* Nominal Clock Frequency */
+#define ADC_SAR_1_HIGH_POWER_PULSE       (1u)        /* Not zero when clock pulse > 50 ns */
 #define ADC_SAR_1_IRQ_REMOVE             (0u)                /* Removes internal interrupt */
 
 /* Use VDDA voltage define directly from cyfitter.h when VDDA reference has been used */

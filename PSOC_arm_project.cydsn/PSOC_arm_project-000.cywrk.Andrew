@@ -188,21 +188,18 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_AMux.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_Ext_CP_Clk.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_INT.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_IRQ.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_theACLK.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_in.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_in_1.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_INT.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_IRQ.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_theACLK.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
@@ -239,36 +236,6 @@
 <VisibleNodeIds>
 <v>PSOC_arm_project-000</v>
 <v>PSOC_arm_project-000\PSOC_arm_project</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_AMux.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_Ext_CP_Clk.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_INT.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_IRQ.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_theACLK.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_in.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_in_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyScBoostClk.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -284,8 +251,8 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CY8C58LP Family Datasheet</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides\cy_boot_v5_60</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_DelSig_v3_30.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20</v>
@@ -305,8 +272,8 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CY8C58LP Family Datasheet</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides\cy_boot_v5_60</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_DelSig_v3_30.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20</v>
@@ -339,7 +306,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="799, 519" SelectedTabbedMdiWindow="e8cc23c1-c72a-4d68-bd8d-048d544f16e7"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="e8cc23c1-c72a-4d68-bd8d-048d544f16e7" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="7818cdd0-0b74-4e3c-8194-a5dc4b0c3e91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="b36695f5-6692-4163-bac0-29a261607b91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="c5b5ce25-c9eb-4a9d-bd94-ca3a8957fb02" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="874, 378" SelectedTabbedMdiWindow="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="e8cc23c1-c72a-4d68-bd8d-048d544f16e7" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="7818cdd0-0b74-4e3c-8194-a5dc4b0c3e91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="b36695f5-6692-4163-bac0-29a261607b91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="c5b5ce25-c9eb-4a9d-bd94-ca3a8957fb02" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

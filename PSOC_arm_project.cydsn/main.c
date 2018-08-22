@@ -182,13 +182,8 @@ int main()
     //PWM variables
 
     PWM_1_Start();
-    //ADC_SAR_1_Start(); 
-    //ADC_SAR_1_StartConvert(); 
-    
-    ADC_DelSig_1_Start();
-    CyDelay(10);
-    ADC_DelSig_1_StartConvert();
-    
+    ADC_SAR_1_Start(); 
+    ADC_SAR_1_StartConvert(); 
     //ADC_SAR_2_Start(); 
     //ADC_SAR_2_StartConvert(); 
     
@@ -221,8 +216,7 @@ int main()
         sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
         UART_PutString(sendValue);
         */
-        //adcValue1 = ADC_SAR_1_GetResult16();
-        adcValue1 = ADC_DelSig_1_GetResult16();
+        adcValue1 = ADC_SAR_1_GetResult16();
                         
         /* ADC ERROR BANDAID */
         //ADC value for some reason is offset by 57232
