@@ -1,7 +1,7 @@
---------------- Build Started: 08/21/2018 18:27:07 Project: PSOC_arm_project, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 08/24/2018 13:59:18 Project: PSOC_arm_project, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
 main.c: In function 'RxIsr':
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
 main.c:123:30: warning: unused variable 'temp' [-Wunused-variable]
                          char temp[] = "      ";
                               ^
@@ -12,7 +12,7 @@ main.c:149:30: warning: unused variable 'temp' [-Wunused-variable]
                          char temp[] = "      ";
                               ^
 main.c: In function 'main':
-main.c:246:21: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+main.c:250:21: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
              if(angle<46 & angle>-46){
                      ^
 main.c:206:9: warning: unused variable 'cycle' [-Wunused-variable]
@@ -23,12 +23,12 @@ main.c:205:9: warning: unused variable 'up' [-Wunused-variable]
          ^
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a .\CortexM3\ARM_GCC_541\Debug\CyScBoostClk.o .\CortexM3\ARM_GCC_541\Debug\UART.o .\CortexM3\ARM_GCC_541\Debug\UART_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_BOOT.o .\CortexM3\ARM_GCC_541\Debug\LED.o .\CortexM3\ARM_GCC_541\Debug\SW2.o .\CortexM3\ARM_GCC_541\Debug\isr_rx.o .\CortexM3\ARM_GCC_541\Debug\UART_IntClock.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\PWM_1.o .\CortexM3\ARM_GCC_541\Debug\PWM_1_PM.o .\CortexM3\ARM_GCC_541\Debug\Clock_1.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_INT.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_PM.o .\CortexM3\ARM_GCC_541\Debug\adc_in.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_IRQ.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_theACLK.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_Bypass.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_INT.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_PM.o .\CortexM3\ARM_GCC_541\Debug\adc_in_1.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_IRQ.o .\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_theACLK.o .\CortexM3\ARM_GCC_541\Debug\pwm1.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\debug.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PSOC_arm_project.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
-cyelftool.exe -C C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\debug.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PSOC_arm_project.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
 No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
-cyelftool.exe -S C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf
-Flash used: 20644 of 262144 bytes (7.9%).
-SRAM used: 4377 of 65536 bytes (6.7%). Stack: 2048 bytes. Heap: 768 bytes.
---------------- Build Succeeded: 08/21/2018 18:27:09 ---------------
+cyelftool.exe -S C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf
+Flash used: 20748 of 262144 bytes (7.9%).
+SRAM used: 4449 of 65536 bytes (6.8%). Stack: 2048 bytes. Heap: 768 bytes.
+--------------- Build Succeeded: 08/24/2018 13:59:27 ---------------

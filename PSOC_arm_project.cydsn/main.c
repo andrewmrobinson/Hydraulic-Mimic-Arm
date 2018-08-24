@@ -41,7 +41,7 @@ volatile int new_angle = 0;
 volatile int new_pos_set = 0;
 int angle = 0;
 int isNegative=0;
-char sendValue[26];
+char sendValue[100];
 uint16 adcValue1;
 uint16 adcValue2;
 char temp[6];
@@ -106,7 +106,7 @@ CY_ISR(RxIsr)
                         new_pos_set = 1;
                         nn=0; 
                         
-                        sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angle);
+                        sprintf(sendValue,"%08d\t%08.0g\t%08d",adcValue1,err,angle);
                         UART_PutString(sendValue);
                         data_read_mode = 0;
                     }
@@ -183,7 +183,7 @@ int main()
 
     PWM_1_Start();
     ADC_SAR_1_Start(); 
-    ADC_SAR_1_StartConvert(); 
+    //ADC_SAR_1_StartConvert(); 
     //ADC_SAR_2_Start(); 
     //ADC_SAR_2_StartConvert(); 
     
@@ -216,7 +216,11 @@ int main()
         sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
         UART_PutString(sendValue);
         */
+        ADC_SAR_1_StartConvert();
+        ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
         adcValue1 = ADC_SAR_1_GetResult16();
+        sprintf(sendValue,"%08d\t%08.0g\t%08d\n",adcValue1,err,angle);
+        UART_PutString(sendValue);
                         
         /* ADC ERROR BANDAID */
         //ADC value for some reason is offset by 57232
