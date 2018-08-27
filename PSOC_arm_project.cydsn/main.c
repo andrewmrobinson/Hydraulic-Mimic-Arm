@@ -252,8 +252,8 @@ int main()
             //angle = ((float)pos/4096.00)*90.00 - 45.00;
             //angle = 0;
             //Limit angles of proportional valve
-            if(angle<-2){angle = angle - 11;}
-            if(angle>2){angle = angle + 10;}
+            if(angle<0){angle = angle - 13;}
+            if(angle>0){angle = angle + 12;}
             if(angle>45){angle=45;}
             if(angle<-45){angle=-45;}
             if(angle<46 & angle>-46){
