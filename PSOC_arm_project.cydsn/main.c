@@ -46,7 +46,7 @@ uint16 adcValue1;
 uint16 adcValue2;
 char temp[7];
 int nn=0;
-double pid[3] = {1,0,0};
+double pid[3] = {0.03,0,0};
 char help[100];
 int tt = 0;
 int pos=1600;
@@ -231,19 +231,22 @@ int main()
        */
                  
         //PWM_1_WriteCompare(dutycyclelength(0));
+        
         if(new_pos_set){
             pos = new_pos;
             new_pos_set = 0;
             new_angle = 0;
+            
             /*
-            if(pos<0){pos = pos - 13;}
-            if(pos>0){pos = pos + 12;}
+            //if(pos<0){pos = pos - 13;}
+            //if(pos>0){pos = pos + 12;}
             if(pos>45){pos=45;}
             if(pos<-45){pos=-45;}
             if(pos<46 & pos>-46){
                 PWM_1_WriteCompare(dutycyclelength(pos));
             }
             */
+            
             err = -pos + adcValue1;
             der = err - prev_err;
             pid_integral += err;
