@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSOC_arm_project-000\PSOC_arm_project\Source Files\main.c">
 <ExpandedNodeIds>
 <v>PSOC_arm_project-000</v>
 <v>PSOC_arm_project-000\PSOC_arm_project</v>
@@ -355,7 +355,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1042, 641" SelectedTabbedMdiWindow="f819fe35-8e3d-40ce-babd-c665b6656465"><DocumentWindow Key="C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="0812d0e2-4ed7-40e9-babb-2fbd94c23174" /><DocumentWindow Key="C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="f819fe35-8e3d-40ce-babd-c665b6656465" /><DocumentWindow Key="C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="b211b637-5f24-49cc-92bf-5ecde40d60e2" /><DocumentWindow Key="C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="cbe2e4eb-08a9-4c1b-9f09-d8f278546398" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1041, 641" SelectedTabbedMdiWindow="f819fe35-8e3d-40ce-babd-c665b6656465"><DocumentWindow Key="C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="0812d0e2-4ed7-40e9-babb-2fbd94c23174" /><DocumentWindow Key="C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="f819fe35-8e3d-40ce-babd-c665b6656465" /><DocumentWindow Key="C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="b211b637-5f24-49cc-92bf-5ecde40d60e2" /><DocumentWindow Key="C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="cbe2e4eb-08a9-4c1b-9f09-d8f278546398" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="39ec9f45-9e18-42fa-af61-f463cb5ffe65" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -44,10 +44,10 @@ int isNegative=0;
 char sendValue[100];
 uint16 adcValue1;
 uint16 adcValue2;
-char temp[6];
+char temp[7];
 int nn=0;
 double pid[3] = {1,0,0};
-char help[1000];
+char help[100];
 int tt = 0;
 int pos=1600;
 int new_pos;
@@ -76,12 +76,14 @@ CY_ISR(RxIsr)
             rxData = UART_RXDATA_REG;
             help[tt] = rxData;
             tt++;
+            if(tt==100){tt=0;}
             
             switch(data_read_mode)
             {
                 case 0:
                     if(rxData=='{' )
                     {
+                        char temp[] = "      ";
                         new_angle = 0;
                         data_read_mode++;
                     }
@@ -105,8 +107,9 @@ CY_ISR(RxIsr)
                         new_pos = (int) strtol(temp, (char **)NULL, 10);
                         new_pos_set = 1;
                         nn=0; 
-                        
-                        sprintf(sendValue,"%08d\t%08.0g\t%08d",adcValue1,err,angle);
+                    
+                        sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,pos);
+                        char temp[] = "      ";
                         UART_PutString(sendValue);
                         data_read_mode = 0;
                     }
@@ -218,13 +221,19 @@ int main()
         */
         ADC_SAR_1_StartConvert();
         ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
+        
         adcValue1 = ADC_SAR_1_GetResult16();
-        sprintf(sendValue,"%08d\t%08.0g\t%08d\n",adcValue1,err,angle);
+        
+        /* INTERNAL PSOC TESTING */
+        /*
+        sprintf(sendValue,"%08d\t%08.0f\t%08d\t%08d\n",adcValue1,err,angle,new_pos);
         UART_PutString(sendValue);
-                        
+        
+        /* END INTERNAL PSOC TESTING */
+        
         /* ADC ERROR BANDAID */
         //ADC value for some reason is offset by 57232
-        if(adcValue1>30000)
+        /*if(adcValue1>30000)
         {
             adcValue1 = adcValue1 - 57232;
         }
@@ -237,7 +246,7 @@ int main()
             new_pos_set = 0;
             new_angle = 0;
             
-            err = pos - adcValue1;
+            err = -pos + adcValue1;
             der = err - prev_err;
             pid_integral += err;
             angle = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
@@ -248,13 +257,35 @@ int main()
             if(angle>45){angle=45;}
             if(angle<-45){angle=-45;}
             if(angle<46 & angle>-46){
-                PWM_1_WriteCompare(dutycyclelength(angle));
+                //PWM_1_WriteCompare(dutycyclelength(angle));
             }
+            PWM_1_WriteCompare(dutycyclelength(pos));
             prev_err = err;
             
         }
-        CyDelay(100);
+        CyDelay(25);
         
+        /* TEMPORARY POSITION SETTING, SWITCHES BETWEEN 1800/2000 EVERY 3 SEC */
+        /*
+        int switchposition;
+        if(switchposition > 120)
+        {
+            switchposition=0;
+            if(new_pos==2000)
+            {
+                new_pos=1800;
+            }
+            else
+            {
+                new_pos=2000;
+            }
+        }
+        else
+        {
+            switchposition++;
+        }
+        
+        /* TEMPORARY POSITION SETTING END */
         
         /***********************************************************************
         * Handle SW2 press. 
