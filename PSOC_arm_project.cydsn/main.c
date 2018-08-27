@@ -76,14 +76,14 @@ CY_ISR(RxIsr)
             rxData = UART_RXDATA_REG;
             help[tt] = rxData;
             tt++;
-            if(tt==100){tt=0;}
+            if(tt==99){tt=0;}
             
             switch(data_read_mode)
             {
                 case 0:
                     if(rxData=='{' )
                     {
-                        char temp[] = "      ";
+                        temp[0] = '\0';
                         new_angle = 0;
                         data_read_mode++;
                     }
@@ -109,8 +109,8 @@ CY_ISR(RxIsr)
                         nn=0; 
                     
                         sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,pos);
-                        char temp[] = "      ";
                         UART_PutString(sendValue);
+                        temp[0] = '\0';
                         data_read_mode = 0;
                     }
                   
@@ -123,7 +123,7 @@ CY_ISR(RxIsr)
                     else {
                         pid[0] = strtod(temp, NULL);
                         nn=0;
-                        char temp[] = "      ";
+                        temp[0] = '\0';
                         data_read_mode = 0;
                     }
                     
@@ -136,7 +136,7 @@ CY_ISR(RxIsr)
                     else {
                         pid[1] = strtod(temp, NULL);
                         nn=0;
-                        char temp[] = "      ";
+                        temp[0] = '\0';
                         data_read_mode = 0;
                     }
                     
@@ -149,7 +149,7 @@ CY_ISR(RxIsr)
                     else {
                         pid[2] = strtod(temp, NULL);
                         nn=0;
-                        char temp[] = "      ";
+                        temp[0] = '\0';
                         data_read_mode = 0;
                     }
                     
@@ -228,24 +228,22 @@ int main()
         /*
         sprintf(sendValue,"%08d\t%08.0f\t%08d\t%08d\n",adcValue1,err,angle,new_pos);
         UART_PutString(sendValue);
-        
-        /* END INTERNAL PSOC TESTING */
-        
-        /* ADC ERROR BANDAID */
-        //ADC value for some reason is offset by 57232
-        /*if(adcValue1>30000)
-        {
-            adcValue1 = adcValue1 - 57232;
-        }
-        
-        /* END ADC ERROR BANDAID */
+       */
                  
         //PWM_1_WriteCompare(dutycyclelength(0));
         if(new_pos_set){
             pos = new_pos;
             new_pos_set = 0;
             new_angle = 0;
-            
+            /*
+            if(pos<0){pos = pos - 13;}
+            if(pos>0){pos = pos + 12;}
+            if(pos>45){pos=45;}
+            if(pos<-45){pos=-45;}
+            if(pos<46 & pos>-46){
+                PWM_1_WriteCompare(dutycyclelength(pos));
+            }
+            */
             err = -pos + adcValue1;
             der = err - prev_err;
             pid_integral += err;
@@ -254,38 +252,19 @@ int main()
             //angle = ((float)pos/4096.00)*90.00 - 45.00;
             //angle = 0;
             //Limit angles of proportional valve
+            if(angle<-2){angle = angle - 11;}
+            if(angle>2){angle = angle + 10;}
             if(angle>45){angle=45;}
             if(angle<-45){angle=-45;}
             if(angle<46 & angle>-46){
-                //PWM_1_WriteCompare(dutycyclelength(angle));
+                PWM_1_WriteCompare(dutycyclelength(angle));
             }
-            PWM_1_WriteCompare(dutycyclelength(pos));
             prev_err = err;
             
         }
         CyDelay(25);
         
-        /* TEMPORARY POSITION SETTING, SWITCHES BETWEEN 1800/2000 EVERY 3 SEC */
-        /*
-        int switchposition;
-        if(switchposition > 120)
-        {
-            switchposition=0;
-            if(new_pos==2000)
-            {
-                new_pos=1800;
-            }
-            else
-            {
-                new_pos=2000;
-            }
-        }
-        else
-        {
-            switchposition++;
-        }
         
-        /* TEMPORARY POSITION SETTING END */
         
         /***********************************************************************
         * Handle SW2 press. 
