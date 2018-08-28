@@ -108,7 +108,7 @@ CY_ISR(RxIsr)
                         new_pos_set = 1;
                         nn=0; 
                     
-                        sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,pos);
+                        sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angle);
                         UART_PutString(sendValue);
                         temp[0] = '\0';
                         data_read_mode = 0;
@@ -186,6 +186,8 @@ int main()
 
     PWM_1_Start();
     ADC_SAR_1_Start(); 
+    Timer_1_Start();
+    Timer_1_Stop();
     //ADC_SAR_1_StartConvert(); 
     //ADC_SAR_2_Start(); 
     //ADC_SAR_2_StartConvert(); 
@@ -207,13 +209,13 @@ int main()
     angle = -89;
     int up = 1;
     int cycle = 1000;
-
+    uint16 timercapture;
     double der, prev_err, pid_integral,dt;
     der = 0; prev_err = 0; pid_integral = 0; 
-    dt = 0.01; //assumes cydelay = 10 below for a 100Hz frequency.
+    dt = 0.025; //assumes cydelay = 10 below for a 100Hz frequency.
     for(;;)
     {
-        
+        Timer_1_Start();
         /*adcValue1 = ADC_SAR_1_GetResult16() ;
         adcValue2 = ADC_SAR_2_GetResult16() ;
         sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
@@ -223,14 +225,6 @@ int main()
         ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
         
         adcValue1 = ADC_SAR_1_GetResult16();
-        
-        /* INTERNAL PSOC TESTING */
-        /*
-        sprintf(sendValue,"%08d\t%08.0f\t%08d\t%08d\n",adcValue1,err,angle,new_pos);
-        UART_PutString(sendValue);
-       */
-                 
-        //PWM_1_WriteCompare(dutycyclelength(0));
         
         if(new_pos_set){
             pos = new_pos;
@@ -245,28 +239,29 @@ int main()
             if(pos<46 & pos>-46){
                 PWM_1_WriteCompare(dutycyclelength(pos));
             }
-            */
-            
-            err = -pos + adcValue1;
-            der = err - prev_err;
-            pid_integral += err;
-            angle = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
-            //angle=angle*-1;
-            //angle = ((float)pos/4096.00)*90.00 - 45.00;
-            //angle = 0;
-            //Limit angles of proportional valve
-            if(angle<0){angle = angle - 13;}
-            if(angle>0){angle = angle + 12;}
-            if(angle>45){angle=45;}
-            if(angle<-45){angle=-45;}
-            if(angle<46 & angle>-46){
-                PWM_1_WriteCompare(dutycyclelength(angle));
-            }
-            prev_err = err;
-            
+            */            
         }
-        CyDelay(25);
         
+        /* PID */
+        err = -pos + adcValue1;
+        der = err - prev_err;
+        pid_integral += err;
+        angle = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
+        //Limit angles of proportional valve
+        if(angle<0){angle = angle - 13;}
+        if(angle>0){angle = angle + 12;}
+        if(angle>45){angle=45;}
+        if(angle<-45){angle=-45;}
+        if(angle<46 & angle>-46){
+            PWM_1_WriteCompare(dutycyclelength(angle));
+        }
+        prev_err = err;
+        
+        /* END PID CODE */
+        
+        CyDelay(25);
+        dt=(65536-(double)Timer_1_ReadCounter())*66/65536/1000;
+        Timer_1_Stop();
         
         
         /***********************************************************************

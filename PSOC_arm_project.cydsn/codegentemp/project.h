@@ -36,6 +36,8 @@
 #include "ADC_SAR_2.h"
 #include "adc_in_1_aliases.h"
 #include "adc_in_1.h"
+#include "timer_clock.h"
+#include "Timer_1.h"
 #include "UART_IntClock.h"
 #include "ADC_SAR_1_IRQ.h"
 #include "ADC_SAR_1_theACLK.h"
