@@ -248,8 +248,8 @@ int main()
         pid_integral += err;
         angle = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
         //Limit angles of proportional valve
-        if(angle<0){angle = angle - 13;}
-        if(angle>0){angle = angle + 12;}
+        if(angle<0){angle = angle - 14;}
+        if(angle>0){angle = angle + 14;}
         if(angle>45){angle=45;}
         if(angle<-45){angle=-45;}
         if(angle<46 & angle>-46){
