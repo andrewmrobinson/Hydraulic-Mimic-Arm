@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 1
 
 
    1              		.syntax unified
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.thumb
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
   28:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
   29:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
   30:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 2
 
 
   31:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Function Name: ADC_SAR_2_theACLK_Start
@@ -80,47 +80,67 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
   28              		.loc 1 46 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
   32              		@ link register save eliminated.
+  33 0000 80B4     		push	{r7}
+  34              		.cfi_def_cfa_offset 4
+  35              		.cfi_offset 7, -4
+  36 0002 00AF     		add	r7, sp, #0
+  37              		.cfi_def_cfa_register 7
   47:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     /* Set the bit to enable the clock. */
   48:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     ADC_SAR_2_theACLK_CLKEN |= ADC_SAR_2_theACLK_CLKEN_MASK;
-  33              		.loc 1 48 0
-  34 0000 054A     		ldr	r2, .L2
-  35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  36 0004 43F00403 		orr	r3, r3, #4
-  37 0008 1370     		strb	r3, [r2]
+  38              		.loc 1 48 0
+  39 0004 094A     		ldr	r2, .L2
+  40 0006 094B     		ldr	r3, .L2
+  41 0008 1B78     		ldrb	r3, [r3]
+  42 000a DBB2     		uxtb	r3, r3
+  43 000c 43F00403 		orr	r3, r3, #4
+  44 0010 DBB2     		uxtb	r3, r3
+  45 0012 1370     		strb	r3, [r2]
   49:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 	ADC_SAR_2_theACLK_CLKSTBY |= ADC_SAR_2_theACLK_CLKSTBY_MASK;
-  38              		.loc 1 49 0
-  39 000a 1032     		adds	r2, r2, #16
-  40 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  41 000e 43F00403 		orr	r3, r3, #4
-  42 0012 1370     		strb	r3, [r2]
-  43 0014 7047     		bx	lr
-  44              	.L3:
-  45 0016 00BF     		.align	2
-  46              	.L2:
-  47 0018 A1430040 		.word	1073759137
-  48              		.cfi_endproc
-  49              	.LFE0:
-  50              		.size	ADC_SAR_2_theACLK_Start, .-ADC_SAR_2_theACLK_Start
-  51              		.section	.text.ADC_SAR_2_theACLK_Stop,"ax",%progbits
-  52              		.align	2
-  53              		.global	ADC_SAR_2_theACLK_Stop
-  54              		.thumb
-  55              		.thumb_func
-  56              		.type	ADC_SAR_2_theACLK_Stop, %function
-  57              	ADC_SAR_2_theACLK_Stop:
-  58              	.LFB1:
+  46              		.loc 1 49 0
+  47 0014 064A     		ldr	r2, .L2+4
+  48 0016 064B     		ldr	r3, .L2+4
+  49 0018 1B78     		ldrb	r3, [r3]
+  50 001a DBB2     		uxtb	r3, r3
+  51 001c 43F00403 		orr	r3, r3, #4
+  52 0020 DBB2     		uxtb	r3, r3
+  53 0022 1370     		strb	r3, [r2]
   50:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+  54              		.loc 1 50 0
+  55 0024 00BF     		nop
+  56 0026 BD46     		mov	sp, r7
+  57              		.cfi_def_cfa_register 13
+  58              		@ sp needed
+  59 0028 80BC     		pop	{r7}
+  60              		.cfi_restore 7
+  61              		.cfi_def_cfa_offset 0
+  62 002a 7047     		bx	lr
+  63              	.L3:
+  64              		.align	2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 3
+
+
+  65              	.L2:
+  66 002c A1430040 		.word	1073759137
+  67 0030 B1430040 		.word	1073759153
+  68              		.cfi_endproc
+  69              	.LFE0:
+  70              		.size	ADC_SAR_2_theACLK_Start, .-ADC_SAR_2_theACLK_Start
+  71              		.section	.text.ADC_SAR_2_theACLK_Stop,"ax",%progbits
+  72              		.align	2
+  73              		.global	ADC_SAR_2_theACLK_Stop
+  74              		.thumb
+  75              		.thumb_func
+  76              		.type	ADC_SAR_2_theACLK_Stop, %function
+  77              	ADC_SAR_2_theACLK_Stop:
+  78              	.LFB1:
   51:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
   52:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
   53:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
   54:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Function Name: ADC_SAR_2_theACLK_Stop
   55:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** ********************************************************************************
   56:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 3
-
-
   57:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Summary:
   58:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  Stops the clock and returns immediately. This API does not require the
   59:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  source clock to be running but may return before the hardware is actually
@@ -137,50 +157,70 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
   70:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
   71:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** void ADC_SAR_2_theACLK_Stop(void) 
   72:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
-  59              		.loc 1 72 0
-  60              		.cfi_startproc
-  61              		@ args = 0, pretend = 0, frame = 0
-  62              		@ frame_needed = 0, uses_anonymous_args = 0
-  63              		@ link register save eliminated.
+  79              		.loc 1 72 0
+  80              		.cfi_startproc
+  81              		@ args = 0, pretend = 0, frame = 0
+  82              		@ frame_needed = 1, uses_anonymous_args = 0
+  83              		@ link register save eliminated.
+  84 0000 80B4     		push	{r7}
+  85              		.cfi_def_cfa_offset 4
+  86              		.cfi_offset 7, -4
+  87 0002 00AF     		add	r7, sp, #0
+  88              		.cfi_def_cfa_register 7
   73:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     /* Clear the bit to disable the clock. */
   74:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     ADC_SAR_2_theACLK_CLKEN &= (uint8)(~ADC_SAR_2_theACLK_CLKEN_MASK);
-  64              		.loc 1 74 0
-  65 0000 054A     		ldr	r2, .L5
-  66 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  67 0004 03F0FB03 		and	r3, r3, #251
-  68 0008 1370     		strb	r3, [r2]
+  89              		.loc 1 74 0
+  90 0004 094A     		ldr	r2, .L5
+  91 0006 094B     		ldr	r3, .L5
+  92 0008 1B78     		ldrb	r3, [r3]
+  93 000a DBB2     		uxtb	r3, r3
+  94 000c 23F00403 		bic	r3, r3, #4
+  95 0010 DBB2     		uxtb	r3, r3
+  96 0012 1370     		strb	r3, [r2]
   75:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 	ADC_SAR_2_theACLK_CLKSTBY &= (uint8)(~ADC_SAR_2_theACLK_CLKSTBY_MASK);
-  69              		.loc 1 75 0
-  70 000a 1032     		adds	r2, r2, #16
-  71 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  72 000e 03F0FB03 		and	r3, r3, #251
-  73 0012 1370     		strb	r3, [r2]
-  74 0014 7047     		bx	lr
-  75              	.L6:
-  76 0016 00BF     		.align	2
-  77              	.L5:
-  78 0018 A1430040 		.word	1073759137
-  79              		.cfi_endproc
-  80              	.LFE1:
-  81              		.size	ADC_SAR_2_theACLK_Stop, .-ADC_SAR_2_theACLK_Stop
-  82              		.section	.text.ADC_SAR_2_theACLK_StopBlock,"ax",%progbits
-  83              		.align	2
-  84              		.global	ADC_SAR_2_theACLK_StopBlock
-  85              		.thumb
-  86              		.thumb_func
-  87              		.type	ADC_SAR_2_theACLK_StopBlock, %function
-  88              	ADC_SAR_2_theACLK_StopBlock:
-  89              	.LFB2:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 4
+
+
+  97              		.loc 1 75 0
+  98 0014 064A     		ldr	r2, .L5+4
+  99 0016 064B     		ldr	r3, .L5+4
+ 100 0018 1B78     		ldrb	r3, [r3]
+ 101 001a DBB2     		uxtb	r3, r3
+ 102 001c 23F00403 		bic	r3, r3, #4
+ 103 0020 DBB2     		uxtb	r3, r3
+ 104 0022 1370     		strb	r3, [r2]
   76:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+ 105              		.loc 1 76 0
+ 106 0024 00BF     		nop
+ 107 0026 BD46     		mov	sp, r7
+ 108              		.cfi_def_cfa_register 13
+ 109              		@ sp needed
+ 110 0028 80BC     		pop	{r7}
+ 111              		.cfi_restore 7
+ 112              		.cfi_def_cfa_offset 0
+ 113 002a 7047     		bx	lr
+ 114              	.L6:
+ 115              		.align	2
+ 116              	.L5:
+ 117 002c A1430040 		.word	1073759137
+ 118 0030 B1430040 		.word	1073759153
+ 119              		.cfi_endproc
+ 120              	.LFE1:
+ 121              		.size	ADC_SAR_2_theACLK_Stop, .-ADC_SAR_2_theACLK_Stop
+ 122              		.section	.text.ADC_SAR_2_theACLK_StopBlock,"ax",%progbits
+ 123              		.align	2
+ 124              		.global	ADC_SAR_2_theACLK_StopBlock
+ 125              		.thumb
+ 126              		.thumb_func
+ 127              		.type	ADC_SAR_2_theACLK_StopBlock, %function
+ 128              	ADC_SAR_2_theACLK_StopBlock:
+ 129              	.LFB2:
   77:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
   78:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
   79:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #if(CY_PSOC3 || CY_PSOC5LP)
   80:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
   81:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
   82:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 4
-
-
   83:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Function Name: ADC_SAR_2_theACLK_StopBlock
   84:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** ********************************************************************************
   85:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
@@ -198,135 +238,176 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
   97:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  None
   98:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
   99:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 5
+
+
  100:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** void ADC_SAR_2_theACLK_StopBlock(void) 
  101:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
-  90              		.loc 1 101 0
-  91              		.cfi_startproc
-  92              		@ args = 0, pretend = 0, frame = 0
-  93              		@ frame_needed = 0, uses_anonymous_args = 0
-  94              		@ link register save eliminated.
+ 130              		.loc 1 101 0
+ 131              		.cfi_startproc
+ 132              		@ args = 0, pretend = 0, frame = 8
+ 133              		@ frame_needed = 1, uses_anonymous_args = 0
+ 134              		@ link register save eliminated.
+ 135 0000 80B4     		push	{r7}
+ 136              		.cfi_def_cfa_offset 4
+ 137              		.cfi_offset 7, -4
+ 138 0002 83B0     		sub	sp, sp, #12
+ 139              		.cfi_def_cfa_offset 16
+ 140 0004 00AF     		add	r7, sp, #0
+ 141              		.cfi_def_cfa_register 7
  102:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     if ((ADC_SAR_2_theACLK_CLKEN & ADC_SAR_2_theACLK_CLKEN_MASK) != 0u)
-  95              		.loc 1 102 0
-  96 0000 174B     		ldr	r3, .L10
-  97 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-  98 0004 13F0040F 		tst	r3, #4
-  99 0008 29D0     		beq	.L7
- 100              	.LBB2:
+ 142              		.loc 1 102 0
+ 143 0006 224B     		ldr	r3, .L11
+ 144 0008 1B78     		ldrb	r3, [r3]
+ 145 000a DBB2     		uxtb	r3, r3
+ 146 000c 03F00403 		and	r3, r3, #4
+ 147 0010 002B     		cmp	r3, #0
+ 148 0012 37D0     		beq	.L10
+ 149              	.LBB2:
  103:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
  104:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #if HAS_CLKDIST_LD_DISABLE
  105:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         uint16 oldDivider;
  106:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  107:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CLK_DIST_LD = 0u;
- 101              		.loc 1 107 0
- 102 000a 1649     		ldr	r1, .L10+4
- 103 000c 0023     		movs	r3, #0
- 104 000e 0B70     		strb	r3, [r1]
+ 150              		.loc 1 107 0
+ 151 0014 1F4B     		ldr	r3, .L11+4
+ 152 0016 0022     		movs	r2, #0
+ 153 0018 1A70     		strb	r2, [r3]
  108:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  109:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* Clear all the mask bits except ours. */
  110:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #if defined(ADC_SAR_2_theACLK__CFG3)
  111:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CLK_DIST_AMASK = ADC_SAR_2_theACLK_CLKEN_MASK;
- 105              		.loc 1 111 0
- 106 0010 0420     		movs	r0, #4
- 107 0012 154A     		ldr	r2, .L10+8
- 108 0014 1070     		strb	r0, [r2]
+ 154              		.loc 1 111 0
+ 155 001a 1F4B     		ldr	r3, .L11+8
+ 156 001c 0422     		movs	r2, #4
+ 157 001e 1A70     		strb	r2, [r3]
  112:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CLK_DIST_DMASK = 0x00u;
- 109              		.loc 1 112 0
- 110 0016 043A     		subs	r2, r2, #4
- 111 0018 1370     		strb	r3, [r2]
+ 158              		.loc 1 112 0
+ 159 0020 1E4B     		ldr	r3, .L11+12
+ 160 0022 0022     		movs	r2, #0
+ 161 0024 1A70     		strb	r2, [r3]
  113:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #else
  114:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CLK_DIST_DMASK = ADC_SAR_2_theACLK_CLKEN_MASK;
  115:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CLK_DIST_AMASK = 0x00u;
  116:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* ADC_SAR_2_theACLK__CFG3 */
  117:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 5
-
-
  118:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* Clear mask of bus clock. */
  119:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CLK_DIST_BCFG2 &= (uint8)(~BCFG2_MASK);
- 112              		.loc 1 119 0
- 113 001a 083A     		subs	r2, r2, #8
- 114 001c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 115 001e 03F07F03 		and	r3, r3, #127
- 116 0022 1370     		strb	r3, [r2]
+ 162              		.loc 1 119 0
+ 163 0026 1E4A     		ldr	r2, .L11+16
+ 164 0028 1D4B     		ldr	r3, .L11+16
+ 165 002a 1B78     		ldrb	r3, [r3]
+ 166 002c DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 6
+
+
+ 167 002e 03F07F03 		and	r3, r3, #127
+ 168 0032 DBB2     		uxtb	r3, r3
+ 169 0034 1370     		strb	r3, [r2]
  120:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  121:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         oldDivider = CY_GET_REG16(ADC_SAR_2_theACLK_DIV_PTR);
- 117              		.loc 1 121 0
- 118 0024 114B     		ldr	r3, .L10+12
- 119 0026 1A88     		ldrh	r2, [r3]
- 120 0028 92B2     		uxth	r2, r2
- 121              	.LVL0:
+ 170              		.loc 1 121 0
+ 171 0036 1B4B     		ldr	r3, .L11+20
+ 172 0038 1B88     		ldrh	r3, [r3]	@ movhi
+ 173 003a FB80     		strh	r3, [r7, #6]	@ movhi
  122:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CY_SET_REG16(CYREG_CLKDIST_WRK0, oldDivider);
- 122              		.loc 1 122 0
- 123 002a A3F58373 		sub	r3, r3, #262
- 124 002e 1A80     		strh	r2, [r3]	@ movhi
+ 174              		.loc 1 122 0
+ 175 003c 1A4A     		ldr	r2, .L11+24
+ 176 003e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 177 0040 1380     		strh	r3, [r2]	@ movhi
  123:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CLK_DIST_LD = CYCLK_LD_DISABLE | CYCLK_LD_SYNC_EN | CYCLK_LD_LOAD;
- 125              		.loc 1 123 0
- 126 0030 0723     		movs	r3, #7
- 127 0032 0B70     		strb	r3, [r1]
- 128              	.L9:
+ 178              		.loc 1 123 0
+ 179 0042 144B     		ldr	r3, .L11+4
+ 180 0044 0722     		movs	r2, #7
+ 181 0046 1A70     		strb	r2, [r3]
  124:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  125:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* Wait for clock to be disabled */
  126:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
- 129              		.loc 1 126 0 discriminator 1
- 130 0034 0B4B     		ldr	r3, .L10+4
- 131 0036 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 132 0038 13F0010F 		tst	r3, #1
- 133 003c FAD1     		bne	.L9
+ 182              		.loc 1 126 0
+ 183 0048 00BF     		nop
+ 184              	.L9:
+ 185              		.loc 1 126 0 is_stmt 0 discriminator 1
+ 186 004a 124B     		ldr	r3, .L11+4
+ 187 004c 1B78     		ldrb	r3, [r3]
+ 188 004e DBB2     		uxtb	r3, r3
+ 189 0050 03F00103 		and	r3, r3, #1
+ 190 0054 002B     		cmp	r3, #0
+ 191 0056 F8D1     		bne	.L9
  127:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
  128:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  129:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* Clear the bit to disable the clock. */
  130:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_CLKEN &= (uint8)(~ADC_SAR_2_theACLK_CLKEN_MASK);
- 134              		.loc 1 130 0
- 135 003e 0849     		ldr	r1, .L10
- 136 0040 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 137 0042 03F0FB03 		and	r3, r3, #251
- 138 0046 0B70     		strb	r3, [r1]
+ 192              		.loc 1 130 0 is_stmt 1
+ 193 0058 0D4A     		ldr	r2, .L11
+ 194 005a 0D4B     		ldr	r3, .L11
+ 195 005c 1B78     		ldrb	r3, [r3]
+ 196 005e DBB2     		uxtb	r3, r3
+ 197 0060 23F00403 		bic	r3, r3, #4
+ 198 0064 DBB2     		uxtb	r3, r3
+ 199 0066 1370     		strb	r3, [r2]
  131:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_CLKSTBY &= (uint8)(~ADC_SAR_2_theACLK_CLKSTBY_MASK);
- 139              		.loc 1 131 0
- 140 0048 1031     		adds	r1, r1, #16
- 141 004a 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 142 004c 03F0FB03 		and	r3, r3, #251
- 143 0050 0B70     		strb	r3, [r1]
+ 200              		.loc 1 131 0
+ 201 0068 104A     		ldr	r2, .L11+28
+ 202 006a 104B     		ldr	r3, .L11+28
+ 203 006c 1B78     		ldrb	r3, [r3]
+ 204 006e DBB2     		uxtb	r3, r3
+ 205 0070 23F00403 		bic	r3, r3, #4
+ 206 0074 DBB2     		uxtb	r3, r3
+ 207 0076 1370     		strb	r3, [r2]
  132:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  133:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #if HAS_CLKDIST_LD_DISABLE
  134:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* Clear the disable bit */
  135:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CLK_DIST_LD = 0x00u;
- 144              		.loc 1 135 0
- 145 0052 0021     		movs	r1, #0
- 146 0054 034B     		ldr	r3, .L10+4
- 147 0056 1970     		strb	r1, [r3]
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 7
+
+
+ 208              		.loc 1 135 0
+ 209 0078 064B     		ldr	r3, .L11+4
+ 210 007a 0022     		movs	r2, #0
+ 211 007c 1A70     		strb	r2, [r3]
  136:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         CY_SET_REG16(ADC_SAR_2_theACLK_DIV_PTR, oldDivider);
- 148              		.loc 1 136 0
- 149 0058 03F20713 		addw	r3, r3, #263
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 6
-
-
- 150 005c 1A80     		strh	r2, [r3]	@ movhi
- 151              	.LVL1:
- 152              	.L7:
- 153 005e 7047     		bx	lr
- 154              	.L11:
- 155              		.align	2
- 156              	.L10:
- 157 0060 A1430040 		.word	1073759137
- 158 0064 01400040 		.word	1073758209
- 159 0068 14400040 		.word	1073758228
- 160 006c 08410040 		.word	1073758472
- 161              	.LBE2:
- 162              		.cfi_endproc
- 163              	.LFE2:
- 164              		.size	ADC_SAR_2_theACLK_StopBlock, .-ADC_SAR_2_theACLK_StopBlock
- 165              		.section	.text.ADC_SAR_2_theACLK_StandbyPower,"ax",%progbits
- 166              		.align	2
- 167              		.global	ADC_SAR_2_theACLK_StandbyPower
- 168              		.thumb
- 169              		.thumb_func
- 170              		.type	ADC_SAR_2_theACLK_StandbyPower, %function
- 171              	ADC_SAR_2_theACLK_StandbyPower:
- 172              	.LFB3:
+ 212              		.loc 1 136 0
+ 213 007e 094A     		ldr	r2, .L11+20
+ 214 0080 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 215 0082 1380     		strh	r3, [r2]	@ movhi
+ 216              	.L10:
+ 217              	.LBE2:
  137:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
  138:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
  139:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+ 218              		.loc 1 139 0
+ 219 0084 00BF     		nop
+ 220 0086 0C37     		adds	r7, r7, #12
+ 221              		.cfi_def_cfa_offset 4
+ 222 0088 BD46     		mov	sp, r7
+ 223              		.cfi_def_cfa_register 13
+ 224              		@ sp needed
+ 225 008a 80BC     		pop	{r7}
+ 226              		.cfi_restore 7
+ 227              		.cfi_def_cfa_offset 0
+ 228 008c 7047     		bx	lr
+ 229              	.L12:
+ 230 008e 00BF     		.align	2
+ 231              	.L11:
+ 232 0090 A1430040 		.word	1073759137
+ 233 0094 01400040 		.word	1073758209
+ 234 0098 14400040 		.word	1073758228
+ 235 009c 10400040 		.word	1073758224
+ 236 00a0 08400040 		.word	1073758216
+ 237 00a4 08410040 		.word	1073758472
+ 238 00a8 02400040 		.word	1073758210
+ 239 00ac B1430040 		.word	1073759153
+ 240              		.cfi_endproc
+ 241              	.LFE2:
+ 242              		.size	ADC_SAR_2_theACLK_StopBlock, .-ADC_SAR_2_theACLK_StopBlock
+ 243              		.section	.text.ADC_SAR_2_theACLK_StandbyPower,"ax",%progbits
+ 244              		.align	2
+ 245              		.global	ADC_SAR_2_theACLK_StandbyPower
+ 246              		.thumb
+ 247              		.thumb_func
+ 248              		.type	ADC_SAR_2_theACLK_StandbyPower, %function
+ 249              	ADC_SAR_2_theACLK_StandbyPower:
+ 250              	.LFB3:
  140:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* (CY_PSOC3 || CY_PSOC5LP) */
  141:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  142:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
@@ -337,6 +418,9 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  147:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Summary:
  148:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  Sets whether the clock is active in standby mode.
  149:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 8
+
+
  150:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Parameters:
  151:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  state:  0 to disable clock during standby, nonzero to enable.
  152:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
@@ -346,54 +430,83 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  156:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  157:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** void ADC_SAR_2_theACLK_StandbyPower(uint8 state) 
  158:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
- 173              		.loc 1 158 0
- 174              		.cfi_startproc
- 175              		@ args = 0, pretend = 0, frame = 0
- 176              		@ frame_needed = 0, uses_anonymous_args = 0
- 177              		@ link register save eliminated.
- 178              	.LVL2:
+ 251              		.loc 1 158 0
+ 252              		.cfi_startproc
+ 253              		@ args = 0, pretend = 0, frame = 8
+ 254              		@ frame_needed = 1, uses_anonymous_args = 0
+ 255              		@ link register save eliminated.
+ 256 0000 80B4     		push	{r7}
+ 257              		.cfi_def_cfa_offset 4
+ 258              		.cfi_offset 7, -4
+ 259 0002 83B0     		sub	sp, sp, #12
+ 260              		.cfi_def_cfa_offset 16
+ 261 0004 00AF     		add	r7, sp, #0
+ 262              		.cfi_def_cfa_register 7
+ 263 0006 0346     		mov	r3, r0
+ 264 0008 FB71     		strb	r3, [r7, #7]
  159:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     if(state == 0u)
- 179              		.loc 1 159 0
- 180 0000 28B9     		cbnz	r0, .L13
+ 265              		.loc 1 159 0
+ 266 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 267 000c 002B     		cmp	r3, #0
+ 268 000e 08D1     		bne	.L14
  160:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
  161:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_CLKSTBY &= (uint8)(~ADC_SAR_2_theACLK_CLKSTBY_MASK);
- 181              		.loc 1 161 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 7
-
-
- 182 0002 064A     		ldr	r2, .L15
- 183 0004 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 184 0006 03F0FB03 		and	r3, r3, #251
- 185 000a 1370     		strb	r3, [r2]
- 186 000c 7047     		bx	lr
- 187              	.L13:
+ 269              		.loc 1 161 0
+ 270 0010 0A4A     		ldr	r2, .L17
+ 271 0012 0A4B     		ldr	r3, .L17
+ 272 0014 1B78     		ldrb	r3, [r3]
+ 273 0016 DBB2     		uxtb	r3, r3
+ 274 0018 23F00403 		bic	r3, r3, #4
+ 275 001c DBB2     		uxtb	r3, r3
+ 276 001e 1370     		strb	r3, [r2]
  162:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
  163:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     else
  164:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
  165:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_CLKSTBY |= ADC_SAR_2_theACLK_CLKSTBY_MASK;
- 188              		.loc 1 165 0
- 189 000e 034A     		ldr	r2, .L15
- 190 0010 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 191 0012 43F00403 		orr	r3, r3, #4
- 192 0016 1370     		strb	r3, [r2]
- 193 0018 7047     		bx	lr
- 194              	.L16:
- 195 001a 00BF     		.align	2
- 196              	.L15:
- 197 001c B1430040 		.word	1073759153
- 198              		.cfi_endproc
- 199              	.LFE3:
- 200              		.size	ADC_SAR_2_theACLK_StandbyPower, .-ADC_SAR_2_theACLK_StandbyPower
- 201              		.section	.text.ADC_SAR_2_theACLK_GetDividerRegister,"ax",%progbits
- 202              		.align	2
- 203              		.global	ADC_SAR_2_theACLK_GetDividerRegister
- 204              		.thumb
- 205              		.thumb_func
- 206              		.type	ADC_SAR_2_theACLK_GetDividerRegister, %function
- 207              	ADC_SAR_2_theACLK_GetDividerRegister:
- 208              	.LFB5:
  166:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
  167:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+ 277              		.loc 1 167 0
+ 278 0020 07E0     		b	.L16
+ 279              	.L14:
+ 165:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
+ 280              		.loc 1 165 0
+ 281 0022 064A     		ldr	r2, .L17
+ 282 0024 054B     		ldr	r3, .L17
+ 283 0026 1B78     		ldrb	r3, [r3]
+ 284 0028 DBB2     		uxtb	r3, r3
+ 285 002a 43F00403 		orr	r3, r3, #4
+ 286 002e DBB2     		uxtb	r3, r3
+ 287 0030 1370     		strb	r3, [r2]
+ 288              	.L16:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 9
+
+
+ 289              		.loc 1 167 0
+ 290 0032 00BF     		nop
+ 291 0034 0C37     		adds	r7, r7, #12
+ 292              		.cfi_def_cfa_offset 4
+ 293 0036 BD46     		mov	sp, r7
+ 294              		.cfi_def_cfa_register 13
+ 295              		@ sp needed
+ 296 0038 80BC     		pop	{r7}
+ 297              		.cfi_restore 7
+ 298              		.cfi_def_cfa_offset 0
+ 299 003a 7047     		bx	lr
+ 300              	.L18:
+ 301              		.align	2
+ 302              	.L17:
+ 303 003c B1430040 		.word	1073759153
+ 304              		.cfi_endproc
+ 305              	.LFE3:
+ 306              		.size	ADC_SAR_2_theACLK_StandbyPower, .-ADC_SAR_2_theACLK_StandbyPower
+ 307              		.section	.text.ADC_SAR_2_theACLK_SetDividerRegister,"ax",%progbits
+ 308              		.align	2
+ 309              		.global	ADC_SAR_2_theACLK_SetDividerRegister
+ 310              		.thumb
+ 311              		.thumb_func
+ 312              		.type	ADC_SAR_2_theACLK_SetDividerRegister, %function
+ 313              	ADC_SAR_2_theACLK_SetDividerRegister:
+ 314              	.LFB4:
  168:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  169:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  170:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
@@ -418,90 +531,286 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  189:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Returns:
  190:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  None
  191:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 8
-
-
  192:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  193:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** void ADC_SAR_2_theACLK_SetDividerRegister(uint16 clkDivider, uint8 restart)
  194:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                                 
  195:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
+ 315              		.loc 1 195 0
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 16
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 10
+
+
+ 318              		@ frame_needed = 1, uses_anonymous_args = 0
+ 319 0000 80B5     		push	{r7, lr}
+ 320              		.cfi_def_cfa_offset 8
+ 321              		.cfi_offset 7, -8
+ 322              		.cfi_offset 14, -4
+ 323 0002 84B0     		sub	sp, sp, #16
+ 324              		.cfi_def_cfa_offset 24
+ 325 0004 00AF     		add	r7, sp, #0
+ 326              		.cfi_def_cfa_register 7
+ 327 0006 0346     		mov	r3, r0
+ 328 0008 0A46     		mov	r2, r1
+ 329 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 330 000c 1346     		mov	r3, r2
+ 331 000e 7B71     		strb	r3, [r7, #5]
  196:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint8 enabled;
  197:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  198:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint8 currSrc = ADC_SAR_2_theACLK_GetSourceRegister();
+ 332              		.loc 1 198 0
+ 333 0010 FFF7FEFF 		bl	ADC_SAR_2_theACLK_GetSourceRegister
+ 334 0014 0346     		mov	r3, r0
+ 335 0016 FB73     		strb	r3, [r7, #15]
  199:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint16 oldDivider = ADC_SAR_2_theACLK_GetDividerRegister();
+ 336              		.loc 1 199 0
+ 337 0018 FFF7FEFF 		bl	ADC_SAR_2_theACLK_GetDividerRegister
+ 338 001c 0346     		mov	r3, r0
+ 339 001e BB81     		strh	r3, [r7, #12]	@ movhi
  200:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  201:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     if (clkDivider != oldDivider)
+ 340              		.loc 1 201 0
+ 341 0020 FA88     		ldrh	r2, [r7, #6]
+ 342 0022 BB89     		ldrh	r3, [r7, #12]
+ 343 0024 9A42     		cmp	r2, r3
+ 344 0026 00F08880 		beq	.L32
  202:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
  203:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         enabled = ADC_SAR_2_theACLK_CLKEN & ADC_SAR_2_theACLK_CLKEN_MASK;
+ 345              		.loc 1 203 0
+ 346 002a 464B     		ldr	r3, .L33
+ 347 002c 1B78     		ldrb	r3, [r3]
+ 348 002e DBB2     		uxtb	r3, r3
+ 349 0030 03F00403 		and	r3, r3, #4
+ 350 0034 FB72     		strb	r3, [r7, #11]
  204:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  205:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         if ((currSrc == (uint8)CYCLK_SRC_SEL_CLK_SYNC_D) && ((oldDivider == 0u) || (clkDivider == 0
+ 351              		.loc 1 205 0
+ 352 0036 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 353 0038 002B     		cmp	r3, #0
+ 354 003a 20D1     		bne	.L21
+ 355              		.loc 1 205 0 is_stmt 0 discriminator 1
+ 356 003c BB89     		ldrh	r3, [r7, #12]
+ 357 003e 002B     		cmp	r3, #0
+ 358 0040 02D0     		beq	.L22
+ 359              		.loc 1 205 0 discriminator 2
+ 360 0042 FB88     		ldrh	r3, [r7, #6]
+ 361 0044 002B     		cmp	r3, #0
+ 362 0046 1AD1     		bne	.L21
+ 363              	.L22:
  206:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         {
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 11
+
+
  207:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             /* Moving to/from SSS requires correct ordering to prevent halting the clock    */
  208:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             if (oldDivider == 0u)
+ 364              		.loc 1 208 0 is_stmt 1
+ 365 0048 BB89     		ldrh	r3, [r7, #12]
+ 366 004a 002B     		cmp	r3, #0
+ 367 004c 0BD1     		bne	.L23
  209:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
  210:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* Moving away from SSS, set the divider first so when SSS is cleared we    */
  211:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* don't halt the clock.  Using the shadow load isn't required as the       */
  212:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* divider is ignored while SSS is set.                                     */
  213:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CY_SET_REG16(ADC_SAR_2_theACLK_DIV_PTR, clkDivider);
+ 368              		.loc 1 213 0
+ 369 004e 3E4A     		ldr	r2, .L33+4
+ 370 0050 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 371 0052 1380     		strh	r3, [r2]	@ movhi
  214:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 ADC_SAR_2_theACLK_MOD_SRC &= (uint8)(~CYCLK_SSS);
+ 372              		.loc 1 214 0
+ 373 0054 3D4A     		ldr	r2, .L33+8
+ 374 0056 3D4B     		ldr	r3, .L33+8
+ 375 0058 1B78     		ldrb	r3, [r3]
+ 376 005a DBB2     		uxtb	r3, r3
+ 377 005c 23F04003 		bic	r3, r3, #64
+ 378 0060 DBB2     		uxtb	r3, r3
+ 379 0062 1370     		strb	r3, [r2]
+ 208:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
+ 380              		.loc 1 208 0
+ 381 0064 69E0     		b	.L20
+ 382              	.L23:
  215:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
  216:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             else
  217:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
  218:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* Moving to SSS, set SSS which then ignores the divider and we can set     */
  219:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* it without bothering with the shadow load.                               */
  220:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 ADC_SAR_2_theACLK_MOD_SRC |= CYCLK_SSS;
+ 383              		.loc 1 220 0
+ 384 0066 394A     		ldr	r2, .L33+8
+ 385 0068 384B     		ldr	r3, .L33+8
+ 386 006a 1B78     		ldrb	r3, [r3]
+ 387 006c DBB2     		uxtb	r3, r3
+ 388 006e 43F04003 		orr	r3, r3, #64
+ 389 0072 DBB2     		uxtb	r3, r3
+ 390 0074 1370     		strb	r3, [r2]
  221:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CY_SET_REG16(ADC_SAR_2_theACLK_DIV_PTR, clkDivider);
+ 391              		.loc 1 221 0
+ 392 0076 344A     		ldr	r2, .L33+4
+ 393 0078 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 394 007a 1380     		strh	r3, [r2]	@ movhi
+ 208:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
+ 395              		.loc 1 208 0
+ 396 007c 5DE0     		b	.L20
+ 397              	.L21:
  222:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
  223:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         }
  224:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         else
  225:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         {
  226:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 			
  227:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             if (enabled != 0u)
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 12
+
+
+ 398              		.loc 1 227 0
+ 399 007e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 400 0080 002B     		cmp	r3, #0
+ 401 0082 33D0     		beq	.L25
  228:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
  229:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CLK_DIST_LD = 0x00u;
+ 402              		.loc 1 229 0
+ 403 0084 324B     		ldr	r3, .L33+12
+ 404 0086 0022     		movs	r2, #0
+ 405 0088 1A70     		strb	r2, [r3]
  230:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  231:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* Clear all the mask bits except ours. */
  232:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #if defined(ADC_SAR_2_theACLK__CFG3)
  233:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CLK_DIST_AMASK = ADC_SAR_2_theACLK_CLKEN_MASK;
+ 406              		.loc 1 233 0
+ 407 008a 324B     		ldr	r3, .L33+16
+ 408 008c 0422     		movs	r2, #4
+ 409 008e 1A70     		strb	r2, [r3]
  234:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CLK_DIST_DMASK = 0x00u;
+ 410              		.loc 1 234 0
+ 411 0090 314B     		ldr	r3, .L33+20
+ 412 0092 0022     		movs	r2, #0
+ 413 0094 1A70     		strb	r2, [r3]
  235:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #else
  236:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CLK_DIST_DMASK = ADC_SAR_2_theACLK_CLKEN_MASK;
  237:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CLK_DIST_AMASK = 0x00u;
  238:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* ADC_SAR_2_theACLK__CFG3 */
  239:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* Clear mask of bus clock. */
  240:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CLK_DIST_BCFG2 &= (uint8)(~BCFG2_MASK);
+ 414              		.loc 1 240 0
+ 415 0096 314A     		ldr	r2, .L33+24
+ 416 0098 304B     		ldr	r3, .L33+24
+ 417 009a 1B78     		ldrb	r3, [r3]
+ 418 009c DBB2     		uxtb	r3, r3
+ 419 009e 03F07F03 		and	r3, r3, #127
+ 420 00a2 DBB2     		uxtb	r3, r3
+ 421 00a4 1370     		strb	r3, [r2]
  241:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  242:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* If clock is currently enabled, disable it if async or going from N-to-1*/
  243:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 if (((ADC_SAR_2_theACLK_MOD_SRC & CYCLK_SYNC) == 0u) || (clkDivider == 0u))
+ 422              		.loc 1 243 0
+ 423 00a6 294B     		ldr	r3, .L33+8
+ 424 00a8 1B78     		ldrb	r3, [r3]
+ 425 00aa DBB2     		uxtb	r3, r3
+ 426 00ac 03F00803 		and	r3, r3, #8
+ 427 00b0 002B     		cmp	r3, #0
+ 428 00b2 02D0     		beq	.L26
+ 429              		.loc 1 243 0 is_stmt 0 discriminator 1
+ 430 00b4 FB88     		ldrh	r3, [r7, #6]
+ 431 00b6 002B     		cmp	r3, #0
+ 432 00b8 18D1     		bne	.L25
+ 433              	.L26:
  244:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 {
  245:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #if HAS_CLKDIST_LD_DISABLE
  246:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                     CY_SET_REG16(CYREG_CLKDIST_WRK0, oldDivider);
+ 434              		.loc 1 246 0 is_stmt 1
+ 435 00ba 294A     		ldr	r2, .L33+28
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 13
+
+
+ 436 00bc BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 437 00be 1380     		strh	r3, [r2]	@ movhi
  247:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                     CLK_DIST_LD = CYCLK_LD_DISABLE|CYCLK_LD_SYNC_EN|CYCLK_LD_LOAD;
+ 438              		.loc 1 247 0
+ 439 00c0 234B     		ldr	r3, .L33+12
+ 440 00c2 0722     		movs	r2, #7
+ 441 00c4 1A70     		strb	r2, [r3]
  248:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 9
-
-
  249:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                     /* Wait for clock to be disabled */
  250:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                     while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
+ 442              		.loc 1 250 0
+ 443 00c6 00BF     		nop
+ 444              	.L27:
+ 445              		.loc 1 250 0 is_stmt 0 discriminator 1
+ 446 00c8 214B     		ldr	r3, .L33+12
+ 447 00ca 1B78     		ldrb	r3, [r3]
+ 448 00cc DBB2     		uxtb	r3, r3
+ 449 00ce 03F00103 		and	r3, r3, #1
+ 450 00d2 002B     		cmp	r3, #0
+ 451 00d4 F8D1     		bne	.L27
  251:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
  252:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  253:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                     ADC_SAR_2_theACLK_CLKEN &= (uint8)(~ADC_SAR_2_theACLK_CLKEN_MASK);
+ 452              		.loc 1 253 0 is_stmt 1
+ 453 00d6 1B4A     		ldr	r2, .L33
+ 454 00d8 1A4B     		ldr	r3, .L33
+ 455 00da 1B78     		ldrb	r3, [r3]
+ 456 00dc DBB2     		uxtb	r3, r3
+ 457 00de 23F00403 		bic	r3, r3, #4
+ 458 00e2 DBB2     		uxtb	r3, r3
+ 459 00e4 1370     		strb	r3, [r2]
  254:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  255:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #if HAS_CLKDIST_LD_DISABLE
  256:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                     /* Clear the disable bit */
  257:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                     CLK_DIST_LD = 0x00u;
+ 460              		.loc 1 257 0
+ 461 00e6 1A4B     		ldr	r3, .L33+12
+ 462 00e8 0022     		movs	r2, #0
+ 463 00ea 1A70     		strb	r2, [r3]
+ 464              	.L25:
  258:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
  259:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 }
  260:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
  261:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  262:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             /* Load divide value. */
  263:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             if ((ADC_SAR_2_theACLK_CLKEN & ADC_SAR_2_theACLK_CLKEN_MASK) != 0u)
+ 465              		.loc 1 263 0
+ 466 00ec 154B     		ldr	r3, .L33
+ 467 00ee 1B78     		ldrb	r3, [r3]
+ 468 00f0 DBB2     		uxtb	r3, r3
+ 469 00f2 03F00403 		and	r3, r3, #4
+ 470 00f6 002B     		cmp	r3, #0
+ 471 00f8 13D0     		beq	.L28
  264:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
  265:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 /* If the clock is still enabled, use the shadow registers */
  266:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CY_SET_REG16(CYREG_CLKDIST_WRK0, clkDivider);
+ 472              		.loc 1 266 0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 14
+
+
+ 473 00fa 194A     		ldr	r2, .L33+28
+ 474 00fc FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 475 00fe 1380     		strh	r3, [r2]	@ movhi
  267:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  268:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CLK_DIST_LD = (CYCLK_LD_LOAD | ((restart != 0u) ? CYCLK_LD_SYNC_EN : 0x00u));
+ 476              		.loc 1 268 0
+ 477 0100 134A     		ldr	r2, .L33+12
+ 478 0102 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 479 0104 002B     		cmp	r3, #0
+ 480 0106 01D0     		beq	.L29
+ 481              		.loc 1 268 0 is_stmt 0 discriminator 1
+ 482 0108 0323     		movs	r3, #3
+ 483 010a 00E0     		b	.L30
+ 484              	.L29:
+ 485              		.loc 1 268 0 discriminator 2
+ 486 010c 0123     		movs	r3, #1
+ 487              	.L30:
+ 488              		.loc 1 268 0 discriminator 4
+ 489 010e 1370     		strb	r3, [r2]
  269:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
+ 490              		.loc 1 269 0 is_stmt 1 discriminator 4
+ 491 0110 00BF     		nop
+ 492              	.L31:
+ 493              		.loc 1 269 0 is_stmt 0 discriminator 1
+ 494 0112 0F4B     		ldr	r3, .L33+12
+ 495 0114 1B78     		ldrb	r3, [r3]
+ 496 0116 DBB2     		uxtb	r3, r3
+ 497 0118 03F00103 		and	r3, r3, #1
+ 498 011c 002B     		cmp	r3, #0
+ 499 011e F8D1     		bne	.L31
  270:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
  271:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             else
  272:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
@@ -512,6 +821,60 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  277:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         }
  278:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
  279:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+ 500              		.loc 1 279 0 is_stmt 1
+ 501 0120 0BE0     		b	.L32
+ 502              	.L28:
+ 274:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 				ADC_SAR_2_theACLK_CLKEN |= enabled;
+ 503              		.loc 1 274 0
+ 504 0122 094A     		ldr	r2, .L33+4
+ 505 0124 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 506 0126 1380     		strh	r3, [r2]	@ movhi
+ 275:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
+ 507              		.loc 1 275 0
+ 508 0128 0649     		ldr	r1, .L33
+ 509 012a 064B     		ldr	r3, .L33
+ 510 012c 1B78     		ldrb	r3, [r3]
+ 511 012e DAB2     		uxtb	r2, r3
+ 512 0130 FB7A     		ldrb	r3, [r7, #11]
+ 513 0132 1343     		orrs	r3, r3, r2
+ 514 0134 DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 15
+
+
+ 515 0136 0B70     		strb	r3, [r1]
+ 516              		.loc 1 279 0
+ 517 0138 FFE7     		b	.L32
+ 518              	.L20:
+ 519              	.L32:
+ 520 013a 00BF     		nop
+ 521 013c 1037     		adds	r7, r7, #16
+ 522              		.cfi_def_cfa_offset 8
+ 523 013e BD46     		mov	sp, r7
+ 524              		.cfi_def_cfa_register 13
+ 525              		@ sp needed
+ 526 0140 80BD     		pop	{r7, pc}
+ 527              	.L34:
+ 528 0142 00BF     		.align	2
+ 529              	.L33:
+ 530 0144 A1430040 		.word	1073759137
+ 531 0148 08410040 		.word	1073758472
+ 532 014c 0A410040 		.word	1073758474
+ 533 0150 01400040 		.word	1073758209
+ 534 0154 14400040 		.word	1073758228
+ 535 0158 10400040 		.word	1073758224
+ 536 015c 08400040 		.word	1073758216
+ 537 0160 02400040 		.word	1073758210
+ 538              		.cfi_endproc
+ 539              	.LFE4:
+ 540              		.size	ADC_SAR_2_theACLK_SetDividerRegister, .-ADC_SAR_2_theACLK_SetDividerRegister
+ 541              		.section	.text.ADC_SAR_2_theACLK_GetDividerRegister,"ax",%progbits
+ 542              		.align	2
+ 543              		.global	ADC_SAR_2_theACLK_GetDividerRegister
+ 544              		.thumb
+ 545              		.thumb_func
+ 546              		.type	ADC_SAR_2_theACLK_GetDividerRegister, %function
+ 547              	ADC_SAR_2_theACLK_GetDividerRegister:
+ 548              	.LFB5:
  280:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  281:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  282:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
@@ -531,37 +894,49 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  296:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  297:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** uint16 ADC_SAR_2_theACLK_GetDividerRegister(void) 
  298:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
- 209              		.loc 1 298 0
- 210              		.cfi_startproc
- 211              		@ args = 0, pretend = 0, frame = 0
- 212              		@ frame_needed = 0, uses_anonymous_args = 0
- 213              		@ link register save eliminated.
+ 549              		.loc 1 298 0
+ 550              		.cfi_startproc
+ 551              		@ args = 0, pretend = 0, frame = 0
+ 552              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 16
+
+
+ 553              		@ link register save eliminated.
+ 554 0000 80B4     		push	{r7}
+ 555              		.cfi_def_cfa_offset 4
+ 556              		.cfi_offset 7, -4
+ 557 0002 00AF     		add	r7, sp, #0
+ 558              		.cfi_def_cfa_register 7
  299:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     return CY_GET_REG16(ADC_SAR_2_theACLK_DIV_PTR);
- 214              		.loc 1 299 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 10
-
-
- 215 0000 014B     		ldr	r3, .L18
- 216 0002 1888     		ldrh	r0, [r3]
+ 559              		.loc 1 299 0
+ 560 0004 034B     		ldr	r3, .L37
+ 561 0006 1B88     		ldrh	r3, [r3]	@ movhi
+ 562 0008 9BB2     		uxth	r3, r3
  300:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
- 217              		.loc 1 300 0
- 218 0004 80B2     		uxth	r0, r0
- 219 0006 7047     		bx	lr
- 220              	.L19:
- 221              		.align	2
- 222              	.L18:
- 223 0008 08410040 		.word	1073758472
- 224              		.cfi_endproc
- 225              	.LFE5:
- 226              		.size	ADC_SAR_2_theACLK_GetDividerRegister, .-ADC_SAR_2_theACLK_GetDividerRegister
- 227              		.section	.text.ADC_SAR_2_theACLK_SetModeRegister,"ax",%progbits
- 228              		.align	2
- 229              		.global	ADC_SAR_2_theACLK_SetModeRegister
- 230              		.thumb
- 231              		.thumb_func
- 232              		.type	ADC_SAR_2_theACLK_SetModeRegister, %function
- 233              	ADC_SAR_2_theACLK_SetModeRegister:
- 234              	.LFB6:
+ 563              		.loc 1 300 0
+ 564 000a 1846     		mov	r0, r3
+ 565 000c BD46     		mov	sp, r7
+ 566              		.cfi_def_cfa_register 13
+ 567              		@ sp needed
+ 568 000e 80BC     		pop	{r7}
+ 569              		.cfi_restore 7
+ 570              		.cfi_def_cfa_offset 0
+ 571 0010 7047     		bx	lr
+ 572              	.L38:
+ 573 0012 00BF     		.align	2
+ 574              	.L37:
+ 575 0014 08410040 		.word	1073758472
+ 576              		.cfi_endproc
+ 577              	.LFE5:
+ 578              		.size	ADC_SAR_2_theACLK_GetDividerRegister, .-ADC_SAR_2_theACLK_GetDividerRegister
+ 579              		.section	.text.ADC_SAR_2_theACLK_SetModeRegister,"ax",%progbits
+ 580              		.align	2
+ 581              		.global	ADC_SAR_2_theACLK_SetModeRegister
+ 582              		.thumb
+ 583              		.thumb_func
+ 584              		.type	ADC_SAR_2_theACLK_SetModeRegister, %function
+ 585              	ADC_SAR_2_theACLK_SetModeRegister:
+ 586              	.LFB6:
  301:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  302:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  303:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
@@ -583,6 +958,9 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  319:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *   - CYCLK_DUTY  Enable 50% duty cycle output. When enabled, the output clock
  320:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *                 is asserted for approximately half of its period. When
  321:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *                 disabled, the output clock is asserted for one period of the
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 17
+
+
  322:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *                 source clock.
  323:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *   - CYCLK_SYNC  Enable output synchronization to master clock. This should
  324:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *                 be enabled for all synchronous clocks.
@@ -595,40 +973,64 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  331:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  332:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** void ADC_SAR_2_theACLK_SetModeRegister(uint8 modeBitMask) 
  333:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
- 235              		.loc 1 333 0
- 236              		.cfi_startproc
- 237              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 11
-
-
- 238              		@ frame_needed = 0, uses_anonymous_args = 0
- 239              		@ link register save eliminated.
- 240              	.LVL3:
+ 587              		.loc 1 333 0
+ 588              		.cfi_startproc
+ 589              		@ args = 0, pretend = 0, frame = 8
+ 590              		@ frame_needed = 1, uses_anonymous_args = 0
+ 591              		@ link register save eliminated.
+ 592 0000 80B4     		push	{r7}
+ 593              		.cfi_def_cfa_offset 4
+ 594              		.cfi_offset 7, -4
+ 595 0002 83B0     		sub	sp, sp, #12
+ 596              		.cfi_def_cfa_offset 16
+ 597 0004 00AF     		add	r7, sp, #0
+ 598              		.cfi_def_cfa_register 7
+ 599 0006 0346     		mov	r3, r0
+ 600 0008 FB71     		strb	r3, [r7, #7]
  334:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     ADC_SAR_2_theACLK_MOD_SRC |= modeBitMask & (uint8)ADC_SAR_2_theACLK_MODE_MASK;
- 241              		.loc 1 334 0
- 242 0000 034B     		ldr	r3, .L21
- 243 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 244 0004 00F0F800 		and	r0, r0, #248
- 245              	.LVL4:
- 246 0008 1043     		orrs	r0, r0, r2
- 247 000a 1870     		strb	r0, [r3]
- 248 000c 7047     		bx	lr
- 249              	.L22:
- 250 000e 00BF     		.align	2
- 251              	.L21:
- 252 0010 0A410040 		.word	1073758474
- 253              		.cfi_endproc
- 254              	.LFE6:
- 255              		.size	ADC_SAR_2_theACLK_SetModeRegister, .-ADC_SAR_2_theACLK_SetModeRegister
- 256              		.section	.text.ADC_SAR_2_theACLK_ClearModeRegister,"ax",%progbits
- 257              		.align	2
- 258              		.global	ADC_SAR_2_theACLK_ClearModeRegister
- 259              		.thumb
- 260              		.thumb_func
- 261              		.type	ADC_SAR_2_theACLK_ClearModeRegister, %function
- 262              	ADC_SAR_2_theACLK_ClearModeRegister:
- 263              	.LFB7:
+ 601              		.loc 1 334 0
+ 602 000a 0949     		ldr	r1, .L40
+ 603 000c 084B     		ldr	r3, .L40
+ 604 000e 1B78     		ldrb	r3, [r3]
+ 605 0010 DBB2     		uxtb	r3, r3
+ 606 0012 5AB2     		sxtb	r2, r3
+ 607 0014 97F90730 		ldrsb	r3, [r7, #7]
+ 608 0018 23F00703 		bic	r3, r3, #7
+ 609 001c 5BB2     		sxtb	r3, r3
+ 610 001e 1343     		orrs	r3, r3, r2
+ 611 0020 5BB2     		sxtb	r3, r3
+ 612 0022 DBB2     		uxtb	r3, r3
+ 613 0024 0B70     		strb	r3, [r1]
  335:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+ 614              		.loc 1 335 0
+ 615 0026 00BF     		nop
+ 616 0028 0C37     		adds	r7, r7, #12
+ 617              		.cfi_def_cfa_offset 4
+ 618 002a BD46     		mov	sp, r7
+ 619              		.cfi_def_cfa_register 13
+ 620              		@ sp needed
+ 621 002c 80BC     		pop	{r7}
+ 622              		.cfi_restore 7
+ 623              		.cfi_def_cfa_offset 0
+ 624 002e 7047     		bx	lr
+ 625              	.L41:
+ 626              		.align	2
+ 627              	.L40:
+ 628 0030 0A410040 		.word	1073758474
+ 629              		.cfi_endproc
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 18
+
+
+ 630              	.LFE6:
+ 631              		.size	ADC_SAR_2_theACLK_SetModeRegister, .-ADC_SAR_2_theACLK_SetModeRegister
+ 632              		.section	.text.ADC_SAR_2_theACLK_ClearModeRegister,"ax",%progbits
+ 633              		.align	2
+ 634              		.global	ADC_SAR_2_theACLK_ClearModeRegister
+ 635              		.thumb
+ 636              		.thumb_func
+ 637              		.type	ADC_SAR_2_theACLK_ClearModeRegister, %function
+ 638              	ADC_SAR_2_theACLK_ClearModeRegister:
+ 639              	.LFB7:
  336:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  337:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  338:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
@@ -658,46 +1060,68 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  362:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
  363:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Returns:
  364:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  None
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 12
-
-
  365:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
  366:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  367:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** void ADC_SAR_2_theACLK_ClearModeRegister(uint8 modeBitMask) 
  368:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
- 264              		.loc 1 368 0
- 265              		.cfi_startproc
- 266              		@ args = 0, pretend = 0, frame = 0
- 267              		@ frame_needed = 0, uses_anonymous_args = 0
- 268              		@ link register save eliminated.
- 269              	.LVL5:
+ 640              		.loc 1 368 0
+ 641              		.cfi_startproc
+ 642              		@ args = 0, pretend = 0, frame = 8
+ 643              		@ frame_needed = 1, uses_anonymous_args = 0
+ 644              		@ link register save eliminated.
+ 645 0000 80B4     		push	{r7}
+ 646              		.cfi_def_cfa_offset 4
+ 647              		.cfi_offset 7, -4
+ 648 0002 83B0     		sub	sp, sp, #12
+ 649              		.cfi_def_cfa_offset 16
+ 650 0004 00AF     		add	r7, sp, #0
+ 651              		.cfi_def_cfa_register 7
+ 652 0006 0346     		mov	r3, r0
+ 653 0008 FB71     		strb	r3, [r7, #7]
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 19
+
+
  369:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     ADC_SAR_2_theACLK_MOD_SRC &= (uint8)(~modeBitMask) | (uint8)(~(uint8)(ADC_SAR_2_theACLK_MODE_MA
- 270              		.loc 1 369 0
- 271 0000 044B     		ldr	r3, .L24
- 272 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 273 0004 C043     		mvns	r0, r0
- 274              	.LVL6:
- 275 0006 C0B2     		uxtb	r0, r0
- 276 0008 40F00700 		orr	r0, r0, #7
- 277 000c 1040     		ands	r0, r0, r2
- 278 000e 1870     		strb	r0, [r3]
- 279 0010 7047     		bx	lr
- 280              	.L25:
- 281 0012 00BF     		.align	2
- 282              	.L24:
- 283 0014 0A410040 		.word	1073758474
- 284              		.cfi_endproc
- 285              	.LFE7:
- 286              		.size	ADC_SAR_2_theACLK_ClearModeRegister, .-ADC_SAR_2_theACLK_ClearModeRegister
- 287              		.section	.text.ADC_SAR_2_theACLK_GetModeRegister,"ax",%progbits
- 288              		.align	2
- 289              		.global	ADC_SAR_2_theACLK_GetModeRegister
- 290              		.thumb
- 291              		.thumb_func
- 292              		.type	ADC_SAR_2_theACLK_GetModeRegister, %function
- 293              	ADC_SAR_2_theACLK_GetModeRegister:
- 294              	.LFB8:
+ 654              		.loc 1 369 0
+ 655 000a 0949     		ldr	r1, .L43
+ 656 000c 084B     		ldr	r3, .L43
+ 657 000e 1B78     		ldrb	r3, [r3]
+ 658 0010 DAB2     		uxtb	r2, r3
+ 659 0012 FB79     		ldrb	r3, [r7, #7]
+ 660 0014 DB43     		mvns	r3, r3
+ 661 0016 DBB2     		uxtb	r3, r3
+ 662 0018 43F00703 		orr	r3, r3, #7
+ 663 001c DBB2     		uxtb	r3, r3
+ 664 001e 1340     		ands	r3, r3, r2
+ 665 0020 DBB2     		uxtb	r3, r3
+ 666 0022 0B70     		strb	r3, [r1]
  370:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+ 667              		.loc 1 370 0
+ 668 0024 00BF     		nop
+ 669 0026 0C37     		adds	r7, r7, #12
+ 670              		.cfi_def_cfa_offset 4
+ 671 0028 BD46     		mov	sp, r7
+ 672              		.cfi_def_cfa_register 13
+ 673              		@ sp needed
+ 674 002a 80BC     		pop	{r7}
+ 675              		.cfi_restore 7
+ 676              		.cfi_def_cfa_offset 0
+ 677 002c 7047     		bx	lr
+ 678              	.L44:
+ 679 002e 00BF     		.align	2
+ 680              	.L43:
+ 681 0030 0A410040 		.word	1073758474
+ 682              		.cfi_endproc
+ 683              	.LFE7:
+ 684              		.size	ADC_SAR_2_theACLK_ClearModeRegister, .-ADC_SAR_2_theACLK_ClearModeRegister
+ 685              		.section	.text.ADC_SAR_2_theACLK_GetModeRegister,"ax",%progbits
+ 686              		.align	2
+ 687              		.global	ADC_SAR_2_theACLK_GetModeRegister
+ 688              		.thumb
+ 689              		.thumb_func
+ 690              		.type	ADC_SAR_2_theACLK_GetModeRegister, %function
+ 691              	ADC_SAR_2_theACLK_GetModeRegister:
+ 692              	.LFB8:
  371:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  372:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  373:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
@@ -714,40 +1138,54 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  384:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  Bit mask representing the enabled mode bits. See the SetModeRegister and
  385:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  ClearModeRegister descriptions for details about the mode bits.
  386:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 20
+
+
  387:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  388:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** uint8 ADC_SAR_2_theACLK_GetModeRegister(void) 
  389:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
- 295              		.loc 1 389 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 13
-
-
- 296              		.cfi_startproc
- 297              		@ args = 0, pretend = 0, frame = 0
- 298              		@ frame_needed = 0, uses_anonymous_args = 0
- 299              		@ link register save eliminated.
+ 693              		.loc 1 389 0
+ 694              		.cfi_startproc
+ 695              		@ args = 0, pretend = 0, frame = 0
+ 696              		@ frame_needed = 1, uses_anonymous_args = 0
+ 697              		@ link register save eliminated.
+ 698 0000 80B4     		push	{r7}
+ 699              		.cfi_def_cfa_offset 4
+ 700              		.cfi_offset 7, -4
+ 701 0002 00AF     		add	r7, sp, #0
+ 702              		.cfi_def_cfa_register 7
  390:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     return ADC_SAR_2_theACLK_MOD_SRC & (uint8)(ADC_SAR_2_theACLK_MODE_MASK);
- 300              		.loc 1 390 0
- 301 0000 024B     		ldr	r3, .L27
- 302 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 703              		.loc 1 390 0
+ 704 0004 044B     		ldr	r3, .L47
+ 705 0006 1B78     		ldrb	r3, [r3]
+ 706 0008 DBB2     		uxtb	r3, r3
+ 707 000a 23F00703 		bic	r3, r3, #7
+ 708 000e DBB2     		uxtb	r3, r3
  391:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
- 303              		.loc 1 391 0
- 304 0004 00F0F800 		and	r0, r0, #248
- 305 0008 7047     		bx	lr
- 306              	.L28:
- 307 000a 00BF     		.align	2
- 308              	.L27:
- 309 000c 0A410040 		.word	1073758474
- 310              		.cfi_endproc
- 311              	.LFE8:
- 312              		.size	ADC_SAR_2_theACLK_GetModeRegister, .-ADC_SAR_2_theACLK_GetModeRegister
- 313              		.section	.text.ADC_SAR_2_theACLK_GetSourceRegister,"ax",%progbits
- 314              		.align	2
- 315              		.global	ADC_SAR_2_theACLK_GetSourceRegister
- 316              		.thumb
- 317              		.thumb_func
- 318              		.type	ADC_SAR_2_theACLK_GetSourceRegister, %function
- 319              	ADC_SAR_2_theACLK_GetSourceRegister:
- 320              	.LFB10:
+ 709              		.loc 1 391 0
+ 710 0010 1846     		mov	r0, r3
+ 711 0012 BD46     		mov	sp, r7
+ 712              		.cfi_def_cfa_register 13
+ 713              		@ sp needed
+ 714 0014 80BC     		pop	{r7}
+ 715              		.cfi_restore 7
+ 716              		.cfi_def_cfa_offset 0
+ 717 0016 7047     		bx	lr
+ 718              	.L48:
+ 719              		.align	2
+ 720              	.L47:
+ 721 0018 0A410040 		.word	1073758474
+ 722              		.cfi_endproc
+ 723              	.LFE8:
+ 724              		.size	ADC_SAR_2_theACLK_GetModeRegister, .-ADC_SAR_2_theACLK_GetModeRegister
+ 725              		.section	.text.ADC_SAR_2_theACLK_SetSourceRegister,"ax",%progbits
+ 726              		.align	2
+ 727              		.global	ADC_SAR_2_theACLK_SetSourceRegister
+ 728              		.thumb
+ 729              		.thumb_func
+ 730              		.type	ADC_SAR_2_theACLK_SetSourceRegister, %function
+ 731              	ADC_SAR_2_theACLK_SetSourceRegister:
+ 732              	.LFB9:
  392:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  393:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  394:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
@@ -760,6 +1198,9 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  401:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
  402:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Parameters:
  403:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  clkSource:  For PSoC 3 and PSoC 5 devices, clkSource should be one of the
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 21
+
+
  404:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *   following input sources:
  405:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *   - CYCLK_SRC_SEL_SYNC_DIG
  406:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *   - CYCLK_SRC_SEL_IMO
@@ -777,36 +1218,180 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  418:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  419:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** void ADC_SAR_2_theACLK_SetSourceRegister(uint8 clkSource) 
  420:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
+ 733              		.loc 1 420 0
+ 734              		.cfi_startproc
+ 735              		@ args = 0, pretend = 0, frame = 16
+ 736              		@ frame_needed = 1, uses_anonymous_args = 0
+ 737 0000 80B5     		push	{r7, lr}
+ 738              		.cfi_def_cfa_offset 8
+ 739              		.cfi_offset 7, -8
+ 740              		.cfi_offset 14, -4
+ 741 0002 84B0     		sub	sp, sp, #16
+ 742              		.cfi_def_cfa_offset 24
+ 743 0004 00AF     		add	r7, sp, #0
+ 744              		.cfi_def_cfa_register 7
+ 745 0006 0346     		mov	r3, r0
+ 746 0008 FB71     		strb	r3, [r7, #7]
  421:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint16 currDiv = ADC_SAR_2_theACLK_GetDividerRegister();
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 14
-
-
+ 747              		.loc 1 421 0
+ 748 000a FFF7FEFF 		bl	ADC_SAR_2_theACLK_GetDividerRegister
+ 749 000e 0346     		mov	r3, r0
+ 750 0010 FB81     		strh	r3, [r7, #14]	@ movhi
  422:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint8 oldSrc = ADC_SAR_2_theACLK_GetSourceRegister();
+ 751              		.loc 1 422 0
+ 752 0012 FFF7FEFF 		bl	ADC_SAR_2_theACLK_GetSourceRegister
+ 753 0016 0346     		mov	r3, r0
+ 754 0018 7B73     		strb	r3, [r7, #13]
  423:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  424:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     if (((oldSrc != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D)) && 
+ 755              		.loc 1 424 0
+ 756 001a 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 757 001c 002B     		cmp	r3, #0
+ 758 001e 1CD0     		beq	.L50
+ 759              		.loc 1 424 0 is_stmt 0 discriminator 1
+ 760 0020 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 761 0022 002B     		cmp	r3, #0
+ 762 0024 19D1     		bne	.L50
  425:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         (clkSource == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
+ 763              		.loc 1 425 0 is_stmt 1
+ 764 0026 FB89     		ldrh	r3, [r7, #14]
+ 765 0028 002B     		cmp	r3, #0
+ 766 002a 16D1     		bne	.L50
  426:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 22
+
+
  427:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* Switching to Master and divider is 1, set SSS, which will output master, */
  428:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* then set the source so we are consistent.                                */
  429:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_MOD_SRC |= CYCLK_SSS;
+ 767              		.loc 1 429 0
+ 768 002c 244A     		ldr	r2, .L53
+ 769 002e 244B     		ldr	r3, .L53
+ 770 0030 1B78     		ldrb	r3, [r3]
+ 771 0032 DBB2     		uxtb	r3, r3
+ 772 0034 43F04003 		orr	r3, r3, #64
+ 773 0038 DBB2     		uxtb	r3, r3
+ 774 003a 1370     		strb	r3, [r2]
  430:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_MOD_SRC =
+ 775              		.loc 1 430 0
+ 776 003c 2049     		ldr	r1, .L53
  431:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
+ 777              		.loc 1 431 0
+ 778 003e 204B     		ldr	r3, .L53
+ 779 0040 1B78     		ldrb	r3, [r3]
+ 780 0042 DBB2     		uxtb	r3, r3
+ 430:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_MOD_SRC =
+ 781              		.loc 1 430 0
+ 782 0044 5BB2     		sxtb	r3, r3
+ 783 0046 23F00703 		bic	r3, r3, #7
+ 784 004a 5AB2     		sxtb	r2, r3
+ 785 004c 97F90730 		ldrsb	r3, [r7, #7]
+ 786 0050 1343     		orrs	r3, r3, r2
+ 787 0052 5BB2     		sxtb	r3, r3
+ 788 0054 DBB2     		uxtb	r3, r3
+ 789 0056 0B70     		strb	r3, [r1]
+ 790 0058 2DE0     		b	.L51
+ 791              	.L50:
  432:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
  433:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     else if (((oldSrc == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D)) && 
+ 792              		.loc 1 433 0
+ 793 005a 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 794 005c 002B     		cmp	r3, #0
+ 795 005e 1CD1     		bne	.L52
+ 796              		.loc 1 433 0 is_stmt 0 discriminator 1
+ 797 0060 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 798 0062 002B     		cmp	r3, #0
+ 799 0064 19D0     		beq	.L52
  434:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (clkSource != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
+ 800              		.loc 1 434 0 is_stmt 1
+ 801 0066 FB89     		ldrh	r3, [r7, #14]
+ 802 0068 002B     		cmp	r3, #0
+ 803 006a 16D1     		bne	.L52
  435:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
  436:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* Switching from Master to not and divider is 1, set source, so we don't   */
  437:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         /* lock when we clear SSS.                                                  */
  438:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_MOD_SRC =
+ 804              		.loc 1 438 0
+ 805 006c 1449     		ldr	r1, .L53
  439:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
+ 806              		.loc 1 439 0
+ 807 006e 144B     		ldr	r3, .L53
+ 808 0070 1B78     		ldrb	r3, [r3]
+ 809 0072 DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 23
+
+
+ 438:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
+ 810              		.loc 1 438 0
+ 811 0074 5BB2     		sxtb	r3, r3
+ 812 0076 23F00703 		bic	r3, r3, #7
+ 813 007a 5AB2     		sxtb	r2, r3
+ 814 007c 97F90730 		ldrsb	r3, [r7, #7]
+ 815 0080 1343     		orrs	r3, r3, r2
+ 816 0082 5BB2     		sxtb	r3, r3
+ 817 0084 DBB2     		uxtb	r3, r3
+ 818 0086 0B70     		strb	r3, [r1]
  440:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_MOD_SRC &= (uint8)(~CYCLK_SSS);
+ 819              		.loc 1 440 0
+ 820 0088 0D4A     		ldr	r2, .L53
+ 821 008a 0D4B     		ldr	r3, .L53
+ 822 008c 1B78     		ldrb	r3, [r3]
+ 823 008e DBB2     		uxtb	r3, r3
+ 824 0090 23F04003 		bic	r3, r3, #64
+ 825 0094 DBB2     		uxtb	r3, r3
+ 826 0096 1370     		strb	r3, [r2]
+ 827 0098 0DE0     		b	.L51
+ 828              	.L52:
  441:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
  442:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     else
  443:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
  444:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_MOD_SRC =
+ 829              		.loc 1 444 0
+ 830 009a 0949     		ldr	r1, .L53
  445:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
+ 831              		.loc 1 445 0
+ 832 009c 084B     		ldr	r3, .L53
+ 833 009e 1B78     		ldrb	r3, [r3]
+ 834 00a0 DBB2     		uxtb	r3, r3
+ 444:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
+ 835              		.loc 1 444 0
+ 836 00a2 5BB2     		sxtb	r3, r3
+ 837 00a4 23F00703 		bic	r3, r3, #7
+ 838 00a8 5AB2     		sxtb	r2, r3
+ 839 00aa 97F90730 		ldrsb	r3, [r7, #7]
+ 840 00ae 1343     		orrs	r3, r3, r2
+ 841 00b0 5BB2     		sxtb	r3, r3
+ 842 00b2 DBB2     		uxtb	r3, r3
+ 843 00b4 0B70     		strb	r3, [r1]
+ 844              	.L51:
  446:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
  447:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+ 845              		.loc 1 447 0
+ 846 00b6 00BF     		nop
+ 847 00b8 1037     		adds	r7, r7, #16
+ 848              		.cfi_def_cfa_offset 8
+ 849 00ba BD46     		mov	sp, r7
+ 850              		.cfi_def_cfa_register 13
+ 851              		@ sp needed
+ 852 00bc 80BD     		pop	{r7, pc}
+ 853              	.L54:
+ 854 00be 00BF     		.align	2
+ 855              	.L53:
+ 856 00c0 0A410040 		.word	1073758474
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 24
+
+
+ 857              		.cfi_endproc
+ 858              	.LFE9:
+ 859              		.size	ADC_SAR_2_theACLK_SetSourceRegister, .-ADC_SAR_2_theACLK_SetSourceRegister
+ 860              		.section	.text.ADC_SAR_2_theACLK_GetSourceRegister,"ax",%progbits
+ 861              		.align	2
+ 862              		.global	ADC_SAR_2_theACLK_GetSourceRegister
+ 863              		.thumb
+ 864              		.thumb_func
+ 865              		.type	ADC_SAR_2_theACLK_GetSourceRegister, %function
+ 866              	ADC_SAR_2_theACLK_GetSourceRegister:
+ 867              	.LFB10:
  448:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  449:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  450:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
@@ -825,360 +1410,51 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  463:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  464:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** uint8 ADC_SAR_2_theACLK_GetSourceRegister(void) 
  465:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
- 321              		.loc 1 465 0
- 322              		.cfi_startproc
- 323              		@ args = 0, pretend = 0, frame = 0
- 324              		@ frame_needed = 0, uses_anonymous_args = 0
- 325              		@ link register save eliminated.
+ 868              		.loc 1 465 0
+ 869              		.cfi_startproc
+ 870              		@ args = 0, pretend = 0, frame = 0
+ 871              		@ frame_needed = 1, uses_anonymous_args = 0
+ 872              		@ link register save eliminated.
+ 873 0000 80B4     		push	{r7}
+ 874              		.cfi_def_cfa_offset 4
+ 875              		.cfi_offset 7, -4
+ 876 0002 00AF     		add	r7, sp, #0
+ 877              		.cfi_def_cfa_register 7
  466:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     return ADC_SAR_2_theACLK_MOD_SRC & ADC_SAR_2_theACLK_SRC_SEL_MSK;
- 326              		.loc 1 466 0
- 327 0000 024B     		ldr	r3, .L30
- 328 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 878              		.loc 1 466 0
+ 879 0004 044B     		ldr	r3, .L57
+ 880 0006 1B78     		ldrb	r3, [r3]
+ 881 0008 DBB2     		uxtb	r3, r3
+ 882 000a 03F00703 		and	r3, r3, #7
+ 883 000e DBB2     		uxtb	r3, r3
  467:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
- 329              		.loc 1 467 0
- 330 0004 00F00700 		and	r0, r0, #7
- 331 0008 7047     		bx	lr
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 15
+ 884              		.loc 1 467 0
+ 885 0010 1846     		mov	r0, r3
+ 886 0012 BD46     		mov	sp, r7
+ 887              		.cfi_def_cfa_register 13
+ 888              		@ sp needed
+ 889 0014 80BC     		pop	{r7}
+ 890              		.cfi_restore 7
+ 891              		.cfi_def_cfa_offset 0
+ 892 0016 7047     		bx	lr
+ 893              	.L58:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 25
 
 
- 332              	.L31:
- 333 000a 00BF     		.align	2
- 334              	.L30:
- 335 000c 0A410040 		.word	1073758474
- 336              		.cfi_endproc
- 337              	.LFE10:
- 338              		.size	ADC_SAR_2_theACLK_GetSourceRegister, .-ADC_SAR_2_theACLK_GetSourceRegister
- 339              		.section	.text.ADC_SAR_2_theACLK_SetDividerRegister,"ax",%progbits
- 340              		.align	2
- 341              		.global	ADC_SAR_2_theACLK_SetDividerRegister
- 342              		.thumb
- 343              		.thumb_func
- 344              		.type	ADC_SAR_2_theACLK_SetDividerRegister, %function
- 345              	ADC_SAR_2_theACLK_SetDividerRegister:
- 346              	.LFB4:
- 195:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint8 enabled;
- 347              		.loc 1 195 0
- 348              		.cfi_startproc
- 349              		@ args = 0, pretend = 0, frame = 0
- 350              		@ frame_needed = 0, uses_anonymous_args = 0
- 351              	.LVL7:
- 352 0000 70B5     		push	{r4, r5, r6, lr}
- 353              		.cfi_def_cfa_offset 16
- 354              		.cfi_offset 4, -16
- 355              		.cfi_offset 5, -12
- 356              		.cfi_offset 6, -8
- 357              		.cfi_offset 14, -4
- 358 0002 0446     		mov	r4, r0
- 359 0004 0D46     		mov	r5, r1
- 198:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint16 oldDivider = ADC_SAR_2_theACLK_GetDividerRegister();
- 360              		.loc 1 198 0
- 361 0006 FFF7FEFF 		bl	ADC_SAR_2_theACLK_GetSourceRegister
- 362              	.LVL8:
- 363 000a 0646     		mov	r6, r0
- 364              	.LVL9:
- 199:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
- 365              		.loc 1 199 0
- 366 000c FFF7FEFF 		bl	ADC_SAR_2_theACLK_GetDividerRegister
- 367              	.LVL10:
- 201:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
- 368              		.loc 1 201 0
- 369 0010 A042     		cmp	r0, r4
- 370 0012 57D0     		beq	.L32
- 203:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
- 371              		.loc 1 203 0
- 372 0014 2C4B     		ldr	r3, .L45
- 373 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 374 0018 03F00403 		and	r3, r3, #4
- 375 001c DAB2     		uxtb	r2, r3
- 376              	.LVL11:
- 205:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         {
- 377              		.loc 1 205 0
- 378 001e 96B9     		cbnz	r6, .L34
- 205:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         {
- 379              		.loc 1 205 0 is_stmt 0 discriminator 1
- 380 0020 00B1     		cbz	r0, .L35
- 205:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         {
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 16
-
-
- 381              		.loc 1 205 0 discriminator 2
- 382 0022 84B9     		cbnz	r4, .L34
- 383              	.L35:
- 208:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
- 384              		.loc 1 208 0 is_stmt 1
- 385 0024 38B9     		cbnz	r0, .L36
- 213:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 ADC_SAR_2_theACLK_MOD_SRC &= (uint8)(~CYCLK_SSS);
- 386              		.loc 1 213 0
- 387 0026 294B     		ldr	r3, .L45+4
- 388 0028 1C80     		strh	r4, [r3]	@ movhi
- 214:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
- 389              		.loc 1 214 0
- 390 002a 294A     		ldr	r2, .L45+8
- 391              	.LVL12:
- 392 002c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 393 002e 03F0BF03 		and	r3, r3, #191
- 394 0032 1370     		strb	r3, [r2]
- 395 0034 70BD     		pop	{r4, r5, r6, pc}
- 396              	.LVL13:
- 397              	.L36:
- 220:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CY_SET_REG16(ADC_SAR_2_theACLK_DIV_PTR, clkDivider);
- 398              		.loc 1 220 0
- 399 0036 264A     		ldr	r2, .L45+8
- 400              	.LVL14:
- 401 0038 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 402              	.LVL15:
- 403 003a 43F04003 		orr	r3, r3, #64
- 404 003e 1370     		strb	r3, [r2]
- 221:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
- 405              		.loc 1 221 0
- 406 0040 224B     		ldr	r3, .L45+4
- 407 0042 1C80     		strh	r4, [r3]	@ movhi
- 408 0044 70BD     		pop	{r4, r5, r6, pc}
- 409              	.LVL16:
- 410              	.L34:
- 227:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
- 411              		.loc 1 227 0
- 412 0046 22B3     		cbz	r2, .L37
- 229:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
- 413              		.loc 1 229 0
- 414 0048 0023     		movs	r3, #0
- 415 004a 2249     		ldr	r1, .L45+12
- 416 004c 0B70     		strb	r3, [r1]
- 233:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 CLK_DIST_DMASK = 0x00u;
- 417              		.loc 1 233 0
- 418 004e 0426     		movs	r6, #4
- 419              	.LVL17:
- 420 0050 1331     		adds	r1, r1, #19
- 421 0052 0E70     		strb	r6, [r1]
- 234:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #else
- 422              		.loc 1 234 0
- 423 0054 0439     		subs	r1, r1, #4
- 424 0056 0B70     		strb	r3, [r1]
- 240:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
- 425              		.loc 1 240 0
- 426 0058 0839     		subs	r1, r1, #8
- 427 005a 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 17
-
-
- 428 005c 03F07F03 		and	r3, r3, #127
- 429 0060 0B70     		strb	r3, [r1]
- 243:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 {
- 430              		.loc 1 243 0
- 431 0062 1B4B     		ldr	r3, .L45+8
- 432 0064 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 433 0066 13F0080F 		tst	r3, #8
- 434 006a 00D0     		beq	.L38
- 243:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 {
- 435              		.loc 1 243 0 is_stmt 0 discriminator 1
- 436 006c 8CB9     		cbnz	r4, .L37
- 437              	.L38:
- 246:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                     CLK_DIST_LD = CYCLK_LD_DISABLE|CYCLK_LD_SYNC_EN|CYCLK_LD_LOAD;
- 438              		.loc 1 246 0 is_stmt 1
- 439 006e 1A4B     		ldr	r3, .L45+16
- 440 0070 1880     		strh	r0, [r3]	@ movhi
- 247:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
- 441              		.loc 1 247 0
- 442 0072 0721     		movs	r1, #7
- 443 0074 013B     		subs	r3, r3, #1
- 444 0076 1970     		strb	r1, [r3]
- 445              	.L39:
- 250:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
- 446              		.loc 1 250 0 discriminator 1
- 447 0078 164B     		ldr	r3, .L45+12
- 448 007a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 449 007c 13F0010F 		tst	r3, #1
- 450 0080 FAD1     		bne	.L39
- 253:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
- 451              		.loc 1 253 0
- 452 0082 1149     		ldr	r1, .L45
- 453 0084 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 454 0086 03F0FB03 		and	r3, r3, #251
- 455 008a 0B70     		strb	r3, [r1]
- 257:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
- 456              		.loc 1 257 0
- 457 008c 0021     		movs	r1, #0
- 458 008e 114B     		ldr	r3, .L45+12
- 459 0090 1970     		strb	r1, [r3]
- 460              	.L37:
- 263:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             {
- 461              		.loc 1 263 0
- 462 0092 0D4B     		ldr	r3, .L45
- 463 0094 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 464 0096 13F0040F 		tst	r3, #4
- 465 009a 0DD0     		beq	.L40
- 266:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
- 466              		.loc 1 266 0
- 467 009c 0E4B     		ldr	r3, .L45+16
- 468 009e 1C80     		strh	r4, [r3]	@ movhi
- 268:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
- 469              		.loc 1 268 0
- 470 00a0 0DB1     		cbz	r5, .L43
- 471 00a2 0322     		movs	r2, #3
- 472              	.LVL18:
- 473 00a4 00E0     		b	.L41
- 474              	.LVL19:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 18
-
-
- 475              	.L43:
- 476 00a6 0122     		movs	r2, #1
- 477              	.LVL20:
- 478              	.L41:
- 268:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****                 while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
- 479              		.loc 1 268 0 is_stmt 0 discriminator 4
- 480 00a8 0A4B     		ldr	r3, .L45+12
- 481 00aa 1A70     		strb	r2, [r3]
- 482              	.L42:
- 269:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
- 483              		.loc 1 269 0 is_stmt 1 discriminator 1
- 484 00ac 094B     		ldr	r3, .L45+12
- 485 00ae 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 486 00b0 13F0010F 		tst	r3, #1
- 487 00b4 FAD1     		bne	.L42
- 488 00b6 70BD     		pop	{r4, r5, r6, pc}
- 489              	.LVL21:
- 490              	.L40:
- 274:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 				ADC_SAR_2_theACLK_CLKEN |= enabled;
- 491              		.loc 1 274 0
- 492 00b8 044B     		ldr	r3, .L45+4
- 493 00ba 1C80     		strh	r4, [r3]	@ movhi
- 275:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             }
- 494              		.loc 1 275 0
- 495 00bc 0249     		ldr	r1, .L45
- 496 00be 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 497 00c0 1343     		orrs	r3, r3, r2
- 498 00c2 0B70     		strb	r3, [r1]
- 499              	.LVL22:
- 500              	.L32:
- 501 00c4 70BD     		pop	{r4, r5, r6, pc}
- 502              	.L46:
- 503 00c6 00BF     		.align	2
- 504              	.L45:
- 505 00c8 A1430040 		.word	1073759137
- 506 00cc 08410040 		.word	1073758472
- 507 00d0 0A410040 		.word	1073758474
- 508 00d4 01400040 		.word	1073758209
- 509 00d8 02400040 		.word	1073758210
- 510              		.cfi_endproc
- 511              	.LFE4:
- 512              		.size	ADC_SAR_2_theACLK_SetDividerRegister, .-ADC_SAR_2_theACLK_SetDividerRegister
- 513              		.section	.text.ADC_SAR_2_theACLK_SetSourceRegister,"ax",%progbits
- 514              		.align	2
- 515              		.global	ADC_SAR_2_theACLK_SetSourceRegister
- 516              		.thumb
- 517              		.thumb_func
- 518              		.type	ADC_SAR_2_theACLK_SetSourceRegister, %function
- 519              	ADC_SAR_2_theACLK_SetSourceRegister:
- 520              	.LFB9:
- 420:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint16 currDiv = ADC_SAR_2_theACLK_GetDividerRegister();
- 521              		.loc 1 420 0
- 522              		.cfi_startproc
- 523              		@ args = 0, pretend = 0, frame = 0
- 524              		@ frame_needed = 0, uses_anonymous_args = 0
- 525              	.LVL23:
- 526 0000 38B5     		push	{r3, r4, r5, lr}
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 19
-
-
- 527              		.cfi_def_cfa_offset 16
- 528              		.cfi_offset 3, -16
- 529              		.cfi_offset 4, -12
- 530              		.cfi_offset 5, -8
- 531              		.cfi_offset 14, -4
- 532 0002 0446     		mov	r4, r0
- 421:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     uint8 oldSrc = ADC_SAR_2_theACLK_GetSourceRegister();
- 533              		.loc 1 421 0
- 534 0004 FFF7FEFF 		bl	ADC_SAR_2_theACLK_GetDividerRegister
- 535              	.LVL24:
- 536 0008 0546     		mov	r5, r0
- 537              	.LVL25:
- 422:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
- 538              		.loc 1 422 0
- 539 000a FFF7FEFF 		bl	ADC_SAR_2_theACLK_GetSourceRegister
- 540              	.LVL26:
- 424:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         (clkSource == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
- 541              		.loc 1 424 0
- 542 000e 0346     		mov	r3, r0
- 543 0010 60B1     		cbz	r0, .L48
- 424:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         (clkSource == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
- 544              		.loc 1 424 0 is_stmt 0 discriminator 1
- 545 0012 5CB9     		cbnz	r4, .L48
- 425:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
- 546              		.loc 1 425 0 is_stmt 1
- 547 0014 55B9     		cbnz	r5, .L48
- 429:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_MOD_SRC =
- 548              		.loc 1 429 0
- 549 0016 104A     		ldr	r2, .L52
- 550 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 551 001a 43F04003 		orr	r3, r3, #64
- 552 001e 1370     		strb	r3, [r2]
- 431:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
- 553              		.loc 1 431 0
- 554 0020 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 430:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
- 555              		.loc 1 430 0
- 556 0022 03F0F803 		and	r3, r3, #248
- 557 0026 1C43     		orrs	r4, r4, r3
- 558 0028 1470     		strb	r4, [r2]
- 559 002a 38BD     		pop	{r3, r4, r5, pc}
- 560              	.LVL27:
- 561              	.L48:
- 433:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (clkSource != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
- 562              		.loc 1 433 0
- 563 002c 63B9     		cbnz	r3, .L50
- 433:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (clkSource != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
- 564              		.loc 1 433 0 is_stmt 0 discriminator 1
- 565 002e 5CB1     		cbz	r4, .L50
- 434:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     {
- 566              		.loc 1 434 0 is_stmt 1
- 567 0030 55B9     		cbnz	r5, .L50
- 439:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****         ADC_SAR_2_theACLK_MOD_SRC &= (uint8)(~CYCLK_SSS);
- 568              		.loc 1 439 0
- 569 0032 094A     		ldr	r2, .L52
- 570 0034 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 438:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 20
-
-
- 571              		.loc 1 438 0
- 572 0036 03F0F803 		and	r3, r3, #248
- 573 003a 1C43     		orrs	r4, r4, r3
- 574 003c 1470     		strb	r4, [r2]
- 440:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
- 575              		.loc 1 440 0
- 576 003e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 577 0040 03F0BF03 		and	r3, r3, #191
- 578 0044 1370     		strb	r3, [r2]
- 579 0046 38BD     		pop	{r3, r4, r5, pc}
- 580              	.LVL28:
- 581              	.L50:
- 445:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     }
- 582              		.loc 1 445 0
- 583 0048 034A     		ldr	r2, .L52
- 584 004a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 444:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****             (ADC_SAR_2_theACLK_MOD_SRC & (uint8)(~ADC_SAR_2_theACLK_SRC_SEL_MSK)) | clkSource;
- 585              		.loc 1 444 0
- 586 004c 03F0F803 		and	r3, r3, #248
- 587 0050 1C43     		orrs	r4, r4, r3
- 588 0052 1470     		strb	r4, [r2]
- 589 0054 38BD     		pop	{r3, r4, r5, pc}
- 590              	.LVL29:
- 591              	.L53:
- 592 0056 00BF     		.align	2
- 593              	.L52:
- 594 0058 0A410040 		.word	1073758474
- 595              		.cfi_endproc
- 596              	.LFE9:
- 597              		.size	ADC_SAR_2_theACLK_SetSourceRegister, .-ADC_SAR_2_theACLK_SetSourceRegister
- 598              		.section	.text.ADC_SAR_2_theACLK_SetPhaseRegister,"ax",%progbits
- 599              		.align	2
- 600              		.global	ADC_SAR_2_theACLK_SetPhaseRegister
- 601              		.thumb
- 602              		.thumb_func
- 603              		.type	ADC_SAR_2_theACLK_SetPhaseRegister, %function
- 604              	ADC_SAR_2_theACLK_SetPhaseRegister:
- 605              	.LFB11:
+ 894              		.align	2
+ 895              	.L57:
+ 896 0018 0A410040 		.word	1073758474
+ 897              		.cfi_endproc
+ 898              	.LFE10:
+ 899              		.size	ADC_SAR_2_theACLK_GetSourceRegister, .-ADC_SAR_2_theACLK_GetSourceRegister
+ 900              		.section	.text.ADC_SAR_2_theACLK_SetPhaseRegister,"ax",%progbits
+ 901              		.align	2
+ 902              		.global	ADC_SAR_2_theACLK_SetPhaseRegister
+ 903              		.thumb
+ 904              		.thumb_func
+ 905              		.type	ADC_SAR_2_theACLK_SetPhaseRegister, %function
+ 906              	ADC_SAR_2_theACLK_SetPhaseRegister:
+ 907              	.LFB11:
  468:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  469:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  470:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** #if defined(ADC_SAR_2_theACLK__CFG3)
@@ -1198,9 +1474,6 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  484:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *   clkPhase must be from 1 to 11 inclusive. Other values, including 0,
  485:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *   disable the clock. clkPhase = 1 produces a 0ns delay and clkPhase = 11 
  486:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *   produces a 10ns delay.
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 21
-
-
  487:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *
  488:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** * Returns:
  489:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *  None
@@ -1208,35 +1481,57 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  491:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  492:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** void ADC_SAR_2_theACLK_SetPhaseRegister(uint8 clkPhase) 
  493:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
- 606              		.loc 1 493 0
- 607              		.cfi_startproc
- 608              		@ args = 0, pretend = 0, frame = 0
- 609              		@ frame_needed = 0, uses_anonymous_args = 0
- 610              		@ link register save eliminated.
- 611              	.LVL30:
+ 908              		.loc 1 493 0
+ 909              		.cfi_startproc
+ 910              		@ args = 0, pretend = 0, frame = 8
+ 911              		@ frame_needed = 1, uses_anonymous_args = 0
+ 912              		@ link register save eliminated.
+ 913 0000 80B4     		push	{r7}
+ 914              		.cfi_def_cfa_offset 4
+ 915              		.cfi_offset 7, -4
+ 916 0002 83B0     		sub	sp, sp, #12
+ 917              		.cfi_def_cfa_offset 16
+ 918 0004 00AF     		add	r7, sp, #0
+ 919              		.cfi_def_cfa_register 7
+ 920 0006 0346     		mov	r3, r0
+ 921 0008 FB71     		strb	r3, [r7, #7]
  494:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     ADC_SAR_2_theACLK_PHASE = clkPhase & ADC_SAR_2_theACLK_PHASE_MASK;
- 612              		.loc 1 494 0
- 613 0000 00F00F00 		and	r0, r0, #15
- 614              	.LVL31:
- 615 0004 014B     		ldr	r3, .L55
- 616 0006 1870     		strb	r0, [r3]
- 617 0008 7047     		bx	lr
- 618              	.L56:
- 619 000a 00BF     		.align	2
- 620              	.L55:
- 621 000c 0B410040 		.word	1073758475
- 622              		.cfi_endproc
- 623              	.LFE11:
- 624              		.size	ADC_SAR_2_theACLK_SetPhaseRegister, .-ADC_SAR_2_theACLK_SetPhaseRegister
- 625              		.section	.text.ADC_SAR_2_theACLK_GetPhaseRegister,"ax",%progbits
- 626              		.align	2
- 627              		.global	ADC_SAR_2_theACLK_GetPhaseRegister
- 628              		.thumb
- 629              		.thumb_func
- 630              		.type	ADC_SAR_2_theACLK_GetPhaseRegister, %function
- 631              	ADC_SAR_2_theACLK_GetPhaseRegister:
- 632              	.LFB12:
+ 922              		.loc 1 494 0
+ 923 000a 054A     		ldr	r2, .L60
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 26
+
+
+ 924 000c FB79     		ldrb	r3, [r7, #7]
+ 925 000e 03F00F03 		and	r3, r3, #15
+ 926 0012 DBB2     		uxtb	r3, r3
+ 927 0014 1370     		strb	r3, [r2]
  495:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
+ 928              		.loc 1 495 0
+ 929 0016 00BF     		nop
+ 930 0018 0C37     		adds	r7, r7, #12
+ 931              		.cfi_def_cfa_offset 4
+ 932 001a BD46     		mov	sp, r7
+ 933              		.cfi_def_cfa_register 13
+ 934              		@ sp needed
+ 935 001c 80BC     		pop	{r7}
+ 936              		.cfi_restore 7
+ 937              		.cfi_def_cfa_offset 0
+ 938 001e 7047     		bx	lr
+ 939              	.L61:
+ 940              		.align	2
+ 941              	.L60:
+ 942 0020 0B410040 		.word	1073758475
+ 943              		.cfi_endproc
+ 944              	.LFE11:
+ 945              		.size	ADC_SAR_2_theACLK_SetPhaseRegister, .-ADC_SAR_2_theACLK_SetPhaseRegister
+ 946              		.section	.text.ADC_SAR_2_theACLK_GetPhaseRegister,"ax",%progbits
+ 947              		.align	2
+ 948              		.global	ADC_SAR_2_theACLK_GetPhaseRegister
+ 949              		.thumb
+ 950              		.thumb_func
+ 951              		.type	ADC_SAR_2_theACLK_GetPhaseRegister, %function
+ 952              	ADC_SAR_2_theACLK_GetPhaseRegister:
+ 953              	.LFB12:
  496:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  497:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** 
  498:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** /*******************************************************************************
@@ -1256,1101 +1551,982 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 1
  512:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** *******************************************************************************/
  513:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** uint8 ADC_SAR_2_theACLK_GetPhaseRegister(void) 
  514:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** {
- 633              		.loc 1 514 0
- 634              		.cfi_startproc
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 22
+ 954              		.loc 1 514 0
+ 955              		.cfi_startproc
+ 956              		@ args = 0, pretend = 0, frame = 0
+ 957              		@ frame_needed = 1, uses_anonymous_args = 0
+ 958              		@ link register save eliminated.
+ 959 0000 80B4     		push	{r7}
+ 960              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 27
 
 
- 635              		@ args = 0, pretend = 0, frame = 0
- 636              		@ frame_needed = 0, uses_anonymous_args = 0
- 637              		@ link register save eliminated.
+ 961              		.cfi_offset 7, -4
+ 962 0002 00AF     		add	r7, sp, #0
+ 963              		.cfi_def_cfa_register 7
  515:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c ****     return ADC_SAR_2_theACLK_PHASE & ADC_SAR_2_theACLK_PHASE_MASK;
- 638              		.loc 1 515 0
- 639 0000 024B     		ldr	r3, .L58
- 640 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 964              		.loc 1 515 0
+ 965 0004 044B     		ldr	r3, .L64
+ 966 0006 1B78     		ldrb	r3, [r3]
+ 967 0008 DBB2     		uxtb	r3, r3
+ 968 000a 03F00F03 		and	r3, r3, #15
+ 969 000e DBB2     		uxtb	r3, r3
  516:Generated_Source\PSoC5/ADC_SAR_2_theACLK.c **** }
- 641              		.loc 1 516 0
- 642 0004 00F00F00 		and	r0, r0, #15
- 643 0008 7047     		bx	lr
- 644              	.L59:
- 645 000a 00BF     		.align	2
- 646              	.L58:
- 647 000c 0B410040 		.word	1073758475
- 648              		.cfi_endproc
- 649              	.LFE12:
- 650              		.size	ADC_SAR_2_theACLK_GetPhaseRegister, .-ADC_SAR_2_theACLK_GetPhaseRegister
- 651              		.text
- 652              	.Letext0:
- 653              		.file 2 "Generated_Source\\PSoC5/cytypes.h"
- 654              		.section	.debug_info,"",%progbits
- 655              	.Ldebug_info0:
- 656 0000 C0020000 		.4byte	0x2c0
- 657 0004 0400     		.2byte	0x4
- 658 0006 00000000 		.4byte	.Ldebug_abbrev0
- 659 000a 04       		.byte	0x4
- 660 000b 01       		.uleb128 0x1
- 661 000c 18030000 		.4byte	.LASF40
- 662 0010 0C       		.byte	0xc
- 663 0011 3C000000 		.4byte	.LASF41
- 664 0015 AA020000 		.4byte	.LASF42
- 665 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 666 001d 00000000 		.4byte	0
- 667 0021 00000000 		.4byte	.Ldebug_line0
- 668 0025 02       		.uleb128 0x2
- 669 0026 01       		.byte	0x1
- 670 0027 06       		.byte	0x6
- 671 0028 81010000 		.4byte	.LASF0
- 672 002c 02       		.uleb128 0x2
- 673 002d 01       		.byte	0x1
- 674 002e 08       		.byte	0x8
- 675 002f 67010000 		.4byte	.LASF1
- 676 0033 02       		.uleb128 0x2
- 677 0034 02       		.byte	0x2
- 678 0035 05       		.byte	0x5
- 679 0036 32000000 		.4byte	.LASF2
- 680 003a 02       		.uleb128 0x2
- 681 003b 02       		.byte	0x2
- 682 003c 07       		.byte	0x7
- 683 003d C8010000 		.4byte	.LASF3
- 684 0041 02       		.uleb128 0x2
- 685 0042 04       		.byte	0x4
- 686 0043 05       		.byte	0x5
- 687 0044 09010000 		.4byte	.LASF4
- 688 0048 02       		.uleb128 0x2
- 689 0049 04       		.byte	0x4
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 23
+ 970              		.loc 1 516 0
+ 971 0010 1846     		mov	r0, r3
+ 972 0012 BD46     		mov	sp, r7
+ 973              		.cfi_def_cfa_register 13
+ 974              		@ sp needed
+ 975 0014 80BC     		pop	{r7}
+ 976              		.cfi_restore 7
+ 977              		.cfi_def_cfa_offset 0
+ 978 0016 7047     		bx	lr
+ 979              	.L65:
+ 980              		.align	2
+ 981              	.L64:
+ 982 0018 0B410040 		.word	1073758475
+ 983              		.cfi_endproc
+ 984              	.LFE12:
+ 985              		.size	ADC_SAR_2_theACLK_GetPhaseRegister, .-ADC_SAR_2_theACLK_GetPhaseRegister
+ 986              		.text
+ 987              	.Letext0:
+ 988              		.file 2 "Generated_Source\\PSoC5/cytypes.h"
+ 989              		.section	.debug_info,"",%progbits
+ 990              	.Ldebug_info0:
+ 991 0000 95020000 		.4byte	0x295
+ 992 0004 0400     		.2byte	0x4
+ 993 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 994 000a 04       		.byte	0x4
+ 995 000b 01       		.uleb128 0x1
+ 996 000c 67000000 		.4byte	.LASF40
+ 997 0010 0C       		.byte	0xc
+ 998 0011 3C000000 		.4byte	.LASF41
+ 999 0015 69020000 		.4byte	.LASF42
+ 1000 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1001 001d 00000000 		.4byte	0
+ 1002 0021 00000000 		.4byte	.Ldebug_line0
+ 1003 0025 02       		.uleb128 0x2
+ 1004 0026 01       		.byte	0x1
+ 1005 0027 06       		.byte	0x6
+ 1006 0028 0F020000 		.4byte	.LASF0
+ 1007 002c 02       		.uleb128 0x2
+ 1008 002d 01       		.byte	0x1
+ 1009 002e 08       		.byte	0x8
+ 1010 002f F5010000 		.4byte	.LASF1
+ 1011 0033 02       		.uleb128 0x2
+ 1012 0034 02       		.byte	0x2
+ 1013 0035 05       		.byte	0x5
+ 1014 0036 32000000 		.4byte	.LASF2
+ 1015 003a 02       		.uleb128 0x2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 28
 
 
- 690 004a 07       		.byte	0x7
- 691 004b 67020000 		.4byte	.LASF5
- 692 004f 02       		.uleb128 0x2
- 693 0050 08       		.byte	0x8
- 694 0051 05       		.byte	0x5
- 695 0052 D6000000 		.4byte	.LASF6
- 696 0056 02       		.uleb128 0x2
- 697 0057 08       		.byte	0x8
- 698 0058 07       		.byte	0x7
- 699 0059 8D010000 		.4byte	.LASF7
- 700 005d 03       		.uleb128 0x3
- 701 005e 04       		.byte	0x4
- 702 005f 05       		.byte	0x5
- 703 0060 696E7400 		.ascii	"int\000"
- 704 0064 02       		.uleb128 0x2
- 705 0065 04       		.byte	0x4
- 706 0066 07       		.byte	0x7
- 707 0067 BB010000 		.4byte	.LASF8
- 708 006b 04       		.uleb128 0x4
- 709 006c 9C000000 		.4byte	.LASF9
- 710 0070 02       		.byte	0x2
- 711 0071 9201     		.2byte	0x192
- 712 0073 2C000000 		.4byte	0x2c
- 713 0077 04       		.uleb128 0x4
- 714 0078 86000000 		.4byte	.LASF10
- 715 007c 02       		.byte	0x2
- 716 007d 9301     		.2byte	0x193
- 717 007f 3A000000 		.4byte	0x3a
- 718 0083 02       		.uleb128 0x2
- 719 0084 04       		.byte	0x4
- 720 0085 04       		.byte	0x4
- 721 0086 AD000000 		.4byte	.LASF11
- 722 008a 02       		.uleb128 0x2
- 723 008b 08       		.byte	0x8
- 724 008c 04       		.byte	0x4
- 725 008d 79020000 		.4byte	.LASF12
- 726 0091 02       		.uleb128 0x2
- 727 0092 01       		.byte	0x1
- 728 0093 08       		.byte	0x8
- 729 0094 DB010000 		.4byte	.LASF13
- 730 0098 04       		.uleb128 0x4
- 731 0099 62020000 		.4byte	.LASF14
- 732 009d 02       		.byte	0x2
- 733 009e 3C02     		.2byte	0x23c
- 734 00a0 A4000000 		.4byte	0xa4
- 735 00a4 05       		.uleb128 0x5
- 736 00a5 6B000000 		.4byte	0x6b
- 737 00a9 04       		.uleb128 0x4
- 738 00aa 2C000000 		.4byte	.LASF15
- 739 00ae 02       		.byte	0x2
- 740 00af 3D02     		.2byte	0x23d
- 741 00b1 B5000000 		.4byte	0xb5
- 742 00b5 05       		.uleb128 0x5
- 743 00b6 77000000 		.4byte	0x77
- 744 00ba 06       		.uleb128 0x6
- 745 00bb A6030000 		.4byte	.LASF16
- 746 00bf 01       		.byte	0x1
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 24
+ 1016 003b 02       		.byte	0x2
+ 1017 003c 07       		.byte	0x7
+ 1018 003d 56020000 		.4byte	.LASF3
+ 1019 0041 02       		.uleb128 0x2
+ 1020 0042 04       		.byte	0x4
+ 1021 0043 05       		.byte	0x5
+ 1022 0044 97010000 		.4byte	.LASF4
+ 1023 0048 02       		.uleb128 0x2
+ 1024 0049 04       		.byte	0x4
+ 1025 004a 07       		.byte	0x7
+ 1026 004b 41030000 		.4byte	.LASF5
+ 1027 004f 02       		.uleb128 0x2
+ 1028 0050 08       		.byte	0x8
+ 1029 0051 05       		.byte	0x5
+ 1030 0052 64010000 		.4byte	.LASF6
+ 1031 0056 02       		.uleb128 0x2
+ 1032 0057 08       		.byte	0x8
+ 1033 0058 07       		.byte	0x7
+ 1034 0059 1B020000 		.4byte	.LASF7
+ 1035 005d 03       		.uleb128 0x3
+ 1036 005e 04       		.byte	0x4
+ 1037 005f 05       		.byte	0x5
+ 1038 0060 696E7400 		.ascii	"int\000"
+ 1039 0064 02       		.uleb128 0x2
+ 1040 0065 04       		.byte	0x4
+ 1041 0066 07       		.byte	0x7
+ 1042 0067 49020000 		.4byte	.LASF8
+ 1043 006b 04       		.uleb128 0x4
+ 1044 006c 2A010000 		.4byte	.LASF9
+ 1045 0070 02       		.byte	0x2
+ 1046 0071 9201     		.2byte	0x192
+ 1047 0073 2C000000 		.4byte	0x2c
+ 1048 0077 04       		.uleb128 0x4
+ 1049 0078 14010000 		.4byte	.LASF10
+ 1050 007c 02       		.byte	0x2
+ 1051 007d 9301     		.2byte	0x193
+ 1052 007f 3A000000 		.4byte	0x3a
+ 1053 0083 02       		.uleb128 0x2
+ 1054 0084 04       		.byte	0x4
+ 1055 0085 04       		.byte	0x4
+ 1056 0086 3B010000 		.4byte	.LASF11
+ 1057 008a 02       		.uleb128 0x2
+ 1058 008b 08       		.byte	0x8
+ 1059 008c 04       		.byte	0x4
+ 1060 008d 53030000 		.4byte	.LASF12
+ 1061 0091 02       		.uleb128 0x2
+ 1062 0092 01       		.byte	0x1
+ 1063 0093 08       		.byte	0x8
+ 1064 0094 B5020000 		.4byte	.LASF13
+ 1065 0098 04       		.uleb128 0x4
+ 1066 0099 3C030000 		.4byte	.LASF14
+ 1067 009d 02       		.byte	0x2
+ 1068 009e 3C02     		.2byte	0x23c
+ 1069 00a0 A4000000 		.4byte	0xa4
+ 1070 00a4 05       		.uleb128 0x5
+ 1071 00a5 6B000000 		.4byte	0x6b
+ 1072 00a9 04       		.uleb128 0x4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 29
 
 
- 747 00c0 2D       		.byte	0x2d
- 748 00c1 00000000 		.4byte	.LFB0
- 749 00c5 1C000000 		.4byte	.LFE0-.LFB0
- 750 00c9 01       		.uleb128 0x1
- 751 00ca 9C       		.byte	0x9c
- 752 00cb 06       		.uleb128 0x6
- 753 00cc A4010000 		.4byte	.LASF17
- 754 00d0 01       		.byte	0x1
- 755 00d1 47       		.byte	0x47
- 756 00d2 00000000 		.4byte	.LFB1
- 757 00d6 1C000000 		.4byte	.LFE1-.LFB1
- 758 00da 01       		.uleb128 0x1
- 759 00db 9C       		.byte	0x9c
- 760 00dc 07       		.uleb128 0x7
- 761 00dd E0010000 		.4byte	.LASF18
- 762 00e1 01       		.byte	0x1
- 763 00e2 64       		.byte	0x64
- 764 00e3 00000000 		.4byte	.LFB2
- 765 00e7 70000000 		.4byte	.LFE2-.LFB2
- 766 00eb 01       		.uleb128 0x1
- 767 00ec 9C       		.byte	0x9c
- 768 00ed 0B010000 		.4byte	0x10b
- 769 00f1 08       		.uleb128 0x8
- 770 00f2 0A000000 		.4byte	.LBB2
- 771 00f6 66000000 		.4byte	.LBE2-.LBB2
- 772 00fa 09       		.uleb128 0x9
- 773 00fb 0E020000 		.4byte	.LASF30
- 774 00ff 01       		.byte	0x1
- 775 0100 69       		.byte	0x69
- 776 0101 77000000 		.4byte	0x77
- 777 0105 00000000 		.4byte	.LLST0
- 778 0109 00       		.byte	0
- 779 010a 00       		.byte	0
- 780 010b 07       		.uleb128 0x7
- 781 010c 67000000 		.4byte	.LASF19
- 782 0110 01       		.byte	0x1
- 783 0111 9D       		.byte	0x9d
- 784 0112 00000000 		.4byte	.LFB3
- 785 0116 20000000 		.4byte	.LFE3-.LFB3
- 786 011a 01       		.uleb128 0x1
- 787 011b 9C       		.byte	0x9c
- 788 011c 2E010000 		.4byte	0x12e
- 789 0120 0A       		.uleb128 0xa
- 790 0121 34010000 		.4byte	.LASF21
- 791 0125 01       		.byte	0x1
- 792 0126 9D       		.byte	0x9d
- 793 0127 6B000000 		.4byte	0x6b
- 794 012b 01       		.uleb128 0x1
- 795 012c 50       		.byte	0x50
- 796 012d 00       		.byte	0
- 797 012e 0B       		.uleb128 0xb
- 798 012f E4000000 		.4byte	.LASF24
- 799 0133 01       		.byte	0x1
- 800 0134 2901     		.2byte	0x129
- 801 0136 77000000 		.4byte	0x77
- 802 013a 00000000 		.4byte	.LFB5
- 803 013e 0C000000 		.4byte	.LFE5-.LFB5
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 25
+ 1073 00aa 2C000000 		.4byte	.LASF15
+ 1074 00ae 02       		.byte	0x2
+ 1075 00af 3D02     		.2byte	0x23d
+ 1076 00b1 B5000000 		.4byte	0xb5
+ 1077 00b5 05       		.uleb128 0x5
+ 1078 00b6 77000000 		.4byte	0x77
+ 1079 00ba 06       		.uleb128 0x6
+ 1080 00bb A7030000 		.4byte	.LASF16
+ 1081 00bf 01       		.byte	0x1
+ 1082 00c0 2D       		.byte	0x2d
+ 1083 00c1 00000000 		.4byte	.LFB0
+ 1084 00c5 34000000 		.4byte	.LFE0-.LFB0
+ 1085 00c9 01       		.uleb128 0x1
+ 1086 00ca 9C       		.byte	0x9c
+ 1087 00cb 06       		.uleb128 0x6
+ 1088 00cc 32020000 		.4byte	.LASF17
+ 1089 00d0 01       		.byte	0x1
+ 1090 00d1 47       		.byte	0x47
+ 1091 00d2 00000000 		.4byte	.LFB1
+ 1092 00d6 34000000 		.4byte	.LFE1-.LFB1
+ 1093 00da 01       		.uleb128 0x1
+ 1094 00db 9C       		.byte	0x9c
+ 1095 00dc 07       		.uleb128 0x7
+ 1096 00dd BA020000 		.4byte	.LASF18
+ 1097 00e1 01       		.byte	0x1
+ 1098 00e2 64       		.byte	0x64
+ 1099 00e3 00000000 		.4byte	.LFB2
+ 1100 00e7 B0000000 		.4byte	.LFE2-.LFB2
+ 1101 00eb 01       		.uleb128 0x1
+ 1102 00ec 9C       		.byte	0x9c
+ 1103 00ed 0A010000 		.4byte	0x10a
+ 1104 00f1 08       		.uleb128 0x8
+ 1105 00f2 14000000 		.4byte	.LBB2
+ 1106 00f6 70000000 		.4byte	.LBE2-.LBB2
+ 1107 00fa 09       		.uleb128 0x9
+ 1108 00fb E8020000 		.4byte	.LASF24
+ 1109 00ff 01       		.byte	0x1
+ 1110 0100 69       		.byte	0x69
+ 1111 0101 77000000 		.4byte	0x77
+ 1112 0105 02       		.uleb128 0x2
+ 1113 0106 91       		.byte	0x91
+ 1114 0107 76       		.sleb128 -10
+ 1115 0108 00       		.byte	0
+ 1116 0109 00       		.byte	0
+ 1117 010a 07       		.uleb128 0x7
+ 1118 010b F5000000 		.4byte	.LASF19
+ 1119 010f 01       		.byte	0x1
+ 1120 0110 9D       		.byte	0x9d
+ 1121 0111 00000000 		.4byte	.LFB3
+ 1122 0115 40000000 		.4byte	.LFE3-.LFB3
+ 1123 0119 01       		.uleb128 0x1
+ 1124 011a 9C       		.byte	0x9c
+ 1125 011b 2E010000 		.4byte	0x12e
+ 1126 011f 0A       		.uleb128 0xa
+ 1127 0120 C2010000 		.4byte	.LASF21
+ 1128 0124 01       		.byte	0x1
+ 1129 0125 9D       		.byte	0x9d
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 30
 
 
- 804 0142 01       		.uleb128 0x1
- 805 0143 9C       		.byte	0x9c
- 806 0144 0C       		.uleb128 0xc
- 807 0145 12010000 		.4byte	.LASF20
- 808 0149 01       		.byte	0x1
- 809 014a 4C01     		.2byte	0x14c
- 810 014c 00000000 		.4byte	.LFB6
- 811 0150 14000000 		.4byte	.LFE6-.LFB6
- 812 0154 01       		.uleb128 0x1
- 813 0155 9C       		.byte	0x9c
- 814 0156 6B010000 		.4byte	0x16b
- 815 015a 0D       		.uleb128 0xd
- 816 015b 75010000 		.4byte	.LASF22
- 817 015f 01       		.byte	0x1
- 818 0160 4C01     		.2byte	0x14c
- 819 0162 6B000000 		.4byte	0x6b
- 820 0166 13000000 		.4byte	.LLST1
- 821 016a 00       		.byte	0
- 822 016b 0C       		.uleb128 0xc
- 823 016c 19020000 		.4byte	.LASF23
- 824 0170 01       		.byte	0x1
- 825 0171 6F01     		.2byte	0x16f
- 826 0173 00000000 		.4byte	.LFB7
- 827 0177 18000000 		.4byte	.LFE7-.LFB7
- 828 017b 01       		.uleb128 0x1
- 829 017c 9C       		.byte	0x9c
- 830 017d 92010000 		.4byte	0x192
- 831 0181 0D       		.uleb128 0xd
- 832 0182 75010000 		.4byte	.LASF22
- 833 0186 01       		.byte	0x1
- 834 0187 6F01     		.2byte	0x16f
- 835 0189 6B000000 		.4byte	0x6b
- 836 018d 34000000 		.4byte	.LLST2
- 837 0191 00       		.byte	0
- 838 0192 0B       		.uleb128 0xb
- 839 0193 88020000 		.4byte	.LASF25
- 840 0197 01       		.byte	0x1
- 841 0198 8401     		.2byte	0x184
- 842 019a 6B000000 		.4byte	0x6b
- 843 019e 00000000 		.4byte	.LFB8
- 844 01a2 10000000 		.4byte	.LFE8-.LFB8
- 845 01a6 01       		.uleb128 0x1
- 846 01a7 9C       		.byte	0x9c
- 847 01a8 0B       		.uleb128 0xb
- 848 01a9 43010000 		.4byte	.LASF26
- 849 01ad 01       		.byte	0x1
- 850 01ae D001     		.2byte	0x1d0
- 851 01b0 6B000000 		.4byte	0x6b
- 852 01b4 00000000 		.4byte	.LFB10
- 853 01b8 10000000 		.4byte	.LFE10-.LFB10
- 854 01bc 01       		.uleb128 0x1
- 855 01bd 9C       		.byte	0x9c
- 856 01be 07       		.uleb128 0x7
- 857 01bf 3D020000 		.4byte	.LASF27
- 858 01c3 01       		.byte	0x1
- 859 01c4 C1       		.byte	0xc1
- 860 01c5 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 26
+ 1130 0126 6B000000 		.4byte	0x6b
+ 1131 012a 02       		.uleb128 0x2
+ 1132 012b 91       		.byte	0x91
+ 1133 012c 77       		.sleb128 -9
+ 1134 012d 00       		.byte	0
+ 1135 012e 0B       		.uleb128 0xb
+ 1136 012f 17030000 		.4byte	.LASF20
+ 1137 0133 01       		.byte	0x1
+ 1138 0134 C1       		.byte	0xc1
+ 1139 0135 00000000 		.4byte	.LFB4
+ 1140 0139 64010000 		.4byte	.LFE4-.LFB4
+ 1141 013d 01       		.uleb128 0x1
+ 1142 013e 9C       		.byte	0x9c
+ 1143 013f 8A010000 		.4byte	0x18a
+ 1144 0143 0A       		.uleb128 0xa
+ 1145 0144 30010000 		.4byte	.LASF22
+ 1146 0148 01       		.byte	0x1
+ 1147 0149 C1       		.byte	0xc1
+ 1148 014a 77000000 		.4byte	0x77
+ 1149 014e 02       		.uleb128 0x2
+ 1150 014f 91       		.byte	0x91
+ 1151 0150 6E       		.sleb128 -18
+ 1152 0151 0A       		.uleb128 0xa
+ 1153 0152 1B010000 		.4byte	.LASF23
+ 1154 0156 01       		.byte	0x1
+ 1155 0157 C1       		.byte	0xc1
+ 1156 0158 6B000000 		.4byte	0x6b
+ 1157 015c 02       		.uleb128 0x2
+ 1158 015d 91       		.byte	0x91
+ 1159 015e 6D       		.sleb128 -19
+ 1160 015f 09       		.uleb128 0x9
+ 1161 0160 5A030000 		.4byte	.LASF25
+ 1162 0164 01       		.byte	0x1
+ 1163 0165 C4       		.byte	0xc4
+ 1164 0166 6B000000 		.4byte	0x6b
+ 1165 016a 02       		.uleb128 0x2
+ 1166 016b 91       		.byte	0x91
+ 1167 016c 73       		.sleb128 -13
+ 1168 016d 09       		.uleb128 0x9
+ 1169 016e E0020000 		.4byte	.LASF26
+ 1170 0172 01       		.byte	0x1
+ 1171 0173 C6       		.byte	0xc6
+ 1172 0174 6B000000 		.4byte	0x6b
+ 1173 0178 02       		.uleb128 0x2
+ 1174 0179 91       		.byte	0x91
+ 1175 017a 77       		.sleb128 -9
+ 1176 017b 09       		.uleb128 0x9
+ 1177 017c E8020000 		.4byte	.LASF24
+ 1178 0180 01       		.byte	0x1
+ 1179 0181 C7       		.byte	0xc7
+ 1180 0182 77000000 		.4byte	0x77
+ 1181 0186 02       		.uleb128 0x2
+ 1182 0187 91       		.byte	0x91
+ 1183 0188 74       		.sleb128 -12
+ 1184 0189 00       		.byte	0
+ 1185 018a 0C       		.uleb128 0xc
+ 1186 018b 72010000 		.4byte	.LASF30
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 31
 
 
- 861 01c9 DC000000 		.4byte	.LFE4-.LFB4
- 862 01cd 01       		.uleb128 0x1
- 863 01ce 9C       		.byte	0x9c
- 864 01cf 2F020000 		.4byte	0x22f
- 865 01d3 0E       		.uleb128 0xe
- 866 01d4 A2000000 		.4byte	.LASF28
- 867 01d8 01       		.byte	0x1
- 868 01d9 C1       		.byte	0xc1
- 869 01da 77000000 		.4byte	0x77
- 870 01de 55000000 		.4byte	.LLST3
- 871 01e2 0E       		.uleb128 0xe
- 872 01e3 8D000000 		.4byte	.LASF29
- 873 01e7 01       		.byte	0x1
- 874 01e8 C1       		.byte	0xc1
- 875 01e9 6B000000 		.4byte	0x6b
- 876 01ed 76000000 		.4byte	.LLST4
- 877 01f1 09       		.uleb128 0x9
- 878 01f2 80020000 		.4byte	.LASF31
- 879 01f6 01       		.byte	0x1
- 880 01f7 C4       		.byte	0xc4
- 881 01f8 6B000000 		.4byte	0x6b
- 882 01fc 97000000 		.4byte	.LLST5
- 883 0200 09       		.uleb128 0x9
- 884 0201 06020000 		.4byte	.LASF32
- 885 0205 01       		.byte	0x1
- 886 0206 C6       		.byte	0xc6
- 887 0207 6B000000 		.4byte	0x6b
- 888 020b E1000000 		.4byte	.LLST6
- 889 020f 0F       		.uleb128 0xf
- 890 0210 0E020000 		.4byte	.LASF30
- 891 0214 01       		.byte	0x1
- 892 0215 C7       		.byte	0xc7
- 893 0216 77000000 		.4byte	0x77
- 894 021a 01       		.uleb128 0x1
- 895 021b 50       		.byte	0x50
- 896 021c 10       		.uleb128 0x10
- 897 021d 0A000000 		.4byte	.LVL8
- 898 0221 A8010000 		.4byte	0x1a8
- 899 0225 10       		.uleb128 0x10
- 900 0226 10000000 		.4byte	.LVL10
- 901 022a 2E010000 		.4byte	0x12e
- 902 022e 00       		.byte	0
- 903 022f 0C       		.uleb128 0xc
- 904 0230 00000000 		.4byte	.LASF33
- 905 0234 01       		.byte	0x1
- 906 0235 A301     		.2byte	0x1a3
- 907 0237 00000000 		.4byte	.LFB9
- 908 023b 5C000000 		.4byte	.LFE9-.LFB9
- 909 023f 01       		.uleb128 0x1
- 910 0240 9C       		.byte	0x9c
- 911 0241 86020000 		.4byte	0x286
- 912 0245 0D       		.uleb128 0xd
- 913 0246 FC010000 		.4byte	.LASF34
- 914 024a 01       		.byte	0x1
- 915 024b A301     		.2byte	0x1a3
- 916 024d 6B000000 		.4byte	0x6b
- 917 0251 F4000000 		.4byte	.LLST7
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 27
+ 1187 018f 01       		.byte	0x1
+ 1188 0190 2901     		.2byte	0x129
+ 1189 0192 77000000 		.4byte	0x77
+ 1190 0196 00000000 		.4byte	.LFB5
+ 1191 019a 18000000 		.4byte	.LFE5-.LFB5
+ 1192 019e 01       		.uleb128 0x1
+ 1193 019f 9C       		.byte	0x9c
+ 1194 01a0 0D       		.uleb128 0xd
+ 1195 01a1 A0010000 		.4byte	.LASF27
+ 1196 01a5 01       		.byte	0x1
+ 1197 01a6 4C01     		.2byte	0x14c
+ 1198 01a8 00000000 		.4byte	.LFB6
+ 1199 01ac 34000000 		.4byte	.LFE6-.LFB6
+ 1200 01b0 01       		.uleb128 0x1
+ 1201 01b1 9C       		.byte	0x9c
+ 1202 01b2 C6010000 		.4byte	0x1c6
+ 1203 01b6 0E       		.uleb128 0xe
+ 1204 01b7 03020000 		.4byte	.LASF28
+ 1205 01bb 01       		.byte	0x1
+ 1206 01bc 4C01     		.2byte	0x14c
+ 1207 01be 6B000000 		.4byte	0x6b
+ 1208 01c2 02       		.uleb128 0x2
+ 1209 01c3 91       		.byte	0x91
+ 1210 01c4 77       		.sleb128 -9
+ 1211 01c5 00       		.byte	0
+ 1212 01c6 0D       		.uleb128 0xd
+ 1213 01c7 F3020000 		.4byte	.LASF29
+ 1214 01cb 01       		.byte	0x1
+ 1215 01cc 6F01     		.2byte	0x16f
+ 1216 01ce 00000000 		.4byte	.LFB7
+ 1217 01d2 34000000 		.4byte	.LFE7-.LFB7
+ 1218 01d6 01       		.uleb128 0x1
+ 1219 01d7 9C       		.byte	0x9c
+ 1220 01d8 EC010000 		.4byte	0x1ec
+ 1221 01dc 0E       		.uleb128 0xe
+ 1222 01dd 03020000 		.4byte	.LASF28
+ 1223 01e1 01       		.byte	0x1
+ 1224 01e2 6F01     		.2byte	0x16f
+ 1225 01e4 6B000000 		.4byte	0x6b
+ 1226 01e8 02       		.uleb128 0x2
+ 1227 01e9 91       		.byte	0x91
+ 1228 01ea 77       		.sleb128 -9
+ 1229 01eb 00       		.byte	0
+ 1230 01ec 0C       		.uleb128 0xc
+ 1231 01ed 62030000 		.4byte	.LASF31
+ 1232 01f1 01       		.byte	0x1
+ 1233 01f2 8401     		.2byte	0x184
+ 1234 01f4 6B000000 		.4byte	0x6b
+ 1235 01f8 00000000 		.4byte	.LFB8
+ 1236 01fc 1C000000 		.4byte	.LFE8-.LFB8
+ 1237 0200 01       		.uleb128 0x1
+ 1238 0201 9C       		.byte	0x9c
+ 1239 0202 0F       		.uleb128 0xf
+ 1240 0203 00000000 		.4byte	.LASF32
+ 1241 0207 01       		.byte	0x1
+ 1242 0208 A301     		.2byte	0x1a3
+ 1243 020a 00000000 		.4byte	.LFB9
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 32
 
 
- 918 0255 11       		.uleb128 0x11
- 919 0256 24000000 		.4byte	.LASF35
- 920 025a 01       		.byte	0x1
- 921 025b A501     		.2byte	0x1a5
- 922 025d 77000000 		.4byte	0x77
- 923 0261 15010000 		.4byte	.LLST8
- 924 0265 12       		.uleb128 0x12
- 925 0266 95000000 		.4byte	.LASF36
- 926 026a 01       		.byte	0x1
- 927 026b A601     		.2byte	0x1a6
- 928 026d 6B000000 		.4byte	0x6b
- 929 0271 01       		.uleb128 0x1
- 930 0272 50       		.byte	0x50
- 931 0273 10       		.uleb128 0x10
- 932 0274 08000000 		.4byte	.LVL24
- 933 0278 2E010000 		.4byte	0x12e
- 934 027c 10       		.uleb128 0x10
- 935 027d 0E000000 		.4byte	.LVL26
- 936 0281 A8010000 		.4byte	0x1a8
- 937 0285 00       		.byte	0
- 938 0286 0C       		.uleb128 0xc
- 939 0287 F5020000 		.4byte	.LASF37
- 940 028b 01       		.byte	0x1
- 941 028c EC01     		.2byte	0x1ec
- 942 028e 00000000 		.4byte	.LFB11
- 943 0292 10000000 		.4byte	.LFE11-.LFB11
- 944 0296 01       		.uleb128 0x1
- 945 0297 9C       		.byte	0x9c
- 946 0298 AD020000 		.4byte	0x2ad
- 947 029c 0D       		.uleb128 0xd
- 948 029d 3A010000 		.4byte	.LASF38
- 949 02a1 01       		.byte	0x1
- 950 02a2 EC01     		.2byte	0x1ec
- 951 02a4 6B000000 		.4byte	0x6b
- 952 02a8 28010000 		.4byte	.LLST9
- 953 02ac 00       		.byte	0
- 954 02ad 0B       		.uleb128 0xb
- 955 02ae B3000000 		.4byte	.LASF39
- 956 02b2 01       		.byte	0x1
- 957 02b3 0102     		.2byte	0x201
- 958 02b5 6B000000 		.4byte	0x6b
- 959 02b9 00000000 		.4byte	.LFB12
- 960 02bd 10000000 		.4byte	.LFE12-.LFB12
- 961 02c1 01       		.uleb128 0x1
- 962 02c2 9C       		.byte	0x9c
- 963 02c3 00       		.byte	0
- 964              		.section	.debug_abbrev,"",%progbits
- 965              	.Ldebug_abbrev0:
- 966 0000 01       		.uleb128 0x1
- 967 0001 11       		.uleb128 0x11
- 968 0002 01       		.byte	0x1
- 969 0003 25       		.uleb128 0x25
- 970 0004 0E       		.uleb128 0xe
- 971 0005 13       		.uleb128 0x13
- 972 0006 0B       		.uleb128 0xb
- 973 0007 03       		.uleb128 0x3
- 974 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 28
+ 1244 020e C4000000 		.4byte	.LFE9-.LFB9
+ 1245 0212 01       		.uleb128 0x1
+ 1246 0213 9C       		.byte	0x9c
+ 1247 0214 46020000 		.4byte	0x246
+ 1248 0218 0E       		.uleb128 0xe
+ 1249 0219 D6020000 		.4byte	.LASF33
+ 1250 021d 01       		.byte	0x1
+ 1251 021e A301     		.2byte	0x1a3
+ 1252 0220 6B000000 		.4byte	0x6b
+ 1253 0224 02       		.uleb128 0x2
+ 1254 0225 91       		.byte	0x91
+ 1255 0226 6F       		.sleb128 -17
+ 1256 0227 10       		.uleb128 0x10
+ 1257 0228 24000000 		.4byte	.LASF34
+ 1258 022c 01       		.byte	0x1
+ 1259 022d A501     		.2byte	0x1a5
+ 1260 022f 77000000 		.4byte	0x77
+ 1261 0233 02       		.uleb128 0x2
+ 1262 0234 91       		.byte	0x91
+ 1263 0235 76       		.sleb128 -10
+ 1264 0236 10       		.uleb128 0x10
+ 1265 0237 23010000 		.4byte	.LASF35
+ 1266 023b 01       		.byte	0x1
+ 1267 023c A601     		.2byte	0x1a6
+ 1268 023e 6B000000 		.4byte	0x6b
+ 1269 0242 02       		.uleb128 0x2
+ 1270 0243 91       		.byte	0x91
+ 1271 0244 75       		.sleb128 -11
+ 1272 0245 00       		.byte	0
+ 1273 0246 0C       		.uleb128 0xc
+ 1274 0247 D1010000 		.4byte	.LASF36
+ 1275 024b 01       		.byte	0x1
+ 1276 024c D001     		.2byte	0x1d0
+ 1277 024e 6B000000 		.4byte	0x6b
+ 1278 0252 00000000 		.4byte	.LFB10
+ 1279 0256 1C000000 		.4byte	.LFE10-.LFB10
+ 1280 025a 01       		.uleb128 0x1
+ 1281 025b 9C       		.byte	0x9c
+ 1282 025c 0D       		.uleb128 0xd
+ 1283 025d 84030000 		.4byte	.LASF37
+ 1284 0261 01       		.byte	0x1
+ 1285 0262 EC01     		.2byte	0x1ec
+ 1286 0264 00000000 		.4byte	.LFB11
+ 1287 0268 24000000 		.4byte	.LFE11-.LFB11
+ 1288 026c 01       		.uleb128 0x1
+ 1289 026d 9C       		.byte	0x9c
+ 1290 026e 82020000 		.4byte	0x282
+ 1291 0272 0E       		.uleb128 0xe
+ 1292 0273 C8010000 		.4byte	.LASF38
+ 1293 0277 01       		.byte	0x1
+ 1294 0278 EC01     		.2byte	0x1ec
+ 1295 027a 6B000000 		.4byte	0x6b
+ 1296 027e 02       		.uleb128 0x2
+ 1297 027f 91       		.byte	0x91
+ 1298 0280 77       		.sleb128 -9
+ 1299 0281 00       		.byte	0
+ 1300 0282 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 33
 
 
- 975 0009 1B       		.uleb128 0x1b
- 976 000a 0E       		.uleb128 0xe
- 977 000b 55       		.uleb128 0x55
- 978 000c 17       		.uleb128 0x17
- 979 000d 11       		.uleb128 0x11
- 980 000e 01       		.uleb128 0x1
- 981 000f 10       		.uleb128 0x10
- 982 0010 17       		.uleb128 0x17
- 983 0011 00       		.byte	0
- 984 0012 00       		.byte	0
- 985 0013 02       		.uleb128 0x2
- 986 0014 24       		.uleb128 0x24
- 987 0015 00       		.byte	0
- 988 0016 0B       		.uleb128 0xb
- 989 0017 0B       		.uleb128 0xb
- 990 0018 3E       		.uleb128 0x3e
- 991 0019 0B       		.uleb128 0xb
- 992 001a 03       		.uleb128 0x3
- 993 001b 0E       		.uleb128 0xe
- 994 001c 00       		.byte	0
- 995 001d 00       		.byte	0
- 996 001e 03       		.uleb128 0x3
- 997 001f 24       		.uleb128 0x24
- 998 0020 00       		.byte	0
- 999 0021 0B       		.uleb128 0xb
- 1000 0022 0B       		.uleb128 0xb
- 1001 0023 3E       		.uleb128 0x3e
- 1002 0024 0B       		.uleb128 0xb
- 1003 0025 03       		.uleb128 0x3
- 1004 0026 08       		.uleb128 0x8
- 1005 0027 00       		.byte	0
- 1006 0028 00       		.byte	0
- 1007 0029 04       		.uleb128 0x4
- 1008 002a 16       		.uleb128 0x16
- 1009 002b 00       		.byte	0
- 1010 002c 03       		.uleb128 0x3
- 1011 002d 0E       		.uleb128 0xe
- 1012 002e 3A       		.uleb128 0x3a
- 1013 002f 0B       		.uleb128 0xb
- 1014 0030 3B       		.uleb128 0x3b
- 1015 0031 05       		.uleb128 0x5
- 1016 0032 49       		.uleb128 0x49
- 1017 0033 13       		.uleb128 0x13
- 1018 0034 00       		.byte	0
- 1019 0035 00       		.byte	0
- 1020 0036 05       		.uleb128 0x5
- 1021 0037 35       		.uleb128 0x35
- 1022 0038 00       		.byte	0
- 1023 0039 49       		.uleb128 0x49
- 1024 003a 13       		.uleb128 0x13
- 1025 003b 00       		.byte	0
- 1026 003c 00       		.byte	0
- 1027 003d 06       		.uleb128 0x6
- 1028 003e 2E       		.uleb128 0x2e
- 1029 003f 00       		.byte	0
- 1030 0040 3F       		.uleb128 0x3f
- 1031 0041 19       		.uleb128 0x19
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 29
+ 1301 0283 41010000 		.4byte	.LASF39
+ 1302 0287 01       		.byte	0x1
+ 1303 0288 0102     		.2byte	0x201
+ 1304 028a 6B000000 		.4byte	0x6b
+ 1305 028e 00000000 		.4byte	.LFB12
+ 1306 0292 1C000000 		.4byte	.LFE12-.LFB12
+ 1307 0296 01       		.uleb128 0x1
+ 1308 0297 9C       		.byte	0x9c
+ 1309 0298 00       		.byte	0
+ 1310              		.section	.debug_abbrev,"",%progbits
+ 1311              	.Ldebug_abbrev0:
+ 1312 0000 01       		.uleb128 0x1
+ 1313 0001 11       		.uleb128 0x11
+ 1314 0002 01       		.byte	0x1
+ 1315 0003 25       		.uleb128 0x25
+ 1316 0004 0E       		.uleb128 0xe
+ 1317 0005 13       		.uleb128 0x13
+ 1318 0006 0B       		.uleb128 0xb
+ 1319 0007 03       		.uleb128 0x3
+ 1320 0008 0E       		.uleb128 0xe
+ 1321 0009 1B       		.uleb128 0x1b
+ 1322 000a 0E       		.uleb128 0xe
+ 1323 000b 55       		.uleb128 0x55
+ 1324 000c 17       		.uleb128 0x17
+ 1325 000d 11       		.uleb128 0x11
+ 1326 000e 01       		.uleb128 0x1
+ 1327 000f 10       		.uleb128 0x10
+ 1328 0010 17       		.uleb128 0x17
+ 1329 0011 00       		.byte	0
+ 1330 0012 00       		.byte	0
+ 1331 0013 02       		.uleb128 0x2
+ 1332 0014 24       		.uleb128 0x24
+ 1333 0015 00       		.byte	0
+ 1334 0016 0B       		.uleb128 0xb
+ 1335 0017 0B       		.uleb128 0xb
+ 1336 0018 3E       		.uleb128 0x3e
+ 1337 0019 0B       		.uleb128 0xb
+ 1338 001a 03       		.uleb128 0x3
+ 1339 001b 0E       		.uleb128 0xe
+ 1340 001c 00       		.byte	0
+ 1341 001d 00       		.byte	0
+ 1342 001e 03       		.uleb128 0x3
+ 1343 001f 24       		.uleb128 0x24
+ 1344 0020 00       		.byte	0
+ 1345 0021 0B       		.uleb128 0xb
+ 1346 0022 0B       		.uleb128 0xb
+ 1347 0023 3E       		.uleb128 0x3e
+ 1348 0024 0B       		.uleb128 0xb
+ 1349 0025 03       		.uleb128 0x3
+ 1350 0026 08       		.uleb128 0x8
+ 1351 0027 00       		.byte	0
+ 1352 0028 00       		.byte	0
+ 1353 0029 04       		.uleb128 0x4
+ 1354 002a 16       		.uleb128 0x16
+ 1355 002b 00       		.byte	0
+ 1356 002c 03       		.uleb128 0x3
+ 1357 002d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 34
 
 
- 1032 0042 03       		.uleb128 0x3
- 1033 0043 0E       		.uleb128 0xe
- 1034 0044 3A       		.uleb128 0x3a
- 1035 0045 0B       		.uleb128 0xb
- 1036 0046 3B       		.uleb128 0x3b
- 1037 0047 0B       		.uleb128 0xb
- 1038 0048 27       		.uleb128 0x27
- 1039 0049 19       		.uleb128 0x19
- 1040 004a 11       		.uleb128 0x11
- 1041 004b 01       		.uleb128 0x1
- 1042 004c 12       		.uleb128 0x12
- 1043 004d 06       		.uleb128 0x6
- 1044 004e 40       		.uleb128 0x40
- 1045 004f 18       		.uleb128 0x18
- 1046 0050 9742     		.uleb128 0x2117
- 1047 0052 19       		.uleb128 0x19
- 1048 0053 00       		.byte	0
- 1049 0054 00       		.byte	0
- 1050 0055 07       		.uleb128 0x7
- 1051 0056 2E       		.uleb128 0x2e
- 1052 0057 01       		.byte	0x1
- 1053 0058 3F       		.uleb128 0x3f
- 1054 0059 19       		.uleb128 0x19
- 1055 005a 03       		.uleb128 0x3
- 1056 005b 0E       		.uleb128 0xe
- 1057 005c 3A       		.uleb128 0x3a
- 1058 005d 0B       		.uleb128 0xb
- 1059 005e 3B       		.uleb128 0x3b
- 1060 005f 0B       		.uleb128 0xb
- 1061 0060 27       		.uleb128 0x27
- 1062 0061 19       		.uleb128 0x19
- 1063 0062 11       		.uleb128 0x11
- 1064 0063 01       		.uleb128 0x1
- 1065 0064 12       		.uleb128 0x12
- 1066 0065 06       		.uleb128 0x6
- 1067 0066 40       		.uleb128 0x40
- 1068 0067 18       		.uleb128 0x18
- 1069 0068 9742     		.uleb128 0x2117
- 1070 006a 19       		.uleb128 0x19
- 1071 006b 01       		.uleb128 0x1
- 1072 006c 13       		.uleb128 0x13
- 1073 006d 00       		.byte	0
- 1074 006e 00       		.byte	0
- 1075 006f 08       		.uleb128 0x8
- 1076 0070 0B       		.uleb128 0xb
- 1077 0071 01       		.byte	0x1
- 1078 0072 11       		.uleb128 0x11
- 1079 0073 01       		.uleb128 0x1
- 1080 0074 12       		.uleb128 0x12
- 1081 0075 06       		.uleb128 0x6
- 1082 0076 00       		.byte	0
- 1083 0077 00       		.byte	0
- 1084 0078 09       		.uleb128 0x9
- 1085 0079 34       		.uleb128 0x34
- 1086 007a 00       		.byte	0
- 1087 007b 03       		.uleb128 0x3
- 1088 007c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 30
+ 1358 002e 3A       		.uleb128 0x3a
+ 1359 002f 0B       		.uleb128 0xb
+ 1360 0030 3B       		.uleb128 0x3b
+ 1361 0031 05       		.uleb128 0x5
+ 1362 0032 49       		.uleb128 0x49
+ 1363 0033 13       		.uleb128 0x13
+ 1364 0034 00       		.byte	0
+ 1365 0035 00       		.byte	0
+ 1366 0036 05       		.uleb128 0x5
+ 1367 0037 35       		.uleb128 0x35
+ 1368 0038 00       		.byte	0
+ 1369 0039 49       		.uleb128 0x49
+ 1370 003a 13       		.uleb128 0x13
+ 1371 003b 00       		.byte	0
+ 1372 003c 00       		.byte	0
+ 1373 003d 06       		.uleb128 0x6
+ 1374 003e 2E       		.uleb128 0x2e
+ 1375 003f 00       		.byte	0
+ 1376 0040 3F       		.uleb128 0x3f
+ 1377 0041 19       		.uleb128 0x19
+ 1378 0042 03       		.uleb128 0x3
+ 1379 0043 0E       		.uleb128 0xe
+ 1380 0044 3A       		.uleb128 0x3a
+ 1381 0045 0B       		.uleb128 0xb
+ 1382 0046 3B       		.uleb128 0x3b
+ 1383 0047 0B       		.uleb128 0xb
+ 1384 0048 27       		.uleb128 0x27
+ 1385 0049 19       		.uleb128 0x19
+ 1386 004a 11       		.uleb128 0x11
+ 1387 004b 01       		.uleb128 0x1
+ 1388 004c 12       		.uleb128 0x12
+ 1389 004d 06       		.uleb128 0x6
+ 1390 004e 40       		.uleb128 0x40
+ 1391 004f 18       		.uleb128 0x18
+ 1392 0050 9742     		.uleb128 0x2117
+ 1393 0052 19       		.uleb128 0x19
+ 1394 0053 00       		.byte	0
+ 1395 0054 00       		.byte	0
+ 1396 0055 07       		.uleb128 0x7
+ 1397 0056 2E       		.uleb128 0x2e
+ 1398 0057 01       		.byte	0x1
+ 1399 0058 3F       		.uleb128 0x3f
+ 1400 0059 19       		.uleb128 0x19
+ 1401 005a 03       		.uleb128 0x3
+ 1402 005b 0E       		.uleb128 0xe
+ 1403 005c 3A       		.uleb128 0x3a
+ 1404 005d 0B       		.uleb128 0xb
+ 1405 005e 3B       		.uleb128 0x3b
+ 1406 005f 0B       		.uleb128 0xb
+ 1407 0060 27       		.uleb128 0x27
+ 1408 0061 19       		.uleb128 0x19
+ 1409 0062 11       		.uleb128 0x11
+ 1410 0063 01       		.uleb128 0x1
+ 1411 0064 12       		.uleb128 0x12
+ 1412 0065 06       		.uleb128 0x6
+ 1413 0066 40       		.uleb128 0x40
+ 1414 0067 18       		.uleb128 0x18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 35
 
 
- 1089 007d 3A       		.uleb128 0x3a
- 1090 007e 0B       		.uleb128 0xb
- 1091 007f 3B       		.uleb128 0x3b
- 1092 0080 0B       		.uleb128 0xb
- 1093 0081 49       		.uleb128 0x49
- 1094 0082 13       		.uleb128 0x13
- 1095 0083 02       		.uleb128 0x2
- 1096 0084 17       		.uleb128 0x17
- 1097 0085 00       		.byte	0
- 1098 0086 00       		.byte	0
- 1099 0087 0A       		.uleb128 0xa
- 1100 0088 05       		.uleb128 0x5
- 1101 0089 00       		.byte	0
- 1102 008a 03       		.uleb128 0x3
- 1103 008b 0E       		.uleb128 0xe
- 1104 008c 3A       		.uleb128 0x3a
- 1105 008d 0B       		.uleb128 0xb
- 1106 008e 3B       		.uleb128 0x3b
- 1107 008f 0B       		.uleb128 0xb
- 1108 0090 49       		.uleb128 0x49
- 1109 0091 13       		.uleb128 0x13
- 1110 0092 02       		.uleb128 0x2
- 1111 0093 18       		.uleb128 0x18
- 1112 0094 00       		.byte	0
- 1113 0095 00       		.byte	0
- 1114 0096 0B       		.uleb128 0xb
- 1115 0097 2E       		.uleb128 0x2e
- 1116 0098 00       		.byte	0
- 1117 0099 3F       		.uleb128 0x3f
- 1118 009a 19       		.uleb128 0x19
- 1119 009b 03       		.uleb128 0x3
- 1120 009c 0E       		.uleb128 0xe
- 1121 009d 3A       		.uleb128 0x3a
- 1122 009e 0B       		.uleb128 0xb
- 1123 009f 3B       		.uleb128 0x3b
- 1124 00a0 05       		.uleb128 0x5
- 1125 00a1 27       		.uleb128 0x27
- 1126 00a2 19       		.uleb128 0x19
- 1127 00a3 49       		.uleb128 0x49
- 1128 00a4 13       		.uleb128 0x13
- 1129 00a5 11       		.uleb128 0x11
- 1130 00a6 01       		.uleb128 0x1
- 1131 00a7 12       		.uleb128 0x12
- 1132 00a8 06       		.uleb128 0x6
- 1133 00a9 40       		.uleb128 0x40
- 1134 00aa 18       		.uleb128 0x18
- 1135 00ab 9742     		.uleb128 0x2117
- 1136 00ad 19       		.uleb128 0x19
- 1137 00ae 00       		.byte	0
- 1138 00af 00       		.byte	0
- 1139 00b0 0C       		.uleb128 0xc
- 1140 00b1 2E       		.uleb128 0x2e
- 1141 00b2 01       		.byte	0x1
- 1142 00b3 3F       		.uleb128 0x3f
- 1143 00b4 19       		.uleb128 0x19
- 1144 00b5 03       		.uleb128 0x3
- 1145 00b6 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 31
+ 1415 0068 9742     		.uleb128 0x2117
+ 1416 006a 19       		.uleb128 0x19
+ 1417 006b 01       		.uleb128 0x1
+ 1418 006c 13       		.uleb128 0x13
+ 1419 006d 00       		.byte	0
+ 1420 006e 00       		.byte	0
+ 1421 006f 08       		.uleb128 0x8
+ 1422 0070 0B       		.uleb128 0xb
+ 1423 0071 01       		.byte	0x1
+ 1424 0072 11       		.uleb128 0x11
+ 1425 0073 01       		.uleb128 0x1
+ 1426 0074 12       		.uleb128 0x12
+ 1427 0075 06       		.uleb128 0x6
+ 1428 0076 00       		.byte	0
+ 1429 0077 00       		.byte	0
+ 1430 0078 09       		.uleb128 0x9
+ 1431 0079 34       		.uleb128 0x34
+ 1432 007a 00       		.byte	0
+ 1433 007b 03       		.uleb128 0x3
+ 1434 007c 0E       		.uleb128 0xe
+ 1435 007d 3A       		.uleb128 0x3a
+ 1436 007e 0B       		.uleb128 0xb
+ 1437 007f 3B       		.uleb128 0x3b
+ 1438 0080 0B       		.uleb128 0xb
+ 1439 0081 49       		.uleb128 0x49
+ 1440 0082 13       		.uleb128 0x13
+ 1441 0083 02       		.uleb128 0x2
+ 1442 0084 18       		.uleb128 0x18
+ 1443 0085 00       		.byte	0
+ 1444 0086 00       		.byte	0
+ 1445 0087 0A       		.uleb128 0xa
+ 1446 0088 05       		.uleb128 0x5
+ 1447 0089 00       		.byte	0
+ 1448 008a 03       		.uleb128 0x3
+ 1449 008b 0E       		.uleb128 0xe
+ 1450 008c 3A       		.uleb128 0x3a
+ 1451 008d 0B       		.uleb128 0xb
+ 1452 008e 3B       		.uleb128 0x3b
+ 1453 008f 0B       		.uleb128 0xb
+ 1454 0090 49       		.uleb128 0x49
+ 1455 0091 13       		.uleb128 0x13
+ 1456 0092 02       		.uleb128 0x2
+ 1457 0093 18       		.uleb128 0x18
+ 1458 0094 00       		.byte	0
+ 1459 0095 00       		.byte	0
+ 1460 0096 0B       		.uleb128 0xb
+ 1461 0097 2E       		.uleb128 0x2e
+ 1462 0098 01       		.byte	0x1
+ 1463 0099 3F       		.uleb128 0x3f
+ 1464 009a 19       		.uleb128 0x19
+ 1465 009b 03       		.uleb128 0x3
+ 1466 009c 0E       		.uleb128 0xe
+ 1467 009d 3A       		.uleb128 0x3a
+ 1468 009e 0B       		.uleb128 0xb
+ 1469 009f 3B       		.uleb128 0x3b
+ 1470 00a0 0B       		.uleb128 0xb
+ 1471 00a1 27       		.uleb128 0x27
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 36
 
 
- 1146 00b7 3A       		.uleb128 0x3a
- 1147 00b8 0B       		.uleb128 0xb
- 1148 00b9 3B       		.uleb128 0x3b
- 1149 00ba 05       		.uleb128 0x5
- 1150 00bb 27       		.uleb128 0x27
- 1151 00bc 19       		.uleb128 0x19
- 1152 00bd 11       		.uleb128 0x11
- 1153 00be 01       		.uleb128 0x1
- 1154 00bf 12       		.uleb128 0x12
- 1155 00c0 06       		.uleb128 0x6
- 1156 00c1 40       		.uleb128 0x40
- 1157 00c2 18       		.uleb128 0x18
- 1158 00c3 9742     		.uleb128 0x2117
- 1159 00c5 19       		.uleb128 0x19
- 1160 00c6 01       		.uleb128 0x1
- 1161 00c7 13       		.uleb128 0x13
- 1162 00c8 00       		.byte	0
- 1163 00c9 00       		.byte	0
- 1164 00ca 0D       		.uleb128 0xd
- 1165 00cb 05       		.uleb128 0x5
- 1166 00cc 00       		.byte	0
- 1167 00cd 03       		.uleb128 0x3
- 1168 00ce 0E       		.uleb128 0xe
- 1169 00cf 3A       		.uleb128 0x3a
- 1170 00d0 0B       		.uleb128 0xb
- 1171 00d1 3B       		.uleb128 0x3b
- 1172 00d2 05       		.uleb128 0x5
- 1173 00d3 49       		.uleb128 0x49
- 1174 00d4 13       		.uleb128 0x13
- 1175 00d5 02       		.uleb128 0x2
- 1176 00d6 17       		.uleb128 0x17
- 1177 00d7 00       		.byte	0
- 1178 00d8 00       		.byte	0
- 1179 00d9 0E       		.uleb128 0xe
- 1180 00da 05       		.uleb128 0x5
- 1181 00db 00       		.byte	0
- 1182 00dc 03       		.uleb128 0x3
- 1183 00dd 0E       		.uleb128 0xe
- 1184 00de 3A       		.uleb128 0x3a
- 1185 00df 0B       		.uleb128 0xb
- 1186 00e0 3B       		.uleb128 0x3b
- 1187 00e1 0B       		.uleb128 0xb
- 1188 00e2 49       		.uleb128 0x49
- 1189 00e3 13       		.uleb128 0x13
- 1190 00e4 02       		.uleb128 0x2
- 1191 00e5 17       		.uleb128 0x17
- 1192 00e6 00       		.byte	0
- 1193 00e7 00       		.byte	0
- 1194 00e8 0F       		.uleb128 0xf
- 1195 00e9 34       		.uleb128 0x34
- 1196 00ea 00       		.byte	0
- 1197 00eb 03       		.uleb128 0x3
- 1198 00ec 0E       		.uleb128 0xe
- 1199 00ed 3A       		.uleb128 0x3a
- 1200 00ee 0B       		.uleb128 0xb
- 1201 00ef 3B       		.uleb128 0x3b
- 1202 00f0 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 32
+ 1472 00a2 19       		.uleb128 0x19
+ 1473 00a3 11       		.uleb128 0x11
+ 1474 00a4 01       		.uleb128 0x1
+ 1475 00a5 12       		.uleb128 0x12
+ 1476 00a6 06       		.uleb128 0x6
+ 1477 00a7 40       		.uleb128 0x40
+ 1478 00a8 18       		.uleb128 0x18
+ 1479 00a9 9642     		.uleb128 0x2116
+ 1480 00ab 19       		.uleb128 0x19
+ 1481 00ac 01       		.uleb128 0x1
+ 1482 00ad 13       		.uleb128 0x13
+ 1483 00ae 00       		.byte	0
+ 1484 00af 00       		.byte	0
+ 1485 00b0 0C       		.uleb128 0xc
+ 1486 00b1 2E       		.uleb128 0x2e
+ 1487 00b2 00       		.byte	0
+ 1488 00b3 3F       		.uleb128 0x3f
+ 1489 00b4 19       		.uleb128 0x19
+ 1490 00b5 03       		.uleb128 0x3
+ 1491 00b6 0E       		.uleb128 0xe
+ 1492 00b7 3A       		.uleb128 0x3a
+ 1493 00b8 0B       		.uleb128 0xb
+ 1494 00b9 3B       		.uleb128 0x3b
+ 1495 00ba 05       		.uleb128 0x5
+ 1496 00bb 27       		.uleb128 0x27
+ 1497 00bc 19       		.uleb128 0x19
+ 1498 00bd 49       		.uleb128 0x49
+ 1499 00be 13       		.uleb128 0x13
+ 1500 00bf 11       		.uleb128 0x11
+ 1501 00c0 01       		.uleb128 0x1
+ 1502 00c1 12       		.uleb128 0x12
+ 1503 00c2 06       		.uleb128 0x6
+ 1504 00c3 40       		.uleb128 0x40
+ 1505 00c4 18       		.uleb128 0x18
+ 1506 00c5 9742     		.uleb128 0x2117
+ 1507 00c7 19       		.uleb128 0x19
+ 1508 00c8 00       		.byte	0
+ 1509 00c9 00       		.byte	0
+ 1510 00ca 0D       		.uleb128 0xd
+ 1511 00cb 2E       		.uleb128 0x2e
+ 1512 00cc 01       		.byte	0x1
+ 1513 00cd 3F       		.uleb128 0x3f
+ 1514 00ce 19       		.uleb128 0x19
+ 1515 00cf 03       		.uleb128 0x3
+ 1516 00d0 0E       		.uleb128 0xe
+ 1517 00d1 3A       		.uleb128 0x3a
+ 1518 00d2 0B       		.uleb128 0xb
+ 1519 00d3 3B       		.uleb128 0x3b
+ 1520 00d4 05       		.uleb128 0x5
+ 1521 00d5 27       		.uleb128 0x27
+ 1522 00d6 19       		.uleb128 0x19
+ 1523 00d7 11       		.uleb128 0x11
+ 1524 00d8 01       		.uleb128 0x1
+ 1525 00d9 12       		.uleb128 0x12
+ 1526 00da 06       		.uleb128 0x6
+ 1527 00db 40       		.uleb128 0x40
+ 1528 00dc 18       		.uleb128 0x18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 37
 
 
- 1203 00f1 49       		.uleb128 0x49
- 1204 00f2 13       		.uleb128 0x13
- 1205 00f3 02       		.uleb128 0x2
- 1206 00f4 18       		.uleb128 0x18
- 1207 00f5 00       		.byte	0
- 1208 00f6 00       		.byte	0
- 1209 00f7 10       		.uleb128 0x10
- 1210 00f8 898201   		.uleb128 0x4109
- 1211 00fb 00       		.byte	0
- 1212 00fc 11       		.uleb128 0x11
- 1213 00fd 01       		.uleb128 0x1
- 1214 00fe 31       		.uleb128 0x31
- 1215 00ff 13       		.uleb128 0x13
- 1216 0100 00       		.byte	0
- 1217 0101 00       		.byte	0
- 1218 0102 11       		.uleb128 0x11
- 1219 0103 34       		.uleb128 0x34
- 1220 0104 00       		.byte	0
- 1221 0105 03       		.uleb128 0x3
- 1222 0106 0E       		.uleb128 0xe
- 1223 0107 3A       		.uleb128 0x3a
- 1224 0108 0B       		.uleb128 0xb
- 1225 0109 3B       		.uleb128 0x3b
- 1226 010a 05       		.uleb128 0x5
- 1227 010b 49       		.uleb128 0x49
- 1228 010c 13       		.uleb128 0x13
- 1229 010d 02       		.uleb128 0x2
- 1230 010e 17       		.uleb128 0x17
- 1231 010f 00       		.byte	0
- 1232 0110 00       		.byte	0
- 1233 0111 12       		.uleb128 0x12
- 1234 0112 34       		.uleb128 0x34
- 1235 0113 00       		.byte	0
- 1236 0114 03       		.uleb128 0x3
- 1237 0115 0E       		.uleb128 0xe
- 1238 0116 3A       		.uleb128 0x3a
- 1239 0117 0B       		.uleb128 0xb
- 1240 0118 3B       		.uleb128 0x3b
- 1241 0119 05       		.uleb128 0x5
- 1242 011a 49       		.uleb128 0x49
- 1243 011b 13       		.uleb128 0x13
- 1244 011c 02       		.uleb128 0x2
- 1245 011d 18       		.uleb128 0x18
- 1246 011e 00       		.byte	0
- 1247 011f 00       		.byte	0
- 1248 0120 00       		.byte	0
- 1249              		.section	.debug_loc,"",%progbits
- 1250              	.Ldebug_loc0:
- 1251              	.LLST0:
- 1252 0000 2A000000 		.4byte	.LVL0
- 1253 0004 5E000000 		.4byte	.LVL1
- 1254 0008 0100     		.2byte	0x1
- 1255 000a 52       		.byte	0x52
- 1256 000b 00000000 		.4byte	0
- 1257 000f 00000000 		.4byte	0
- 1258              	.LLST1:
- 1259 0013 00000000 		.4byte	.LVL3
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 33
+ 1529 00dd 9742     		.uleb128 0x2117
+ 1530 00df 19       		.uleb128 0x19
+ 1531 00e0 01       		.uleb128 0x1
+ 1532 00e1 13       		.uleb128 0x13
+ 1533 00e2 00       		.byte	0
+ 1534 00e3 00       		.byte	0
+ 1535 00e4 0E       		.uleb128 0xe
+ 1536 00e5 05       		.uleb128 0x5
+ 1537 00e6 00       		.byte	0
+ 1538 00e7 03       		.uleb128 0x3
+ 1539 00e8 0E       		.uleb128 0xe
+ 1540 00e9 3A       		.uleb128 0x3a
+ 1541 00ea 0B       		.uleb128 0xb
+ 1542 00eb 3B       		.uleb128 0x3b
+ 1543 00ec 05       		.uleb128 0x5
+ 1544 00ed 49       		.uleb128 0x49
+ 1545 00ee 13       		.uleb128 0x13
+ 1546 00ef 02       		.uleb128 0x2
+ 1547 00f0 18       		.uleb128 0x18
+ 1548 00f1 00       		.byte	0
+ 1549 00f2 00       		.byte	0
+ 1550 00f3 0F       		.uleb128 0xf
+ 1551 00f4 2E       		.uleb128 0x2e
+ 1552 00f5 01       		.byte	0x1
+ 1553 00f6 3F       		.uleb128 0x3f
+ 1554 00f7 19       		.uleb128 0x19
+ 1555 00f8 03       		.uleb128 0x3
+ 1556 00f9 0E       		.uleb128 0xe
+ 1557 00fa 3A       		.uleb128 0x3a
+ 1558 00fb 0B       		.uleb128 0xb
+ 1559 00fc 3B       		.uleb128 0x3b
+ 1560 00fd 05       		.uleb128 0x5
+ 1561 00fe 27       		.uleb128 0x27
+ 1562 00ff 19       		.uleb128 0x19
+ 1563 0100 11       		.uleb128 0x11
+ 1564 0101 01       		.uleb128 0x1
+ 1565 0102 12       		.uleb128 0x12
+ 1566 0103 06       		.uleb128 0x6
+ 1567 0104 40       		.uleb128 0x40
+ 1568 0105 18       		.uleb128 0x18
+ 1569 0106 9642     		.uleb128 0x2116
+ 1570 0108 19       		.uleb128 0x19
+ 1571 0109 01       		.uleb128 0x1
+ 1572 010a 13       		.uleb128 0x13
+ 1573 010b 00       		.byte	0
+ 1574 010c 00       		.byte	0
+ 1575 010d 10       		.uleb128 0x10
+ 1576 010e 34       		.uleb128 0x34
+ 1577 010f 00       		.byte	0
+ 1578 0110 03       		.uleb128 0x3
+ 1579 0111 0E       		.uleb128 0xe
+ 1580 0112 3A       		.uleb128 0x3a
+ 1581 0113 0B       		.uleb128 0xb
+ 1582 0114 3B       		.uleb128 0x3b
+ 1583 0115 05       		.uleb128 0x5
+ 1584 0116 49       		.uleb128 0x49
+ 1585 0117 13       		.uleb128 0x13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 38
 
 
- 1260 0017 08000000 		.4byte	.LVL4
- 1261 001b 0100     		.2byte	0x1
- 1262 001d 50       		.byte	0x50
- 1263 001e 08000000 		.4byte	.LVL4
- 1264 0022 14000000 		.4byte	.LFE6
- 1265 0026 0400     		.2byte	0x4
- 1266 0028 F3       		.byte	0xf3
- 1267 0029 01       		.uleb128 0x1
- 1268 002a 50       		.byte	0x50
- 1269 002b 9F       		.byte	0x9f
- 1270 002c 00000000 		.4byte	0
- 1271 0030 00000000 		.4byte	0
- 1272              	.LLST2:
- 1273 0034 00000000 		.4byte	.LVL5
- 1274 0038 06000000 		.4byte	.LVL6
- 1275 003c 0100     		.2byte	0x1
- 1276 003e 50       		.byte	0x50
- 1277 003f 06000000 		.4byte	.LVL6
- 1278 0043 18000000 		.4byte	.LFE7
- 1279 0047 0400     		.2byte	0x4
- 1280 0049 F3       		.byte	0xf3
- 1281 004a 01       		.uleb128 0x1
- 1282 004b 50       		.byte	0x50
- 1283 004c 9F       		.byte	0x9f
- 1284 004d 00000000 		.4byte	0
- 1285 0051 00000000 		.4byte	0
- 1286              	.LLST3:
- 1287 0055 00000000 		.4byte	.LVL7
- 1288 0059 09000000 		.4byte	.LVL8-1
- 1289 005d 0100     		.2byte	0x1
- 1290 005f 50       		.byte	0x50
- 1291 0060 09000000 		.4byte	.LVL8-1
- 1292 0064 DC000000 		.4byte	.LFE4
- 1293 0068 0400     		.2byte	0x4
- 1294 006a F3       		.byte	0xf3
- 1295 006b 01       		.uleb128 0x1
- 1296 006c 50       		.byte	0x50
- 1297 006d 9F       		.byte	0x9f
- 1298 006e 00000000 		.4byte	0
- 1299 0072 00000000 		.4byte	0
- 1300              	.LLST4:
- 1301 0076 00000000 		.4byte	.LVL7
- 1302 007a 09000000 		.4byte	.LVL8-1
- 1303 007e 0100     		.2byte	0x1
- 1304 0080 51       		.byte	0x51
- 1305 0081 09000000 		.4byte	.LVL8-1
- 1306 0085 DC000000 		.4byte	.LFE4
- 1307 0089 0400     		.2byte	0x4
- 1308 008b F3       		.byte	0xf3
- 1309 008c 01       		.uleb128 0x1
- 1310 008d 51       		.byte	0x51
- 1311 008e 9F       		.byte	0x9f
- 1312 008f 00000000 		.4byte	0
- 1313 0093 00000000 		.4byte	0
- 1314              	.LLST5:
- 1315 0097 1E000000 		.4byte	.LVL11
- 1316 009b 2C000000 		.4byte	.LVL12
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 34
+ 1586 0118 02       		.uleb128 0x2
+ 1587 0119 18       		.uleb128 0x18
+ 1588 011a 00       		.byte	0
+ 1589 011b 00       		.byte	0
+ 1590 011c 00       		.byte	0
+ 1591              		.section	.debug_aranges,"",%progbits
+ 1592 0000 7C000000 		.4byte	0x7c
+ 1593 0004 0200     		.2byte	0x2
+ 1594 0006 00000000 		.4byte	.Ldebug_info0
+ 1595 000a 04       		.byte	0x4
+ 1596 000b 00       		.byte	0
+ 1597 000c 0000     		.2byte	0
+ 1598 000e 0000     		.2byte	0
+ 1599 0010 00000000 		.4byte	.LFB0
+ 1600 0014 34000000 		.4byte	.LFE0-.LFB0
+ 1601 0018 00000000 		.4byte	.LFB1
+ 1602 001c 34000000 		.4byte	.LFE1-.LFB1
+ 1603 0020 00000000 		.4byte	.LFB2
+ 1604 0024 B0000000 		.4byte	.LFE2-.LFB2
+ 1605 0028 00000000 		.4byte	.LFB3
+ 1606 002c 40000000 		.4byte	.LFE3-.LFB3
+ 1607 0030 00000000 		.4byte	.LFB4
+ 1608 0034 64010000 		.4byte	.LFE4-.LFB4
+ 1609 0038 00000000 		.4byte	.LFB5
+ 1610 003c 18000000 		.4byte	.LFE5-.LFB5
+ 1611 0040 00000000 		.4byte	.LFB6
+ 1612 0044 34000000 		.4byte	.LFE6-.LFB6
+ 1613 0048 00000000 		.4byte	.LFB7
+ 1614 004c 34000000 		.4byte	.LFE7-.LFB7
+ 1615 0050 00000000 		.4byte	.LFB8
+ 1616 0054 1C000000 		.4byte	.LFE8-.LFB8
+ 1617 0058 00000000 		.4byte	.LFB9
+ 1618 005c C4000000 		.4byte	.LFE9-.LFB9
+ 1619 0060 00000000 		.4byte	.LFB10
+ 1620 0064 1C000000 		.4byte	.LFE10-.LFB10
+ 1621 0068 00000000 		.4byte	.LFB11
+ 1622 006c 24000000 		.4byte	.LFE11-.LFB11
+ 1623 0070 00000000 		.4byte	.LFB12
+ 1624 0074 1C000000 		.4byte	.LFE12-.LFB12
+ 1625 0078 00000000 		.4byte	0
+ 1626 007c 00000000 		.4byte	0
+ 1627              		.section	.debug_ranges,"",%progbits
+ 1628              	.Ldebug_ranges0:
+ 1629 0000 00000000 		.4byte	.LFB0
+ 1630 0004 34000000 		.4byte	.LFE0
+ 1631 0008 00000000 		.4byte	.LFB1
+ 1632 000c 34000000 		.4byte	.LFE1
+ 1633 0010 00000000 		.4byte	.LFB2
+ 1634 0014 B0000000 		.4byte	.LFE2
+ 1635 0018 00000000 		.4byte	.LFB3
+ 1636 001c 40000000 		.4byte	.LFE3
+ 1637 0020 00000000 		.4byte	.LFB4
+ 1638 0024 64010000 		.4byte	.LFE4
+ 1639 0028 00000000 		.4byte	.LFB5
+ 1640 002c 18000000 		.4byte	.LFE5
+ 1641 0030 00000000 		.4byte	.LFB6
+ 1642 0034 34000000 		.4byte	.LFE6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 39
 
 
- 1317 009f 0100     		.2byte	0x1
- 1318 00a1 52       		.byte	0x52
- 1319 00a2 36000000 		.4byte	.LVL13
- 1320 00a6 38000000 		.4byte	.LVL14
- 1321 00aa 0100     		.2byte	0x1
- 1322 00ac 52       		.byte	0x52
- 1323 00ad 38000000 		.4byte	.LVL14
- 1324 00b1 3A000000 		.4byte	.LVL15
- 1325 00b5 0100     		.2byte	0x1
- 1326 00b7 53       		.byte	0x53
- 1327 00b8 46000000 		.4byte	.LVL16
- 1328 00bc A4000000 		.4byte	.LVL18
- 1329 00c0 0100     		.2byte	0x1
- 1330 00c2 52       		.byte	0x52
- 1331 00c3 A6000000 		.4byte	.LVL19
- 1332 00c7 A8000000 		.4byte	.LVL20
- 1333 00cb 0100     		.2byte	0x1
- 1334 00cd 52       		.byte	0x52
- 1335 00ce B8000000 		.4byte	.LVL21
- 1336 00d2 C4000000 		.4byte	.LVL22
- 1337 00d6 0100     		.2byte	0x1
- 1338 00d8 52       		.byte	0x52
- 1339 00d9 00000000 		.4byte	0
- 1340 00dd 00000000 		.4byte	0
- 1341              	.LLST6:
- 1342 00e1 0C000000 		.4byte	.LVL9
- 1343 00e5 50000000 		.4byte	.LVL17
- 1344 00e9 0100     		.2byte	0x1
- 1345 00eb 56       		.byte	0x56
- 1346 00ec 00000000 		.4byte	0
- 1347 00f0 00000000 		.4byte	0
- 1348              	.LLST7:
- 1349 00f4 00000000 		.4byte	.LVL23
- 1350 00f8 07000000 		.4byte	.LVL24-1
- 1351 00fc 0100     		.2byte	0x1
- 1352 00fe 50       		.byte	0x50
- 1353 00ff 07000000 		.4byte	.LVL24-1
- 1354 0103 5C000000 		.4byte	.LFE9
- 1355 0107 0400     		.2byte	0x4
- 1356 0109 F3       		.byte	0xf3
- 1357 010a 01       		.uleb128 0x1
- 1358 010b 50       		.byte	0x50
- 1359 010c 9F       		.byte	0x9f
- 1360 010d 00000000 		.4byte	0
- 1361 0111 00000000 		.4byte	0
- 1362              	.LLST8:
- 1363 0115 0A000000 		.4byte	.LVL25
- 1364 0119 56000000 		.4byte	.LVL29
- 1365 011d 0100     		.2byte	0x1
- 1366 011f 55       		.byte	0x55
- 1367 0120 00000000 		.4byte	0
- 1368 0124 00000000 		.4byte	0
- 1369              	.LLST9:
- 1370 0128 00000000 		.4byte	.LVL30
- 1371 012c 04000000 		.4byte	.LVL31
- 1372 0130 0100     		.2byte	0x1
- 1373 0132 50       		.byte	0x50
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 35
+ 1643 0038 00000000 		.4byte	.LFB7
+ 1644 003c 34000000 		.4byte	.LFE7
+ 1645 0040 00000000 		.4byte	.LFB8
+ 1646 0044 1C000000 		.4byte	.LFE8
+ 1647 0048 00000000 		.4byte	.LFB9
+ 1648 004c C4000000 		.4byte	.LFE9
+ 1649 0050 00000000 		.4byte	.LFB10
+ 1650 0054 1C000000 		.4byte	.LFE10
+ 1651 0058 00000000 		.4byte	.LFB11
+ 1652 005c 24000000 		.4byte	.LFE11
+ 1653 0060 00000000 		.4byte	.LFB12
+ 1654 0064 1C000000 		.4byte	.LFE12
+ 1655 0068 00000000 		.4byte	0
+ 1656 006c 00000000 		.4byte	0
+ 1657              		.section	.debug_line,"",%progbits
+ 1658              	.Ldebug_line0:
+ 1659 0000 D0010000 		.section	.debug_str,"MS",%progbits,1
+ 1659      02004E00 
+ 1659      00000201 
+ 1659      FB0E0D00 
+ 1659      01010101 
+ 1660              	.LASF32:
+ 1661 0000 4144435F 		.ascii	"ADC_SAR_2_theACLK_SetSourceRegister\000"
+ 1661      5341525F 
+ 1661      325F7468 
+ 1661      6541434C 
+ 1661      4B5F5365 
+ 1662              	.LASF34:
+ 1663 0024 63757272 		.ascii	"currDiv\000"
+ 1663      44697600 
+ 1664              	.LASF15:
+ 1665 002c 72656731 		.ascii	"reg16\000"
+ 1665      3600
+ 1666              	.LASF2:
+ 1667 0032 73686F72 		.ascii	"short int\000"
+ 1667      7420696E 
+ 1667      7400
+ 1668              	.LASF41:
+ 1669 003c 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_2_theACLK.c\000"
+ 1669      72617465 
+ 1669      645F536F 
+ 1669      75726365 
+ 1669      5C50536F 
+ 1670              	.LASF40:
+ 1671 0067 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1671      43313120 
+ 1671      352E342E 
+ 1671      31203230 
+ 1671      31363036 
+ 1672 009a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1672      20726576 
+ 1672      6973696F 
+ 1672      6E203233 
+ 1672      37373135 
+ 1673 00cd 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1673      66756E63 
+ 1673      74696F6E 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 40
 
 
- 1374 0133 04000000 		.4byte	.LVL31
- 1375 0137 10000000 		.4byte	.LFE11
- 1376 013b 0400     		.2byte	0x4
- 1377 013d F3       		.byte	0xf3
- 1378 013e 01       		.uleb128 0x1
- 1379 013f 50       		.byte	0x50
- 1380 0140 9F       		.byte	0x9f
- 1381 0141 00000000 		.4byte	0
- 1382 0145 00000000 		.4byte	0
- 1383              		.section	.debug_aranges,"",%progbits
- 1384 0000 7C000000 		.4byte	0x7c
- 1385 0004 0200     		.2byte	0x2
- 1386 0006 00000000 		.4byte	.Ldebug_info0
- 1387 000a 04       		.byte	0x4
- 1388 000b 00       		.byte	0
- 1389 000c 0000     		.2byte	0
- 1390 000e 0000     		.2byte	0
- 1391 0010 00000000 		.4byte	.LFB0
- 1392 0014 1C000000 		.4byte	.LFE0-.LFB0
- 1393 0018 00000000 		.4byte	.LFB1
- 1394 001c 1C000000 		.4byte	.LFE1-.LFB1
- 1395 0020 00000000 		.4byte	.LFB2
- 1396 0024 70000000 		.4byte	.LFE2-.LFB2
- 1397 0028 00000000 		.4byte	.LFB3
- 1398 002c 20000000 		.4byte	.LFE3-.LFB3
- 1399 0030 00000000 		.4byte	.LFB5
- 1400 0034 0C000000 		.4byte	.LFE5-.LFB5
- 1401 0038 00000000 		.4byte	.LFB6
- 1402 003c 14000000 		.4byte	.LFE6-.LFB6
- 1403 0040 00000000 		.4byte	.LFB7
- 1404 0044 18000000 		.4byte	.LFE7-.LFB7
- 1405 0048 00000000 		.4byte	.LFB8
- 1406 004c 10000000 		.4byte	.LFE8-.LFB8
- 1407 0050 00000000 		.4byte	.LFB10
- 1408 0054 10000000 		.4byte	.LFE10-.LFB10
- 1409 0058 00000000 		.4byte	.LFB4
- 1410 005c DC000000 		.4byte	.LFE4-.LFB4
- 1411 0060 00000000 		.4byte	.LFB9
- 1412 0064 5C000000 		.4byte	.LFE9-.LFB9
- 1413 0068 00000000 		.4byte	.LFB11
- 1414 006c 10000000 		.4byte	.LFE11-.LFB11
- 1415 0070 00000000 		.4byte	.LFB12
- 1416 0074 10000000 		.4byte	.LFE12-.LFB12
- 1417 0078 00000000 		.4byte	0
- 1418 007c 00000000 		.4byte	0
- 1419              		.section	.debug_ranges,"",%progbits
- 1420              	.Ldebug_ranges0:
- 1421 0000 00000000 		.4byte	.LFB0
- 1422 0004 1C000000 		.4byte	.LFE0
- 1423 0008 00000000 		.4byte	.LFB1
- 1424 000c 1C000000 		.4byte	.LFE1
- 1425 0010 00000000 		.4byte	.LFB2
- 1426 0014 70000000 		.4byte	.LFE2
- 1427 0018 00000000 		.4byte	.LFB3
- 1428 001c 20000000 		.4byte	.LFE3
- 1429 0020 00000000 		.4byte	.LFB5
- 1430 0024 0C000000 		.4byte	.LFE5
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 36
+ 1673      2D736563 
+ 1673      74696F6E 
+ 1674              	.LASF19:
+ 1675 00f5 4144435F 		.ascii	"ADC_SAR_2_theACLK_StandbyPower\000"
+ 1675      5341525F 
+ 1675      325F7468 
+ 1675      6541434C 
+ 1675      4B5F5374 
+ 1676              	.LASF10:
+ 1677 0114 75696E74 		.ascii	"uint16\000"
+ 1677      313600
+ 1678              	.LASF23:
+ 1679 011b 72657374 		.ascii	"restart\000"
+ 1679      61727400 
+ 1680              	.LASF35:
+ 1681 0123 6F6C6453 		.ascii	"oldSrc\000"
+ 1681      726300
+ 1682              	.LASF9:
+ 1683 012a 75696E74 		.ascii	"uint8\000"
+ 1683      3800
+ 1684              	.LASF22:
+ 1685 0130 636C6B44 		.ascii	"clkDivider\000"
+ 1685      69766964 
+ 1685      657200
+ 1686              	.LASF11:
+ 1687 013b 666C6F61 		.ascii	"float\000"
+ 1687      7400
+ 1688              	.LASF39:
+ 1689 0141 4144435F 		.ascii	"ADC_SAR_2_theACLK_GetPhaseRegister\000"
+ 1689      5341525F 
+ 1689      325F7468 
+ 1689      6541434C 
+ 1689      4B5F4765 
+ 1690              	.LASF6:
+ 1691 0164 6C6F6E67 		.ascii	"long long int\000"
+ 1691      206C6F6E 
+ 1691      6720696E 
+ 1691      7400
+ 1692              	.LASF30:
+ 1693 0172 4144435F 		.ascii	"ADC_SAR_2_theACLK_GetDividerRegister\000"
+ 1693      5341525F 
+ 1693      325F7468 
+ 1693      6541434C 
+ 1693      4B5F4765 
+ 1694              	.LASF4:
+ 1695 0197 6C6F6E67 		.ascii	"long int\000"
+ 1695      20696E74 
+ 1695      00
+ 1696              	.LASF27:
+ 1697 01a0 4144435F 		.ascii	"ADC_SAR_2_theACLK_SetModeRegister\000"
+ 1697      5341525F 
+ 1697      325F7468 
+ 1697      6541434C 
+ 1697      4B5F5365 
+ 1698              	.LASF21:
+ 1699 01c2 73746174 		.ascii	"state\000"
+ 1699      6500
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 41
 
 
- 1431 0028 00000000 		.4byte	.LFB6
- 1432 002c 14000000 		.4byte	.LFE6
- 1433 0030 00000000 		.4byte	.LFB7
- 1434 0034 18000000 		.4byte	.LFE7
- 1435 0038 00000000 		.4byte	.LFB8
- 1436 003c 10000000 		.4byte	.LFE8
- 1437 0040 00000000 		.4byte	.LFB10
- 1438 0044 10000000 		.4byte	.LFE10
- 1439 0048 00000000 		.4byte	.LFB4
- 1440 004c DC000000 		.4byte	.LFE4
- 1441 0050 00000000 		.4byte	.LFB9
- 1442 0054 5C000000 		.4byte	.LFE9
- 1443 0058 00000000 		.4byte	.LFB11
- 1444 005c 10000000 		.4byte	.LFE11
- 1445 0060 00000000 		.4byte	.LFB12
- 1446 0064 10000000 		.4byte	.LFE12
- 1447 0068 00000000 		.4byte	0
- 1448 006c 00000000 		.4byte	0
- 1449              		.section	.debug_line,"",%progbits
- 1450              	.Ldebug_line0:
- 1451 0000 9F010000 		.section	.debug_str,"MS",%progbits,1
- 1451      02004E00 
- 1451      00000201 
- 1451      FB0E0D00 
- 1451      01010101 
- 1452              	.LASF33:
- 1453 0000 4144435F 		.ascii	"ADC_SAR_2_theACLK_SetSourceRegister\000"
- 1453      5341525F 
- 1453      325F7468 
- 1453      6541434C 
- 1453      4B5F5365 
- 1454              	.LASF35:
- 1455 0024 63757272 		.ascii	"currDiv\000"
- 1455      44697600 
- 1456              	.LASF15:
- 1457 002c 72656731 		.ascii	"reg16\000"
- 1457      3600
- 1458              	.LASF2:
- 1459 0032 73686F72 		.ascii	"short int\000"
- 1459      7420696E 
- 1459      7400
- 1460              	.LASF41:
- 1461 003c 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_2_theACLK.c\000"
- 1461      72617465 
- 1461      645F536F 
- 1461      75726365 
- 1461      5C50536F 
- 1462              	.LASF19:
- 1463 0067 4144435F 		.ascii	"ADC_SAR_2_theACLK_StandbyPower\000"
- 1463      5341525F 
- 1463      325F7468 
- 1463      6541434C 
- 1463      4B5F5374 
- 1464              	.LASF10:
- 1465 0086 75696E74 		.ascii	"uint16\000"
- 1465      313600
- 1466              	.LASF29:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 37
+ 1700              	.LASF38:
+ 1701 01c8 636C6B50 		.ascii	"clkPhase\000"
+ 1701      68617365 
+ 1701      00
+ 1702              	.LASF36:
+ 1703 01d1 4144435F 		.ascii	"ADC_SAR_2_theACLK_GetSourceRegister\000"
+ 1703      5341525F 
+ 1703      325F7468 
+ 1703      6541434C 
+ 1703      4B5F4765 
+ 1704              	.LASF1:
+ 1705 01f5 756E7369 		.ascii	"unsigned char\000"
+ 1705      676E6564 
+ 1705      20636861 
+ 1705      7200
+ 1706              	.LASF28:
+ 1707 0203 6D6F6465 		.ascii	"modeBitMask\000"
+ 1707      4269744D 
+ 1707      61736B00 
+ 1708              	.LASF0:
+ 1709 020f 7369676E 		.ascii	"signed char\000"
+ 1709      65642063 
+ 1709      68617200 
+ 1710              	.LASF7:
+ 1711 021b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1711      206C6F6E 
+ 1711      6720756E 
+ 1711      7369676E 
+ 1711      65642069 
+ 1712              	.LASF17:
+ 1713 0232 4144435F 		.ascii	"ADC_SAR_2_theACLK_Stop\000"
+ 1713      5341525F 
+ 1713      325F7468 
+ 1713      6541434C 
+ 1713      4B5F5374 
+ 1714              	.LASF8:
+ 1715 0249 756E7369 		.ascii	"unsigned int\000"
+ 1715      676E6564 
+ 1715      20696E74 
+ 1715      00
+ 1716              	.LASF3:
+ 1717 0256 73686F72 		.ascii	"short unsigned int\000"
+ 1717      7420756E 
+ 1717      7369676E 
+ 1717      65642069 
+ 1717      6E7400
+ 1718              	.LASF42:
+ 1719 0269 433A5C55 		.ascii	"C:\\Users\\Andrew\\Documents\\GitHub\\Hydraulic-Mim"
+ 1719      73657273 
+ 1719      5C416E64 
+ 1719      7265775C 
+ 1719      446F6375 
+ 1720 0297 69632D41 		.ascii	"ic-Arm\\PSOC_arm_project.cydsn\000"
+ 1720      726D5C50 
+ 1720      534F435F 
+ 1720      61726D5F 
+ 1720      70726F6A 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 42
 
 
- 1467 008d 72657374 		.ascii	"restart\000"
- 1467      61727400 
- 1468              	.LASF36:
- 1469 0095 6F6C6453 		.ascii	"oldSrc\000"
- 1469      726300
- 1470              	.LASF9:
- 1471 009c 75696E74 		.ascii	"uint8\000"
- 1471      3800
- 1472              	.LASF28:
- 1473 00a2 636C6B44 		.ascii	"clkDivider\000"
- 1473      69766964 
- 1473      657200
- 1474              	.LASF11:
- 1475 00ad 666C6F61 		.ascii	"float\000"
- 1475      7400
- 1476              	.LASF39:
- 1477 00b3 4144435F 		.ascii	"ADC_SAR_2_theACLK_GetPhaseRegister\000"
- 1477      5341525F 
- 1477      325F7468 
- 1477      6541434C 
- 1477      4B5F4765 
- 1478              	.LASF6:
- 1479 00d6 6C6F6E67 		.ascii	"long long int\000"
- 1479      206C6F6E 
- 1479      6720696E 
- 1479      7400
- 1480              	.LASF24:
- 1481 00e4 4144435F 		.ascii	"ADC_SAR_2_theACLK_GetDividerRegister\000"
- 1481      5341525F 
- 1481      325F7468 
- 1481      6541434C 
- 1481      4B5F4765 
- 1482              	.LASF4:
- 1483 0109 6C6F6E67 		.ascii	"long int\000"
- 1483      20696E74 
- 1483      00
- 1484              	.LASF20:
- 1485 0112 4144435F 		.ascii	"ADC_SAR_2_theACLK_SetModeRegister\000"
- 1485      5341525F 
- 1485      325F7468 
- 1485      6541434C 
- 1485      4B5F5365 
- 1486              	.LASF21:
- 1487 0134 73746174 		.ascii	"state\000"
- 1487      6500
- 1488              	.LASF38:
- 1489 013a 636C6B50 		.ascii	"clkPhase\000"
- 1489      68617365 
- 1489      00
- 1490              	.LASF26:
- 1491 0143 4144435F 		.ascii	"ADC_SAR_2_theACLK_GetSourceRegister\000"
- 1491      5341525F 
- 1491      325F7468 
- 1491      6541434C 
- 1491      4B5F4765 
- 1492              	.LASF1:
- 1493 0167 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 38
+ 1721              	.LASF13:
+ 1722 02b5 63686172 		.ascii	"char\000"
+ 1722      00
+ 1723              	.LASF18:
+ 1724 02ba 4144435F 		.ascii	"ADC_SAR_2_theACLK_StopBlock\000"
+ 1724      5341525F 
+ 1724      325F7468 
+ 1724      6541434C 
+ 1724      4B5F5374 
+ 1725              	.LASF33:
+ 1726 02d6 636C6B53 		.ascii	"clkSource\000"
+ 1726      6F757263 
+ 1726      6500
+ 1727              	.LASF26:
+ 1728 02e0 63757272 		.ascii	"currSrc\000"
+ 1728      53726300 
+ 1729              	.LASF24:
+ 1730 02e8 6F6C6444 		.ascii	"oldDivider\000"
+ 1730      69766964 
+ 1730      657200
+ 1731              	.LASF29:
+ 1732 02f3 4144435F 		.ascii	"ADC_SAR_2_theACLK_ClearModeRegister\000"
+ 1732      5341525F 
+ 1732      325F7468 
+ 1732      6541434C 
+ 1732      4B5F436C 
+ 1733              	.LASF20:
+ 1734 0317 4144435F 		.ascii	"ADC_SAR_2_theACLK_SetDividerRegister\000"
+ 1734      5341525F 
+ 1734      325F7468 
+ 1734      6541434C 
+ 1734      4B5F5365 
+ 1735              	.LASF14:
+ 1736 033c 72656738 		.ascii	"reg8\000"
+ 1736      00
+ 1737              	.LASF5:
+ 1738 0341 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1738      20756E73 
+ 1738      69676E65 
+ 1738      6420696E 
+ 1738      7400
+ 1739              	.LASF12:
+ 1740 0353 646F7562 		.ascii	"double\000"
+ 1740      6C6500
+ 1741              	.LASF25:
+ 1742 035a 656E6162 		.ascii	"enabled\000"
+ 1742      6C656400 
+ 1743              	.LASF31:
+ 1744 0362 4144435F 		.ascii	"ADC_SAR_2_theACLK_GetModeRegister\000"
+ 1744      5341525F 
+ 1744      325F7468 
+ 1744      6541434C 
+ 1744      4B5F4765 
+ 1745              	.LASF37:
+ 1746 0384 4144435F 		.ascii	"ADC_SAR_2_theACLK_SetPhaseRegister\000"
+ 1746      5341525F 
+ 1746      325F7468 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccwq65NB.s 			page 43
 
 
- 1493      676E6564 
- 1493      20636861 
- 1493      7200
- 1494              	.LASF22:
- 1495 0175 6D6F6465 		.ascii	"modeBitMask\000"
- 1495      4269744D 
- 1495      61736B00 
- 1496              	.LASF0:
- 1497 0181 7369676E 		.ascii	"signed char\000"
- 1497      65642063 
- 1497      68617200 
- 1498              	.LASF7:
- 1499 018d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1499      206C6F6E 
- 1499      6720756E 
- 1499      7369676E 
- 1499      65642069 
- 1500              	.LASF17:
- 1501 01a4 4144435F 		.ascii	"ADC_SAR_2_theACLK_Stop\000"
- 1501      5341525F 
- 1501      325F7468 
- 1501      6541434C 
- 1501      4B5F5374 
- 1502              	.LASF8:
- 1503 01bb 756E7369 		.ascii	"unsigned int\000"
- 1503      676E6564 
- 1503      20696E74 
- 1503      00
- 1504              	.LASF3:
- 1505 01c8 73686F72 		.ascii	"short unsigned int\000"
- 1505      7420756E 
- 1505      7369676E 
- 1505      65642069 
- 1505      6E7400
- 1506              	.LASF13:
- 1507 01db 63686172 		.ascii	"char\000"
- 1507      00
- 1508              	.LASF18:
- 1509 01e0 4144435F 		.ascii	"ADC_SAR_2_theACLK_StopBlock\000"
- 1509      5341525F 
- 1509      325F7468 
- 1509      6541434C 
- 1509      4B5F5374 
- 1510              	.LASF34:
- 1511 01fc 636C6B53 		.ascii	"clkSource\000"
- 1511      6F757263 
- 1511      6500
- 1512              	.LASF32:
- 1513 0206 63757272 		.ascii	"currSrc\000"
- 1513      53726300 
- 1514              	.LASF30:
- 1515 020e 6F6C6444 		.ascii	"oldDivider\000"
- 1515      69766964 
- 1515      657200
- 1516              	.LASF23:
- 1517 0219 4144435F 		.ascii	"ADC_SAR_2_theACLK_ClearModeRegister\000"
- 1517      5341525F 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 39
-
-
- 1517      325F7468 
- 1517      6541434C 
- 1517      4B5F436C 
- 1518              	.LASF27:
- 1519 023d 4144435F 		.ascii	"ADC_SAR_2_theACLK_SetDividerRegister\000"
- 1519      5341525F 
- 1519      325F7468 
- 1519      6541434C 
- 1519      4B5F5365 
- 1520              	.LASF14:
- 1521 0262 72656738 		.ascii	"reg8\000"
- 1521      00
- 1522              	.LASF5:
- 1523 0267 6C6F6E67 		.ascii	"long unsigned int\000"
- 1523      20756E73 
- 1523      69676E65 
- 1523      6420696E 
- 1523      7400
- 1524              	.LASF12:
- 1525 0279 646F7562 		.ascii	"double\000"
- 1525      6C6500
- 1526              	.LASF31:
- 1527 0280 656E6162 		.ascii	"enabled\000"
- 1527      6C656400 
- 1528              	.LASF25:
- 1529 0288 4144435F 		.ascii	"ADC_SAR_2_theACLK_GetModeRegister\000"
- 1529      5341525F 
- 1529      325F7468 
- 1529      6541434C 
- 1529      4B5F4765 
- 1530              	.LASF42:
- 1531 02aa 433A5C55 		.ascii	"C:\\Users\\kevan\\Documents\\GitHub\\Hydraulic-Mimi"
- 1531      73657273 
- 1531      5C6B6576 
- 1531      616E5C44 
- 1531      6F63756D 
- 1532 02d8 632D4172 		.ascii	"c-Arm\\PSOC_arm_project.cydsn\000"
- 1532      6D5C5053 
- 1532      4F435F61 
- 1532      726D5F70 
- 1532      726F6A65 
- 1533              	.LASF37:
- 1534 02f5 4144435F 		.ascii	"ADC_SAR_2_theACLK_SetPhaseRegister\000"
- 1534      5341525F 
- 1534      325F7468 
- 1534      6541434C 
- 1534      4B5F5365 
- 1535              	.LASF40:
- 1536 0318 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1536      43313120 
- 1536      352E342E 
- 1536      31203230 
- 1536      31363036 
- 1537 034b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1537      20726576 
- 1537      6973696F 
- 1537      6E203233 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccvsFul2.s 			page 40
-
-
- 1537      37373135 
- 1538 037e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1538      66756E63 
- 1538      74696F6E 
- 1538      2D736563 
- 1538      74696F6E 
- 1539              	.LASF16:
- 1540 03a6 4144435F 		.ascii	"ADC_SAR_2_theACLK_Start\000"
- 1540      5341525F 
- 1540      325F7468 
- 1540      6541434C 
- 1540      4B5F5374 
- 1541              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1746      6541434C 
+ 1746      4B5F5365 
+ 1747              	.LASF16:
+ 1748 03a7 4144435F 		.ascii	"ADC_SAR_2_theACLK_Start\000"
+ 1748      5341525F 
+ 1748      325F7468 
+ 1748      6541434C 
+ 1748      4B5F5374 
+ 1749              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

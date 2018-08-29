@@ -222,6 +222,9 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\pwm1.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\SW2.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
@@ -284,7 +287,8 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides\cy_boot_v5_60</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
@@ -294,7 +298,9 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\Resistor_v1_0.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\SwitchSPST_v1_0.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\UART_v2_50.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>PSOC_arm_project-000</v>
@@ -305,7 +311,8 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides\cy_boot_v5_60</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
@@ -315,7 +322,9 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\Resistor_v1_0.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\SwitchSPST_v1_0.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\UART_v2_50.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -337,7 +346,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="822, 431" SelectedTabbedMdiWindow="e8cc23c1-c72a-4d68-bd8d-048d544f16e7"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="e8cc23c1-c72a-4d68-bd8d-048d544f16e7" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="7818cdd0-0b74-4e3c-8194-a5dc4b0c3e91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="b36695f5-6692-4163-bac0-29a261607b91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="c5b5ce25-c9eb-4a9d-bd94-ca3a8957fb02" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="799, 405" SelectedTabbedMdiWindow="e8cc23c1-c72a-4d68-bd8d-048d544f16e7"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="e8cc23c1-c72a-4d68-bd8d-048d544f16e7" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="7818cdd0-0b74-4e3c-8194-a5dc4b0c3e91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="b36695f5-6692-4163-bac0-29a261607b91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="c5b5ce25-c9eb-4a9d-bd94-ca3a8957fb02" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

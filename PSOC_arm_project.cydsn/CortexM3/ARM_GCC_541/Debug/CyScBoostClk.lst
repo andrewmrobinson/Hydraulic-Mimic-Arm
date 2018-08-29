@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 1
 
 
    1              		.syntax unified
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.thumb
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
   28:Generated_Source\PSoC5/CyScBoostClk.c **** 
   29:Generated_Source\PSoC5/CyScBoostClk.c **** 
   30:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 2
 
 
   31:Generated_Source\PSoC5/CyScBoostClk.c **** * Function Name: CyScBoostClk_Start
@@ -80,47 +80,67 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
   28              		.loc 1 46 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
   32              		@ link register save eliminated.
+  33 0000 80B4     		push	{r7}
+  34              		.cfi_def_cfa_offset 4
+  35              		.cfi_offset 7, -4
+  36 0002 00AF     		add	r7, sp, #0
+  37              		.cfi_def_cfa_register 7
   47:Generated_Source\PSoC5/CyScBoostClk.c ****     /* Set the bit to enable the clock. */
   48:Generated_Source\PSoC5/CyScBoostClk.c ****     CyScBoostClk_CLKEN |= CyScBoostClk_CLKEN_MASK;
-  33              		.loc 1 48 0
-  34 0000 054A     		ldr	r2, .L2
-  35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  36 0004 43F00103 		orr	r3, r3, #1
-  37 0008 1370     		strb	r3, [r2]
+  38              		.loc 1 48 0
+  39 0004 094A     		ldr	r2, .L2
+  40 0006 094B     		ldr	r3, .L2
+  41 0008 1B78     		ldrb	r3, [r3]
+  42 000a DBB2     		uxtb	r3, r3
+  43 000c 43F00103 		orr	r3, r3, #1
+  44 0010 DBB2     		uxtb	r3, r3
+  45 0012 1370     		strb	r3, [r2]
   49:Generated_Source\PSoC5/CyScBoostClk.c **** 	CyScBoostClk_CLKSTBY |= CyScBoostClk_CLKSTBY_MASK;
-  38              		.loc 1 49 0
-  39 000a 1032     		adds	r2, r2, #16
-  40 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  41 000e 43F00103 		orr	r3, r3, #1
-  42 0012 1370     		strb	r3, [r2]
-  43 0014 7047     		bx	lr
-  44              	.L3:
-  45 0016 00BF     		.align	2
-  46              	.L2:
-  47 0018 A1430040 		.word	1073759137
-  48              		.cfi_endproc
-  49              	.LFE0:
-  50              		.size	CyScBoostClk_Start, .-CyScBoostClk_Start
-  51              		.section	.text.CyScBoostClk_Stop,"ax",%progbits
-  52              		.align	2
-  53              		.global	CyScBoostClk_Stop
-  54              		.thumb
-  55              		.thumb_func
-  56              		.type	CyScBoostClk_Stop, %function
-  57              	CyScBoostClk_Stop:
-  58              	.LFB1:
+  46              		.loc 1 49 0
+  47 0014 064A     		ldr	r2, .L2+4
+  48 0016 064B     		ldr	r3, .L2+4
+  49 0018 1B78     		ldrb	r3, [r3]
+  50 001a DBB2     		uxtb	r3, r3
+  51 001c 43F00103 		orr	r3, r3, #1
+  52 0020 DBB2     		uxtb	r3, r3
+  53 0022 1370     		strb	r3, [r2]
   50:Generated_Source\PSoC5/CyScBoostClk.c **** }
+  54              		.loc 1 50 0
+  55 0024 00BF     		nop
+  56 0026 BD46     		mov	sp, r7
+  57              		.cfi_def_cfa_register 13
+  58              		@ sp needed
+  59 0028 80BC     		pop	{r7}
+  60              		.cfi_restore 7
+  61              		.cfi_def_cfa_offset 0
+  62 002a 7047     		bx	lr
+  63              	.L3:
+  64              		.align	2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 3
+
+
+  65              	.L2:
+  66 002c A1430040 		.word	1073759137
+  67 0030 B1430040 		.word	1073759153
+  68              		.cfi_endproc
+  69              	.LFE0:
+  70              		.size	CyScBoostClk_Start, .-CyScBoostClk_Start
+  71              		.section	.text.CyScBoostClk_Stop,"ax",%progbits
+  72              		.align	2
+  73              		.global	CyScBoostClk_Stop
+  74              		.thumb
+  75              		.thumb_func
+  76              		.type	CyScBoostClk_Stop, %function
+  77              	CyScBoostClk_Stop:
+  78              	.LFB1:
   51:Generated_Source\PSoC5/CyScBoostClk.c **** 
   52:Generated_Source\PSoC5/CyScBoostClk.c **** 
   53:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
   54:Generated_Source\PSoC5/CyScBoostClk.c **** * Function Name: CyScBoostClk_Stop
   55:Generated_Source\PSoC5/CyScBoostClk.c **** ********************************************************************************
   56:Generated_Source\PSoC5/CyScBoostClk.c **** *
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 3
-
-
   57:Generated_Source\PSoC5/CyScBoostClk.c **** * Summary:
   58:Generated_Source\PSoC5/CyScBoostClk.c **** *  Stops the clock and returns immediately. This API does not require the
   59:Generated_Source\PSoC5/CyScBoostClk.c **** *  source clock to be running but may return before the hardware is actually
@@ -137,50 +157,70 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
   70:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
   71:Generated_Source\PSoC5/CyScBoostClk.c **** void CyScBoostClk_Stop(void) 
   72:Generated_Source\PSoC5/CyScBoostClk.c **** {
-  59              		.loc 1 72 0
-  60              		.cfi_startproc
-  61              		@ args = 0, pretend = 0, frame = 0
-  62              		@ frame_needed = 0, uses_anonymous_args = 0
-  63              		@ link register save eliminated.
+  79              		.loc 1 72 0
+  80              		.cfi_startproc
+  81              		@ args = 0, pretend = 0, frame = 0
+  82              		@ frame_needed = 1, uses_anonymous_args = 0
+  83              		@ link register save eliminated.
+  84 0000 80B4     		push	{r7}
+  85              		.cfi_def_cfa_offset 4
+  86              		.cfi_offset 7, -4
+  87 0002 00AF     		add	r7, sp, #0
+  88              		.cfi_def_cfa_register 7
   73:Generated_Source\PSoC5/CyScBoostClk.c ****     /* Clear the bit to disable the clock. */
   74:Generated_Source\PSoC5/CyScBoostClk.c ****     CyScBoostClk_CLKEN &= (uint8)(~CyScBoostClk_CLKEN_MASK);
-  64              		.loc 1 74 0
-  65 0000 054A     		ldr	r2, .L5
-  66 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  67 0004 03F0FE03 		and	r3, r3, #254
-  68 0008 1370     		strb	r3, [r2]
+  89              		.loc 1 74 0
+  90 0004 094A     		ldr	r2, .L5
+  91 0006 094B     		ldr	r3, .L5
+  92 0008 1B78     		ldrb	r3, [r3]
+  93 000a DBB2     		uxtb	r3, r3
+  94 000c 23F00103 		bic	r3, r3, #1
+  95 0010 DBB2     		uxtb	r3, r3
+  96 0012 1370     		strb	r3, [r2]
   75:Generated_Source\PSoC5/CyScBoostClk.c **** 	CyScBoostClk_CLKSTBY &= (uint8)(~CyScBoostClk_CLKSTBY_MASK);
-  69              		.loc 1 75 0
-  70 000a 1032     		adds	r2, r2, #16
-  71 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  72 000e 03F0FE03 		and	r3, r3, #254
-  73 0012 1370     		strb	r3, [r2]
-  74 0014 7047     		bx	lr
-  75              	.L6:
-  76 0016 00BF     		.align	2
-  77              	.L5:
-  78 0018 A1430040 		.word	1073759137
-  79              		.cfi_endproc
-  80              	.LFE1:
-  81              		.size	CyScBoostClk_Stop, .-CyScBoostClk_Stop
-  82              		.section	.text.CyScBoostClk_StopBlock,"ax",%progbits
-  83              		.align	2
-  84              		.global	CyScBoostClk_StopBlock
-  85              		.thumb
-  86              		.thumb_func
-  87              		.type	CyScBoostClk_StopBlock, %function
-  88              	CyScBoostClk_StopBlock:
-  89              	.LFB2:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 4
+
+
+  97              		.loc 1 75 0
+  98 0014 064A     		ldr	r2, .L5+4
+  99 0016 064B     		ldr	r3, .L5+4
+ 100 0018 1B78     		ldrb	r3, [r3]
+ 101 001a DBB2     		uxtb	r3, r3
+ 102 001c 23F00103 		bic	r3, r3, #1
+ 103 0020 DBB2     		uxtb	r3, r3
+ 104 0022 1370     		strb	r3, [r2]
   76:Generated_Source\PSoC5/CyScBoostClk.c **** }
+ 105              		.loc 1 76 0
+ 106 0024 00BF     		nop
+ 107 0026 BD46     		mov	sp, r7
+ 108              		.cfi_def_cfa_register 13
+ 109              		@ sp needed
+ 110 0028 80BC     		pop	{r7}
+ 111              		.cfi_restore 7
+ 112              		.cfi_def_cfa_offset 0
+ 113 002a 7047     		bx	lr
+ 114              	.L6:
+ 115              		.align	2
+ 116              	.L5:
+ 117 002c A1430040 		.word	1073759137
+ 118 0030 B1430040 		.word	1073759153
+ 119              		.cfi_endproc
+ 120              	.LFE1:
+ 121              		.size	CyScBoostClk_Stop, .-CyScBoostClk_Stop
+ 122              		.section	.text.CyScBoostClk_StopBlock,"ax",%progbits
+ 123              		.align	2
+ 124              		.global	CyScBoostClk_StopBlock
+ 125              		.thumb
+ 126              		.thumb_func
+ 127              		.type	CyScBoostClk_StopBlock, %function
+ 128              	CyScBoostClk_StopBlock:
+ 129              	.LFB2:
   77:Generated_Source\PSoC5/CyScBoostClk.c **** 
   78:Generated_Source\PSoC5/CyScBoostClk.c **** 
   79:Generated_Source\PSoC5/CyScBoostClk.c **** #if(CY_PSOC3 || CY_PSOC5LP)
   80:Generated_Source\PSoC5/CyScBoostClk.c **** 
   81:Generated_Source\PSoC5/CyScBoostClk.c **** 
   82:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 4
-
-
   83:Generated_Source\PSoC5/CyScBoostClk.c **** * Function Name: CyScBoostClk_StopBlock
   84:Generated_Source\PSoC5/CyScBoostClk.c **** ********************************************************************************
   85:Generated_Source\PSoC5/CyScBoostClk.c **** *
@@ -198,135 +238,176 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
   97:Generated_Source\PSoC5/CyScBoostClk.c **** *  None
   98:Generated_Source\PSoC5/CyScBoostClk.c **** *
   99:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 5
+
+
  100:Generated_Source\PSoC5/CyScBoostClk.c **** void CyScBoostClk_StopBlock(void) 
  101:Generated_Source\PSoC5/CyScBoostClk.c **** {
-  90              		.loc 1 101 0
-  91              		.cfi_startproc
-  92              		@ args = 0, pretend = 0, frame = 0
-  93              		@ frame_needed = 0, uses_anonymous_args = 0
-  94              		@ link register save eliminated.
+ 130              		.loc 1 101 0
+ 131              		.cfi_startproc
+ 132              		@ args = 0, pretend = 0, frame = 8
+ 133              		@ frame_needed = 1, uses_anonymous_args = 0
+ 134              		@ link register save eliminated.
+ 135 0000 80B4     		push	{r7}
+ 136              		.cfi_def_cfa_offset 4
+ 137              		.cfi_offset 7, -4
+ 138 0002 83B0     		sub	sp, sp, #12
+ 139              		.cfi_def_cfa_offset 16
+ 140 0004 00AF     		add	r7, sp, #0
+ 141              		.cfi_def_cfa_register 7
  102:Generated_Source\PSoC5/CyScBoostClk.c ****     if ((CyScBoostClk_CLKEN & CyScBoostClk_CLKEN_MASK) != 0u)
-  95              		.loc 1 102 0
-  96 0000 164B     		ldr	r3, .L10
-  97 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-  98 0004 13F0010F 		tst	r3, #1
-  99 0008 27D0     		beq	.L7
- 100              	.LBB2:
+ 142              		.loc 1 102 0
+ 143 0006 224B     		ldr	r3, .L11
+ 144 0008 1B78     		ldrb	r3, [r3]
+ 145 000a DBB2     		uxtb	r3, r3
+ 146 000c 03F00103 		and	r3, r3, #1
+ 147 0010 002B     		cmp	r3, #0
+ 148 0012 37D0     		beq	.L10
+ 149              	.LBB2:
  103:Generated_Source\PSoC5/CyScBoostClk.c ****     {
  104:Generated_Source\PSoC5/CyScBoostClk.c **** #if HAS_CLKDIST_LD_DISABLE
  105:Generated_Source\PSoC5/CyScBoostClk.c ****         uint16 oldDivider;
  106:Generated_Source\PSoC5/CyScBoostClk.c **** 
  107:Generated_Source\PSoC5/CyScBoostClk.c ****         CLK_DIST_LD = 0u;
- 101              		.loc 1 107 0
- 102 000a 1549     		ldr	r1, .L10+4
- 103 000c 0023     		movs	r3, #0
- 104 000e 0B70     		strb	r3, [r1]
+ 150              		.loc 1 107 0
+ 151 0014 1F4B     		ldr	r3, .L11+4
+ 152 0016 0022     		movs	r2, #0
+ 153 0018 1A70     		strb	r2, [r3]
  108:Generated_Source\PSoC5/CyScBoostClk.c **** 
  109:Generated_Source\PSoC5/CyScBoostClk.c ****         /* Clear all the mask bits except ours. */
  110:Generated_Source\PSoC5/CyScBoostClk.c **** #if defined(CyScBoostClk__CFG3)
  111:Generated_Source\PSoC5/CyScBoostClk.c ****         CLK_DIST_AMASK = CyScBoostClk_CLKEN_MASK;
- 105              		.loc 1 111 0
- 106 0010 0120     		movs	r0, #1
- 107 0012 144A     		ldr	r2, .L10+8
- 108 0014 1070     		strb	r0, [r2]
+ 154              		.loc 1 111 0
+ 155 001a 1F4B     		ldr	r3, .L11+8
+ 156 001c 0122     		movs	r2, #1
+ 157 001e 1A70     		strb	r2, [r3]
  112:Generated_Source\PSoC5/CyScBoostClk.c ****         CLK_DIST_DMASK = 0x00u;
- 109              		.loc 1 112 0
- 110 0016 043A     		subs	r2, r2, #4
- 111 0018 1370     		strb	r3, [r2]
+ 158              		.loc 1 112 0
+ 159 0020 1E4B     		ldr	r3, .L11+12
+ 160 0022 0022     		movs	r2, #0
+ 161 0024 1A70     		strb	r2, [r3]
  113:Generated_Source\PSoC5/CyScBoostClk.c **** #else
  114:Generated_Source\PSoC5/CyScBoostClk.c ****         CLK_DIST_DMASK = CyScBoostClk_CLKEN_MASK;
  115:Generated_Source\PSoC5/CyScBoostClk.c ****         CLK_DIST_AMASK = 0x00u;
  116:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* CyScBoostClk__CFG3 */
  117:Generated_Source\PSoC5/CyScBoostClk.c **** 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 5
-
-
  118:Generated_Source\PSoC5/CyScBoostClk.c ****         /* Clear mask of bus clock. */
  119:Generated_Source\PSoC5/CyScBoostClk.c ****         CLK_DIST_BCFG2 &= (uint8)(~BCFG2_MASK);
- 112              		.loc 1 119 0
- 113 001a 083A     		subs	r2, r2, #8
- 114 001c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 115 001e 03F07F03 		and	r3, r3, #127
- 116 0022 1370     		strb	r3, [r2]
+ 162              		.loc 1 119 0
+ 163 0026 1E4A     		ldr	r2, .L11+16
+ 164 0028 1D4B     		ldr	r3, .L11+16
+ 165 002a 1B78     		ldrb	r3, [r3]
+ 166 002c DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 6
+
+
+ 167 002e 03F07F03 		and	r3, r3, #127
+ 168 0032 DBB2     		uxtb	r3, r3
+ 169 0034 1370     		strb	r3, [r2]
  120:Generated_Source\PSoC5/CyScBoostClk.c **** 
  121:Generated_Source\PSoC5/CyScBoostClk.c ****         oldDivider = CY_GET_REG16(CyScBoostClk_DIV_PTR);
- 117              		.loc 1 121 0
- 118 0024 104B     		ldr	r3, .L10+12
- 119 0026 1A88     		ldrh	r2, [r3]
- 120 0028 92B2     		uxth	r2, r2
- 121              	.LVL0:
+ 170              		.loc 1 121 0
+ 171 0036 1B4B     		ldr	r3, .L11+20
+ 172 0038 1B88     		ldrh	r3, [r3]	@ movhi
+ 173 003a FB80     		strh	r3, [r7, #6]	@ movhi
  122:Generated_Source\PSoC5/CyScBoostClk.c ****         CY_SET_REG16(CYREG_CLKDIST_WRK0, oldDivider);
- 122              		.loc 1 122 0
- 123 002a FE3B     		subs	r3, r3, #254
- 124 002c 1A80     		strh	r2, [r3]	@ movhi
+ 174              		.loc 1 122 0
+ 175 003c 1A4A     		ldr	r2, .L11+24
+ 176 003e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 177 0040 1380     		strh	r3, [r2]	@ movhi
  123:Generated_Source\PSoC5/CyScBoostClk.c ****         CLK_DIST_LD = CYCLK_LD_DISABLE | CYCLK_LD_SYNC_EN | CYCLK_LD_LOAD;
- 125              		.loc 1 123 0
- 126 002e 0723     		movs	r3, #7
- 127 0030 0B70     		strb	r3, [r1]
- 128              	.L9:
+ 178              		.loc 1 123 0
+ 179 0042 144B     		ldr	r3, .L11+4
+ 180 0044 0722     		movs	r2, #7
+ 181 0046 1A70     		strb	r2, [r3]
  124:Generated_Source\PSoC5/CyScBoostClk.c **** 
  125:Generated_Source\PSoC5/CyScBoostClk.c ****         /* Wait for clock to be disabled */
  126:Generated_Source\PSoC5/CyScBoostClk.c ****         while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
- 129              		.loc 1 126 0 discriminator 1
- 130 0032 0B4B     		ldr	r3, .L10+4
- 131 0034 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 132 0036 13F0010F 		tst	r3, #1
- 133 003a FAD1     		bne	.L9
+ 182              		.loc 1 126 0
+ 183 0048 00BF     		nop
+ 184              	.L9:
+ 185              		.loc 1 126 0 is_stmt 0 discriminator 1
+ 186 004a 124B     		ldr	r3, .L11+4
+ 187 004c 1B78     		ldrb	r3, [r3]
+ 188 004e DBB2     		uxtb	r3, r3
+ 189 0050 03F00103 		and	r3, r3, #1
+ 190 0054 002B     		cmp	r3, #0
+ 191 0056 F8D1     		bne	.L9
  127:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
  128:Generated_Source\PSoC5/CyScBoostClk.c **** 
  129:Generated_Source\PSoC5/CyScBoostClk.c ****         /* Clear the bit to disable the clock. */
  130:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_CLKEN &= (uint8)(~CyScBoostClk_CLKEN_MASK);
- 134              		.loc 1 130 0
- 135 003c 0749     		ldr	r1, .L10
- 136 003e 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 137 0040 03F0FE03 		and	r3, r3, #254
- 138 0044 0B70     		strb	r3, [r1]
+ 192              		.loc 1 130 0 is_stmt 1
+ 193 0058 0D4A     		ldr	r2, .L11
+ 194 005a 0D4B     		ldr	r3, .L11
+ 195 005c 1B78     		ldrb	r3, [r3]
+ 196 005e DBB2     		uxtb	r3, r3
+ 197 0060 23F00103 		bic	r3, r3, #1
+ 198 0064 DBB2     		uxtb	r3, r3
+ 199 0066 1370     		strb	r3, [r2]
  131:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_CLKSTBY &= (uint8)(~CyScBoostClk_CLKSTBY_MASK);
- 139              		.loc 1 131 0
- 140 0046 1031     		adds	r1, r1, #16
- 141 0048 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 142 004a 03F0FE03 		and	r3, r3, #254
- 143 004e 0B70     		strb	r3, [r1]
+ 200              		.loc 1 131 0
+ 201 0068 104A     		ldr	r2, .L11+28
+ 202 006a 104B     		ldr	r3, .L11+28
+ 203 006c 1B78     		ldrb	r3, [r3]
+ 204 006e DBB2     		uxtb	r3, r3
+ 205 0070 23F00103 		bic	r3, r3, #1
+ 206 0074 DBB2     		uxtb	r3, r3
+ 207 0076 1370     		strb	r3, [r2]
  132:Generated_Source\PSoC5/CyScBoostClk.c **** 
  133:Generated_Source\PSoC5/CyScBoostClk.c **** #if HAS_CLKDIST_LD_DISABLE
  134:Generated_Source\PSoC5/CyScBoostClk.c ****         /* Clear the disable bit */
  135:Generated_Source\PSoC5/CyScBoostClk.c ****         CLK_DIST_LD = 0x00u;
- 144              		.loc 1 135 0
- 145 0050 0021     		movs	r1, #0
- 146 0052 034B     		ldr	r3, .L10+4
- 147 0054 1970     		strb	r1, [r3]
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 7
+
+
+ 208              		.loc 1 135 0
+ 209 0078 064B     		ldr	r3, .L11+4
+ 210 007a 0022     		movs	r2, #0
+ 211 007c 1A70     		strb	r2, [r3]
  136:Generated_Source\PSoC5/CyScBoostClk.c ****         CY_SET_REG16(CyScBoostClk_DIV_PTR, oldDivider);
- 148              		.loc 1 136 0
- 149 0056 FF33     		adds	r3, r3, #255
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 6
-
-
- 150 0058 1A80     		strh	r2, [r3]	@ movhi
- 151              	.LVL1:
- 152              	.L7:
- 153 005a 7047     		bx	lr
- 154              	.L11:
- 155              		.align	2
- 156              	.L10:
- 157 005c A1430040 		.word	1073759137
- 158 0060 01400040 		.word	1073758209
- 159 0064 14400040 		.word	1073758228
- 160 0068 00410040 		.word	1073758464
- 161              	.LBE2:
- 162              		.cfi_endproc
- 163              	.LFE2:
- 164              		.size	CyScBoostClk_StopBlock, .-CyScBoostClk_StopBlock
- 165              		.section	.text.CyScBoostClk_StandbyPower,"ax",%progbits
- 166              		.align	2
- 167              		.global	CyScBoostClk_StandbyPower
- 168              		.thumb
- 169              		.thumb_func
- 170              		.type	CyScBoostClk_StandbyPower, %function
- 171              	CyScBoostClk_StandbyPower:
- 172              	.LFB3:
+ 212              		.loc 1 136 0
+ 213 007e 094A     		ldr	r2, .L11+20
+ 214 0080 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 215 0082 1380     		strh	r3, [r2]	@ movhi
+ 216              	.L10:
+ 217              	.LBE2:
  137:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
  138:Generated_Source\PSoC5/CyScBoostClk.c ****     }
  139:Generated_Source\PSoC5/CyScBoostClk.c **** }
+ 218              		.loc 1 139 0
+ 219 0084 00BF     		nop
+ 220 0086 0C37     		adds	r7, r7, #12
+ 221              		.cfi_def_cfa_offset 4
+ 222 0088 BD46     		mov	sp, r7
+ 223              		.cfi_def_cfa_register 13
+ 224              		@ sp needed
+ 225 008a 80BC     		pop	{r7}
+ 226              		.cfi_restore 7
+ 227              		.cfi_def_cfa_offset 0
+ 228 008c 7047     		bx	lr
+ 229              	.L12:
+ 230 008e 00BF     		.align	2
+ 231              	.L11:
+ 232 0090 A1430040 		.word	1073759137
+ 233 0094 01400040 		.word	1073758209
+ 234 0098 14400040 		.word	1073758228
+ 235 009c 10400040 		.word	1073758224
+ 236 00a0 08400040 		.word	1073758216
+ 237 00a4 00410040 		.word	1073758464
+ 238 00a8 02400040 		.word	1073758210
+ 239 00ac B1430040 		.word	1073759153
+ 240              		.cfi_endproc
+ 241              	.LFE2:
+ 242              		.size	CyScBoostClk_StopBlock, .-CyScBoostClk_StopBlock
+ 243              		.section	.text.CyScBoostClk_StandbyPower,"ax",%progbits
+ 244              		.align	2
+ 245              		.global	CyScBoostClk_StandbyPower
+ 246              		.thumb
+ 247              		.thumb_func
+ 248              		.type	CyScBoostClk_StandbyPower, %function
+ 249              	CyScBoostClk_StandbyPower:
+ 250              	.LFB3:
  140:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* (CY_PSOC3 || CY_PSOC5LP) */
  141:Generated_Source\PSoC5/CyScBoostClk.c **** 
  142:Generated_Source\PSoC5/CyScBoostClk.c **** 
@@ -337,6 +418,9 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  147:Generated_Source\PSoC5/CyScBoostClk.c **** * Summary:
  148:Generated_Source\PSoC5/CyScBoostClk.c **** *  Sets whether the clock is active in standby mode.
  149:Generated_Source\PSoC5/CyScBoostClk.c **** *
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 8
+
+
  150:Generated_Source\PSoC5/CyScBoostClk.c **** * Parameters:
  151:Generated_Source\PSoC5/CyScBoostClk.c **** *  state:  0 to disable clock during standby, nonzero to enable.
  152:Generated_Source\PSoC5/CyScBoostClk.c **** *
@@ -346,54 +430,83 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  156:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  157:Generated_Source\PSoC5/CyScBoostClk.c **** void CyScBoostClk_StandbyPower(uint8 state) 
  158:Generated_Source\PSoC5/CyScBoostClk.c **** {
- 173              		.loc 1 158 0
- 174              		.cfi_startproc
- 175              		@ args = 0, pretend = 0, frame = 0
- 176              		@ frame_needed = 0, uses_anonymous_args = 0
- 177              		@ link register save eliminated.
- 178              	.LVL2:
+ 251              		.loc 1 158 0
+ 252              		.cfi_startproc
+ 253              		@ args = 0, pretend = 0, frame = 8
+ 254              		@ frame_needed = 1, uses_anonymous_args = 0
+ 255              		@ link register save eliminated.
+ 256 0000 80B4     		push	{r7}
+ 257              		.cfi_def_cfa_offset 4
+ 258              		.cfi_offset 7, -4
+ 259 0002 83B0     		sub	sp, sp, #12
+ 260              		.cfi_def_cfa_offset 16
+ 261 0004 00AF     		add	r7, sp, #0
+ 262              		.cfi_def_cfa_register 7
+ 263 0006 0346     		mov	r3, r0
+ 264 0008 FB71     		strb	r3, [r7, #7]
  159:Generated_Source\PSoC5/CyScBoostClk.c ****     if(state == 0u)
- 179              		.loc 1 159 0
- 180 0000 28B9     		cbnz	r0, .L13
+ 265              		.loc 1 159 0
+ 266 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 267 000c 002B     		cmp	r3, #0
+ 268 000e 08D1     		bne	.L14
  160:Generated_Source\PSoC5/CyScBoostClk.c ****     {
  161:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_CLKSTBY &= (uint8)(~CyScBoostClk_CLKSTBY_MASK);
- 181              		.loc 1 161 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 7
-
-
- 182 0002 064A     		ldr	r2, .L15
- 183 0004 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 184 0006 03F0FE03 		and	r3, r3, #254
- 185 000a 1370     		strb	r3, [r2]
- 186 000c 7047     		bx	lr
- 187              	.L13:
+ 269              		.loc 1 161 0
+ 270 0010 0A4A     		ldr	r2, .L17
+ 271 0012 0A4B     		ldr	r3, .L17
+ 272 0014 1B78     		ldrb	r3, [r3]
+ 273 0016 DBB2     		uxtb	r3, r3
+ 274 0018 23F00103 		bic	r3, r3, #1
+ 275 001c DBB2     		uxtb	r3, r3
+ 276 001e 1370     		strb	r3, [r2]
  162:Generated_Source\PSoC5/CyScBoostClk.c ****     }
  163:Generated_Source\PSoC5/CyScBoostClk.c ****     else
  164:Generated_Source\PSoC5/CyScBoostClk.c ****     {
  165:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_CLKSTBY |= CyScBoostClk_CLKSTBY_MASK;
- 188              		.loc 1 165 0
- 189 000e 034A     		ldr	r2, .L15
- 190 0010 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 191 0012 43F00103 		orr	r3, r3, #1
- 192 0016 1370     		strb	r3, [r2]
- 193 0018 7047     		bx	lr
- 194              	.L16:
- 195 001a 00BF     		.align	2
- 196              	.L15:
- 197 001c B1430040 		.word	1073759153
- 198              		.cfi_endproc
- 199              	.LFE3:
- 200              		.size	CyScBoostClk_StandbyPower, .-CyScBoostClk_StandbyPower
- 201              		.section	.text.CyScBoostClk_GetDividerRegister,"ax",%progbits
- 202              		.align	2
- 203              		.global	CyScBoostClk_GetDividerRegister
- 204              		.thumb
- 205              		.thumb_func
- 206              		.type	CyScBoostClk_GetDividerRegister, %function
- 207              	CyScBoostClk_GetDividerRegister:
- 208              	.LFB5:
  166:Generated_Source\PSoC5/CyScBoostClk.c ****     }
  167:Generated_Source\PSoC5/CyScBoostClk.c **** }
+ 277              		.loc 1 167 0
+ 278 0020 07E0     		b	.L16
+ 279              	.L14:
+ 165:Generated_Source\PSoC5/CyScBoostClk.c ****     }
+ 280              		.loc 1 165 0
+ 281 0022 064A     		ldr	r2, .L17
+ 282 0024 054B     		ldr	r3, .L17
+ 283 0026 1B78     		ldrb	r3, [r3]
+ 284 0028 DBB2     		uxtb	r3, r3
+ 285 002a 43F00103 		orr	r3, r3, #1
+ 286 002e DBB2     		uxtb	r3, r3
+ 287 0030 1370     		strb	r3, [r2]
+ 288              	.L16:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 9
+
+
+ 289              		.loc 1 167 0
+ 290 0032 00BF     		nop
+ 291 0034 0C37     		adds	r7, r7, #12
+ 292              		.cfi_def_cfa_offset 4
+ 293 0036 BD46     		mov	sp, r7
+ 294              		.cfi_def_cfa_register 13
+ 295              		@ sp needed
+ 296 0038 80BC     		pop	{r7}
+ 297              		.cfi_restore 7
+ 298              		.cfi_def_cfa_offset 0
+ 299 003a 7047     		bx	lr
+ 300              	.L18:
+ 301              		.align	2
+ 302              	.L17:
+ 303 003c B1430040 		.word	1073759153
+ 304              		.cfi_endproc
+ 305              	.LFE3:
+ 306              		.size	CyScBoostClk_StandbyPower, .-CyScBoostClk_StandbyPower
+ 307              		.section	.text.CyScBoostClk_SetDividerRegister,"ax",%progbits
+ 308              		.align	2
+ 309              		.global	CyScBoostClk_SetDividerRegister
+ 310              		.thumb
+ 311              		.thumb_func
+ 312              		.type	CyScBoostClk_SetDividerRegister, %function
+ 313              	CyScBoostClk_SetDividerRegister:
+ 314              	.LFB4:
  168:Generated_Source\PSoC5/CyScBoostClk.c **** 
  169:Generated_Source\PSoC5/CyScBoostClk.c **** 
  170:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
@@ -418,90 +531,286 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  189:Generated_Source\PSoC5/CyScBoostClk.c **** * Returns:
  190:Generated_Source\PSoC5/CyScBoostClk.c **** *  None
  191:Generated_Source\PSoC5/CyScBoostClk.c **** *
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 8
-
-
  192:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  193:Generated_Source\PSoC5/CyScBoostClk.c **** void CyScBoostClk_SetDividerRegister(uint16 clkDivider, uint8 restart)
  194:Generated_Source\PSoC5/CyScBoostClk.c ****                                 
  195:Generated_Source\PSoC5/CyScBoostClk.c **** {
+ 315              		.loc 1 195 0
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 16
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 10
+
+
+ 318              		@ frame_needed = 1, uses_anonymous_args = 0
+ 319 0000 80B5     		push	{r7, lr}
+ 320              		.cfi_def_cfa_offset 8
+ 321              		.cfi_offset 7, -8
+ 322              		.cfi_offset 14, -4
+ 323 0002 84B0     		sub	sp, sp, #16
+ 324              		.cfi_def_cfa_offset 24
+ 325 0004 00AF     		add	r7, sp, #0
+ 326              		.cfi_def_cfa_register 7
+ 327 0006 0346     		mov	r3, r0
+ 328 0008 0A46     		mov	r2, r1
+ 329 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 330 000c 1346     		mov	r3, r2
+ 331 000e 7B71     		strb	r3, [r7, #5]
  196:Generated_Source\PSoC5/CyScBoostClk.c ****     uint8 enabled;
  197:Generated_Source\PSoC5/CyScBoostClk.c **** 
  198:Generated_Source\PSoC5/CyScBoostClk.c ****     uint8 currSrc = CyScBoostClk_GetSourceRegister();
+ 332              		.loc 1 198 0
+ 333 0010 FFF7FEFF 		bl	CyScBoostClk_GetSourceRegister
+ 334 0014 0346     		mov	r3, r0
+ 335 0016 FB73     		strb	r3, [r7, #15]
  199:Generated_Source\PSoC5/CyScBoostClk.c ****     uint16 oldDivider = CyScBoostClk_GetDividerRegister();
+ 336              		.loc 1 199 0
+ 337 0018 FFF7FEFF 		bl	CyScBoostClk_GetDividerRegister
+ 338 001c 0346     		mov	r3, r0
+ 339 001e BB81     		strh	r3, [r7, #12]	@ movhi
  200:Generated_Source\PSoC5/CyScBoostClk.c **** 
  201:Generated_Source\PSoC5/CyScBoostClk.c ****     if (clkDivider != oldDivider)
+ 340              		.loc 1 201 0
+ 341 0020 FA88     		ldrh	r2, [r7, #6]
+ 342 0022 BB89     		ldrh	r3, [r7, #12]
+ 343 0024 9A42     		cmp	r2, r3
+ 344 0026 00F08880 		beq	.L32
  202:Generated_Source\PSoC5/CyScBoostClk.c ****     {
  203:Generated_Source\PSoC5/CyScBoostClk.c ****         enabled = CyScBoostClk_CLKEN & CyScBoostClk_CLKEN_MASK;
+ 345              		.loc 1 203 0
+ 346 002a 464B     		ldr	r3, .L33
+ 347 002c 1B78     		ldrb	r3, [r3]
+ 348 002e DBB2     		uxtb	r3, r3
+ 349 0030 03F00103 		and	r3, r3, #1
+ 350 0034 FB72     		strb	r3, [r7, #11]
  204:Generated_Source\PSoC5/CyScBoostClk.c **** 
  205:Generated_Source\PSoC5/CyScBoostClk.c ****         if ((currSrc == (uint8)CYCLK_SRC_SEL_CLK_SYNC_D) && ((oldDivider == 0u) || (clkDivider == 0
+ 351              		.loc 1 205 0
+ 352 0036 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 353 0038 002B     		cmp	r3, #0
+ 354 003a 20D1     		bne	.L21
+ 355              		.loc 1 205 0 is_stmt 0 discriminator 1
+ 356 003c BB89     		ldrh	r3, [r7, #12]
+ 357 003e 002B     		cmp	r3, #0
+ 358 0040 02D0     		beq	.L22
+ 359              		.loc 1 205 0 discriminator 2
+ 360 0042 FB88     		ldrh	r3, [r7, #6]
+ 361 0044 002B     		cmp	r3, #0
+ 362 0046 1AD1     		bne	.L21
+ 363              	.L22:
  206:Generated_Source\PSoC5/CyScBoostClk.c ****         {
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 11
+
+
  207:Generated_Source\PSoC5/CyScBoostClk.c ****             /* Moving to/from SSS requires correct ordering to prevent halting the clock    */
  208:Generated_Source\PSoC5/CyScBoostClk.c ****             if (oldDivider == 0u)
+ 364              		.loc 1 208 0 is_stmt 1
+ 365 0048 BB89     		ldrh	r3, [r7, #12]
+ 366 004a 002B     		cmp	r3, #0
+ 367 004c 0BD1     		bne	.L23
  209:Generated_Source\PSoC5/CyScBoostClk.c ****             {
  210:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* Moving away from SSS, set the divider first so when SSS is cleared we    */
  211:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* don't halt the clock.  Using the shadow load isn't required as the       */
  212:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* divider is ignored while SSS is set.                                     */
  213:Generated_Source\PSoC5/CyScBoostClk.c ****                 CY_SET_REG16(CyScBoostClk_DIV_PTR, clkDivider);
+ 368              		.loc 1 213 0
+ 369 004e 3E4A     		ldr	r2, .L33+4
+ 370 0050 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 371 0052 1380     		strh	r3, [r2]	@ movhi
  214:Generated_Source\PSoC5/CyScBoostClk.c ****                 CyScBoostClk_MOD_SRC &= (uint8)(~CYCLK_SSS);
+ 372              		.loc 1 214 0
+ 373 0054 3D4A     		ldr	r2, .L33+8
+ 374 0056 3D4B     		ldr	r3, .L33+8
+ 375 0058 1B78     		ldrb	r3, [r3]
+ 376 005a DBB2     		uxtb	r3, r3
+ 377 005c 23F04003 		bic	r3, r3, #64
+ 378 0060 DBB2     		uxtb	r3, r3
+ 379 0062 1370     		strb	r3, [r2]
+ 208:Generated_Source\PSoC5/CyScBoostClk.c ****             {
+ 380              		.loc 1 208 0
+ 381 0064 69E0     		b	.L20
+ 382              	.L23:
  215:Generated_Source\PSoC5/CyScBoostClk.c ****             }
  216:Generated_Source\PSoC5/CyScBoostClk.c ****             else
  217:Generated_Source\PSoC5/CyScBoostClk.c ****             {
  218:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* Moving to SSS, set SSS which then ignores the divider and we can set     */
  219:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* it without bothering with the shadow load.                               */
  220:Generated_Source\PSoC5/CyScBoostClk.c ****                 CyScBoostClk_MOD_SRC |= CYCLK_SSS;
+ 383              		.loc 1 220 0
+ 384 0066 394A     		ldr	r2, .L33+8
+ 385 0068 384B     		ldr	r3, .L33+8
+ 386 006a 1B78     		ldrb	r3, [r3]
+ 387 006c DBB2     		uxtb	r3, r3
+ 388 006e 43F04003 		orr	r3, r3, #64
+ 389 0072 DBB2     		uxtb	r3, r3
+ 390 0074 1370     		strb	r3, [r2]
  221:Generated_Source\PSoC5/CyScBoostClk.c ****                 CY_SET_REG16(CyScBoostClk_DIV_PTR, clkDivider);
+ 391              		.loc 1 221 0
+ 392 0076 344A     		ldr	r2, .L33+4
+ 393 0078 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 394 007a 1380     		strh	r3, [r2]	@ movhi
+ 208:Generated_Source\PSoC5/CyScBoostClk.c ****             {
+ 395              		.loc 1 208 0
+ 396 007c 5DE0     		b	.L20
+ 397              	.L21:
  222:Generated_Source\PSoC5/CyScBoostClk.c ****             }
  223:Generated_Source\PSoC5/CyScBoostClk.c ****         }
  224:Generated_Source\PSoC5/CyScBoostClk.c ****         else
  225:Generated_Source\PSoC5/CyScBoostClk.c ****         {
  226:Generated_Source\PSoC5/CyScBoostClk.c **** 			
  227:Generated_Source\PSoC5/CyScBoostClk.c ****             if (enabled != 0u)
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 12
+
+
+ 398              		.loc 1 227 0
+ 399 007e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 400 0080 002B     		cmp	r3, #0
+ 401 0082 33D0     		beq	.L25
  228:Generated_Source\PSoC5/CyScBoostClk.c ****             {
  229:Generated_Source\PSoC5/CyScBoostClk.c ****                 CLK_DIST_LD = 0x00u;
+ 402              		.loc 1 229 0
+ 403 0084 324B     		ldr	r3, .L33+12
+ 404 0086 0022     		movs	r2, #0
+ 405 0088 1A70     		strb	r2, [r3]
  230:Generated_Source\PSoC5/CyScBoostClk.c **** 
  231:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* Clear all the mask bits except ours. */
  232:Generated_Source\PSoC5/CyScBoostClk.c **** #if defined(CyScBoostClk__CFG3)
  233:Generated_Source\PSoC5/CyScBoostClk.c ****                 CLK_DIST_AMASK = CyScBoostClk_CLKEN_MASK;
+ 406              		.loc 1 233 0
+ 407 008a 324B     		ldr	r3, .L33+16
+ 408 008c 0122     		movs	r2, #1
+ 409 008e 1A70     		strb	r2, [r3]
  234:Generated_Source\PSoC5/CyScBoostClk.c ****                 CLK_DIST_DMASK = 0x00u;
+ 410              		.loc 1 234 0
+ 411 0090 314B     		ldr	r3, .L33+20
+ 412 0092 0022     		movs	r2, #0
+ 413 0094 1A70     		strb	r2, [r3]
  235:Generated_Source\PSoC5/CyScBoostClk.c **** #else
  236:Generated_Source\PSoC5/CyScBoostClk.c ****                 CLK_DIST_DMASK = CyScBoostClk_CLKEN_MASK;
  237:Generated_Source\PSoC5/CyScBoostClk.c ****                 CLK_DIST_AMASK = 0x00u;
  238:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* CyScBoostClk__CFG3 */
  239:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* Clear mask of bus clock. */
  240:Generated_Source\PSoC5/CyScBoostClk.c ****                 CLK_DIST_BCFG2 &= (uint8)(~BCFG2_MASK);
+ 414              		.loc 1 240 0
+ 415 0096 314A     		ldr	r2, .L33+24
+ 416 0098 304B     		ldr	r3, .L33+24
+ 417 009a 1B78     		ldrb	r3, [r3]
+ 418 009c DBB2     		uxtb	r3, r3
+ 419 009e 03F07F03 		and	r3, r3, #127
+ 420 00a2 DBB2     		uxtb	r3, r3
+ 421 00a4 1370     		strb	r3, [r2]
  241:Generated_Source\PSoC5/CyScBoostClk.c **** 
  242:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* If clock is currently enabled, disable it if async or going from N-to-1*/
  243:Generated_Source\PSoC5/CyScBoostClk.c ****                 if (((CyScBoostClk_MOD_SRC & CYCLK_SYNC) == 0u) || (clkDivider == 0u))
+ 422              		.loc 1 243 0
+ 423 00a6 294B     		ldr	r3, .L33+8
+ 424 00a8 1B78     		ldrb	r3, [r3]
+ 425 00aa DBB2     		uxtb	r3, r3
+ 426 00ac 03F00803 		and	r3, r3, #8
+ 427 00b0 002B     		cmp	r3, #0
+ 428 00b2 02D0     		beq	.L26
+ 429              		.loc 1 243 0 is_stmt 0 discriminator 1
+ 430 00b4 FB88     		ldrh	r3, [r7, #6]
+ 431 00b6 002B     		cmp	r3, #0
+ 432 00b8 18D1     		bne	.L25
+ 433              	.L26:
  244:Generated_Source\PSoC5/CyScBoostClk.c ****                 {
  245:Generated_Source\PSoC5/CyScBoostClk.c **** #if HAS_CLKDIST_LD_DISABLE
  246:Generated_Source\PSoC5/CyScBoostClk.c ****                     CY_SET_REG16(CYREG_CLKDIST_WRK0, oldDivider);
+ 434              		.loc 1 246 0 is_stmt 1
+ 435 00ba 294A     		ldr	r2, .L33+28
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 13
+
+
+ 436 00bc BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 437 00be 1380     		strh	r3, [r2]	@ movhi
  247:Generated_Source\PSoC5/CyScBoostClk.c ****                     CLK_DIST_LD = CYCLK_LD_DISABLE|CYCLK_LD_SYNC_EN|CYCLK_LD_LOAD;
+ 438              		.loc 1 247 0
+ 439 00c0 234B     		ldr	r3, .L33+12
+ 440 00c2 0722     		movs	r2, #7
+ 441 00c4 1A70     		strb	r2, [r3]
  248:Generated_Source\PSoC5/CyScBoostClk.c **** 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 9
-
-
  249:Generated_Source\PSoC5/CyScBoostClk.c ****                     /* Wait for clock to be disabled */
  250:Generated_Source\PSoC5/CyScBoostClk.c ****                     while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
+ 442              		.loc 1 250 0
+ 443 00c6 00BF     		nop
+ 444              	.L27:
+ 445              		.loc 1 250 0 is_stmt 0 discriminator 1
+ 446 00c8 214B     		ldr	r3, .L33+12
+ 447 00ca 1B78     		ldrb	r3, [r3]
+ 448 00cc DBB2     		uxtb	r3, r3
+ 449 00ce 03F00103 		and	r3, r3, #1
+ 450 00d2 002B     		cmp	r3, #0
+ 451 00d4 F8D1     		bne	.L27
  251:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
  252:Generated_Source\PSoC5/CyScBoostClk.c **** 
  253:Generated_Source\PSoC5/CyScBoostClk.c ****                     CyScBoostClk_CLKEN &= (uint8)(~CyScBoostClk_CLKEN_MASK);
+ 452              		.loc 1 253 0 is_stmt 1
+ 453 00d6 1B4A     		ldr	r2, .L33
+ 454 00d8 1A4B     		ldr	r3, .L33
+ 455 00da 1B78     		ldrb	r3, [r3]
+ 456 00dc DBB2     		uxtb	r3, r3
+ 457 00de 23F00103 		bic	r3, r3, #1
+ 458 00e2 DBB2     		uxtb	r3, r3
+ 459 00e4 1370     		strb	r3, [r2]
  254:Generated_Source\PSoC5/CyScBoostClk.c **** 
  255:Generated_Source\PSoC5/CyScBoostClk.c **** #if HAS_CLKDIST_LD_DISABLE
  256:Generated_Source\PSoC5/CyScBoostClk.c ****                     /* Clear the disable bit */
  257:Generated_Source\PSoC5/CyScBoostClk.c ****                     CLK_DIST_LD = 0x00u;
+ 460              		.loc 1 257 0
+ 461 00e6 1A4B     		ldr	r3, .L33+12
+ 462 00e8 0022     		movs	r2, #0
+ 463 00ea 1A70     		strb	r2, [r3]
+ 464              	.L25:
  258:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
  259:Generated_Source\PSoC5/CyScBoostClk.c ****                 }
  260:Generated_Source\PSoC5/CyScBoostClk.c ****             }
  261:Generated_Source\PSoC5/CyScBoostClk.c **** 
  262:Generated_Source\PSoC5/CyScBoostClk.c ****             /* Load divide value. */
  263:Generated_Source\PSoC5/CyScBoostClk.c ****             if ((CyScBoostClk_CLKEN & CyScBoostClk_CLKEN_MASK) != 0u)
+ 465              		.loc 1 263 0
+ 466 00ec 154B     		ldr	r3, .L33
+ 467 00ee 1B78     		ldrb	r3, [r3]
+ 468 00f0 DBB2     		uxtb	r3, r3
+ 469 00f2 03F00103 		and	r3, r3, #1
+ 470 00f6 002B     		cmp	r3, #0
+ 471 00f8 13D0     		beq	.L28
  264:Generated_Source\PSoC5/CyScBoostClk.c ****             {
  265:Generated_Source\PSoC5/CyScBoostClk.c ****                 /* If the clock is still enabled, use the shadow registers */
  266:Generated_Source\PSoC5/CyScBoostClk.c ****                 CY_SET_REG16(CYREG_CLKDIST_WRK0, clkDivider);
+ 472              		.loc 1 266 0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 14
+
+
+ 473 00fa 194A     		ldr	r2, .L33+28
+ 474 00fc FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 475 00fe 1380     		strh	r3, [r2]	@ movhi
  267:Generated_Source\PSoC5/CyScBoostClk.c **** 
  268:Generated_Source\PSoC5/CyScBoostClk.c ****                 CLK_DIST_LD = (CYCLK_LD_LOAD | ((restart != 0u) ? CYCLK_LD_SYNC_EN : 0x00u));
+ 476              		.loc 1 268 0
+ 477 0100 134A     		ldr	r2, .L33+12
+ 478 0102 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 479 0104 002B     		cmp	r3, #0
+ 480 0106 01D0     		beq	.L29
+ 481              		.loc 1 268 0 is_stmt 0 discriminator 1
+ 482 0108 0323     		movs	r3, #3
+ 483 010a 00E0     		b	.L30
+ 484              	.L29:
+ 485              		.loc 1 268 0 discriminator 2
+ 486 010c 0123     		movs	r3, #1
+ 487              	.L30:
+ 488              		.loc 1 268 0 discriminator 4
+ 489 010e 1370     		strb	r3, [r2]
  269:Generated_Source\PSoC5/CyScBoostClk.c ****                 while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
+ 490              		.loc 1 269 0 is_stmt 1 discriminator 4
+ 491 0110 00BF     		nop
+ 492              	.L31:
+ 493              		.loc 1 269 0 is_stmt 0 discriminator 1
+ 494 0112 0F4B     		ldr	r3, .L33+12
+ 495 0114 1B78     		ldrb	r3, [r3]
+ 496 0116 DBB2     		uxtb	r3, r3
+ 497 0118 03F00103 		and	r3, r3, #1
+ 498 011c 002B     		cmp	r3, #0
+ 499 011e F8D1     		bne	.L31
  270:Generated_Source\PSoC5/CyScBoostClk.c ****             }
  271:Generated_Source\PSoC5/CyScBoostClk.c ****             else
  272:Generated_Source\PSoC5/CyScBoostClk.c ****             {
@@ -512,6 +821,60 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  277:Generated_Source\PSoC5/CyScBoostClk.c ****         }
  278:Generated_Source\PSoC5/CyScBoostClk.c ****     }
  279:Generated_Source\PSoC5/CyScBoostClk.c **** }
+ 500              		.loc 1 279 0 is_stmt 1
+ 501 0120 0BE0     		b	.L32
+ 502              	.L28:
+ 274:Generated_Source\PSoC5/CyScBoostClk.c **** 				CyScBoostClk_CLKEN |= enabled;
+ 503              		.loc 1 274 0
+ 504 0122 094A     		ldr	r2, .L33+4
+ 505 0124 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 506 0126 1380     		strh	r3, [r2]	@ movhi
+ 275:Generated_Source\PSoC5/CyScBoostClk.c ****             }
+ 507              		.loc 1 275 0
+ 508 0128 0649     		ldr	r1, .L33
+ 509 012a 064B     		ldr	r3, .L33
+ 510 012c 1B78     		ldrb	r3, [r3]
+ 511 012e DAB2     		uxtb	r2, r3
+ 512 0130 FB7A     		ldrb	r3, [r7, #11]
+ 513 0132 1343     		orrs	r3, r3, r2
+ 514 0134 DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 15
+
+
+ 515 0136 0B70     		strb	r3, [r1]
+ 516              		.loc 1 279 0
+ 517 0138 FFE7     		b	.L32
+ 518              	.L20:
+ 519              	.L32:
+ 520 013a 00BF     		nop
+ 521 013c 1037     		adds	r7, r7, #16
+ 522              		.cfi_def_cfa_offset 8
+ 523 013e BD46     		mov	sp, r7
+ 524              		.cfi_def_cfa_register 13
+ 525              		@ sp needed
+ 526 0140 80BD     		pop	{r7, pc}
+ 527              	.L34:
+ 528 0142 00BF     		.align	2
+ 529              	.L33:
+ 530 0144 A1430040 		.word	1073759137
+ 531 0148 00410040 		.word	1073758464
+ 532 014c 02410040 		.word	1073758466
+ 533 0150 01400040 		.word	1073758209
+ 534 0154 14400040 		.word	1073758228
+ 535 0158 10400040 		.word	1073758224
+ 536 015c 08400040 		.word	1073758216
+ 537 0160 02400040 		.word	1073758210
+ 538              		.cfi_endproc
+ 539              	.LFE4:
+ 540              		.size	CyScBoostClk_SetDividerRegister, .-CyScBoostClk_SetDividerRegister
+ 541              		.section	.text.CyScBoostClk_GetDividerRegister,"ax",%progbits
+ 542              		.align	2
+ 543              		.global	CyScBoostClk_GetDividerRegister
+ 544              		.thumb
+ 545              		.thumb_func
+ 546              		.type	CyScBoostClk_GetDividerRegister, %function
+ 547              	CyScBoostClk_GetDividerRegister:
+ 548              	.LFB5:
  280:Generated_Source\PSoC5/CyScBoostClk.c **** 
  281:Generated_Source\PSoC5/CyScBoostClk.c **** 
  282:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
@@ -531,37 +894,49 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  296:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  297:Generated_Source\PSoC5/CyScBoostClk.c **** uint16 CyScBoostClk_GetDividerRegister(void) 
  298:Generated_Source\PSoC5/CyScBoostClk.c **** {
- 209              		.loc 1 298 0
- 210              		.cfi_startproc
- 211              		@ args = 0, pretend = 0, frame = 0
- 212              		@ frame_needed = 0, uses_anonymous_args = 0
- 213              		@ link register save eliminated.
+ 549              		.loc 1 298 0
+ 550              		.cfi_startproc
+ 551              		@ args = 0, pretend = 0, frame = 0
+ 552              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 16
+
+
+ 553              		@ link register save eliminated.
+ 554 0000 80B4     		push	{r7}
+ 555              		.cfi_def_cfa_offset 4
+ 556              		.cfi_offset 7, -4
+ 557 0002 00AF     		add	r7, sp, #0
+ 558              		.cfi_def_cfa_register 7
  299:Generated_Source\PSoC5/CyScBoostClk.c ****     return CY_GET_REG16(CyScBoostClk_DIV_PTR);
- 214              		.loc 1 299 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 10
-
-
- 215 0000 014B     		ldr	r3, .L18
- 216 0002 1888     		ldrh	r0, [r3]
+ 559              		.loc 1 299 0
+ 560 0004 034B     		ldr	r3, .L37
+ 561 0006 1B88     		ldrh	r3, [r3]	@ movhi
+ 562 0008 9BB2     		uxth	r3, r3
  300:Generated_Source\PSoC5/CyScBoostClk.c **** }
- 217              		.loc 1 300 0
- 218 0004 80B2     		uxth	r0, r0
- 219 0006 7047     		bx	lr
- 220              	.L19:
- 221              		.align	2
- 222              	.L18:
- 223 0008 00410040 		.word	1073758464
- 224              		.cfi_endproc
- 225              	.LFE5:
- 226              		.size	CyScBoostClk_GetDividerRegister, .-CyScBoostClk_GetDividerRegister
- 227              		.section	.text.CyScBoostClk_SetModeRegister,"ax",%progbits
- 228              		.align	2
- 229              		.global	CyScBoostClk_SetModeRegister
- 230              		.thumb
- 231              		.thumb_func
- 232              		.type	CyScBoostClk_SetModeRegister, %function
- 233              	CyScBoostClk_SetModeRegister:
- 234              	.LFB6:
+ 563              		.loc 1 300 0
+ 564 000a 1846     		mov	r0, r3
+ 565 000c BD46     		mov	sp, r7
+ 566              		.cfi_def_cfa_register 13
+ 567              		@ sp needed
+ 568 000e 80BC     		pop	{r7}
+ 569              		.cfi_restore 7
+ 570              		.cfi_def_cfa_offset 0
+ 571 0010 7047     		bx	lr
+ 572              	.L38:
+ 573 0012 00BF     		.align	2
+ 574              	.L37:
+ 575 0014 00410040 		.word	1073758464
+ 576              		.cfi_endproc
+ 577              	.LFE5:
+ 578              		.size	CyScBoostClk_GetDividerRegister, .-CyScBoostClk_GetDividerRegister
+ 579              		.section	.text.CyScBoostClk_SetModeRegister,"ax",%progbits
+ 580              		.align	2
+ 581              		.global	CyScBoostClk_SetModeRegister
+ 582              		.thumb
+ 583              		.thumb_func
+ 584              		.type	CyScBoostClk_SetModeRegister, %function
+ 585              	CyScBoostClk_SetModeRegister:
+ 586              	.LFB6:
  301:Generated_Source\PSoC5/CyScBoostClk.c **** 
  302:Generated_Source\PSoC5/CyScBoostClk.c **** 
  303:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
@@ -583,6 +958,9 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  319:Generated_Source\PSoC5/CyScBoostClk.c **** *   - CYCLK_DUTY  Enable 50% duty cycle output. When enabled, the output clock
  320:Generated_Source\PSoC5/CyScBoostClk.c **** *                 is asserted for approximately half of its period. When
  321:Generated_Source\PSoC5/CyScBoostClk.c **** *                 disabled, the output clock is asserted for one period of the
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 17
+
+
  322:Generated_Source\PSoC5/CyScBoostClk.c **** *                 source clock.
  323:Generated_Source\PSoC5/CyScBoostClk.c **** *   - CYCLK_SYNC  Enable output synchronization to master clock. This should
  324:Generated_Source\PSoC5/CyScBoostClk.c **** *                 be enabled for all synchronous clocks.
@@ -595,40 +973,64 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  331:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  332:Generated_Source\PSoC5/CyScBoostClk.c **** void CyScBoostClk_SetModeRegister(uint8 modeBitMask) 
  333:Generated_Source\PSoC5/CyScBoostClk.c **** {
- 235              		.loc 1 333 0
- 236              		.cfi_startproc
- 237              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 11
-
-
- 238              		@ frame_needed = 0, uses_anonymous_args = 0
- 239              		@ link register save eliminated.
- 240              	.LVL3:
+ 587              		.loc 1 333 0
+ 588              		.cfi_startproc
+ 589              		@ args = 0, pretend = 0, frame = 8
+ 590              		@ frame_needed = 1, uses_anonymous_args = 0
+ 591              		@ link register save eliminated.
+ 592 0000 80B4     		push	{r7}
+ 593              		.cfi_def_cfa_offset 4
+ 594              		.cfi_offset 7, -4
+ 595 0002 83B0     		sub	sp, sp, #12
+ 596              		.cfi_def_cfa_offset 16
+ 597 0004 00AF     		add	r7, sp, #0
+ 598              		.cfi_def_cfa_register 7
+ 599 0006 0346     		mov	r3, r0
+ 600 0008 FB71     		strb	r3, [r7, #7]
  334:Generated_Source\PSoC5/CyScBoostClk.c ****     CyScBoostClk_MOD_SRC |= modeBitMask & (uint8)CyScBoostClk_MODE_MASK;
- 241              		.loc 1 334 0
- 242 0000 034B     		ldr	r3, .L21
- 243 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 244 0004 00F0F800 		and	r0, r0, #248
- 245              	.LVL4:
- 246 0008 1043     		orrs	r0, r0, r2
- 247 000a 1870     		strb	r0, [r3]
- 248 000c 7047     		bx	lr
- 249              	.L22:
- 250 000e 00BF     		.align	2
- 251              	.L21:
- 252 0010 02410040 		.word	1073758466
- 253              		.cfi_endproc
- 254              	.LFE6:
- 255              		.size	CyScBoostClk_SetModeRegister, .-CyScBoostClk_SetModeRegister
- 256              		.section	.text.CyScBoostClk_ClearModeRegister,"ax",%progbits
- 257              		.align	2
- 258              		.global	CyScBoostClk_ClearModeRegister
- 259              		.thumb
- 260              		.thumb_func
- 261              		.type	CyScBoostClk_ClearModeRegister, %function
- 262              	CyScBoostClk_ClearModeRegister:
- 263              	.LFB7:
+ 601              		.loc 1 334 0
+ 602 000a 0949     		ldr	r1, .L40
+ 603 000c 084B     		ldr	r3, .L40
+ 604 000e 1B78     		ldrb	r3, [r3]
+ 605 0010 DBB2     		uxtb	r3, r3
+ 606 0012 5AB2     		sxtb	r2, r3
+ 607 0014 97F90730 		ldrsb	r3, [r7, #7]
+ 608 0018 23F00703 		bic	r3, r3, #7
+ 609 001c 5BB2     		sxtb	r3, r3
+ 610 001e 1343     		orrs	r3, r3, r2
+ 611 0020 5BB2     		sxtb	r3, r3
+ 612 0022 DBB2     		uxtb	r3, r3
+ 613 0024 0B70     		strb	r3, [r1]
  335:Generated_Source\PSoC5/CyScBoostClk.c **** }
+ 614              		.loc 1 335 0
+ 615 0026 00BF     		nop
+ 616 0028 0C37     		adds	r7, r7, #12
+ 617              		.cfi_def_cfa_offset 4
+ 618 002a BD46     		mov	sp, r7
+ 619              		.cfi_def_cfa_register 13
+ 620              		@ sp needed
+ 621 002c 80BC     		pop	{r7}
+ 622              		.cfi_restore 7
+ 623              		.cfi_def_cfa_offset 0
+ 624 002e 7047     		bx	lr
+ 625              	.L41:
+ 626              		.align	2
+ 627              	.L40:
+ 628 0030 02410040 		.word	1073758466
+ 629              		.cfi_endproc
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 18
+
+
+ 630              	.LFE6:
+ 631              		.size	CyScBoostClk_SetModeRegister, .-CyScBoostClk_SetModeRegister
+ 632              		.section	.text.CyScBoostClk_ClearModeRegister,"ax",%progbits
+ 633              		.align	2
+ 634              		.global	CyScBoostClk_ClearModeRegister
+ 635              		.thumb
+ 636              		.thumb_func
+ 637              		.type	CyScBoostClk_ClearModeRegister, %function
+ 638              	CyScBoostClk_ClearModeRegister:
+ 639              	.LFB7:
  336:Generated_Source\PSoC5/CyScBoostClk.c **** 
  337:Generated_Source\PSoC5/CyScBoostClk.c **** 
  338:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
@@ -658,46 +1060,68 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  362:Generated_Source\PSoC5/CyScBoostClk.c **** *
  363:Generated_Source\PSoC5/CyScBoostClk.c **** * Returns:
  364:Generated_Source\PSoC5/CyScBoostClk.c **** *  None
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 12
-
-
  365:Generated_Source\PSoC5/CyScBoostClk.c **** *
  366:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  367:Generated_Source\PSoC5/CyScBoostClk.c **** void CyScBoostClk_ClearModeRegister(uint8 modeBitMask) 
  368:Generated_Source\PSoC5/CyScBoostClk.c **** {
- 264              		.loc 1 368 0
- 265              		.cfi_startproc
- 266              		@ args = 0, pretend = 0, frame = 0
- 267              		@ frame_needed = 0, uses_anonymous_args = 0
- 268              		@ link register save eliminated.
- 269              	.LVL5:
+ 640              		.loc 1 368 0
+ 641              		.cfi_startproc
+ 642              		@ args = 0, pretend = 0, frame = 8
+ 643              		@ frame_needed = 1, uses_anonymous_args = 0
+ 644              		@ link register save eliminated.
+ 645 0000 80B4     		push	{r7}
+ 646              		.cfi_def_cfa_offset 4
+ 647              		.cfi_offset 7, -4
+ 648 0002 83B0     		sub	sp, sp, #12
+ 649              		.cfi_def_cfa_offset 16
+ 650 0004 00AF     		add	r7, sp, #0
+ 651              		.cfi_def_cfa_register 7
+ 652 0006 0346     		mov	r3, r0
+ 653 0008 FB71     		strb	r3, [r7, #7]
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 19
+
+
  369:Generated_Source\PSoC5/CyScBoostClk.c ****     CyScBoostClk_MOD_SRC &= (uint8)(~modeBitMask) | (uint8)(~(uint8)(CyScBoostClk_MODE_MASK));
- 270              		.loc 1 369 0
- 271 0000 044B     		ldr	r3, .L24
- 272 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 273 0004 C043     		mvns	r0, r0
- 274              	.LVL6:
- 275 0006 C0B2     		uxtb	r0, r0
- 276 0008 40F00700 		orr	r0, r0, #7
- 277 000c 1040     		ands	r0, r0, r2
- 278 000e 1870     		strb	r0, [r3]
- 279 0010 7047     		bx	lr
- 280              	.L25:
- 281 0012 00BF     		.align	2
- 282              	.L24:
- 283 0014 02410040 		.word	1073758466
- 284              		.cfi_endproc
- 285              	.LFE7:
- 286              		.size	CyScBoostClk_ClearModeRegister, .-CyScBoostClk_ClearModeRegister
- 287              		.section	.text.CyScBoostClk_GetModeRegister,"ax",%progbits
- 288              		.align	2
- 289              		.global	CyScBoostClk_GetModeRegister
- 290              		.thumb
- 291              		.thumb_func
- 292              		.type	CyScBoostClk_GetModeRegister, %function
- 293              	CyScBoostClk_GetModeRegister:
- 294              	.LFB8:
+ 654              		.loc 1 369 0
+ 655 000a 0949     		ldr	r1, .L43
+ 656 000c 084B     		ldr	r3, .L43
+ 657 000e 1B78     		ldrb	r3, [r3]
+ 658 0010 DAB2     		uxtb	r2, r3
+ 659 0012 FB79     		ldrb	r3, [r7, #7]
+ 660 0014 DB43     		mvns	r3, r3
+ 661 0016 DBB2     		uxtb	r3, r3
+ 662 0018 43F00703 		orr	r3, r3, #7
+ 663 001c DBB2     		uxtb	r3, r3
+ 664 001e 1340     		ands	r3, r3, r2
+ 665 0020 DBB2     		uxtb	r3, r3
+ 666 0022 0B70     		strb	r3, [r1]
  370:Generated_Source\PSoC5/CyScBoostClk.c **** }
+ 667              		.loc 1 370 0
+ 668 0024 00BF     		nop
+ 669 0026 0C37     		adds	r7, r7, #12
+ 670              		.cfi_def_cfa_offset 4
+ 671 0028 BD46     		mov	sp, r7
+ 672              		.cfi_def_cfa_register 13
+ 673              		@ sp needed
+ 674 002a 80BC     		pop	{r7}
+ 675              		.cfi_restore 7
+ 676              		.cfi_def_cfa_offset 0
+ 677 002c 7047     		bx	lr
+ 678              	.L44:
+ 679 002e 00BF     		.align	2
+ 680              	.L43:
+ 681 0030 02410040 		.word	1073758466
+ 682              		.cfi_endproc
+ 683              	.LFE7:
+ 684              		.size	CyScBoostClk_ClearModeRegister, .-CyScBoostClk_ClearModeRegister
+ 685              		.section	.text.CyScBoostClk_GetModeRegister,"ax",%progbits
+ 686              		.align	2
+ 687              		.global	CyScBoostClk_GetModeRegister
+ 688              		.thumb
+ 689              		.thumb_func
+ 690              		.type	CyScBoostClk_GetModeRegister, %function
+ 691              	CyScBoostClk_GetModeRegister:
+ 692              	.LFB8:
  371:Generated_Source\PSoC5/CyScBoostClk.c **** 
  372:Generated_Source\PSoC5/CyScBoostClk.c **** 
  373:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
@@ -714,40 +1138,54 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  384:Generated_Source\PSoC5/CyScBoostClk.c **** *  Bit mask representing the enabled mode bits. See the SetModeRegister and
  385:Generated_Source\PSoC5/CyScBoostClk.c **** *  ClearModeRegister descriptions for details about the mode bits.
  386:Generated_Source\PSoC5/CyScBoostClk.c **** *
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 20
+
+
  387:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  388:Generated_Source\PSoC5/CyScBoostClk.c **** uint8 CyScBoostClk_GetModeRegister(void) 
  389:Generated_Source\PSoC5/CyScBoostClk.c **** {
- 295              		.loc 1 389 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 13
-
-
- 296              		.cfi_startproc
- 297              		@ args = 0, pretend = 0, frame = 0
- 298              		@ frame_needed = 0, uses_anonymous_args = 0
- 299              		@ link register save eliminated.
+ 693              		.loc 1 389 0
+ 694              		.cfi_startproc
+ 695              		@ args = 0, pretend = 0, frame = 0
+ 696              		@ frame_needed = 1, uses_anonymous_args = 0
+ 697              		@ link register save eliminated.
+ 698 0000 80B4     		push	{r7}
+ 699              		.cfi_def_cfa_offset 4
+ 700              		.cfi_offset 7, -4
+ 701 0002 00AF     		add	r7, sp, #0
+ 702              		.cfi_def_cfa_register 7
  390:Generated_Source\PSoC5/CyScBoostClk.c ****     return CyScBoostClk_MOD_SRC & (uint8)(CyScBoostClk_MODE_MASK);
- 300              		.loc 1 390 0
- 301 0000 024B     		ldr	r3, .L27
- 302 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 703              		.loc 1 390 0
+ 704 0004 044B     		ldr	r3, .L47
+ 705 0006 1B78     		ldrb	r3, [r3]
+ 706 0008 DBB2     		uxtb	r3, r3
+ 707 000a 23F00703 		bic	r3, r3, #7
+ 708 000e DBB2     		uxtb	r3, r3
  391:Generated_Source\PSoC5/CyScBoostClk.c **** }
- 303              		.loc 1 391 0
- 304 0004 00F0F800 		and	r0, r0, #248
- 305 0008 7047     		bx	lr
- 306              	.L28:
- 307 000a 00BF     		.align	2
- 308              	.L27:
- 309 000c 02410040 		.word	1073758466
- 310              		.cfi_endproc
- 311              	.LFE8:
- 312              		.size	CyScBoostClk_GetModeRegister, .-CyScBoostClk_GetModeRegister
- 313              		.section	.text.CyScBoostClk_GetSourceRegister,"ax",%progbits
- 314              		.align	2
- 315              		.global	CyScBoostClk_GetSourceRegister
- 316              		.thumb
- 317              		.thumb_func
- 318              		.type	CyScBoostClk_GetSourceRegister, %function
- 319              	CyScBoostClk_GetSourceRegister:
- 320              	.LFB10:
+ 709              		.loc 1 391 0
+ 710 0010 1846     		mov	r0, r3
+ 711 0012 BD46     		mov	sp, r7
+ 712              		.cfi_def_cfa_register 13
+ 713              		@ sp needed
+ 714 0014 80BC     		pop	{r7}
+ 715              		.cfi_restore 7
+ 716              		.cfi_def_cfa_offset 0
+ 717 0016 7047     		bx	lr
+ 718              	.L48:
+ 719              		.align	2
+ 720              	.L47:
+ 721 0018 02410040 		.word	1073758466
+ 722              		.cfi_endproc
+ 723              	.LFE8:
+ 724              		.size	CyScBoostClk_GetModeRegister, .-CyScBoostClk_GetModeRegister
+ 725              		.section	.text.CyScBoostClk_SetSourceRegister,"ax",%progbits
+ 726              		.align	2
+ 727              		.global	CyScBoostClk_SetSourceRegister
+ 728              		.thumb
+ 729              		.thumb_func
+ 730              		.type	CyScBoostClk_SetSourceRegister, %function
+ 731              	CyScBoostClk_SetSourceRegister:
+ 732              	.LFB9:
  392:Generated_Source\PSoC5/CyScBoostClk.c **** 
  393:Generated_Source\PSoC5/CyScBoostClk.c **** 
  394:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
@@ -760,6 +1198,9 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  401:Generated_Source\PSoC5/CyScBoostClk.c **** *
  402:Generated_Source\PSoC5/CyScBoostClk.c **** * Parameters:
  403:Generated_Source\PSoC5/CyScBoostClk.c **** *  clkSource:  For PSoC 3 and PSoC 5 devices, clkSource should be one of the
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 21
+
+
  404:Generated_Source\PSoC5/CyScBoostClk.c **** *   following input sources:
  405:Generated_Source\PSoC5/CyScBoostClk.c **** *   - CYCLK_SRC_SEL_SYNC_DIG
  406:Generated_Source\PSoC5/CyScBoostClk.c **** *   - CYCLK_SRC_SEL_IMO
@@ -777,36 +1218,180 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  418:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  419:Generated_Source\PSoC5/CyScBoostClk.c **** void CyScBoostClk_SetSourceRegister(uint8 clkSource) 
  420:Generated_Source\PSoC5/CyScBoostClk.c **** {
+ 733              		.loc 1 420 0
+ 734              		.cfi_startproc
+ 735              		@ args = 0, pretend = 0, frame = 16
+ 736              		@ frame_needed = 1, uses_anonymous_args = 0
+ 737 0000 80B5     		push	{r7, lr}
+ 738              		.cfi_def_cfa_offset 8
+ 739              		.cfi_offset 7, -8
+ 740              		.cfi_offset 14, -4
+ 741 0002 84B0     		sub	sp, sp, #16
+ 742              		.cfi_def_cfa_offset 24
+ 743 0004 00AF     		add	r7, sp, #0
+ 744              		.cfi_def_cfa_register 7
+ 745 0006 0346     		mov	r3, r0
+ 746 0008 FB71     		strb	r3, [r7, #7]
  421:Generated_Source\PSoC5/CyScBoostClk.c ****     uint16 currDiv = CyScBoostClk_GetDividerRegister();
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 14
-
-
+ 747              		.loc 1 421 0
+ 748 000a FFF7FEFF 		bl	CyScBoostClk_GetDividerRegister
+ 749 000e 0346     		mov	r3, r0
+ 750 0010 FB81     		strh	r3, [r7, #14]	@ movhi
  422:Generated_Source\PSoC5/CyScBoostClk.c ****     uint8 oldSrc = CyScBoostClk_GetSourceRegister();
+ 751              		.loc 1 422 0
+ 752 0012 FFF7FEFF 		bl	CyScBoostClk_GetSourceRegister
+ 753 0016 0346     		mov	r3, r0
+ 754 0018 7B73     		strb	r3, [r7, #13]
  423:Generated_Source\PSoC5/CyScBoostClk.c **** 
  424:Generated_Source\PSoC5/CyScBoostClk.c ****     if (((oldSrc != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D)) && 
+ 755              		.loc 1 424 0
+ 756 001a 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 757 001c 002B     		cmp	r3, #0
+ 758 001e 1CD0     		beq	.L50
+ 759              		.loc 1 424 0 is_stmt 0 discriminator 1
+ 760 0020 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 761 0022 002B     		cmp	r3, #0
+ 762 0024 19D1     		bne	.L50
  425:Generated_Source\PSoC5/CyScBoostClk.c ****         (clkSource == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
+ 763              		.loc 1 425 0 is_stmt 1
+ 764 0026 FB89     		ldrh	r3, [r7, #14]
+ 765 0028 002B     		cmp	r3, #0
+ 766 002a 16D1     		bne	.L50
  426:Generated_Source\PSoC5/CyScBoostClk.c ****     {
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 22
+
+
  427:Generated_Source\PSoC5/CyScBoostClk.c ****         /* Switching to Master and divider is 1, set SSS, which will output master, */
  428:Generated_Source\PSoC5/CyScBoostClk.c ****         /* then set the source so we are consistent.                                */
  429:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_MOD_SRC |= CYCLK_SSS;
+ 767              		.loc 1 429 0
+ 768 002c 244A     		ldr	r2, .L53
+ 769 002e 244B     		ldr	r3, .L53
+ 770 0030 1B78     		ldrb	r3, [r3]
+ 771 0032 DBB2     		uxtb	r3, r3
+ 772 0034 43F04003 		orr	r3, r3, #64
+ 773 0038 DBB2     		uxtb	r3, r3
+ 774 003a 1370     		strb	r3, [r2]
  430:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_MOD_SRC =
+ 775              		.loc 1 430 0
+ 776 003c 2049     		ldr	r1, .L53
  431:Generated_Source\PSoC5/CyScBoostClk.c ****             (CyScBoostClk_MOD_SRC & (uint8)(~CyScBoostClk_SRC_SEL_MSK)) | clkSource;
+ 777              		.loc 1 431 0
+ 778 003e 204B     		ldr	r3, .L53
+ 779 0040 1B78     		ldrb	r3, [r3]
+ 780 0042 DBB2     		uxtb	r3, r3
+ 430:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_MOD_SRC =
+ 781              		.loc 1 430 0
+ 782 0044 5BB2     		sxtb	r3, r3
+ 783 0046 23F00703 		bic	r3, r3, #7
+ 784 004a 5AB2     		sxtb	r2, r3
+ 785 004c 97F90730 		ldrsb	r3, [r7, #7]
+ 786 0050 1343     		orrs	r3, r3, r2
+ 787 0052 5BB2     		sxtb	r3, r3
+ 788 0054 DBB2     		uxtb	r3, r3
+ 789 0056 0B70     		strb	r3, [r1]
+ 790 0058 2DE0     		b	.L51
+ 791              	.L50:
  432:Generated_Source\PSoC5/CyScBoostClk.c ****     }
  433:Generated_Source\PSoC5/CyScBoostClk.c ****     else if (((oldSrc == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D)) && 
+ 792              		.loc 1 433 0
+ 793 005a 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 794 005c 002B     		cmp	r3, #0
+ 795 005e 1CD1     		bne	.L52
+ 796              		.loc 1 433 0 is_stmt 0 discriminator 1
+ 797 0060 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 798 0062 002B     		cmp	r3, #0
+ 799 0064 19D0     		beq	.L52
  434:Generated_Source\PSoC5/CyScBoostClk.c ****             (clkSource != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
+ 800              		.loc 1 434 0 is_stmt 1
+ 801 0066 FB89     		ldrh	r3, [r7, #14]
+ 802 0068 002B     		cmp	r3, #0
+ 803 006a 16D1     		bne	.L52
  435:Generated_Source\PSoC5/CyScBoostClk.c ****     {
  436:Generated_Source\PSoC5/CyScBoostClk.c ****         /* Switching from Master to not and divider is 1, set source, so we don't   */
  437:Generated_Source\PSoC5/CyScBoostClk.c ****         /* lock when we clear SSS.                                                  */
  438:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_MOD_SRC =
+ 804              		.loc 1 438 0
+ 805 006c 1449     		ldr	r1, .L53
  439:Generated_Source\PSoC5/CyScBoostClk.c ****             (CyScBoostClk_MOD_SRC & (uint8)(~CyScBoostClk_SRC_SEL_MSK)) | clkSource;
+ 806              		.loc 1 439 0
+ 807 006e 144B     		ldr	r3, .L53
+ 808 0070 1B78     		ldrb	r3, [r3]
+ 809 0072 DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 23
+
+
+ 438:Generated_Source\PSoC5/CyScBoostClk.c ****             (CyScBoostClk_MOD_SRC & (uint8)(~CyScBoostClk_SRC_SEL_MSK)) | clkSource;
+ 810              		.loc 1 438 0
+ 811 0074 5BB2     		sxtb	r3, r3
+ 812 0076 23F00703 		bic	r3, r3, #7
+ 813 007a 5AB2     		sxtb	r2, r3
+ 814 007c 97F90730 		ldrsb	r3, [r7, #7]
+ 815 0080 1343     		orrs	r3, r3, r2
+ 816 0082 5BB2     		sxtb	r3, r3
+ 817 0084 DBB2     		uxtb	r3, r3
+ 818 0086 0B70     		strb	r3, [r1]
  440:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_MOD_SRC &= (uint8)(~CYCLK_SSS);
+ 819              		.loc 1 440 0
+ 820 0088 0D4A     		ldr	r2, .L53
+ 821 008a 0D4B     		ldr	r3, .L53
+ 822 008c 1B78     		ldrb	r3, [r3]
+ 823 008e DBB2     		uxtb	r3, r3
+ 824 0090 23F04003 		bic	r3, r3, #64
+ 825 0094 DBB2     		uxtb	r3, r3
+ 826 0096 1370     		strb	r3, [r2]
+ 827 0098 0DE0     		b	.L51
+ 828              	.L52:
  441:Generated_Source\PSoC5/CyScBoostClk.c ****     }
  442:Generated_Source\PSoC5/CyScBoostClk.c ****     else
  443:Generated_Source\PSoC5/CyScBoostClk.c ****     {
  444:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_MOD_SRC =
+ 829              		.loc 1 444 0
+ 830 009a 0949     		ldr	r1, .L53
  445:Generated_Source\PSoC5/CyScBoostClk.c ****             (CyScBoostClk_MOD_SRC & (uint8)(~CyScBoostClk_SRC_SEL_MSK)) | clkSource;
+ 831              		.loc 1 445 0
+ 832 009c 084B     		ldr	r3, .L53
+ 833 009e 1B78     		ldrb	r3, [r3]
+ 834 00a0 DBB2     		uxtb	r3, r3
+ 444:Generated_Source\PSoC5/CyScBoostClk.c ****             (CyScBoostClk_MOD_SRC & (uint8)(~CyScBoostClk_SRC_SEL_MSK)) | clkSource;
+ 835              		.loc 1 444 0
+ 836 00a2 5BB2     		sxtb	r3, r3
+ 837 00a4 23F00703 		bic	r3, r3, #7
+ 838 00a8 5AB2     		sxtb	r2, r3
+ 839 00aa 97F90730 		ldrsb	r3, [r7, #7]
+ 840 00ae 1343     		orrs	r3, r3, r2
+ 841 00b0 5BB2     		sxtb	r3, r3
+ 842 00b2 DBB2     		uxtb	r3, r3
+ 843 00b4 0B70     		strb	r3, [r1]
+ 844              	.L51:
  446:Generated_Source\PSoC5/CyScBoostClk.c ****     }
  447:Generated_Source\PSoC5/CyScBoostClk.c **** }
+ 845              		.loc 1 447 0
+ 846 00b6 00BF     		nop
+ 847 00b8 1037     		adds	r7, r7, #16
+ 848              		.cfi_def_cfa_offset 8
+ 849 00ba BD46     		mov	sp, r7
+ 850              		.cfi_def_cfa_register 13
+ 851              		@ sp needed
+ 852 00bc 80BD     		pop	{r7, pc}
+ 853              	.L54:
+ 854 00be 00BF     		.align	2
+ 855              	.L53:
+ 856 00c0 02410040 		.word	1073758466
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 24
+
+
+ 857              		.cfi_endproc
+ 858              	.LFE9:
+ 859              		.size	CyScBoostClk_SetSourceRegister, .-CyScBoostClk_SetSourceRegister
+ 860              		.section	.text.CyScBoostClk_GetSourceRegister,"ax",%progbits
+ 861              		.align	2
+ 862              		.global	CyScBoostClk_GetSourceRegister
+ 863              		.thumb
+ 864              		.thumb_func
+ 865              		.type	CyScBoostClk_GetSourceRegister, %function
+ 866              	CyScBoostClk_GetSourceRegister:
+ 867              	.LFB10:
  448:Generated_Source\PSoC5/CyScBoostClk.c **** 
  449:Generated_Source\PSoC5/CyScBoostClk.c **** 
  450:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
@@ -825,359 +1410,51 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  463:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  464:Generated_Source\PSoC5/CyScBoostClk.c **** uint8 CyScBoostClk_GetSourceRegister(void) 
  465:Generated_Source\PSoC5/CyScBoostClk.c **** {
- 321              		.loc 1 465 0
- 322              		.cfi_startproc
- 323              		@ args = 0, pretend = 0, frame = 0
- 324              		@ frame_needed = 0, uses_anonymous_args = 0
- 325              		@ link register save eliminated.
+ 868              		.loc 1 465 0
+ 869              		.cfi_startproc
+ 870              		@ args = 0, pretend = 0, frame = 0
+ 871              		@ frame_needed = 1, uses_anonymous_args = 0
+ 872              		@ link register save eliminated.
+ 873 0000 80B4     		push	{r7}
+ 874              		.cfi_def_cfa_offset 4
+ 875              		.cfi_offset 7, -4
+ 876 0002 00AF     		add	r7, sp, #0
+ 877              		.cfi_def_cfa_register 7
  466:Generated_Source\PSoC5/CyScBoostClk.c ****     return CyScBoostClk_MOD_SRC & CyScBoostClk_SRC_SEL_MSK;
- 326              		.loc 1 466 0
- 327 0000 024B     		ldr	r3, .L30
- 328 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 878              		.loc 1 466 0
+ 879 0004 044B     		ldr	r3, .L57
+ 880 0006 1B78     		ldrb	r3, [r3]
+ 881 0008 DBB2     		uxtb	r3, r3
+ 882 000a 03F00703 		and	r3, r3, #7
+ 883 000e DBB2     		uxtb	r3, r3
  467:Generated_Source\PSoC5/CyScBoostClk.c **** }
- 329              		.loc 1 467 0
- 330 0004 00F00700 		and	r0, r0, #7
- 331 0008 7047     		bx	lr
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 15
+ 884              		.loc 1 467 0
+ 885 0010 1846     		mov	r0, r3
+ 886 0012 BD46     		mov	sp, r7
+ 887              		.cfi_def_cfa_register 13
+ 888              		@ sp needed
+ 889 0014 80BC     		pop	{r7}
+ 890              		.cfi_restore 7
+ 891              		.cfi_def_cfa_offset 0
+ 892 0016 7047     		bx	lr
+ 893              	.L58:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 25
 
 
- 332              	.L31:
- 333 000a 00BF     		.align	2
- 334              	.L30:
- 335 000c 02410040 		.word	1073758466
- 336              		.cfi_endproc
- 337              	.LFE10:
- 338              		.size	CyScBoostClk_GetSourceRegister, .-CyScBoostClk_GetSourceRegister
- 339              		.section	.text.CyScBoostClk_SetDividerRegister,"ax",%progbits
- 340              		.align	2
- 341              		.global	CyScBoostClk_SetDividerRegister
- 342              		.thumb
- 343              		.thumb_func
- 344              		.type	CyScBoostClk_SetDividerRegister, %function
- 345              	CyScBoostClk_SetDividerRegister:
- 346              	.LFB4:
- 195:Generated_Source\PSoC5/CyScBoostClk.c ****     uint8 enabled;
- 347              		.loc 1 195 0
- 348              		.cfi_startproc
- 349              		@ args = 0, pretend = 0, frame = 0
- 350              		@ frame_needed = 0, uses_anonymous_args = 0
- 351              	.LVL7:
- 352 0000 70B5     		push	{r4, r5, r6, lr}
- 353              		.cfi_def_cfa_offset 16
- 354              		.cfi_offset 4, -16
- 355              		.cfi_offset 5, -12
- 356              		.cfi_offset 6, -8
- 357              		.cfi_offset 14, -4
- 358 0002 0546     		mov	r5, r0
- 359 0004 0E46     		mov	r6, r1
- 198:Generated_Source\PSoC5/CyScBoostClk.c ****     uint16 oldDivider = CyScBoostClk_GetDividerRegister();
- 360              		.loc 1 198 0
- 361 0006 FFF7FEFF 		bl	CyScBoostClk_GetSourceRegister
- 362              	.LVL8:
- 363 000a 0446     		mov	r4, r0
- 364              	.LVL9:
- 199:Generated_Source\PSoC5/CyScBoostClk.c **** 
- 365              		.loc 1 199 0
- 366 000c FFF7FEFF 		bl	CyScBoostClk_GetDividerRegister
- 367              	.LVL10:
- 201:Generated_Source\PSoC5/CyScBoostClk.c ****     {
- 368              		.loc 1 201 0
- 369 0010 A842     		cmp	r0, r5
- 370 0012 56D0     		beq	.L32
- 203:Generated_Source\PSoC5/CyScBoostClk.c **** 
- 371              		.loc 1 203 0
- 372 0014 2B4B     		ldr	r3, .L45
- 373 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 374 0018 03F00102 		and	r2, r3, #1
- 375              	.LVL11:
- 205:Generated_Source\PSoC5/CyScBoostClk.c ****         {
- 376              		.loc 1 205 0
- 377 001c 94B9     		cbnz	r4, .L34
- 205:Generated_Source\PSoC5/CyScBoostClk.c ****         {
- 378              		.loc 1 205 0 is_stmt 0 discriminator 1
- 379 001e 00B1     		cbz	r0, .L35
- 205:Generated_Source\PSoC5/CyScBoostClk.c ****         {
- 380              		.loc 1 205 0 discriminator 2
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 16
-
-
- 381 0020 85B9     		cbnz	r5, .L34
- 382              	.L35:
- 208:Generated_Source\PSoC5/CyScBoostClk.c ****             {
- 383              		.loc 1 208 0 is_stmt 1
- 384 0022 38B9     		cbnz	r0, .L36
- 213:Generated_Source\PSoC5/CyScBoostClk.c ****                 CyScBoostClk_MOD_SRC &= (uint8)(~CYCLK_SSS);
- 385              		.loc 1 213 0
- 386 0024 284B     		ldr	r3, .L45+4
- 387 0026 1D80     		strh	r5, [r3]	@ movhi
- 214:Generated_Source\PSoC5/CyScBoostClk.c ****             }
- 388              		.loc 1 214 0
- 389 0028 284A     		ldr	r2, .L45+8
- 390              	.LVL12:
- 391 002a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 392 002c 03F0BF03 		and	r3, r3, #191
- 393 0030 1370     		strb	r3, [r2]
- 394 0032 70BD     		pop	{r4, r5, r6, pc}
- 395              	.LVL13:
- 396              	.L36:
- 220:Generated_Source\PSoC5/CyScBoostClk.c ****                 CY_SET_REG16(CyScBoostClk_DIV_PTR, clkDivider);
- 397              		.loc 1 220 0
- 398 0034 254A     		ldr	r2, .L45+8
- 399              	.LVL14:
- 400 0036 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 401              	.LVL15:
- 402 0038 43F04003 		orr	r3, r3, #64
- 403 003c 1370     		strb	r3, [r2]
- 221:Generated_Source\PSoC5/CyScBoostClk.c ****             }
- 404              		.loc 1 221 0
- 405 003e 224B     		ldr	r3, .L45+4
- 406 0040 1D80     		strh	r5, [r3]	@ movhi
- 407 0042 70BD     		pop	{r4, r5, r6, pc}
- 408              	.LVL16:
- 409              	.L34:
- 227:Generated_Source\PSoC5/CyScBoostClk.c ****             {
- 410              		.loc 1 227 0
- 411 0044 22B3     		cbz	r2, .L37
- 229:Generated_Source\PSoC5/CyScBoostClk.c **** 
- 412              		.loc 1 229 0
- 413 0046 0023     		movs	r3, #0
- 414 0048 2149     		ldr	r1, .L45+12
- 415 004a 0B70     		strb	r3, [r1]
- 233:Generated_Source\PSoC5/CyScBoostClk.c ****                 CLK_DIST_DMASK = 0x00u;
- 416              		.loc 1 233 0
- 417 004c 0124     		movs	r4, #1
- 418              	.LVL17:
- 419 004e 1331     		adds	r1, r1, #19
- 420 0050 0C70     		strb	r4, [r1]
- 234:Generated_Source\PSoC5/CyScBoostClk.c **** #else
- 421              		.loc 1 234 0
- 422 0052 0439     		subs	r1, r1, #4
- 423 0054 0B70     		strb	r3, [r1]
- 240:Generated_Source\PSoC5/CyScBoostClk.c **** 
- 424              		.loc 1 240 0
- 425 0056 0839     		subs	r1, r1, #8
- 426 0058 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 427 005a 03F07F03 		and	r3, r3, #127
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 17
-
-
- 428 005e 0B70     		strb	r3, [r1]
- 243:Generated_Source\PSoC5/CyScBoostClk.c ****                 {
- 429              		.loc 1 243 0
- 430 0060 1A4B     		ldr	r3, .L45+8
- 431 0062 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 432 0064 13F0080F 		tst	r3, #8
- 433 0068 00D0     		beq	.L38
- 243:Generated_Source\PSoC5/CyScBoostClk.c ****                 {
- 434              		.loc 1 243 0 is_stmt 0 discriminator 1
- 435 006a 8DB9     		cbnz	r5, .L37
- 436              	.L38:
- 246:Generated_Source\PSoC5/CyScBoostClk.c ****                     CLK_DIST_LD = CYCLK_LD_DISABLE|CYCLK_LD_SYNC_EN|CYCLK_LD_LOAD;
- 437              		.loc 1 246 0 is_stmt 1
- 438 006c 194B     		ldr	r3, .L45+16
- 439 006e 1880     		strh	r0, [r3]	@ movhi
- 247:Generated_Source\PSoC5/CyScBoostClk.c **** 
- 440              		.loc 1 247 0
- 441 0070 0721     		movs	r1, #7
- 442 0072 013B     		subs	r3, r3, #1
- 443 0074 1970     		strb	r1, [r3]
- 444              	.L39:
- 250:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
- 445              		.loc 1 250 0 discriminator 1
- 446 0076 164B     		ldr	r3, .L45+12
- 447 0078 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 448 007a 13F0010F 		tst	r3, #1
- 449 007e FAD1     		bne	.L39
- 253:Generated_Source\PSoC5/CyScBoostClk.c **** 
- 450              		.loc 1 253 0
- 451 0080 1049     		ldr	r1, .L45
- 452 0082 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 453 0084 03F0FE03 		and	r3, r3, #254
- 454 0088 0B70     		strb	r3, [r1]
- 257:Generated_Source\PSoC5/CyScBoostClk.c **** #endif /* HAS_CLKDIST_LD_DISABLE */
- 455              		.loc 1 257 0
- 456 008a 0021     		movs	r1, #0
- 457 008c 104B     		ldr	r3, .L45+12
- 458 008e 1970     		strb	r1, [r3]
- 459              	.L37:
- 263:Generated_Source\PSoC5/CyScBoostClk.c ****             {
- 460              		.loc 1 263 0
- 461 0090 0C4B     		ldr	r3, .L45
- 462 0092 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 463 0094 13F0010F 		tst	r3, #1
- 464 0098 0DD0     		beq	.L40
- 266:Generated_Source\PSoC5/CyScBoostClk.c **** 
- 465              		.loc 1 266 0
- 466 009a 0E4B     		ldr	r3, .L45+16
- 467 009c 1D80     		strh	r5, [r3]	@ movhi
- 268:Generated_Source\PSoC5/CyScBoostClk.c ****                 while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
- 468              		.loc 1 268 0
- 469 009e 0EB1     		cbz	r6, .L43
- 470 00a0 0322     		movs	r2, #3
- 471              	.LVL18:
- 472 00a2 00E0     		b	.L41
- 473              	.LVL19:
- 474              	.L43:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 18
-
-
- 475 00a4 0122     		movs	r2, #1
- 476              	.LVL20:
- 477              	.L41:
- 268:Generated_Source\PSoC5/CyScBoostClk.c ****                 while ((CLK_DIST_LD & CYCLK_LD_LOAD) != 0u) { }
- 478              		.loc 1 268 0 is_stmt 0 discriminator 4
- 479 00a6 0A4B     		ldr	r3, .L45+12
- 480 00a8 1A70     		strb	r2, [r3]
- 481              	.L42:
- 269:Generated_Source\PSoC5/CyScBoostClk.c ****             }
- 482              		.loc 1 269 0 is_stmt 1 discriminator 1
- 483 00aa 094B     		ldr	r3, .L45+12
- 484 00ac 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 485 00ae 13F0010F 		tst	r3, #1
- 486 00b2 FAD1     		bne	.L42
- 487 00b4 70BD     		pop	{r4, r5, r6, pc}
- 488              	.LVL21:
- 489              	.L40:
- 274:Generated_Source\PSoC5/CyScBoostClk.c **** 				CyScBoostClk_CLKEN |= enabled;
- 490              		.loc 1 274 0
- 491 00b6 044B     		ldr	r3, .L45+4
- 492 00b8 1D80     		strh	r5, [r3]	@ movhi
- 275:Generated_Source\PSoC5/CyScBoostClk.c ****             }
- 493              		.loc 1 275 0
- 494 00ba 0249     		ldr	r1, .L45
- 495 00bc 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
- 496 00be 1343     		orrs	r3, r3, r2
- 497 00c0 0B70     		strb	r3, [r1]
- 498              	.LVL22:
- 499              	.L32:
- 500 00c2 70BD     		pop	{r4, r5, r6, pc}
- 501              	.L46:
- 502              		.align	2
- 503              	.L45:
- 504 00c4 A1430040 		.word	1073759137
- 505 00c8 00410040 		.word	1073758464
- 506 00cc 02410040 		.word	1073758466
- 507 00d0 01400040 		.word	1073758209
- 508 00d4 02400040 		.word	1073758210
- 509              		.cfi_endproc
- 510              	.LFE4:
- 511              		.size	CyScBoostClk_SetDividerRegister, .-CyScBoostClk_SetDividerRegister
- 512              		.section	.text.CyScBoostClk_SetSourceRegister,"ax",%progbits
- 513              		.align	2
- 514              		.global	CyScBoostClk_SetSourceRegister
- 515              		.thumb
- 516              		.thumb_func
- 517              		.type	CyScBoostClk_SetSourceRegister, %function
- 518              	CyScBoostClk_SetSourceRegister:
- 519              	.LFB9:
- 420:Generated_Source\PSoC5/CyScBoostClk.c ****     uint16 currDiv = CyScBoostClk_GetDividerRegister();
- 520              		.loc 1 420 0
- 521              		.cfi_startproc
- 522              		@ args = 0, pretend = 0, frame = 0
- 523              		@ frame_needed = 0, uses_anonymous_args = 0
- 524              	.LVL23:
- 525 0000 38B5     		push	{r3, r4, r5, lr}
- 526              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 19
-
-
- 527              		.cfi_offset 3, -16
- 528              		.cfi_offset 4, -12
- 529              		.cfi_offset 5, -8
- 530              		.cfi_offset 14, -4
- 531 0002 0446     		mov	r4, r0
- 421:Generated_Source\PSoC5/CyScBoostClk.c ****     uint8 oldSrc = CyScBoostClk_GetSourceRegister();
- 532              		.loc 1 421 0
- 533 0004 FFF7FEFF 		bl	CyScBoostClk_GetDividerRegister
- 534              	.LVL24:
- 535 0008 0546     		mov	r5, r0
- 536              	.LVL25:
- 422:Generated_Source\PSoC5/CyScBoostClk.c **** 
- 537              		.loc 1 422 0
- 538 000a FFF7FEFF 		bl	CyScBoostClk_GetSourceRegister
- 539              	.LVL26:
- 424:Generated_Source\PSoC5/CyScBoostClk.c ****         (clkSource == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
- 540              		.loc 1 424 0
- 541 000e 0346     		mov	r3, r0
- 542 0010 60B1     		cbz	r0, .L48
- 424:Generated_Source\PSoC5/CyScBoostClk.c ****         (clkSource == ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
- 543              		.loc 1 424 0 is_stmt 0 discriminator 1
- 544 0012 5CB9     		cbnz	r4, .L48
- 425:Generated_Source\PSoC5/CyScBoostClk.c ****     {
- 545              		.loc 1 425 0 is_stmt 1
- 546 0014 55B9     		cbnz	r5, .L48
- 429:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_MOD_SRC =
- 547              		.loc 1 429 0
- 548 0016 104A     		ldr	r2, .L52
- 549 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 550 001a 43F04003 		orr	r3, r3, #64
- 551 001e 1370     		strb	r3, [r2]
- 431:Generated_Source\PSoC5/CyScBoostClk.c ****     }
- 552              		.loc 1 431 0
- 553 0020 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 430:Generated_Source\PSoC5/CyScBoostClk.c ****             (CyScBoostClk_MOD_SRC & (uint8)(~CyScBoostClk_SRC_SEL_MSK)) | clkSource;
- 554              		.loc 1 430 0
- 555 0022 03F0F803 		and	r3, r3, #248
- 556 0026 1C43     		orrs	r4, r4, r3
- 557 0028 1470     		strb	r4, [r2]
- 558 002a 38BD     		pop	{r3, r4, r5, pc}
- 559              	.LVL27:
- 560              	.L48:
- 433:Generated_Source\PSoC5/CyScBoostClk.c ****             (clkSource != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
- 561              		.loc 1 433 0
- 562 002c 63B9     		cbnz	r3, .L50
- 433:Generated_Source\PSoC5/CyScBoostClk.c ****             (clkSource != ((uint8)CYCLK_SRC_SEL_CLK_SYNC_D))) && (currDiv == 0u))
- 563              		.loc 1 433 0 is_stmt 0 discriminator 1
- 564 002e 5CB1     		cbz	r4, .L50
- 434:Generated_Source\PSoC5/CyScBoostClk.c ****     {
- 565              		.loc 1 434 0 is_stmt 1
- 566 0030 55B9     		cbnz	r5, .L50
- 439:Generated_Source\PSoC5/CyScBoostClk.c ****         CyScBoostClk_MOD_SRC &= (uint8)(~CYCLK_SSS);
- 567              		.loc 1 439 0
- 568 0032 094A     		ldr	r2, .L52
- 569 0034 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 438:Generated_Source\PSoC5/CyScBoostClk.c ****             (CyScBoostClk_MOD_SRC & (uint8)(~CyScBoostClk_SRC_SEL_MSK)) | clkSource;
- 570              		.loc 1 438 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 20
-
-
- 571 0036 03F0F803 		and	r3, r3, #248
- 572 003a 1C43     		orrs	r4, r4, r3
- 573 003c 1470     		strb	r4, [r2]
- 440:Generated_Source\PSoC5/CyScBoostClk.c ****     }
- 574              		.loc 1 440 0
- 575 003e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 576 0040 03F0BF03 		and	r3, r3, #191
- 577 0044 1370     		strb	r3, [r2]
- 578 0046 38BD     		pop	{r3, r4, r5, pc}
- 579              	.LVL28:
- 580              	.L50:
- 445:Generated_Source\PSoC5/CyScBoostClk.c ****     }
- 581              		.loc 1 445 0
- 582 0048 034A     		ldr	r2, .L52
- 583 004a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 444:Generated_Source\PSoC5/CyScBoostClk.c ****             (CyScBoostClk_MOD_SRC & (uint8)(~CyScBoostClk_SRC_SEL_MSK)) | clkSource;
- 584              		.loc 1 444 0
- 585 004c 03F0F803 		and	r3, r3, #248
- 586 0050 1C43     		orrs	r4, r4, r3
- 587 0052 1470     		strb	r4, [r2]
- 588 0054 38BD     		pop	{r3, r4, r5, pc}
- 589              	.LVL29:
- 590              	.L53:
- 591 0056 00BF     		.align	2
- 592              	.L52:
- 593 0058 02410040 		.word	1073758466
- 594              		.cfi_endproc
- 595              	.LFE9:
- 596              		.size	CyScBoostClk_SetSourceRegister, .-CyScBoostClk_SetSourceRegister
- 597              		.section	.text.CyScBoostClk_SetPhaseRegister,"ax",%progbits
- 598              		.align	2
- 599              		.global	CyScBoostClk_SetPhaseRegister
- 600              		.thumb
- 601              		.thumb_func
- 602              		.type	CyScBoostClk_SetPhaseRegister, %function
- 603              	CyScBoostClk_SetPhaseRegister:
- 604              	.LFB11:
+ 894              		.align	2
+ 895              	.L57:
+ 896 0018 02410040 		.word	1073758466
+ 897              		.cfi_endproc
+ 898              	.LFE10:
+ 899              		.size	CyScBoostClk_GetSourceRegister, .-CyScBoostClk_GetSourceRegister
+ 900              		.section	.text.CyScBoostClk_SetPhaseRegister,"ax",%progbits
+ 901              		.align	2
+ 902              		.global	CyScBoostClk_SetPhaseRegister
+ 903              		.thumb
+ 904              		.thumb_func
+ 905              		.type	CyScBoostClk_SetPhaseRegister, %function
+ 906              	CyScBoostClk_SetPhaseRegister:
+ 907              	.LFB11:
  468:Generated_Source\PSoC5/CyScBoostClk.c **** 
  469:Generated_Source\PSoC5/CyScBoostClk.c **** 
  470:Generated_Source\PSoC5/CyScBoostClk.c **** #if defined(CyScBoostClk__CFG3)
@@ -1198,44 +1475,63 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  485:Generated_Source\PSoC5/CyScBoostClk.c **** *   disable the clock. clkPhase = 1 produces a 0ns delay and clkPhase = 11 
  486:Generated_Source\PSoC5/CyScBoostClk.c **** *   produces a 10ns delay.
  487:Generated_Source\PSoC5/CyScBoostClk.c **** *
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 21
-
-
  488:Generated_Source\PSoC5/CyScBoostClk.c **** * Returns:
  489:Generated_Source\PSoC5/CyScBoostClk.c **** *  None
  490:Generated_Source\PSoC5/CyScBoostClk.c **** *
  491:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  492:Generated_Source\PSoC5/CyScBoostClk.c **** void CyScBoostClk_SetPhaseRegister(uint8 clkPhase) 
  493:Generated_Source\PSoC5/CyScBoostClk.c **** {
- 605              		.loc 1 493 0
- 606              		.cfi_startproc
- 607              		@ args = 0, pretend = 0, frame = 0
- 608              		@ frame_needed = 0, uses_anonymous_args = 0
- 609              		@ link register save eliminated.
- 610              	.LVL30:
+ 908              		.loc 1 493 0
+ 909              		.cfi_startproc
+ 910              		@ args = 0, pretend = 0, frame = 8
+ 911              		@ frame_needed = 1, uses_anonymous_args = 0
+ 912              		@ link register save eliminated.
+ 913 0000 80B4     		push	{r7}
+ 914              		.cfi_def_cfa_offset 4
+ 915              		.cfi_offset 7, -4
+ 916 0002 83B0     		sub	sp, sp, #12
+ 917              		.cfi_def_cfa_offset 16
+ 918 0004 00AF     		add	r7, sp, #0
+ 919              		.cfi_def_cfa_register 7
+ 920 0006 0346     		mov	r3, r0
+ 921 0008 FB71     		strb	r3, [r7, #7]
  494:Generated_Source\PSoC5/CyScBoostClk.c ****     CyScBoostClk_PHASE = clkPhase & CyScBoostClk_PHASE_MASK;
- 611              		.loc 1 494 0
- 612 0000 00F00F00 		and	r0, r0, #15
- 613              	.LVL31:
- 614 0004 014B     		ldr	r3, .L55
- 615 0006 1870     		strb	r0, [r3]
- 616 0008 7047     		bx	lr
- 617              	.L56:
- 618 000a 00BF     		.align	2
- 619              	.L55:
- 620 000c 03410040 		.word	1073758467
- 621              		.cfi_endproc
- 622              	.LFE11:
- 623              		.size	CyScBoostClk_SetPhaseRegister, .-CyScBoostClk_SetPhaseRegister
- 624              		.section	.text.CyScBoostClk_GetPhaseRegister,"ax",%progbits
- 625              		.align	2
- 626              		.global	CyScBoostClk_GetPhaseRegister
- 627              		.thumb
- 628              		.thumb_func
- 629              		.type	CyScBoostClk_GetPhaseRegister, %function
- 630              	CyScBoostClk_GetPhaseRegister:
- 631              	.LFB12:
+ 922              		.loc 1 494 0
+ 923 000a 054A     		ldr	r2, .L60
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 26
+
+
+ 924 000c FB79     		ldrb	r3, [r7, #7]
+ 925 000e 03F00F03 		and	r3, r3, #15
+ 926 0012 DBB2     		uxtb	r3, r3
+ 927 0014 1370     		strb	r3, [r2]
  495:Generated_Source\PSoC5/CyScBoostClk.c **** }
+ 928              		.loc 1 495 0
+ 929 0016 00BF     		nop
+ 930 0018 0C37     		adds	r7, r7, #12
+ 931              		.cfi_def_cfa_offset 4
+ 932 001a BD46     		mov	sp, r7
+ 933              		.cfi_def_cfa_register 13
+ 934              		@ sp needed
+ 935 001c 80BC     		pop	{r7}
+ 936              		.cfi_restore 7
+ 937              		.cfi_def_cfa_offset 0
+ 938 001e 7047     		bx	lr
+ 939              	.L61:
+ 940              		.align	2
+ 941              	.L60:
+ 942 0020 03410040 		.word	1073758467
+ 943              		.cfi_endproc
+ 944              	.LFE11:
+ 945              		.size	CyScBoostClk_SetPhaseRegister, .-CyScBoostClk_SetPhaseRegister
+ 946              		.section	.text.CyScBoostClk_GetPhaseRegister,"ax",%progbits
+ 947              		.align	2
+ 948              		.global	CyScBoostClk_GetPhaseRegister
+ 949              		.thumb
+ 950              		.thumb_func
+ 951              		.type	CyScBoostClk_GetPhaseRegister, %function
+ 952              	CyScBoostClk_GetPhaseRegister:
+ 953              	.LFB12:
  496:Generated_Source\PSoC5/CyScBoostClk.c **** 
  497:Generated_Source\PSoC5/CyScBoostClk.c **** 
  498:Generated_Source\PSoC5/CyScBoostClk.c **** /*******************************************************************************
@@ -1255,1105 +1551,982 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 1
  512:Generated_Source\PSoC5/CyScBoostClk.c **** *******************************************************************************/
  513:Generated_Source\PSoC5/CyScBoostClk.c **** uint8 CyScBoostClk_GetPhaseRegister(void) 
  514:Generated_Source\PSoC5/CyScBoostClk.c **** {
- 632              		.loc 1 514 0
- 633              		.cfi_startproc
- 634              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 22
+ 954              		.loc 1 514 0
+ 955              		.cfi_startproc
+ 956              		@ args = 0, pretend = 0, frame = 0
+ 957              		@ frame_needed = 1, uses_anonymous_args = 0
+ 958              		@ link register save eliminated.
+ 959 0000 80B4     		push	{r7}
+ 960              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 27
 
 
- 635              		@ frame_needed = 0, uses_anonymous_args = 0
- 636              		@ link register save eliminated.
+ 961              		.cfi_offset 7, -4
+ 962 0002 00AF     		add	r7, sp, #0
+ 963              		.cfi_def_cfa_register 7
  515:Generated_Source\PSoC5/CyScBoostClk.c ****     return CyScBoostClk_PHASE & CyScBoostClk_PHASE_MASK;
- 637              		.loc 1 515 0
- 638 0000 024B     		ldr	r3, .L58
- 639 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 964              		.loc 1 515 0
+ 965 0004 044B     		ldr	r3, .L64
+ 966 0006 1B78     		ldrb	r3, [r3]
+ 967 0008 DBB2     		uxtb	r3, r3
+ 968 000a 03F00F03 		and	r3, r3, #15
+ 969 000e DBB2     		uxtb	r3, r3
  516:Generated_Source\PSoC5/CyScBoostClk.c **** }
- 640              		.loc 1 516 0
- 641 0004 00F00F00 		and	r0, r0, #15
- 642 0008 7047     		bx	lr
- 643              	.L59:
- 644 000a 00BF     		.align	2
- 645              	.L58:
- 646 000c 03410040 		.word	1073758467
- 647              		.cfi_endproc
- 648              	.LFE12:
- 649              		.size	CyScBoostClk_GetPhaseRegister, .-CyScBoostClk_GetPhaseRegister
- 650              		.text
- 651              	.Letext0:
- 652              		.file 2 "Generated_Source\\PSoC5/cytypes.h"
- 653              		.section	.debug_info,"",%progbits
- 654              	.Ldebug_info0:
- 655 0000 C0020000 		.4byte	0x2c0
- 656 0004 0400     		.2byte	0x4
- 657 0006 00000000 		.4byte	.Ldebug_abbrev0
- 658 000a 04       		.byte	0x4
- 659 000b 01       		.uleb128 0x1
- 660 000c CB020000 		.4byte	.LASF40
- 661 0010 0C       		.byte	0xc
- 662 0011 00000000 		.4byte	.LASF41
- 663 0015 53020000 		.4byte	.LASF42
- 664 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 665 001d 00000000 		.4byte	0
- 666 0021 00000000 		.4byte	.Ldebug_line0
- 667 0025 02       		.uleb128 0x2
- 668 0026 01       		.byte	0x1
- 669 0027 06       		.byte	0x6
- 670 0028 8C010000 		.4byte	.LASF0
- 671 002c 02       		.uleb128 0x2
- 672 002d 01       		.byte	0x1
- 673 002e 08       		.byte	0x8
- 674 002f 72010000 		.4byte	.LASF1
- 675 0033 02       		.uleb128 0x2
- 676 0034 02       		.byte	0x2
- 677 0035 05       		.byte	0x5
- 678 0036 51000000 		.4byte	.LASF2
- 679 003a 02       		.uleb128 0x2
- 680 003b 02       		.byte	0x2
- 681 003c 07       		.byte	0x7
- 682 003d BC010000 		.4byte	.LASF3
- 683 0041 02       		.uleb128 0x2
- 684 0042 04       		.byte	0x4
- 685 0043 05       		.byte	0x5
- 686 0044 3C010000 		.4byte	.LASF4
- 687 0048 02       		.uleb128 0x2
- 688 0049 04       		.byte	0x4
- 689 004a 07       		.byte	0x7
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 23
+ 970              		.loc 1 516 0
+ 971 0010 1846     		mov	r0, r3
+ 972 0012 BD46     		mov	sp, r7
+ 973              		.cfi_def_cfa_register 13
+ 974              		@ sp needed
+ 975 0014 80BC     		pop	{r7}
+ 976              		.cfi_restore 7
+ 977              		.cfi_def_cfa_offset 0
+ 978 0016 7047     		bx	lr
+ 979              	.L65:
+ 980              		.align	2
+ 981              	.L64:
+ 982 0018 03410040 		.word	1073758467
+ 983              		.cfi_endproc
+ 984              	.LFE12:
+ 985              		.size	CyScBoostClk_GetPhaseRegister, .-CyScBoostClk_GetPhaseRegister
+ 986              		.text
+ 987              	.Letext0:
+ 988              		.file 2 "Generated_Source\\PSoC5/cytypes.h"
+ 989              		.section	.debug_info,"",%progbits
+ 990              	.Ldebug_info0:
+ 991 0000 95020000 		.4byte	0x295
+ 992 0004 0400     		.2byte	0x4
+ 993 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 994 000a 04       		.byte	0x4
+ 995 000b 01       		.uleb128 0x1
+ 996 000c 6D000000 		.4byte	.LASF40
+ 997 0010 0C       		.byte	0xc
+ 998 0011 00000000 		.4byte	.LASF41
+ 999 0015 5D020000 		.4byte	.LASF42
+ 1000 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1001 001d 00000000 		.4byte	0
+ 1002 0021 00000000 		.4byte	.Ldebug_line0
+ 1003 0025 02       		.uleb128 0x2
+ 1004 0026 01       		.byte	0x1
+ 1005 0027 06       		.byte	0x6
+ 1006 0028 1A020000 		.4byte	.LASF0
+ 1007 002c 02       		.uleb128 0x2
+ 1008 002d 01       		.byte	0x1
+ 1009 002e 08       		.byte	0x8
+ 1010 002f 00020000 		.4byte	.LASF1
+ 1011 0033 02       		.uleb128 0x2
+ 1012 0034 02       		.byte	0x2
+ 1013 0035 05       		.byte	0x5
+ 1014 0036 51000000 		.4byte	.LASF2
+ 1015 003a 02       		.uleb128 0x2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 28
 
 
- 690 004b 32020000 		.4byte	.LASF5
- 691 004f 02       		.uleb128 0x2
- 692 0050 08       		.byte	0x8
- 693 0051 05       		.byte	0x5
- 694 0052 2E010000 		.4byte	.LASF6
- 695 0056 02       		.uleb128 0x2
- 696 0057 08       		.byte	0x8
- 697 0058 07       		.byte	0x7
- 698 0059 98010000 		.4byte	.LASF7
- 699 005d 03       		.uleb128 0x3
- 700 005e 04       		.byte	0x4
- 701 005f 05       		.byte	0x5
- 702 0060 696E7400 		.ascii	"int\000"
- 703 0064 02       		.uleb128 0x2
- 704 0065 04       		.byte	0x4
- 705 0066 07       		.byte	0x7
- 706 0067 AF010000 		.4byte	.LASF8
- 707 006b 04       		.uleb128 0x4
- 708 006c D9000000 		.4byte	.LASF9
- 709 0070 02       		.byte	0x2
- 710 0071 9201     		.2byte	0x192
- 711 0073 2C000000 		.4byte	0x2c
- 712 0077 04       		.uleb128 0x4
- 713 0078 84000000 		.4byte	.LASF10
- 714 007c 02       		.byte	0x2
- 715 007d 9301     		.2byte	0x193
- 716 007f 3A000000 		.4byte	0x3a
- 717 0083 02       		.uleb128 0x2
- 718 0084 04       		.byte	0x4
- 719 0085 04       		.byte	0x4
- 720 0086 0A010000 		.4byte	.LASF11
- 721 008a 02       		.uleb128 0x2
- 722 008b 08       		.byte	0x8
- 723 008c 04       		.byte	0x4
- 724 008d 44020000 		.4byte	.LASF12
- 725 0091 02       		.uleb128 0x2
- 726 0092 01       		.byte	0x1
- 727 0093 08       		.byte	0x8
- 728 0094 CF010000 		.4byte	.LASF13
- 729 0098 04       		.uleb128 0x4
- 730 0099 2D020000 		.4byte	.LASF14
- 731 009d 02       		.byte	0x2
- 732 009e 3C02     		.2byte	0x23c
- 733 00a0 A4000000 		.4byte	0xa4
- 734 00a4 05       		.uleb128 0x5
- 735 00a5 6B000000 		.4byte	0x6b
- 736 00a9 04       		.uleb128 0x4
- 737 00aa 4B000000 		.4byte	.LASF15
- 738 00ae 02       		.byte	0x2
- 739 00af 3D02     		.2byte	0x23d
- 740 00b1 B5000000 		.4byte	0xb5
- 741 00b5 05       		.uleb128 0x5
- 742 00b6 77000000 		.4byte	0x77
- 743 00ba 06       		.uleb128 0x6
- 744 00bb 9E020000 		.4byte	.LASF16
- 745 00bf 01       		.byte	0x1
- 746 00c0 2D       		.byte	0x2d
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 24
+ 1016 003b 02       		.byte	0x2
+ 1017 003c 07       		.byte	0x7
+ 1018 003d 4A020000 		.4byte	.LASF3
+ 1019 0041 02       		.uleb128 0x2
+ 1020 0042 04       		.byte	0x4
+ 1021 0043 05       		.byte	0x5
+ 1022 0044 CA010000 		.4byte	.LASF4
+ 1023 0048 02       		.uleb128 0x2
+ 1024 0049 04       		.byte	0x4
+ 1025 004a 07       		.byte	0x7
+ 1026 004b 0C030000 		.4byte	.LASF5
+ 1027 004f 02       		.uleb128 0x2
+ 1028 0050 08       		.byte	0x8
+ 1029 0051 05       		.byte	0x5
+ 1030 0052 BC010000 		.4byte	.LASF6
+ 1031 0056 02       		.uleb128 0x2
+ 1032 0057 08       		.byte	0x8
+ 1033 0058 07       		.byte	0x7
+ 1034 0059 26020000 		.4byte	.LASF7
+ 1035 005d 03       		.uleb128 0x3
+ 1036 005e 04       		.byte	0x4
+ 1037 005f 05       		.byte	0x5
+ 1038 0060 696E7400 		.ascii	"int\000"
+ 1039 0064 02       		.uleb128 0x2
+ 1040 0065 04       		.byte	0x4
+ 1041 0066 07       		.byte	0x7
+ 1042 0067 3D020000 		.4byte	.LASF8
+ 1043 006b 04       		.uleb128 0x4
+ 1044 006c 67010000 		.4byte	.LASF9
+ 1045 0070 02       		.byte	0x2
+ 1046 0071 9201     		.2byte	0x192
+ 1047 0073 2C000000 		.4byte	0x2c
+ 1048 0077 04       		.uleb128 0x4
+ 1049 0078 12010000 		.4byte	.LASF10
+ 1050 007c 02       		.byte	0x2
+ 1051 007d 9301     		.2byte	0x193
+ 1052 007f 3A000000 		.4byte	0x3a
+ 1053 0083 02       		.uleb128 0x2
+ 1054 0084 04       		.byte	0x4
+ 1055 0085 04       		.byte	0x4
+ 1056 0086 98010000 		.4byte	.LASF11
+ 1057 008a 02       		.uleb128 0x2
+ 1058 008b 08       		.byte	0x8
+ 1059 008c 04       		.byte	0x4
+ 1060 008d 1E030000 		.4byte	.LASF12
+ 1061 0091 02       		.uleb128 0x2
+ 1062 0092 01       		.byte	0x1
+ 1063 0093 08       		.byte	0x8
+ 1064 0094 A9020000 		.4byte	.LASF13
+ 1065 0098 04       		.uleb128 0x4
+ 1066 0099 07030000 		.4byte	.LASF14
+ 1067 009d 02       		.byte	0x2
+ 1068 009e 3C02     		.2byte	0x23c
+ 1069 00a0 A4000000 		.4byte	0xa4
+ 1070 00a4 05       		.uleb128 0x5
+ 1071 00a5 6B000000 		.4byte	0x6b
+ 1072 00a9 04       		.uleb128 0x4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 29
 
 
- 747 00c1 00000000 		.4byte	.LFB0
- 748 00c5 1C000000 		.4byte	.LFE0-.LFB0
- 749 00c9 01       		.uleb128 0x1
- 750 00ca 9C       		.byte	0x9c
- 751 00cb 06       		.uleb128 0x6
- 752 00cc 5B000000 		.4byte	.LASF17
- 753 00d0 01       		.byte	0x1
- 754 00d1 47       		.byte	0x47
- 755 00d2 00000000 		.4byte	.LFB1
- 756 00d6 1C000000 		.4byte	.LFE1-.LFB1
- 757 00da 01       		.uleb128 0x1
- 758 00db 9C       		.byte	0x9c
- 759 00dc 07       		.uleb128 0x7
- 760 00dd 6D000000 		.4byte	.LASF18
- 761 00e1 01       		.byte	0x1
- 762 00e2 64       		.byte	0x64
- 763 00e3 00000000 		.4byte	.LFB2
- 764 00e7 6C000000 		.4byte	.LFE2-.LFB2
- 765 00eb 01       		.uleb128 0x1
- 766 00ec 9C       		.byte	0x9c
- 767 00ed 0B010000 		.4byte	0x10b
- 768 00f1 08       		.uleb128 0x8
- 769 00f2 0A000000 		.4byte	.LBB2
- 770 00f6 62000000 		.4byte	.LBE2-.LBB2
- 771 00fa 09       		.uleb128 0x9
- 772 00fb E6010000 		.4byte	.LASF30
- 773 00ff 01       		.byte	0x1
- 774 0100 69       		.byte	0x69
- 775 0101 77000000 		.4byte	0x77
- 776 0105 00000000 		.4byte	.LLST0
- 777 0109 00       		.byte	0
- 778 010a 00       		.byte	0
- 779 010b 07       		.uleb128 0x7
- 780 010c B1020000 		.4byte	.LASF19
- 781 0110 01       		.byte	0x1
- 782 0111 9D       		.byte	0x9d
- 783 0112 00000000 		.4byte	.LFB3
- 784 0116 20000000 		.4byte	.LFE3-.LFB3
- 785 011a 01       		.uleb128 0x1
- 786 011b 9C       		.byte	0x9c
- 787 011c 2E010000 		.4byte	0x12e
- 788 0120 0A       		.uleb128 0xa
- 789 0121 63010000 		.4byte	.LASF21
- 790 0125 01       		.byte	0x1
- 791 0126 9D       		.byte	0x9d
- 792 0127 6B000000 		.4byte	0x6b
- 793 012b 01       		.uleb128 0x1
- 794 012c 50       		.byte	0x50
- 795 012d 00       		.byte	0
- 796 012e 0B       		.uleb128 0xb
- 797 012f EA000000 		.4byte	.LASF24
- 798 0133 01       		.byte	0x1
- 799 0134 2901     		.2byte	0x129
- 800 0136 77000000 		.4byte	0x77
- 801 013a 00000000 		.4byte	.LFB5
- 802 013e 0C000000 		.4byte	.LFE5-.LFB5
- 803 0142 01       		.uleb128 0x1
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 25
+ 1073 00aa 4B000000 		.4byte	.LASF15
+ 1074 00ae 02       		.byte	0x2
+ 1075 00af 3D02     		.2byte	0x23d
+ 1076 00b1 B5000000 		.4byte	0xb5
+ 1077 00b5 05       		.uleb128 0x5
+ 1078 00b6 77000000 		.4byte	0x77
+ 1079 00ba 06       		.uleb128 0x6
+ 1080 00bb 2D030000 		.4byte	.LASF16
+ 1081 00bf 01       		.byte	0x1
+ 1082 00c0 2D       		.byte	0x2d
+ 1083 00c1 00000000 		.4byte	.LFB0
+ 1084 00c5 34000000 		.4byte	.LFE0-.LFB0
+ 1085 00c9 01       		.uleb128 0x1
+ 1086 00ca 9C       		.byte	0x9c
+ 1087 00cb 06       		.uleb128 0x6
+ 1088 00cc 5B000000 		.4byte	.LASF17
+ 1089 00d0 01       		.byte	0x1
+ 1090 00d1 47       		.byte	0x47
+ 1091 00d2 00000000 		.4byte	.LFB1
+ 1092 00d6 34000000 		.4byte	.LFE1-.LFB1
+ 1093 00da 01       		.uleb128 0x1
+ 1094 00db 9C       		.byte	0x9c
+ 1095 00dc 07       		.uleb128 0x7
+ 1096 00dd FB000000 		.4byte	.LASF18
+ 1097 00e1 01       		.byte	0x1
+ 1098 00e2 64       		.byte	0x64
+ 1099 00e3 00000000 		.4byte	.LFB2
+ 1100 00e7 B0000000 		.4byte	.LFE2-.LFB2
+ 1101 00eb 01       		.uleb128 0x1
+ 1102 00ec 9C       		.byte	0x9c
+ 1103 00ed 0A010000 		.4byte	0x10a
+ 1104 00f1 08       		.uleb128 0x8
+ 1105 00f2 14000000 		.4byte	.LBB2
+ 1106 00f6 70000000 		.4byte	.LBE2-.LBB2
+ 1107 00fa 09       		.uleb128 0x9
+ 1108 00fb C0020000 		.4byte	.LASF24
+ 1109 00ff 01       		.byte	0x1
+ 1110 0100 69       		.byte	0x69
+ 1111 0101 77000000 		.4byte	0x77
+ 1112 0105 02       		.uleb128 0x2
+ 1113 0106 91       		.byte	0x91
+ 1114 0107 76       		.sleb128 -10
+ 1115 0108 00       		.byte	0
+ 1116 0109 00       		.byte	0
+ 1117 010a 07       		.uleb128 0x7
+ 1118 010b 40030000 		.4byte	.LASF19
+ 1119 010f 01       		.byte	0x1
+ 1120 0110 9D       		.byte	0x9d
+ 1121 0111 00000000 		.4byte	.LFB3
+ 1122 0115 40000000 		.4byte	.LFE3-.LFB3
+ 1123 0119 01       		.uleb128 0x1
+ 1124 011a 9C       		.byte	0x9c
+ 1125 011b 2E010000 		.4byte	0x12e
+ 1126 011f 0A       		.uleb128 0xa
+ 1127 0120 F1010000 		.4byte	.LASF21
+ 1128 0124 01       		.byte	0x1
+ 1129 0125 9D       		.byte	0x9d
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 30
 
 
- 804 0143 9C       		.byte	0x9c
- 805 0144 0C       		.uleb128 0xc
- 806 0145 26000000 		.4byte	.LASF20
- 807 0149 01       		.byte	0x1
- 808 014a 4C01     		.2byte	0x14c
- 809 014c 00000000 		.4byte	.LFB6
- 810 0150 14000000 		.4byte	.LFE6-.LFB6
- 811 0154 01       		.uleb128 0x1
- 812 0155 9C       		.byte	0x9c
- 813 0156 6B010000 		.4byte	0x16b
- 814 015a 0D       		.uleb128 0xd
- 815 015b 80010000 		.4byte	.LASF22
- 816 015f 01       		.byte	0x1
- 817 0160 4C01     		.2byte	0x14c
- 818 0162 6B000000 		.4byte	0x6b
- 819 0166 13000000 		.4byte	.LLST1
- 820 016a 00       		.byte	0
- 821 016b 0C       		.uleb128 0xc
- 822 016c 59030000 		.4byte	.LASF23
- 823 0170 01       		.byte	0x1
- 824 0171 6F01     		.2byte	0x16f
- 825 0173 00000000 		.4byte	.LFB7
- 826 0177 18000000 		.4byte	.LFE7-.LFB7
- 827 017b 01       		.uleb128 0x1
- 828 017c 9C       		.byte	0x9c
- 829 017d 92010000 		.4byte	0x192
- 830 0181 0D       		.uleb128 0xd
- 831 0182 80010000 		.4byte	.LASF22
- 832 0186 01       		.byte	0x1
- 833 0187 6F01     		.2byte	0x16f
- 834 0189 6B000000 		.4byte	0x6b
- 835 018d 34000000 		.4byte	.LLST2
- 836 0191 00       		.byte	0
- 837 0192 0B       		.uleb128 0xb
- 838 0193 F1010000 		.4byte	.LASF25
- 839 0197 01       		.byte	0x1
- 840 0198 8401     		.2byte	0x184
- 841 019a 6B000000 		.4byte	0x6b
- 842 019e 00000000 		.4byte	.LFB8
- 843 01a2 10000000 		.4byte	.LFE8-.LFB8
- 844 01a6 01       		.uleb128 0x1
- 845 01a7 9C       		.byte	0x9c
- 846 01a8 0B       		.uleb128 0xb
- 847 01a9 0E020000 		.4byte	.LASF26
- 848 01ad 01       		.byte	0x1
- 849 01ae D001     		.2byte	0x1d0
- 850 01b0 6B000000 		.4byte	0x6b
- 851 01b4 00000000 		.4byte	.LFB10
- 852 01b8 10000000 		.4byte	.LFE10-.LFB10
- 853 01bc 01       		.uleb128 0x1
- 854 01bd 9C       		.byte	0x9c
- 855 01be 07       		.uleb128 0x7
- 856 01bf 93000000 		.4byte	.LASF27
- 857 01c3 01       		.byte	0x1
- 858 01c4 C1       		.byte	0xc1
- 859 01c5 00000000 		.4byte	.LFB4
- 860 01c9 D8000000 		.4byte	.LFE4-.LFB4
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 26
+ 1130 0126 6B000000 		.4byte	0x6b
+ 1131 012a 02       		.uleb128 0x2
+ 1132 012b 91       		.byte	0x91
+ 1133 012c 77       		.sleb128 -9
+ 1134 012d 00       		.byte	0
+ 1135 012e 0B       		.uleb128 0xb
+ 1136 012f 21010000 		.4byte	.LASF20
+ 1137 0133 01       		.byte	0x1
+ 1138 0134 C1       		.byte	0xc1
+ 1139 0135 00000000 		.4byte	.LFB4
+ 1140 0139 64010000 		.4byte	.LFE4-.LFB4
+ 1141 013d 01       		.uleb128 0x1
+ 1142 013e 9C       		.byte	0x9c
+ 1143 013f 8A010000 		.4byte	0x18a
+ 1144 0143 0A       		.uleb128 0xa
+ 1145 0144 6D010000 		.4byte	.LASF22
+ 1146 0148 01       		.byte	0x1
+ 1147 0149 C1       		.byte	0xc1
+ 1148 014a 77000000 		.4byte	0x77
+ 1149 014e 02       		.uleb128 0x2
+ 1150 014f 91       		.byte	0x91
+ 1151 0150 6E       		.sleb128 -18
+ 1152 0151 0A       		.uleb128 0xa
+ 1153 0152 19010000 		.4byte	.LASF23
+ 1154 0156 01       		.byte	0x1
+ 1155 0157 C1       		.byte	0xc1
+ 1156 0158 6B000000 		.4byte	0x6b
+ 1157 015c 02       		.uleb128 0x2
+ 1158 015d 91       		.byte	0x91
+ 1159 015e 6D       		.sleb128 -19
+ 1160 015f 09       		.uleb128 0x9
+ 1161 0160 25030000 		.4byte	.LASF25
+ 1162 0164 01       		.byte	0x1
+ 1163 0165 C4       		.byte	0xc4
+ 1164 0166 6B000000 		.4byte	0x6b
+ 1165 016a 02       		.uleb128 0x2
+ 1166 016b 91       		.byte	0x91
+ 1167 016c 73       		.sleb128 -13
+ 1168 016d 09       		.uleb128 0x9
+ 1169 016e B8020000 		.4byte	.LASF26
+ 1170 0172 01       		.byte	0x1
+ 1171 0173 C6       		.byte	0xc6
+ 1172 0174 6B000000 		.4byte	0x6b
+ 1173 0178 02       		.uleb128 0x2
+ 1174 0179 91       		.byte	0x91
+ 1175 017a 77       		.sleb128 -9
+ 1176 017b 09       		.uleb128 0x9
+ 1177 017c C0020000 		.4byte	.LASF24
+ 1178 0180 01       		.byte	0x1
+ 1179 0181 C7       		.byte	0xc7
+ 1180 0182 77000000 		.4byte	0x77
+ 1181 0186 02       		.uleb128 0x2
+ 1182 0187 91       		.byte	0x91
+ 1183 0188 74       		.sleb128 -12
+ 1184 0189 00       		.byte	0
+ 1185 018a 0C       		.uleb128 0xc
+ 1186 018b 78010000 		.4byte	.LASF30
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 31
 
 
- 861 01cd 01       		.uleb128 0x1
- 862 01ce 9C       		.byte	0x9c
- 863 01cf 2F020000 		.4byte	0x22f
- 864 01d3 0E       		.uleb128 0xe
- 865 01d4 DF000000 		.4byte	.LASF28
- 866 01d8 01       		.byte	0x1
- 867 01d9 C1       		.byte	0xc1
- 868 01da 77000000 		.4byte	0x77
- 869 01de 55000000 		.4byte	.LLST3
- 870 01e2 0E       		.uleb128 0xe
- 871 01e3 8B000000 		.4byte	.LASF29
- 872 01e7 01       		.byte	0x1
- 873 01e8 C1       		.byte	0xc1
- 874 01e9 6B000000 		.4byte	0x6b
- 875 01ed 76000000 		.4byte	.LLST4
- 876 01f1 09       		.uleb128 0x9
- 877 01f2 4B020000 		.4byte	.LASF31
- 878 01f6 01       		.byte	0x1
- 879 01f7 C4       		.byte	0xc4
- 880 01f8 6B000000 		.4byte	0x6b
- 881 01fc 97000000 		.4byte	.LLST5
- 882 0200 09       		.uleb128 0x9
- 883 0201 DE010000 		.4byte	.LASF32
- 884 0205 01       		.byte	0x1
- 885 0206 C6       		.byte	0xc6
- 886 0207 6B000000 		.4byte	0x6b
- 887 020b E5000000 		.4byte	.LLST6
- 888 020f 0F       		.uleb128 0xf
- 889 0210 E6010000 		.4byte	.LASF30
- 890 0214 01       		.byte	0x1
- 891 0215 C7       		.byte	0xc7
- 892 0216 77000000 		.4byte	0x77
- 893 021a 01       		.uleb128 0x1
- 894 021b 50       		.byte	0x50
- 895 021c 10       		.uleb128 0x10
- 896 021d 0A000000 		.4byte	.LVL8
- 897 0221 A8010000 		.4byte	0x1a8
- 898 0225 10       		.uleb128 0x10
- 899 0226 10000000 		.4byte	.LVL10
- 900 022a 2E010000 		.4byte	0x12e
- 901 022e 00       		.byte	0
- 902 022f 0C       		.uleb128 0xc
- 903 0230 B3000000 		.4byte	.LASF33
- 904 0234 01       		.byte	0x1
- 905 0235 A301     		.2byte	0x1a3
- 906 0237 00000000 		.4byte	.LFB9
- 907 023b 5C000000 		.4byte	.LFE9-.LFB9
- 908 023f 01       		.uleb128 0x1
- 909 0240 9C       		.byte	0x9c
- 910 0241 86020000 		.4byte	0x286
- 911 0245 0D       		.uleb128 0xd
- 912 0246 D4010000 		.4byte	.LASF34
- 913 024a 01       		.byte	0x1
- 914 024b A301     		.2byte	0x1a3
- 915 024d 6B000000 		.4byte	0x6b
- 916 0251 F8000000 		.4byte	.LLST7
- 917 0255 11       		.uleb128 0x11
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 27
+ 1187 018f 01       		.byte	0x1
+ 1188 0190 2901     		.2byte	0x129
+ 1189 0192 77000000 		.4byte	0x77
+ 1190 0196 00000000 		.4byte	.LFB5
+ 1191 019a 18000000 		.4byte	.LFE5-.LFB5
+ 1192 019e 01       		.uleb128 0x1
+ 1193 019f 9C       		.byte	0x9c
+ 1194 01a0 0D       		.uleb128 0xd
+ 1195 01a1 26000000 		.4byte	.LASF27
+ 1196 01a5 01       		.byte	0x1
+ 1197 01a6 4C01     		.2byte	0x14c
+ 1198 01a8 00000000 		.4byte	.LFB6
+ 1199 01ac 34000000 		.4byte	.LFE6-.LFB6
+ 1200 01b0 01       		.uleb128 0x1
+ 1201 01b1 9C       		.byte	0x9c
+ 1202 01b2 C6010000 		.4byte	0x1c6
+ 1203 01b6 0E       		.uleb128 0xe
+ 1204 01b7 0E020000 		.4byte	.LASF28
+ 1205 01bb 01       		.byte	0x1
+ 1206 01bc 4C01     		.2byte	0x14c
+ 1207 01be 6B000000 		.4byte	0x6b
+ 1208 01c2 02       		.uleb128 0x2
+ 1209 01c3 91       		.byte	0x91
+ 1210 01c4 77       		.sleb128 -9
+ 1211 01c5 00       		.byte	0
+ 1212 01c6 0D       		.uleb128 0xd
+ 1213 01c7 5A030000 		.4byte	.LASF29
+ 1214 01cb 01       		.byte	0x1
+ 1215 01cc 6F01     		.2byte	0x16f
+ 1216 01ce 00000000 		.4byte	.LFB7
+ 1217 01d2 34000000 		.4byte	.LFE7-.LFB7
+ 1218 01d6 01       		.uleb128 0x1
+ 1219 01d7 9C       		.byte	0x9c
+ 1220 01d8 EC010000 		.4byte	0x1ec
+ 1221 01dc 0E       		.uleb128 0xe
+ 1222 01dd 0E020000 		.4byte	.LASF28
+ 1223 01e1 01       		.byte	0x1
+ 1224 01e2 6F01     		.2byte	0x16f
+ 1225 01e4 6B000000 		.4byte	0x6b
+ 1226 01e8 02       		.uleb128 0x2
+ 1227 01e9 91       		.byte	0x91
+ 1228 01ea 77       		.sleb128 -9
+ 1229 01eb 00       		.byte	0
+ 1230 01ec 0C       		.uleb128 0xc
+ 1231 01ed CB020000 		.4byte	.LASF31
+ 1232 01f1 01       		.byte	0x1
+ 1233 01f2 8401     		.2byte	0x184
+ 1234 01f4 6B000000 		.4byte	0x6b
+ 1235 01f8 00000000 		.4byte	.LFB8
+ 1236 01fc 1C000000 		.4byte	.LFE8-.LFB8
+ 1237 0200 01       		.uleb128 0x1
+ 1238 0201 9C       		.byte	0x9c
+ 1239 0202 0F       		.uleb128 0xf
+ 1240 0203 41010000 		.4byte	.LASF32
+ 1241 0207 01       		.byte	0x1
+ 1242 0208 A301     		.2byte	0x1a3
+ 1243 020a 00000000 		.4byte	.LFB9
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 32
 
 
- 918 0256 43000000 		.4byte	.LASF35
- 919 025a 01       		.byte	0x1
- 920 025b A501     		.2byte	0x1a5
- 921 025d 77000000 		.4byte	0x77
- 922 0261 19010000 		.4byte	.LLST8
- 923 0265 12       		.uleb128 0x12
- 924 0266 D2000000 		.4byte	.LASF36
- 925 026a 01       		.byte	0x1
- 926 026b A601     		.2byte	0x1a6
- 927 026d 6B000000 		.4byte	0x6b
- 928 0271 01       		.uleb128 0x1
- 929 0272 50       		.byte	0x50
- 930 0273 10       		.uleb128 0x10
- 931 0274 08000000 		.4byte	.LVL24
- 932 0278 2E010000 		.4byte	0x12e
- 933 027c 10       		.uleb128 0x10
- 934 027d 0E000000 		.4byte	.LVL26
- 935 0281 A8010000 		.4byte	0x1a8
- 936 0285 00       		.byte	0
- 937 0286 0C       		.uleb128 0xc
- 938 0287 45010000 		.4byte	.LASF37
- 939 028b 01       		.byte	0x1
- 940 028c EC01     		.2byte	0x1ec
- 941 028e 00000000 		.4byte	.LFB11
- 942 0292 10000000 		.4byte	.LFE11-.LFB11
- 943 0296 01       		.uleb128 0x1
- 944 0297 9C       		.byte	0x9c
- 945 0298 AD020000 		.4byte	0x2ad
- 946 029c 0D       		.uleb128 0xd
- 947 029d 69010000 		.4byte	.LASF38
- 948 02a1 01       		.byte	0x1
- 949 02a2 EC01     		.2byte	0x1ec
- 950 02a4 6B000000 		.4byte	0x6b
- 951 02a8 2C010000 		.4byte	.LLST9
- 952 02ac 00       		.byte	0
- 953 02ad 0B       		.uleb128 0xb
- 954 02ae 10010000 		.4byte	.LASF39
- 955 02b2 01       		.byte	0x1
- 956 02b3 0102     		.2byte	0x201
- 957 02b5 6B000000 		.4byte	0x6b
- 958 02b9 00000000 		.4byte	.LFB12
- 959 02bd 10000000 		.4byte	.LFE12-.LFB12
- 960 02c1 01       		.uleb128 0x1
- 961 02c2 9C       		.byte	0x9c
- 962 02c3 00       		.byte	0
- 963              		.section	.debug_abbrev,"",%progbits
- 964              	.Ldebug_abbrev0:
- 965 0000 01       		.uleb128 0x1
- 966 0001 11       		.uleb128 0x11
- 967 0002 01       		.byte	0x1
- 968 0003 25       		.uleb128 0x25
- 969 0004 0E       		.uleb128 0xe
- 970 0005 13       		.uleb128 0x13
- 971 0006 0B       		.uleb128 0xb
- 972 0007 03       		.uleb128 0x3
- 973 0008 0E       		.uleb128 0xe
- 974 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 28
+ 1244 020e C4000000 		.4byte	.LFE9-.LFB9
+ 1245 0212 01       		.uleb128 0x1
+ 1246 0213 9C       		.byte	0x9c
+ 1247 0214 46020000 		.4byte	0x246
+ 1248 0218 0E       		.uleb128 0xe
+ 1249 0219 AE020000 		.4byte	.LASF33
+ 1250 021d 01       		.byte	0x1
+ 1251 021e A301     		.2byte	0x1a3
+ 1252 0220 6B000000 		.4byte	0x6b
+ 1253 0224 02       		.uleb128 0x2
+ 1254 0225 91       		.byte	0x91
+ 1255 0226 6F       		.sleb128 -17
+ 1256 0227 10       		.uleb128 0x10
+ 1257 0228 43000000 		.4byte	.LASF34
+ 1258 022c 01       		.byte	0x1
+ 1259 022d A501     		.2byte	0x1a5
+ 1260 022f 77000000 		.4byte	0x77
+ 1261 0233 02       		.uleb128 0x2
+ 1262 0234 91       		.byte	0x91
+ 1263 0235 76       		.sleb128 -10
+ 1264 0236 10       		.uleb128 0x10
+ 1265 0237 60010000 		.4byte	.LASF35
+ 1266 023b 01       		.byte	0x1
+ 1267 023c A601     		.2byte	0x1a6
+ 1268 023e 6B000000 		.4byte	0x6b
+ 1269 0242 02       		.uleb128 0x2
+ 1270 0243 91       		.byte	0x91
+ 1271 0244 75       		.sleb128 -11
+ 1272 0245 00       		.byte	0
+ 1273 0246 0C       		.uleb128 0xc
+ 1274 0247 E8020000 		.4byte	.LASF36
+ 1275 024b 01       		.byte	0x1
+ 1276 024c D001     		.2byte	0x1d0
+ 1277 024e 6B000000 		.4byte	0x6b
+ 1278 0252 00000000 		.4byte	.LFB10
+ 1279 0256 1C000000 		.4byte	.LFE10-.LFB10
+ 1280 025a 01       		.uleb128 0x1
+ 1281 025b 9C       		.byte	0x9c
+ 1282 025c 0D       		.uleb128 0xd
+ 1283 025d D3010000 		.4byte	.LASF37
+ 1284 0261 01       		.byte	0x1
+ 1285 0262 EC01     		.2byte	0x1ec
+ 1286 0264 00000000 		.4byte	.LFB11
+ 1287 0268 24000000 		.4byte	.LFE11-.LFB11
+ 1288 026c 01       		.uleb128 0x1
+ 1289 026d 9C       		.byte	0x9c
+ 1290 026e 82020000 		.4byte	0x282
+ 1291 0272 0E       		.uleb128 0xe
+ 1292 0273 F7010000 		.4byte	.LASF38
+ 1293 0277 01       		.byte	0x1
+ 1294 0278 EC01     		.2byte	0x1ec
+ 1295 027a 6B000000 		.4byte	0x6b
+ 1296 027e 02       		.uleb128 0x2
+ 1297 027f 91       		.byte	0x91
+ 1298 0280 77       		.sleb128 -9
+ 1299 0281 00       		.byte	0
+ 1300 0282 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 33
 
 
- 975 000a 0E       		.uleb128 0xe
- 976 000b 55       		.uleb128 0x55
- 977 000c 17       		.uleb128 0x17
- 978 000d 11       		.uleb128 0x11
- 979 000e 01       		.uleb128 0x1
- 980 000f 10       		.uleb128 0x10
- 981 0010 17       		.uleb128 0x17
- 982 0011 00       		.byte	0
- 983 0012 00       		.byte	0
- 984 0013 02       		.uleb128 0x2
- 985 0014 24       		.uleb128 0x24
- 986 0015 00       		.byte	0
- 987 0016 0B       		.uleb128 0xb
- 988 0017 0B       		.uleb128 0xb
- 989 0018 3E       		.uleb128 0x3e
- 990 0019 0B       		.uleb128 0xb
- 991 001a 03       		.uleb128 0x3
- 992 001b 0E       		.uleb128 0xe
- 993 001c 00       		.byte	0
- 994 001d 00       		.byte	0
- 995 001e 03       		.uleb128 0x3
- 996 001f 24       		.uleb128 0x24
- 997 0020 00       		.byte	0
- 998 0021 0B       		.uleb128 0xb
- 999 0022 0B       		.uleb128 0xb
- 1000 0023 3E       		.uleb128 0x3e
- 1001 0024 0B       		.uleb128 0xb
- 1002 0025 03       		.uleb128 0x3
- 1003 0026 08       		.uleb128 0x8
- 1004 0027 00       		.byte	0
- 1005 0028 00       		.byte	0
- 1006 0029 04       		.uleb128 0x4
- 1007 002a 16       		.uleb128 0x16
- 1008 002b 00       		.byte	0
- 1009 002c 03       		.uleb128 0x3
- 1010 002d 0E       		.uleb128 0xe
- 1011 002e 3A       		.uleb128 0x3a
- 1012 002f 0B       		.uleb128 0xb
- 1013 0030 3B       		.uleb128 0x3b
- 1014 0031 05       		.uleb128 0x5
- 1015 0032 49       		.uleb128 0x49
- 1016 0033 13       		.uleb128 0x13
- 1017 0034 00       		.byte	0
- 1018 0035 00       		.byte	0
- 1019 0036 05       		.uleb128 0x5
- 1020 0037 35       		.uleb128 0x35
- 1021 0038 00       		.byte	0
- 1022 0039 49       		.uleb128 0x49
- 1023 003a 13       		.uleb128 0x13
- 1024 003b 00       		.byte	0
- 1025 003c 00       		.byte	0
- 1026 003d 06       		.uleb128 0x6
- 1027 003e 2E       		.uleb128 0x2e
- 1028 003f 00       		.byte	0
- 1029 0040 3F       		.uleb128 0x3f
- 1030 0041 19       		.uleb128 0x19
- 1031 0042 03       		.uleb128 0x3
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 29
+ 1301 0283 9E010000 		.4byte	.LASF39
+ 1302 0287 01       		.byte	0x1
+ 1303 0288 0102     		.2byte	0x201
+ 1304 028a 6B000000 		.4byte	0x6b
+ 1305 028e 00000000 		.4byte	.LFB12
+ 1306 0292 1C000000 		.4byte	.LFE12-.LFB12
+ 1307 0296 01       		.uleb128 0x1
+ 1308 0297 9C       		.byte	0x9c
+ 1309 0298 00       		.byte	0
+ 1310              		.section	.debug_abbrev,"",%progbits
+ 1311              	.Ldebug_abbrev0:
+ 1312 0000 01       		.uleb128 0x1
+ 1313 0001 11       		.uleb128 0x11
+ 1314 0002 01       		.byte	0x1
+ 1315 0003 25       		.uleb128 0x25
+ 1316 0004 0E       		.uleb128 0xe
+ 1317 0005 13       		.uleb128 0x13
+ 1318 0006 0B       		.uleb128 0xb
+ 1319 0007 03       		.uleb128 0x3
+ 1320 0008 0E       		.uleb128 0xe
+ 1321 0009 1B       		.uleb128 0x1b
+ 1322 000a 0E       		.uleb128 0xe
+ 1323 000b 55       		.uleb128 0x55
+ 1324 000c 17       		.uleb128 0x17
+ 1325 000d 11       		.uleb128 0x11
+ 1326 000e 01       		.uleb128 0x1
+ 1327 000f 10       		.uleb128 0x10
+ 1328 0010 17       		.uleb128 0x17
+ 1329 0011 00       		.byte	0
+ 1330 0012 00       		.byte	0
+ 1331 0013 02       		.uleb128 0x2
+ 1332 0014 24       		.uleb128 0x24
+ 1333 0015 00       		.byte	0
+ 1334 0016 0B       		.uleb128 0xb
+ 1335 0017 0B       		.uleb128 0xb
+ 1336 0018 3E       		.uleb128 0x3e
+ 1337 0019 0B       		.uleb128 0xb
+ 1338 001a 03       		.uleb128 0x3
+ 1339 001b 0E       		.uleb128 0xe
+ 1340 001c 00       		.byte	0
+ 1341 001d 00       		.byte	0
+ 1342 001e 03       		.uleb128 0x3
+ 1343 001f 24       		.uleb128 0x24
+ 1344 0020 00       		.byte	0
+ 1345 0021 0B       		.uleb128 0xb
+ 1346 0022 0B       		.uleb128 0xb
+ 1347 0023 3E       		.uleb128 0x3e
+ 1348 0024 0B       		.uleb128 0xb
+ 1349 0025 03       		.uleb128 0x3
+ 1350 0026 08       		.uleb128 0x8
+ 1351 0027 00       		.byte	0
+ 1352 0028 00       		.byte	0
+ 1353 0029 04       		.uleb128 0x4
+ 1354 002a 16       		.uleb128 0x16
+ 1355 002b 00       		.byte	0
+ 1356 002c 03       		.uleb128 0x3
+ 1357 002d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 34
 
 
- 1032 0043 0E       		.uleb128 0xe
- 1033 0044 3A       		.uleb128 0x3a
- 1034 0045 0B       		.uleb128 0xb
- 1035 0046 3B       		.uleb128 0x3b
- 1036 0047 0B       		.uleb128 0xb
- 1037 0048 27       		.uleb128 0x27
- 1038 0049 19       		.uleb128 0x19
- 1039 004a 11       		.uleb128 0x11
- 1040 004b 01       		.uleb128 0x1
- 1041 004c 12       		.uleb128 0x12
- 1042 004d 06       		.uleb128 0x6
- 1043 004e 40       		.uleb128 0x40
- 1044 004f 18       		.uleb128 0x18
- 1045 0050 9742     		.uleb128 0x2117
- 1046 0052 19       		.uleb128 0x19
- 1047 0053 00       		.byte	0
- 1048 0054 00       		.byte	0
- 1049 0055 07       		.uleb128 0x7
- 1050 0056 2E       		.uleb128 0x2e
- 1051 0057 01       		.byte	0x1
- 1052 0058 3F       		.uleb128 0x3f
- 1053 0059 19       		.uleb128 0x19
- 1054 005a 03       		.uleb128 0x3
- 1055 005b 0E       		.uleb128 0xe
- 1056 005c 3A       		.uleb128 0x3a
- 1057 005d 0B       		.uleb128 0xb
- 1058 005e 3B       		.uleb128 0x3b
- 1059 005f 0B       		.uleb128 0xb
- 1060 0060 27       		.uleb128 0x27
- 1061 0061 19       		.uleb128 0x19
- 1062 0062 11       		.uleb128 0x11
- 1063 0063 01       		.uleb128 0x1
- 1064 0064 12       		.uleb128 0x12
- 1065 0065 06       		.uleb128 0x6
- 1066 0066 40       		.uleb128 0x40
- 1067 0067 18       		.uleb128 0x18
- 1068 0068 9742     		.uleb128 0x2117
- 1069 006a 19       		.uleb128 0x19
- 1070 006b 01       		.uleb128 0x1
- 1071 006c 13       		.uleb128 0x13
- 1072 006d 00       		.byte	0
- 1073 006e 00       		.byte	0
- 1074 006f 08       		.uleb128 0x8
- 1075 0070 0B       		.uleb128 0xb
- 1076 0071 01       		.byte	0x1
- 1077 0072 11       		.uleb128 0x11
- 1078 0073 01       		.uleb128 0x1
- 1079 0074 12       		.uleb128 0x12
- 1080 0075 06       		.uleb128 0x6
- 1081 0076 00       		.byte	0
- 1082 0077 00       		.byte	0
- 1083 0078 09       		.uleb128 0x9
- 1084 0079 34       		.uleb128 0x34
- 1085 007a 00       		.byte	0
- 1086 007b 03       		.uleb128 0x3
- 1087 007c 0E       		.uleb128 0xe
- 1088 007d 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 30
+ 1358 002e 3A       		.uleb128 0x3a
+ 1359 002f 0B       		.uleb128 0xb
+ 1360 0030 3B       		.uleb128 0x3b
+ 1361 0031 05       		.uleb128 0x5
+ 1362 0032 49       		.uleb128 0x49
+ 1363 0033 13       		.uleb128 0x13
+ 1364 0034 00       		.byte	0
+ 1365 0035 00       		.byte	0
+ 1366 0036 05       		.uleb128 0x5
+ 1367 0037 35       		.uleb128 0x35
+ 1368 0038 00       		.byte	0
+ 1369 0039 49       		.uleb128 0x49
+ 1370 003a 13       		.uleb128 0x13
+ 1371 003b 00       		.byte	0
+ 1372 003c 00       		.byte	0
+ 1373 003d 06       		.uleb128 0x6
+ 1374 003e 2E       		.uleb128 0x2e
+ 1375 003f 00       		.byte	0
+ 1376 0040 3F       		.uleb128 0x3f
+ 1377 0041 19       		.uleb128 0x19
+ 1378 0042 03       		.uleb128 0x3
+ 1379 0043 0E       		.uleb128 0xe
+ 1380 0044 3A       		.uleb128 0x3a
+ 1381 0045 0B       		.uleb128 0xb
+ 1382 0046 3B       		.uleb128 0x3b
+ 1383 0047 0B       		.uleb128 0xb
+ 1384 0048 27       		.uleb128 0x27
+ 1385 0049 19       		.uleb128 0x19
+ 1386 004a 11       		.uleb128 0x11
+ 1387 004b 01       		.uleb128 0x1
+ 1388 004c 12       		.uleb128 0x12
+ 1389 004d 06       		.uleb128 0x6
+ 1390 004e 40       		.uleb128 0x40
+ 1391 004f 18       		.uleb128 0x18
+ 1392 0050 9742     		.uleb128 0x2117
+ 1393 0052 19       		.uleb128 0x19
+ 1394 0053 00       		.byte	0
+ 1395 0054 00       		.byte	0
+ 1396 0055 07       		.uleb128 0x7
+ 1397 0056 2E       		.uleb128 0x2e
+ 1398 0057 01       		.byte	0x1
+ 1399 0058 3F       		.uleb128 0x3f
+ 1400 0059 19       		.uleb128 0x19
+ 1401 005a 03       		.uleb128 0x3
+ 1402 005b 0E       		.uleb128 0xe
+ 1403 005c 3A       		.uleb128 0x3a
+ 1404 005d 0B       		.uleb128 0xb
+ 1405 005e 3B       		.uleb128 0x3b
+ 1406 005f 0B       		.uleb128 0xb
+ 1407 0060 27       		.uleb128 0x27
+ 1408 0061 19       		.uleb128 0x19
+ 1409 0062 11       		.uleb128 0x11
+ 1410 0063 01       		.uleb128 0x1
+ 1411 0064 12       		.uleb128 0x12
+ 1412 0065 06       		.uleb128 0x6
+ 1413 0066 40       		.uleb128 0x40
+ 1414 0067 18       		.uleb128 0x18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 35
 
 
- 1089 007e 0B       		.uleb128 0xb
- 1090 007f 3B       		.uleb128 0x3b
- 1091 0080 0B       		.uleb128 0xb
- 1092 0081 49       		.uleb128 0x49
- 1093 0082 13       		.uleb128 0x13
- 1094 0083 02       		.uleb128 0x2
- 1095 0084 17       		.uleb128 0x17
- 1096 0085 00       		.byte	0
- 1097 0086 00       		.byte	0
- 1098 0087 0A       		.uleb128 0xa
- 1099 0088 05       		.uleb128 0x5
- 1100 0089 00       		.byte	0
- 1101 008a 03       		.uleb128 0x3
- 1102 008b 0E       		.uleb128 0xe
- 1103 008c 3A       		.uleb128 0x3a
- 1104 008d 0B       		.uleb128 0xb
- 1105 008e 3B       		.uleb128 0x3b
- 1106 008f 0B       		.uleb128 0xb
- 1107 0090 49       		.uleb128 0x49
- 1108 0091 13       		.uleb128 0x13
- 1109 0092 02       		.uleb128 0x2
- 1110 0093 18       		.uleb128 0x18
- 1111 0094 00       		.byte	0
- 1112 0095 00       		.byte	0
- 1113 0096 0B       		.uleb128 0xb
- 1114 0097 2E       		.uleb128 0x2e
- 1115 0098 00       		.byte	0
- 1116 0099 3F       		.uleb128 0x3f
- 1117 009a 19       		.uleb128 0x19
- 1118 009b 03       		.uleb128 0x3
- 1119 009c 0E       		.uleb128 0xe
- 1120 009d 3A       		.uleb128 0x3a
- 1121 009e 0B       		.uleb128 0xb
- 1122 009f 3B       		.uleb128 0x3b
- 1123 00a0 05       		.uleb128 0x5
- 1124 00a1 27       		.uleb128 0x27
- 1125 00a2 19       		.uleb128 0x19
- 1126 00a3 49       		.uleb128 0x49
- 1127 00a4 13       		.uleb128 0x13
- 1128 00a5 11       		.uleb128 0x11
- 1129 00a6 01       		.uleb128 0x1
- 1130 00a7 12       		.uleb128 0x12
- 1131 00a8 06       		.uleb128 0x6
- 1132 00a9 40       		.uleb128 0x40
- 1133 00aa 18       		.uleb128 0x18
- 1134 00ab 9742     		.uleb128 0x2117
- 1135 00ad 19       		.uleb128 0x19
- 1136 00ae 00       		.byte	0
- 1137 00af 00       		.byte	0
- 1138 00b0 0C       		.uleb128 0xc
- 1139 00b1 2E       		.uleb128 0x2e
- 1140 00b2 01       		.byte	0x1
- 1141 00b3 3F       		.uleb128 0x3f
- 1142 00b4 19       		.uleb128 0x19
- 1143 00b5 03       		.uleb128 0x3
- 1144 00b6 0E       		.uleb128 0xe
- 1145 00b7 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 31
+ 1415 0068 9742     		.uleb128 0x2117
+ 1416 006a 19       		.uleb128 0x19
+ 1417 006b 01       		.uleb128 0x1
+ 1418 006c 13       		.uleb128 0x13
+ 1419 006d 00       		.byte	0
+ 1420 006e 00       		.byte	0
+ 1421 006f 08       		.uleb128 0x8
+ 1422 0070 0B       		.uleb128 0xb
+ 1423 0071 01       		.byte	0x1
+ 1424 0072 11       		.uleb128 0x11
+ 1425 0073 01       		.uleb128 0x1
+ 1426 0074 12       		.uleb128 0x12
+ 1427 0075 06       		.uleb128 0x6
+ 1428 0076 00       		.byte	0
+ 1429 0077 00       		.byte	0
+ 1430 0078 09       		.uleb128 0x9
+ 1431 0079 34       		.uleb128 0x34
+ 1432 007a 00       		.byte	0
+ 1433 007b 03       		.uleb128 0x3
+ 1434 007c 0E       		.uleb128 0xe
+ 1435 007d 3A       		.uleb128 0x3a
+ 1436 007e 0B       		.uleb128 0xb
+ 1437 007f 3B       		.uleb128 0x3b
+ 1438 0080 0B       		.uleb128 0xb
+ 1439 0081 49       		.uleb128 0x49
+ 1440 0082 13       		.uleb128 0x13
+ 1441 0083 02       		.uleb128 0x2
+ 1442 0084 18       		.uleb128 0x18
+ 1443 0085 00       		.byte	0
+ 1444 0086 00       		.byte	0
+ 1445 0087 0A       		.uleb128 0xa
+ 1446 0088 05       		.uleb128 0x5
+ 1447 0089 00       		.byte	0
+ 1448 008a 03       		.uleb128 0x3
+ 1449 008b 0E       		.uleb128 0xe
+ 1450 008c 3A       		.uleb128 0x3a
+ 1451 008d 0B       		.uleb128 0xb
+ 1452 008e 3B       		.uleb128 0x3b
+ 1453 008f 0B       		.uleb128 0xb
+ 1454 0090 49       		.uleb128 0x49
+ 1455 0091 13       		.uleb128 0x13
+ 1456 0092 02       		.uleb128 0x2
+ 1457 0093 18       		.uleb128 0x18
+ 1458 0094 00       		.byte	0
+ 1459 0095 00       		.byte	0
+ 1460 0096 0B       		.uleb128 0xb
+ 1461 0097 2E       		.uleb128 0x2e
+ 1462 0098 01       		.byte	0x1
+ 1463 0099 3F       		.uleb128 0x3f
+ 1464 009a 19       		.uleb128 0x19
+ 1465 009b 03       		.uleb128 0x3
+ 1466 009c 0E       		.uleb128 0xe
+ 1467 009d 3A       		.uleb128 0x3a
+ 1468 009e 0B       		.uleb128 0xb
+ 1469 009f 3B       		.uleb128 0x3b
+ 1470 00a0 0B       		.uleb128 0xb
+ 1471 00a1 27       		.uleb128 0x27
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 36
 
 
- 1146 00b8 0B       		.uleb128 0xb
- 1147 00b9 3B       		.uleb128 0x3b
- 1148 00ba 05       		.uleb128 0x5
- 1149 00bb 27       		.uleb128 0x27
- 1150 00bc 19       		.uleb128 0x19
- 1151 00bd 11       		.uleb128 0x11
- 1152 00be 01       		.uleb128 0x1
- 1153 00bf 12       		.uleb128 0x12
- 1154 00c0 06       		.uleb128 0x6
- 1155 00c1 40       		.uleb128 0x40
- 1156 00c2 18       		.uleb128 0x18
- 1157 00c3 9742     		.uleb128 0x2117
- 1158 00c5 19       		.uleb128 0x19
- 1159 00c6 01       		.uleb128 0x1
- 1160 00c7 13       		.uleb128 0x13
- 1161 00c8 00       		.byte	0
- 1162 00c9 00       		.byte	0
- 1163 00ca 0D       		.uleb128 0xd
- 1164 00cb 05       		.uleb128 0x5
- 1165 00cc 00       		.byte	0
- 1166 00cd 03       		.uleb128 0x3
- 1167 00ce 0E       		.uleb128 0xe
- 1168 00cf 3A       		.uleb128 0x3a
- 1169 00d0 0B       		.uleb128 0xb
- 1170 00d1 3B       		.uleb128 0x3b
- 1171 00d2 05       		.uleb128 0x5
- 1172 00d3 49       		.uleb128 0x49
- 1173 00d4 13       		.uleb128 0x13
- 1174 00d5 02       		.uleb128 0x2
- 1175 00d6 17       		.uleb128 0x17
- 1176 00d7 00       		.byte	0
- 1177 00d8 00       		.byte	0
- 1178 00d9 0E       		.uleb128 0xe
- 1179 00da 05       		.uleb128 0x5
- 1180 00db 00       		.byte	0
- 1181 00dc 03       		.uleb128 0x3
- 1182 00dd 0E       		.uleb128 0xe
- 1183 00de 3A       		.uleb128 0x3a
- 1184 00df 0B       		.uleb128 0xb
- 1185 00e0 3B       		.uleb128 0x3b
- 1186 00e1 0B       		.uleb128 0xb
- 1187 00e2 49       		.uleb128 0x49
- 1188 00e3 13       		.uleb128 0x13
- 1189 00e4 02       		.uleb128 0x2
- 1190 00e5 17       		.uleb128 0x17
- 1191 00e6 00       		.byte	0
- 1192 00e7 00       		.byte	0
- 1193 00e8 0F       		.uleb128 0xf
- 1194 00e9 34       		.uleb128 0x34
- 1195 00ea 00       		.byte	0
- 1196 00eb 03       		.uleb128 0x3
- 1197 00ec 0E       		.uleb128 0xe
- 1198 00ed 3A       		.uleb128 0x3a
- 1199 00ee 0B       		.uleb128 0xb
- 1200 00ef 3B       		.uleb128 0x3b
- 1201 00f0 0B       		.uleb128 0xb
- 1202 00f1 49       		.uleb128 0x49
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 32
+ 1472 00a2 19       		.uleb128 0x19
+ 1473 00a3 11       		.uleb128 0x11
+ 1474 00a4 01       		.uleb128 0x1
+ 1475 00a5 12       		.uleb128 0x12
+ 1476 00a6 06       		.uleb128 0x6
+ 1477 00a7 40       		.uleb128 0x40
+ 1478 00a8 18       		.uleb128 0x18
+ 1479 00a9 9642     		.uleb128 0x2116
+ 1480 00ab 19       		.uleb128 0x19
+ 1481 00ac 01       		.uleb128 0x1
+ 1482 00ad 13       		.uleb128 0x13
+ 1483 00ae 00       		.byte	0
+ 1484 00af 00       		.byte	0
+ 1485 00b0 0C       		.uleb128 0xc
+ 1486 00b1 2E       		.uleb128 0x2e
+ 1487 00b2 00       		.byte	0
+ 1488 00b3 3F       		.uleb128 0x3f
+ 1489 00b4 19       		.uleb128 0x19
+ 1490 00b5 03       		.uleb128 0x3
+ 1491 00b6 0E       		.uleb128 0xe
+ 1492 00b7 3A       		.uleb128 0x3a
+ 1493 00b8 0B       		.uleb128 0xb
+ 1494 00b9 3B       		.uleb128 0x3b
+ 1495 00ba 05       		.uleb128 0x5
+ 1496 00bb 27       		.uleb128 0x27
+ 1497 00bc 19       		.uleb128 0x19
+ 1498 00bd 49       		.uleb128 0x49
+ 1499 00be 13       		.uleb128 0x13
+ 1500 00bf 11       		.uleb128 0x11
+ 1501 00c0 01       		.uleb128 0x1
+ 1502 00c1 12       		.uleb128 0x12
+ 1503 00c2 06       		.uleb128 0x6
+ 1504 00c3 40       		.uleb128 0x40
+ 1505 00c4 18       		.uleb128 0x18
+ 1506 00c5 9742     		.uleb128 0x2117
+ 1507 00c7 19       		.uleb128 0x19
+ 1508 00c8 00       		.byte	0
+ 1509 00c9 00       		.byte	0
+ 1510 00ca 0D       		.uleb128 0xd
+ 1511 00cb 2E       		.uleb128 0x2e
+ 1512 00cc 01       		.byte	0x1
+ 1513 00cd 3F       		.uleb128 0x3f
+ 1514 00ce 19       		.uleb128 0x19
+ 1515 00cf 03       		.uleb128 0x3
+ 1516 00d0 0E       		.uleb128 0xe
+ 1517 00d1 3A       		.uleb128 0x3a
+ 1518 00d2 0B       		.uleb128 0xb
+ 1519 00d3 3B       		.uleb128 0x3b
+ 1520 00d4 05       		.uleb128 0x5
+ 1521 00d5 27       		.uleb128 0x27
+ 1522 00d6 19       		.uleb128 0x19
+ 1523 00d7 11       		.uleb128 0x11
+ 1524 00d8 01       		.uleb128 0x1
+ 1525 00d9 12       		.uleb128 0x12
+ 1526 00da 06       		.uleb128 0x6
+ 1527 00db 40       		.uleb128 0x40
+ 1528 00dc 18       		.uleb128 0x18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 37
 
 
- 1203 00f2 13       		.uleb128 0x13
- 1204 00f3 02       		.uleb128 0x2
- 1205 00f4 18       		.uleb128 0x18
- 1206 00f5 00       		.byte	0
- 1207 00f6 00       		.byte	0
- 1208 00f7 10       		.uleb128 0x10
- 1209 00f8 898201   		.uleb128 0x4109
- 1210 00fb 00       		.byte	0
- 1211 00fc 11       		.uleb128 0x11
- 1212 00fd 01       		.uleb128 0x1
- 1213 00fe 31       		.uleb128 0x31
- 1214 00ff 13       		.uleb128 0x13
- 1215 0100 00       		.byte	0
- 1216 0101 00       		.byte	0
- 1217 0102 11       		.uleb128 0x11
- 1218 0103 34       		.uleb128 0x34
- 1219 0104 00       		.byte	0
- 1220 0105 03       		.uleb128 0x3
- 1221 0106 0E       		.uleb128 0xe
- 1222 0107 3A       		.uleb128 0x3a
- 1223 0108 0B       		.uleb128 0xb
- 1224 0109 3B       		.uleb128 0x3b
- 1225 010a 05       		.uleb128 0x5
- 1226 010b 49       		.uleb128 0x49
- 1227 010c 13       		.uleb128 0x13
- 1228 010d 02       		.uleb128 0x2
- 1229 010e 17       		.uleb128 0x17
- 1230 010f 00       		.byte	0
- 1231 0110 00       		.byte	0
- 1232 0111 12       		.uleb128 0x12
- 1233 0112 34       		.uleb128 0x34
- 1234 0113 00       		.byte	0
- 1235 0114 03       		.uleb128 0x3
- 1236 0115 0E       		.uleb128 0xe
- 1237 0116 3A       		.uleb128 0x3a
- 1238 0117 0B       		.uleb128 0xb
- 1239 0118 3B       		.uleb128 0x3b
- 1240 0119 05       		.uleb128 0x5
- 1241 011a 49       		.uleb128 0x49
- 1242 011b 13       		.uleb128 0x13
- 1243 011c 02       		.uleb128 0x2
- 1244 011d 18       		.uleb128 0x18
- 1245 011e 00       		.byte	0
- 1246 011f 00       		.byte	0
- 1247 0120 00       		.byte	0
- 1248              		.section	.debug_loc,"",%progbits
- 1249              	.Ldebug_loc0:
- 1250              	.LLST0:
- 1251 0000 2A000000 		.4byte	.LVL0
- 1252 0004 5A000000 		.4byte	.LVL1
- 1253 0008 0100     		.2byte	0x1
- 1254 000a 52       		.byte	0x52
- 1255 000b 00000000 		.4byte	0
- 1256 000f 00000000 		.4byte	0
- 1257              	.LLST1:
- 1258 0013 00000000 		.4byte	.LVL3
- 1259 0017 08000000 		.4byte	.LVL4
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 33
+ 1529 00dd 9742     		.uleb128 0x2117
+ 1530 00df 19       		.uleb128 0x19
+ 1531 00e0 01       		.uleb128 0x1
+ 1532 00e1 13       		.uleb128 0x13
+ 1533 00e2 00       		.byte	0
+ 1534 00e3 00       		.byte	0
+ 1535 00e4 0E       		.uleb128 0xe
+ 1536 00e5 05       		.uleb128 0x5
+ 1537 00e6 00       		.byte	0
+ 1538 00e7 03       		.uleb128 0x3
+ 1539 00e8 0E       		.uleb128 0xe
+ 1540 00e9 3A       		.uleb128 0x3a
+ 1541 00ea 0B       		.uleb128 0xb
+ 1542 00eb 3B       		.uleb128 0x3b
+ 1543 00ec 05       		.uleb128 0x5
+ 1544 00ed 49       		.uleb128 0x49
+ 1545 00ee 13       		.uleb128 0x13
+ 1546 00ef 02       		.uleb128 0x2
+ 1547 00f0 18       		.uleb128 0x18
+ 1548 00f1 00       		.byte	0
+ 1549 00f2 00       		.byte	0
+ 1550 00f3 0F       		.uleb128 0xf
+ 1551 00f4 2E       		.uleb128 0x2e
+ 1552 00f5 01       		.byte	0x1
+ 1553 00f6 3F       		.uleb128 0x3f
+ 1554 00f7 19       		.uleb128 0x19
+ 1555 00f8 03       		.uleb128 0x3
+ 1556 00f9 0E       		.uleb128 0xe
+ 1557 00fa 3A       		.uleb128 0x3a
+ 1558 00fb 0B       		.uleb128 0xb
+ 1559 00fc 3B       		.uleb128 0x3b
+ 1560 00fd 05       		.uleb128 0x5
+ 1561 00fe 27       		.uleb128 0x27
+ 1562 00ff 19       		.uleb128 0x19
+ 1563 0100 11       		.uleb128 0x11
+ 1564 0101 01       		.uleb128 0x1
+ 1565 0102 12       		.uleb128 0x12
+ 1566 0103 06       		.uleb128 0x6
+ 1567 0104 40       		.uleb128 0x40
+ 1568 0105 18       		.uleb128 0x18
+ 1569 0106 9642     		.uleb128 0x2116
+ 1570 0108 19       		.uleb128 0x19
+ 1571 0109 01       		.uleb128 0x1
+ 1572 010a 13       		.uleb128 0x13
+ 1573 010b 00       		.byte	0
+ 1574 010c 00       		.byte	0
+ 1575 010d 10       		.uleb128 0x10
+ 1576 010e 34       		.uleb128 0x34
+ 1577 010f 00       		.byte	0
+ 1578 0110 03       		.uleb128 0x3
+ 1579 0111 0E       		.uleb128 0xe
+ 1580 0112 3A       		.uleb128 0x3a
+ 1581 0113 0B       		.uleb128 0xb
+ 1582 0114 3B       		.uleb128 0x3b
+ 1583 0115 05       		.uleb128 0x5
+ 1584 0116 49       		.uleb128 0x49
+ 1585 0117 13       		.uleb128 0x13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 38
 
 
- 1260 001b 0100     		.2byte	0x1
- 1261 001d 50       		.byte	0x50
- 1262 001e 08000000 		.4byte	.LVL4
- 1263 0022 14000000 		.4byte	.LFE6
- 1264 0026 0400     		.2byte	0x4
- 1265 0028 F3       		.byte	0xf3
- 1266 0029 01       		.uleb128 0x1
- 1267 002a 50       		.byte	0x50
- 1268 002b 9F       		.byte	0x9f
- 1269 002c 00000000 		.4byte	0
- 1270 0030 00000000 		.4byte	0
- 1271              	.LLST2:
- 1272 0034 00000000 		.4byte	.LVL5
- 1273 0038 06000000 		.4byte	.LVL6
- 1274 003c 0100     		.2byte	0x1
- 1275 003e 50       		.byte	0x50
- 1276 003f 06000000 		.4byte	.LVL6
- 1277 0043 18000000 		.4byte	.LFE7
- 1278 0047 0400     		.2byte	0x4
- 1279 0049 F3       		.byte	0xf3
- 1280 004a 01       		.uleb128 0x1
- 1281 004b 50       		.byte	0x50
- 1282 004c 9F       		.byte	0x9f
- 1283 004d 00000000 		.4byte	0
- 1284 0051 00000000 		.4byte	0
- 1285              	.LLST3:
- 1286 0055 00000000 		.4byte	.LVL7
- 1287 0059 09000000 		.4byte	.LVL8-1
- 1288 005d 0100     		.2byte	0x1
- 1289 005f 50       		.byte	0x50
- 1290 0060 09000000 		.4byte	.LVL8-1
- 1291 0064 D8000000 		.4byte	.LFE4
- 1292 0068 0400     		.2byte	0x4
- 1293 006a F3       		.byte	0xf3
- 1294 006b 01       		.uleb128 0x1
- 1295 006c 50       		.byte	0x50
- 1296 006d 9F       		.byte	0x9f
- 1297 006e 00000000 		.4byte	0
- 1298 0072 00000000 		.4byte	0
- 1299              	.LLST4:
- 1300 0076 00000000 		.4byte	.LVL7
- 1301 007a 09000000 		.4byte	.LVL8-1
- 1302 007e 0100     		.2byte	0x1
- 1303 0080 51       		.byte	0x51
- 1304 0081 09000000 		.4byte	.LVL8-1
- 1305 0085 D8000000 		.4byte	.LFE4
- 1306 0089 0400     		.2byte	0x4
- 1307 008b F3       		.byte	0xf3
- 1308 008c 01       		.uleb128 0x1
- 1309 008d 51       		.byte	0x51
- 1310 008e 9F       		.byte	0x9f
- 1311 008f 00000000 		.4byte	0
- 1312 0093 00000000 		.4byte	0
- 1313              	.LLST5:
- 1314 0097 1C000000 		.4byte	.LVL11
- 1315 009b 2A000000 		.4byte	.LVL12
- 1316 009f 0100     		.2byte	0x1
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 34
+ 1586 0118 02       		.uleb128 0x2
+ 1587 0119 18       		.uleb128 0x18
+ 1588 011a 00       		.byte	0
+ 1589 011b 00       		.byte	0
+ 1590 011c 00       		.byte	0
+ 1591              		.section	.debug_aranges,"",%progbits
+ 1592 0000 7C000000 		.4byte	0x7c
+ 1593 0004 0200     		.2byte	0x2
+ 1594 0006 00000000 		.4byte	.Ldebug_info0
+ 1595 000a 04       		.byte	0x4
+ 1596 000b 00       		.byte	0
+ 1597 000c 0000     		.2byte	0
+ 1598 000e 0000     		.2byte	0
+ 1599 0010 00000000 		.4byte	.LFB0
+ 1600 0014 34000000 		.4byte	.LFE0-.LFB0
+ 1601 0018 00000000 		.4byte	.LFB1
+ 1602 001c 34000000 		.4byte	.LFE1-.LFB1
+ 1603 0020 00000000 		.4byte	.LFB2
+ 1604 0024 B0000000 		.4byte	.LFE2-.LFB2
+ 1605 0028 00000000 		.4byte	.LFB3
+ 1606 002c 40000000 		.4byte	.LFE3-.LFB3
+ 1607 0030 00000000 		.4byte	.LFB4
+ 1608 0034 64010000 		.4byte	.LFE4-.LFB4
+ 1609 0038 00000000 		.4byte	.LFB5
+ 1610 003c 18000000 		.4byte	.LFE5-.LFB5
+ 1611 0040 00000000 		.4byte	.LFB6
+ 1612 0044 34000000 		.4byte	.LFE6-.LFB6
+ 1613 0048 00000000 		.4byte	.LFB7
+ 1614 004c 34000000 		.4byte	.LFE7-.LFB7
+ 1615 0050 00000000 		.4byte	.LFB8
+ 1616 0054 1C000000 		.4byte	.LFE8-.LFB8
+ 1617 0058 00000000 		.4byte	.LFB9
+ 1618 005c C4000000 		.4byte	.LFE9-.LFB9
+ 1619 0060 00000000 		.4byte	.LFB10
+ 1620 0064 1C000000 		.4byte	.LFE10-.LFB10
+ 1621 0068 00000000 		.4byte	.LFB11
+ 1622 006c 24000000 		.4byte	.LFE11-.LFB11
+ 1623 0070 00000000 		.4byte	.LFB12
+ 1624 0074 1C000000 		.4byte	.LFE12-.LFB12
+ 1625 0078 00000000 		.4byte	0
+ 1626 007c 00000000 		.4byte	0
+ 1627              		.section	.debug_ranges,"",%progbits
+ 1628              	.Ldebug_ranges0:
+ 1629 0000 00000000 		.4byte	.LFB0
+ 1630 0004 34000000 		.4byte	.LFE0
+ 1631 0008 00000000 		.4byte	.LFB1
+ 1632 000c 34000000 		.4byte	.LFE1
+ 1633 0010 00000000 		.4byte	.LFB2
+ 1634 0014 B0000000 		.4byte	.LFE2
+ 1635 0018 00000000 		.4byte	.LFB3
+ 1636 001c 40000000 		.4byte	.LFE3
+ 1637 0020 00000000 		.4byte	.LFB4
+ 1638 0024 64010000 		.4byte	.LFE4
+ 1639 0028 00000000 		.4byte	.LFB5
+ 1640 002c 18000000 		.4byte	.LFE5
+ 1641 0030 00000000 		.4byte	.LFB6
+ 1642 0034 34000000 		.4byte	.LFE6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 39
 
 
- 1317 00a1 52       		.byte	0x52
- 1318 00a2 34000000 		.4byte	.LVL13
- 1319 00a6 36000000 		.4byte	.LVL14
- 1320 00aa 0100     		.2byte	0x1
- 1321 00ac 52       		.byte	0x52
- 1322 00ad 36000000 		.4byte	.LVL14
- 1323 00b1 38000000 		.4byte	.LVL15
- 1324 00b5 0500     		.2byte	0x5
- 1325 00b7 73       		.byte	0x73
- 1326 00b8 00       		.sleb128 0
- 1327 00b9 31       		.byte	0x31
- 1328 00ba 1A       		.byte	0x1a
- 1329 00bb 9F       		.byte	0x9f
- 1330 00bc 44000000 		.4byte	.LVL16
- 1331 00c0 A2000000 		.4byte	.LVL18
- 1332 00c4 0100     		.2byte	0x1
- 1333 00c6 52       		.byte	0x52
- 1334 00c7 A4000000 		.4byte	.LVL19
- 1335 00cb A6000000 		.4byte	.LVL20
- 1336 00cf 0100     		.2byte	0x1
- 1337 00d1 52       		.byte	0x52
- 1338 00d2 B6000000 		.4byte	.LVL21
- 1339 00d6 C2000000 		.4byte	.LVL22
- 1340 00da 0100     		.2byte	0x1
- 1341 00dc 52       		.byte	0x52
- 1342 00dd 00000000 		.4byte	0
- 1343 00e1 00000000 		.4byte	0
- 1344              	.LLST6:
- 1345 00e5 0C000000 		.4byte	.LVL9
- 1346 00e9 4E000000 		.4byte	.LVL17
- 1347 00ed 0100     		.2byte	0x1
- 1348 00ef 54       		.byte	0x54
- 1349 00f0 00000000 		.4byte	0
- 1350 00f4 00000000 		.4byte	0
- 1351              	.LLST7:
- 1352 00f8 00000000 		.4byte	.LVL23
- 1353 00fc 07000000 		.4byte	.LVL24-1
- 1354 0100 0100     		.2byte	0x1
- 1355 0102 50       		.byte	0x50
- 1356 0103 07000000 		.4byte	.LVL24-1
- 1357 0107 5C000000 		.4byte	.LFE9
- 1358 010b 0400     		.2byte	0x4
- 1359 010d F3       		.byte	0xf3
- 1360 010e 01       		.uleb128 0x1
- 1361 010f 50       		.byte	0x50
- 1362 0110 9F       		.byte	0x9f
- 1363 0111 00000000 		.4byte	0
- 1364 0115 00000000 		.4byte	0
- 1365              	.LLST8:
- 1366 0119 0A000000 		.4byte	.LVL25
- 1367 011d 56000000 		.4byte	.LVL29
- 1368 0121 0100     		.2byte	0x1
- 1369 0123 55       		.byte	0x55
- 1370 0124 00000000 		.4byte	0
- 1371 0128 00000000 		.4byte	0
- 1372              	.LLST9:
- 1373 012c 00000000 		.4byte	.LVL30
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 35
+ 1643 0038 00000000 		.4byte	.LFB7
+ 1644 003c 34000000 		.4byte	.LFE7
+ 1645 0040 00000000 		.4byte	.LFB8
+ 1646 0044 1C000000 		.4byte	.LFE8
+ 1647 0048 00000000 		.4byte	.LFB9
+ 1648 004c C4000000 		.4byte	.LFE9
+ 1649 0050 00000000 		.4byte	.LFB10
+ 1650 0054 1C000000 		.4byte	.LFE10
+ 1651 0058 00000000 		.4byte	.LFB11
+ 1652 005c 24000000 		.4byte	.LFE11
+ 1653 0060 00000000 		.4byte	.LFB12
+ 1654 0064 1C000000 		.4byte	.LFE12
+ 1655 0068 00000000 		.4byte	0
+ 1656 006c 00000000 		.4byte	0
+ 1657              		.section	.debug_line,"",%progbits
+ 1658              	.Ldebug_line0:
+ 1659 0000 CB010000 		.section	.debug_str,"MS",%progbits,1
+ 1659      02004900 
+ 1659      00000201 
+ 1659      FB0E0D00 
+ 1659      01010101 
+ 1660              	.LASF41:
+ 1661 0000 47656E65 		.ascii	"Generated_Source\\PSoC5\\CyScBoostClk.c\000"
+ 1661      72617465 
+ 1661      645F536F 
+ 1661      75726365 
+ 1661      5C50536F 
+ 1662              	.LASF27:
+ 1663 0026 43795363 		.ascii	"CyScBoostClk_SetModeRegister\000"
+ 1663      426F6F73 
+ 1663      74436C6B 
+ 1663      5F536574 
+ 1663      4D6F6465 
+ 1664              	.LASF34:
+ 1665 0043 63757272 		.ascii	"currDiv\000"
+ 1665      44697600 
+ 1666              	.LASF15:
+ 1667 004b 72656731 		.ascii	"reg16\000"
+ 1667      3600
+ 1668              	.LASF2:
+ 1669 0051 73686F72 		.ascii	"short int\000"
+ 1669      7420696E 
+ 1669      7400
+ 1670              	.LASF17:
+ 1671 005b 43795363 		.ascii	"CyScBoostClk_Stop\000"
+ 1671      426F6F73 
+ 1671      74436C6B 
+ 1671      5F53746F 
+ 1671      7000
+ 1672              	.LASF40:
+ 1673 006d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1673      43313120 
+ 1673      352E342E 
+ 1673      31203230 
+ 1673      31363036 
+ 1674 00a0 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1674      20726576 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 40
 
 
- 1374 0130 04000000 		.4byte	.LVL31
- 1375 0134 0100     		.2byte	0x1
- 1376 0136 50       		.byte	0x50
- 1377 0137 04000000 		.4byte	.LVL31
- 1378 013b 10000000 		.4byte	.LFE11
- 1379 013f 0400     		.2byte	0x4
- 1380 0141 F3       		.byte	0xf3
- 1381 0142 01       		.uleb128 0x1
- 1382 0143 50       		.byte	0x50
- 1383 0144 9F       		.byte	0x9f
- 1384 0145 00000000 		.4byte	0
- 1385 0149 00000000 		.4byte	0
- 1386              		.section	.debug_aranges,"",%progbits
- 1387 0000 7C000000 		.4byte	0x7c
- 1388 0004 0200     		.2byte	0x2
- 1389 0006 00000000 		.4byte	.Ldebug_info0
- 1390 000a 04       		.byte	0x4
- 1391 000b 00       		.byte	0
- 1392 000c 0000     		.2byte	0
- 1393 000e 0000     		.2byte	0
- 1394 0010 00000000 		.4byte	.LFB0
- 1395 0014 1C000000 		.4byte	.LFE0-.LFB0
- 1396 0018 00000000 		.4byte	.LFB1
- 1397 001c 1C000000 		.4byte	.LFE1-.LFB1
- 1398 0020 00000000 		.4byte	.LFB2
- 1399 0024 6C000000 		.4byte	.LFE2-.LFB2
- 1400 0028 00000000 		.4byte	.LFB3
- 1401 002c 20000000 		.4byte	.LFE3-.LFB3
- 1402 0030 00000000 		.4byte	.LFB5
- 1403 0034 0C000000 		.4byte	.LFE5-.LFB5
- 1404 0038 00000000 		.4byte	.LFB6
- 1405 003c 14000000 		.4byte	.LFE6-.LFB6
- 1406 0040 00000000 		.4byte	.LFB7
- 1407 0044 18000000 		.4byte	.LFE7-.LFB7
- 1408 0048 00000000 		.4byte	.LFB8
- 1409 004c 10000000 		.4byte	.LFE8-.LFB8
- 1410 0050 00000000 		.4byte	.LFB10
- 1411 0054 10000000 		.4byte	.LFE10-.LFB10
- 1412 0058 00000000 		.4byte	.LFB4
- 1413 005c D8000000 		.4byte	.LFE4-.LFB4
- 1414 0060 00000000 		.4byte	.LFB9
- 1415 0064 5C000000 		.4byte	.LFE9-.LFB9
- 1416 0068 00000000 		.4byte	.LFB11
- 1417 006c 10000000 		.4byte	.LFE11-.LFB11
- 1418 0070 00000000 		.4byte	.LFB12
- 1419 0074 10000000 		.4byte	.LFE12-.LFB12
- 1420 0078 00000000 		.4byte	0
- 1421 007c 00000000 		.4byte	0
- 1422              		.section	.debug_ranges,"",%progbits
- 1423              	.Ldebug_ranges0:
- 1424 0000 00000000 		.4byte	.LFB0
- 1425 0004 1C000000 		.4byte	.LFE0
- 1426 0008 00000000 		.4byte	.LFB1
- 1427 000c 1C000000 		.4byte	.LFE1
- 1428 0010 00000000 		.4byte	.LFB2
- 1429 0014 6C000000 		.4byte	.LFE2
- 1430 0018 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 36
+ 1674      6973696F 
+ 1674      6E203233 
+ 1674      37373135 
+ 1675 00d3 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1675      66756E63 
+ 1675      74696F6E 
+ 1675      2D736563 
+ 1675      74696F6E 
+ 1676              	.LASF18:
+ 1677 00fb 43795363 		.ascii	"CyScBoostClk_StopBlock\000"
+ 1677      426F6F73 
+ 1677      74436C6B 
+ 1677      5F53746F 
+ 1677      70426C6F 
+ 1678              	.LASF10:
+ 1679 0112 75696E74 		.ascii	"uint16\000"
+ 1679      313600
+ 1680              	.LASF23:
+ 1681 0119 72657374 		.ascii	"restart\000"
+ 1681      61727400 
+ 1682              	.LASF20:
+ 1683 0121 43795363 		.ascii	"CyScBoostClk_SetDividerRegister\000"
+ 1683      426F6F73 
+ 1683      74436C6B 
+ 1683      5F536574 
+ 1683      44697669 
+ 1684              	.LASF32:
+ 1685 0141 43795363 		.ascii	"CyScBoostClk_SetSourceRegister\000"
+ 1685      426F6F73 
+ 1685      74436C6B 
+ 1685      5F536574 
+ 1685      536F7572 
+ 1686              	.LASF35:
+ 1687 0160 6F6C6453 		.ascii	"oldSrc\000"
+ 1687      726300
+ 1688              	.LASF9:
+ 1689 0167 75696E74 		.ascii	"uint8\000"
+ 1689      3800
+ 1690              	.LASF22:
+ 1691 016d 636C6B44 		.ascii	"clkDivider\000"
+ 1691      69766964 
+ 1691      657200
+ 1692              	.LASF30:
+ 1693 0178 43795363 		.ascii	"CyScBoostClk_GetDividerRegister\000"
+ 1693      426F6F73 
+ 1693      74436C6B 
+ 1693      5F476574 
+ 1693      44697669 
+ 1694              	.LASF11:
+ 1695 0198 666C6F61 		.ascii	"float\000"
+ 1695      7400
+ 1696              	.LASF39:
+ 1697 019e 43795363 		.ascii	"CyScBoostClk_GetPhaseRegister\000"
+ 1697      426F6F73 
+ 1697      74436C6B 
+ 1697      5F476574 
+ 1697      50686173 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 41
 
 
- 1431 001c 20000000 		.4byte	.LFE3
- 1432 0020 00000000 		.4byte	.LFB5
- 1433 0024 0C000000 		.4byte	.LFE5
- 1434 0028 00000000 		.4byte	.LFB6
- 1435 002c 14000000 		.4byte	.LFE6
- 1436 0030 00000000 		.4byte	.LFB7
- 1437 0034 18000000 		.4byte	.LFE7
- 1438 0038 00000000 		.4byte	.LFB8
- 1439 003c 10000000 		.4byte	.LFE8
- 1440 0040 00000000 		.4byte	.LFB10
- 1441 0044 10000000 		.4byte	.LFE10
- 1442 0048 00000000 		.4byte	.LFB4
- 1443 004c D8000000 		.4byte	.LFE4
- 1444 0050 00000000 		.4byte	.LFB9
- 1445 0054 5C000000 		.4byte	.LFE9
- 1446 0058 00000000 		.4byte	.LFB11
- 1447 005c 10000000 		.4byte	.LFE11
- 1448 0060 00000000 		.4byte	.LFB12
- 1449 0064 10000000 		.4byte	.LFE12
- 1450 0068 00000000 		.4byte	0
- 1451 006c 00000000 		.4byte	0
- 1452              		.section	.debug_line,"",%progbits
- 1453              	.Ldebug_line0:
- 1454 0000 9A010000 		.section	.debug_str,"MS",%progbits,1
- 1454      02004900 
- 1454      00000201 
- 1454      FB0E0D00 
- 1454      01010101 
- 1455              	.LASF41:
- 1456 0000 47656E65 		.ascii	"Generated_Source\\PSoC5\\CyScBoostClk.c\000"
- 1456      72617465 
- 1456      645F536F 
- 1456      75726365 
- 1456      5C50536F 
- 1457              	.LASF20:
- 1458 0026 43795363 		.ascii	"CyScBoostClk_SetModeRegister\000"
- 1458      426F6F73 
- 1458      74436C6B 
- 1458      5F536574 
- 1458      4D6F6465 
- 1459              	.LASF35:
- 1460 0043 63757272 		.ascii	"currDiv\000"
- 1460      44697600 
- 1461              	.LASF15:
- 1462 004b 72656731 		.ascii	"reg16\000"
- 1462      3600
- 1463              	.LASF2:
- 1464 0051 73686F72 		.ascii	"short int\000"
- 1464      7420696E 
- 1464      7400
- 1465              	.LASF17:
- 1466 005b 43795363 		.ascii	"CyScBoostClk_Stop\000"
- 1466      426F6F73 
- 1466      74436C6B 
- 1466      5F53746F 
- 1466      7000
- 1467              	.LASF18:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 37
+ 1698              	.LASF6:
+ 1699 01bc 6C6F6E67 		.ascii	"long long int\000"
+ 1699      206C6F6E 
+ 1699      6720696E 
+ 1699      7400
+ 1700              	.LASF4:
+ 1701 01ca 6C6F6E67 		.ascii	"long int\000"
+ 1701      20696E74 
+ 1701      00
+ 1702              	.LASF37:
+ 1703 01d3 43795363 		.ascii	"CyScBoostClk_SetPhaseRegister\000"
+ 1703      426F6F73 
+ 1703      74436C6B 
+ 1703      5F536574 
+ 1703      50686173 
+ 1704              	.LASF21:
+ 1705 01f1 73746174 		.ascii	"state\000"
+ 1705      6500
+ 1706              	.LASF38:
+ 1707 01f7 636C6B50 		.ascii	"clkPhase\000"
+ 1707      68617365 
+ 1707      00
+ 1708              	.LASF1:
+ 1709 0200 756E7369 		.ascii	"unsigned char\000"
+ 1709      676E6564 
+ 1709      20636861 
+ 1709      7200
+ 1710              	.LASF28:
+ 1711 020e 6D6F6465 		.ascii	"modeBitMask\000"
+ 1711      4269744D 
+ 1711      61736B00 
+ 1712              	.LASF0:
+ 1713 021a 7369676E 		.ascii	"signed char\000"
+ 1713      65642063 
+ 1713      68617200 
+ 1714              	.LASF7:
+ 1715 0226 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1715      206C6F6E 
+ 1715      6720756E 
+ 1715      7369676E 
+ 1715      65642069 
+ 1716              	.LASF8:
+ 1717 023d 756E7369 		.ascii	"unsigned int\000"
+ 1717      676E6564 
+ 1717      20696E74 
+ 1717      00
+ 1718              	.LASF3:
+ 1719 024a 73686F72 		.ascii	"short unsigned int\000"
+ 1719      7420756E 
+ 1719      7369676E 
+ 1719      65642069 
+ 1719      6E7400
+ 1720              	.LASF42:
+ 1721 025d 433A5C55 		.ascii	"C:\\Users\\Andrew\\Documents\\GitHub\\Hydraulic-Mim"
+ 1721      73657273 
+ 1721      5C416E64 
+ 1721      7265775C 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 42
 
 
- 1468 006d 43795363 		.ascii	"CyScBoostClk_StopBlock\000"
- 1468      426F6F73 
- 1468      74436C6B 
- 1468      5F53746F 
- 1468      70426C6F 
- 1469              	.LASF10:
- 1470 0084 75696E74 		.ascii	"uint16\000"
- 1470      313600
- 1471              	.LASF29:
- 1472 008b 72657374 		.ascii	"restart\000"
- 1472      61727400 
- 1473              	.LASF27:
- 1474 0093 43795363 		.ascii	"CyScBoostClk_SetDividerRegister\000"
- 1474      426F6F73 
- 1474      74436C6B 
- 1474      5F536574 
- 1474      44697669 
- 1475              	.LASF33:
- 1476 00b3 43795363 		.ascii	"CyScBoostClk_SetSourceRegister\000"
- 1476      426F6F73 
- 1476      74436C6B 
- 1476      5F536574 
- 1476      536F7572 
- 1477              	.LASF36:
- 1478 00d2 6F6C6453 		.ascii	"oldSrc\000"
- 1478      726300
- 1479              	.LASF9:
- 1480 00d9 75696E74 		.ascii	"uint8\000"
- 1480      3800
- 1481              	.LASF28:
- 1482 00df 636C6B44 		.ascii	"clkDivider\000"
- 1482      69766964 
- 1482      657200
- 1483              	.LASF24:
- 1484 00ea 43795363 		.ascii	"CyScBoostClk_GetDividerRegister\000"
- 1484      426F6F73 
- 1484      74436C6B 
- 1484      5F476574 
- 1484      44697669 
- 1485              	.LASF11:
- 1486 010a 666C6F61 		.ascii	"float\000"
- 1486      7400
- 1487              	.LASF39:
- 1488 0110 43795363 		.ascii	"CyScBoostClk_GetPhaseRegister\000"
- 1488      426F6F73 
- 1488      74436C6B 
- 1488      5F476574 
- 1488      50686173 
- 1489              	.LASF6:
- 1490 012e 6C6F6E67 		.ascii	"long long int\000"
- 1490      206C6F6E 
- 1490      6720696E 
- 1490      7400
- 1491              	.LASF4:
- 1492 013c 6C6F6E67 		.ascii	"long int\000"
- 1492      20696E74 
- 1492      00
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 38
+ 1721      446F6375 
+ 1722 028b 69632D41 		.ascii	"ic-Arm\\PSOC_arm_project.cydsn\000"
+ 1722      726D5C50 
+ 1722      534F435F 
+ 1722      61726D5F 
+ 1722      70726F6A 
+ 1723              	.LASF13:
+ 1724 02a9 63686172 		.ascii	"char\000"
+ 1724      00
+ 1725              	.LASF33:
+ 1726 02ae 636C6B53 		.ascii	"clkSource\000"
+ 1726      6F757263 
+ 1726      6500
+ 1727              	.LASF26:
+ 1728 02b8 63757272 		.ascii	"currSrc\000"
+ 1728      53726300 
+ 1729              	.LASF24:
+ 1730 02c0 6F6C6444 		.ascii	"oldDivider\000"
+ 1730      69766964 
+ 1730      657200
+ 1731              	.LASF31:
+ 1732 02cb 43795363 		.ascii	"CyScBoostClk_GetModeRegister\000"
+ 1732      426F6F73 
+ 1732      74436C6B 
+ 1732      5F476574 
+ 1732      4D6F6465 
+ 1733              	.LASF36:
+ 1734 02e8 43795363 		.ascii	"CyScBoostClk_GetSourceRegister\000"
+ 1734      426F6F73 
+ 1734      74436C6B 
+ 1734      5F476574 
+ 1734      536F7572 
+ 1735              	.LASF14:
+ 1736 0307 72656738 		.ascii	"reg8\000"
+ 1736      00
+ 1737              	.LASF5:
+ 1738 030c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1738      20756E73 
+ 1738      69676E65 
+ 1738      6420696E 
+ 1738      7400
+ 1739              	.LASF12:
+ 1740 031e 646F7562 		.ascii	"double\000"
+ 1740      6C6500
+ 1741              	.LASF25:
+ 1742 0325 656E6162 		.ascii	"enabled\000"
+ 1742      6C656400 
+ 1743              	.LASF16:
+ 1744 032d 43795363 		.ascii	"CyScBoostClk_Start\000"
+ 1744      426F6F73 
+ 1744      74436C6B 
+ 1744      5F537461 
+ 1744      727400
+ 1745              	.LASF19:
+ 1746 0340 43795363 		.ascii	"CyScBoostClk_StandbyPower\000"
+ 1746      426F6F73 
+ 1746      74436C6B 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccy8O41h.s 			page 43
 
 
- 1493              	.LASF37:
- 1494 0145 43795363 		.ascii	"CyScBoostClk_SetPhaseRegister\000"
- 1494      426F6F73 
- 1494      74436C6B 
- 1494      5F536574 
- 1494      50686173 
- 1495              	.LASF21:
- 1496 0163 73746174 		.ascii	"state\000"
- 1496      6500
- 1497              	.LASF38:
- 1498 0169 636C6B50 		.ascii	"clkPhase\000"
- 1498      68617365 
- 1498      00
- 1499              	.LASF1:
- 1500 0172 756E7369 		.ascii	"unsigned char\000"
- 1500      676E6564 
- 1500      20636861 
- 1500      7200
- 1501              	.LASF22:
- 1502 0180 6D6F6465 		.ascii	"modeBitMask\000"
- 1502      4269744D 
- 1502      61736B00 
- 1503              	.LASF0:
- 1504 018c 7369676E 		.ascii	"signed char\000"
- 1504      65642063 
- 1504      68617200 
- 1505              	.LASF7:
- 1506 0198 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1506      206C6F6E 
- 1506      6720756E 
- 1506      7369676E 
- 1506      65642069 
- 1507              	.LASF8:
- 1508 01af 756E7369 		.ascii	"unsigned int\000"
- 1508      676E6564 
- 1508      20696E74 
- 1508      00
- 1509              	.LASF3:
- 1510 01bc 73686F72 		.ascii	"short unsigned int\000"
- 1510      7420756E 
- 1510      7369676E 
- 1510      65642069 
- 1510      6E7400
- 1511              	.LASF13:
- 1512 01cf 63686172 		.ascii	"char\000"
- 1512      00
- 1513              	.LASF34:
- 1514 01d4 636C6B53 		.ascii	"clkSource\000"
- 1514      6F757263 
- 1514      6500
- 1515              	.LASF32:
- 1516 01de 63757272 		.ascii	"currSrc\000"
- 1516      53726300 
- 1517              	.LASF30:
- 1518 01e6 6F6C6444 		.ascii	"oldDivider\000"
- 1518      69766964 
- 1518      657200
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 39
-
-
- 1519              	.LASF25:
- 1520 01f1 43795363 		.ascii	"CyScBoostClk_GetModeRegister\000"
- 1520      426F6F73 
- 1520      74436C6B 
- 1520      5F476574 
- 1520      4D6F6465 
- 1521              	.LASF26:
- 1522 020e 43795363 		.ascii	"CyScBoostClk_GetSourceRegister\000"
- 1522      426F6F73 
- 1522      74436C6B 
- 1522      5F476574 
- 1522      536F7572 
- 1523              	.LASF14:
- 1524 022d 72656738 		.ascii	"reg8\000"
- 1524      00
- 1525              	.LASF5:
- 1526 0232 6C6F6E67 		.ascii	"long unsigned int\000"
- 1526      20756E73 
- 1526      69676E65 
- 1526      6420696E 
- 1526      7400
- 1527              	.LASF12:
- 1528 0244 646F7562 		.ascii	"double\000"
- 1528      6C6500
- 1529              	.LASF31:
- 1530 024b 656E6162 		.ascii	"enabled\000"
- 1530      6C656400 
- 1531              	.LASF42:
- 1532 0253 433A5C55 		.ascii	"C:\\Users\\kevan\\Documents\\GitHub\\Hydraulic-Mimi"
- 1532      73657273 
- 1532      5C6B6576 
- 1532      616E5C44 
- 1532      6F63756D 
- 1533 0281 632D4172 		.ascii	"c-Arm\\PSOC_arm_project.cydsn\000"
- 1533      6D5C5053 
- 1533      4F435F61 
- 1533      726D5F70 
- 1533      726F6A65 
- 1534              	.LASF16:
- 1535 029e 43795363 		.ascii	"CyScBoostClk_Start\000"
- 1535      426F6F73 
- 1535      74436C6B 
- 1535      5F537461 
- 1535      727400
- 1536              	.LASF19:
- 1537 02b1 43795363 		.ascii	"CyScBoostClk_StandbyPower\000"
- 1537      426F6F73 
- 1537      74436C6B 
- 1537      5F537461 
- 1537      6E646279 
- 1538              	.LASF40:
- 1539 02cb 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1539      43313120 
- 1539      352E342E 
- 1539      31203230 
- 1539      31363036 
- 1540 02fe 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccedhij3.s 			page 40
-
-
- 1540      20726576 
- 1540      6973696F 
- 1540      6E203233 
- 1540      37373135 
- 1541 0331 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1541      66756E63 
- 1541      74696F6E 
- 1541      2D736563 
- 1541      74696F6E 
- 1542              	.LASF23:
- 1543 0359 43795363 		.ascii	"CyScBoostClk_ClearModeRegister\000"
- 1543      426F6F73 
- 1543      74436C6B 
- 1543      5F436C65 
- 1543      61724D6F 
- 1544              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1746      5F537461 
+ 1746      6E646279 
+ 1747              	.LASF29:
+ 1748 035a 43795363 		.ascii	"CyScBoostClk_ClearModeRegister\000"
+ 1748      426F6F73 
+ 1748      74436C6B 
+ 1748      5F436C65 
+ 1748      61724D6F 
+ 1749              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

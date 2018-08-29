@@ -40,13 +40,14 @@ int data_read_mode = 0;
 volatile int new_angle = 0;
 volatile int new_pos_set = 0;
 int angle = 0;
+int angletemp=0;
 int isNegative=0;
 char sendValue[100];
 uint16 adcValue1;
 uint16 adcValue2;
-char temp[7];
+char temp[9];
 int nn=0;
-double pid[3] = {0.03,0,0};
+double pid[3] = {0.05,0.0001,0};
 char help[100];
 int tt = 0;
 int pos=1600;
@@ -83,6 +84,9 @@ CY_ISR(RxIsr)
                 case 0:
                     if(rxData=='{' )
                     {
+                        for(int pp=1;pp<9;pp++){
+                            temp[pp] = ' ';
+                        }
                         temp[0] = '\0';
                         new_angle = 0;
                         data_read_mode++;
@@ -108,9 +112,10 @@ CY_ISR(RxIsr)
                         new_pos_set = 1;
                         nn=0; 
                     
-                        sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angle);
+                        sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angletemp);
                         UART_PutString(sendValue);
                         temp[0] = '\0';
+                        
                         data_read_mode = 0;
                     }
                   
@@ -213,6 +218,10 @@ int main()
     double der, prev_err, pid_integral,dt;
     der = 0; prev_err = 0; pid_integral = 0; 
     dt = 0.025; //assumes cydelay = 10 below for a 100Hz frequency.
+
+    sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angletemp);
+    UART_PutString(sendValue);
+    
     for(;;)
     {
         Timer_1_Start();
@@ -245,11 +254,12 @@ int main()
         /* PID */
         err = -pos + adcValue1;
         der = err - prev_err;
-        pid_integral += err;
-        angle = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
+        pid_integral = err + pid_integral;
+        angletemp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
+        angle=angletemp;
         //Limit angles of proportional valve
         if(angle<0){angle = angle - 14;}
-        if(angle>0){angle = angle + 14;}
+        if(angle>0){angle = angle + 13;}
         if(angle>45){angle=45;}
         if(angle<-45){angle=-45;}
         if(angle<46 & angle>-46){
@@ -259,29 +269,11 @@ int main()
         
         /* END PID CODE */
         
-        CyDelay(25);
+        CyDelay(10);
         dt=(65536-(double)Timer_1_ReadCounter())*66/65536/1000;
         Timer_1_Stop();
         
         
-        /***********************************************************************
-        * Handle SW2 press. 
-        ***********************************************************************/
-        button = SW2_Read();
-        if((button == 0u) && (buttonPre != 0u))
-        {
-            if(led_switch)
-            {
-                LED_Write(LED_OFF);     /* Clear LED */
-                led_switch--;
-            }
-            else
-            {
-                LED_Write(LED_ON);     /* Clear LED */
-                led_switch++;
-            }
-        }
-        buttonPre = button;
         
        
     }
