@@ -47,7 +47,7 @@ uint16 adcValue1;
 uint16 adcValue2;
 char temp[9];
 int nn=0;
-double pid[3] = {0.05,0.0001,0};
+double pid[3] = {0.05,0.000,0};
 char help[100];
 int tt = 0;
 int pos=1600;
