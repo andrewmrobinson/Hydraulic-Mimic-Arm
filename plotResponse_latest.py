@@ -8,7 +8,7 @@ import re
 import datetime
 import glob
 
-path = 'C:/Users/Andrew/Documents/GitHub/Hydraulic-Mimic-Arm/PC_project_arm/project_arm/responseData/*.txt'
+path = 'PC_project_arm/project_arm/responseData/*.txt'
 
 def get_latest_file(path, *paths):
     """Returns the name of the latest (most recent) file 
