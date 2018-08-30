@@ -1719,46 +1719,46 @@ END GROUP
  .debug_frame   0x0000336c       0x5c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
  .debug_frame   0x000033c8       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
 
-.debug_str      0x00000000     0x21e6
+.debug_str      0x00000000     0x21e5
  *(.debug_str)
- .debug_str     0x00000000      0x262 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x2b5 (size before relaxing)
- .debug_str     0x00000262       0x14 .\CortexM3\ARM_GCC_541\Debug\debug.o
-                                0x1b8 (size before relaxing)
- .debug_str     0x00000276      0x197 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                                0x342 (size before relaxing)
- .debug_str     0x0000040d       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
-                                0x1ee (size before relaxing)
- .debug_str     0x0000048c      0x123 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                                0x2e1 (size before relaxing)
- .debug_str     0x000005af      0x270 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(UART.o)
-                                0x42b (size before relaxing)
- .debug_str     0x0000081f       0x5c .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(LED.o)
-                                0x1e2 (size before relaxing)
- .debug_str     0x0000087b      0x10c .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(isr_rx.o)
-                                0x2be (size before relaxing)
- .debug_str     0x00000987      0x1b0 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(UART_IntClock.o)
-                                0x340 (size before relaxing)
- .debug_str     0x00000b37      0x7fe .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(CyLib.o)
-                                0xa18 (size before relaxing)
- .debug_str     0x00001335      0x371 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(cyPm.o)
-                                0x54d (size before relaxing)
- .debug_str     0x000016a6      0x196 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(PWM_1.o)
-                                0x33b (size before relaxing)
- .debug_str     0x0000183c      0x247 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(ADC_SAR_1.o)
-                                0x447 (size before relaxing)
- .debug_str     0x00001a83       0x35 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(ADC_SAR_1_INT.o)
-                                0x1a5 (size before relaxing)
- .debug_str     0x00001ab8      0x1de .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(ADC_SAR_1_theACLK.o)
-                                0x3bf (size before relaxing)
- .debug_str     0x00001c96      0x15d .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(Timer_1.o)
-                                0x31f (size before relaxing)
- .debug_str     0x00001df3      0x18f .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(CyScBoostClk.o)
-                                0x379 (size before relaxing)
- .debug_str     0x00001f82      0x145 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(CyFlash.o)
-                                0x300 (size before relaxing)
- .debug_str     0x000020c7      0x11f .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(CySpc.o)
-                                0x2fd (size before relaxing)
+ .debug_str     0x00000000      0x261 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x2b4 (size before relaxing)
+ .debug_str     0x00000261       0x14 .\CortexM3\ARM_GCC_541\Debug\debug.o
+                                0x1b7 (size before relaxing)
+ .debug_str     0x00000275      0x197 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x341 (size before relaxing)
+ .debug_str     0x0000040c       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                                0x1ed (size before relaxing)
+ .debug_str     0x0000048b      0x123 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                                0x2e0 (size before relaxing)
+ .debug_str     0x000005ae      0x270 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(UART.o)
+                                0x42a (size before relaxing)
+ .debug_str     0x0000081e       0x5c .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(LED.o)
+                                0x1e1 (size before relaxing)
+ .debug_str     0x0000087a      0x10c .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(isr_rx.o)
+                                0x2bd (size before relaxing)
+ .debug_str     0x00000986      0x1b0 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(UART_IntClock.o)
+                                0x33f (size before relaxing)
+ .debug_str     0x00000b36      0x7fe .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(CyLib.o)
+                                0xa17 (size before relaxing)
+ .debug_str     0x00001334      0x371 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(cyPm.o)
+                                0x54c (size before relaxing)
+ .debug_str     0x000016a5      0x196 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(PWM_1.o)
+                                0x33a (size before relaxing)
+ .debug_str     0x0000183b      0x247 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(ADC_SAR_1.o)
+                                0x446 (size before relaxing)
+ .debug_str     0x00001a82       0x35 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(ADC_SAR_1_INT.o)
+                                0x1a4 (size before relaxing)
+ .debug_str     0x00001ab7      0x1de .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(ADC_SAR_1_theACLK.o)
+                                0x3be (size before relaxing)
+ .debug_str     0x00001c95      0x15d .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(Timer_1.o)
+                                0x31e (size before relaxing)
+ .debug_str     0x00001df2      0x18f .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(CyScBoostClk.o)
+                                0x378 (size before relaxing)
+ .debug_str     0x00001f81      0x145 .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(CyFlash.o)
+                                0x2ff (size before relaxing)
+ .debug_str     0x000020c6      0x11f .\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a(CySpc.o)
+                                0x2fc (size before relaxing)
 
 .debug_loc
  *(.debug_loc)
@@ -1970,4 +1970,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf elf32-littlearm)
+OUTPUT(C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf elf32-littlearm)
