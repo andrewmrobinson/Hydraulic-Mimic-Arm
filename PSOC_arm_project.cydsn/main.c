@@ -221,7 +221,7 @@ int main()
 
     sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angletemp);
     UART_PutString(sendValue);
-    
+    uint16 moving_avg[5] = {0,0,0,0,0};
     for(;;)
     {
         Timer_1_Start();
@@ -233,7 +233,16 @@ int main()
         ADC_SAR_1_StartConvert();
         ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
         
+        /*
+        for(int j=0;j<2;j++){
+            moving_avg[j] = moving_avg[j+1]; 
+        }
+        moving_avg[2] = ADC_SAR_1_GetResult16();
+        adcValue1 = (moving_avg[0]+moving_avg[1]+moving_avg[2])/3;
+        */
         adcValue1 = ADC_SAR_1_GetResult16();
+        
+        
         
         if(new_pos_set){
             pos = new_pos;
@@ -255,7 +264,7 @@ int main()
         err = -pos + adcValue1;
         der = err - prev_err;
         pid_integral = err + pid_integral;
-        angletemp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
+        angletemp = pid[0] * err + ( pid[1]/100 * pid_integral * dt) + ( pid[2]/100 * der / dt );
         angle=angletemp;
         //Limit angles of proportional valve
         if(angle<0){angle = angle - 14;}
@@ -270,7 +279,7 @@ int main()
         /* END PID CODE */
         
         CyDelay(10);
-        dt=(65536-(double)Timer_1_ReadCounter())*66/65536/1000;
+        dt=(65536-(double)Timer_1_ReadCounter())*66/65536/10;
         Timer_1_Stop();
         
         
