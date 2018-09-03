@@ -38,6 +38,8 @@
 #include "adc_in_1.h"
 #include "timer_clock.h"
 #include "Timer_1.h"
+#include "median_timer.h"
+#include "update_median_isr.h"
 #include "UART_IntClock.h"
 #include "ADC_SAR_1_IRQ.h"
 #include "ADC_SAR_1_theACLK.h"

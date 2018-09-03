@@ -1,5 +1,5 @@
 -- Project:   PSOC_arm_project
--- Generated: 08/30/2018 15:06:00
+-- Generated: 09/03/2018 11:07:20
 -- PSoC Creator  4.2
 
 ENTITY PSOC_arm_project IS
@@ -47,6 +47,7 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     SIGNAL Net_273 : bit;
     SIGNAL Net_277 : bit;
     SIGNAL Net_280 : bit;
+    SIGNAL Net_310 : bit;
     SIGNAL Net_75 : bit;
     SIGNAL Net_77 : bit;
     ATTRIBUTE udbclken_assigned OF Net_77 : SIGNAL IS "True";
@@ -153,6 +154,8 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE udbclken_assigned OF \UART:Net_9\ : SIGNAL IS "True";
     ATTRIBUTE global_signal OF \UART:Net_9\ : SIGNAL IS true;
     SIGNAL \UART:Net_9_local\ : bit;
+    SIGNAL \median_timer:Net_261\ : bit;
+    SIGNAL \median_timer:Net_57\ : bit;
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
@@ -1875,6 +1878,27 @@ BEGIN
             tc => \Timer_1:Net_51\,
             cmp => \Timer_1:Net_261\,
             irq => \Timer_1:Net_57\);
+
+    \median_timer:TimerHW\:timercell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => \ClockBlock.dclk_glb_ff_1__sig\,
+            kill => open,
+            enable => __ONE__,
+            capture => open,
+            timer_reset => open,
+            tc => Net_310,
+            cmp => \median_timer:Net_261\,
+            irq => \median_timer:Net_57\);
+
+    update_median_isr:interrupt
+        GENERIC MAP(
+            int_type => "00",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_310,
+            clock => ClockBlock_BUS_CLK);
 
     \UART:BUART:txn\:macrocell
         GENERIC MAP(

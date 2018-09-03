@@ -2,7 +2,7 @@
 --	Conversion of PSOC_arm_project.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Aug 30 15:05:58 2018
+--	Mon Sep 03 11:07:19 2018
 --
 
 USE cypress.cypress.all;
@@ -909,6 +909,15 @@ SIGNAL \Timer_1:Net_57\ : bit;
 SIGNAL Net_289 : bit;
 SIGNAL Net_294 : bit;
 SIGNAL \Timer_1:Net_102\ : bit;
+SIGNAL \median_timer:Net_260\ : bit;
+SIGNAL \median_timer:Net_266\ : bit;
+SIGNAL Net_304 : bit;
+SIGNAL \median_timer:Net_51\ : bit;
+SIGNAL \median_timer:Net_261\ : bit;
+SIGNAL \median_timer:Net_57\ : bit;
+SIGNAL Net_305 : bit;
+SIGNAL Net_310 : bit;
+SIGNAL \median_timer:Net_102\ : bit;
 SIGNAL \UART:BUART:reset_reg\\D\ : bit;
 SIGNAL \UART:BUART:txn\\D\ : bit;
 SIGNAL \UART:BUART:tx_state_1\\D\ : bit;
@@ -2342,6 +2351,20 @@ timer_clock:cy_clock_v1_0
 		tc=>\Timer_1:Net_51\,
 		compare=>\Timer_1:Net_261\,
 		interrupt=>\Timer_1:Net_57\);
+\median_timer:TimerHW\:cy_psoc3_timer_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_10,
+		kill=>zero,
+		enable=>one,
+		capture=>zero,
+		timer_reset=>zero,
+		tc=>Net_310,
+		compare=>\median_timer:Net_261\,
+		interrupt=>\median_timer:Net_57\);
+update_median_isr:cy_isr_v1_0
+	GENERIC MAP(int_type=>"00",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_310);
 \UART:BUART:reset_reg\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\UART:BUART:clock_op\,

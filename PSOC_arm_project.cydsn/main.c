@@ -7,6 +7,7 @@
 
 #define	Frequency 1000000.0			// Frequency of PWMClock
 #define	One_ms (Frequency/1000.0)	// 1 ms constant
+#define filter_size 7
 
 /* Add an explicit reference to the floating point printf library to allow
 the usage of floating point conversion specifier */
@@ -47,12 +48,52 @@ uint16 adcValue1;
 uint16 adcValue2;
 char temp[9];
 int nn=0;
-double pid[3] = {0.05,0.000,0};
+//double pid[3] = {0.05,0.000,0};
+double pid[3] = { -2.22,-0.0307,0.0 };
 char help[100];
 int tt = 0;
 int pos=1600;
 int new_pos;
 double err;
+
+
+uint16 moving_median[filter_size] = {0,0,0};
+uint16 tempArray[filter_size];
+uint16 tmp;
+
+CY_ISR(adc_update){
+    for(int j=0;j<filter_size-1;j++){
+            moving_median[j] = moving_median[j+1]; 
+    }
+    ADC_SAR_1_StartConvert();
+    ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
+        
+    moving_median[filter_size-1] = ADC_SAR_1_GetResult16();
+    
+    for(int j=0;j<filter_size;j++){
+            tempArray[j] = moving_median[j]; 
+    }
+    for(int i = 0; i < filter_size; i++){                     //Loop for ascending ordering
+    	for (int j = 0; j < filter_size; j++)             //Loop for comparing other values
+    	{
+    		if (tempArray[j] > tempArray[i])                //Comparing other array elements
+    		{
+    			tmp = tempArray[i];         //Using temporary variable for storing last value
+    			tempArray[i] = tempArray[j];            //replacing value
+    			tempArray[j] = tmp;             //storing last value
+    		}  
+    	}
+    }
+    adcValue1 = tempArray[(filter_size-1)/2];
+    if(adcValue1<4000){
+        adcValue1 = adcValue1;
+    }
+    
+    update_median_isr_ClearPending();
+    
+}
+
+
 CY_ISR(RxIsr)
 {
     uint8 rxStatus;         
@@ -193,6 +234,7 @@ int main()
     ADC_SAR_1_Start(); 
     Timer_1_Start();
     Timer_1_Stop();
+    
     //ADC_SAR_1_StartConvert(); 
     //ADC_SAR_2_Start(); 
     //ADC_SAR_2_StartConvert(); 
@@ -206,14 +248,13 @@ int main()
 
 #if(INTERRUPT_CODE_ENABLED == ENABLED)
     isr_rx_StartEx(RxIsr);
+    update_median_isr_StartEx(adc_update);
 #endif /* INTERRUPT_CODE_ENABLED == ENABLED */
     
     CyGlobalIntEnable;      /* Enable global interrupts. */
     
 
     angle = -89;
-    int up = 1;
-    int cycle = 1000;
     uint16 timercapture;
     double der, prev_err, pid_integral,dt;
     der = 0; prev_err = 0; pid_integral = 0; 
@@ -222,6 +263,7 @@ int main()
     sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angletemp);
     UART_PutString(sendValue);
     uint16 moving_avg[5] = {0,0,0,0,0};
+    median_timer_Start();
     for(;;)
     {
         Timer_1_Start();
@@ -230,19 +272,27 @@ int main()
         sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
         UART_PutString(sendValue);
         */
-        ADC_SAR_1_StartConvert();
-        ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
-        
         /*
+        
+        
         for(int j=0;j<2;j++){
             moving_avg[j] = moving_avg[j+1]; 
         }
         moving_avg[2] = ADC_SAR_1_GetResult16();
         adcValue1 = (moving_avg[0]+moving_avg[1]+moving_avg[2])/3;
         */
+        /*
+        ADC_SAR_1_StartConvert();
+        ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
+        
         adcValue1 = ADC_SAR_1_GetResult16();
+        */
+        //ADC_SAR_1_StartConvert();
+        //ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
         
-        
+        //adcValue1 = ADC_SAR_1_GetResult16();
+        sprintf(sendValue,"%04d \n",adcValue1);
+        UART_PutString(sendValue);
         
         if(new_pos_set){
             pos = new_pos;
@@ -257,18 +307,18 @@ int main()
             if(pos<46 & pos>-46){
                 PWM_1_WriteCompare(dutycyclelength(pos));
             }
-            */            
+                 */       
         }
         
         /* PID */
-        err = -pos + adcValue1;
+        err = pos - adcValue1;
         der = err - prev_err;
         pid_integral = err + pid_integral;
-        angletemp = pid[0] * err + ( pid[1]/100 * pid_integral * dt) + ( pid[2]/100 * der / dt );
+        angletemp = pid[0] * err + ( -pid[1]/100 * pid_integral * dt) + ( pid[2]/100 * der / dt );
         angle=angletemp;
         //Limit angles of proportional valve
-        if(angle<0){angle = angle - 14;}
-        if(angle>0){angle = angle + 13;}
+        if(angle<0){angle = angle - 15;}
+        if(angle>0){angle = angle + 14;}
         if(angle>45){angle=45;}
         if(angle<-45){angle=-45;}
         if(angle<46 & angle>-46){
@@ -281,10 +331,7 @@ int main()
         CyDelay(10);
         dt=(65536-(double)Timer_1_ReadCounter())*66/65536/10;
         Timer_1_Stop();
-        
-        
-        
-       
+
     }
 }
 

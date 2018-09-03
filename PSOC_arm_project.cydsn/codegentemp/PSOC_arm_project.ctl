@@ -1,6 +1,6 @@
 -- ======================================================================
 -- PSOC_arm_project.ctl generated from PSOC_arm_project
--- 08/30/2018 at 15:05
+-- 09/03/2018 at 11:07
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 
