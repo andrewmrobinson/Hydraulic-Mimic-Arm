@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> PSOC_arm_project</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 09/03/18 11:07:25</td></tr>
+<td class="proptext"> 09/03/18 14:54:03</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C5888LTI-LP097</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -649,7 +649,7 @@ Clock Summary Section</span>
  <td class = "text_info">CyMASTER_CLK</td>
  <td class = "number">24.000&nbsp;MHz</td>
  <td class = "number">24.000&nbsp;MHz</td>
- <td class = "number">61.350&nbsp;MHz</td>
+ <td class = "number">62.383&nbsp;MHz</td>
  <td class = "text_info"></td>
 </tr>
 <tr> 
@@ -681,15 +681,15 @@ Clock Summary Section</span>
  <td class = "text_info">CyMASTER_CLK</td>
  <td class = "number">1.000&nbsp;MHz</td>
  <td class = "number">1.000&nbsp;MHz</td>
- <td class = "number"> N/A </td>
- <td class = "text_info"> </td>
+ <td class = "number">63.763&nbsp;MHz</td>
+ <td class = "text_info"></td>
 </tr>
 <tr> 
  <td class = "text_info">UART_IntClock</td>
  <td class = "text_info">CyMASTER_CLK</td>
  <td class = "number">923.077&nbsp;kHz</td>
  <td class = "number">923.077&nbsp;kHz</td>
- <td class = "number">51.075&nbsp;MHz</td>
+ <td class = "number">54.389&nbsp;MHz</td>
  <td class = "text_info"></td>
 </tr>
 <tr> 
@@ -1111,91 +1111,10 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 1&nbsp;MHz)</span
 </tr>
 <tr> 
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\/ci</td>
- <td class = "number">72.982&nbsp;MHz</td>
- <td class = "number">13.702</td>
- <td class = "number">986.298</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell27</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/clock_0</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
- <td class = "number">3.092</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/co_msb</td>
- <td class = "number">5.130</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0.co_msb__sig\</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/co_msb</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\/ci</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell5</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">4.230</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
  <td class = "text_info">\PWM_1:PWMUDB:genblk8:stsreg\/status_2</td>
- <td class = "number">73.121&nbsp;MHz</td>
- <td class = "number">13.676</td>
- <td class = "number">986.324</td>
+ <td class = "number">73.057&nbsp;MHz</td>
+ <td class = "number">13.688</td>
+ <td class = "number">986.312</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1214,7 +1133,7 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 1&nbsp;MHz)</span
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell27</td>
+ <td class = "text_info">macrocell28</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
@@ -1229,7 +1148,7 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 1&nbsp;MHz)</span
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
  <td class = "text_info">\PWM_1:PWMUDB:status_2\/main_0</td>
- <td class = "number">3.080</td>
+ <td class = "number">3.092</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
@@ -1257,6 +1176,87 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 1&nbsp;MHz)</span
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">0.500</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\/ci</td>
+ <td class = "number">73.589&nbsp;MHz</td>
+ <td class = "number">13.589</td>
+ <td class = "number">986.411</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell28</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/clock_0</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
+ <td class = "number">2.979</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell4</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/co_msb</td>
+ <td class = "number">5.130</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/co_msb</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell5</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">4.230</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -1594,9 +1594,9 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/route_si</td>
- <td class = "number">61.350&nbsp;MHz</td>
- <td class = "number">16.300</td>
- <td class = "number">25.367</td>
+ <td class = "number">62.383&nbsp;MHz</td>
+ <td class = "number">16.030</td>
+ <td class = "number">25.637</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1630,11 +1630,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_postpoll\/main_1</td>
- <td class = "number">5.243</td>
+ <td class = "number">4.944</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_postpoll\</td>
  <td class = "text_info">\UART:BUART:rx_postpoll\/main_1</td>
@@ -1648,7 +1648,7 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">\UART:BUART:rx_postpoll\</td>
  <td class = "text_info">\UART:BUART:rx_postpoll\/q</td>
  <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/route_si</td>
- <td class = "number">2.228</td>
+ <td class = "number">2.257</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
@@ -1674,73 +1674,10 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </tr>
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
- <td class = "text_info">\UART:BUART:pollcount_1\/main_3</td>
- <td class = "number">86.957&nbsp;MHz</td>
- <td class = "number">11.500</td>
- <td class = "number">30.167</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">iocell3</td>
- <td class = "text_info">P12[6]</td>
- <td class = "number">1</td>
- <td class = "text_info">Rx(0)</td>
- <td class = "text_info">Rx(0)/in_clock</td>
- <td class = "text_info">Rx(0)/fb</td>
- <td class = "number">2.009</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_102</td>
- <td class = "text_info">Rx(0)/fb</td>
- <td class = "text_info">\UART:BUART:pollcount_1\/main_3</td>
- <td class = "number">5.981</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell23</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:pollcount_1\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:pollcount_0\/main_2</td>
- <td class = "number">86.957&nbsp;MHz</td>
- <td class = "number">11.500</td>
- <td class = "number">30.167</td>
+ <td class = "number">87.070&nbsp;MHz</td>
+ <td class = "number">11.485</td>
+ <td class = "number">30.182</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1774,11 +1711,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:pollcount_0\/main_2</td>
- <td class = "number">5.981</td>
+ <td class = "number">5.966</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell24</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell25</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:pollcount_0\</td>
  <td class = "text_info"></td>
@@ -1801,9 +1738,9 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_last\/main_0</td>
- <td class = "number">86.957&nbsp;MHz</td>
- <td class = "number">11.500</td>
- <td class = "number">30.167</td>
+ <td class = "number">87.070&nbsp;MHz</td>
+ <td class = "number">11.485</td>
+ <td class = "number">30.182</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1837,11 +1774,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_last\/main_0</td>
- <td class = "number">5.981</td>
+ <td class = "number">5.966</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell26</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell27</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_last\</td>
  <td class = "text_info"></td>
@@ -1863,10 +1800,10 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </tr>
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
- <td class = "text_info">\UART:BUART:rx_status_3\/main_6</td>
- <td class = "number">92.920&nbsp;MHz</td>
- <td class = "number">10.762</td>
- <td class = "number">30.905</td>
+ <td class = "text_info">\UART:BUART:pollcount_1\/main_3</td>
+ <td class = "number">87.192&nbsp;MHz</td>
+ <td class = "number">11.469</td>
+ <td class = "number">30.198</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1899,14 +1836,14 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "number">1</td>
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
- <td class = "text_info">\UART:BUART:rx_status_3\/main_6</td>
- <td class = "number">5.243</td>
+ <td class = "text_info">\UART:BUART:pollcount_1\/main_3</td>
+ <td class = "number">5.950</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell25</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell24</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_status_3\</td>
+ <td class = "text_info">\UART:BUART:pollcount_1\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">3.510</td>
@@ -1927,9 +1864,9 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_state_0\/main_9</td>
- <td class = "number">95.850&nbsp;MHz</td>
- <td class = "number">10.433</td>
- <td class = "number">31.234</td>
+ <td class = "number">95.575&nbsp;MHz</td>
+ <td class = "number">10.463</td>
+ <td class = "number">31.204</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1963,11 +1900,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_state_0\/main_9</td>
- <td class = "number">4.914</td>
+ <td class = "number">4.944</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell17</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell18</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_state_0\</td>
  <td class = "text_info"></td>
@@ -1990,9 +1927,9 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_state_2\/main_8</td>
- <td class = "number">95.850&nbsp;MHz</td>
- <td class = "number">10.433</td>
- <td class = "number">31.234</td>
+ <td class = "number">95.630&nbsp;MHz</td>
+ <td class = "number">10.457</td>
+ <td class = "number">31.210</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2026,13 +1963,76 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_state_2\/main_8</td>
- <td class = "number">4.914</td>
+ <td class = "number">4.938</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell20</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell21</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_state_2\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Rx(0)/fb</td>
+ <td class = "text_info">\UART:BUART:rx_status_3\/main_6</td>
+ <td class = "number">95.630&nbsp;MHz</td>
+ <td class = "number">10.457</td>
+ <td class = "number">31.210</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">iocell3</td>
+ <td class = "text_info">P12[6]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Rx(0)</td>
+ <td class = "text_info">Rx(0)/in_clock</td>
+ <td class = "text_info">Rx(0)/fb</td>
+ <td class = "number">2.009</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_102</td>
+ <td class = "text_info">Rx(0)/fb</td>
+ <td class = "text_info">\UART:BUART:rx_status_3\/main_6</td>
+ <td class = "number">4.938</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell26</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_status_3\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">3.510</td>
@@ -2082,11 +2082,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">\UART:BUART:rx_state_0\/q</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
- <td class = "number">51.075&nbsp;MHz</td>
- <td class = "number">19.579</td>
- <td class = "number">1063.754</td>
+ <td class = "text_info">\UART:BUART:tx_state_0\/q</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
+ <td class = "number">54.389&nbsp;MHz</td>
+ <td class = "number">18.386</td>
+ <td class = "number">1064.947</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2105,8 +2105,89 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell17</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_state_0\</td>
+ <td class = "text_info">\UART:BUART:tx_state_0\/clock_0</td>
+ <td class = "text_info">\UART:BUART:tx_state_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_state_0\</td>
+ <td class = "text_info">\UART:BUART:tx_state_0\/q</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\/main_1</td>
+ <td class = "number">4.698</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell2</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\/main_1</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\/q</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
+ <td class = "number">2.898</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">6.190</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:rx_state_0\/q</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
+ <td class = "number">57.006&nbsp;MHz</td>
+ <td class = "number">17.542</td>
+ <td class = "number">1065.791</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell18</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_state_0\</td>
  <td class = "text_info">\UART:BUART:rx_state_0\/clock_0</td>
@@ -2120,11 +2201,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">\UART:BUART:rx_state_0\</td>
  <td class = "text_info">\UART:BUART:rx_state_0\/q</td>
  <td class = "text_info">\UART:BUART:rx_counter_load\/main_1</td>
- <td class = "number">7.307</td>
+ <td class = "number">5.331</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_counter_load\</td>
  <td class = "text_info">\UART:BUART:rx_counter_load\/main_1</td>
@@ -2138,11 +2219,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">\UART:BUART:rx_counter_load\</td>
  <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
- <td class = "number">2.312</td>
+ <td class = "number">2.251</td>
 </tr>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
  <td class = "text_info"></td>
@@ -2163,92 +2244,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce0_reg</td>
+ <td class = "text_info">\UART:BUART:tx_state_1\/q</td>
  <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
- <td class = "number">55.246&nbsp;MHz</td>
- <td class = "number">18.101</td>
- <td class = "number">1065.232</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/clock</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce0_reg</td>
- <td class = "number">0.190</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:tx_bitclk_enable_pre\</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce0_reg</td>
- <td class = "text_info">\UART:BUART:counter_load_not\/main_2</td>
- <td class = "number">5.473</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:counter_load_not\</td>
- <td class = "text_info">\UART:BUART:counter_load_not\/main_2</td>
- <td class = "text_info">\UART:BUART:counter_load_not\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:counter_load_not\</td>
- <td class = "text_info">\UART:BUART:counter_load_not\/q</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
- <td class = "number">2.898</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">6.190</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:tx_state_0\/q</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
- <td class = "number">56.964&nbsp;MHz</td>
- <td class = "number">17.555</td>
- <td class = "number">1065.778</td>
+ <td class = "number">57.153&nbsp;MHz</td>
+ <td class = "number">17.497</td>
+ <td class = "number">1065.836</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2268,87 +2268,6 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 <tbody>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:tx_state_0\</td>
- <td class = "text_info">\UART:BUART:tx_state_0\/clock_0</td>
- <td class = "text_info">\UART:BUART:tx_state_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:tx_state_0\</td>
- <td class = "text_info">\UART:BUART:tx_state_0\/q</td>
- <td class = "text_info">\UART:BUART:counter_load_not\/main_1</td>
- <td class = "number">3.867</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:counter_load_not\</td>
- <td class = "text_info">\UART:BUART:counter_load_not\/main_1</td>
- <td class = "text_info">\UART:BUART:counter_load_not\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:counter_load_not\</td>
- <td class = "text_info">\UART:BUART:counter_load_not\/q</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
- <td class = "number">2.898</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">6.190</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:tx_state_1\/q</td>
- <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
- <td class = "number">57.212&nbsp;MHz</td>
- <td class = "number">17.479</td>
- <td class = "number">1065.854</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell12</td>
  <td class = "text_info">U(1,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:tx_state_1\</td>
@@ -2363,7 +2282,7 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">\UART:BUART:tx_state_1\</td>
  <td class = "text_info">\UART:BUART:tx_state_1\/q</td>
  <td class = "text_info">\UART:BUART:counter_load_not\/main_0</td>
- <td class = "number">3.791</td>
+ <td class = "number">3.809</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
@@ -2429,7 +2348,7 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell14</td>
+ <td class = "text_info">macrocell15</td>
  <td class = "text_info">U(1,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:tx_state_2\</td>
@@ -2487,11 +2406,173 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\UART:BUART:rx_state_2\/q</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce0_reg</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
+ <td class = "number">59.421&nbsp;MHz</td>
+ <td class = "number">16.829</td>
+ <td class = "number">1066.504</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/clock</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce0_reg</td>
+ <td class = "number">0.190</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_bitclk_enable_pre\</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce0_reg</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\/main_2</td>
+ <td class = "number">4.201</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell2</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\/main_2</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\</td>
+ <td class = "text_info">\UART:BUART:counter_load_not\/q</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/cs_addr_0</td>
+ <td class = "number">2.898</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">6.190</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\/q</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
- <td class = "number">63.731&nbsp;MHz</td>
- <td class = "number">15.691</td>
- <td class = "number">1067.642</td>
+ <td class = "number">61.338&nbsp;MHz</td>
+ <td class = "number">16.303</td>
+ <td class = "number">1067.030</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell17</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\</td>
+ <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\/clock_0</td>
+ <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\</td>
+ <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\/q</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\/main_0</td>
+ <td class = "number">4.092</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell5</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\/main_0</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
+ <td class = "number">2.251</td>
+</tr>
+<tr> 
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">5.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:rx_state_3\/q</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
+ <td class = "number">65.772&nbsp;MHz</td>
+ <td class = "number">15.204</td>
+ <td class = "number">1068.129</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2511,250 +2592,7 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 <tbody>
 <tr> 
  <td class = "text_info">macrocell20</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_state_2\</td>
- <td class = "text_info">\UART:BUART:rx_state_2\/clock_0</td>
- <td class = "text_info">\UART:BUART:rx_state_2\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_state_2\</td>
- <td class = "text_info">\UART:BUART:rx_state_2\/q</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\/main_3</td>
- <td class = "number">3.419</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\/main_3</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
- <td class = "number">2.312</td>
-</tr>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">5.360</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/f0_blk_stat_comb</td>
- <td class = "text_info">\UART:BUART:sRX:RxSts\/status_4</td>
- <td class = "number">64.450&nbsp;MHz</td>
- <td class = "number">15.516</td>
- <td class = "number">1067.817</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\</td>
- <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/clock</td>
- <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/f0_blk_stat_comb</td>
- <td class = "number">3.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_fifofull\</td>
- <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/f0_blk_stat_comb</td>
- <td class = "text_info">\UART:BUART:rx_status_4\/main_1</td>
- <td class = "number">2.237</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell7</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_status_4\</td>
- <td class = "text_info">\UART:BUART:rx_status_4\/main_1</td>
- <td class = "text_info">\UART:BUART:rx_status_4\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_status_4\</td>
- <td class = "text_info">\UART:BUART:rx_status_4\/q</td>
- <td class = "text_info">\UART:BUART:sRX:RxSts\/status_4</td>
- <td class = "number">5.849</td>
-</tr>
-<tr> 
- <td class = "text_info">statusicell2</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxSts\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">0.500</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\/q</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
- <td class = "number">64.595&nbsp;MHz</td>
- <td class = "number">15.481</td>
- <td class = "number">1067.852</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell16</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\</td>
- <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\/clock_0</td>
- <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\</td>
- <td class = "text_info">\UART:BUART:tx_ctrl_mark_last\/q</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\/main_0</td>
- <td class = "number">3.209</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\/main_0</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\</td>
- <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
- <td class = "number">2.312</td>
-</tr>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">5.360</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:rx_state_3\/q</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
- <td class = "number">68.540&nbsp;MHz</td>
- <td class = "number">14.590</td>
- <td class = "number">1068.743</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell19</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_state_3\</td>
  <td class = "text_info">\UART:BUART:rx_state_3\/clock_0</td>
@@ -2768,11 +2606,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">\UART:BUART:rx_state_3\</td>
  <td class = "text_info">\UART:BUART:rx_state_3\/q</td>
  <td class = "text_info">\UART:BUART:rx_counter_load\/main_2</td>
- <td class = "number">2.318</td>
+ <td class = "number">2.993</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_counter_load\</td>
  <td class = "text_info">\UART:BUART:rx_counter_load\/main_2</td>
@@ -2786,11 +2624,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
  <td class = "text_info">\UART:BUART:rx_counter_load\</td>
  <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
- <td class = "number">2.312</td>
+ <td class = "number">2.251</td>
 </tr>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
  <td class = "text_info"></td>
@@ -2811,11 +2649,11 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\UART:BUART:rx_load_fifo\/q</td>
- <td class = "text_info">\UART:BUART:sRX:RxSts\/status_4</td>
- <td class = "number">69.764&nbsp;MHz</td>
- <td class = "number">14.334</td>
- <td class = "number">1068.999</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\/q</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
+ <td class = "number">65.894&nbsp;MHz</td>
+ <td class = "number">15.176</td>
+ <td class = "number">1068.157</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2834,49 +2672,1034 @@ Destination Clock : UART_IntClock : Positive edge(Required Frequency 923.077&nbs
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell18</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell21</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_load_fifo\</td>
- <td class = "text_info">\UART:BUART:rx_load_fifo\/clock_0</td>
- <td class = "text_info">\UART:BUART:rx_load_fifo\/q</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\/clock_0</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_load_fifo\</td>
- <td class = "text_info">\UART:BUART:rx_load_fifo\/q</td>
- <td class = "text_info">\UART:BUART:rx_status_4\/main_0</td>
- <td class = "number">3.385</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\/q</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\/main_3</td>
+ <td class = "number">2.965</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell7</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell5</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_status_4\</td>
- <td class = "text_info">\UART:BUART:rx_status_4\/main_0</td>
- <td class = "text_info">\UART:BUART:rx_status_4\/q</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\/main_3</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
  <td class = "number">3.350</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_status_4\</td>
- <td class = "text_info">\UART:BUART:rx_status_4\/q</td>
- <td class = "text_info">\UART:BUART:sRX:RxSts\/status_4</td>
- <td class = "number">5.849</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\</td>
+ <td class = "text_info">\UART:BUART:rx_counter_load\/q</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/load</td>
+ <td class = "number">2.251</td>
 </tr>
 <tr> 
- <td class = "text_info">statusicell2</td>
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">5.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:pollcount_0\/q</td>
+ <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/route_si</td>
+ <td class = "number">66.203&nbsp;MHz</td>
+ <td class = "number">15.105</td>
+ <td class = "number">1068.228</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell25</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:pollcount_0\</td>
+ <td class = "text_info">\UART:BUART:pollcount_0\/clock_0</td>
+ <td class = "text_info">\UART:BUART:pollcount_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:pollcount_0\</td>
+ <td class = "text_info">\UART:BUART:pollcount_0\/q</td>
+ <td class = "text_info">\UART:BUART:rx_postpoll\/main_2</td>
+ <td class = "number">4.778</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_postpoll\</td>
+ <td class = "text_info">\UART:BUART:rx_postpoll\/main_2</td>
+ <td class = "text_info">\UART:BUART:rx_postpoll\/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_postpoll\</td>
+ <td class = "text_info">\UART:BUART:rx_postpoll\/q</td>
+ <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/route_si</td>
+ <td class = "number">2.257</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell3</td>
  <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxSts\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.470</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:sTX:TxShifter:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">\UART:BUART:sTX:TxSts\/status_0</td>
+ <td class = "number">70.497&nbsp;MHz</td>
+ <td class = "number">14.185</td>
+ <td class = "number">1069.148</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sTX:TxShifter:u0\</td>
+ <td class = "text_info">\UART:BUART:sTX:TxShifter:u0\/clock</td>
+ <td class = "text_info">\UART:BUART:sTX:TxShifter:u0\/f0_blk_stat_comb</td>
+ <td class = "number">3.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_fifo_empty\</td>
+ <td class = "text_info">\UART:BUART:sTX:TxShifter:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">\UART:BUART:tx_status_0\/main_3</td>
+ <td class = "number">4.444</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell3</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_status_0\</td>
+ <td class = "text_info">\UART:BUART:tx_status_0\/main_3</td>
+ <td class = "text_info">\UART:BUART:tx_status_0\/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_status_0\</td>
+ <td class = "text_info">\UART:BUART:tx_status_0\/q</td>
+ <td class = "text_info">\UART:BUART:sTX:TxSts\/status_0</td>
+ <td class = "number">2.311</td>
+</tr>
+<tr> 
+ <td class = "text_info">statusicell1</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sTX:TxSts\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">0.500</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+</tbody>
+ </table> 
+</div>
+</div>
+</div>
+</div>
+<div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+Source Clock : timer_clock : Positive edge(Required Frequency 1&nbsp;MHz)</span>
+</a>
+</div><div class="sta_secbody"><div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+Destination Clock : timer_clock : Positive edge(Required Frequency 1&nbsp;MHz)</span>
+</a>
+</div><div class="sta_secbody"><div class="sta_sec_desc">Path Delay Requirement : 1000ns(1&nbsp;MHz)</div>
+<table class="sta_tscs">
+ <thead> 
+<tr> 
+<th>Source</th>
+<th>Destination</th>
+<th>FMax</th>
+<th>Delay (ns)</th>
+<th>Slack (ns)</th>
+<th>Violation</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">63.763&nbsp;MHz</td>
+ <td class = "number">15.683</td>
+ <td class = "number">984.317</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "number">0.760</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.740</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.823</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "number">5.130</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">4.230</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">69.094&nbsp;MHz</td>
+ <td class = "number">14.473</td>
+ <td class = "number">985.527</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.290</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.823</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "number">5.130</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">4.230</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">74.593&nbsp;MHz</td>
+ <td class = "number">13.406</td>
+ <td class = "number">986.594</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell2</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">1.210</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "number">2.836</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "number">5.130</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">4.230</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\/status_0</td>
+ <td class = "number">80.412&nbsp;MHz</td>
+ <td class = "number">12.436</td>
+ <td class = "number">987.564</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "number">0.760</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.740</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/main_1</td>
+ <td class = "number">2.838</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/main_1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/q</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\/status_0</td>
+ <td class = "number">2.248</td>
+</tr>
+<tr> 
+ <td class = "text_info">statusicell4</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">0.500</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">80.756&nbsp;MHz</td>
+ <td class = "number">12.383</td>
+ <td class = "number">987.617</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "number">0.760</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.740</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.823</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">6.060</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">80.769&nbsp;MHz</td>
+ <td class = "number">12.381</td>
+ <td class = "number">987.619</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "number">0.760</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.740</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">2.821</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">6.060</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\/status_0</td>
+ <td class = "number">89.079&nbsp;MHz</td>
+ <td class = "number">11.226</td>
+ <td class = "number">988.774</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.290</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/main_1</td>
+ <td class = "number">2.838</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/main_1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/q</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\/status_0</td>
+ <td class = "number">2.248</td>
+</tr>
+<tr> 
+ <td class = "text_info">statusicell4</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">0.500</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">89.501&nbsp;MHz</td>
+ <td class = "number">11.173</td>
+ <td class = "number">988.827</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.290</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.823</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">6.060</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">89.518&nbsp;MHz</td>
+ <td class = "number">11.171</td>
+ <td class = "number">988.829</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.290</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">2.821</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">6.060</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">95.694&nbsp;MHz</td>
+ <td class = "number">10.450</td>
+ <td class = "number">989.550</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "number">6.220</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">4.230</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -2949,7 +3772,7 @@ Destination Clock : Clock_1 : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell29</td>
+ <td class = "text_info">macrocell30</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:status_0\</td>
@@ -3089,7 +3912,7 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">2.326</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell27</td>
+ <td class = "text_info">macrocell28</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
@@ -3132,7 +3955,7 @@ Destination Clock : Clock_1 : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell28</td>
+ <td class = "text_info">macrocell29</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:prevCompare1\</td>
@@ -3150,7 +3973,7 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">2.298</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell29</td>
+ <td class = "text_info">macrocell30</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:status_0\</td>
@@ -3211,7 +4034,7 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">2.780</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell29</td>
+ <td class = "text_info">macrocell30</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:status_0\</td>
@@ -3272,7 +4095,7 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">2.784</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell28</td>
+ <td class = "text_info">macrocell29</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:prevCompare1\</td>
@@ -3333,129 +4156,7 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">2.784</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell30</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_75</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\/cs_addr_1</td>
- <td class = "number">4.181</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell27</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/clock_0</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\/cs_addr_1</td>
- <td class = "number">2.931</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell5</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">Net_75/main_0</td>
- <td class = "number">4.330</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell27</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/clock_0</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
- <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">Net_75/main_0</td>
- <td class = "number">3.080</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell30</td>
+ <td class = "text_info">macrocell31</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_75</td>
@@ -3479,6 +4180,67 @@ Destination Clock : Clock_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
  <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
+ <td class = "number">4.229</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell28</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/clock_0</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
+ <td class = "number">2.979</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell4</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "text_info">Net_75/main_0</td>
  <td class = "number">4.342</td>
  <td class = "text_info"></td>
 </tr>
@@ -3498,7 +4260,7 @@ Destination Clock : Clock_1 : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell27</td>
+ <td class = "text_info">macrocell28</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
@@ -3512,14 +4274,75 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">1</td>
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
  <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
+ <td class = "text_info">Net_75/main_0</td>
  <td class = "number">3.092</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">macrocell31</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u0\</td>
+ <td class = "text_info">Net_75</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\/cs_addr_1</td>
+ <td class = "number">4.352</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell28</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/clock_0</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\</td>
+ <td class = "text_info">\PWM_1:PWMUDB:runmode_enable\/q</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\/cs_addr_1</td>
+ <td class = "number">3.102</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell5</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM_1:PWMUDB:sP16:pwmdp:u1\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -3567,69 +4390,8 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
- <td class = "text_info">\UART:BUART:rx_state_0\/main_9</td>
- <td class = "number">6.923</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">iocell3</td>
- <td class = "text_info">P12[6]</td>
- <td class = "number">1</td>
- <td class = "text_info">Rx(0)</td>
- <td class = "text_info">Rx(0)/in_clock</td>
- <td class = "text_info">Rx(0)/fb</td>
- <td class = "number">2.009</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_102</td>
- <td class = "text_info">Rx(0)/fb</td>
- <td class = "text_info">\UART:BUART:rx_state_0\/main_9</td>
- <td class = "number">4.914</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell17</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_state_0\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_state_2\/main_8</td>
- <td class = "number">6.923</td>
+ <td class = "number">6.947</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3663,11 +4425,11 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_state_2\/main_8</td>
- <td class = "number">4.914</td>
+ <td class = "number">4.938</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell20</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell21</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_state_2\</td>
  <td class = "text_info"> </td>
@@ -3690,7 +4452,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_status_3\/main_6</td>
- <td class = "number">7.252</td>
+ <td class = "number">6.947</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3724,11 +4486,11 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_status_3\/main_6</td>
- <td class = "number">5.243</td>
+ <td class = "number">4.938</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell25</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell26</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_status_3\</td>
  <td class = "text_info"> </td>
@@ -3750,8 +4512,69 @@ Destination Clock : UART_IntClock : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\/main_9</td>
+ <td class = "number">6.953</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">iocell3</td>
+ <td class = "text_info">P12[6]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Rx(0)</td>
+ <td class = "text_info">Rx(0)/in_clock</td>
+ <td class = "text_info">Rx(0)/fb</td>
+ <td class = "number">2.009</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_102</td>
+ <td class = "text_info">Rx(0)/fb</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\/main_9</td>
+ <td class = "number">4.944</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell18</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:pollcount_1\/main_3</td>
- <td class = "number">7.990</td>
+ <td class = "number">7.959</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3785,11 +4608,11 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:pollcount_1\/main_3</td>
- <td class = "number">5.981</td>
+ <td class = "number">5.950</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell23</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell24</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:pollcount_1\</td>
  <td class = "text_info"> </td>
@@ -3812,7 +4635,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:pollcount_0\/main_2</td>
- <td class = "number">7.990</td>
+ <td class = "number">7.975</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3846,11 +4669,11 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:pollcount_0\/main_2</td>
- <td class = "number">5.981</td>
+ <td class = "number">5.966</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell24</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell25</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:pollcount_0\</td>
  <td class = "text_info"> </td>
@@ -3873,7 +4696,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_last\/main_0</td>
- <td class = "number">7.990</td>
+ <td class = "number">7.975</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3907,11 +4730,11 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_last\/main_0</td>
- <td class = "number">5.981</td>
+ <td class = "number">5.966</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell26</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell27</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_last\</td>
  <td class = "text_info"> </td>
@@ -3934,7 +4757,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tr> 
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/route_si</td>
- <td class = "number">12.830</td>
+ <td class = "number">12.560</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3968,11 +4791,11 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">Net_102</td>
  <td class = "text_info">Rx(0)/fb</td>
  <td class = "text_info">\UART:BUART:rx_postpoll\/main_1</td>
- <td class = "number">5.243</td>
+ <td class = "number">4.944</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_postpoll\</td>
  <td class = "text_info">\UART:BUART:rx_postpoll\/main_1</td>
@@ -3986,7 +4809,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">\UART:BUART:rx_postpoll\</td>
  <td class = "text_info">\UART:BUART:rx_postpoll\/q</td>
  <td class = "text_info">\UART:BUART:sRX:RxShifter:u0\/route_si</td>
- <td class = "number">2.228</td>
+ <td class = "number">2.257</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell3</td>
@@ -4041,7 +4864,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tr> 
  <td class = "text_info">\UART:BUART:rx_status_3\/q</td>
  <td class = "text_info">\UART:BUART:sRX:RxSts\/status_3</td>
- <td class = "number">1.499</td>
+ <td class = "number">1.496</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4060,8 +4883,8 @@ Destination Clock : UART_IntClock : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell25</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">macrocell26</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_status_3\</td>
  <td class = "text_info">\UART:BUART:rx_status_3\/clock_0</td>
@@ -4075,7 +4898,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">\UART:BUART:rx_status_3\</td>
  <td class = "text_info">\UART:BUART:rx_status_3\/q</td>
  <td class = "text_info">\UART:BUART:sRX:RxSts\/status_3</td>
- <td class = "number">2.249</td>
+ <td class = "number">2.246</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell2</td>
@@ -4100,9 +4923,70 @@ Destination Clock : UART_IntClock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_0</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\/main_2</td>
- <td class = "number">2.941</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce1_reg</td>
+ <td class = "text_info">\UART:BUART:txn\/main_5</td>
+ <td class = "number">2.830</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/clock</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce1_reg</td>
+ <td class = "number">0.190</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:tx_counter_dp\</td>
+ <td class = "text_info">\UART:BUART:sTX:sCLOCK:TxBitClkGen\/ce1_reg</td>
+ <td class = "text_info">\UART:BUART:txn\/main_5</td>
+ <td class = "number">2.640</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:txn\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
+ <td class = "text_info">\UART:BUART:rx_load_fifo\/main_7</td>
+ <td class = "number">3.166</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4122,27 +5006,88 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_0</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
  <td class = "number">0.620</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_count_0\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_0</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\/main_2</td>
- <td class = "number">2.321</td>
+ <td class = "text_info">\UART:BUART:rx_count_4\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
+ <td class = "text_info">\UART:BUART:rx_load_fifo\/main_7</td>
+ <td class = "number">2.546</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_load_fifo\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\/main_7</td>
+ <td class = "number">3.166</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
+ <td class = "number">0.620</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_count_4\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\/main_7</td>
+ <td class = "number">2.546</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell21</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -4161,9 +5106,9 @@ Destination Clock : UART_IntClock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
- <td class = "text_info">\UART:BUART:pollcount_1\/main_0</td>
- <td class = "number">3.231</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\/main_7</td>
+ <td class = "number">3.176</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4183,332 +5128,27 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
  <td class = "number">0.620</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_count_2\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
- <td class = "text_info">\UART:BUART:pollcount_1\/main_0</td>
- <td class = "number">2.611</td>
+ <td class = "text_info">\UART:BUART:rx_count_4\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\/main_7</td>
+ <td class = "number">2.556</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell23</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell18</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:pollcount_1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
- <td class = "text_info">\UART:BUART:pollcount_0\/main_0</td>
- <td class = "number">3.231</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
- <td class = "number">0.620</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_count_2\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
- <td class = "text_info">\UART:BUART:pollcount_0\/main_0</td>
- <td class = "number">2.611</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell24</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:pollcount_0\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "text_info">\UART:BUART:pollcount_1\/main_1</td>
- <td class = "number">3.234</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "number">0.620</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_count_1\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "text_info">\UART:BUART:pollcount_1\/main_1</td>
- <td class = "number">2.614</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell23</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:pollcount_1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "text_info">\UART:BUART:pollcount_0\/main_1</td>
- <td class = "number">3.234</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "number">0.620</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_count_1\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "text_info">\UART:BUART:pollcount_0\/main_1</td>
- <td class = "number">2.614</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell24</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:pollcount_0\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\/main_0</td>
- <td class = "number">3.243</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
- <td class = "number">0.620</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_count_2\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_2</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\/main_0</td>
- <td class = "number">2.623</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell21</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\/main_1</td>
- <td class = "number">3.245</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "number">0.620</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_count_1\</td>
- <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_1</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\/main_1</td>
- <td class = "number">2.625</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell21</td>
- <td class = "text_info">U(0,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\UART:BUART:rx_bitclk_enable\</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -4529,7 +5169,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tr> 
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
  <td class = "text_info">\UART:BUART:rx_state_3\/main_7</td>
- <td class = "number">3.263</td>
+ <td class = "number">3.176</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4549,7 +5189,7 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
@@ -4563,11 +5203,11 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">\UART:BUART:rx_count_4\</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_4</td>
  <td class = "text_info">\UART:BUART:rx_state_3\/main_7</td>
- <td class = "number">2.643</td>
+ <td class = "number">2.556</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell19</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell20</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_state_3\</td>
  <td class = "text_info"> </td>
@@ -4589,8 +5229,8 @@ Destination Clock : UART_IntClock : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
- <td class = "text_info">\UART:BUART:rx_state_3\/main_5</td>
- <td class = "number">3.273</td>
+ <td class = "text_info">\UART:BUART:rx_load_fifo\/main_5</td>
+ <td class = "number">3.312</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -4610,7 +5250,190 @@ Destination Clock : UART_IntClock : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">count7cell</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "number">0.620</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_count_6\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "text_info">\UART:BUART:rx_load_fifo\/main_5</td>
+ <td class = "number">2.692</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_load_fifo\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\/main_5</td>
+ <td class = "number">3.312</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "number">0.620</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_count_6\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\/main_5</td>
+ <td class = "number">2.692</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell21</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_state_2\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\/main_5</td>
+ <td class = "number">3.317</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "number">0.620</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_count_6\</td>
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\/main_5</td>
+ <td class = "number">2.697</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell18</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\UART:BUART:rx_state_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
+ <td class = "text_info">\UART:BUART:rx_state_3\/main_5</td>
+ <td class = "number">3.317</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">count7cell</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/clock</td>
@@ -4624,16 +5447,744 @@ Destination Clock : UART_IntClock : Positive edge</span>
  <td class = "text_info">\UART:BUART:rx_count_6\</td>
  <td class = "text_info">\UART:BUART:sRX:RxBitCounter\/count_6</td>
  <td class = "text_info">\UART:BUART:rx_state_3\/main_5</td>
- <td class = "number">2.653</td>
+ <td class = "number">2.697</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell19</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">macrocell20</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:rx_state_3\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+</tbody>
+ </table> 
+</div>
+</div>
+</div>
+</div>
+<div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+Source Clock : timer_clock : Positive edge</span>
+</a>
+</div><div class="sta_secbody"><div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+Destination Clock : timer_clock : Positive edge</span>
+</a>
+</div><div class="sta_secbody"><table class="sta_tscs">
+ <thead> 
+<tr> 
+<th>Source</th>
+<th>Destination</th>
+<th>Slack (ns)</th>
+<th>Violation</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">2.140</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "number">2.140</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "number">3.196</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell2</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">0.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "number">2.836</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
+ <td class = "number">3.199</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell2</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">0.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
+ <td class = "number">2.839</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">4.631</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">1.810</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">2.821</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">4.633</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">1.810</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.823</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">4.986</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell2</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">0.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "number">2.836</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "number">1.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">5.451</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "number">0.280</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">2.821</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">5.453</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "number">0.280</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.z0__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/z0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0i</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">2.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.823</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">6.423</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">1.810</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.823</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell6</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "number">1.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell7</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\/status_0</td>
+ <td class = "number">6.814</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell2</td>
+ <td class = "text_info">U(2,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">0.360</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/main_0</td>
+ <td class = "number">2.856</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/main_0</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\</td>
+ <td class = "text_info">\Timer_1:TimerUDB:status_tc\/q</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\/status_0</td>
+ <td class = "number">2.248</td>
+</tr>
+<tr> 
+ <td class = "text_info">statusicell4</td>
+ <td class = "text_info">U(3,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_1:TimerUDB:rstSts:stsreg\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">-2.000</td>
 </tr>
 <tr> 
  <td class = "text_info">Clock</td>
@@ -4682,7 +6233,7 @@ Clock_1</span>
 <tr> 
  <td class = "text_info">Net_75/q</td>
  <td class = "text_info">pwm1(0)_PAD</td>
- <td class = "number">22.107</td>
+ <td class = "number">22.093</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -4700,7 +6251,7 @@ Clock_1</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell30</td>
+ <td class = "text_info">macrocell31</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_75</td>
@@ -4715,7 +6266,7 @@ Clock_1</span>
  <td class = "text_info">Net_75</td>
  <td class = "text_info">Net_75/q</td>
  <td class = "text_info">pwm1(0)/pin_input</td>
- <td class = "number">5.786</td>
+ <td class = "number">5.772</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell5</td>
@@ -4770,7 +6321,7 @@ UART_IntClock</span>
 <tr> 
  <td class = "text_info">\UART:BUART:txn\/q</td>
  <td class = "text_info">Tx(0)_PAD</td>
- <td class = "number">30.944</td>
+ <td class = "number">30.749</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -4788,8 +6339,8 @@ UART_IntClock</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\UART:BUART:txn\</td>
  <td class = "text_info">\UART:BUART:txn\/clock_0</td>
@@ -4803,11 +6354,11 @@ UART_IntClock</span>
  <td class = "text_info">\UART:BUART:txn\</td>
  <td class = "text_info">\UART:BUART:txn\/q</td>
  <td class = "text_info">Net_97/main_0</td>
- <td class = "number">2.772</td>
+ <td class = "number">2.583</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_97</td>
  <td class = "text_info">Net_97/main_0</td>
@@ -4821,7 +6372,7 @@ UART_IntClock</span>
  <td class = "text_info">Net_97</td>
  <td class = "text_info">Net_97/q</td>
  <td class = "text_info">Tx(0)/pin_input</td>
- <td class = "number">6.605</td>
+ <td class = "number">6.599</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell4</td>

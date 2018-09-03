@@ -48,8 +48,8 @@ uint16 adcValue1;
 uint16 adcValue2;
 char temp[9];
 int nn=0;
-//double pid[3] = {0.05,0.000,0};
-double pid[3] = { -2.22,-0.0307,0.0 };
+double pid[3] = {0.05,0.000,0};
+//double pid[3] = { -2.22,-0.0307,0.0 };
 char help[100];
 int tt = 0;
 int pos=1600;
@@ -232,8 +232,6 @@ int main()
 
     PWM_1_Start();
     ADC_SAR_1_Start(); 
-    Timer_1_Start();
-    Timer_1_Stop();
     
     //ADC_SAR_1_StartConvert(); 
     //ADC_SAR_2_Start(); 
@@ -257,6 +255,8 @@ int main()
     angle = -89;
     uint16 timercapture;
     double der, prev_err, pid_integral,dt;
+    double time;
+
     der = 0; prev_err = 0; pid_integral = 0; 
     dt = 0.025; //assumes cydelay = 10 below for a 100Hz frequency.
 
@@ -264,9 +264,10 @@ int main()
     UART_PutString(sendValue);
     uint16 moving_avg[5] = {0,0,0,0,0};
     median_timer_Start();
+    Timer_1_Start();
     for(;;)
     {
-        Timer_1_Start();
+        Timer_1_WriteCounter(65535);
         /*adcValue1 = ADC_SAR_1_GetResult16() ;
         adcValue2 = ADC_SAR_2_GetResult16() ;
         sprintf(sendValue,"%04d \t %04d \n",adcValue1,adcValue2);
@@ -291,8 +292,8 @@ int main()
         //ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
         
         //adcValue1 = ADC_SAR_1_GetResult16();
-        sprintf(sendValue,"%04d \n",adcValue1);
-        UART_PutString(sendValue);
+        //sprintf(sendValue,"%04d \n",adcValue1);
+        //UART_PutString(sendValue);
         
         if(new_pos_set){
             pos = new_pos;
@@ -311,10 +312,10 @@ int main()
         }
         
         /* PID */
-        err = pos - adcValue1;
+        err = -pos + adcValue1;
         der = err - prev_err;
         pid_integral = err + pid_integral;
-        angletemp = pid[0] * err + ( -pid[1]/100 * pid_integral * dt) + ( pid[2]/100 * der / dt );
+        angletemp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
         angle=angletemp;
         //Limit angles of proportional valve
         if(angle<0){angle = angle - 15;}
@@ -329,8 +330,8 @@ int main()
         /* END PID CODE */
         
         CyDelay(10);
-        dt=(65536-(double)Timer_1_ReadCounter())*66/65536/10;
-        Timer_1_Stop();
+        time = Timer_1_ReadCounter();
+        dt=(double)(65535-time)/1000000;
 
     }
 }

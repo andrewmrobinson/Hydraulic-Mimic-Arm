@@ -37,14 +37,14 @@ extern uint8 Timer_1_initVar;
 **************************************/
 
 #define Timer_1_Resolution                 16u
-#define Timer_1_UsingFixedFunction         1u
+#define Timer_1_UsingFixedFunction         0u
 #define Timer_1_UsingHWCaptureCounter      0u
 #define Timer_1_SoftwareCaptureMode        0u
 #define Timer_1_SoftwareTriggerMode        0u
 #define Timer_1_UsingHWEnable              0u
 #define Timer_1_EnableTriggerMode          0u
 #define Timer_1_InterruptOnCaptureCount    0u
-#define Timer_1_RunModeUsed                1u
+#define Timer_1_RunModeUsed                0u
 #define Timer_1_ControlRegRemoved          0u
 
 #if defined(Timer_1_TimerUDB_sCTRLReg_SyncCtl_ctrlreg__CONTROL_REG)
