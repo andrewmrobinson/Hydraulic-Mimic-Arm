@@ -46,7 +46,7 @@ int isNegative=0;
 char sendValue[100];
 uint16 adcValue1;
 uint16 adcValue2;
-char temp[9];
+char temp[20];
 int nn=0;
 double pid[3] = {0.05,0.000,0};
 //double pid[3] = { -2.22,-0.0307,0.0 };
@@ -125,7 +125,7 @@ CY_ISR(RxIsr)
                 case 0:
                     if(rxData=='{' )
                     {
-                        for(int pp=1;pp<9;pp++){
+                        for(int pp=1;pp<20;pp++){
                             temp[pp] = ' ';
                         }
                         temp[0] = '\0';
@@ -153,7 +153,7 @@ CY_ISR(RxIsr)
                         new_pos_set = 1;
                         nn=0; 
                     
-                        sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angletemp);
+                        sprintf(sendValue,"%08d\t%08.0g\t%08d",adcValue1,err,angletemp);
                         UART_PutString(sendValue);
                         temp[0] = '\0';
                         
