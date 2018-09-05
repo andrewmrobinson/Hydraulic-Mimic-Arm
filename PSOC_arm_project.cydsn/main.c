@@ -19,7 +19,7 @@ uint8 errorStatus = 0u;
 
 uint16 dutycyclelength(int angle)
 {
-    uint16 pulselength=(uint16)One_ms + ((angle+45.0)/90.0) * One_ms;
+    uint16 pulselength=(uint16)One_ms + ((angle+4500.0)/9000.0) * One_ms;
     return pulselength;
 }
 
@@ -40,8 +40,8 @@ uint16 dutycyclelength(int angle)
 int data_read_mode = 0;
 volatile int new_angle = 0;
 volatile int new_pos_set = 0;
-int angle = 0;
-int angletemp=0;
+double angle = 0;
+double angletemp=0;
 int isNegative=0;
 char sendValue[100];
 uint16 adcValue1;
@@ -153,7 +153,7 @@ CY_ISR(RxIsr)
                         new_pos_set = 1;
                         nn=0; 
                     
-                        sprintf(sendValue,"%08d\t%08.0g\t%08d",adcValue1,err,angletemp);
+                        sprintf(sendValue,"%08d\t%8.2f\t%8.2f",adcValue1,err,angletemp);
                         UART_PutString(sendValue);
                         temp[0] = '\0';
                         
@@ -260,7 +260,7 @@ int main()
     der = 0; prev_err = 0; pid_integral = 0; 
     dt = 0.025; //assumes cydelay = 10 below for a 100Hz frequency.
 
-    sprintf(sendValue,"%08d\t%08.0f\t%08d",adcValue1,err,angletemp);
+    sprintf(sendValue,"%08d\t%08.0f\t%8.2f",adcValue1,err,angletemp);
     UART_PutString(sendValue);
     uint16 moving_avg[5] = {0,0,0,0,0};
     median_timer_Start();
@@ -318,12 +318,12 @@ int main()
         angletemp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
         angle=angletemp;
         //Limit angles of proportional valve
-        if(angle<0){angle = angle - 15;}
+        if(angle<0){angle = angle - 16;}
         if(angle>0){angle = angle + 14;}
         if(angle>45){angle=45;}
         if(angle<-45){angle=-45;}
         if(angle<46 & angle>-46){
-            PWM_1_WriteCompare(dutycyclelength(angle));
+            PWM_1_WriteCompare(dutycyclelength(angle*100));
         }
         prev_err = err;
         
