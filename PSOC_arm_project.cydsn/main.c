@@ -42,8 +42,8 @@ volatile int new_angle = 0;
 volatile int new_pos_set = 0;
 double angle = 0;
 double angletemp=0;
-uint16 pulse = 0;
-uint16 pulse_temp = 0;
+int16 pulse = 0;
+int16 pulse_temp = 0;
 int isNegative=0;
 char sendValue[100];
 uint16 adcValue1;
@@ -293,13 +293,13 @@ int main()
         der = err - prev_err;
         pid_integral = err + pid_integral;
         pulse_temp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
-        pulse=angletemp;
+        pulse=pulse_temp;
         //Limit angles of proportional valve
-        if(angle<0){angle = angle - 16;}
-        if(angle>0){angle = angle + 14;}
-        if(angle>45){angle=45;}
-        if(angle<-45){angle=-45;}
-        if(angle<46 & angle>-46){
+        if(pulse<0){pulse = pulse - 150;}
+        if(pulse>0){pulse = pulse + 153;}
+        if(pulse<-500){pulse=-500;}
+        if(pulse>500){pulse=500;}
+        if(pulse>-501 & pulse<501){
             //PWM_1_WriteCompare(dutycyclelength(angle));
             PWM_1_WriteCompare(pulse + 1500);//(uint16)One_ms + ((angle+45.0)/90.0) * One_ms;
         }
