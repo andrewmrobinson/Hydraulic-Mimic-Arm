@@ -8,3 +8,8 @@ p,i,d
 with updated duty function
 
 0.005,0,0.001 - good response on ramp, jittery response on step
+
+LOWER:	Lower Offset: -14.700000 	Upper Offset: 13.900000 	 ADC Diff: 6
+Lower Offset: -13.600000 	 Upper Offset: 13.500000 
+Lower Offset: -13.900000 	 Upper Offset: 13.800000 
+Lower Offset: -13.800000 	 Upper Offset: 13.700000 

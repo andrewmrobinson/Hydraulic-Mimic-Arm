@@ -42,8 +42,6 @@ volatile int new_angle = 0;
 volatile int new_pos_set = 0;
 double angle = 0;
 double angletemp=0;
-uint16 pulse = 0;
-uint16 pulse_temp = 0;
 int isNegative=0;
 char sendValue[100];
 uint16 adcValue1;
@@ -156,7 +154,7 @@ CY_ISR(RxIsr)
                         new_pos_set = 1;
                         nn=0; 
                     
-                        sprintf(sendValue,"%08d\t%8.2f\t%8d",adcValue1,err,pulse_temp);
+                        sprintf(sendValue,"%08d\t%8.2f\t%8.2f",adcValue1,err,angletemp);
                         UART_PutString(sendValue);
                         temp[0] = '\0';
                         
@@ -263,7 +261,7 @@ int main()
     der = 0; prev_err = 0; pid_integral = 0; 
     dt = 0.025; //assumes cydelay = 10 below for a 100Hz frequency.
 
-    sprintf(sendValue,"%08d\t%08.0f\t%8d",adcValue1,err,pulse_temp);
+    sprintf(sendValue,"%08d\t%08.0f\t%8.2f",adcValue1,err,angletemp);
     UART_PutString(sendValue);
     uint16 moving_avg[5] = {0,0,0,0,0};
     median_timer_Start();
@@ -288,24 +286,80 @@ int main()
         }
         
         /* START PID CODE */
-
+        sprintf(sendValue,"ADC: %08d\t Desired: %08.0d\n",adcValue1,2000);
+        UART_PutString(sendValue);
         err = -pos + adcValue1;
+        err = -2000 + adcValue1;
         der = err - prev_err;
         pid_integral = err + pid_integral;
-        pulse_temp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
-        pulse=angletemp;
+        angletemp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
+        angle=angletemp;
         //Limit angles of proportional valve
         if(angle<0){angle = angle - 16;}
         if(angle>0){angle = angle + 14;}
         if(angle>45){angle=45;}
         if(angle<-45){angle=-45;}
         if(angle<46 & angle>-46){
-            //PWM_1_WriteCompare(dutycyclelength(angle));
-            PWM_1_WriteCompare(pulse + 1500);//(uint16)One_ms + ((angle+45.0)/90.0) * One_ms;
+            PWM_1_WriteCompare(dutycyclelength(angle));
         }
         prev_err = err;
         /* END PID CODE */
         
+        //FIND OFFSET VALUES
+        
+        if(start_calib){
+            int upper_offset_set = 0;
+            int lower_offset_set = 0;
+            double upper_offset = 10;
+            double lower_offset = -10;
+            uint16 prev_adcValue = adcValue1;
+            uint16 diff = 0;
+            PWM_1_WriteCompare(dutycyclelength(0));
+            CyDelay(1000);
+        
+            while(upper_offset_set==0 && lower_offset_set==0){
+                
+                prev_adcValue = adcValue1;
+                if(upper_offset_set==0){
+                    PWM_1_WriteCompare(dutycyclelength(upper_offset));
+                    CyDelay(200);
+                    diff = abs(prev_adcValue-adcValue1);
+                    if(diff>10){
+                        upper_offset_set=1;
+                    }else{
+                        upper_offset = upper_offset + 0.1;
+                    }
+                    sprintf(sendValue,"UPPER:\tLower Offset: %f \tUpper Offset: %f \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
+                    UART_PutString(sendValue);
+                }
+                PWM_1_WriteCompare(dutycyclelength(0));
+                CyDelay(500);
+                
+                prev_adcValue = adcValue1;
+                if(lower_offset_set==0){
+                    PWM_1_WriteCompare(dutycyclelength(lower_offset));
+                    CyDelay(200);
+                    diff = abs(prev_adcValue-adcValue1);
+                    if(diff>10){
+                        lower_offset_set=1;
+                    }else{
+                        lower_offset = lower_offset - 0.1;
+                    }
+                    sprintf(sendValue,"LOWER:\tLower Offset: %f \tUpper Offset: %f \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
+                    UART_PutString(sendValue);
+            
+                }
+                
+                PWM_1_WriteCompare(dutycyclelength(0));
+                CyDelay(500);
+                
+            }
+            
+            sprintf(sendValue,"Lower Offset: %f \t Upper Offset: %f \n",lower_offset,upper_offset);
+            UART_PutString(sendValue);
+            
+            while(1){CyDelay(100);};
+        }
         
         
         CyDelay(10);
