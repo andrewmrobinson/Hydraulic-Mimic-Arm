@@ -25,38 +25,40 @@
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\UART_PM.c" value="SOURCE_C;CortexM3;;;;UART" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\UART_INT.c" value="SOURCE_C;CortexM3;;;;UART" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\UART_BOOT.c" value="SOURCE_C;CortexM3;;;;UART" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\LED_aliases.h" value="HEADER;;;;;LED" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\LED.c" value="SOURCE_C;CortexM3;;;;LED" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\LED.h" value="HEADER;;;;;LED" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\SW2_aliases.h" value="HEADER;;;;;SW2" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\SW2.c" value="SOURCE_C;CortexM3;;;;SW2" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\SW2.h" value="HEADER;;;;;SW2" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\isr_rx.c" value="SOURCE_C;CortexM3;;;;isr_rx" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\isr_rx.h" value="HEADER;;;;;isr_rx" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_1_aliases.h" value="HEADER;;;;;pwm_pin_1" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_1.c" value="SOURCE_C;CortexM3;;;;pwm_pin_1" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_1.h" value="HEADER;;;;;pwm_pin_1" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_1.c" value="SOURCE_C;CortexM3;;;;PWM_1" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_1.h" value="HEADER;;;;;PWM_1" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_1_PM.c" value="SOURCE_C;CortexM3;;;;PWM_1" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_3_aliases.h" value="HEADER;;;;;adc_pin_3" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_3.c" value="SOURCE_C;CortexM3;;;;adc_pin_3" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_3.h" value="HEADER;;;;;adc_pin_3" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_2_aliases.h" value="HEADER;;;;;adc_pin_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_2.c" value="SOURCE_C;CortexM3;;;;adc_pin_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_2.h" value="HEADER;;;;;adc_pin_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\isr_rx.c" value="SOURCE_C;CortexM3;;;;isr_rx" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\isr_rx.h" value="HEADER;;;;;isr_rx" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_0.c" value="SOURCE_C;CortexM3;;;;PWM_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_0.h" value="HEADER;;;;;PWM_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_0_PM.c" value="SOURCE_C;CortexM3;;;;PWM_0" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\Clock_1.c" value="SOURCE_C;CortexM3;;;;Clock_1" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\Clock_1.h" value="HEADER;;;;;Clock_1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm1_aliases.h" value="HEADER;;;;;pwm1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm1.c" value="SOURCE_C;CortexM3;;;;pwm1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm1.h" value="HEADER;;;;;pwm1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1.h" value="HEADER;;;;;ADC_SAR_1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_INT.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_PM.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_in_aliases.h" value="HEADER;;;;;adc_in" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_in.c" value="SOURCE_C;CortexM3;;;;adc_in" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_in.h" value="HEADER;;;;;adc_in" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_2.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_2" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_2.h" value="HEADER;;;;;ADC_SAR_2" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_2_INT.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_2" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_2_PM.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_2" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_in_1_aliases.h" value="HEADER;;;;;adc_in_1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_in_1.c" value="SOURCE_C;CortexM3;;;;adc_in_1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_in_1.h" value="HEADER;;;;;adc_in_1" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\timer_clock.c" value="SOURCE_C;CortexM3;;;;timer_clock" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\timer_clock.h" value="HEADER;;;;;timer_clock" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_0_aliases.h" value="HEADER;;;;;pwm_pin_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_0.c" value="SOURCE_C;CortexM3;;;;pwm_pin_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_0.h" value="HEADER;;;;;pwm_pin_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0.c" value="SOURCE_C;CortexM3;;;;ADC_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0.h" value="HEADER;;;;;ADC_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_INT.c" value="SOURCE_C;CortexM3;;;;ADC_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_PM.c" value="SOURCE_C;CortexM3;;;;ADC_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_0_aliases.h" value="HEADER;;;;;adc_pin_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_0.c" value="SOURCE_C;CortexM3;;;;adc_pin_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_0.h" value="HEADER;;;;;adc_pin_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_1_aliases.h" value="HEADER;;;;;adc_pin_1" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_1.c" value="SOURCE_C;CortexM3;;;;adc_pin_1" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\adc_pin_1.h" value="HEADER;;;;;adc_pin_1" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\AMux_0.c" value="SOURCE_C;CortexM3;;;;AMux_0" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\AMux_0.h" value="HEADER;;;;;AMux_0" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\Timer_1.c" value="SOURCE_C;CortexM3;;;;Timer_1" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\Timer_1.h" value="HEADER;;;;;Timer_1" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\Timer_1_PM.c" value="SOURCE_C;CortexM3;;;;Timer_1" />
@@ -65,19 +67,27 @@
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\median_timer_PM.c" value="SOURCE_C;CortexM3;;;;median_timer" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\update_median_isr.c" value="SOURCE_C;CortexM3;;;;update_median_isr" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\update_median_isr.h" value="HEADER;;;;;update_median_isr" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_2.c" value="SOURCE_C;CortexM3;;;;PWM_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_2.h" value="HEADER;;;;;PWM_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_2_PM.c" value="SOURCE_C;CortexM3;;;;PWM_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_2_aliases.h" value="HEADER;;;;;pwm_pin_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_2.c" value="SOURCE_C;CortexM3;;;;pwm_pin_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_2.h" value="HEADER;;;;;pwm_pin_2" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_3.c" value="SOURCE_C;CortexM3;;;;PWM_3" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_3.h" value="HEADER;;;;;PWM_3" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\PWM_3_PM.c" value="SOURCE_C;CortexM3;;;;PWM_3" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_3_aliases.h" value="HEADER;;;;;pwm_pin_3" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_3.c" value="SOURCE_C;CortexM3;;;;pwm_pin_3" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\pwm_pin_3.h" value="HEADER;;;;;pwm_pin_3" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\UART_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_IntClock" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\UART_IntClock.h" value="HEADER;;;;;UART_IntClock" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_IRQ.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1_IRQ" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_IRQ.h" value="HEADER;;;;;ADC_SAR_1_IRQ" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_theACLK.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1_theACLK" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_theACLK.h" value="HEADER;;;;;ADC_SAR_1_theACLK" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_Bypass_aliases.h" value="HEADER;;;;;ADC_SAR_1_Bypass" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_Bypass.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1_Bypass" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_1_Bypass.h" value="HEADER;;;;;ADC_SAR_1_Bypass" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_2_IRQ.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_2_IRQ" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_2_IRQ.h" value="HEADER;;;;;ADC_SAR_2_IRQ" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_2_theACLK.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_2_theACLK" />
-  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_SAR_2_theACLK.h" value="HEADER;;;;;ADC_SAR_2_theACLK" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_IRQ.c" value="SOURCE_C;CortexM3;;;;ADC_0_IRQ" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_IRQ.h" value="HEADER;;;;;ADC_0_IRQ" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_theACLK.c" value="SOURCE_C;CortexM3;;;;ADC_0_theACLK" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_theACLK.h" value="HEADER;;;;;ADC_0_theACLK" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_Bypass_aliases.h" value="HEADER;;;;;ADC_0_Bypass" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_Bypass.c" value="SOURCE_C;CortexM3;;;;ADC_0_Bypass" />
+  <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\ADC_0_Bypass.h" value="HEADER;;;;;ADC_0_Bypass" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />

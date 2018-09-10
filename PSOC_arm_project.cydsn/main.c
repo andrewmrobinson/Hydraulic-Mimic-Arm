@@ -8,6 +8,7 @@
 #define	Frequency 1000000.0			// Frequency of PWMClock
 #define	One_ms (Frequency/1000.0)	// 1 ms constant
 #define filter_size 7
+#define CYL_NO 2                    // Number of connected cylinders
 
 /* Add an explicit reference to the floating point printf library to allow
 the usage of floating point conversion specifier */
@@ -17,81 +18,73 @@ the usage of floating point conversion specifier */
 
 uint8 errorStatus = 0u;
 
-uint16 dutycyclelength(double angle)
-{
-    uint16 pulselength=(uint16)One_ms + ((angle+45.0)/90.0) * One_ms;
-    return pulselength;
+int pulseCheck(int pulse, int offset_upper, int offset_lower) {
+    if(pulse<0){pulse = pulse - offset_lower;}
+        if(pulse>0){pulse = pulse + offset_upper;}
+        if(pulse<-500){pulse=-500;}
+        if(pulse>500){pulse=500;}
+    return pulse;
 }
 
-/*******************************************************************************
-* Function Name: RxIsr
-********************************************************************************
-*
-* Summary:
-*  Interrupt Service Routine for RX portion of the UART
-*
-* Parameters:
-*  None.
-*
-* Return:
-*  None.
-*
-*******************************************************************************/
+
 int data_read_mode = 0;
-volatile int new_angle = 0;
-volatile int new_pos_set = 0;
-double angle = 0;
-double angletemp=0;
-int16 pulse = 0;
-int16 pulse_temp = 0;
-int isNegative=0;
+
+volatile int new_pos_set[CYL_NO] = {0};
+int new_pos[CYL_NO];
+int pos[CYL_NO]={1600};
+int pulse[CYL_NO] = {0};
+int pulse_temp[CYL_NO] = {0};
+double err[CYL_NO];
+uint16 adcValue[CYL_NO];
+double der[CYL_NO] = {0};
+double prev_err[CYL_NO] = {0};
+double pid_integral[CYL_NO] = {0};
+
+int offsets[4][2] = {{150,153},{150,153},{0,0},{0,0}}; //{lower,upper} - both positive
+
 char sendValue[100];
-uint16 adcValue1;
-uint16 adcValue2;
 char temp[20];
 int nn=0;
-double pid[3] = {0.003,0.000,0.001};
+double pid[3] = {1,0.000,0.001};
 //double pid[3] = { -2.22,-0.0307,0.0 };
 char help[100];
 int tt = 0;
-int pos=1600;
-int new_pos;
-double err;
+
 int start_calib = 0;
+int cyl_no = 0;
 
-
-uint16 moving_median[filter_size] = {0,0,0};
+uint16 moving_median[CYL_NO][filter_size] = {0};
 uint16 tempArray[filter_size];
 uint16 tmp;
 
 CY_ISR(adc_update){
-    for(int j=0;j<filter_size-1;j++){
-            moving_median[j] = moving_median[j+1]; 
-    }
-    ADC_SAR_1_StartConvert();
-    ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
+    for(int c = 0;c<CYL_NO;c++){
+        AMux_0_FastSelect(c);
         
-    moving_median[filter_size-1] = ADC_SAR_1_GetResult16();
-    
-    for(int j=0;j<filter_size;j++){
-            tempArray[j] = moving_median[j]; 
+        for(int j=0;j<filter_size-1;j++){
+                moving_median[c][j] = moving_median[c][j+1]; 
+        }
+        
+        moving_median[c][filter_size-1] = ADC_0_GetResult16();
+        ADC_0_IsEndConversion(ADC_0_WAIT_FOR_RESULT);
+        moving_median[c][filter_size-1] = ADC_0_GetResult16();
+        
+        for(int j=0;j<filter_size;j++){
+                tempArray[j] = moving_median[c][j]; 
+        }
+        for(int i = 0; i < filter_size; i++){                     //Loop for ascending ordering
+        	for (int j = 0; j < filter_size; j++)             //Loop for comparing other values
+        	{
+        		if (tempArray[j] > tempArray[i])                //Comparing other array elements
+        		{
+        			tmp = tempArray[i];         //Using temporary variable for storing last value
+        			tempArray[i] = tempArray[j];            //replacing value
+        			tempArray[j] = tmp;             //storing last value
+        		}  
+        	}
+        }
+        adcValue[c] = tempArray[(filter_size-1)/2];
     }
-    for(int i = 0; i < filter_size; i++){                     //Loop for ascending ordering
-    	for (int j = 0; j < filter_size; j++)             //Loop for comparing other values
-    	{
-    		if (tempArray[j] > tempArray[i])                //Comparing other array elements
-    		{
-    			tmp = tempArray[i];         //Using temporary variable for storing last value
-    			tempArray[i] = tempArray[j];            //replacing value
-    			tempArray[j] = tmp;             //storing last value
-    		}  
-    	}
-    }
-    adcValue1 = tempArray[(filter_size-1)/2];
-    if(adcValue1<4000){
-        adcValue1 = adcValue1;
-    }
-    
     update_median_isr_ClearPending();
     
 }
@@ -132,7 +125,6 @@ CY_ISR(RxIsr)
                             temp[pp] = ' ';
                         }
                         temp[0] = '\0';
-                        new_angle = 0;
                         data_read_mode++;
                     }
                 break;
@@ -146,17 +138,19 @@ CY_ISR(RxIsr)
                     else if(rxData=='d'){
                         data_read_mode = 5;}
                 break;
-                case 2:
+                case 2: //x
                     if(rxData != '}'){
                         temp[nn] = rxData;
                         nn++;
                     }
                     else {
-                        new_pos = (int) strtol(temp, (char **)NULL, 10);
-                        new_pos_set = 1;
+                        cyl_no = strtol(&temp[0],(char **)NULL, 10);
+                        
+                        new_pos[cyl_no] = (int) strtol(temp+1, (char **)NULL, 10);
+                        new_pos_set[cyl_no] = 1;
                         nn=0; 
                     
-                        sprintf(sendValue,"%08d\t%8.2f\t%8d",adcValue1,err,pulse_temp);
+                        sprintf(sendValue,"%08d\t%8.2f\t%8d",adcValue[0],err[0],pulse_temp[0]);
                         UART_PutString(sendValue);
                         temp[0] = '\0';
                         
@@ -164,7 +158,7 @@ CY_ISR(RxIsr)
                     }
                   
                 break;
-                case 3:
+                case 3: //p
                     if(rxData != '}'){
                         temp[nn] = rxData;
                         nn++;
@@ -177,7 +171,7 @@ CY_ISR(RxIsr)
                     }
                     
                 break;
-                case 4:
+                case 4: //i
                     if(rxData != '}'){
                         temp[nn] = rxData;
                         nn++;
@@ -190,7 +184,7 @@ CY_ISR(RxIsr)
                     }
                     
                 break;
-                case 5:
+                case 5: //d
                     if(rxData != '}'){
                         temp[nn] = rxData;
                         nn++;
@@ -216,35 +210,19 @@ CY_ISR(RxIsr)
 }
     
 
-/*******************************************************************************
-* Function Name: main()
-********************************************************************************
-* Summary:
-*  Main function for the project.
-*
-* Theory:
-*  The function starts UART and interrupt components.
-*
-*******************************************************************************/
+
 int led_switch = 0;
 int main()
 {
     
-    
     //PWM variables
-
+    PWM_0_Start();
     PWM_1_Start();
-    ADC_SAR_1_Start(); 
+    PWM_2_Start();
+    PWM_3_Start();
+    ADC_0_Start();
+    ADC_0_StartConvert();
     
-    //ADC_SAR_1_StartConvert(); 
-    //ADC_SAR_2_Start(); 
-    //ADC_SAR_2_StartConvert(); 
-    
-    uint8 button = 0u;
-    uint8 buttonPre = 0u;
-    
-    LED_Write(LED_OFF);     /* Clear LED */
-
     UART_Start();           /* Start communication component */
 
 #if(INTERRUPT_CODE_ENABLED == ENABLED)
@@ -254,56 +232,53 @@ int main()
     
     CyGlobalIntEnable;      /* Enable global interrupts. */
     
-
-    angle = -89;
-    uint16 timercapture;
-    double der, prev_err, pid_integral,dt;
+    double dt;
     double time;
     
-    der = 0; prev_err = 0; pid_integral = 0; 
-    dt = 0.025; //assumes cydelay = 10 below for a 100Hz frequency.
+    dt = 0.025; //initialised dt, corrected by timer  below
 
-    sprintf(sendValue,"%08d\t%08.0f\t%8d",adcValue1,err,pulse_temp);
+    sprintf(sendValue,"%08d\t%08.0f\t%8d",adcValue[0],err[0],pulse_temp[0]);
     UART_PutString(sendValue);
-    uint16 moving_avg[5] = {0,0,0,0,0};
+    
     median_timer_Start();
     Timer_1_Start();
     for(;;)
     {
         Timer_1_WriteCounter(65535);
-       
-        
-        if(new_pos_set){
-            pos = new_pos;
-            new_pos_set = 0;
-            new_angle = 0;
-            
-            /*
-            if(pos>45){pos=45;}
-            if(pos<-45){pos=-45;}
-            if(pos<46 & pos>-46){
-                PWM_1_WriteCompare(dutycyclelength(pos));
-            }
-            */       
-        }
-        
-        /* START PID CODE */
 
-        err = -pos + adcValue1;
-        der = err - prev_err;
-        pid_integral = err + pid_integral;
-        pulse_temp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
-        pulse=pulse_temp;
-        //Limit angles of proportional valve
-        if(pulse<0){pulse = pulse - 150;}
-        if(pulse>0){pulse = pulse + 153;}
-        if(pulse<-500){pulse=-500;}
-        if(pulse>500){pulse=500;}
-        if(pulse>-501 & pulse<501){
-            //PWM_1_WriteCompare(dutycyclelength(angle));
-            PWM_1_WriteCompare(pulse + 1500);//(uint16)One_ms + ((angle+45.0)/90.0) * One_ms;
+        /* START PID CODE */
+        for(int cyl = 0;cyl<CYL_NO;cyl++){
+            if(new_pos_set[cyl]){
+                pos[cyl] = new_pos[cyl];
+                new_pos_set[cyl] = 0;
+            }
+            
+            err[cyl] = -pos[cyl] + adcValue[cyl];
+            der[cyl] = err[cyl] - prev_err[cyl];
+            pid_integral[cyl] = err[cyl] + pid_integral[cyl];
+            pulse_temp[cyl] = pid[0] * err[cyl] + ( pid[1] * pid_integral[cyl] * dt) + ( pid[2] * der[cyl] / dt );
+            
+            pulse[cyl] = pulseCheck(pulse_temp[cyl],offsets[cyl][1],offsets[cyl][0]);
+            switch(cyl){
+                case 0:
+                    PWM_0_WriteCompare(pulse[cyl] + 1500);
+                    break;
+                case 1:
+                    PWM_1_WriteCompare(pulse[cyl] + 1500);
+                    break;
+                case 2:
+                    PWM_2_WriteCompare(pulse[cyl] + 1500);
+                    break;
+                case 3:
+                    PWM_3_WriteCompare(pulse[cyl] + 1500);
+                    break;
+            }
+            prev_err[cyl] = err[cyl];
         }
-        prev_err = err;
+        
+        
+        
+        
         /* END PID CODE */
         
         
@@ -315,4 +290,4 @@ int main()
     }
 }
 
-/* [] END OF FILE */
+/*  END OF FILE */

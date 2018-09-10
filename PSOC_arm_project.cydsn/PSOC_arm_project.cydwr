@@ -15,16 +15,21 @@
       <Data key="b0162966-0060-4af5-82d1-fcb491ad7619/be0a0e37-ad17-42ca-b5a1-1a654d736358" value="UART_IntClock" />
     </Group>
     <Group key="Pin">
-      <Data key="1a3e388f-e2af-4afb-b8de-7fc4ee811758/16a808f6-2e13-45b9-bce0-b001c8655113" value="ADC_SAR_1_Bypass" />
-      <Data key="1f112cf5-be9f-40c9-afec-54771b808d74" value="adc_in" />
+      <Data key="1a3e388f-e2af-4afb-b8de-7fc4ee811758/16a808f6-2e13-45b9-bce0-b001c8655113" value="ADC_0_Bypass" />
+      <Data key="1b7cdb54-ea4e-417f-9641-4e5d71067d00" value="pwm_pin_1" />
+      <Data key="1f112cf5-be9f-40c9-afec-54771b808d74" value="adc_pin_0" />
       <Data key="5d8085e6-85ab-4659-9926-799d814ca7f5/16a808f6-2e13-45b9-bce0-b001c8655113" value="ADC_SAR_2_Bypass" />
       <Data key="8fa79817-b12d-448f-a0b1-e7b0699024f4" value="SW2" />
-      <Data key="14da0b2f-04be-4a80-a456-e1d41f8fcea2" value="adc_in_1" />
+      <Data key="14da0b2f-04be-4a80-a456-e1d41f8fcea2" value="adc_pin_1" />
       <Data key="76d26b07-4bcd-4cde-aaf2-aec79c5b7b8d" value="Ringing_LED" />
+      <Data key="0186fd8f-b78c-45e8-a51e-402f0ff4a144" value="pwm_pin_2" />
+      <Data key="664d569c-8aaa-486c-9b7a-35e0c3115f12" value="adc_pin_2" />
+      <Data key="1959df07-4bef-4380-9956-922f455bea48" value="pwm_pin_3" />
+      <Data key="9719d3a0-457a-438b-9573-f8cdd7c5cda9" value="adc_pin_3" />
       <Data key="409723aa-5c22-4728-bae2-bda56e7b7aa7" value="Advertising_LED" />
       <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="Rx" />
       <Data key="a8350980-e91a-4bb3-b83a-bc0dcd708677" value="LED" />
-      <Data key="acebabe9-8532-47ae-ace2-42b4b3268468" value="Pin_2" />
+      <Data key="acebabe9-8532-47ae-ace2-42b4b3268468" value="pwm_pin_0" />
       <Data key="b6c4ba10-484f-4f12-9949-5dd0bc328ee3/23b8206d-1c77-4e61-be4a-b4037d5de5fc" value="UART_DEB_tx" />
       <Data key="b6c4ba10-484f-4f12-9949-5dd0bc328ee3/78e33e5d-45ea-4b75-88d5-73274e8a7ce4" value="UART_DEB_rx" />
       <Data key="ebe0244e-5fa9-4c56-bc97-942d2c545d64" value="Pin_0" />
@@ -3629,6 +3634,11 @@
     </Group>
   </Group>
   <Group key="Pin2">
+    <Group key="1b7cdb54-ea4e-417f-9641-4e5d71067d00">
+      <Group key="0">
+        <Data key="Port Format" value="1,7" />
+      </Group>
+    </Group>
     <Group key="1f112cf5-be9f-40c9-afec-54771b808d74">
       <Group key="0">
         <Data key="Port Format" value="2,0" />
@@ -3656,7 +3666,7 @@
     </Group>
     <Group key="acebabe9-8532-47ae-ace2-42b4b3268468">
       <Group key="0">
-        <Data key="Port Format" value="1,6" />
+        <Data key="Port Format" value="12,4" />
       </Group>
     </Group>
     <Group key="ebe0244e-5fa9-4c56-bc97-942d2c545d64">
