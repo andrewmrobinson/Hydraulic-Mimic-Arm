@@ -222,6 +222,7 @@ int main()
     PWM_3_Start();
     ADC_0_Start();
     ADC_0_StartConvert();
+    AMux_0_Init();
     
     UART_Start();           /* Start communication component */
 
