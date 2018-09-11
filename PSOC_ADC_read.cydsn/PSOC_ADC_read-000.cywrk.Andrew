@@ -123,25 +123,6 @@
 <v>PSOC_ADC_read-000\PSOC_ADC_read\PSOC_ADC_read.cydwr\Directives</v>
 <v>PSOC_ADC_read-000\PSOC_ADC_read\PSOC_ADC_read.cydwr\Flash Security</v>
 <v>PSOC_ADC_read-000\PSOC_ADC_read\PSOC_ADC_read.cydwr\EEPROM</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Header Files</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Header Files\common.h</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Header Files\cyapicallbacks.h</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Source Files</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Source Files\debug.c</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Source Files\main.c</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CE210741_UART_Full_Duplex_and_printf_Support_with_PSoC_3_4_5LP.pdf</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\cmsis_armcc.h</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\cmsis_compiler.h</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\cmsis_gcc.h</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -176,8 +157,6 @@
 <v>PSOC_ADC_read-000\PSOC_ADC_read\TopDesign\PSoC4\PSoC 4200L</v>
 <v>PSOC_ADC_read-000\PSOC_ADC_read\TopDesign\PSoC4\PSoC 4200L\TopDesign.ctl</v>
 <v>PSOC_ADC_read-000\PSOC_ADC_read\TopDesign\PSoC5</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\TopDesign\PSoC5\TopDesign.ctl</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -243,25 +222,6 @@
 <v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
 <v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
 <v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_Bypass.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_INT.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_IRQ.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_PM.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_theACLK.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\CyScBoostClk.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\debug.lst</v>
-<v>PSOC_ADC_read-000\PSOC_ADC_read\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_rx.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -316,7 +276,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="799, 405" SelectedTabbedMdiWindow="0c7ccc64-a078-4e46-af11-64dadb9cbe51"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_ADC_read.cydsn\main.c" Guid="0c7ccc64-a078-4e46-af11-64dadb9cbe51" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_ADC_read.cydsn\TopDesign\TopDesign.cysch" Guid="91e81134-23f8-42e6-adb0-0e9dced735bf" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_ADC_read.cydsn\PSOC_ADC_read.cydwr" Guid="46231bbc-bed3-4490-b3ec-1c4d189c8a82" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1055, 405" SelectedTabbedMdiWindow="91e81134-23f8-42e6-adb0-0e9dced735bf"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_ADC_read.cydsn\main.c" Guid="0c7ccc64-a078-4e46-af11-64dadb9cbe51" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_ADC_read.cydsn\TopDesign\TopDesign.cysch" Guid="91e81134-23f8-42e6-adb0-0e9dced735bf" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_ADC_read.cydsn\PSOC_ADC_read.cydwr" Guid="46231bbc-bed3-4490-b3ec-1c4d189c8a82" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

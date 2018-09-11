@@ -1,372 +1,57 @@
-
-#include <project.h>
-#include <stdio.h>
-#include "common.h"
-#include <math.h>
-#include <stdlib.h>     /* strtod */
-
-#define	Frequency 1000000.0			// Frequency of PWMClock
-#define	One_ms (Frequency/1000.0)	// 1 ms constant
-#define filter_size 7
-
-/* Add an explicit reference to the floating point printf library to allow
-the usage of floating point conversion specifier */
-#if defined (__GNUC__)
-    asm (".global _printf_float");
-#endif
-
-uint8 errorStatus = 0u;
-
-uint16 dutycyclelength(double angle)
-{
-    uint16 pulselength=(uint16)One_ms + ((angle+45.0)/90.0) * One_ms;
-    return pulselength;
-}
-
-/*******************************************************************************
-* Function Name: RxIsr
-********************************************************************************
-*
-* Summary:
-*  Interrupt Service Routine for RX portion of the UART
-*
-* Parameters:
-*  None.
-*
-* Return:
-*  None.
-*
-*******************************************************************************/
-int data_read_mode = 0;
-volatile int new_angle = 0;
-volatile int new_pos_set = 0;
-double angle = 0;
-double angletemp=0;
-int isNegative=0;
-char sendValue[100];
-uint16 adcValue1;
-uint16 adcValue2;
-char temp[20];
-int nn=0;
-double pid[3] = {0.003,0.000,0.001};
-//double pid[3] = { -2.22,-0.0307,0.0 };
-char help[100];
-int tt = 0;
-int pos=1600;
-int new_pos;
-double err;
-int start_calib = 0;
-
-
-uint16 moving_median[filter_size] = {0,0,0};
-uint16 tempArray[filter_size];
-uint16 tmp;
-
-CY_ISR(adc_update){
-    for(int j=0;j<filter_size-1;j++){
-            moving_median[j] = moving_median[j+1]; 
-    }
-    ADC_SAR_1_StartConvert();
-    ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT);
-        
-    moving_median[filter_size-1] = ADC_SAR_1_GetResult16();
-    
-    for(int j=0;j<filter_size;j++){
-            tempArray[j] = moving_median[j]; 
-    }
-    for(int i = 0; i < filter_size; i++){                     //Loop for ascending ordering
-    	for (int j = 0; j < filter_size; j++)             //Loop for comparing other values
-    	{
-    		if (tempArray[j] > tempArray[i])                //Comparing other array elements
-    		{
-    			tmp = tempArray[i];         //Using temporary variable for storing last value
-    			tempArray[i] = tempArray[j];            //replacing value
-    			tempArray[j] = tmp;             //storing last value
-    		}  
-    	}
-    }
-    adcValue1 = tempArray[(filter_size-1)/2];
-    if(adcValue1<4000){
-        adcValue1 = adcValue1;
-    }
-    
-    update_median_isr_ClearPending();
-    
-}
-
-
-CY_ISR(RxIsr)
-{
-    uint8 rxStatus;         
-    uint8 rxData;           
-    
-    do
-    {
-        /* Read receiver status register */
-        rxStatus = UART_RXSTATUS_REG;
-
-        if((rxStatus & (UART_RX_STS_BREAK      | UART_RX_STS_PAR_ERROR |
-                        UART_RX_STS_STOP_ERROR | UART_RX_STS_OVERRUN)) != 0u)
-        {
-            /* ERROR handling. */
-            errorStatus |= rxStatus & ( UART_RX_STS_BREAK      | UART_RX_STS_PAR_ERROR | 
-                                        UART_RX_STS_STOP_ERROR | UART_RX_STS_OVERRUN);
-        }
-        
-        if((rxStatus & UART_RX_STS_FIFO_NOTEMPTY) != 0u)
-        {
-            /* Read data from the RX data register */
-            rxData = UART_RXDATA_REG;
-            help[tt] = rxData;
-            tt++;
-            if(tt==99){tt=0;}
-            if(rxData=='b' ){start_calib=1;};
-            switch(data_read_mode)
-            {
-                case 0:
-                    if(rxData=='{' )
-                    {
-                        for(int pp=1;pp<20;pp++){
-                            temp[pp] = ' ';
-                        }
-                        temp[0] = '\0';
-                        new_angle = 0;
-                        data_read_mode++;
-                    }
-                break;
-                case 1:
-                    if(rxData=='x'){
-                        data_read_mode = 2;}
-                    else if(rxData=='p'){
-                        data_read_mode = 3;}
-                    else if(rxData=='i'){
-                        data_read_mode = 4;}
-                    else if(rxData=='d'){
-                        data_read_mode = 5;}
-                break;
-                case 2:
-                    if(rxData != '}'){
-                        temp[nn] = rxData;
-                        nn++;
-                    }
-                    else {
-                        new_pos = (int) strtol(temp, (char **)NULL, 10);
-                        new_pos_set = 1;
-                        nn=0; 
-                    
-                        sprintf(sendValue,"%08d\t%8.2f\t%8.2f",adcValue1,err,angletemp);
-                        UART_PutString(sendValue);
-                        temp[0] = '\0';
-                        
-                        data_read_mode = 0;
-                    }
-                  
-                break;
-                case 3:
-                    if(rxData != '}'){
-                        temp[nn] = rxData;
-                        nn++;
-                    }
-                    else {
-                        pid[0] = strtod(temp, NULL);
-                        nn=0;
-                        temp[0] = '\0';
-                        data_read_mode = 0;
-                    }
-                    
-                break;
-                case 4:
-                    if(rxData != '}'){
-                        temp[nn] = rxData;
-                        nn++;
-                    }
-                    else {
-                        pid[1] = strtod(temp, NULL);
-                        nn=0;
-                        temp[0] = '\0';
-                        data_read_mode = 0;
-                    }
-                    
-                break;
-                case 5:
-                    if(rxData != '}'){
-                        temp[nn] = rxData;
-                        nn++;
-                    }
-                    else {
-                        pid[2] = strtod(temp, NULL);
-                        nn=0;
-                        temp[0] = '\0';
-                        data_read_mode = 0;
-                    }
-                    
-                break;
-            }
-            
-            if(errorStatus == 0u)
-            {
-                /* Send data backward */
-                //UART_TXDATA_REG = rxData;
-            }
-        }
-    }while((rxStatus & UART_RX_STS_FIFO_NOTEMPTY) != 0u);
-
-}
-    
-
-/*******************************************************************************
-* Function Name: main()
-********************************************************************************
-* Summary:
-*  Main function for the project.
-*
-* Theory:
-*  The function starts UART and interrupt components.
-*
-*******************************************************************************/
-int led_switch = 0;
-int main()
-{
-    
-    
-    //PWM variables
-
-    PWM_1_Start();
-    ADC_SAR_1_Start(); 
-    
-    //ADC_SAR_1_StartConvert(); 
-    //ADC_SAR_2_Start(); 
-    //ADC_SAR_2_StartConvert(); 
-    
-    uint8 button = 0u;
-    uint8 buttonPre = 0u;
-    
-    LED_Write(LED_OFF);     /* Clear LED */
-
-    UART_Start();           /* Start communication component */
-
-#if(INTERRUPT_CODE_ENABLED == ENABLED)
-    isr_rx_StartEx(RxIsr);
-    update_median_isr_StartEx(adc_update);
-#endif /* INTERRUPT_CODE_ENABLED == ENABLED */
-    
-    CyGlobalIntEnable;      /* Enable global interrupts. */
-    
-
-    angle = -89;
-    uint16 timercapture;
-    double der, prev_err, pid_integral,dt;
-    double time;
-    
-    der = 0; prev_err = 0; pid_integral = 0; 
-    dt = 0.025; //assumes cydelay = 10 below for a 100Hz frequency.
-
-    sprintf(sendValue,"%08d\t%08.0f\t%8.2f",adcValue1,err,angletemp);
-    UART_PutString(sendValue);
-    uint16 moving_avg[5] = {0,0,0,0,0};
-    median_timer_Start();
-    Timer_1_Start();
-    for(;;)
-    {
-        Timer_1_WriteCounter(65535);
-       
-        
-        if(new_pos_set){
-            pos = new_pos;
-            new_pos_set = 0;
-            new_angle = 0;
-            
-            /*
-            if(pos>45){pos=45;}
-            if(pos<-45){pos=-45;}
-            if(pos<46 & pos>-46){
-                PWM_1_WriteCompare(dutycyclelength(pos));
-            }
-            */       
-        }
-        
-        /* START PID CODE */
-        sprintf(sendValue,"ADC: %08d\t Desired: %08.0d\n",adcValue1,2000);
-        UART_PutString(sendValue);
-        err = -pos + adcValue1;
-        err = -2000 + adcValue1;
-        der = err - prev_err;
-        pid_integral = err + pid_integral;
-        angletemp = pid[0] * err + ( pid[1] * pid_integral * dt) + ( pid[2] * der / dt );
-        angle=angletemp;
-        //Limit angles of proportional valve
-        if(angle<0){angle = angle - 16;}
-        if(angle>0){angle = angle + 14;}
-        if(angle>45){angle=45;}
-        if(angle<-45){angle=-45;}
-        if(angle<46 & angle>-46){
-            PWM_1_WriteCompare(dutycyclelength(angle));
-        }
-        prev_err = err;
-        /* END PID CODE */
-        
-        //FIND OFFSET VALUES
-        
-        if(start_calib){
+if(start_calib){
+            int calib_cyl = 1;
             int upper_offset_set = 0;
             int lower_offset_set = 0;
-            double upper_offset = 10;
-            double lower_offset = -10;
-            uint16 prev_adcValue = adcValue1;
+            int upper_offset = 120;
+            int lower_offset = -120;
+            uint16 prev_adcValue = adcValue[0];
             uint16 diff = 0;
-            PWM_1_WriteCompare(dutycyclelength(0));
+            for(int g = 0;g<CYL_NO;g++)
+                writePWM(g,0);
+                
             CyDelay(1000);
         
             while(upper_offset_set==0 && lower_offset_set==0){
                 
-                prev_adcValue = adcValue1;
+                prev_adcValue = adcValue[calib_cyl];
                 if(upper_offset_set==0){
-                    PWM_1_WriteCompare(dutycyclelength(upper_offset));
+                    writePWM(calib_cyl,upper_offset);
                     CyDelay(200);
-                    diff = abs(prev_adcValue-adcValue1);
+                    diff = abs(prev_adcValue-adcValue[calib_cyl]);
                     if(diff>10){
                         upper_offset_set=1;
                     }else{
-                        upper_offset = upper_offset + 0.1;
+                        upper_offset = upper_offset + 1;
                     }
-                    sprintf(sendValue,"UPPER:\tLower Offset: %f \tUpper Offset: %f \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
+                    sprintf(sendValue,"UPPER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
                     UART_PutString(sendValue);
                 }
-                PWM_1_WriteCompare(dutycyclelength(0));
+                writePWM(calib_cyl,0);
                 CyDelay(500);
                 
-                prev_adcValue = adcValue1;
+                prev_adcValue = adcValue[calib_cyl];
                 if(lower_offset_set==0){
-                    PWM_1_WriteCompare(dutycyclelength(lower_offset));
+                    writePWM(calib_cyl,lower_offset);
                     CyDelay(200);
-                    diff = abs(prev_adcValue-adcValue1);
+                    diff = abs(prev_adcValue-adcValue[calib_cyl]);
                     if(diff>10){
                         lower_offset_set=1;
                     }else{
-                        lower_offset = lower_offset - 0.1;
+                        lower_offset = lower_offset - 1;
                     }
-                    sprintf(sendValue,"LOWER:\tLower Offset: %f \tUpper Offset: %f \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
+                    sprintf(sendValue,"LOWER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
                     UART_PutString(sendValue);
             
                 }
                 
-                PWM_1_WriteCompare(dutycyclelength(0));
+                writePWM(calib_cyl,0);
                 CyDelay(500);
                 
             }
             
-            sprintf(sendValue,"Lower Offset: %f \t Upper Offset: %f \n",lower_offset,upper_offset);
+            sprintf(sendValue,"Lower Offset: %d \t Upper Offset: %d \n",lower_offset,upper_offset);
             UART_PutString(sendValue);
             
-            while(1){CyDelay(100);};
+            //while(1){CyDelay(100);};
+            start_calib = 0;
         }
-        
-        
-        CyDelay(10);
-        time = Timer_1_ReadCounter();
-        dt=(double)(65535-time)/1000000;
-
-    }
-}
-
-/* [] END OF FILE */

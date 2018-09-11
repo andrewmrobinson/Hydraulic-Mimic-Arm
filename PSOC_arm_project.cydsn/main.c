@@ -18,6 +18,23 @@ the usage of floating point conversion specifier */
 
 uint8 errorStatus = 0u;
 
+void writePWM(int cylinder, int pulse){
+    switch(cylinder){
+                case 0:
+                    PWM_0_WriteCompare(pulse + 1500);
+                    break;
+                case 1:
+                    PWM_1_WriteCompare(pulse + 1500);
+                    break;
+                case 2:
+                    PWM_2_WriteCompare(pulse + 1500);
+                    break;
+                case 3:
+                    PWM_3_WriteCompare(pulse + 1500);
+                    break;
+            }  
+}
+
 int pulseCheck(int pulse, int offset_upper, int offset_lower) {
     if(pulse<0){pulse = pulse - offset_lower;}
         if(pulse>0){pulse = pulse + offset_upper;}
@@ -31,7 +48,7 @@ int data_read_mode = 0;
 
 volatile int new_pos_set[CYL_NO] = {0};
 int new_pos[CYL_NO];
-int pos[CYL_NO]={1600};
+int pos[CYL_NO]={2000,2000};
 int pulse[CYL_NO] = {0};
 int pulse_temp[CYL_NO] = {0};
 double err[CYL_NO];
@@ -39,13 +56,15 @@ uint16 adcValue[CYL_NO];
 double der[CYL_NO] = {0};
 double prev_err[CYL_NO] = {0};
 double pid_integral[CYL_NO] = {0};
+int cyl_set = 0;
+char cyl_tmp[1];
 
-int offsets[4][2] = {{150,153},{150,153},{0,0},{0,0}}; //{lower,upper} - both positive
+int offsets[4][2] = {{133,134},{133,134},{0,0},{0,0}}; //{lower,upper} - both positive
 
 char sendValue[100];
 char temp[20];
 int nn=0;
-double pid[3] = {1,0.000,0.001};
+double pid[3] = {0.7,0.001,0.04};
 //double pid[3] = { -2.22,-0.0307,0.0 };
 char help[100];
 int tt = 0;
@@ -137,6 +156,8 @@ CY_ISR(RxIsr)
                         data_read_mode = 4;}
                     else if(rxData=='d'){
                         data_read_mode = 5;}
+                    else if(rxData=='c'){
+                        data_read_mode = 6;}
                 break;
                 case 2: //x
                     if(rxData != '}'){
@@ -144,13 +165,12 @@ CY_ISR(RxIsr)
                         nn++;
                     }
                     else {
-                        cyl_no = strtol(&temp[0],(char **)NULL, 10);
                         
-                        new_pos[cyl_no] = (int) strtol(temp+1, (char **)NULL, 10);
+                        new_pos[cyl_no] = (int) strtol(temp, (char **)NULL, 10);
                         new_pos_set[cyl_no] = 1;
                         nn=0; 
                     
-                        sprintf(sendValue,"%08d\t%8.2f\t%8d",adcValue[0],err[0],pulse_temp[0]);
+                        
                         UART_PutString(sendValue);
                         temp[0] = '\0';
                         
@@ -197,6 +217,19 @@ CY_ISR(RxIsr)
                     }
                     
                 break;
+                case 6: //c
+                    if(rxData != '}'){
+                        temp[nn] = rxData;
+                        nn++;
+                    }
+                    else {
+                        cyl_no = (int) strtol(temp, (char **)NULL, 10);
+                        nn=0; 
+                        temp[0] = '\0';
+                        data_read_mode = 0;
+                    }
+                  
+                break;
             }
             
             if(errorStatus == 0u)
@@ -238,11 +271,12 @@ int main()
     
     dt = 0.025; //initialised dt, corrected by timer  below
 
-    sprintf(sendValue,"%08d\t%08.0f\t%8d",adcValue[0],err[0],pulse_temp[0]);
+    sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
     UART_PutString(sendValue);
     
     median_timer_Start();
     Timer_1_Start();
+   int send_now = 0;
     for(;;)
     {
         Timer_1_WriteCounter(65535);
@@ -260,30 +294,75 @@ int main()
             pulse_temp[cyl] = pid[0] * err[cyl] + ( pid[1] * pid_integral[cyl] * dt) + ( pid[2] * der[cyl] / dt );
             
             pulse[cyl] = pulseCheck(pulse_temp[cyl],offsets[cyl][1],offsets[cyl][0]);
-            switch(cyl){
-                case 0:
-                    PWM_0_WriteCompare(pulse[cyl] + 1500);
-                    break;
-                case 1:
-                    PWM_1_WriteCompare(pulse[cyl] + 1500);
-                    break;
-                case 2:
-                    PWM_2_WriteCompare(pulse[cyl] + 1500);
-                    break;
-                case 3:
-                    PWM_3_WriteCompare(pulse[cyl] + 1500);
-                    break;
-            }
+            
+            writePWM(cyl,pulse[cyl]);
             prev_err[cyl] = err[cyl];
         }
-        
-        
-        
-        
+        if(send_now>10){
+            sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f\n",adcValue[0],err[0],adcValue[1],err[1]);
+            UART_PutString(sendValue);
+            send_now = 0;
+        } else {
+            send_now++;
+        }
         /* END PID CODE */
+        if(start_calib){
+            int calib_cyl = 0;
+            int upper_offset_set = 0;
+            int lower_offset_set = 0;
+            int upper_offset = 120;
+            int lower_offset = -120;
+            uint16 prev_adcValue = adcValue[0];
+            uint16 diff = 0;
+            for(int g = 0;g<CYL_NO;g++)
+                writePWM(g,0);
+                
+            CyDelay(1000);
         
-        
-        
+            while(upper_offset_set==0 && lower_offset_set==0){
+                
+                prev_adcValue = adcValue[calib_cyl];
+                if(upper_offset_set==0){
+                    writePWM(calib_cyl,upper_offset);
+                    CyDelay(200);
+                    diff = abs(prev_adcValue-adcValue[calib_cyl]);
+                    if(diff>10){
+                        upper_offset_set=1;
+                    }else{
+                        upper_offset = upper_offset + 1;
+                    }
+                    sprintf(sendValue,"UPPER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
+                    UART_PutString(sendValue);
+                }
+                writePWM(calib_cyl,0);
+                CyDelay(500);
+                
+                prev_adcValue = adcValue[calib_cyl];
+                if(lower_offset_set==0){
+                    writePWM(calib_cyl,lower_offset);
+                    CyDelay(200);
+                    diff = abs(prev_adcValue-adcValue[calib_cyl]);
+                    if(diff>10){
+                        lower_offset_set=1;
+                    }else{
+                        lower_offset = lower_offset - 1;
+                    }
+                    sprintf(sendValue,"LOWER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
+                    UART_PutString(sendValue);
+            
+                }
+                
+                writePWM(calib_cyl,0);
+                CyDelay(500);
+                
+            }
+            
+            sprintf(sendValue,"Lower Offset: %d \t Upper Offset: %d \n",lower_offset,upper_offset);
+            UART_PutString(sendValue);
+            
+            //while(1){CyDelay(100);};
+            start_calib = 0;
+        }
         CyDelay(10);
         time = Timer_1_ReadCounter();
         dt=(double)(65535-time)/1000000;
