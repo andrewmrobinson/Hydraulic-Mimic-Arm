@@ -47,12 +47,6 @@
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\Custom\custom.cs</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.cysym</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\Resistor_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\Resistor_v1_0.pdf</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\version.cypatch</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\Power_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\Power_v1_0.pdf</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\version.cypatch</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cysym</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cystate</v>
@@ -93,23 +87,6 @@
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\PSoC5\API\aliases.h</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.c</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.h</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.pdf</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\version.cypatch</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\SwitchSPST_v1_0\SwitchSPST_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\SwitchSPST_v1_0\version.cypatch</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Gnd_v1_0\Gnd_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Gnd_v1_0\version.cypatch</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cysym</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.primitive</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cystate</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\version.cypatch</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\Custom\custom.cs</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\PSoC5\API\intc.c</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\PSoC5\API\intc.h</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\PWM_v3_30\PWM_v3_30.cysym</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\PWM_v3_30\PWM_v3_30.pdf</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\PWM_v3_30\PWM_v3_30.cystate</v>
@@ -141,6 +118,14 @@
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.pdf</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\version.cypatch</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cysym</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.primitive</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cystate</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\version.cypatch</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\PSoC5\API\intc.c</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_isr_v1_70\PSoC5\API\intc.h</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\ADC_SAR_v3_10\ADC_SAR_v3_10.cysym</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\ADC_SAR_v3_10\ADC_SAR_v3_10.cycdx</v>
@@ -196,6 +181,15 @@
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\version.cypatch</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\AMux_v1_80.cysym</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\AMux_v1_80.pdf</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\AMux_v1_80.v</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\AMux_v1_80.cystate</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\version.cypatch</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\API\AMux.c</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\API\AMux.h</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\Custom\cyamuxcustomizer.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\AMux_v1_80\Custom\cyverilogbuilder.cs</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80\Timer_v2_80.cycdx</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80\Timer_v2_80.cysym</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80\Timer_v2_80.pdf</v>
@@ -217,6 +211,8 @@
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80\Custom\Tabs\cytimercontrol.resx</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80\PSoC5\Timer_v2_80.cysch</v>
 <v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Timer_v2_80</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.cysym</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_psoc3_timer_v1_0\cy_psoc3_timer_v1_0.cyprimitive</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_psoc3_timer_v1_0\cy_psoc3_timer_v1_0.cysym</v>
 <v>.\PSOC_arm_project.cydwr</v>
@@ -375,6 +371,57 @@
 <v>Generated_Source\PSoC5\Timer_1_PM.c</v>
 <v>Generated_Source\PSoC5\timer_clock.c</v>
 <v>Generated_Source\PSoC5\timer_clock.h</v>
+<v>Generated_Source\PSoC5\median_timer.c</v>
+<v>Generated_Source\PSoC5\median_timer.h</v>
+<v>Generated_Source\PSoC5\median_timer_PM.c</v>
+<v>Generated_Source\PSoC5\update_median_isr.c</v>
+<v>Generated_Source\PSoC5\update_median_isr.h</v>
+<v>Generated_Source\PSoC5\pwm_pin_1_aliases.h</v>
+<v>Generated_Source\PSoC5\pwm_pin_1.c</v>
+<v>Generated_Source\PSoC5\pwm_pin_1.h</v>
+<v>Generated_Source\PSoC5\adc_pin_3_aliases.h</v>
+<v>Generated_Source\PSoC5\adc_pin_3.c</v>
+<v>Generated_Source\PSoC5\adc_pin_3.h</v>
+<v>Generated_Source\PSoC5\adc_pin_2_aliases.h</v>
+<v>Generated_Source\PSoC5\adc_pin_2.c</v>
+<v>Generated_Source\PSoC5\adc_pin_2.h</v>
+<v>Generated_Source\PSoC5\PWM_0.c</v>
+<v>Generated_Source\PSoC5\PWM_0.h</v>
+<v>Generated_Source\PSoC5\PWM_0_PM.c</v>
+<v>Generated_Source\PSoC5\pwm_pin_0_aliases.h</v>
+<v>Generated_Source\PSoC5\pwm_pin_0.c</v>
+<v>Generated_Source\PSoC5\pwm_pin_0.h</v>
+<v>Generated_Source\PSoC5\ADC_0.c</v>
+<v>Generated_Source\PSoC5\ADC_0.h</v>
+<v>Generated_Source\PSoC5\ADC_0_INT.c</v>
+<v>Generated_Source\PSoC5\ADC_0_PM.c</v>
+<v>Generated_Source\PSoC5\adc_pin_0_aliases.h</v>
+<v>Generated_Source\PSoC5\adc_pin_0.c</v>
+<v>Generated_Source\PSoC5\adc_pin_0.h</v>
+<v>Generated_Source\PSoC5\adc_pin_1_aliases.h</v>
+<v>Generated_Source\PSoC5\adc_pin_1.c</v>
+<v>Generated_Source\PSoC5\adc_pin_1.h</v>
+<v>Generated_Source\PSoC5\AMux_0.c</v>
+<v>Generated_Source\PSoC5\AMux_0.h</v>
+<v>Generated_Source\PSoC5\PWM_2.c</v>
+<v>Generated_Source\PSoC5\PWM_2.h</v>
+<v>Generated_Source\PSoC5\PWM_2_PM.c</v>
+<v>Generated_Source\PSoC5\pwm_pin_2_aliases.h</v>
+<v>Generated_Source\PSoC5\pwm_pin_2.c</v>
+<v>Generated_Source\PSoC5\pwm_pin_2.h</v>
+<v>Generated_Source\PSoC5\PWM_3.c</v>
+<v>Generated_Source\PSoC5\PWM_3.h</v>
+<v>Generated_Source\PSoC5\PWM_3_PM.c</v>
+<v>Generated_Source\PSoC5\pwm_pin_3_aliases.h</v>
+<v>Generated_Source\PSoC5\pwm_pin_3.c</v>
+<v>Generated_Source\PSoC5\pwm_pin_3.h</v>
+<v>Generated_Source\PSoC5\ADC_0_IRQ.c</v>
+<v>Generated_Source\PSoC5\ADC_0_IRQ.h</v>
+<v>Generated_Source\PSoC5\ADC_0_theACLK.c</v>
+<v>Generated_Source\PSoC5\ADC_0_theACLK.h</v>
+<v>Generated_Source\PSoC5\ADC_0_Bypass_aliases.h</v>
+<v>Generated_Source\PSoC5\ADC_0_Bypass.c</v>
+<v>Generated_Source\PSoC5\ADC_0_Bypass.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -384,7 +431,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="131800791725657420" />
+<deps_time v="131811277182116899" />
 <top_block v="TopDesign" />
 <last_generation v="28" />
 <pdl_path v="" />
@@ -398,32 +445,33 @@
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
 <file name=".\CortexM3\ARM_GCC_541\Debug\main.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_Bypass.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_Bypass_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_IRQ.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_theACLK.h" />
+<dep name=".\Generated_Source\PSoC5\AMux_0.h" />
 <dep name=".\Generated_Source\PSoC5\Clock_1.h" />
 <dep name=".\Generated_Source\PSoC5\CyDmac.h" />
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
 <dep name=".\Generated_Source\PSoC5\CySpc.h" />
-<dep name=".\Generated_Source\PSoC5\LED.h" />
-<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_0.h" />
 <dep name=".\Generated_Source\PSoC5\PWM_1.h" />
-<dep name=".\Generated_Source\PSoC5\SW2.h" />
-<dep name=".\Generated_Source\PSoC5\SW2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_2.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_3.h" />
 <dep name=".\Generated_Source\PSoC5\Timer_1.h" />
 <dep name=".\Generated_Source\PSoC5\UART.h" />
 <dep name=".\Generated_Source\PSoC5\UART_IntClock.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in_1.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_0.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_0_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_1.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_2.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_3.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_3_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_compiler.h" />
 <dep name=".\Generated_Source\PSoC5\cmsis_gcc.h" />
@@ -439,39 +487,47 @@
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\Generated_Source\PSoC5\isr_rx.h" />
+<dep name=".\Generated_Source\PSoC5\median_timer.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
-<dep name=".\Generated_Source\PSoC5\pwm1.h" />
-<dep name=".\Generated_Source\PSoC5\pwm1_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\timer_clock.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_0.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_0_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_1.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_2.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_3.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\update_median_isr.h" />
 <dep name=".\common.h" />
 <dep name=".\main.c" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.h" />
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass_aliases.h" />
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.h" />
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.h" />
-<file name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
-<file name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.h" />
-<file name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.h" />
+<file name=".\Generated_Source\PSoC5\ADC_0.h" />
+<file name=".\Generated_Source\PSoC5\ADC_0_Bypass.h" />
+<file name=".\Generated_Source\PSoC5\ADC_0_Bypass_aliases.h" />
+<file name=".\Generated_Source\PSoC5\ADC_0_IRQ.h" />
+<file name=".\Generated_Source\PSoC5\ADC_0_theACLK.h" />
+<file name=".\Generated_Source\PSoC5\AMux_0.h" />
 <file name=".\Generated_Source\PSoC5\Clock_1.h" />
 <file name=".\Generated_Source\PSoC5\CyDmac.h" />
 <file name=".\Generated_Source\PSoC5\CyFlash.h" />
 <file name=".\Generated_Source\PSoC5\CyLib.h" />
 <file name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
 <file name=".\Generated_Source\PSoC5\CySpc.h" />
-<file name=".\Generated_Source\PSoC5\LED.h" />
-<file name=".\Generated_Source\PSoC5\LED_aliases.h" />
+<file name=".\Generated_Source\PSoC5\PWM_0.h" />
 <file name=".\Generated_Source\PSoC5\PWM_1.h" />
-<file name=".\Generated_Source\PSoC5\SW2.h" />
-<file name=".\Generated_Source\PSoC5\SW2_aliases.h" />
+<file name=".\Generated_Source\PSoC5\PWM_2.h" />
+<file name=".\Generated_Source\PSoC5\PWM_3.h" />
 <file name=".\Generated_Source\PSoC5\Timer_1.h" />
 <file name=".\Generated_Source\PSoC5\UART.h" />
 <file name=".\Generated_Source\PSoC5\UART_IntClock.h" />
-<file name=".\Generated_Source\PSoC5\adc_in.h" />
-<file name=".\Generated_Source\PSoC5\adc_in_1.h" />
-<file name=".\Generated_Source\PSoC5\adc_in_1_aliases.h" />
-<file name=".\Generated_Source\PSoC5\adc_in_aliases.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_0.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_0_aliases.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_1.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_2.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_2_aliases.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_3.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_3_aliases.h" />
 <file name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
 <file name=".\Generated_Source\PSoC5\cmsis_compiler.h" />
 <file name=".\Generated_Source\PSoC5\cmsis_gcc.h" />
@@ -487,16 +543,23 @@
 <file name=".\Generated_Source\PSoC5\cypins.h" />
 <file name=".\Generated_Source\PSoC5\cytypes.h" />
 <file name=".\Generated_Source\PSoC5\isr_rx.h" />
+<file name=".\Generated_Source\PSoC5\median_timer.h" />
 <file name=".\Generated_Source\PSoC5\project.h" />
-<file name=".\Generated_Source\PSoC5\pwm1.h" />
-<file name=".\Generated_Source\PSoC5\pwm1_aliases.h" />
-<file name=".\Generated_Source\PSoC5\timer_clock.h" />
+<file name=".\Generated_Source\PSoC5\pwm_pin_0.h" />
+<file name=".\Generated_Source\PSoC5\pwm_pin_0_aliases.h" />
+<file name=".\Generated_Source\PSoC5\pwm_pin_1.h" />
+<file name=".\Generated_Source\PSoC5\pwm_pin_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\pwm_pin_2.h" />
+<file name=".\Generated_Source\PSoC5\pwm_pin_2_aliases.h" />
+<file name=".\Generated_Source\PSoC5\pwm_pin_3.h" />
+<file name=".\Generated_Source\PSoC5\pwm_pin_3_aliases.h" />
+<file name=".\Generated_Source\PSoC5\update_median_isr.h" />
 <file name=".\common.h" />
 <file name=".\main.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.c" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_0.o">
+<dep name=".\Generated_Source\PSoC5\ADC_0.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_0.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_theACLK.h" />
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
@@ -507,32 +570,32 @@
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_Bypass.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.c" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass_aliases.h" />
+<file name=".\Generated_Source\PSoC5\ADC_0.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_Bypass.o">
+<dep name=".\Generated_Source\PSoC5\ADC_0_Bypass.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_Bypass.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_Bypass_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_INT.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_INT.c" />
+<file name=".\Generated_Source\PSoC5\ADC_0_Bypass.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_INT.o">
+<dep name=".\Generated_Source\PSoC5\ADC_0.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_INT.c" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\cyapicallbacks.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_INT.c" />
+<file name=".\Generated_Source\PSoC5\ADC_0_INT.c" />
 <file name=".\cyapicallbacks.h" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_IRQ.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.c" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_IRQ.o">
+<dep name=".\Generated_Source\PSoC5\ADC_0_IRQ.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_IRQ.h" />
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
 <dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
@@ -544,83 +607,35 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 <dep name=".\cyapicallbacks.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_PM.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_PM.c" />
+<file name=".\Generated_Source\PSoC5\ADC_0_IRQ.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_PM.o">
+<dep name=".\Generated_Source\PSoC5\ADC_0.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_PM.c" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_PM.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_theACLK.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.c" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.h" />
+<file name=".\Generated_Source\PSoC5\ADC_0_PM.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_theACLK.o">
+<dep name=".\Generated_Source\PSoC5\ADC_0_theACLK.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_theACLK.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.c" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.h" />
-<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC5\CyLib.h" />
-<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
-<dep name=".\Generated_Source\PSoC5\CySpc.h" />
-<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<file name=".\Generated_Source\PSoC5\ADC_0_theACLK.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\AMux_0.o">
+<dep name=".\Generated_Source\PSoC5\AMux_0.c" />
+<dep name=".\Generated_Source\PSoC5\AMux_0.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_2.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_INT.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_INT.c" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\cyapicallbacks.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_2_INT.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_IRQ.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.c" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.h" />
-<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC5\CyLib.h" />
-<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
-<dep name=".\Generated_Source\PSoC5\CySpc.h" />
-<dep name=".\Generated_Source\PSoC5\cyPm.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\cyapicallbacks.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_PM.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_PM.c" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_2_PM.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_theACLK.o">
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.c" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.c" />
+<file name=".\Generated_Source\PSoC5\AMux_0.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\Clock_1.o">
 <dep name=".\Generated_Source\PSoC5\Clock_1.c" />
 <dep name=".\Generated_Source\PSoC5\Clock_1.h" />
@@ -708,17 +723,34 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\CySpc.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\LED.o">
-<dep name=".\Generated_Source\PSoC5\LED.c" />
-<dep name=".\Generated_Source\PSoC5\LED.h" />
-<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\PWM_0.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_0.c" />
+<dep name=".\Generated_Source\PSoC5\PWM_0.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\LED.c" />
+<file name=".\Generated_Source\PSoC5\PWM_0.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\PWM_0_PM.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_0.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_0_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\PWM_0_PM.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\PWM_1.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -747,17 +779,62 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\PWM_1_PM.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\SW2.o">
-<dep name=".\Generated_Source\PSoC5\SW2.c" />
-<dep name=".\Generated_Source\PSoC5\SW2.h" />
-<dep name=".\Generated_Source\PSoC5\SW2_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\PWM_2.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_2.c" />
+<dep name=".\Generated_Source\PSoC5\PWM_2.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\SW2.c" />
+<file name=".\Generated_Source\PSoC5\PWM_2.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\PWM_2_PM.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_2.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_2_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\PWM_2_PM.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\PWM_3.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_3.c" />
+<dep name=".\Generated_Source\PSoC5\PWM_3.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\PWM_3.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\PWM_3_PM.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_3.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_3_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\PWM_3_PM.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\Timer_1.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -853,28 +930,50 @@
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\UART_PM.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\adc_in.o">
-<dep name=".\Generated_Source\PSoC5\adc_in.c" />
-<dep name=".\Generated_Source\PSoC5\adc_in.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\adc_pin_0.o">
+<dep name=".\Generated_Source\PSoC5\adc_pin_0.c" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_0.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_0_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\adc_in.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\adc_in_1.o">
-<dep name=".\Generated_Source\PSoC5\adc_in_1.c" />
-<dep name=".\Generated_Source\PSoC5\adc_in_1.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\adc_pin_0.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\adc_pin_1.o">
+<dep name=".\Generated_Source\PSoC5\adc_pin_1.c" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_1.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
 </file>
-<file name=".\Generated_Source\PSoC5\adc_in_1.c" />
+<file name=".\Generated_Source\PSoC5\adc_pin_1.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\adc_pin_2.o">
+<dep name=".\Generated_Source\PSoC5\adc_pin_2.c" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_2.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\adc_pin_2.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\adc_pin_3.o">
+<dep name=".\Generated_Source\PSoC5\adc_pin_3.c" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_3.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\adc_pin_3.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\cyPm.o">
 <dep name=".\Generated_Source\PSoC5\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC5\CyLib.h" />
@@ -945,6 +1044,351 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\isr_rx.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\median_timer.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\median_timer.c" />
+<dep name=".\Generated_Source\PSoC5\median_timer.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\median_timer.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\median_timer_PM.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\median_timer.h" />
+<dep name=".\Generated_Source\PSoC5\median_timer_PM.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\median_timer_PM.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\pwm_pin_0.o">
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_0.c" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_0.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_0_aliases.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\pwm_pin_0.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\pwm_pin_1.o">
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_1.c" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_1.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_1_aliases.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\pwm_pin_1.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\pwm_pin_2.o">
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_2.c" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_2.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_2_aliases.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\pwm_pin_2.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\pwm_pin_3.o">
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_3.c" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_3.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_3_aliases.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\pwm_pin_3.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\update_median_isr.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\update_median_isr.c" />
+<dep name=".\Generated_Source\PSoC5\update_median_isr.h" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\update_median_isr.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\debug.o">
+<dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC5\cmsis_compiler.h" />
+<dep name=".\Generated_Source\PSoC5\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC5\core_cm3.h" />
+<dep name=".\Generated_Source\PSoC5\core_cm3_psoc5.h" />
+<dep name=".\Generated_Source\PSoC5\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC5\project.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_Bypass.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_Bypass_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_IRQ.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_0_theACLK.h" />
+<dep name=".\Generated_Source\PSoC5\AMux_0.h" />
+<dep name=".\Generated_Source\PSoC5\Clock_1.h" />
+<dep name=".\Generated_Source\PSoC5\CyDmac.h" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_0.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_1.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_2.h" />
+<dep name=".\Generated_Source\PSoC5\PWM_3.h" />
+<dep name=".\Generated_Source\PSoC5\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC5\UART.h" />
+<dep name=".\Generated_Source\PSoC5\UART_IntClock.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_0.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_0_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_1.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_2.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_3.h" />
+<dep name=".\Generated_Source\PSoC5\adc_pin_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cy_em_eeprom.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\isr_rx.h" />
+<dep name=".\Generated_Source\PSoC5\median_timer.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_0.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_0_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_1.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_2.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_3.h" />
+<dep name=".\Generated_Source\PSoC5\pwm_pin_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\update_median_isr.h" />
+<dep name=".\common.h" />
+<dep name=".\debug.c" />
+</file>
+<file name=".\debug.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o">
+<dep name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
+<dep name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
+<dep name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
+<dep name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
+</file>
+<file name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
+<file name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
+<file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
+<file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.h" />
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass_aliases.h" />
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.h" />
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.h" />
+<file name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
+<file name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.h" />
+<file name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.h" />
+<file name=".\Generated_Source\PSoC5\LED.h" />
+<file name=".\Generated_Source\PSoC5\LED_aliases.h" />
+<file name=".\Generated_Source\PSoC5\SW2.h" />
+<file name=".\Generated_Source\PSoC5\SW2_aliases.h" />
+<file name=".\Generated_Source\PSoC5\adc_in.h" />
+<file name=".\Generated_Source\PSoC5\adc_in_1.h" />
+<file name=".\Generated_Source\PSoC5\adc_in_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\adc_in_aliases.h" />
+<file name=".\Generated_Source\PSoC5\pwm1.h" />
+<file name=".\Generated_Source\PSoC5\pwm1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\timer_clock.h" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.h" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_Bypass.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_INT.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_INT.c" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_INT.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_IRQ.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.h" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_PM.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_PM.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_theACLK.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.h" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_2.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_INT.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_INT.c" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_2_INT.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_IRQ.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.h" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_PM.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_PM.c" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_2_PM.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_theACLK.o">
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.c" />
+<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\LED.o">
+<dep name=".\Generated_Source\PSoC5\LED.c" />
+<dep name=".\Generated_Source\PSoC5\LED.h" />
+<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\LED.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\SW2.o">
+<dep name=".\Generated_Source\PSoC5\SW2.c" />
+<dep name=".\Generated_Source\PSoC5\SW2.h" />
+<dep name=".\Generated_Source\PSoC5\SW2_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\SW2.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\adc_in.o">
+<dep name=".\Generated_Source\PSoC5\adc_in.c" />
+<dep name=".\Generated_Source\PSoC5\adc_in.h" />
+<dep name=".\Generated_Source\PSoC5\adc_in_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\adc_in.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\adc_in_1.o">
+<dep name=".\Generated_Source\PSoC5\adc_in_1.c" />
+<dep name=".\Generated_Source\PSoC5\adc_in_1.h" />
+<dep name=".\Generated_Source\PSoC5\adc_in_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC5\adc_in_1.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\pwm1.o">
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
@@ -965,66 +1409,6 @@
 <dep name=".\Generated_Source\PSoC5\timer_clock.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\timer_clock.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\debug.o">
-<dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
-<dep name=".\Generated_Source\PSoC5\cmsis_compiler.h" />
-<dep name=".\Generated_Source\PSoC5\cmsis_gcc.h" />
-<dep name=".\Generated_Source\PSoC5\core_cm3.h" />
-<dep name=".\Generated_Source\PSoC5\core_cm3_psoc5.h" />
-<dep name=".\Generated_Source\PSoC5\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC5\project.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_Bypass_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_IRQ.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_1_theACLK.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_IRQ.h" />
-<dep name=".\Generated_Source\PSoC5\ADC_SAR_2_theACLK.h" />
-<dep name=".\Generated_Source\PSoC5\Clock_1.h" />
-<dep name=".\Generated_Source\PSoC5\CyDmac.h" />
-<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC5\CyLib.h" />
-<dep name=".\Generated_Source\PSoC5\CyScBoostClk.h" />
-<dep name=".\Generated_Source\PSoC5\CySpc.h" />
-<dep name=".\Generated_Source\PSoC5\LED.h" />
-<dep name=".\Generated_Source\PSoC5\LED_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\PWM_1.h" />
-<dep name=".\Generated_Source\PSoC5\SW2.h" />
-<dep name=".\Generated_Source\PSoC5\SW2_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Timer_1.h" />
-<dep name=".\Generated_Source\PSoC5\UART.h" />
-<dep name=".\Generated_Source\PSoC5\UART_IntClock.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in_1.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\adc_in_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\cyPm.h" />
-<dep name=".\Generated_Source\PSoC5\cy_em_eeprom.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC5\cypins.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\isr_rx.h" />
-<dep name=".\Generated_Source\PSoC5\pwm1.h" />
-<dep name=".\Generated_Source\PSoC5\pwm1_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\timer_clock.h" />
-<dep name=".\common.h" />
-<dep name=".\debug.c" />
-</file>
-<file name=".\debug.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o">
-<dep name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
-<dep name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
-<dep name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
-<dep name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
-</file>
-<file name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
-<file name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
-<file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
-<file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
 </CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
 </dependency_info>
 </CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
@@ -1043,8 +1427,6 @@
 <dep name=".\CortexM3\ARM_GCC_541\Debug\UART_PM.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\UART_INT.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\UART_BOOT.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\LED.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\SW2.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\isr_rx.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\UART_IntClock.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Cm3Start.o" />
@@ -1059,23 +1441,32 @@
 <dep name=".\CortexM3\ARM_GCC_541\Debug\PWM_1_PM.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Clock_1.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_INT.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_PM.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\adc_in.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_IRQ.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_theACLK.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_1_Bypass.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_INT.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_PM.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\adc_in_1.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_IRQ.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_SAR_2_theACLK.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\pwm1.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Timer_1.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\Timer_1_PM.o" />
-<dep name=".\CortexM3\ARM_GCC_541\Debug\timer_clock.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\median_timer.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\median_timer_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\update_median_isr.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\pwm_pin_1.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\adc_pin_3.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\adc_pin_2.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\PWM_0.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\PWM_0_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\pwm_pin_0.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_0.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_INT.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\adc_pin_0.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\adc_pin_1.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\AMux_0.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\PWM_2.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\PWM_2_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\pwm_pin_2.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\PWM_3.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\PWM_3_PM.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\pwm_pin_3.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_IRQ.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_theACLK.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\ADC_0_Bypass.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" />
 </file>
@@ -1132,6 +1523,30 @@
 <name_val_pair name="Generated_Source\PSoC5\Timer_1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
 <name_val_pair name="Generated_Source\PSoC5\Timer_1_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
 <name_val_pair name="Generated_Source\PSoC5\timer_clock.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\median_timer.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\median_timer_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\update_median_isr.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\pwm_pin_1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\adc_pin_3.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\adc_pin_2.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\PWM_0.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\PWM_0_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\pwm_pin_0.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\ADC_0.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\ADC_0_INT.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\ADC_0_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\adc_pin_0.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\adc_pin_1.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\AMux_0.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\PWM_2.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\PWM_2_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\pwm_pin_2.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\PWM_3.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\PWM_3_PM.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\pwm_pin_3.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\ADC_0_IRQ.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\ADC_0_theACLK.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
+<name_val_pair name="Generated_Source\PSoC5\ADC_0_Bypass.c" v="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\kevan\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cyprj -d CY8C5888LTI-LP097 -s C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -1140,7 +1555,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="131801665238430907" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="131811311455515117" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

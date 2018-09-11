@@ -298,13 +298,17 @@ int main()
             writePWM(cyl,pulse[cyl]);
             prev_err[cyl] = err[cyl];
         }
+        /*
         if(send_now>10){
-            sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f\n",adcValue[0],err[0],adcValue[1],err[1]);
+            sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
             UART_PutString(sendValue);
             send_now = 0;
         } else {
             send_now++;
         }
+        */
+        sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+        UART_PutString(sendValue);
         /* END PID CODE */
         if(start_calib){
             int calib_cyl = 0;

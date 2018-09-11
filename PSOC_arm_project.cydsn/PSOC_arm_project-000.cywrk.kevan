@@ -195,19 +195,17 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_in.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_in_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_INT.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_IRQ.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_theACLK.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_Bypass.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_INT.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_IRQ.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_theACLK.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_0.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_1.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_2.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_3.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\AMux_0.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
@@ -223,20 +221,29 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\debug.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_rx.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\median_timer.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\median_timer_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_0.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_0_PM.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\pwm1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\SW2.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\pwm_pin_0.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\pwm_pin_1.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\pwm_pin_2.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\pwm_pin_3.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\update_median_isr.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.hex</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.map</v>
@@ -251,19 +258,17 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_in.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_in_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_INT.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_IRQ.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_2_theACLK.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_Bypass.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_INT.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_IRQ.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_theACLK.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_0.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_1.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_2.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_3.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\AMux_0.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
@@ -279,16 +284,18 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\debug.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_rx.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\median_timer.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\median_timer_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_0.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_0_PM.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\pwm1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\SW2.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3_PM.lst</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\pwm_pin_0.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -304,22 +311,20 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CY8C58LP Family Datasheet</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides\cy_boot_v5_60</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\AMux_v1_80.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Gnd_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\LED_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Power_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Resistor_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\SwitchSPST_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80\Timer_v2_80.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\UART_v2_50.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>PSOC_arm_project-000</v>
@@ -328,22 +333,20 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CY8C58LP Family Datasheet</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides\cy_boot_v5_60</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10\ADC_SAR_v3_10.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\AMux_v1_80.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Gnd_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\LED_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Power_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Resistor_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\SwitchSPST_v1_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80\Timer_v2_80.pdf</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\UART_v2_50.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal.pdf</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal</v>
+<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
