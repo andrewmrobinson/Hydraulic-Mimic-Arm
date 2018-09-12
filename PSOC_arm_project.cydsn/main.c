@@ -140,6 +140,7 @@ CY_ISR(RxIsr)
                 case 0:
                     if(rxData=='{' )
                     {
+                        //aaaa
                         for(int pp=1;pp<20;pp++){
                             temp[pp] = ' ';
                         }
@@ -171,7 +172,6 @@ CY_ISR(RxIsr)
                         nn=0; 
                     
                         
-                        UART_PutString(sendValue);
                         temp[0] = '\0';
                         
                         data_read_mode = 0;
@@ -280,7 +280,9 @@ int main()
     for(;;)
     {
         Timer_1_WriteCounter(65535);
-
+        
+        sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+        UART_PutString(sendValue);
         /* START PID CODE */
         for(int cyl = 0;cyl<CYL_NO;cyl++){
             if(new_pos_set[cyl]){
@@ -298,17 +300,8 @@ int main()
             writePWM(cyl,pulse[cyl]);
             prev_err[cyl] = err[cyl];
         }
-        /*
-        if(send_now>10){
-            sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-            UART_PutString(sendValue);
-            send_now = 0;
-        } else {
-            send_now++;
-        }
-        */
-        sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-        UART_PutString(sendValue);
+        
+        
         /* END PID CODE */
         if(start_calib){
             int calib_cyl = 0;
@@ -316,6 +309,8 @@ int main()
             int lower_offset_set = 0;
             int upper_offset = 120;
             int lower_offset = -120;
+            int lower_check_no = 0;
+            int upper_check_no = 0;
             uint16 prev_adcValue = adcValue[0];
             uint16 diff = 0;
             for(int g = 0;g<CYL_NO;g++)
@@ -331,7 +326,7 @@ int main()
                     CyDelay(200);
                     diff = abs(prev_adcValue-adcValue[calib_cyl]);
                     if(diff>10){
-                        upper_offset_set=1;
+                        upper_check_no ++;;
                     }else{
                         upper_offset = upper_offset + 1;
                     }
@@ -347,7 +342,7 @@ int main()
                     CyDelay(200);
                     diff = abs(prev_adcValue-adcValue[calib_cyl]);
                     if(diff>10){
-                        lower_offset_set=1;
+                        lower_check_no++;
                     }else{
                         lower_offset = lower_offset - 1;
                     }
@@ -355,6 +350,11 @@ int main()
                     UART_PutString(sendValue);
             
                 }
+                
+                if(upper_check_no>2){
+                    upper_offset_set=1;}
+                if(lower_check_no>2){
+                    lower_offset_set=1;}
                 
                 writePWM(calib_cyl,0);
                 CyDelay(500);
