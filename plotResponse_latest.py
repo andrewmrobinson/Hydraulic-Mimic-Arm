@@ -1,6 +1,6 @@
 import numpy as np
-#import matplotlib
-#matplotlib.use('Agg')
+# import matplotlib
+# matplotlib.use('Agg')
 
 import matplotlib.pyplot as plt
 import os
@@ -10,21 +10,23 @@ import glob
 
 path = 'PC_project_arm/project_arm/responseData/*.txt'
 
+
 def get_latest_file(path, *paths):
     """Returns the name of the latest (most recent) file 
     of the joined path(s)"""
     fullpath = os.path.join(path, *paths)
     list_of_files = glob.glob(path)  # You may use iglob in Python3
-    if not list_of_files:                # I prefer using the negation
-        return None                      # because it behaves like a shortcut
+    if not list_of_files:  # I prefer using the negation
+        return None  # because it behaves like a shortcut
     latest_file = max(list_of_files, key=os.path.getctime)
     _, filename = os.path.split(latest_file)
     return latest_file
-	
-filename = get_latest_file(path,'')
+
+
+filename = get_latest_file(path, '')
 
 print(filename)
-	
+
 text_file = open(filename, "r")
 lines = text_file.read().split('\n')
 data = []
@@ -34,25 +36,30 @@ desired = []
 lines.remove(lines[-1])
 
 for n in lines:
-	data.append(n.split('\t'))
-	if len(data[-1][2].split('|'))>1:
-		data[-1][2] = data[-1][2].split('|')[1]
-	else:
-		data.remove(data[-1])
-	actual.append(int(data[-1][0]))
-	desired.append(int(data[-1][2]))
-		
-	
-#print(len(lines))
+    n = re.split('\t|,',n)
+    data.append(n)
+
+    # if len(data[-1][2].split('|')) > 1:
+    #     data[-1][2] = data[-1][2].split('|')[1]
+    # else:
+    #     data.remove(data[-1])
+
+    print(float(data[0]))
+
+#    actual.append(float(data[1][0]))
+#    desired.append(float(data[-2][0]))
+#    actual[1].append(float(data[2]))
+#    desired[1].append(float(data[-1]))
+
+# print(len(lines))
 text_file.close()
 
-
-t = np.linspace(0.0, len(actual)-1, len(actual))
+t = np.linspace(0.0, len(actual) - 1, len(actual))
 
 fig, ax = plt.subplots()
 ax.plot(t, actual)
-ax.plot(t, desired)
-plt.ylim(1000, 4095) 
-plt.xlim(t[-1]-5000,t[-1])
+ax.plot(t, desired[0])
+plt.ylim(1000, 4095)
+plt.xlim(t[-1] - 5000, t[-1])
 fig.savefig("test.png")
 plt.show()

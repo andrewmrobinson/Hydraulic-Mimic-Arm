@@ -59,7 +59,7 @@ double pid_integral[CYL_NO] = {0};
 int cyl_set = 0;
 char cyl_tmp[1];
 
-int offsets[4][2] = {{133,134},{133,134},{0,0},{0,0}}; //{lower,upper} - both positive
+int offsets[4][2] = {{128,182},{129,179},{0,0},{0,0}}; //{lower,upper} - both positive
 
 char sendValue[100];
 char temp[20];
@@ -304,7 +304,7 @@ int main()
         
         /* END PID CODE */
         if(start_calib){
-            int calib_cyl = 0;
+            int calib_cyl = 1;
             int upper_offset_set = 0;
             int lower_offset_set = 0;
             int upper_offset = 120;
@@ -318,7 +318,7 @@ int main()
                 
             CyDelay(1000);
         
-            while(upper_offset_set==0 && lower_offset_set==0){
+            while(upper_offset_set==0 || lower_offset_set==0){
                 
                 prev_adcValue = adcValue[calib_cyl];
                 if(upper_offset_set==0){
@@ -329,6 +329,7 @@ int main()
                         upper_check_no ++;;
                     }else{
                         upper_offset = upper_offset + 1;
+                        upper_check_no=0;
                     }
                     sprintf(sendValue,"UPPER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
                     UART_PutString(sendValue);
@@ -345,6 +346,7 @@ int main()
                         lower_check_no++;
                     }else{
                         lower_offset = lower_offset - 1;
+                        lower_check_no = 0;
                     }
                     sprintf(sendValue,"LOWER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
                     UART_PutString(sendValue);
