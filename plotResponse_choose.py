@@ -20,6 +20,7 @@ actual_0 = []
 desired_0 = []
 actual_1 = []
 desired_1 = []
+pid = []
 
 lines.remove(lines[-1])
 
@@ -32,6 +33,7 @@ for n in lines:
 		desired_0.append(float(data[-1][7]))
 		actual_1.append(float(data[-1][2]))
 		desired_1.append(float(data[-1][8]))
+		pid.append(data[-1][4] + " " + data[-1][5] + " " + data[-1][6])
 
 
 text_file.close()
@@ -43,8 +45,17 @@ ax.plot(t, actual_0)
 ax.plot(t, desired_0)
 ax.plot(t, actual_1)
 ax.plot(t, desired_1)
+
+#ctr = 0;
+#for n in actual_0:
+#	ctr += 1
+#	if ctr % 100 == 0:
+#		ax.annotate(pid[ctr], (t[ctr], actual_0[ctr]))
+#		ax.annotate(pid[ctr], (t[ctr], actual_1[ctr]))
+
 plt.ylim(1000, 4095)
 plt.xlim(t[-1] - 5000, t[-1])
-plt.title("filename")
-fig.savefig("test.png")
+fig.savefig(filename + ".png")
+plt.title(filename)
 plt.show()
+
