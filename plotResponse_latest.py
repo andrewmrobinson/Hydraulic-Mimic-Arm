@@ -40,7 +40,7 @@ lines.remove(lines[-1])
 
 for n in lines:
 	data.append(n.split())
-	if len(data[-1])!=9:
+	if len(data[-1])!=11:
 		data.remove(data[-1])
 	else:
 		actual_0.append(float(data[-1][0]))

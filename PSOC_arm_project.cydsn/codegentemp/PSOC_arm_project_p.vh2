@@ -1,5 +1,5 @@
 -- Project:   PSOC_arm_project
--- Generated: 09/11/2018 18:21:44
+-- Generated: 09/14/2018 18:52:42
 -- PSoC Creator  4.2
 
 ENTITY PSOC_arm_project IS
@@ -275,21 +275,25 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE lib_model OF pwm_pin_1(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF pwm_pin_1(0) : LABEL IS "P1[7]";
     ATTRIBUTE lib_model OF adc_pin_3(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF adc_pin_3(0) : LABEL IS "P2[4]";
+    ATTRIBUTE Location OF adc_pin_3(0) : LABEL IS "P2[7]";
     ATTRIBUTE lib_model OF adc_pin_2(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF adc_pin_2(0) : LABEL IS "P2[7]";
+    ATTRIBUTE Location OF adc_pin_2(0) : LABEL IS "P2[5]";
     ATTRIBUTE lib_model OF Rx(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF Rx(0) : LABEL IS "P12[6]";
     ATTRIBUTE lib_model OF Tx(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF Tx(0) : LABEL IS "P12[7]";
     ATTRIBUTE lib_model OF pwm_pin_0(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF pwm_pin_0(0) : LABEL IS "P12[4]";
+    ATTRIBUTE Location OF pwm_pin_0(0) : LABEL IS "P1[3]";
     ATTRIBUTE lib_model OF \ADC_0:Bypass(0)\ : LABEL IS "iocell7";
-    ATTRIBUTE Location OF \ADC_0:Bypass(0)\ : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF \ADC_0:Bypass(0)\ : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF adc_pin_0(0) : LABEL IS "iocell8";
     ATTRIBUTE Location OF adc_pin_0(0) : LABEL IS "P2[0]";
     ATTRIBUTE lib_model OF adc_pin_1(0) : LABEL IS "iocell9";
     ATTRIBUTE Location OF adc_pin_1(0) : LABEL IS "P2[3]";
+    ATTRIBUTE lib_model OF pwm_pin_2(0) : LABEL IS "iocell10";
+    ATTRIBUTE Location OF pwm_pin_2(0) : LABEL IS "P1[2]";
+    ATTRIBUTE lib_model OF pwm_pin_3(0) : LABEL IS "iocell11";
+    ATTRIBUTE Location OF pwm_pin_3(0) : LABEL IS "P12[2]";
     ATTRIBUTE lib_model OF Net_97 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \UART:BUART:counter_load_not\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \UART:BUART:tx_status_0\ : LABEL IS "macrocell3";
@@ -317,7 +321,7 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE lib_model OF \PWM_0:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell4";
     ATTRIBUTE lib_model OF \PWM_0:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell6";
     ATTRIBUTE lib_model OF \PWM_0:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell7";
-    ATTRIBUTE Location OF \ADC_0:ADC_SAR\ : LABEL IS "F(SAR,0)";
+    ATTRIBUTE Location OF \ADC_0:ADC_SAR\ : LABEL IS "F(SAR,1)";
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell3";
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell5";
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:sT16:timerdp:u0\ : LABEL IS "datapathcell8";

@@ -551,7 +551,7 @@
         <register>
           <name>PWM_2_COMPARE_Reg</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006424</addressOffset>
+          <addressOffset>0x40006428</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -560,7 +560,7 @@
         <register>
           <name>PWM_2_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006475</addressOffset>
+          <addressOffset>0x40006479</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -592,7 +592,7 @@
         <register>
           <name>PWM_2_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006485</addressOffset>
+          <addressOffset>0x40006489</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -638,7 +638,7 @@
         <register>
           <name>PWM_2_STATUS_AUX_CTRLDP0</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006494</addressOffset>
+          <addressOffset>0x40006498</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -763,7 +763,7 @@
         <register>
           <name>PWM_2_STATUS_AUX_CTRLDP1</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006495</addressOffset>
+          <addressOffset>0x40006499</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -900,7 +900,7 @@
         <register>
           <name>PWM_3_COMPARE_Reg</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006422</addressOffset>
+          <addressOffset>0x40006424</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -909,7 +909,7 @@
         <register>
           <name>PWM_3_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006472</addressOffset>
+          <addressOffset>0x40006475</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -941,7 +941,7 @@
         <register>
           <name>PWM_3_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006483</addressOffset>
+          <addressOffset>0x40006485</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -987,7 +987,7 @@
         <register>
           <name>PWM_3_STATUS_AUX_CTRLDP0</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006492</addressOffset>
+          <addressOffset>0x40006494</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1112,7 +1112,7 @@
         <register>
           <name>PWM_3_STATUS_AUX_CTRLDP1</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006493</addressOffset>
+          <addressOffset>0x40006495</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1247,18 +1247,9 @@
       </addressBlock>
       <registers>
         <register>
-          <name>TX_UART_TX_DATA</name>
-          <description>TX Data Register</description>
-          <addressOffset>0x40006449</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
           <name>TX_UART_TX_STATUS</name>
           <description>TX status register</description>
-          <addressOffset>0x40006469</addressOffset>
+          <addressOffset>0x40006468</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1313,6 +1304,15 @@
           <resetMask>0</resetMask>
         </register>
         <register>
+          <name>TX_UART_TX_DATA</name>
+          <description>TX Data Register</description>
+          <addressOffset>0x40006548</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
           <name>RX_UART_RX_DATA</name>
           <description>RX Data Register</description>
           <addressOffset>0x4000654A</addressOffset>
@@ -1324,7 +1324,7 @@
         <register>
           <name>RX_UART_RX_STATUS</name>
           <description>RX status register</description>
-          <addressOffset>0x4000656A</addressOffset>
+          <addressOffset>0x40006569</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1396,7 +1396,7 @@
         <register>
           <name>PWM_1_COMPARE_Reg</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006528</addressOffset>
+          <addressOffset>0x4000642C</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1405,7 +1405,7 @@
         <register>
           <name>PWM_1_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000657B</addressOffset>
+          <addressOffset>0x4000647C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1437,7 +1437,7 @@
         <register>
           <name>PWM_1_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x4000658B</addressOffset>
+          <addressOffset>0x4000648D</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1483,7 +1483,7 @@
         <register>
           <name>PWM_1_STATUS_AUX_CTRLDP0</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006598</addressOffset>
+          <addressOffset>0x4000649C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1608,7 +1608,7 @@
         <register>
           <name>PWM_1_STATUS_AUX_CTRLDP1</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006599</addressOffset>
+          <addressOffset>0x4000649D</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1745,7 +1745,7 @@
         <register>
           <name>SAR_TR0</name>
           <description>SAR trim register</description>
-          <addressOffset>0x40004614</addressOffset>
+          <addressOffset>0x40004616</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1754,7 +1754,7 @@
         <register>
           <name>SAR_CSR0</name>
           <description>SAR status and control register 0</description>
-          <addressOffset>0x40005900</addressOffset>
+          <addressOffset>0x40005908</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1763,7 +1763,7 @@
         <register>
           <name>SAR_CSR1</name>
           <description>SAR status and control register 1</description>
-          <addressOffset>0x40005901</addressOffset>
+          <addressOffset>0x40005909</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1772,7 +1772,7 @@
         <register>
           <name>SAR_CSR2</name>
           <description>SAR status and control register 2</description>
-          <addressOffset>0x40005902</addressOffset>
+          <addressOffset>0x4000590A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1781,7 +1781,7 @@
         <register>
           <name>SAR_CSR3</name>
           <description>SAR status and control register 3</description>
-          <addressOffset>0x40005903</addressOffset>
+          <addressOffset>0x4000590B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1790,7 +1790,7 @@
         <register>
           <name>SAR_CSR4</name>
           <description>SAR status and control register 4</description>
-          <addressOffset>0x40005904</addressOffset>
+          <addressOffset>0x4000590C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1799,7 +1799,7 @@
         <register>
           <name>SAR_CSR5</name>
           <description>SAR status and control register 5</description>
-          <addressOffset>0x40005905</addressOffset>
+          <addressOffset>0x4000590D</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1808,7 +1808,7 @@
         <register>
           <name>SAR_CSR6</name>
           <description>SAR status and control register 6</description>
-          <addressOffset>0x40005906</addressOffset>
+          <addressOffset>0x4000590E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1817,7 +1817,7 @@
         <register>
           <name>SAR_SW0</name>
           <description>SAR Analog Routing Register 0</description>
-          <addressOffset>0x40005B20</addressOffset>
+          <addressOffset>0x40005B28</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1826,7 +1826,7 @@
         <register>
           <name>SAR_SW2</name>
           <description>SAR Analog Routing Register 2</description>
-          <addressOffset>0x40005B22</addressOffset>
+          <addressOffset>0x40005B2A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1835,7 +1835,7 @@
         <register>
           <name>SAR_SW3</name>
           <description>SAR Analog Routing Register 3</description>
-          <addressOffset>0x40005B23</addressOffset>
+          <addressOffset>0x40005B2B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1844,7 +1844,7 @@
         <register>
           <name>SAR_SW4</name>
           <description>SAR Analog Routing Register 4</description>
-          <addressOffset>0x40005B24</addressOffset>
+          <addressOffset>0x40005B2C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1853,7 +1853,7 @@
         <register>
           <name>SAR_SW6</name>
           <description>SAR Analog Routing Register 6</description>
-          <addressOffset>0x40005B26</addressOffset>
+          <addressOffset>0x40005B2E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1862,7 +1862,7 @@
         <register>
           <name>SAR_CLK</name>
           <description>SAR Clock Selection Register</description>
-          <addressOffset>0x40005B27</addressOffset>
+          <addressOffset>0x40005B2F</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1871,7 +1871,7 @@
         <register>
           <name>SAR_WRK</name>
           <description>SAR working register</description>
-          <addressOffset>0x40005BA0</addressOffset>
+          <addressOffset>0x40005BA2</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1892,7 +1892,7 @@
         <register>
           <name>PWM_0_COMPARE_Reg</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x4000642C</addressOffset>
+          <addressOffset>0x4000642A</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1901,7 +1901,7 @@
         <register>
           <name>PWM_0_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000647D</addressOffset>
+          <addressOffset>0x4000647A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1933,7 +1933,7 @@
         <register>
           <name>PWM_0_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x4000648D</addressOffset>
+          <addressOffset>0x4000648B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1979,7 +1979,7 @@
         <register>
           <name>PWM_0_STATUS_AUX_CTRLDP0</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000649C</addressOffset>
+          <addressOffset>0x4000649A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2104,7 +2104,7 @@
         <register>
           <name>PWM_0_STATUS_AUX_CTRLDP1</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000649D</addressOffset>
+          <addressOffset>0x4000649B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

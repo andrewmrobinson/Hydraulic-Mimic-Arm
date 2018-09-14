@@ -8,7 +8,7 @@
 #define	Frequency 1000000.0			// Frequency of PWMClock
 #define	One_ms (Frequency/1000.0)	// 1 ms constant
 #define filter_size 7
-#define CYL_NO 2                    // Number of connected cylinders
+#define CYL_NO 4                    // Number of connected cylinders
 
 /* Add an explicit reference to the floating point printf library to allow
 the usage of floating point conversion specifier */
@@ -48,7 +48,7 @@ int data_read_mode = 0;
 
 volatile int new_pos_set[CYL_NO] = {0};
 int new_pos[CYL_NO];
-int pos[CYL_NO]={2000,2000};
+int pos[CYL_NO]={2000,2000,2000,2000};
 int pulse[CYL_NO] = {0};
 int pulse_temp[CYL_NO] = {0};
 double err[CYL_NO];
@@ -59,7 +59,7 @@ double pid_integral[CYL_NO] = {0};
 int cyl_set = 0;
 char cyl_tmp[1];
 
-int offsets[4][2] = {{125,179},{126,176},{0,0},{0,0}}; //{lower,upper} - both positive
+int offsets[4][2] = {{125,179},{126,176},{147,242},{35,280}}; //{lower,upper} - both positive
 
 char sendValue[100];
 char temp[20];
@@ -173,8 +173,7 @@ CY_ISR(RxIsr)
                         nn=0; 
                         temp[0] = '\0';
                         data_read_mode = 0;
-                        sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-                        UART_PutString(sendValue);
+                        
                     }
                   
                 break;
@@ -274,10 +273,12 @@ int main()
     median_timer_Start();
     Timer_1_Start();
    int send_now = 0;
+    
     for(;;)
     {
         Timer_1_WriteCounter(65535);
-        
+        sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+        UART_PutString(sendValue);
         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
         //UART_PutString(sendValue);
         /* START PID CODE */
@@ -301,11 +302,11 @@ int main()
         
         /* END PID CODE */
         if(start_calib){
-            int calib_cyl = 1;
+            int calib_cyl = 3;
             int upper_offset_set = 0;
             int lower_offset_set = 0;
-            int upper_offset = 120;
-            int lower_offset = -120;
+            int upper_offset = 0;
+            int lower_offset = 0;
             int lower_check_no = 0;
             int upper_check_no = 0;
             uint16 prev_adcValue = adcValue[0];
@@ -325,7 +326,7 @@ int main()
                     if(diff>10){
                         upper_check_no ++;;
                     }else{
-                        upper_offset = upper_offset + 1;
+                        upper_offset = upper_offset + 5;
                         upper_check_no=0;
                     }
                     sprintf(sendValue,"UPPER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
@@ -342,7 +343,7 @@ int main()
                     if(diff>10){
                         lower_check_no++;
                     }else{
-                        lower_offset = lower_offset - 1;
+                        lower_offset = lower_offset - 5;
                         lower_check_no = 0;
                     }
                     sprintf(sendValue,"LOWER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);

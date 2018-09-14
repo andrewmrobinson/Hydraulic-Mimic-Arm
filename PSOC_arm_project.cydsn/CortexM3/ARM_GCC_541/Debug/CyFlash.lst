@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
   23:Generated_Source\PSoC5/CyFlash.c **** #define CY_FLASH_EEPROM_NUMBER_ARRAYS                 (1u)
   24:Generated_Source\PSoC5/CyFlash.c **** 
   25:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 2
 
 
   26:Generated_Source\PSoC5/CyFlash.c **** /*******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
   52 0012 1B78     		ldrb	r3, [r3]
   53 0014 DBB2     		uxtb	r3, r3
   54 0016 43F00803 		orr	r3, r3, #8
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 3
 
 
   55 001a DBB2     		uxtb	r3, r3
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
   84 0052 1370     		strb	r3, [r2]
   86:Generated_Source\PSoC5/CyFlash.c **** 
   87:Generated_Source\PSoC5/CyFlash.c ****     while(0u == (CY_FLASH_SPC_FM_EE_CR_REG & CY_FLASH_EE_EE_AWAKE))
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 4
 
 
   85              		.loc 1 87 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  100:Generated_Source\PSoC5/CyFlash.c **** *  Disable the Flash.
  101:Generated_Source\PSoC5/CyFlash.c **** *
  102:Generated_Source\PSoC5/CyFlash.c **** * \sideeffect
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 5
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 5
 
 
  103:Generated_Source\PSoC5/CyFlash.c **** *  This setting is ignored as long as the CPU is currently running.  This will
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  166              		.cfi_def_cfa_offset 8
  167 003a BD46     		mov	sp, r7
  168              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 6
 
 
  169              		@ sp needed
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  141:Generated_Source\PSoC5/CyFlash.c **** 
  142:Generated_Source\PSoC5/CyFlash.c ****     /* Plan for failure. */
  143:Generated_Source\PSoC5/CyFlash.c ****     status = CYRET_UNKNOWN;
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 7
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 7
 
 
  200              		.loc 1 143 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  237 004a 002B     		cmp	r3, #0
  238 004c F5D0     		beq	.L13
  160:Generated_Source\PSoC5/CyFlash.c ****                     }
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 8
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 8
 
 
  161:Generated_Source\PSoC5/CyFlash.c ****                     break;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  278              		.thumb
  279              		.thumb_func
  280              		.type	CyFlashGetSpcAlgorithm, %function
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 9
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 9
 
 
  281              	CyFlashGetSpcAlgorithm:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  308 001e 1AD1     		bne	.L21
  203:Generated_Source\PSoC5/CyFlash.c ****         {
  204:Generated_Source\PSoC5/CyFlash.c ****             while(CY_SPC_BUSY)
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 10
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 10
 
 
  309              		.loc 1 204 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  347 005c 0423     		movs	r3, #4
  348 005e 7B60     		str	r3, [r7, #4]
  349              	.L24:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 11
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 11
 
 
  220:Generated_Source\PSoC5/CyFlash.c ****     }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  377              		@ args = 0, pretend = 0, frame = 8
  378              		@ frame_needed = 1, uses_anonymous_args = 0
  379 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 12
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 12
 
 
  380              		.cfi_def_cfa_offset 8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  262:Generated_Source\PSoC5/CyFlash.c **** *  Sets the user supplied temporary buffer to store SPC data while performing
  263:Generated_Source\PSoC5/CyFlash.c **** *  Flash and EEPROM commands. This buffer is only necessary when the Flash ECC
  264:Generated_Source\PSoC5/CyFlash.c **** *  is disabled.
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 13
 
 
  265:Generated_Source\PSoC5/CyFlash.c **** *
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  450              	.L32:
  288:Generated_Source\PSoC5/CyFlash.c ****         }
  289:Generated_Source\PSoC5/CyFlash.c ****         else if(CySpcLock() != CYRET_SUCCESS)
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 14
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 14
 
 
  451              		.loc 1 289 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  486 0050 00000000 		.word	rowBuffer
  487              		.cfi_endproc
  488              	.LFE5:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 15
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 15
 
 
  489              		.size	CySetFlashEEBuffer, .-CySetFlashEEBuffer
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  337:Generated_Source\PSoC5/CyFlash.c ****     cystatus status;
  338:Generated_Source\PSoC5/CyFlash.c **** 
  339:Generated_Source\PSoC5/CyFlash.c ****     rowSize = (arrayId > CY_SPC_LAST_FLASH_ARRAYID) ? CYDEV_EEPROM_ROW_SIZE : CYDEV_FLS_ROW_SIZE;
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 16
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 16
 
 
  515              		.loc 1 339 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  353:Generated_Source\PSoC5/CyFlash.c ****     /*******************************************************************************
  354:Generated_Source\PSoC5/CyFlash.c ****     * Function Name: CyWriteRowConfig
  355:Generated_Source\PSoC5/CyFlash.c ****     ****************************************************************************//**
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 17
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 17
 
 
  356:Generated_Source\PSoC5/CyFlash.c ****     *
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  556              		.loc 1 409 0
  557              		.cfi_startproc
  558              		@ args = 0, pretend = 0, frame = 24
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 18
 
 
  559              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  600 0036 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  601 0038 3F2B     		cmp	r3, #63
  602 003a 04D9     		bls	.L45
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 19
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 19
 
 
  603              		.loc 1 422 0 is_stmt 0 discriminator 1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  444:Generated_Source\PSoC5/CyFlash.c ****         {
  445:Generated_Source\PSoC5/CyFlash.c ****             status = CYRET_BAD_PARAM;
  636              		.loc 1 445 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 20
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 20
 
 
  637 006a 0123     		movs	r3, #1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  466:Generated_Source\PSoC5/CyFlash.c ****                     /* Wait for SPC to finish and get SPC status */
  467:Generated_Source\PSoC5/CyFlash.c ****                     CyDelayUs(1u);
  671              		.loc 1 467 0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 21
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 21
 
 
  672 009e 0120     		movs	r0, #1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  483:Generated_Source\PSoC5/CyFlash.c ****                     status = CySpcWriteRow(arrayId, rowNumber, dieTemperature[0u], dieTemperature[1
  710              		.loc 1 483 0
  711 00e0 1B4B     		ldr	r3, .L62+4
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 22
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 22
 
 
  712 00e2 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  752              		.loc 1 496 0 is_stmt 1
  753 012a 0023     		movs	r3, #0
  754 012c 7B61     		str	r3, [r7, #20]
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 23
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 23
 
 
  755 012e 02E0     		b	.L53
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  791              		.thumb_func
  792              		.type	CyFlash_SetWaitCycles, %function
  793              	CyFlash_SetWaitCycles:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 24
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 24
 
 
  794              	.LFB8:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  817              		.loc 1 545 0
  818 0018 274A     		ldr	r2, .L71
  819 001a 274B     		ldr	r3, .L71
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 25
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 25
 
 
  820 001c 1B78     		ldrb	r3, [r3]
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  559:Generated_Source\PSoC5/CyFlash.c ****     else if (freq < CY_FLASH_CACHE_WS_4_FREQ_MAX)
  861              		.loc 1 559 0
  862 006c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 26
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 26
 
 
  863 006e 422B     		cmp	r3, #66
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  578:Generated_Source\PSoC5/CyFlash.c **** }
  899              		.loc 1 578 0
  900 00b0 00BF     		nop
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 27
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 27
 
 
  901 00b2 1037     		adds	r7, r7, #16
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  596:Generated_Source\PSoC5/CyFlash.c ****     * Enable SPC clock. This also internally enables the 36MHz IMO, since this
  597:Generated_Source\PSoC5/CyFlash.c ****     * is required for the SPC to function.
  598:Generated_Source\PSoC5/CyFlash.c ****     ***************************************************************************/
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 28
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 28
 
 
  599:Generated_Source\PSoC5/CyFlash.c ****     CY_FLASH_PM_ACT_CFG0_REG    |= CY_FLASH_PM_ACT_CFG0_EN_CLK_SPC;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  969 0048 1B78     		ldrb	r3, [r3]
  970 004a DBB2     		uxtb	r3, r3
  971 004c 43F01003 		orr	r3, r3, #16
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 29
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 29
 
 
  972 0050 DBB2     		uxtb	r3, r3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  632:Generated_Source\PSoC5/CyFlash.c **** /*******************************************************************************
  633:Generated_Source\PSoC5/CyFlash.c **** * Function Name: CyEEPROM_Stop
  634:Generated_Source\PSoC5/CyFlash.c **** ****************************************************************************//**
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 30
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 30
 
 
  635:Generated_Source\PSoC5/CyFlash.c **** *
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1055              		.cfi_def_cfa_offset 8
  1056 003a BD46     		mov	sp, r7
  1057              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 31
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 31
 
 
  1058              		@ sp needed
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1097              		.loc 1 664 0 is_stmt 0 discriminator 1
  1098 0016 054B     		ldr	r3, .L82
  1099 0018 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 32
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 32
 
 
  1100 001a DBB2     		uxtb	r3, r3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1138              		.loc 1 680 0
  1139 0004 054A     		ldr	r2, .L85
  1140 0006 054B     		ldr	r3, .L85
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 33
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 33
 
 
  1141 0008 1B78     		ldrb	r3, [r3]
@@ -1955,46 +1955,46 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1171 000b 01       		.uleb128 0x1
  1172 000c 18000000 		.4byte	.LASF41
  1173 0010 0C       		.byte	0xc
- 1174 0011 D0000000 		.4byte	.LASF42
- 1175 0015 0E020000 		.4byte	.LASF43
+ 1174 0011 D6000000 		.4byte	.LASF42
+ 1175 0015 66020000 		.4byte	.LASF43
  1176 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1177 001d 00000000 		.4byte	0
  1178 0021 00000000 		.4byte	.Ldebug_line0
  1179 0025 02       		.uleb128 0x2
  1180 0026 01       		.byte	0x1
  1181 0027 06       		.byte	0x6
- 1182 0028 E4020000 		.4byte	.LASF0
+ 1182 0028 E5020000 		.4byte	.LASF0
  1183 002c 02       		.uleb128 0x2
  1184 002d 01       		.byte	0x1
  1185 002e 08       		.byte	0x8
- 1186 002f 36010000 		.4byte	.LASF1
+ 1186 002f 43010000 		.4byte	.LASF1
  1187 0033 02       		.uleb128 0x2
  1188 0034 02       		.byte	0x2
  1189 0035 05       		.byte	0x5
- 1190 0036 B6010000 		.4byte	.LASF2
+ 1190 0036 C3010000 		.4byte	.LASF2
  1191 003a 02       		.uleb128 0x2
  1192 003b 02       		.byte	0x2
  1193 003c 07       		.byte	0x7
- 1194 003d BD000000 		.4byte	.LASF3
+ 1194 003d C3000000 		.4byte	.LASF3
  1195 0041 02       		.uleb128 0x2
  1196 0042 04       		.byte	0x4
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 34
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 34
 
 
  1197 0043 05       		.byte	0x5
- 1198 0044 B8020000 		.4byte	.LASF4
+ 1198 0044 B9020000 		.4byte	.LASF4
  1199 0048 02       		.uleb128 0x2
  1200 0049 04       		.byte	0x4
  1201 004a 07       		.byte	0x7
- 1202 004b 6A010000 		.4byte	.LASF5
+ 1202 004b 77010000 		.4byte	.LASF5
  1203 004f 02       		.uleb128 0x2
  1204 0050 08       		.byte	0x8
  1205 0051 05       		.byte	0x5
- 1206 0052 81020000 		.4byte	.LASF6
+ 1206 0052 43020000 		.4byte	.LASF6
  1207 0056 02       		.uleb128 0x2
  1208 0057 08       		.byte	0x8
  1209 0058 07       		.byte	0x7
- 1210 0059 F7010000 		.4byte	.LASF7
+ 1210 0059 04020000 		.4byte	.LASF7
  1211 005d 03       		.uleb128 0x3
  1212 005e 04       		.byte	0x4
  1213 005f 05       		.byte	0x5
@@ -2002,29 +2002,29 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1215 0064 02       		.uleb128 0x2
  1216 0065 04       		.byte	0x4
  1217 0066 07       		.byte	0x7
- 1218 0067 DC010000 		.4byte	.LASF8
+ 1218 0067 E9010000 		.4byte	.LASF8
  1219 006b 04       		.uleb128 0x4
- 1220 006c 7C010000 		.4byte	.LASF9
+ 1220 006c 89010000 		.4byte	.LASF9
  1221 0070 02       		.byte	0x2
  1222 0071 9201     		.2byte	0x192
  1223 0073 2C000000 		.4byte	0x2c
  1224 0077 04       		.uleb128 0x4
- 1225 0078 D5010000 		.4byte	.LASF10
+ 1225 0078 E2010000 		.4byte	.LASF10
  1226 007c 02       		.byte	0x2
  1227 007d 9301     		.2byte	0x193
  1228 007f 3A000000 		.4byte	0x3a
  1229 0083 02       		.uleb128 0x2
  1230 0084 04       		.byte	0x4
  1231 0085 04       		.byte	0x4
- 1232 0086 07010000 		.4byte	.LASF11
+ 1232 0086 BD000000 		.4byte	.LASF11
  1233 008a 02       		.uleb128 0x2
  1234 008b 08       		.byte	0x8
  1235 008c 04       		.byte	0x4
- 1236 008d A7010000 		.4byte	.LASF12
+ 1236 008d B4010000 		.4byte	.LASF12
  1237 0091 02       		.uleb128 0x2
  1238 0092 01       		.byte	0x1
  1239 0093 08       		.byte	0x8
- 1240 0094 9A020000 		.4byte	.LASF13
+ 1240 0094 5C020000 		.4byte	.LASF13
  1241 0098 04       		.uleb128 0x4
  1242 0099 00000000 		.4byte	.LASF14
  1243 009d 02       		.byte	0x2
@@ -2038,18 +2038,18 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1251 00b0 05       		.uleb128 0x5
  1252 00b1 6B000000 		.4byte	0x6b
  1253 00b5 02       		.uleb128 0x2
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 35
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 35
 
 
  1254 00b6 08       		.byte	0x8
  1255 00b7 04       		.byte	0x4
- 1256 00b8 D8020000 		.4byte	.LASF16
+ 1256 00b8 D9020000 		.4byte	.LASF16
  1257 00bc 02       		.uleb128 0x2
  1258 00bd 04       		.byte	0x4
  1259 00be 07       		.byte	0x7
- 1260 00bf 6E020000 		.4byte	.LASF17
+ 1260 00bf 30020000 		.4byte	.LASF17
  1261 00c3 06       		.uleb128 0x6
- 1262 00c4 E9010000 		.4byte	.LASF18
+ 1262 00c4 F6010000 		.4byte	.LASF18
  1263 00c8 01       		.byte	0x1
  1264 00c9 31       		.byte	0x31
  1265 00ca 00000000 		.4byte	.LFB0
@@ -2058,7 +2058,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1268 00d3 9C       		.byte	0x9c
  1269 00d4 E7000000 		.4byte	0xe7
  1270 00d8 07       		.uleb128 0x7
- 1271 00d9 5B010000 		.4byte	.LASF20
+ 1271 00d9 68010000 		.4byte	.LASF20
  1272 00dd 01       		.byte	0x1
  1273 00de 33       		.byte	0x33
  1274 00df 6B000000 		.4byte	0x6b
@@ -2067,7 +2067,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1277 00e5 77       		.sleb128 -9
  1278 00e6 00       		.byte	0
  1279 00e7 06       		.uleb128 0x6
- 1280 00e8 C1020000 		.4byte	.LASF19
+ 1280 00e8 C2020000 		.4byte	.LASF19
  1281 00ec 01       		.byte	0x1
  1282 00ed 6B       		.byte	0x6b
  1283 00ee 00000000 		.4byte	.LFB1
@@ -2076,7 +2076,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1286 00f7 9C       		.byte	0x9c
  1287 00f8 0B010000 		.4byte	0x10b
  1288 00fc 07       		.uleb128 0x7
- 1289 00fd 5B010000 		.4byte	.LASF20
+ 1289 00fd 68010000 		.4byte	.LASF20
  1290 0101 01       		.byte	0x1
  1291 0102 6D       		.byte	0x6d
  1292 0103 6B000000 		.4byte	0x6b
@@ -2085,7 +2085,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1295 0109 77       		.sleb128 -9
  1296 010a 00       		.byte	0
  1297 010b 08       		.uleb128 0x8
- 1298 010c 9F020000 		.4byte	.LASF22
+ 1298 010c 0D010000 		.4byte	.LASF22
  1299 0110 01       		.byte	0x1
  1300 0111 87       		.byte	0x87
  1301 0112 98000000 		.4byte	0x98
@@ -2095,10 +2095,10 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1305 011f 9C       		.byte	0x9c
  1306 0120 33010000 		.4byte	0x133
  1307 0124 07       		.uleb128 0x7
- 1308 0125 00010000 		.4byte	.LASF21
+ 1308 0125 06010000 		.4byte	.LASF21
  1309 0129 01       		.byte	0x1
  1310 012a 89       		.byte	0x89
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 36
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 36
 
 
  1311 012b 98000000 		.4byte	0x98
@@ -2117,7 +2117,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1324 0147 9C       		.byte	0x9c
  1325 0148 5B010000 		.4byte	0x15b
  1326 014c 07       		.uleb128 0x7
- 1327 014d 00010000 		.4byte	.LASF21
+ 1327 014d 06010000 		.4byte	.LASF21
  1328 0151 01       		.byte	0x1
  1329 0152 C1       		.byte	0xc1
  1330 0153 98000000 		.4byte	0x98
@@ -2126,7 +2126,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1333 0159 74       		.sleb128 -12
  1334 015a 00       		.byte	0
  1335 015b 09       		.uleb128 0x9
- 1336 015c 77020000 		.4byte	.LASF24
+ 1336 015c 39020000 		.4byte	.LASF24
  1337 0160 01       		.byte	0x1
  1338 0161 F5       		.byte	0xf5
  1339 0162 98000000 		.4byte	0x98
@@ -2136,7 +2136,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1343 016f 9C       		.byte	0x9c
  1344 0170 83010000 		.4byte	0x183
  1345 0174 07       		.uleb128 0x7
- 1346 0175 00010000 		.4byte	.LASF21
+ 1346 0175 06010000 		.4byte	.LASF21
  1347 0179 01       		.byte	0x1
  1348 017a F7       		.byte	0xf7
  1349 017b 98000000 		.4byte	0x98
@@ -2145,7 +2145,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1352 0181 74       		.sleb128 -12
  1353 0182 00       		.byte	0
  1354 0183 0A       		.uleb128 0xa
- 1355 0184 23010000 		.4byte	.LASF25
+ 1355 0184 30010000 		.4byte	.LASF25
  1356 0188 01       		.byte	0x1
  1357 0189 1401     		.2byte	0x114
  1358 018b 98000000 		.4byte	0x98
@@ -2155,10 +2155,10 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1362 0198 9C       		.byte	0x9c
  1363 0199 BC010000 		.4byte	0x1bc
  1364 019d 0B       		.uleb128 0xb
- 1365 019e B1020000 		.4byte	.LASF27
+ 1365 019e B2020000 		.4byte	.LASF27
  1366 01a2 01       		.byte	0x1
  1367 01a3 1401     		.2byte	0x114
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 37
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 37
 
 
  1368 01a5 BC010000 		.4byte	0x1bc
@@ -2166,7 +2166,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1370 01aa 91       		.byte	0x91
  1371 01ab 6C       		.sleb128 -20
  1372 01ac 0C       		.uleb128 0xc
- 1373 01ad 00010000 		.4byte	.LASF21
+ 1373 01ad 06010000 		.4byte	.LASF21
  1374 01b1 01       		.byte	0x1
  1375 01b2 1601     		.2byte	0x116
  1376 01b4 98000000 		.4byte	0x98
@@ -2178,7 +2178,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1382 01bd 04       		.byte	0x4
  1383 01be 6B000000 		.4byte	0x6b
  1384 01c2 0A       		.uleb128 0xa
- 1385 01c3 F0020000 		.4byte	.LASF26
+ 1385 01c3 F1020000 		.4byte	.LASF26
  1386 01c7 01       		.byte	0x1
  1387 01c8 4E01     		.2byte	0x14e
  1388 01ca 98000000 		.4byte	0x98
@@ -2188,7 +2188,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1392 01d7 9C       		.byte	0x9c
  1393 01d8 28020000 		.4byte	0x228
  1394 01dc 0B       		.uleb128 0xb
- 1395 01dd 82010000 		.4byte	.LASF28
+ 1395 01dd 8F010000 		.4byte	.LASF28
  1396 01e1 01       		.byte	0x1
  1397 01e2 4E01     		.2byte	0x14e
  1398 01e4 6B000000 		.4byte	0x6b
@@ -2196,7 +2196,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1400 01e9 91       		.byte	0x91
  1401 01ea 6F       		.sleb128 -17
  1402 01eb 0B       		.uleb128 0xb
- 1403 01ec 8F020000 		.4byte	.LASF29
+ 1403 01ec 51020000 		.4byte	.LASF29
  1404 01f0 01       		.byte	0x1
  1405 01f1 4E01     		.2byte	0x14e
  1406 01f3 77000000 		.4byte	0x77
@@ -2204,7 +2204,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1408 01f8 91       		.byte	0x91
  1409 01f9 6C       		.sleb128 -20
  1410 01fa 0B       		.uleb128 0xb
- 1411 01fb 44010000 		.4byte	.LASF30
+ 1411 01fb 51010000 		.4byte	.LASF30
  1412 01ff 01       		.byte	0x1
  1413 0200 4E01     		.2byte	0x14e
  1414 0202 28020000 		.4byte	0x228
@@ -2212,18 +2212,18 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1416 0207 91       		.byte	0x91
  1417 0208 68       		.sleb128 -24
  1418 0209 0C       		.uleb128 0xc
- 1419 020a AE010000 		.4byte	.LASF31
+ 1419 020a BB010000 		.4byte	.LASF31
  1420 020e 01       		.byte	0x1
  1421 020f 5001     		.2byte	0x150
  1422 0211 77000000 		.4byte	0x77
  1423 0215 02       		.uleb128 0x2
  1424 0216 91       		.byte	0x91
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 38
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 38
 
 
  1425 0217 76       		.sleb128 -10
  1426 0218 0C       		.uleb128 0xc
- 1427 0219 00010000 		.4byte	.LASF21
+ 1427 0219 06010000 		.4byte	.LASF21
  1428 021d 01       		.byte	0x1
  1429 021e 5101     		.2byte	0x151
  1430 0220 98000000 		.4byte	0x98
@@ -2237,7 +2237,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1438 022e 0E       		.uleb128 0xe
  1439 022f 6B000000 		.4byte	0x6b
  1440 0233 0A       		.uleb128 0xa
- 1441 0234 F1000000 		.4byte	.LASF32
+ 1441 0234 F7000000 		.4byte	.LASF32
  1442 0238 01       		.byte	0x1
  1443 0239 9701     		.2byte	0x197
  1444 023b 98000000 		.4byte	0x98
@@ -2247,7 +2247,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1448 0248 9C       		.byte	0x9c
  1449 0249 99020000 		.4byte	0x299
  1450 024d 0B       		.uleb128 0xb
- 1451 024e 82010000 		.4byte	.LASF28
+ 1451 024e 8F010000 		.4byte	.LASF28
  1452 0252 01       		.byte	0x1
  1453 0253 9701     		.2byte	0x197
  1454 0255 6B000000 		.4byte	0x6b
@@ -2255,7 +2255,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1456 025a 91       		.byte	0x91
  1457 025b 6F       		.sleb128 -17
  1458 025c 0B       		.uleb128 0xb
- 1459 025d CE020000 		.4byte	.LASF33
+ 1459 025d CF020000 		.4byte	.LASF33
  1460 0261 01       		.byte	0x1
  1461 0262 9701     		.2byte	0x197
  1462 0264 77000000 		.4byte	0x77
@@ -2263,7 +2263,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1464 0269 91       		.byte	0x91
  1465 026a 6C       		.sleb128 -20
  1466 026b 0B       		.uleb128 0xb
- 1467 026c 44010000 		.4byte	.LASF30
+ 1467 026c 51010000 		.4byte	.LASF30
  1468 0270 01       		.byte	0x1
  1469 0271 9701     		.2byte	0x197
  1470 0273 28020000 		.4byte	0x228
@@ -2271,18 +2271,18 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1472 0278 91       		.byte	0x91
  1473 0279 68       		.sleb128 -24
  1474 027a 0B       		.uleb128 0xb
- 1475 027b AE010000 		.4byte	.LASF31
+ 1475 027b BB010000 		.4byte	.LASF31
  1476 027f 01       		.byte	0x1
  1477 0280 9701     		.2byte	0x197
  1478 0282 77000000 		.4byte	0x77
  1479 0286 02       		.uleb128 0x2
  1480 0287 91       		.byte	0x91
  1481 0288 66       		.sleb128 -26
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 39
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 39
 
 
  1482 0289 0C       		.uleb128 0xc
- 1483 028a 00010000 		.4byte	.LASF21
+ 1483 028a 06010000 		.4byte	.LASF21
  1484 028e 01       		.byte	0x1
  1485 028f 9A01     		.2byte	0x19a
  1486 0291 98000000 		.4byte	0x98
@@ -2291,7 +2291,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1489 0297 74       		.sleb128 -12
  1490 0298 00       		.byte	0
  1491 0299 0F       		.uleb128 0xf
- 1492 029a 0D010000 		.4byte	.LASF34
+ 1492 029a 1A010000 		.4byte	.LASF34
  1493 029e 01       		.byte	0x1
  1494 029f 1202     		.2byte	0x212
  1495 02a1 00000000 		.4byte	.LFB8
@@ -2300,7 +2300,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1498 02aa 9C       		.byte	0x9c
  1499 02ab CE020000 		.4byte	0x2ce
  1500 02af 0B       		.uleb128 0xb
- 1501 02b0 AC020000 		.4byte	.LASF35
+ 1501 02b0 61020000 		.4byte	.LASF35
  1502 02b4 01       		.byte	0x1
  1503 02b5 1202     		.2byte	0x212
  1504 02b7 6B000000 		.4byte	0x6b
@@ -2308,7 +2308,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1506 02bc 91       		.byte	0x91
  1507 02bd 6F       		.sleb128 -17
  1508 02be 0C       		.uleb128 0xc
- 1509 02bf 5B010000 		.4byte	.LASF20
+ 1509 02bf 68010000 		.4byte	.LASF20
  1510 02c3 01       		.byte	0x1
  1511 02c4 1402     		.2byte	0x214
  1512 02c6 6B000000 		.4byte	0x6b
@@ -2317,7 +2317,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1515 02cc 77       		.sleb128 -9
  1516 02cd 00       		.byte	0
  1517 02ce 0F       		.uleb128 0xf
- 1518 02cf 4C010000 		.4byte	.LASF36
+ 1518 02cf 59010000 		.4byte	.LASF36
  1519 02d3 01       		.byte	0x1
  1520 02d4 4C02     		.2byte	0x24c
  1521 02d6 00000000 		.4byte	.LFB9
@@ -2326,7 +2326,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1524 02df 9C       		.byte	0x9c
  1525 02e0 F4020000 		.4byte	0x2f4
  1526 02e4 0C       		.uleb128 0xc
- 1527 02e5 5B010000 		.4byte	.LASF20
+ 1527 02e5 68010000 		.4byte	.LASF20
  1528 02e9 01       		.byte	0x1
  1529 02ea 4E02     		.2byte	0x24e
  1530 02ec 6B000000 		.4byte	0x6b
@@ -2335,10 +2335,10 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1533 02f2 77       		.sleb128 -9
  1534 02f3 00       		.byte	0
  1535 02f4 0F       		.uleb128 0xf
- 1536 02f5 99010000 		.4byte	.LASF37
+ 1536 02f5 A6010000 		.4byte	.LASF37
  1537 02f9 01       		.byte	0x1
  1538 02fa 7F02     		.2byte	0x27f
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 40
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 40
 
 
  1539 02fc 00000000 		.4byte	.LFB10
@@ -2347,7 +2347,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1542 0305 9C       		.byte	0x9c
  1543 0306 1A030000 		.4byte	0x31a
  1544 030a 0C       		.uleb128 0xc
- 1545 030b 5B010000 		.4byte	.LASF20
+ 1545 030b 68010000 		.4byte	.LASF20
  1546 030f 01       		.byte	0x1
  1547 0310 8102     		.2byte	0x281
  1548 0312 6B000000 		.4byte	0x6b
@@ -2356,7 +2356,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1551 0318 77       		.sleb128 -9
  1552 0319 00       		.byte	0
  1553 031a 10       		.uleb128 0x10
- 1554 031b 59020000 		.4byte	.LASF38
+ 1554 031b 1B020000 		.4byte	.LASF38
  1555 031f 01       		.byte	0x1
  1556 0320 9302     		.2byte	0x293
  1557 0322 00000000 		.4byte	.LFB11
@@ -2364,7 +2364,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1559 032a 01       		.uleb128 0x1
  1560 032b 9C       		.byte	0x9c
  1561 032c 10       		.uleb128 0x10
- 1562 032d C0010000 		.4byte	.LASF39
+ 1562 032d CD010000 		.4byte	.LASF39
  1563 0331 01       		.byte	0x1
  1564 0332 A602     		.2byte	0x2a6
  1565 0334 00000000 		.4byte	.LFB12
@@ -2387,7 +2387,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1582 035d 01       		.byte	0x1
  1583 035e 00       		.byte	0
  1584 035f 13       		.uleb128 0x13
- 1585 0360 8A010000 		.4byte	.LASF44
+ 1585 0360 97010000 		.4byte	.LASF44
  1586 0364 01       		.byte	0x1
  1587 0365 1F       		.byte	0x1f
  1588 0366 4F030000 		.4byte	0x34f
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1593              		.section	.debug_abbrev,"",%progbits
  1594              	.Ldebug_abbrev0:
  1595 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 41
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 41
 
 
  1596 0001 11       		.uleb128 0x11
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1650 0037 35       		.uleb128 0x35
  1651 0038 00       		.byte	0
  1652 0039 49       		.uleb128 0x49
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 42
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 42
 
 
  1653 003a 13       		.uleb128 0x13
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1707 0071 49       		.uleb128 0x49
  1708 0072 13       		.uleb128 0x13
  1709 0073 11       		.uleb128 0x11
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 43
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 43
 
 
  1710 0074 01       		.uleb128 0x1
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1764 00ac 01       		.uleb128 0x1
  1765 00ad 12       		.uleb128 0x12
  1766 00ae 06       		.uleb128 0x6
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 44
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 44
 
 
  1767 00af 40       		.uleb128 0x40
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1821 00e6 0F       		.uleb128 0xf
  1822 00e7 2E       		.uleb128 0x2e
  1823 00e8 01       		.byte	0x1
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 45
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 45
 
 
  1824 00e9 3F       		.uleb128 0x3f
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1878 0121 12       		.uleb128 0x12
  1879 0122 21       		.uleb128 0x21
  1880 0123 00       		.byte	0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 46
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 46
 
 
  1881 0124 49       		.uleb128 0x49
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1935 0068 00000000 		.4byte	.LFB11
  1936 006c 30000000 		.4byte	.LFE11-.LFB11
  1937 0070 00000000 		.4byte	.LFB12
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 47
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 47
 
 
  1938 0074 20000000 		.4byte	.LFE12-.LFB12
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1981      352E342E 
  1981      31203230 
  1981      31363036 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 48
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 48
 
 
  1982 004b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
@@ -2837,196 +2837,196 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 1
  1985      65745370 
  1985      63416C67 
  1985      6F726974 
- 1986              	.LASF3:
- 1987 00bd 73686F72 		.ascii	"short unsigned int\000"
- 1987      7420756E 
- 1987      7369676E 
- 1987      65642069 
- 1987      6E7400
- 1988              	.LASF42:
- 1989 00d0 47656E65 		.ascii	"Generated_Source\\PSoC5\\CyFlash.c\000"
- 1989      72617465 
- 1989      645F536F 
- 1989      75726365 
- 1989      5C50536F 
- 1990              	.LASF32:
- 1991 00f1 43795772 		.ascii	"CyWriteRowFull\000"
- 1991      69746552 
- 1991      6F774675 
- 1991      6C6C00
- 1992              	.LASF21:
- 1993 0100 73746174 		.ascii	"status\000"
- 1993      757300
- 1994              	.LASF11:
- 1995 0107 666C6F61 		.ascii	"float\000"
- 1995      7400
- 1996              	.LASF34:
- 1997 010d 4379466C 		.ascii	"CyFlash_SetWaitCycles\000"
- 1997      6173685F 
- 1997      53657457 
- 1997      61697443 
- 1997      79636C65 
- 1998              	.LASF25:
- 1999 0123 43795365 		.ascii	"CySetFlashEEBuffer\000"
- 1999      74466C61 
- 1999      73684545 
- 1999      42756666 
- 1999      657200
- 2000              	.LASF1:
- 2001 0136 756E7369 		.ascii	"unsigned char\000"
- 2001      676E6564 
- 2001      20636861 
- 2001      7200
- 2002              	.LASF30:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 49
+ 1986              	.LASF11:
+ 1987 00bd 666C6F61 		.ascii	"float\000"
+ 1987      7400
+ 1988              	.LASF3:
+ 1989 00c3 73686F72 		.ascii	"short unsigned int\000"
+ 1989      7420756E 
+ 1989      7369676E 
+ 1989      65642069 
+ 1989      6E7400
+ 1990              	.LASF42:
+ 1991 00d6 47656E65 		.ascii	"Generated_Source\\PSoC5\\CyFlash.c\000"
+ 1991      72617465 
+ 1991      645F536F 
+ 1991      75726365 
+ 1991      5C50536F 
+ 1992              	.LASF32:
+ 1993 00f7 43795772 		.ascii	"CyWriteRowFull\000"
+ 1993      69746552 
+ 1993      6F774675 
+ 1993      6C6C00
+ 1994              	.LASF21:
+ 1995 0106 73746174 		.ascii	"status\000"
+ 1995      757300
+ 1996              	.LASF22:
+ 1997 010d 43795365 		.ascii	"CySetTempInt\000"
+ 1997      7454656D 
+ 1997      70496E74 
+ 1997      00
+ 1998              	.LASF34:
+ 1999 011a 4379466C 		.ascii	"CyFlash_SetWaitCycles\000"
+ 1999      6173685F 
+ 1999      53657457 
+ 1999      61697443 
+ 1999      79636C65 
+ 2000              	.LASF25:
+ 2001 0130 43795365 		.ascii	"CySetFlashEEBuffer\000"
+ 2001      74466C61 
+ 2001      73684545 
+ 2001      42756666 
+ 2001      657200
+ 2002              	.LASF1:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 49
 
 
- 2003 0144 726F7744 		.ascii	"rowData\000"
- 2003      61746100 
- 2004              	.LASF36:
- 2005 014c 43794545 		.ascii	"CyEEPROM_Start\000"
- 2005      50524F4D 
- 2005      5F537461 
- 2005      727400
- 2006              	.LASF20:
- 2007 015b 696E7465 		.ascii	"interruptState\000"
- 2007      72727570 
- 2007      74537461 
- 2007      746500
- 2008              	.LASF5:
- 2009 016a 6C6F6E67 		.ascii	"long unsigned int\000"
- 2009      20756E73 
- 2009      69676E65 
- 2009      6420696E 
- 2009      7400
- 2010              	.LASF9:
- 2011 017c 75696E74 		.ascii	"uint8\000"
- 2011      3800
- 2012              	.LASF28:
- 2013 0182 61727261 		.ascii	"arrayId\000"
- 2013      79496400 
- 2014              	.LASF44:
- 2015 018a 64696554 		.ascii	"dieTemperature\000"
- 2015      656D7065 
- 2015      72617475 
- 2015      726500
- 2016              	.LASF37:
- 2017 0199 43794545 		.ascii	"CyEEPROM_Stop\000"
- 2017      50524F4D 
- 2017      5F53746F 
- 2017      7000
- 2018              	.LASF12:
- 2019 01a7 646F7562 		.ascii	"double\000"
- 2019      6C6500
- 2020              	.LASF31:
- 2021 01ae 726F7753 		.ascii	"rowSize\000"
- 2021      697A6500 
- 2022              	.LASF2:
- 2023 01b6 73686F72 		.ascii	"short int\000"
- 2023      7420696E 
- 2023      7400
- 2024              	.LASF39:
- 2025 01c0 43794545 		.ascii	"CyEEPROM_ReadRelease\000"
- 2025      50524F4D 
- 2025      5F526561 
- 2025      6452656C 
- 2025      65617365 
- 2026              	.LASF10:
- 2027 01d5 75696E74 		.ascii	"uint16\000"
- 2027      313600
- 2028              	.LASF8:
- 2029 01dc 756E7369 		.ascii	"unsigned int\000"
- 2029      676E6564 
- 2029      20696E74 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 50
+ 2003 0143 756E7369 		.ascii	"unsigned char\000"
+ 2003      676E6564 
+ 2003      20636861 
+ 2003      7200
+ 2004              	.LASF30:
+ 2005 0151 726F7744 		.ascii	"rowData\000"
+ 2005      61746100 
+ 2006              	.LASF36:
+ 2007 0159 43794545 		.ascii	"CyEEPROM_Start\000"
+ 2007      50524F4D 
+ 2007      5F537461 
+ 2007      727400
+ 2008              	.LASF20:
+ 2009 0168 696E7465 		.ascii	"interruptState\000"
+ 2009      72727570 
+ 2009      74537461 
+ 2009      746500
+ 2010              	.LASF5:
+ 2011 0177 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2011      20756E73 
+ 2011      69676E65 
+ 2011      6420696E 
+ 2011      7400
+ 2012              	.LASF9:
+ 2013 0189 75696E74 		.ascii	"uint8\000"
+ 2013      3800
+ 2014              	.LASF28:
+ 2015 018f 61727261 		.ascii	"arrayId\000"
+ 2015      79496400 
+ 2016              	.LASF44:
+ 2017 0197 64696554 		.ascii	"dieTemperature\000"
+ 2017      656D7065 
+ 2017      72617475 
+ 2017      726500
+ 2018              	.LASF37:
+ 2019 01a6 43794545 		.ascii	"CyEEPROM_Stop\000"
+ 2019      50524F4D 
+ 2019      5F53746F 
+ 2019      7000
+ 2020              	.LASF12:
+ 2021 01b4 646F7562 		.ascii	"double\000"
+ 2021      6C6500
+ 2022              	.LASF31:
+ 2023 01bb 726F7753 		.ascii	"rowSize\000"
+ 2023      697A6500 
+ 2024              	.LASF2:
+ 2025 01c3 73686F72 		.ascii	"short int\000"
+ 2025      7420696E 
+ 2025      7400
+ 2026              	.LASF39:
+ 2027 01cd 43794545 		.ascii	"CyEEPROM_ReadRelease\000"
+ 2027      50524F4D 
+ 2027      5F526561 
+ 2027      6452656C 
+ 2027      65617365 
+ 2028              	.LASF10:
+ 2029 01e2 75696E74 		.ascii	"uint16\000"
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 50
 
 
- 2029      00
- 2030              	.LASF18:
- 2031 01e9 4379466C 		.ascii	"CyFlash_Start\000"
- 2031      6173685F 
- 2031      53746172 
- 2031      7400
- 2032              	.LASF7:
- 2033 01f7 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2033      206C6F6E 
- 2033      6720756E 
- 2033      7369676E 
- 2033      65642069 
- 2034              	.LASF43:
- 2035 020e 433A5C55 		.ascii	"C:\\Users\\kevan\\Documents\\GitHub\\Hydraulic-Mimi"
- 2035      73657273 
- 2035      5C6B6576 
- 2035      616E5C44 
- 2035      6F63756D 
- 2036 023c 632D4172 		.ascii	"c-Arm\\PSOC_arm_project.cydsn\000"
- 2036      6D5C5053 
- 2036      4F435F61 
- 2036      726D5F70 
- 2036      726F6A65 
- 2037              	.LASF38:
- 2038 0259 43794545 		.ascii	"CyEEPROM_ReadReserve\000"
- 2038      50524F4D 
- 2038      5F526561 
- 2038      64526573 
- 2038      65727665 
- 2039              	.LASF17:
- 2040 026e 73697A65 		.ascii	"sizetype\000"
- 2040      74797065 
- 2040      00
- 2041              	.LASF24:
- 2042 0277 43795365 		.ascii	"CySetTemp\000"
- 2042      7454656D 
- 2042      7000
- 2043              	.LASF6:
- 2044 0281 6C6F6E67 		.ascii	"long long int\000"
- 2044      206C6F6E 
- 2044      6720696E 
- 2044      7400
- 2045              	.LASF29:
- 2046 028f 726F7741 		.ascii	"rowAddress\000"
- 2046      64647265 
- 2046      737300
- 2047              	.LASF13:
- 2048 029a 63686172 		.ascii	"char\000"
- 2048      00
- 2049              	.LASF22:
- 2050 029f 43795365 		.ascii	"CySetTempInt\000"
- 2050      7454656D 
- 2050      70496E74 
- 2050      00
- 2051              	.LASF35:
- 2052 02ac 66726571 		.ascii	"freq\000"
- 2052      00
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\cc44nkCP.s 			page 51
+ 2029      313600
+ 2030              	.LASF8:
+ 2031 01e9 756E7369 		.ascii	"unsigned int\000"
+ 2031      676E6564 
+ 2031      20696E74 
+ 2031      00
+ 2032              	.LASF18:
+ 2033 01f6 4379466C 		.ascii	"CyFlash_Start\000"
+ 2033      6173685F 
+ 2033      53746172 
+ 2033      7400
+ 2034              	.LASF7:
+ 2035 0204 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2035      206C6F6E 
+ 2035      6720756E 
+ 2035      7369676E 
+ 2035      65642069 
+ 2036              	.LASF38:
+ 2037 021b 43794545 		.ascii	"CyEEPROM_ReadReserve\000"
+ 2037      50524F4D 
+ 2037      5F526561 
+ 2037      64526573 
+ 2037      65727665 
+ 2038              	.LASF17:
+ 2039 0230 73697A65 		.ascii	"sizetype\000"
+ 2039      74797065 
+ 2039      00
+ 2040              	.LASF24:
+ 2041 0239 43795365 		.ascii	"CySetTemp\000"
+ 2041      7454656D 
+ 2041      7000
+ 2042              	.LASF6:
+ 2043 0243 6C6F6E67 		.ascii	"long long int\000"
+ 2043      206C6F6E 
+ 2043      6720696E 
+ 2043      7400
+ 2044              	.LASF29:
+ 2045 0251 726F7741 		.ascii	"rowAddress\000"
+ 2045      64647265 
+ 2045      737300
+ 2046              	.LASF13:
+ 2047 025c 63686172 		.ascii	"char\000"
+ 2047      00
+ 2048              	.LASF35:
+ 2049 0261 66726571 		.ascii	"freq\000"
+ 2049      00
+ 2050              	.LASF43:
+ 2051 0266 433A5C55 		.ascii	"C:\\Users\\Andrew\\Documents\\GitHub\\Hydraulic-Mim"
+ 2051      73657273 
+ 2051      5C416E64 
+ 2051      7265775C 
+ 2051      446F6375 
+ 2052 0294 69632D41 		.ascii	"ic-Arm\\PSOC_arm_project.cydsn\000"
+ 2052      726D5C50 
+ 2052      534F435F 
+ 2052      61726D5F 
+ 2052      70726F6A 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccpZUUld.s 			page 51
 
 
  2053              	.LASF27:
- 2054 02b1 62756666 		.ascii	"buffer\000"
+ 2054 02b2 62756666 		.ascii	"buffer\000"
  2054      657200
  2055              	.LASF4:
- 2056 02b8 6C6F6E67 		.ascii	"long int\000"
+ 2056 02b9 6C6F6E67 		.ascii	"long int\000"
  2056      20696E74 
  2056      00
  2057              	.LASF19:
- 2058 02c1 4379466C 		.ascii	"CyFlash_Stop\000"
+ 2058 02c2 4379466C 		.ascii	"CyFlash_Stop\000"
  2058      6173685F 
  2058      53746F70 
  2058      00
  2059              	.LASF33:
- 2060 02ce 726F774E 		.ascii	"rowNumber\000"
+ 2060 02cf 726F774E 		.ascii	"rowNumber\000"
  2060      756D6265 
  2060      7200
  2061              	.LASF16:
- 2062 02d8 6C6F6E67 		.ascii	"long double\000"
+ 2062 02d9 6C6F6E67 		.ascii	"long double\000"
  2062      20646F75 
  2062      626C6500 
  2063              	.LASF0:
- 2064 02e4 7369676E 		.ascii	"signed char\000"
+ 2064 02e5 7369676E 		.ascii	"signed char\000"
  2064      65642063 
  2064      68617200 
  2065              	.LASF26:
- 2066 02f0 43795772 		.ascii	"CyWriteRowData\000"
+ 2066 02f1 43795772 		.ascii	"CyWriteRowData\000"
  2066      69746552 
  2066      6F774461 
  2066      746100
