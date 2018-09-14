@@ -59,7 +59,7 @@ double pid_integral[CYL_NO] = {0};
 int cyl_set = 0;
 char cyl_tmp[1];
 
-int offsets[4][2] = {{128,182},{129,179},{0,0},{0,0}}; //{lower,upper} - both positive
+int offsets[4][2] = {{125,179},{126,176},{0,0},{0,0}}; //{lower,upper} - both positive
 
 char sendValue[100];
 char temp[20];
@@ -84,6 +84,7 @@ CY_ISR(adc_update){
                 moving_median[c][j] = moving_median[c][j+1]; 
         }
         
+        moving_median[c][filter_size-1] = ADC_0_GetResult16();
         moving_median[c][filter_size-1] = ADC_0_GetResult16();
         ADC_0_IsEndConversion(ADC_0_WAIT_FOR_RESULT);
         moving_median[c][filter_size-1] = ADC_0_GetResult16();
@@ -170,11 +171,10 @@ CY_ISR(RxIsr)
                         new_pos[cyl_no] = (int) strtol(temp, (char **)NULL, 10);
                         new_pos_set[cyl_no] = 1;
                         nn=0; 
-                    
-                        
                         temp[0] = '\0';
-                        
                         data_read_mode = 0;
+                        sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+                        UART_PutString(sendValue);
                     }
                   
                 break;
@@ -202,7 +202,6 @@ CY_ISR(RxIsr)
                         temp[0] = '\0';
                         data_read_mode = 0;
                     }
-                    
                 break;
                 case 5: //d
                     if(rxData != '}'){
@@ -215,7 +214,6 @@ CY_ISR(RxIsr)
                         temp[0] = '\0';
                         data_read_mode = 0;
                     }
-                    
                 break;
                 case 6: //c
                     if(rxData != '}'){
@@ -239,7 +237,6 @@ CY_ISR(RxIsr)
             }
         }
     }while((rxStatus & UART_RX_STS_FIFO_NOTEMPTY) != 0u);
-
 }
     
 
@@ -281,8 +278,8 @@ int main()
     {
         Timer_1_WriteCounter(65535);
         
-        sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-        UART_PutString(sendValue);
+        //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+        //UART_PutString(sendValue);
         /* START PID CODE */
         for(int cyl = 0;cyl<CYL_NO;cyl++){
             if(new_pos_set[cyl]){

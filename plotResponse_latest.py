@@ -69,6 +69,8 @@ ax.plot(t, desired_1)
 
 plt.ylim(1000, 4095)
 plt.xlim(t[-1] - 5000, t[-1])
+plt.xlabel('Time - each incremenent represents 0.01s - '+ pid[-1])
+plt.ylabel('ADC Value (0-4095) represents distance 0-10cm')
 fig.savefig(filename + ".png")
 plt.title(filename)
 plt.show()
