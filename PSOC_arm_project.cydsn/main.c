@@ -46,26 +46,29 @@ int pulseCheck(int pulse, int offset_upper, int offset_lower) {
 
 int data_read_mode = 0;
 
-volatile int new_pos_set[CYL_NO] = {0};
+volatile int new_pos_set[CYL_NO];
 int new_pos[CYL_NO];
-int pos[CYL_NO]={2000,2000,2000,2000};
-int pulse[CYL_NO] = {0};
-int pulse_temp[CYL_NO] = {0};
+int pos[CYL_NO];
+int pulse[CYL_NO];
+int pulse_temp[CYL_NO];
 double err[CYL_NO];
 uint16 adcValue[CYL_NO];
-double der[CYL_NO] = {0};
-double prev_err[CYL_NO] = {0};
-double pid_integral[CYL_NO] = {0};
+double der[CYL_NO];
+double prev_err[CYL_NO];
+double pid_integral[CYL_NO];
+
 int cyl_set = 0;
 char cyl_tmp[1];
+double dts[30];
+int dts_ct = 0;
 
-int offsets[4][2] = {{125,179},{126,176},{147,242},{35,280}}; //{lower,upper} - both positive
+int offsets[4][2] = {{125,179},{132,176},{185,172},{195,169}}; //{lower,upper} - both positive
 
 char sendValue[100];
 char temp[20];
 int nn=0;
-double pid[3] = {0.7,0.001,0.04};
-//double pid[3] = { -2.22,-0.0307,0.0 };
+double pid[3] = {0.5,0.001,0.04};
+
 char help[100];
 int tt = 0;
 
@@ -237,13 +240,22 @@ CY_ISR(RxIsr)
         }
     }while((rxStatus & UART_RX_STS_FIFO_NOTEMPTY) != 0u);
 }
-    
 
-
-int led_switch = 0;
 int main()
 {
-    
+    //initializing variables
+    for(int g = 0;g<CYL_NO;g++){
+        new_pos_set[g]  = 0;
+        new_pos[g]      = 0;
+        pos[g]          = 2000;
+        pulse[g]        = 0;
+        pulse_temp[g]   = 0;
+        err[g]          = 0;
+        adcValue[g]     = 0;
+        der[g]          = 0;
+        prev_err[g]     = 0;
+        pid_integral[g] = 0;
+    }
     //PWM variables
     PWM_0_Start();
     PWM_1_Start();
@@ -272,12 +284,13 @@ int main()
     
     median_timer_Start();
     Timer_1_Start();
-   int send_now = 0;
     
     for(;;)
     {
         Timer_1_WriteCounter(65535);
-        sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+        //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+        sprintf(sendValue,"%08d\t%08.2d\t%08d\t%08.2d\n",adcValue[0],adcValue[1],adcValue[2],adcValue[3]);
+        
         UART_PutString(sendValue);
         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
         //UART_PutString(sendValue);
@@ -290,8 +303,8 @@ int main()
             
             err[cyl] = -pos[cyl] + adcValue[cyl];
             der[cyl] = err[cyl] - prev_err[cyl];
-            pid_integral[cyl] = err[cyl] + pid_integral[cyl];
-            pulse_temp[cyl] = pid[0] * err[cyl] + ( pid[1] * pid_integral[cyl] * dt) + ( pid[2] * der[cyl] / dt );
+            pid_integral[cyl] = err[cyl]* dt + pid_integral[cyl];
+            pulse_temp[cyl] = pid[0] * err[cyl] + ( pid[1] * pid_integral[cyl] ) + ( pid[2] * der[cyl] / dt );
             
             pulse[cyl] = pulseCheck(pulse_temp[cyl],offsets[cyl][1],offsets[cyl][0]);
             
@@ -302,11 +315,12 @@ int main()
         
         /* END PID CODE */
         if(start_calib){
-            int calib_cyl = 3;
+                
+            int calib_cyl = 1;
             int upper_offset_set = 0;
             int lower_offset_set = 0;
-            int upper_offset = 0;
-            int lower_offset = 0;
+            int upper_offset = 160;
+            int lower_offset = -110;
             int lower_check_no = 0;
             int upper_check_no = 0;
             uint16 prev_adcValue = adcValue[0];
@@ -326,7 +340,7 @@ int main()
                     if(diff>10){
                         upper_check_no ++;;
                     }else{
-                        upper_offset = upper_offset + 5;
+                        upper_offset = upper_offset + 1;
                         upper_check_no=0;
                     }
                     sprintf(sendValue,"UPPER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
@@ -343,7 +357,7 @@ int main()
                     if(diff>10){
                         lower_check_no++;
                     }else{
-                        lower_offset = lower_offset - 5;
+                        lower_offset = lower_offset - 1;
                         lower_check_no = 0;
                     }
                     sprintf(sendValue,"LOWER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
@@ -366,11 +380,16 @@ int main()
             
             //while(1){CyDelay(100);};
             start_calib = 0;
+            CyDelay(15000);
         }
-        CyDelay(10);
+        CyDelay(5);
         time = Timer_1_ReadCounter();
         dt=(double)(65535-time)/1000000;
-
+        dts[dts_ct] = dt;
+        dts_ct++;
+        if(dts_ct>29){
+            dts_ct=0;
+        }
     }
 }
 
