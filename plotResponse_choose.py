@@ -26,7 +26,7 @@ lines.remove(lines[-1])
 
 for n in lines:
 	data.append(n.split())
-	if len(data[-1])!=9:
+	if len(data[-1])!=11:
 		data.remove(data[-1])
 	else:
 		actual_0.append(float(data[-1][0]))
@@ -49,13 +49,14 @@ ax.plot(t, desired_1)
 #ctr = 0;
 #for n in actual_0:
 #	ctr += 1
-#	if ctr % 100 == 0:
+#	if ctr % 100 == 1:
 #		ax.annotate(pid[ctr], (t[ctr], actual_0[ctr]))
 #		ax.annotate(pid[ctr], (t[ctr], actual_1[ctr]))
 
 plt.ylim(1000, 4095)
 plt.xlim(t[-1] - 5000, t[-1])
+plt.xlabel('Time - each incremenent represents 0.01s - '+ pid[-1])
+plt.ylabel('ADC Value (0-4095) represents distance 0-10cm')
 fig.savefig(filename + ".png")
 plt.title(filename)
 plt.show()
-
