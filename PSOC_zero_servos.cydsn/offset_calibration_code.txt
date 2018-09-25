@@ -1,0 +1,57 @@
+if(start_calib){
+            int calib_cyl = 1;
+            int upper_offset_set = 0;
+            int lower_offset_set = 0;
+            int upper_offset = 120;
+            int lower_offset = -120;
+            uint16 prev_adcValue = adcValue[0];
+            uint16 diff = 0;
+            for(int g = 0;g<CYL_NO;g++)
+                writePWM(g,0);
+                
+            CyDelay(1000);
+        
+            while(upper_offset_set==0 && lower_offset_set==0){
+                
+                prev_adcValue = adcValue[calib_cyl];
+                if(upper_offset_set==0){
+                    writePWM(calib_cyl,upper_offset);
+                    CyDelay(200);
+                    diff = abs(prev_adcValue-adcValue[calib_cyl]);
+                    if(diff>10){
+                        upper_offset_set=1;
+                    }else{
+                        upper_offset = upper_offset + 1;
+                    }
+                    sprintf(sendValue,"UPPER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
+                    UART_PutString(sendValue);
+                }
+                writePWM(calib_cyl,0);
+                CyDelay(500);
+                
+                prev_adcValue = adcValue[calib_cyl];
+                if(lower_offset_set==0){
+                    writePWM(calib_cyl,lower_offset);
+                    CyDelay(200);
+                    diff = abs(prev_adcValue-adcValue[calib_cyl]);
+                    if(diff>10){
+                        lower_offset_set=1;
+                    }else{
+                        lower_offset = lower_offset - 1;
+                    }
+                    sprintf(sendValue,"LOWER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\n",lower_offset,upper_offset,diff);
+                    UART_PutString(sendValue);
+            
+                }
+                
+                writePWM(calib_cyl,0);
+                CyDelay(500);
+                
+            }
+            
+            sprintf(sendValue,"Lower Offset: %d \t Upper Offset: %d \n",lower_offset,upper_offset);
+            UART_PutString(sendValue);
+            
+            //while(1){CyDelay(100);};
+            start_calib = 0;
+        }

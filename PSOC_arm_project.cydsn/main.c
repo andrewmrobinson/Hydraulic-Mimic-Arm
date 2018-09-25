@@ -67,7 +67,7 @@ int offsets[4][2] = {{125,179},{132,176},{185,172},{195,169}}; //{lower,upper} -
 char sendValue[100];
 char temp[20];
 int nn=0;
-double pid[3] = {0.5,0.001,0.04};
+double pid[3] = {0.3,0.001,0.0};
 
 char help[100];
 int tt = 0;
@@ -247,7 +247,7 @@ int main()
     for(int g = 0;g<CYL_NO;g++){
         new_pos_set[g]  = 0;
         new_pos[g]      = 0;
-        pos[g]          = 2000;
+        pos[g]          = 4000;
         pulse[g]        = 0;
         pulse_temp[g]   = 0;
         err[g]          = 0;
@@ -287,6 +287,21 @@ int main()
     
     for(;;)
     {
+        for(;;){
+            for(int i = 0;i<4;i++){
+                writePWM(i,499);
+            }
+                CyDelay(500);
+                for(int i = 0;i<4;i++){
+                writePWM(i,-499);
+            }
+                CyDelay(500);
+                for(int i = 0;i<4;i++){
+                writePWM(i,0);
+            }
+                CyDelay(1000);
+        }
+        
         Timer_1_WriteCounter(65535);
         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
         sprintf(sendValue,"%08d\t%08.2d\t%08d\t%08.2d\n",adcValue[0],adcValue[1],adcValue[2],adcValue[3]);

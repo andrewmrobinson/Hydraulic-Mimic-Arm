@@ -1,0 +1,697 @@
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.syntax unified
+  20              		.global _printf_float
+  21              		.thumb
+  22              		.syntax unified
+  23              		.global	errorStatus
+  24              		.bss
+  25              		.type	errorStatus, %object
+  26              		.size	errorStatus, 1
+  27              	errorStatus:
+  28 0000 00       		.space	1
+  29              		.section	.text.writePWM,"ax",%progbits
+  30              		.align	2
+  31              		.global	writePWM
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	writePWM, %function
+  35              	writePWM:
+  36              	.LFB64:
+  37              		.file 1 "main.c"
+   1:main.c        **** 
+   2:main.c        **** #include <project.h>
+   3:main.c        **** #include <stdio.h>
+   4:main.c        **** #include "common.h"
+   5:main.c        **** #include <math.h>
+   6:main.c        **** #include <stdlib.h>     /* strtod */
+   7:main.c        **** 
+   8:main.c        **** #define	Frequency 1000000.0			// Frequency of PWMClock
+   9:main.c        **** #define	One_ms (Frequency/1000.0)	// 1 ms constant
+  10:main.c        **** 
+  11:main.c        **** /* Add an explicit reference to the floating point printf library to allow
+  12:main.c        **** the usage of floating point conversion specifier */
+  13:main.c        **** #if defined (__GNUC__)
+  14:main.c        ****     asm (".global _printf_float");
+  15:main.c        **** #endif
+  16:main.c        **** 
+  17:main.c        **** uint8 errorStatus = 0u;
+  18:main.c        **** 
+  19:main.c        **** void writePWM(int cylinder, int pulse){
+  38              		.loc 1 19 0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 2
+
+
+  39              		.cfi_startproc
+  40              		@ args = 0, pretend = 0, frame = 8
+  41              		@ frame_needed = 1, uses_anonymous_args = 0
+  42 0000 80B5     		push	{r7, lr}
+  43              		.cfi_def_cfa_offset 8
+  44              		.cfi_offset 7, -8
+  45              		.cfi_offset 14, -4
+  46 0002 82B0     		sub	sp, sp, #8
+  47              		.cfi_def_cfa_offset 16
+  48 0004 00AF     		add	r7, sp, #0
+  49              		.cfi_def_cfa_register 7
+  50 0006 7860     		str	r0, [r7, #4]
+  51 0008 3960     		str	r1, [r7]
+  20:main.c        ****     switch(cylinder){
+  52              		.loc 1 20 0
+  53 000a 7B68     		ldr	r3, [r7, #4]
+  54 000c 002B     		cmp	r3, #0
+  55 000e 00D0     		beq	.L3
+  21:main.c        ****                 case 0:
+  22:main.c        ****                     PWM_0_WriteCompare(pulse + 1500);
+  23:main.c        ****                     break;
+  24:main.c        ****             }  
+  25:main.c        **** }
+  56              		.loc 1 25 0
+  57 0010 08E0     		b	.L4
+  58              	.L3:
+  22:main.c        ****                     break;
+  59              		.loc 1 22 0
+  60 0012 3B68     		ldr	r3, [r7]
+  61 0014 9BB2     		uxth	r3, r3
+  62 0016 03F2DC53 		addw	r3, r3, #1500
+  63 001a 9BB2     		uxth	r3, r3
+  64 001c 1846     		mov	r0, r3
+  65 001e FFF7FEFF 		bl	PWM_0_WriteCompare
+  23:main.c        ****             }  
+  66              		.loc 1 23 0
+  67 0022 00BF     		nop
+  68              	.L4:
+  69              		.loc 1 25 0
+  70 0024 00BF     		nop
+  71 0026 0837     		adds	r7, r7, #8
+  72              		.cfi_def_cfa_offset 8
+  73 0028 BD46     		mov	sp, r7
+  74              		.cfi_def_cfa_register 13
+  75              		@ sp needed
+  76 002a 80BD     		pop	{r7, pc}
+  77              		.cfi_endproc
+  78              	.LFE64:
+  79              		.size	writePWM, .-writePWM
+  80              		.section	.text.main,"ax",%progbits
+  81              		.align	2
+  82              		.global	main
+  83              		.thumb
+  84              		.thumb_func
+  85              		.type	main, %function
+  86              	main:
+  87              	.LFB65:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 3
+
+
+  26:main.c        **** 
+  27:main.c        **** 
+  28:main.c        **** int main()
+  29:main.c        **** {
+  88              		.loc 1 29 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 1, uses_anonymous_args = 0
+  92 0000 80B5     		push	{r7, lr}
+  93              		.cfi_def_cfa_offset 8
+  94              		.cfi_offset 7, -8
+  95              		.cfi_offset 14, -4
+  96 0002 00AF     		add	r7, sp, #0
+  97              		.cfi_def_cfa_register 7
+  30:main.c        ****     //initializing variables
+  31:main.c        ****     Clock_1_Start();
+  98              		.loc 1 31 0
+  99 0004 FFF7FEFF 		bl	Clock_1_Start
+  32:main.c        ****     PWM_0_Start();
+ 100              		.loc 1 32 0
+ 101 0008 FFF7FEFF 		bl	PWM_0_Start
+  33:main.c        ****     
+  34:main.c        **** #if(INTERRUPT_CODE_ENABLED == ENABLED)
+  35:main.c        **** #endif /* INTERRUPT_CODE_ENABLED == ENABLED */
+  36:main.c        ****     
+  37:main.c        ****     CyGlobalIntEnable;      /* Enable global interrupts. */
+ 102              		.loc 1 37 0
+ 103              		.syntax unified
+ 104              	@ 37 "main.c" 1
+ 105 000c 62B6     		CPSIE   i
+ 106              	@ 0 "" 2
+ 107              		.thumb
+ 108              		.syntax unified
+ 109              	.L6:
+  38:main.c        ****     
+  39:main.c        ****     
+  40:main.c        ****     for(;;)
+  41:main.c        ****     {
+  42:main.c        ****             writePWM(0,499);
+ 110              		.loc 1 42 0 discriminator 1
+ 111 000e 40F2F311 		movw	r1, #499
+ 112 0012 0020     		movs	r0, #0
+ 113 0014 FFF7FEFF 		bl	writePWM
+  43:main.c        ****             CyDelay(500);
+ 114              		.loc 1 43 0 discriminator 1
+ 115 0018 4FF4FA70 		mov	r0, #500
+ 116 001c FFF7FEFF 		bl	CyDelay
+  44:main.c        ****             writePWM(0,-499);
+ 117              		.loc 1 44 0 discriminator 1
+ 118 0020 6FF4F971 		mvn	r1, #498
+ 119 0024 0020     		movs	r0, #0
+ 120 0026 FFF7FEFF 		bl	writePWM
+  45:main.c        ****             CyDelay(500);
+ 121              		.loc 1 45 0 discriminator 1
+ 122 002a 4FF4FA70 		mov	r0, #500
+ 123 002e FFF7FEFF 		bl	CyDelay
+  46:main.c        ****             writePWM(0,0);
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 4
+
+
+ 124              		.loc 1 46 0 discriminator 1
+ 125 0032 0021     		movs	r1, #0
+ 126 0034 0020     		movs	r0, #0
+ 127 0036 FFF7FEFF 		bl	writePWM
+  47:main.c        ****             CyDelay(4000);
+ 128              		.loc 1 47 0 discriminator 1
+ 129 003a 4FF47A60 		mov	r0, #4000
+ 130 003e FFF7FEFF 		bl	CyDelay
+  48:main.c        ****             
+  49:main.c        ****     }
+ 131              		.loc 1 49 0 discriminator 1
+ 132 0042 E4E7     		b	.L6
+ 133              		.cfi_endproc
+ 134              	.LFE65:
+ 135              		.size	main, .-main
+ 136              		.text
+ 137              	.Letext0:
+ 138              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 139              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 140              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 141              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 142              		.section	.debug_info,"",%progbits
+ 143              	.Ldebug_info0:
+ 144 0000 16010000 		.4byte	0x116
+ 145 0004 0400     		.2byte	0x4
+ 146 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 147 000a 04       		.byte	0x4
+ 148 000b 01       		.uleb128 0x1
+ 149 000c 75000000 		.4byte	.LASF21
+ 150 0010 0C       		.byte	0xc
+ 151 0011 2E000000 		.4byte	.LASF22
+ 152 0015 26010000 		.4byte	.LASF23
+ 153 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 154 001d 00000000 		.4byte	0
+ 155 0021 00000000 		.4byte	.Ldebug_line0
+ 156 0025 02       		.uleb128 0x2
+ 157 0026 01       		.byte	0x1
+ 158 0027 06       		.byte	0x6
+ 159 0028 85010000 		.4byte	.LASF0
+ 160 002c 02       		.uleb128 0x2
+ 161 002d 01       		.byte	0x1
+ 162 002e 08       		.byte	0x8
+ 163 002f 03010000 		.4byte	.LASF1
+ 164 0033 02       		.uleb128 0x2
+ 165 0034 02       		.byte	0x2
+ 166 0035 05       		.byte	0x5
+ 167 0036 B6010000 		.4byte	.LASF2
+ 168 003a 02       		.uleb128 0x2
+ 169 003b 02       		.byte	0x2
+ 170 003c 07       		.byte	0x7
+ 171 003d 0E000000 		.4byte	.LASF3
+ 172 0041 03       		.uleb128 0x3
+ 173 0042 A6010000 		.4byte	.LASF9
+ 174 0046 02       		.byte	0x2
+ 175 0047 3F       		.byte	0x3f
+ 176 0048 4C000000 		.4byte	0x4c
+ 177 004c 02       		.uleb128 0x2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 5
+
+
+ 178 004d 04       		.byte	0x4
+ 179 004e 05       		.byte	0x5
+ 180 004f 16010000 		.4byte	.LASF4
+ 181 0053 02       		.uleb128 0x2
+ 182 0054 04       		.byte	0x4
+ 183 0055 07       		.byte	0x7
+ 184 0056 40000000 		.4byte	.LASF5
+ 185 005a 02       		.uleb128 0x2
+ 186 005b 08       		.byte	0x8
+ 187 005c 05       		.byte	0x5
+ 188 005d 00000000 		.4byte	.LASF6
+ 189 0061 02       		.uleb128 0x2
+ 190 0062 08       		.byte	0x8
+ 191 0063 07       		.byte	0x7
+ 192 0064 52000000 		.4byte	.LASF7
+ 193 0068 04       		.uleb128 0x4
+ 194 0069 04       		.byte	0x4
+ 195 006a 05       		.byte	0x5
+ 196 006b 696E7400 		.ascii	"int\000"
+ 197 006f 02       		.uleb128 0x2
+ 198 0070 04       		.byte	0x4
+ 199 0071 07       		.byte	0x7
+ 200 0072 21000000 		.4byte	.LASF8
+ 201 0076 03       		.uleb128 0x3
+ 202 0077 C9010000 		.4byte	.LASF10
+ 203 007b 03       		.byte	0x3
+ 204 007c 2C       		.byte	0x2c
+ 205 007d 41000000 		.4byte	0x41
+ 206 0081 05       		.uleb128 0x5
+ 207 0082 3A000000 		.4byte	.LASF11
+ 208 0086 04       		.byte	0x4
+ 209 0087 9201     		.2byte	0x192
+ 210 0089 2C000000 		.4byte	0x2c
+ 211 008d 02       		.uleb128 0x2
+ 212 008e 04       		.byte	0x4
+ 213 008f 04       		.byte	0x4
+ 214 0090 B0010000 		.4byte	.LASF12
+ 215 0094 02       		.uleb128 0x2
+ 216 0095 08       		.byte	0x8
+ 217 0096 04       		.byte	0x4
+ 218 0097 1F010000 		.4byte	.LASF13
+ 219 009b 02       		.uleb128 0x2
+ 220 009c 01       		.byte	0x1
+ 221 009d 08       		.byte	0x8
+ 222 009e 11010000 		.4byte	.LASF14
+ 223 00a2 02       		.uleb128 0x2
+ 224 00a3 08       		.byte	0x8
+ 225 00a4 04       		.byte	0x4
+ 226 00a5 91010000 		.4byte	.LASF15
+ 227 00a9 02       		.uleb128 0x2
+ 228 00aa 04       		.byte	0x4
+ 229 00ab 07       		.byte	0x7
+ 230 00ac D1010000 		.4byte	.LASF16
+ 231 00b0 06       		.uleb128 0x6
+ 232 00b1 9D010000 		.4byte	.LASF24
+ 233 00b5 01       		.byte	0x1
+ 234 00b6 13       		.byte	0x13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 6
+
+
+ 235 00b7 00000000 		.4byte	.LFB64
+ 236 00bb 2C000000 		.4byte	.LFE64-.LFB64
+ 237 00bf 01       		.uleb128 0x1
+ 238 00c0 9C       		.byte	0x9c
+ 239 00c1 E2000000 		.4byte	0xe2
+ 240 00c5 07       		.uleb128 0x7
+ 241 00c6 C0010000 		.4byte	.LASF17
+ 242 00ca 01       		.byte	0x1
+ 243 00cb 13       		.byte	0x13
+ 244 00cc 68000000 		.4byte	0x68
+ 245 00d0 02       		.uleb128 0x2
+ 246 00d1 91       		.byte	0x91
+ 247 00d2 74       		.sleb128 -12
+ 248 00d3 07       		.uleb128 0x7
+ 249 00d4 72010000 		.4byte	.LASF18
+ 250 00d8 01       		.byte	0x1
+ 251 00d9 13       		.byte	0x13
+ 252 00da 68000000 		.4byte	0x68
+ 253 00de 02       		.uleb128 0x2
+ 254 00df 91       		.byte	0x91
+ 255 00e0 70       		.sleb128 -16
+ 256 00e1 00       		.byte	0
+ 257 00e2 08       		.uleb128 0x8
+ 258 00e3 35000000 		.4byte	.LASF25
+ 259 00e7 01       		.byte	0x1
+ 260 00e8 1C       		.byte	0x1c
+ 261 00e9 68000000 		.4byte	0x68
+ 262 00ed 00000000 		.4byte	.LFB65
+ 263 00f1 44000000 		.4byte	.LFE65-.LFB65
+ 264 00f5 01       		.uleb128 0x1
+ 265 00f6 9C       		.byte	0x9c
+ 266 00f7 09       		.uleb128 0x9
+ 267 00f8 78010000 		.4byte	.LASF19
+ 268 00fc 05       		.byte	0x5
+ 269 00fd 1207     		.2byte	0x712
+ 270 00ff 03010000 		.4byte	0x103
+ 271 0103 0A       		.uleb128 0xa
+ 272 0104 76000000 		.4byte	0x76
+ 273 0108 0B       		.uleb128 0xb
+ 274 0109 69000000 		.4byte	.LASF20
+ 275 010d 01       		.byte	0x1
+ 276 010e 11       		.byte	0x11
+ 277 010f 81000000 		.4byte	0x81
+ 278 0113 05       		.uleb128 0x5
+ 279 0114 03       		.byte	0x3
+ 280 0115 00000000 		.4byte	errorStatus
+ 281 0119 00       		.byte	0
+ 282              		.section	.debug_abbrev,"",%progbits
+ 283              	.Ldebug_abbrev0:
+ 284 0000 01       		.uleb128 0x1
+ 285 0001 11       		.uleb128 0x11
+ 286 0002 01       		.byte	0x1
+ 287 0003 25       		.uleb128 0x25
+ 288 0004 0E       		.uleb128 0xe
+ 289 0005 13       		.uleb128 0x13
+ 290 0006 0B       		.uleb128 0xb
+ 291 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 7
+
+
+ 292 0008 0E       		.uleb128 0xe
+ 293 0009 1B       		.uleb128 0x1b
+ 294 000a 0E       		.uleb128 0xe
+ 295 000b 55       		.uleb128 0x55
+ 296 000c 17       		.uleb128 0x17
+ 297 000d 11       		.uleb128 0x11
+ 298 000e 01       		.uleb128 0x1
+ 299 000f 10       		.uleb128 0x10
+ 300 0010 17       		.uleb128 0x17
+ 301 0011 00       		.byte	0
+ 302 0012 00       		.byte	0
+ 303 0013 02       		.uleb128 0x2
+ 304 0014 24       		.uleb128 0x24
+ 305 0015 00       		.byte	0
+ 306 0016 0B       		.uleb128 0xb
+ 307 0017 0B       		.uleb128 0xb
+ 308 0018 3E       		.uleb128 0x3e
+ 309 0019 0B       		.uleb128 0xb
+ 310 001a 03       		.uleb128 0x3
+ 311 001b 0E       		.uleb128 0xe
+ 312 001c 00       		.byte	0
+ 313 001d 00       		.byte	0
+ 314 001e 03       		.uleb128 0x3
+ 315 001f 16       		.uleb128 0x16
+ 316 0020 00       		.byte	0
+ 317 0021 03       		.uleb128 0x3
+ 318 0022 0E       		.uleb128 0xe
+ 319 0023 3A       		.uleb128 0x3a
+ 320 0024 0B       		.uleb128 0xb
+ 321 0025 3B       		.uleb128 0x3b
+ 322 0026 0B       		.uleb128 0xb
+ 323 0027 49       		.uleb128 0x49
+ 324 0028 13       		.uleb128 0x13
+ 325 0029 00       		.byte	0
+ 326 002a 00       		.byte	0
+ 327 002b 04       		.uleb128 0x4
+ 328 002c 24       		.uleb128 0x24
+ 329 002d 00       		.byte	0
+ 330 002e 0B       		.uleb128 0xb
+ 331 002f 0B       		.uleb128 0xb
+ 332 0030 3E       		.uleb128 0x3e
+ 333 0031 0B       		.uleb128 0xb
+ 334 0032 03       		.uleb128 0x3
+ 335 0033 08       		.uleb128 0x8
+ 336 0034 00       		.byte	0
+ 337 0035 00       		.byte	0
+ 338 0036 05       		.uleb128 0x5
+ 339 0037 16       		.uleb128 0x16
+ 340 0038 00       		.byte	0
+ 341 0039 03       		.uleb128 0x3
+ 342 003a 0E       		.uleb128 0xe
+ 343 003b 3A       		.uleb128 0x3a
+ 344 003c 0B       		.uleb128 0xb
+ 345 003d 3B       		.uleb128 0x3b
+ 346 003e 05       		.uleb128 0x5
+ 347 003f 49       		.uleb128 0x49
+ 348 0040 13       		.uleb128 0x13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 8
+
+
+ 349 0041 00       		.byte	0
+ 350 0042 00       		.byte	0
+ 351 0043 06       		.uleb128 0x6
+ 352 0044 2E       		.uleb128 0x2e
+ 353 0045 01       		.byte	0x1
+ 354 0046 3F       		.uleb128 0x3f
+ 355 0047 19       		.uleb128 0x19
+ 356 0048 03       		.uleb128 0x3
+ 357 0049 0E       		.uleb128 0xe
+ 358 004a 3A       		.uleb128 0x3a
+ 359 004b 0B       		.uleb128 0xb
+ 360 004c 3B       		.uleb128 0x3b
+ 361 004d 0B       		.uleb128 0xb
+ 362 004e 27       		.uleb128 0x27
+ 363 004f 19       		.uleb128 0x19
+ 364 0050 11       		.uleb128 0x11
+ 365 0051 01       		.uleb128 0x1
+ 366 0052 12       		.uleb128 0x12
+ 367 0053 06       		.uleb128 0x6
+ 368 0054 40       		.uleb128 0x40
+ 369 0055 18       		.uleb128 0x18
+ 370 0056 9642     		.uleb128 0x2116
+ 371 0058 19       		.uleb128 0x19
+ 372 0059 01       		.uleb128 0x1
+ 373 005a 13       		.uleb128 0x13
+ 374 005b 00       		.byte	0
+ 375 005c 00       		.byte	0
+ 376 005d 07       		.uleb128 0x7
+ 377 005e 05       		.uleb128 0x5
+ 378 005f 00       		.byte	0
+ 379 0060 03       		.uleb128 0x3
+ 380 0061 0E       		.uleb128 0xe
+ 381 0062 3A       		.uleb128 0x3a
+ 382 0063 0B       		.uleb128 0xb
+ 383 0064 3B       		.uleb128 0x3b
+ 384 0065 0B       		.uleb128 0xb
+ 385 0066 49       		.uleb128 0x49
+ 386 0067 13       		.uleb128 0x13
+ 387 0068 02       		.uleb128 0x2
+ 388 0069 18       		.uleb128 0x18
+ 389 006a 00       		.byte	0
+ 390 006b 00       		.byte	0
+ 391 006c 08       		.uleb128 0x8
+ 392 006d 2E       		.uleb128 0x2e
+ 393 006e 00       		.byte	0
+ 394 006f 3F       		.uleb128 0x3f
+ 395 0070 19       		.uleb128 0x19
+ 396 0071 03       		.uleb128 0x3
+ 397 0072 0E       		.uleb128 0xe
+ 398 0073 3A       		.uleb128 0x3a
+ 399 0074 0B       		.uleb128 0xb
+ 400 0075 3B       		.uleb128 0x3b
+ 401 0076 0B       		.uleb128 0xb
+ 402 0077 49       		.uleb128 0x49
+ 403 0078 13       		.uleb128 0x13
+ 404 0079 11       		.uleb128 0x11
+ 405 007a 01       		.uleb128 0x1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 9
+
+
+ 406 007b 12       		.uleb128 0x12
+ 407 007c 06       		.uleb128 0x6
+ 408 007d 40       		.uleb128 0x40
+ 409 007e 18       		.uleb128 0x18
+ 410 007f 9642     		.uleb128 0x2116
+ 411 0081 19       		.uleb128 0x19
+ 412 0082 00       		.byte	0
+ 413 0083 00       		.byte	0
+ 414 0084 09       		.uleb128 0x9
+ 415 0085 34       		.uleb128 0x34
+ 416 0086 00       		.byte	0
+ 417 0087 03       		.uleb128 0x3
+ 418 0088 0E       		.uleb128 0xe
+ 419 0089 3A       		.uleb128 0x3a
+ 420 008a 0B       		.uleb128 0xb
+ 421 008b 3B       		.uleb128 0x3b
+ 422 008c 05       		.uleb128 0x5
+ 423 008d 49       		.uleb128 0x49
+ 424 008e 13       		.uleb128 0x13
+ 425 008f 3F       		.uleb128 0x3f
+ 426 0090 19       		.uleb128 0x19
+ 427 0091 3C       		.uleb128 0x3c
+ 428 0092 19       		.uleb128 0x19
+ 429 0093 00       		.byte	0
+ 430 0094 00       		.byte	0
+ 431 0095 0A       		.uleb128 0xa
+ 432 0096 35       		.uleb128 0x35
+ 433 0097 00       		.byte	0
+ 434 0098 49       		.uleb128 0x49
+ 435 0099 13       		.uleb128 0x13
+ 436 009a 00       		.byte	0
+ 437 009b 00       		.byte	0
+ 438 009c 0B       		.uleb128 0xb
+ 439 009d 34       		.uleb128 0x34
+ 440 009e 00       		.byte	0
+ 441 009f 03       		.uleb128 0x3
+ 442 00a0 0E       		.uleb128 0xe
+ 443 00a1 3A       		.uleb128 0x3a
+ 444 00a2 0B       		.uleb128 0xb
+ 445 00a3 3B       		.uleb128 0x3b
+ 446 00a4 0B       		.uleb128 0xb
+ 447 00a5 49       		.uleb128 0x49
+ 448 00a6 13       		.uleb128 0x13
+ 449 00a7 3F       		.uleb128 0x3f
+ 450 00a8 19       		.uleb128 0x19
+ 451 00a9 02       		.uleb128 0x2
+ 452 00aa 18       		.uleb128 0x18
+ 453 00ab 00       		.byte	0
+ 454 00ac 00       		.byte	0
+ 455 00ad 00       		.byte	0
+ 456              		.section	.debug_aranges,"",%progbits
+ 457 0000 24000000 		.4byte	0x24
+ 458 0004 0200     		.2byte	0x2
+ 459 0006 00000000 		.4byte	.Ldebug_info0
+ 460 000a 04       		.byte	0x4
+ 461 000b 00       		.byte	0
+ 462 000c 0000     		.2byte	0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 10
+
+
+ 463 000e 0000     		.2byte	0
+ 464 0010 00000000 		.4byte	.LFB64
+ 465 0014 2C000000 		.4byte	.LFE64-.LFB64
+ 466 0018 00000000 		.4byte	.LFB65
+ 467 001c 44000000 		.4byte	.LFE65-.LFB65
+ 468 0020 00000000 		.4byte	0
+ 469 0024 00000000 		.4byte	0
+ 470              		.section	.debug_ranges,"",%progbits
+ 471              	.Ldebug_ranges0:
+ 472 0000 00000000 		.4byte	.LFB64
+ 473 0004 2C000000 		.4byte	.LFE64
+ 474 0008 00000000 		.4byte	.LFB65
+ 475 000c 44000000 		.4byte	.LFE65
+ 476 0010 00000000 		.4byte	0
+ 477 0014 00000000 		.4byte	0
+ 478              		.section	.debug_line,"",%progbits
+ 479              	.Ldebug_line0:
+ 480 0000 9B010000 		.section	.debug_str,"MS",%progbits,1
+ 480      02004C01 
+ 480      00000201 
+ 480      FB0E0D00 
+ 480      01010101 
+ 481              	.LASF6:
+ 482 0000 6C6F6E67 		.ascii	"long long int\000"
+ 482      206C6F6E 
+ 482      6720696E 
+ 482      7400
+ 483              	.LASF3:
+ 484 000e 73686F72 		.ascii	"short unsigned int\000"
+ 484      7420756E 
+ 484      7369676E 
+ 484      65642069 
+ 484      6E7400
+ 485              	.LASF8:
+ 486 0021 756E7369 		.ascii	"unsigned int\000"
+ 486      676E6564 
+ 486      20696E74 
+ 486      00
+ 487              	.LASF22:
+ 488 002e 6D61696E 		.ascii	"main.c\000"
+ 488      2E6300
+ 489              	.LASF25:
+ 490 0035 6D61696E 		.ascii	"main\000"
+ 490      00
+ 491              	.LASF11:
+ 492 003a 75696E74 		.ascii	"uint8\000"
+ 492      3800
+ 493              	.LASF5:
+ 494 0040 6C6F6E67 		.ascii	"long unsigned int\000"
+ 494      20756E73 
+ 494      69676E65 
+ 494      6420696E 
+ 494      7400
+ 495              	.LASF7:
+ 496 0052 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 496      206C6F6E 
+ 496      6720756E 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 11
+
+
+ 496      7369676E 
+ 496      65642069 
+ 497              	.LASF20:
+ 498 0069 6572726F 		.ascii	"errorStatus\000"
+ 498      72537461 
+ 498      74757300 
+ 499              	.LASF21:
+ 500 0075 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 500      43313120 
+ 500      352E342E 
+ 500      31203230 
+ 500      31363036 
+ 501 00a8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 501      20726576 
+ 501      6973696F 
+ 501      6E203233 
+ 501      37373135 
+ 502 00db 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 502      66756E63 
+ 502      74696F6E 
+ 502      2D736563 
+ 502      74696F6E 
+ 503              	.LASF1:
+ 504 0103 756E7369 		.ascii	"unsigned char\000"
+ 504      676E6564 
+ 504      20636861 
+ 504      7200
+ 505              	.LASF14:
+ 506 0111 63686172 		.ascii	"char\000"
+ 506      00
+ 507              	.LASF4:
+ 508 0116 6C6F6E67 		.ascii	"long int\000"
+ 508      20696E74 
+ 508      00
+ 509              	.LASF13:
+ 510 011f 646F7562 		.ascii	"double\000"
+ 510      6C6500
+ 511              	.LASF23:
+ 512 0126 433A5C55 		.ascii	"C:\\Users\\Andrew\\Documents\\GitHub\\Hydraulic-Mim"
+ 512      73657273 
+ 512      5C416E64 
+ 512      7265775C 
+ 512      446F6375 
+ 513 0154 69632D41 		.ascii	"ic-Arm\\PSOC_zero_servos.cydsn\000"
+ 513      726D5C50 
+ 513      534F435F 
+ 513      7A65726F 
+ 513      5F736572 
+ 514              	.LASF18:
+ 515 0172 70756C73 		.ascii	"pulse\000"
+ 515      6500
+ 516              	.LASF19:
+ 517 0178 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 517      52784275 
+ 517      66666572 
+ 517      00
+ 518              	.LASF0:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cc2BgMu3.s 			page 12
+
+
+ 519 0185 7369676E 		.ascii	"signed char\000"
+ 519      65642063 
+ 519      68617200 
+ 520              	.LASF15:
+ 521 0191 6C6F6E67 		.ascii	"long double\000"
+ 521      20646F75 
+ 521      626C6500 
+ 522              	.LASF24:
+ 523 019d 77726974 		.ascii	"writePWM\000"
+ 523      6550574D 
+ 523      00
+ 524              	.LASF9:
+ 525 01a6 5F5F696E 		.ascii	"__int32_t\000"
+ 525      7433325F 
+ 525      7400
+ 526              	.LASF12:
+ 527 01b0 666C6F61 		.ascii	"float\000"
+ 527      7400
+ 528              	.LASF2:
+ 529 01b6 73686F72 		.ascii	"short int\000"
+ 529      7420696E 
+ 529      7400
+ 530              	.LASF17:
+ 531 01c0 63796C69 		.ascii	"cylinder\000"
+ 531      6E646572 
+ 531      00
+ 532              	.LASF10:
+ 533 01c9 696E7433 		.ascii	"int32_t\000"
+ 533      325F7400 
+ 534              	.LASF16:
+ 535 01d1 73697A65 		.ascii	"sizetype\000"
+ 535      74797065 
+ 535      00
+ 536              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

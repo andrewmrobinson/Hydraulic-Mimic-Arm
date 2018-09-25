@@ -1,0 +1,8 @@
+# PSOC_zero_servos
+# 2018-09-20 02:48:30Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+set_io "pwm_pin_0(0)" iocell 1 3

@@ -1,0 +1,6 @@
+C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_zero_servos.cydsn\PSOC_zero_servos.cyprj|975b0cce-afa5-4576-96b2-c55ba9d73edd
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|40f44f1b-30b7-4d99-9f39-8f55df544507
+C:\Users\Andrew\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|b53a33c6-dd4a-4bd4-9afa-3889d4745a2e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|aa0ddcae-c545-4f5f-a6d6-f6e895ad3765
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|8642758c-2318-42b0-96dc-b2cd94621436
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ffb86b9b-9a48-4872-9e3e-96f290dcb42a

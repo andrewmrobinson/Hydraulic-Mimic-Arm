@@ -1,5 +1,5 @@
 -- Project:   PSOC_arm_project
--- Generated: 09/14/2018 18:52:42
+-- Generated: 09/21/2018 17:06:07
 -- PSoC Creator  4.2
 
 ENTITY PSOC_arm_project IS
@@ -273,7 +273,7 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     SIGNAL \PWM_3:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
     SIGNAL \PWM_3:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
     ATTRIBUTE lib_model OF pwm_pin_1(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF pwm_pin_1(0) : LABEL IS "P1[7]";
+    ATTRIBUTE Location OF pwm_pin_1(0) : LABEL IS "P1[3]";
     ATTRIBUTE lib_model OF adc_pin_3(0) : LABEL IS "iocell2";
     ATTRIBUTE Location OF adc_pin_3(0) : LABEL IS "P2[7]";
     ATTRIBUTE lib_model OF adc_pin_2(0) : LABEL IS "iocell3";
@@ -283,7 +283,7 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE lib_model OF Tx(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF Tx(0) : LABEL IS "P12[7]";
     ATTRIBUTE lib_model OF pwm_pin_0(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF pwm_pin_0(0) : LABEL IS "P1[3]";
+    ATTRIBUTE Location OF pwm_pin_0(0) : LABEL IS "P1[7]";
     ATTRIBUTE lib_model OF \ADC_0:Bypass(0)\ : LABEL IS "iocell7";
     ATTRIBUTE Location OF \ADC_0:Bypass(0)\ : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF adc_pin_0(0) : LABEL IS "iocell8";

@@ -2,7 +2,7 @@
 --	Conversion of PSOC_arm_project.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Sep 14 18:52:40 2018
+--	Fri Sep 21 17:06:05 2018
 --
 
 USE cypress.cypress.all;
