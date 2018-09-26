@@ -287,7 +287,7 @@ int main()
     
     for(;;)
     {
-        for(;;){
+        /*for(;;){
             for(int i = 0;i<4;i++){
                 writePWM(i,499);
             }
@@ -300,11 +300,11 @@ int main()
                 writePWM(i,0);
             }
                 CyDelay(1000);
-        }
+        }*/
         
         Timer_1_WriteCounter(65535);
         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-        sprintf(sendValue,"%08d\t%08.2d\t%08d\t%08.2d\n",adcValue[0],adcValue[1],adcValue[2],adcValue[3]);
+        sprintf(sendValue,"%08d\t%08.2d\t%08d\t%08.2d",adcValue[0],adcValue[1],adcValue[2],adcValue[3]);
         
         UART_PutString(sendValue);
         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
