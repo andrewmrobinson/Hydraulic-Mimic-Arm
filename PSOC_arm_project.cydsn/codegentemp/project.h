@@ -48,6 +48,7 @@
 #include "PWM_3.h"
 #include "pwm_pin_3_aliases.h"
 #include "pwm_pin_3.h"
+#include "EEPROM.h"
 #include "UART_IntClock.h"
 #include "ADC_0_IRQ.h"
 #include "ADC_0_theACLK.h"
