@@ -167,6 +167,8 @@ CY_ISR(RxIsr)
                         data_read_mode = 5;}
                     else if(rxData=='c'){
                         data_read_mode = 6;}
+                    else if(rxData=='w'){
+                        data_read_mode = 7;}
                 break;
                 case 2: //x
                     if(rxData != '}'){
@@ -235,6 +237,12 @@ CY_ISR(RxIsr)
                         data_read_mode = 0;
                     }
                   
+                break;
+                case 7: //w - id request
+                    sprintf(sendValue,"%d",psoc_id);
+                    UART_PutString(sendValue);
+                    temp[0] = '\0';
+                    data_read_mode = 0;
                 break;
             }
             
