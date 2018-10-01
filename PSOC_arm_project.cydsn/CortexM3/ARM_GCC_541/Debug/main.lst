@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
   17:main.c        **** /* Add an explicit reference to the floating point printf library to allow
   18:main.c        **** the usage of floating point conversion specifier */
   19:main.c        **** #if defined (__GNUC__)
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 2
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 2
 
 
   20:main.c        ****     asm (".global _printf_float");
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
   81 0042 9BB2     		uxth	r3, r3
   82 0044 1846     		mov	r0, r3
   83 0046 FFF7FEFF 		bl	PWM_1_WriteCompare
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 3
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 3
 
 
   32:main.c        ****                     break;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  127              		.loc 1 42 0
  128              		.cfi_startproc
  129              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 4
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 4
 
 
  130              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  179 0042 FB68     		ldr	r3, [r7, #12]
   48:main.c        **** }
  180              		.loc 1 48 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 5
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 5
 
 
  181 0044 1846     		mov	r0, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  234      00000000 
  234      00000000 
  234      00000000 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 6
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 6
 
 
  234      00000000 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  284              		.align	2
  285              		.global	adc_update
  286              		.thumb
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 7
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 7
 
 
  287              		.thumb_func
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  303              	.LBB2:
   87:main.c        ****     for(int c = 0;c<CYL_NO;c++){
  304              		.loc 1 87 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 8
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 8
 
 
  305 0006 0023     		movs	r3, #0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  350 0050 FFF7FEFF 		bl	ADC_0_GetResult16
  351 0054 0346     		mov	r3, r0
  352 0056 98B2     		uxth	r0, r3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 9
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 9
 
 
  353 0058 4049     		ldr	r1, .L29
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  401 00b0 2A49     		ldr	r1, .L29
  402 00b2 7A69     		ldr	r2, [r7, #20]
  403 00b4 1346     		mov	r3, r2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 10
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 10
 
 
  404 00b6 DB00     		lsls	r3, r3, #3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  108:main.c        ****         			tempArray[i] = tempArray[j];            //replacing value
  449              		.loc 1 108 0
  450 0102 174A     		ldr	r2, .L29+4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 11
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 11
 
 
  451 0104 7B68     		ldr	r3, [r7, #4]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  494              		.loc 1 87 0 is_stmt 0 discriminator 1
  495 0148 7B69     		ldr	r3, [r7, #20]
  496 014a 032B     		cmp	r3, #3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 12
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 12
 
 
  497 014c 7FF75EAF 		ble	.L28
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  124:main.c        ****     
  125:main.c        ****     do
  126:main.c        ****     {
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 13
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 13
 
 
  127:main.c        ****         /* Read receiver status register */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  578 004a CA54     		strb	r2, [r1, r3]
  143:main.c        ****             tt++;
  579              		.loc 1 143 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 14
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 14
 
 
  580 004c 8C4B     		ldr	r3, .L69+12
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  629 0094 062B     		cmp	r3, #6
  630 0096 00F22F81 		bhi	.L33
  631 009a 01A2     		adr	r2, .L40
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 15
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 15
 
 
  632 009c 52F823F0 		ldr	pc, [r2, r3, lsl #2]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  674              		.loc 1 158 0
  675 00e6 6A4B     		ldr	r3, .L69+28
  676 00e8 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 16
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 16
 
 
  677 00ea 0133     		adds	r3, r3, #1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  713              		.loc 1 172 0
  714 011a ECE0     		b	.L68
  715              	.L53:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 17
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 17
 
 
  168:main.c        ****                         data_read_mode = 5;}
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  185:main.c        ****                         temp[0] = '\0';
  186:main.c        ****                         data_read_mode = 0;
  187:main.c        ****                         
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 18
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 18
 
 
  188:main.c        ****                     }
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  798              		.loc 1 186 0
  799 01a6 3A4B     		ldr	r3, .L69+28
  800 01a8 0022     		movs	r2, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 19
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 19
 
 
  801 01aa 1A60     		str	r2, [r3]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  839 01e6 1A70     		strb	r2, [r3]
  200:main.c        ****                     }
  840              		.loc 1 200 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 20
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 20
 
 
  841 01e8 294B     		ldr	r3, .L69+28
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  880 0226 0022     		movs	r2, #0
  881 0228 1A70     		strb	r2, [r3]
  213:main.c        ****                     }
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 21
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 21
 
 
  882              		.loc 1 213 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  921 0266 0B4B     		ldr	r3, .L69+32
  922 0268 0022     		movs	r2, #0
  923 026a 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 22
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 22
 
 
  225:main.c        ****                     }
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  240:main.c        ****                 break;
  965              		.loc 1 240 0
  966 02ca 15E0     		b	.L33
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 23
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 23
 
 
  967              	.L64:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1005 0304 00BF     		nop
  1006 0306 0C37     		adds	r7, r7, #12
  1007              		.cfi_def_cfa_offset 12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 24
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 24
 
 
  1008 0308 BD46     		mov	sp, r7
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1044      6F776572 
  1044      204F6666 
  1044      7365743A 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 25
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 25
 
 
  1045 00ab 20414443 		.ascii	" ADC Diff: %d\012\000"
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1084              		.loc 1 258 0
  1085 001c 784B     		ldr	r3, .L103+8
  1086 001e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 26
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 26
 
 
  1087 0020 102B     		cmp	r3, #16
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1132 0068 664B     		ldr	r3, .L103+12
  1133 006a 3C22     		movs	r2, #60
  1134 006c 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 27
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 27
 
 
  1135 006e 654B     		ldr	r3, .L103+12
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1178 00b6 FB6B     		ldr	r3, [r7, #60]
  1179 00b8 0021     		movs	r1, #0
  1180 00ba 42F82310 		str	r1, [r2, r3, lsl #2]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 28
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 28
 
 
  279:main.c        ****         pulse_temp[g]   = 0;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  274:main.c        ****         new_pos_set[g]  = 0;
  1228              		.loc 1 274 0 is_stmt 0 discriminator 1
  1229 0128 FB6B     		ldr	r3, [r7, #60]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 29
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 29
 
 
  1230 012a 032B     		cmp	r3, #3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1261              		.thumb
  1262              		.syntax unified
  1263 015c 26A4     		adr	r4, .L103
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 30
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 30
 
 
  1264 015e D4E90034 		ldrd	r3, [r4]
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1293 019e 4FF6FF70 		movw	r0, #65535
  1294 01a2 FFF7FEFF 		bl	Timer_1_WriteCounter
  333:main.c        ****         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 31
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 31
 
 
  334:main.c        ****         sprintf(sendValue,"%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t",adcValue[0],adcValue[1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1341 0204 00000000 		.word	offsets
  1342 0208 00000000 		.word	new_pos_set
  1343 020c 00000000 		.word	new_pos
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 32
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 32
 
 
  1344 0210 00000000 		.word	pos
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1392 028c D200     		lsls	r2, r2, #3
  1393 028e 0A44     		add	r2, r2, r1
  1394 0290 C2E90034 		strd	r3, [r2]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 33
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 33
 
 
  347:main.c        ****             der[cyl] = err[cyl] - prev_err[cyl];
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1446 0304 DB00     		lsls	r3, r3, #3
  1447 0306 1344     		add	r3, r3, r2
  1448 0308 D3E90001 		ldrd	r0, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 34
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 34
 
 
  1449 030c 68A3     		adr	r3, .L105
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1498 0378 0C46     		mov	r4, r1
  1499 037a 1D46     		mov	r5, r3
  1500 037c 2646     		mov	r6, r4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 35
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 35
 
 
  1501 037e 584B     		ldr	r3, .L105+48
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  356:main.c        ****             pulse[cyl] = pulseCheck(pulse_temp[cyl],offsets[cyl][1],offsets[cyl][0]);
  1554              		.loc 1 356 0 discriminator 2
  1555 03fc 394A     		ldr	r2, .L105+52
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 36
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 36
 
 
  1556 03fe FB6A     		ldr	r3, [r7, #44]
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1600              		.loc 1 364 0 is_stmt 1
  1601 045a 254B     		ldr	r3, .L105+64
  1602 045c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 37
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 37
 
 
  1603 045e 002B     		cmp	r3, #0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1644              		.loc 1 375 0 discriminator 3
  1645 049a 3B69     		ldr	r3, [r7, #16]
  1646 049c 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 38
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 38
 
 
  1647 049e 3B61     		str	r3, [r7, #16]
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1692 0508 FFF7FEFF 		bl	writePWM
  385:main.c        ****                     CyDelay(200);
  1693              		.loc 1 385 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 39
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 39
 
 
  1694 050c C820     		movs	r0, #200
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1738 0558 FFF7FEFF 		bl	writePWM
  396:main.c        ****                     CyDelay(500);
  1739              		.loc 1 396 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 40
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 40
 
 
  1740 055c 4FF4FA70 		mov	r0, #500
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  408:main.c        ****                         lower_check_no = 0;
  1783              		.loc 1 408 0
  1784 05aa 0023     		movs	r3, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 41
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 41
 
 
  1785 05ac BB61     		str	r3, [r7, #24]
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1826              		.loc 1 380 0 is_stmt 0 discriminator 1
  1827 05ee 7B6A     		ldr	r3, [r7, #36]
  1828 05f0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 42
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 42
 
 
  1829 05f2 3FF47FAF 		beq	.L97
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1869 0648 D3E90023 		ldrd	r2, [r3]
  1870 064c FFF7FEFF 		bl	__aeabi_ddiv
  1871 0650 0346     		mov	r3, r0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 43
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 43
 
 
  1872 0652 0C46     		mov	r4, r1
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1919              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  1920              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  1921              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 44
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 44
 
 
  1922              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
@@ -2591,19 +2591,19 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1929 000b 01       		.uleb128 0x1
  1930 000c 77000000 		.4byte	.LASF60
  1931 0010 0C       		.byte	0xc
- 1932 0011 94020000 		.4byte	.LASF61
- 1933 0015 22020000 		.4byte	.LASF62
+ 1932 0011 93020000 		.4byte	.LASF61
+ 1933 0015 2E010000 		.4byte	.LASF62
  1934 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1935 001d 00000000 		.4byte	0
  1936 0021 00000000 		.4byte	.Ldebug_line0
  1937 0025 02       		.uleb128 0x2
  1938 0026 01       		.byte	0x1
  1939 0027 06       		.byte	0x6
- 1940 0028 4F010000 		.4byte	.LASF0
+ 1940 0028 9A010000 		.4byte	.LASF0
  1941 002c 02       		.uleb128 0x2
  1942 002d 01       		.byte	0x1
  1943 002e 08       		.byte	0x8
- 1944 002f A0010000 		.4byte	.LASF1
+ 1944 002f EB010000 		.4byte	.LASF1
  1945 0033 02       		.uleb128 0x2
  1946 0034 02       		.byte	0x2
  1947 0035 05       		.byte	0x5
@@ -2611,20 +2611,20 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1949 003a 02       		.uleb128 0x2
  1950 003b 02       		.byte	0x2
  1951 003c 07       		.byte	0x7
- 1952 003d 0F020000 		.4byte	.LASF3
+ 1952 003d 5A020000 		.4byte	.LASF3
  1953 0041 03       		.uleb128 0x3
- 1954 0042 CD020000 		.4byte	.LASF9
+ 1954 0042 CC020000 		.4byte	.LASF9
  1955 0046 02       		.byte	0x2
  1956 0047 3F       		.byte	0x3f
  1957 0048 4C000000 		.4byte	0x4c
  1958 004c 02       		.uleb128 0x2
  1959 004d 04       		.byte	0x4
  1960 004e 05       		.byte	0x5
- 1961 004f 7F010000 		.4byte	.LASF4
+ 1961 004f CA010000 		.4byte	.LASF4
  1962 0053 02       		.uleb128 0x2
  1963 0054 04       		.byte	0x4
  1964 0055 07       		.byte	0x7
- 1965 0056 A0020000 		.4byte	.LASF5
+ 1965 0056 9F020000 		.4byte	.LASF5
  1966 005a 02       		.uleb128 0x2
  1967 005b 08       		.byte	0x8
  1968 005c 05       		.byte	0x5
@@ -2632,25 +2632,25 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1970 0061 02       		.uleb128 0x2
  1971 0062 08       		.byte	0x8
  1972 0063 07       		.byte	0x7
- 1973 0064 E0010000 		.4byte	.LASF7
+ 1973 0064 2B020000 		.4byte	.LASF7
  1974 0068 04       		.uleb128 0x4
  1975 0069 04       		.byte	0x4
  1976 006a 05       		.byte	0x5
  1977 006b 696E7400 		.ascii	"int\000"
  1978 006f 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 45
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 45
 
 
  1979 0070 04       		.byte	0x4
  1980 0071 07       		.byte	0x7
- 1981 0072 F7010000 		.4byte	.LASF8
+ 1981 0072 42020000 		.4byte	.LASF8
  1982 0076 03       		.uleb128 0x3
- 1983 0077 7D020000 		.4byte	.LASF10
+ 1983 0077 7C020000 		.4byte	.LASF10
  1984 007b 03       		.byte	0x3
  1985 007c 2C       		.byte	0x2c
  1986 007d 41000000 		.4byte	0x41
  1987 0081 05       		.uleb128 0x5
- 1988 0082 34010000 		.4byte	.LASF11
+ 1988 0082 7F010000 		.4byte	.LASF11
  1989 0086 04       		.byte	0x4
  1990 0087 9201     		.2byte	0x192
  1991 0089 2C000000 		.4byte	0x2c
@@ -2662,17 +2662,17 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  1997 0099 02       		.uleb128 0x2
  1998 009a 04       		.byte	0x4
  1999 009b 04       		.byte	0x4
- 2000 009c 5B010000 		.4byte	.LASF13
+ 2000 009c A6010000 		.4byte	.LASF13
  2001 00a0 02       		.uleb128 0x2
  2002 00a1 08       		.byte	0x8
  2003 00a2 04       		.byte	0x4
- 2004 00a3 2F030000 		.4byte	.LASF14
+ 2004 00a3 2E030000 		.4byte	.LASF14
  2005 00a7 02       		.uleb128 0x2
  2006 00a8 01       		.byte	0x1
  2007 00a9 08       		.byte	0x8
- 2008 00aa 6E020000 		.4byte	.LASF15
+ 2008 00aa 6D020000 		.4byte	.LASF15
  2009 00ae 05       		.uleb128 0x5
- 2010 00af 9B020000 		.4byte	.LASF16
+ 2010 00af 9A020000 		.4byte	.LASF16
  2011 00b3 04       		.byte	0x4
  2012 00b4 3C02     		.2byte	0x23c
  2013 00b6 BA000000 		.4byte	0xba
@@ -2687,7 +2687,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2022 00c8 07       		.byte	0x7
  2023 00c9 69000000 		.4byte	.LASF18
  2024 00cd 07       		.uleb128 0x7
- 2025 00ce 61010000 		.4byte	.LASF23
+ 2025 00ce AC010000 		.4byte	.LASF23
  2026 00d2 01       		.byte	0x1
  2027 00d3 19       		.byte	0x19
  2028 00d4 00000000 		.4byte	.LFB64
@@ -2696,9 +2696,9 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2031 00dd 9C       		.byte	0x9c
  2032 00de FF000000 		.4byte	0xff
  2033 00e2 08       		.uleb128 0x8
- 2034 00e3 3A010000 		.4byte	.LASF19
+ 2034 00e3 85010000 		.4byte	.LASF19
  2035 00e7 01       		.byte	0x1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 46
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 46
 
 
  2036 00e8 19       		.byte	0x19
@@ -2707,7 +2707,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2039 00ee 91       		.byte	0x91
  2040 00ef 74       		.sleb128 -12
  2041 00f0 08       		.uleb128 0x8
- 2042 00f1 2E010000 		.4byte	.LASF20
+ 2042 00f1 79010000 		.4byte	.LASF20
  2043 00f5 01       		.byte	0x1
  2044 00f6 19       		.byte	0x19
  2045 00f7 68000000 		.4byte	0x68
@@ -2716,7 +2716,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2048 00fd 70       		.sleb128 -16
  2049 00fe 00       		.byte	0
  2050 00ff 09       		.uleb128 0x9
- 2051 0100 E4020000 		.4byte	.LASF63
+ 2051 0100 E3020000 		.4byte	.LASF63
  2052 0104 01       		.byte	0x1
  2053 0105 2A       		.byte	0x2a
  2054 0106 68000000 		.4byte	0x68
@@ -2726,7 +2726,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2058 0113 9C       		.byte	0x9c
  2059 0114 43010000 		.4byte	0x143
  2060 0118 08       		.uleb128 0x8
- 2061 0119 2E010000 		.4byte	.LASF20
+ 2061 0119 79010000 		.4byte	.LASF20
  2062 011d 01       		.byte	0x1
  2063 011e 2A       		.byte	0x2a
  2064 011f 68000000 		.4byte	0x68
@@ -2734,7 +2734,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2066 0124 91       		.byte	0x91
  2067 0125 74       		.sleb128 -12
  2068 0126 08       		.uleb128 0x8
- 2069 0127 D7020000 		.4byte	.LASF21
+ 2069 0127 D6020000 		.4byte	.LASF21
  2070 012b 01       		.byte	0x1
  2071 012c 2A       		.byte	0x2a
  2072 012d 68000000 		.4byte	0x68
@@ -2751,14 +2751,14 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2083 0141 6C       		.sleb128 -20
  2084 0142 00       		.byte	0
  2085 0143 07       		.uleb128 0x7
- 2086 0144 FB020000 		.4byte	.LASF24
+ 2086 0144 FA020000 		.4byte	.LASF24
  2087 0148 01       		.byte	0x1
  2088 0149 56       		.byte	0x56
  2089 014a 00000000 		.4byte	.LFB66
  2090 014e 6C010000 		.4byte	.LFE66-.LFB66
  2091 0152 01       		.uleb128 0x1
  2092 0153 9C       		.byte	0x9c
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 47
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 47
 
 
  2093 0154 CF010000 		.4byte	0x1cf
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2147 01c2 01       		.byte	0x1
  2148 01c3 67       		.byte	0x67
  2149 01c4 68000000 		.4byte	0x68
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 48
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 48
 
 
  2150 01c8 02       		.uleb128 0x2
@@ -2829,7 +2829,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2155 01cd 00       		.byte	0
  2156 01ce 00       		.byte	0
  2157 01cf 07       		.uleb128 0x7
- 2158 01d0 09020000 		.4byte	.LASF25
+ 2158 01d0 54020000 		.4byte	.LASF25
  2159 01d4 01       		.byte	0x1
  2160 01d5 78       		.byte	0x78
  2161 01d6 00000000 		.4byte	.LFB67
@@ -2838,7 +2838,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2164 01df 9C       		.byte	0x9c
  2165 01e0 18020000 		.4byte	0x218
  2166 01e4 0D       		.uleb128 0xd
- 2167 01e5 C6010000 		.4byte	.LASF26
+ 2167 01e5 11020000 		.4byte	.LASF26
  2168 01e9 01       		.byte	0x1
  2169 01ea 7A       		.byte	0x7a
  2170 01eb 81000000 		.4byte	0x81
@@ -2846,7 +2846,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2172 01f0 91       		.byte	0x91
  2173 01f1 6B       		.sleb128 -21
  2174 01f2 0D       		.uleb128 0xd
- 2175 01f3 06030000 		.4byte	.LASF27
+ 2175 01f3 05030000 		.4byte	.LASF27
  2176 01f7 01       		.byte	0x1
  2177 01f8 7B       		.byte	0x7b
  2178 01f9 81000000 		.4byte	0x81
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2204 022d 35030000 		.4byte	0x335
  2205 0231 0F       		.uleb128 0xf
  2206 0232 647400   		.ascii	"dt\000"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 49
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 49
 
 
  2207 0235 01       		.byte	0x1
@@ -2888,7 +2888,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2211 023d 91       		.byte	0x91
  2212 023e 58       		.sleb128 -40
  2213 023f 10       		.uleb128 0x10
- 2214 0240 04020000 		.4byte	.LASF29
+ 2214 0240 4F020000 		.4byte	.LASF29
  2215 0244 01       		.byte	0x1
  2216 0245 3101     		.2byte	0x131
  2217 0247 A0000000 		.4byte	0xa0
@@ -2925,7 +2925,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2248 0288 64040000 		.4byte	.LBB10
  2249 028c B2010000 		.4byte	.LBE10-.LBB10
  2250 0290 10       		.uleb128 0x10
- 2251 0291 73020000 		.4byte	.LASF30
+ 2251 0291 72020000 		.4byte	.LASF30
  2252 0295 01       		.byte	0x1
  2253 0296 6E01     		.2byte	0x16e
  2254 0298 68000000 		.4byte	0x68
@@ -2933,18 +2933,18 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2256 029d 91       		.byte	0x91
  2257 029e B47F     		.sleb128 -76
  2258 02a0 10       		.uleb128 0x10
- 2259 02a1 4A030000 		.4byte	.LASF31
+ 2259 02a1 49030000 		.4byte	.LASF31
  2260 02a5 01       		.byte	0x1
  2261 02a6 6F01     		.2byte	0x16f
  2262 02a8 68000000 		.4byte	0x68
  2263 02ac 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 50
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 50
 
 
  2264 02ad 91       		.byte	0x91
  2265 02ae 50       		.sleb128 -48
  2266 02af 10       		.uleb128 0x10
- 2267 02b0 8F010000 		.4byte	.LASF32
+ 2267 02b0 DA010000 		.4byte	.LASF32
  2268 02b4 01       		.byte	0x1
  2269 02b5 7001     		.2byte	0x170
  2270 02b7 68000000 		.4byte	0x68
@@ -2952,7 +2952,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2272 02bc 91       		.byte	0x91
  2273 02bd 4C       		.sleb128 -52
  2274 02be 10       		.uleb128 0x10
- 2275 02bf 72010000 		.4byte	.LASF33
+ 2275 02bf BD010000 		.4byte	.LASF33
  2276 02c3 01       		.byte	0x1
  2277 02c4 7101     		.2byte	0x171
  2278 02c6 68000000 		.4byte	0x68
@@ -2960,7 +2960,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2280 02cb 91       		.byte	0x91
  2281 02cc 48       		.sleb128 -56
  2282 02cd 10       		.uleb128 0x10
- 2283 02ce B9010000 		.4byte	.LASF34
+ 2283 02ce 04020000 		.4byte	.LASF34
  2284 02d2 01       		.byte	0x1
  2285 02d3 7201     		.2byte	0x172
  2286 02d5 68000000 		.4byte	0x68
@@ -2976,7 +2976,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2296 02e9 91       		.byte	0x91
  2297 02ea 40       		.sleb128 -64
  2298 02eb 10       		.uleb128 0x10
- 2299 02ec 85020000 		.4byte	.LASF36
+ 2299 02ec 84020000 		.4byte	.LASF36
  2300 02f0 01       		.byte	0x1
  2301 02f1 7401     		.2byte	0x174
  2302 02f3 68000000 		.4byte	0x68
@@ -2984,7 +2984,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2304 02f8 91       		.byte	0x91
  2305 02f9 BC7F     		.sleb128 -68
  2306 02fb 10       		.uleb128 0x10
- 2307 02fc BF020000 		.4byte	.LASF37
+ 2307 02fc BE020000 		.4byte	.LASF37
  2308 0300 01       		.byte	0x1
  2309 0301 7501     		.2byte	0x175
  2310 0303 8D000000 		.4byte	0x8d
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2318 0313 8D000000 		.4byte	0x8d
  2319 0317 03       		.uleb128 0x3
  2320 0318 91       		.byte	0x91
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 51
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 51
 
 
  2321 0319 B07F     		.sleb128 -80
@@ -3017,7 +3017,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2334 0333 00       		.byte	0
  2335 0334 00       		.byte	0
  2336 0335 11       		.uleb128 0x11
- 2337 0336 3D030000 		.4byte	.LASF39
+ 2337 0336 3C030000 		.4byte	.LASF39
  2338 033a 05       		.byte	0x5
  2339 033b 1207     		.2byte	0x712
  2340 033d 41030000 		.4byte	0x341
@@ -3032,7 +3032,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2349 0352 03       		.byte	0x3
  2350 0353 00000000 		.4byte	psoc_id
  2351 0357 12       		.uleb128 0x12
- 2352 0358 43010000 		.4byte	.LASF41
+ 2352 0358 8E010000 		.4byte	.LASF41
  2353 035c 01       		.byte	0x1
  2354 035d 17       		.byte	0x17
  2355 035e 81000000 		.4byte	0x81
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2375 038a 68000000 		.4byte	0x68
  2376 038e 12       		.uleb128 0x12
  2377 038f 41000000 		.4byte	.LASF43
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 52
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 52
 
 
  2378 0393 01       		.byte	0x1
@@ -3077,7 +3077,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2391 03b2 03       		.byte	0x3
  2392 03b3 00       		.byte	0
  2393 03b4 12       		.uleb128 0x12
- 2394 03b5 CF010000 		.4byte	.LASF44
+ 2394 03b5 1A020000 		.4byte	.LASF44
  2395 03b9 01       		.byte	0x1
  2396 03ba 36       		.byte	0x36
  2397 03bb A4030000 		.4byte	0x3a4
@@ -3093,7 +3093,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2407 03d1 03       		.byte	0x3
  2408 03d2 00000000 		.4byte	pos
  2409 03d6 12       		.uleb128 0x12
- 2410 03d7 2E010000 		.4byte	.LASF20
+ 2410 03d7 79010000 		.4byte	.LASF20
  2411 03db 01       		.byte	0x1
  2412 03dc 38       		.byte	0x38
  2413 03dd A4030000 		.4byte	0x3a4
@@ -3101,7 +3101,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2415 03e2 03       		.byte	0x3
  2416 03e3 00000000 		.4byte	pulse
  2417 03e7 12       		.uleb128 0x12
- 2418 03e8 AE010000 		.4byte	.LASF45
+ 2418 03e8 F9010000 		.4byte	.LASF45
  2419 03ec 01       		.byte	0x1
  2420 03ed 39       		.byte	0x39
  2421 03ee A4030000 		.4byte	0x3a4
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2432 0408 15       		.uleb128 0x15
  2433 0409 65727200 		.ascii	"err\000"
  2434 040d 01       		.byte	0x1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 53
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 53
 
 
  2435 040e 3A       		.byte	0x3a
@@ -3134,7 +3134,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2445 0427 03       		.byte	0x3
  2446 0428 00       		.byte	0
  2447 0429 12       		.uleb128 0x12
- 2448 042a D7010000 		.4byte	.LASF46
+ 2448 042a 22020000 		.4byte	.LASF46
  2449 042e 01       		.byte	0x1
  2450 042f 3B       		.byte	0x3b
  2451 0430 19040000 		.4byte	0x419
@@ -3158,7 +3158,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2469 0457 03       		.byte	0x3
  2470 0458 00000000 		.4byte	prev_err
  2471 045c 12       		.uleb128 0x12
- 2472 045d B2020000 		.4byte	.LASF48
+ 2472 045d B1020000 		.4byte	.LASF48
  2473 0461 01       		.byte	0x1
  2474 0462 3E       		.byte	0x3e
  2475 0463 F8030000 		.4byte	0x3f8
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2489 0483 8E040000 		.4byte	0x48e
  2490 0487 14       		.uleb128 0x14
  2491 0488 C6000000 		.4byte	0xc6
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 54
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 54
 
 
  2492 048c 00       		.byte	0
@@ -3207,7 +3207,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2515 04bb 03       		.byte	0x3
  2516 04bc 00000000 		.4byte	dts
  2517 04c0 12       		.uleb128 0x12
- 2518 04c1 36030000 		.4byte	.LASF51
+ 2518 04c1 35030000 		.4byte	.LASF51
  2519 04c5 01       		.byte	0x1
  2520 04c6 43       		.byte	0x43
  2521 04c7 68000000 		.4byte	0x68
@@ -3225,7 +3225,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2533 04e5 01       		.byte	0x1
  2534 04e6 00       		.byte	0
  2535 04e7 12       		.uleb128 0x12
- 2536 04e8 6A010000 		.4byte	.LASF52
+ 2536 04e8 B5010000 		.4byte	.LASF52
  2537 04ec 01       		.byte	0x1
  2538 04ed 45       		.byte	0x45
  2539 04ee D1040000 		.4byte	0x4d1
@@ -3238,12 +3238,12 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2546 0501 14       		.uleb128 0x14
  2547 0502 C6000000 		.4byte	0xc6
  2548 0506 63       		.byte	0x63
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 55
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 55
 
 
  2549 0507 00       		.byte	0
  2550 0508 12       		.uleb128 0x12
- 2551 0509 25030000 		.4byte	.LASF53
+ 2551 0509 24030000 		.4byte	.LASF53
  2552 050d 01       		.byte	0x1
  2553 050e 47       		.byte	0x47
  2554 050f F8040000 		.4byte	0x4f8
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2603 0578 00000000 		.4byte	help
  2604 057c 15       		.uleb128 0x15
  2605 057d 747400   		.ascii	"tt\000"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 56
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 56
 
 
  2606 0580 01       		.byte	0x1
@@ -3308,7 +3308,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2610 0587 03       		.byte	0x3
  2611 0588 00000000 		.4byte	tt
  2612 058c 12       		.uleb128 0x12
- 2613 058d EF020000 		.4byte	.LASF56
+ 2613 058d EE020000 		.4byte	.LASF56
  2614 0591 01       		.byte	0x1
  2615 0592 4F       		.byte	0x4f
  2616 0593 68000000 		.4byte	0x68
@@ -3316,7 +3316,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2618 0598 03       		.byte	0x3
  2619 0599 00000000 		.4byte	start_calib
  2620 059d 12       		.uleb128 0x12
- 2621 059e 88010000 		.4byte	.LASF57
+ 2621 059e D3010000 		.4byte	.LASF57
  2622 05a2 01       		.byte	0x1
  2623 05a3 50       		.byte	0x50
  2624 05a4 68000000 		.4byte	0x68
@@ -3334,7 +3334,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2636 05c2 06       		.byte	0x6
  2637 05c3 00       		.byte	0
  2638 05c4 12       		.uleb128 0x12
- 2639 05c5 0D030000 		.4byte	.LASF58
+ 2639 05c5 0C030000 		.4byte	.LASF58
  2640 05c9 01       		.byte	0x1
  2641 05ca 52       		.byte	0x52
  2642 05cb AE050000 		.4byte	0x5ae
@@ -3349,7 +3349,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2651 05e3 06       		.byte	0x6
  2652 05e4 00       		.byte	0
  2653 05e5 12       		.uleb128 0x12
- 2654 05e6 1B030000 		.4byte	.LASF59
+ 2654 05e6 1A030000 		.4byte	.LASF59
  2655 05ea 01       		.byte	0x1
  2656 05eb 53       		.byte	0x53
  2657 05ec D5050000 		.4byte	0x5d5
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2660 05f2 00000000 		.4byte	tempArray
  2661 05f6 15       		.uleb128 0x15
  2662 05f7 746D7000 		.ascii	"tmp\000"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 57
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 57
 
 
  2663 05fb 01       		.byte	0x1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2717 002d 00       		.byte	0
  2718 002e 0B       		.uleb128 0xb
  2719 002f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 58
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 58
 
 
  2720 0030 3E       		.uleb128 0x3e
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2774 0067 03       		.uleb128 0x3
  2775 0068 0E       		.uleb128 0xe
  2776 0069 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 59
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 59
 
 
  2777 006a 0B       		.uleb128 0xb
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2831 00a1 49       		.uleb128 0x49
  2832 00a2 13       		.uleb128 0x13
  2833 00a3 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 60
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 60
 
 
  2834 00a4 18       		.uleb128 0x18
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2888 00db 0F       		.uleb128 0xf
  2889 00dc 34       		.uleb128 0x34
  2890 00dd 00       		.byte	0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 61
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 61
 
 
  2891 00de 03       		.uleb128 0x3
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  2945 0114 13       		.uleb128 0x13
  2946 0115 3F       		.uleb128 0x3f
  2947 0116 19       		.uleb128 0x19
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 62
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 62
 
 
  2948 0117 02       		.uleb128 0x2
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  3002 0028 00000000 		.4byte	.LFB67
  3003 002c 1C030000 		.4byte	.LFE67-.LFB67
  3004 0030 00000000 		.4byte	.LFB68
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 63
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 63
 
 
  3005 0034 B8060000 		.4byte	.LFE68-.LFB68
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  3042 004d 74656D70 		.ascii	"temp\000"
  3042      00
  3043              	.LASF2:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 64
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 64
 
 
  3044 0052 73686F72 		.ascii	"short int\000"
@@ -3828,210 +3828,210 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
  3062      5F726561 
  3062      645F6D6F 
  3062      646500
- 3063              	.LASF20:
- 3064 012e 70756C73 		.ascii	"pulse\000"
- 3064      6500
- 3065              	.LASF11:
- 3066 0134 75696E74 		.ascii	"uint8\000"
- 3066      3800
- 3067              	.LASF19:
- 3068 013a 63796C69 		.ascii	"cylinder\000"
- 3068      6E646572 
- 3068      00
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 65
+ 3063              	.LASF62:
+ 3064 012e 433A5C55 		.ascii	"C:\\Users\\kevan\\Documents\\GitHub\\Hydraulic-Mimi"
+ 3064      73657273 
+ 3064      5C6B6576 
+ 3064      616E5C44 
+ 3064      6F63756D 
+ 3065 015c 632D4172 		.ascii	"c-Arm\\PSOC_arm_project.cydsn\000"
+ 3065      6D5C5053 
+ 3065      4F435F61 
+ 3065      726D5F70 
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 65
 
 
- 3069              	.LASF41:
- 3070 0143 6572726F 		.ascii	"errorStatus\000"
- 3070      72537461 
- 3070      74757300 
- 3071              	.LASF0:
- 3072 014f 7369676E 		.ascii	"signed char\000"
- 3072      65642063 
- 3072      68617200 
- 3073              	.LASF13:
- 3074 015b 666C6F61 		.ascii	"float\000"
- 3074      7400
- 3075              	.LASF23:
- 3076 0161 77726974 		.ascii	"writePWM\000"
- 3076      6550574D 
- 3076      00
- 3077              	.LASF52:
- 3078 016a 6F666673 		.ascii	"offsets\000"
- 3078      65747300 
- 3079              	.LASF33:
- 3080 0172 75707065 		.ascii	"upper_offset\000"
- 3080      725F6F66 
- 3080      66736574 
- 3080      00
- 3081              	.LASF4:
- 3082 017f 6C6F6E67 		.ascii	"long int\000"
- 3082      20696E74 
- 3082      00
- 3083              	.LASF57:
- 3084 0188 63796C5F 		.ascii	"cyl_no\000"
- 3084      6E6F00
- 3085              	.LASF32:
- 3086 018f 6C6F7765 		.ascii	"lower_offset_set\000"
- 3086      725F6F66 
- 3086      66736574 
- 3086      5F736574 
- 3086      00
- 3087              	.LASF1:
- 3088 01a0 756E7369 		.ascii	"unsigned char\000"
- 3088      676E6564 
- 3088      20636861 
- 3088      7200
- 3089              	.LASF45:
- 3090 01ae 70756C73 		.ascii	"pulse_temp\000"
- 3090      655F7465 
- 3090      6D7000
- 3091              	.LASF34:
- 3092 01b9 6C6F7765 		.ascii	"lower_offset\000"
- 3092      725F6F66 
- 3092      66736574 
- 3092      00
- 3093              	.LASF26:
- 3094 01c6 72785374 		.ascii	"rxStatus\000"
- 3094      61747573 
- 3094      00
- 3095              	.LASF44:
- 3096 01cf 6E65775F 		.ascii	"new_pos\000"
- 3096      706F7300 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 66
+ 3065      726F6A65 
+ 3066              	.LASF20:
+ 3067 0179 70756C73 		.ascii	"pulse\000"
+ 3067      6500
+ 3068              	.LASF11:
+ 3069 017f 75696E74 		.ascii	"uint8\000"
+ 3069      3800
+ 3070              	.LASF19:
+ 3071 0185 63796C69 		.ascii	"cylinder\000"
+ 3071      6E646572 
+ 3071      00
+ 3072              	.LASF41:
+ 3073 018e 6572726F 		.ascii	"errorStatus\000"
+ 3073      72537461 
+ 3073      74757300 
+ 3074              	.LASF0:
+ 3075 019a 7369676E 		.ascii	"signed char\000"
+ 3075      65642063 
+ 3075      68617200 
+ 3076              	.LASF13:
+ 3077 01a6 666C6F61 		.ascii	"float\000"
+ 3077      7400
+ 3078              	.LASF23:
+ 3079 01ac 77726974 		.ascii	"writePWM\000"
+ 3079      6550574D 
+ 3079      00
+ 3080              	.LASF52:
+ 3081 01b5 6F666673 		.ascii	"offsets\000"
+ 3081      65747300 
+ 3082              	.LASF33:
+ 3083 01bd 75707065 		.ascii	"upper_offset\000"
+ 3083      725F6F66 
+ 3083      66736574 
+ 3083      00
+ 3084              	.LASF4:
+ 3085 01ca 6C6F6E67 		.ascii	"long int\000"
+ 3085      20696E74 
+ 3085      00
+ 3086              	.LASF57:
+ 3087 01d3 63796C5F 		.ascii	"cyl_no\000"
+ 3087      6E6F00
+ 3088              	.LASF32:
+ 3089 01da 6C6F7765 		.ascii	"lower_offset_set\000"
+ 3089      725F6F66 
+ 3089      66736574 
+ 3089      5F736574 
+ 3089      00
+ 3090              	.LASF1:
+ 3091 01eb 756E7369 		.ascii	"unsigned char\000"
+ 3091      676E6564 
+ 3091      20636861 
+ 3091      7200
+ 3092              	.LASF45:
+ 3093 01f9 70756C73 		.ascii	"pulse_temp\000"
+ 3093      655F7465 
+ 3093      6D7000
+ 3094              	.LASF34:
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 66
 
 
- 3097              	.LASF46:
- 3098 01d7 61646356 		.ascii	"adcValue\000"
- 3098      616C7565 
- 3098      00
- 3099              	.LASF7:
- 3100 01e0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 3100      206C6F6E 
- 3100      6720756E 
- 3100      7369676E 
- 3100      65642069 
- 3101              	.LASF8:
- 3102 01f7 756E7369 		.ascii	"unsigned int\000"
- 3102      676E6564 
- 3102      20696E74 
- 3102      00
- 3103              	.LASF29:
- 3104 0204 74696D65 		.ascii	"time\000"
- 3104      00
- 3105              	.LASF25:
- 3106 0209 52784973 		.ascii	"RxIsr\000"
- 3106      7200
- 3107              	.LASF3:
- 3108 020f 73686F72 		.ascii	"short unsigned int\000"
- 3108      7420756E 
- 3108      7369676E 
- 3108      65642069 
- 3108      6E7400
- 3109              	.LASF62:
- 3110 0222 433A5C55 		.ascii	"C:\\Users\\Andrew\\Documents\\GitHub\\Hydraulic-Mim"
- 3110      73657273 
- 3110      5C416E64 
- 3110      7265775C 
- 3110      446F6375 
- 3111 0250 69632D41 		.ascii	"ic-Arm\\PSOC_arm_project.cydsn\000"
- 3111      726D5C50 
- 3111      534F435F 
- 3111      61726D5F 
- 3111      70726F6A 
+ 3095 0204 6C6F7765 		.ascii	"lower_offset\000"
+ 3095      725F6F66 
+ 3095      66736574 
+ 3095      00
+ 3096              	.LASF26:
+ 3097 0211 72785374 		.ascii	"rxStatus\000"
+ 3097      61747573 
+ 3097      00
+ 3098              	.LASF44:
+ 3099 021a 6E65775F 		.ascii	"new_pos\000"
+ 3099      706F7300 
+ 3100              	.LASF46:
+ 3101 0222 61646356 		.ascii	"adcValue\000"
+ 3101      616C7565 
+ 3101      00
+ 3102              	.LASF7:
+ 3103 022b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3103      206C6F6E 
+ 3103      6720756E 
+ 3103      7369676E 
+ 3103      65642069 
+ 3104              	.LASF8:
+ 3105 0242 756E7369 		.ascii	"unsigned int\000"
+ 3105      676E6564 
+ 3105      20696E74 
+ 3105      00
+ 3106              	.LASF29:
+ 3107 024f 74696D65 		.ascii	"time\000"
+ 3107      00
+ 3108              	.LASF25:
+ 3109 0254 52784973 		.ascii	"RxIsr\000"
+ 3109      7200
+ 3110              	.LASF3:
+ 3111 025a 73686F72 		.ascii	"short unsigned int\000"
+ 3111      7420756E 
+ 3111      7369676E 
+ 3111      65642069 
+ 3111      6E7400
  3112              	.LASF15:
- 3113 026e 63686172 		.ascii	"char\000"
+ 3113 026d 63686172 		.ascii	"char\000"
  3113      00
  3114              	.LASF30:
- 3115 0273 63616C69 		.ascii	"calib_cyl\000"
+ 3115 0272 63616C69 		.ascii	"calib_cyl\000"
  3115      625F6379 
  3115      6C00
  3116              	.LASF10:
- 3117 027d 696E7433 		.ascii	"int32_t\000"
+ 3117 027c 696E7433 		.ascii	"int32_t\000"
  3117      325F7400 
  3118              	.LASF36:
- 3119 0285 75707065 		.ascii	"upper_check_no\000"
+ 3119 0284 75707065 		.ascii	"upper_check_no\000"
  3119      725F6368 
  3119      65636B5F 
  3119      6E6F00
  3120              	.LASF61:
- 3121 0294 6D61696E 		.ascii	"main.c\000"
+ 3121 0293 6D61696E 		.ascii	"main.c\000"
  3121      2E6300
  3122              	.LASF16:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 67
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 67
 
 
- 3123 029b 72656738 		.ascii	"reg8\000"
+ 3123 029a 72656738 		.ascii	"reg8\000"
  3123      00
  3124              	.LASF5:
- 3125 02a0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3125 029f 6C6F6E67 		.ascii	"long unsigned int\000"
  3125      20756E73 
  3125      69676E65 
  3125      6420696E 
  3125      7400
  3126              	.LASF48:
- 3127 02b2 7069645F 		.ascii	"pid_integral\000"
+ 3127 02b1 7069645F 		.ascii	"pid_integral\000"
  3127      696E7465 
  3127      6772616C 
  3127      00
  3128              	.LASF37:
- 3129 02bf 70726576 		.ascii	"prev_adcValue\000"
+ 3129 02be 70726576 		.ascii	"prev_adcValue\000"
  3129      5F616463 
  3129      56616C75 
  3129      6500
  3130              	.LASF9:
- 3131 02cd 5F5F696E 		.ascii	"__int32_t\000"
+ 3131 02cc 5F5F696E 		.ascii	"__int32_t\000"
  3131      7433325F 
  3131      7400
  3132              	.LASF21:
- 3133 02d7 6F666673 		.ascii	"offset_upper\000"
+ 3133 02d6 6F666673 		.ascii	"offset_upper\000"
  3133      65745F75 
  3133      70706572 
  3133      00
  3134              	.LASF63:
- 3135 02e4 70756C73 		.ascii	"pulseCheck\000"
+ 3135 02e3 70756C73 		.ascii	"pulseCheck\000"
  3135      65436865 
  3135      636B00
  3136              	.LASF56:
- 3137 02ef 73746172 		.ascii	"start_calib\000"
+ 3137 02ee 73746172 		.ascii	"start_calib\000"
  3137      745F6361 
  3137      6C696200 
  3138              	.LASF24:
- 3139 02fb 6164635F 		.ascii	"adc_update\000"
+ 3139 02fa 6164635F 		.ascii	"adc_update\000"
  3139      75706461 
  3139      746500
  3140              	.LASF27:
- 3141 0306 72784461 		.ascii	"rxData\000"
+ 3141 0305 72784461 		.ascii	"rxData\000"
  3141      746100
  3142              	.LASF58:
- 3143 030d 6D6F7669 		.ascii	"moving_median\000"
+ 3143 030c 6D6F7669 		.ascii	"moving_median\000"
  3143      6E675F6D 
  3143      65646961 
  3143      6E00
  3144              	.LASF59:
- 3145 031b 74656D70 		.ascii	"tempArray\000"
+ 3145 031a 74656D70 		.ascii	"tempArray\000"
  3145      41727261 
  3145      7900
  3146              	.LASF53:
- 3147 0325 73656E64 		.ascii	"sendValue\000"
+ 3147 0324 73656E64 		.ascii	"sendValue\000"
  3147      56616C75 
  3147      6500
  3148              	.LASF14:
- 3149 032f 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 68
+ 3149 032e 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccm5DeSa.s 			page 68
 
 
  3149      6C6500
  3150              	.LASF51:
- 3151 0336 6474735F 		.ascii	"dts_ct\000"
+ 3151 0335 6474735F 		.ascii	"dts_ct\000"
  3151      637400
  3152              	.LASF39:
- 3153 033d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 3153 033c 49544D5F 		.ascii	"ITM_RxBuffer\000"
  3153      52784275 
  3153      66666572 
  3153      00
  3154              	.LASF31:
- 3155 034a 75707065 		.ascii	"upper_offset_set\000"
+ 3155 0349 75707065 		.ascii	"upper_offset_set\000"
  3155      725F6F66 
  3155      66736574 
  3155      5F736574 
