@@ -1,4 +1,14 @@
-﻿D:\Programs\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (project_arm.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  project_arm.vcxproj -> C:\Users\arobo\Documents\GitHub\Hydraulic-Mimic-Arm\PC_project_arm\x64\Debug\PC_project_arm.exe
-  C:\Users\arobo\Desktop\Project\LeapSDK\lib\x64\Leap.dll
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (project_arm.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  PC_project_arm.cpp
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(269): warning C4101: 'SerialBuffer': unreferenced local variable
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(265): warning C4101: 'NoBytesRead': unreferenced local variable
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(287): warning C4101: 'dwWaitResultvcom': unreferenced local variable
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(278): warning C4101: 'bytesWritten_vcom': unreferenced local variable
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(277): warning C4101: 'noBytesRead_vcom': unreferenced local variable
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(266): warning C4101: 'byteswritten': unreferenced local variable
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(268): warning C4101: 'TempChar': unreferenced local variable
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(462): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(423): warning C4101: 'dwWaitResultvcom': unreferenced local variable
+  project_arm.vcxproj -> C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PC_project_arm\x64\Debug\PC_project_arm.exe
+  C:\Users\Andrew\Documents\LEAP_SDK\lib\x64\Leap.dll
   1 File(s) copied
