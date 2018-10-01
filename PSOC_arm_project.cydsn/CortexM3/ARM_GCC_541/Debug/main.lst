@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
   17:main.c        **** /* Add an explicit reference to the floating point printf library to allow
   18:main.c        **** the usage of floating point conversion specifier */
   19:main.c        **** #if defined (__GNUC__)
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 2
 
 
   20:main.c        ****     asm (".global _printf_float");
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
   81 0042 9BB2     		uxth	r3, r3
   82 0044 1846     		mov	r0, r3
   83 0046 FFF7FEFF 		bl	PWM_1_WriteCompare
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 3
 
 
   32:main.c        ****                     break;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  127              		.loc 1 42 0
  128              		.cfi_startproc
  129              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 4
 
 
  130              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  179 0042 FB68     		ldr	r3, [r7, #12]
   48:main.c        **** }
  180              		.loc 1 48 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 5
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 5
 
 
  181 0044 1846     		mov	r0, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  234      00000000 
  234      00000000 
  234      00000000 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 6
 
 
  234      00000000 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  284              		.align	2
  285              		.global	adc_update
  286              		.thumb
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 7
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 7
 
 
  287              		.thumb_func
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  303              	.LBB2:
   87:main.c        ****     for(int c = 0;c<CYL_NO;c++){
  304              		.loc 1 87 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 8
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 8
 
 
  305 0006 0023     		movs	r3, #0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  350 0050 FFF7FEFF 		bl	ADC_0_GetResult16
  351 0054 0346     		mov	r3, r0
  352 0056 98B2     		uxth	r0, r3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 9
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 9
 
 
  353 0058 4049     		ldr	r1, .L29
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  401 00b0 2A49     		ldr	r1, .L29
  402 00b2 7A69     		ldr	r2, [r7, #20]
  403 00b4 1346     		mov	r3, r2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 10
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 10
 
 
  404 00b6 DB00     		lsls	r3, r3, #3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  108:main.c        ****         			tempArray[i] = tempArray[j];            //replacing value
  449              		.loc 1 108 0
  450 0102 174A     		ldr	r2, .L29+4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 11
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 11
 
 
  451 0104 7B68     		ldr	r3, [r7, #4]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  494              		.loc 1 87 0 is_stmt 0 discriminator 1
  495 0148 7B69     		ldr	r3, [r7, #20]
  496 014a 032B     		cmp	r3, #3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 12
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 12
 
 
  497 014c 7FF75EAF 		ble	.L28
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  124:main.c        ****     
  125:main.c        ****     do
  126:main.c        ****     {
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 13
 
 
  127:main.c        ****         /* Read receiver status register */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  578 004a CA54     		strb	r2, [r1, r3]
  143:main.c        ****             tt++;
  579              		.loc 1 143 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 14
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 14
 
 
  580 004c 8C4B     		ldr	r3, .L69+12
@@ -807,29 +807,29 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  601 006c 0122     		movs	r2, #1
  602 006e 1A60     		str	r2, [r3]
  603              	.L35:
- 146:main.c        ****             if(rxData=='.' ){offsets[3][1]++;}
+ 146:main.c        ****             if(rxData=='.' ){offsets[1][1]++;}
  604              		.loc 1 146 0 is_stmt 1
  605 0070 BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
  606 0072 2E2B     		cmp	r3, #46
  607 0074 04D1     		bne	.L36
  608              		.loc 1 146 0 is_stmt 0 discriminator 1
  609 0076 854B     		ldr	r3, .L69+24
- 610 0078 DB69     		ldr	r3, [r3, #28]
+ 610 0078 DB68     		ldr	r3, [r3, #12]
  611 007a 0133     		adds	r3, r3, #1
  612 007c 834A     		ldr	r2, .L69+24
- 613 007e D361     		str	r3, [r2, #28]
+ 613 007e D360     		str	r3, [r2, #12]
  614              	.L36:
- 147:main.c        ****             if(rxData==',' ){offsets[3][0]++;};
+ 147:main.c        ****             if(rxData==',' ){offsets[1][0]++;};
  615              		.loc 1 147 0 is_stmt 1
  616 0080 BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
  617 0082 2C2B     		cmp	r3, #44
  618 0084 04D1     		bne	.L37
  619              		.loc 1 147 0 is_stmt 0 discriminator 1
  620 0086 814B     		ldr	r3, .L69+24
- 621 0088 9B69     		ldr	r3, [r3, #24]
+ 621 0088 9B68     		ldr	r3, [r3, #8]
  622 008a 0133     		adds	r3, r3, #1
  623 008c 7F4A     		ldr	r2, .L69+24
- 624 008e 9361     		str	r3, [r2, #24]
+ 624 008e 9360     		str	r3, [r2, #8]
  625              	.L37:
  148:main.c        ****             switch(data_read_mode)
  626              		.loc 1 148 0 is_stmt 1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  629 0094 062B     		cmp	r3, #6
  630 0096 00F22F81 		bhi	.L33
  631 009a 01A2     		adr	r2, .L40
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 15
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 15
 
 
  632 009c 52F823F0 		ldr	pc, [r2, r3, lsl #2]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  674              		.loc 1 158 0
  675 00e6 6A4B     		ldr	r3, .L69+28
  676 00e8 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 16
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 16
 
 
  677 00ea 0133     		adds	r3, r3, #1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  713              		.loc 1 172 0
  714 011a ECE0     		b	.L68
  715              	.L53:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 17
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 17
 
 
  168:main.c        ****                         data_read_mode = 5;}
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  185:main.c        ****                         temp[0] = '\0';
  186:main.c        ****                         data_read_mode = 0;
  187:main.c        ****                         
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 18
 
 
  188:main.c        ****                     }
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  798              		.loc 1 186 0
  799 01a6 3A4B     		ldr	r3, .L69+28
  800 01a8 0022     		movs	r2, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 19
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 19
 
 
  801 01aa 1A60     		str	r2, [r3]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  839 01e6 1A70     		strb	r2, [r3]
  200:main.c        ****                     }
  840              		.loc 1 200 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 20
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 20
 
 
  841 01e8 294B     		ldr	r3, .L69+28
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  880 0226 0022     		movs	r2, #0
  881 0228 1A70     		strb	r2, [r3]
  213:main.c        ****                     }
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 21
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 21
 
 
  882              		.loc 1 213 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  921 0266 0B4B     		ldr	r3, .L69+32
  922 0268 0022     		movs	r2, #0
  923 026a 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 22
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 22
 
 
  225:main.c        ****                     }
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  240:main.c        ****                 break;
  965              		.loc 1 240 0
  966 02ca 15E0     		b	.L33
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 23
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 23
 
 
  967              	.L64:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1005 0304 00BF     		nop
  1006 0306 0C37     		adds	r7, r7, #12
  1007              		.cfi_def_cfa_offset 12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 24
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 24
 
 
  1008 0308 BD46     		mov	sp, r7
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1044      6F776572 
  1044      204F6666 
  1044      7365743A 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 25
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 25
 
 
  1045 00ab 20414443 		.ascii	" ADC Diff: %d\012\000"
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1084              		.loc 1 258 0
  1085 001c 784B     		ldr	r3, .L103+8
  1086 001e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 26
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 26
 
 
  1087 0020 102B     		cmp	r3, #16
@@ -1545,40 +1545,40 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1122 005a 18E0     		b	.L74
  1123              	.L76:
  265:main.c        ****         case 17:
- 266:main.c        ****             offsets[0][0] = 125;offsets[0][1] = 179;
+ 266:main.c        ****             offsets[0][0] = 117;offsets[0][1] = 218;
  1124              		.loc 1 266 0
  1125 005c 694B     		ldr	r3, .L103+12
- 1126 005e 7D22     		movs	r2, #125
+ 1126 005e 7522     		movs	r2, #117
  1127 0060 1A60     		str	r2, [r3]
  1128 0062 684B     		ldr	r3, .L103+12
- 1129 0064 B322     		movs	r2, #179
+ 1129 0064 DA22     		movs	r2, #218
  1130 0066 5A60     		str	r2, [r3, #4]
- 267:main.c        ****             offsets[1][0] = 132;offsets[1][1] = 176;
+ 267:main.c        ****             offsets[1][0] = 60;offsets[1][1] = 243;
  1131              		.loc 1 267 0
  1132 0068 664B     		ldr	r3, .L103+12
- 1133 006a 8422     		movs	r2, #132
+ 1133 006a 3C22     		movs	r2, #60
  1134 006c 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 27
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 27
 
 
  1135 006e 654B     		ldr	r3, .L103+12
- 1136 0070 B022     		movs	r2, #176
+ 1136 0070 F322     		movs	r2, #243
  1137 0072 DA60     		str	r2, [r3, #12]
- 268:main.c        ****             offsets[2][0] = 180;offsets[2][1] = 174;
+ 268:main.c        ****             offsets[2][0] = 152;offsets[2][1] = 204;
  1138              		.loc 1 268 0
  1139 0074 634B     		ldr	r3, .L103+12
- 1140 0076 B422     		movs	r2, #180
+ 1140 0076 9822     		movs	r2, #152
  1141 0078 1A61     		str	r2, [r3, #16]
  1142 007a 624B     		ldr	r3, .L103+12
- 1143 007c AE22     		movs	r2, #174
+ 1143 007c CC22     		movs	r2, #204
  1144 007e 5A61     		str	r2, [r3, #20]
- 269:main.c        ****             offsets[3][0] = 205;offsets[3][1] = 169;
+ 269:main.c        ****             offsets[3][0] = 78;offsets[3][1] = 250;
  1145              		.loc 1 269 0
  1146 0080 604B     		ldr	r3, .L103+12
- 1147 0082 CD22     		movs	r2, #205
+ 1147 0082 4E22     		movs	r2, #78
  1148 0084 9A61     		str	r2, [r3, #24]
  1149 0086 5F4B     		ldr	r3, .L103+12
- 1150 0088 A922     		movs	r2, #169
+ 1150 0088 FA22     		movs	r2, #250
  1151 008a DA61     		str	r2, [r3, #28]
  270:main.c        ****             break;
  1152              		.loc 1 270 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1178 00b6 FB6B     		ldr	r3, [r7, #60]
  1179 00b8 0021     		movs	r1, #0
  1180 00ba 42F82310 		str	r1, [r2, r3, lsl #2]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 28
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 28
 
 
  279:main.c        ****         pulse_temp[g]   = 0;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  274:main.c        ****         new_pos_set[g]  = 0;
  1228              		.loc 1 274 0 is_stmt 0 discriminator 1
  1229 0128 FB6B     		ldr	r3, [r7, #60]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 29
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 29
 
 
  1230 012a 032B     		cmp	r3, #3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1261              		.thumb
  1262              		.syntax unified
  1263 015c 26A4     		adr	r4, .L103
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 30
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 30
 
 
  1264 015e D4E90034 		ldrd	r3, [r4]
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1293 019e 4FF6FF70 		movw	r0, #65535
  1294 01a2 FFF7FEFF 		bl	Timer_1_WriteCounter
  333:main.c        ****         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 31
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 31
 
 
  334:main.c        ****         sprintf(sendValue,"%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t",adcValue[0],adcValue[1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1341 0204 00000000 		.word	offsets
  1342 0208 00000000 		.word	new_pos_set
  1343 020c 00000000 		.word	new_pos
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 32
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 32
 
 
  1344 0210 00000000 		.word	pos
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1392 028c D200     		lsls	r2, r2, #3
  1393 028e 0A44     		add	r2, r2, r1
  1394 0290 C2E90034 		strd	r3, [r2]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 33
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 33
 
 
  347:main.c        ****             der[cyl] = err[cyl] - prev_err[cyl];
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1446 0304 DB00     		lsls	r3, r3, #3
  1447 0306 1344     		add	r3, r3, r2
  1448 0308 D3E90001 		ldrd	r0, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 34
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 34
 
 
  1449 030c 68A3     		adr	r3, .L105
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1498 0378 0C46     		mov	r4, r1
  1499 037a 1D46     		mov	r5, r3
  1500 037c 2646     		mov	r6, r4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 35
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 35
 
 
  1501 037e 584B     		ldr	r3, .L105+48
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  356:main.c        ****             pulse[cyl] = pulseCheck(pulse_temp[cyl],offsets[cyl][1],offsets[cyl][0]);
  1554              		.loc 1 356 0 discriminator 2
  1555 03fc 394A     		ldr	r2, .L105+52
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 36
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 36
 
 
  1556 03fe FB6A     		ldr	r3, [r7, #44]
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1600              		.loc 1 364 0 is_stmt 1
  1601 045a 254B     		ldr	r3, .L105+64
  1602 045c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 37
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 37
 
 
  1603 045e 002B     		cmp	r3, #0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1644              		.loc 1 375 0 discriminator 3
  1645 049a 3B69     		ldr	r3, [r7, #16]
  1646 049c 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 38
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 38
 
 
  1647 049e 3B61     		str	r3, [r7, #16]
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1692 0508 FFF7FEFF 		bl	writePWM
  385:main.c        ****                     CyDelay(200);
  1693              		.loc 1 385 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 39
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 39
 
 
  1694 050c C820     		movs	r0, #200
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1738 0558 FFF7FEFF 		bl	writePWM
  396:main.c        ****                     CyDelay(500);
  1739              		.loc 1 396 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 40
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 40
 
 
  1740 055c 4FF4FA70 		mov	r0, #500
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  408:main.c        ****                         lower_check_no = 0;
  1783              		.loc 1 408 0
  1784 05aa 0023     		movs	r3, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 41
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 41
 
 
  1785 05ac BB61     		str	r3, [r7, #24]
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1826              		.loc 1 380 0 is_stmt 0 discriminator 1
  1827 05ee 7B6A     		ldr	r3, [r7, #36]
  1828 05f0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 42
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 42
 
 
  1829 05f2 3FF47FAF 		beq	.L97
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1869 0648 D3E90023 		ldrd	r2, [r3]
  1870 064c FFF7FEFF 		bl	__aeabi_ddiv
  1871 0650 0346     		mov	r3, r0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 43
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 43
 
 
  1872 0652 0C46     		mov	r4, r1
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1919              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  1920              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  1921              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 44
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 44
 
 
  1922              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  1976 006a 05       		.byte	0x5
  1977 006b 696E7400 		.ascii	"int\000"
  1978 006f 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 45
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 45
 
 
  1979 0070 04       		.byte	0x4
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2033 00e2 08       		.uleb128 0x8
  2034 00e3 3A010000 		.4byte	.LASF19
  2035 00e7 01       		.byte	0x1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 46
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 46
 
 
  2036 00e8 19       		.byte	0x19
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2090 014e 6C010000 		.4byte	.LFE66-.LFB66
  2091 0152 01       		.uleb128 0x1
  2092 0153 9C       		.byte	0x9c
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 47
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 47
 
 
  2093 0154 CF010000 		.4byte	0x1cf
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2147 01c2 01       		.byte	0x1
  2148 01c3 67       		.byte	0x67
  2149 01c4 68000000 		.4byte	0x68
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 48
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 48
 
 
  2150 01c8 02       		.uleb128 0x2
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2204 022d 35030000 		.4byte	0x335
  2205 0231 0F       		.uleb128 0xf
  2206 0232 647400   		.ascii	"dt\000"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 49
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 49
 
 
  2207 0235 01       		.byte	0x1
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2261 02a6 6F01     		.2byte	0x16f
  2262 02a8 68000000 		.4byte	0x68
  2263 02ac 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 50
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 50
 
 
  2264 02ad 91       		.byte	0x91
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2318 0313 8D000000 		.4byte	0x8d
  2319 0317 03       		.uleb128 0x3
  2320 0318 91       		.byte	0x91
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 51
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 51
 
 
  2321 0319 B07F     		.sleb128 -80
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2375 038a 68000000 		.4byte	0x68
  2376 038e 12       		.uleb128 0x12
  2377 038f 41000000 		.4byte	.LASF43
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 52
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 52
 
 
  2378 0393 01       		.byte	0x1
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2432 0408 15       		.uleb128 0x15
  2433 0409 65727200 		.ascii	"err\000"
  2434 040d 01       		.byte	0x1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 53
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 53
 
 
  2435 040e 3A       		.byte	0x3a
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2489 0483 8E040000 		.4byte	0x48e
  2490 0487 14       		.uleb128 0x14
  2491 0488 C6000000 		.4byte	0xc6
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 54
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 54
 
 
  2492 048c 00       		.byte	0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2546 0501 14       		.uleb128 0x14
  2547 0502 C6000000 		.4byte	0xc6
  2548 0506 63       		.byte	0x63
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 55
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 55
 
 
  2549 0507 00       		.byte	0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2603 0578 00000000 		.4byte	help
  2604 057c 15       		.uleb128 0x15
  2605 057d 747400   		.ascii	"tt\000"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 56
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 56
 
 
  2606 0580 01       		.byte	0x1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2660 05f2 00000000 		.4byte	tempArray
  2661 05f6 15       		.uleb128 0x15
  2662 05f7 746D7000 		.ascii	"tmp\000"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 57
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 57
 
 
  2663 05fb 01       		.byte	0x1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2717 002d 00       		.byte	0
  2718 002e 0B       		.uleb128 0xb
  2719 002f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 58
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 58
 
 
  2720 0030 3E       		.uleb128 0x3e
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2774 0067 03       		.uleb128 0x3
  2775 0068 0E       		.uleb128 0xe
  2776 0069 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 59
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 59
 
 
  2777 006a 0B       		.uleb128 0xb
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2831 00a1 49       		.uleb128 0x49
  2832 00a2 13       		.uleb128 0x13
  2833 00a3 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 60
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 60
 
 
  2834 00a4 18       		.uleb128 0x18
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2888 00db 0F       		.uleb128 0xf
  2889 00dc 34       		.uleb128 0x34
  2890 00dd 00       		.byte	0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 61
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 61
 
 
  2891 00de 03       		.uleb128 0x3
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  2945 0114 13       		.uleb128 0x13
  2946 0115 3F       		.uleb128 0x3f
  2947 0116 19       		.uleb128 0x19
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 62
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 62
 
 
  2948 0117 02       		.uleb128 0x2
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  3002 0028 00000000 		.4byte	.LFB67
  3003 002c 1C030000 		.4byte	.LFE67-.LFB67
  3004 0030 00000000 		.4byte	.LFB68
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 63
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 63
 
 
  3005 0034 B8060000 		.4byte	.LFE68-.LFB68
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  3042 004d 74656D70 		.ascii	"temp\000"
  3042      00
  3043              	.LASF2:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 64
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 64
 
 
  3044 0052 73686F72 		.ascii	"short int\000"
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  3068 013a 63796C69 		.ascii	"cylinder\000"
  3068      6E646572 
  3068      00
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 65
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 65
 
 
  3069              	.LASF41:
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  3095              	.LASF44:
  3096 01cf 6E65775F 		.ascii	"new_pos\000"
  3096      706F7300 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 66
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 66
 
 
  3097              	.LASF46:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  3121 0294 6D61696E 		.ascii	"main.c\000"
  3121      2E6300
  3122              	.LASF16:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 67
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 67
 
 
  3123 029b 72656738 		.ascii	"reg8\000"
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 1
  3147      6500
  3148              	.LASF14:
  3149 032f 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccbZgFpH.s 			page 68
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccKAQ361.s 			page 68
 
 
  3149      6C6500

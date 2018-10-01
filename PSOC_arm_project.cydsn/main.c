@@ -143,8 +143,8 @@ CY_ISR(RxIsr)
             tt++;
             if(tt==99){tt=0;}
             if(rxData=='b' ){start_calib=1;};
-            if(rxData=='.' ){offsets[3][1]++;}
-            if(rxData==',' ){offsets[3][0]++;};
+            if(rxData=='.' ){offsets[1][1]++;}
+            if(rxData==',' ){offsets[1][0]++;};
             switch(data_read_mode)
             {
                 case 0:
@@ -263,10 +263,10 @@ int main()
             offsets[3][0] = 205;offsets[3][1] = 185;
             break;
         case 17:
-            offsets[0][0] = 125;offsets[0][1] = 179;
-            offsets[1][0] = 132;offsets[1][1] = 176;
-            offsets[2][0] = 180;offsets[2][1] = 174;
-            offsets[3][0] = 205;offsets[3][1] = 169;
+            offsets[0][0] = 117;offsets[0][1] = 218;
+            offsets[1][0] = 60;offsets[1][1] = 243;
+            offsets[2][0] = 152;offsets[2][1] = 204;
+            offsets[3][0] = 78;offsets[3][1] = 250;
             break;
     }
     
