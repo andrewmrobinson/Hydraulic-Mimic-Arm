@@ -285,7 +285,7 @@
 <v>Datasheet</v>
 </TreeKeysV2>
 <TreeStatesV2>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSOC_arm_project-000">
 <ExpandedNodeIds>
 <v>PSOC_arm_project-000</v>
 <v>PSOC_arm_project-000\PSOC_arm_project</v>
@@ -348,6 +348,7 @@
 <name v=".\Generated_Source\PSoC5\cyfitter_cfg.c" />
 <name v=".\Generated_Source\PSoC5\UART.c" />
 <name v=".\Generated_Source\PSoC5\PWM_1.c" />
+<name v=".\Generated_Source\PSoC5\ADC_0.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -355,7 +356,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1053, 405" SelectedTabbedMdiWindow="b36695f5-6692-4163-bac0-29a261607b91"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="e8cc23c1-c72a-4d68-bd8d-048d544f16e7" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="7818cdd0-0b74-4e3c-8194-a5dc4b0c3e91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="b36695f5-6692-4163-bac0-29a261607b91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="c5b5ce25-c9eb-4a9d-bd94-ca3a8957fb02" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\cyfitter_cfg.c" Guid="4dd6ac0a-a3bb-4235-b553-d7defa2e8e2b" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\UART.c" Guid="e57c9edd-128b-4711-b500-16bd995ed9c0" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\PWM_1.c" Guid="f682c05a-8f14-411f-ba94-3acd6b2733be" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="799, 405" SelectedTabbedMdiWindow="e8cc23c1-c72a-4d68-bd8d-048d544f16e7"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="e8cc23c1-c72a-4d68-bd8d-048d544f16e7" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="7818cdd0-0b74-4e3c-8194-a5dc4b0c3e91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="b36695f5-6692-4163-bac0-29a261607b91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="c5b5ce25-c9eb-4a9d-bd94-ca3a8957fb02" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\cyfitter_cfg.c" Guid="4dd6ac0a-a3bb-4235-b553-d7defa2e8e2b" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\UART.c" Guid="e57c9edd-128b-4711-b500-16bd995ed9c0" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\PWM_1.c" Guid="f682c05a-8f14-411f-ba94-3acd6b2733be" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\ADC_0.c" Guid="0d17d2e7-359c-4766-b93b-f915d7fef4e3" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
