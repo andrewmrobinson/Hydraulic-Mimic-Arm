@@ -12,7 +12,6 @@
 
 #define PSOC_ID_BYTE_ADDRESS          (0x20)
 int psoc_id;
-char psoc_id_string[2];
 
 
 /* Add an explicit reference to the floating point printf library to allow
@@ -240,10 +239,8 @@ CY_ISR(RxIsr)
                   
                 break;
                 case 7: //w - id request
-                    sprintf(psoc_id_string,"%d",psoc_id);
-                    UART_ClearTxBuffer();
-                    CyDelay(500);
-                    UART_PutString(psoc_id_string);
+                    sprintf(sendValue,"%d",psoc_id);
+                    UART_PutString(sendValue);
                     temp[0] = '\0';
                     data_read_mode = 0;
                 break;
@@ -315,8 +312,8 @@ int main()
     
     dt = 0.025; //initialised dt, corrected by timer  below
 
-    //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-    //UART_PutString(sendValue);
+    sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+    UART_PutString(sendValue);
     
     median_timer_Start();
     Timer_1_Start();
@@ -339,9 +336,12 @@ int main()
         }*/
         
         Timer_1_WriteCounter(65535);
+        //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
         sprintf(sendValue,"%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t",adcValue[0],adcValue[1],adcValue[2],adcValue[3],pos[0],pos[1],pos[2],pos[3]);
+        
         UART_PutString(sendValue);
-
+        //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+        //UART_PutString(sendValue);
         /* START PID CODE */
         for(int cyl = 0;cyl<CYL_NO;cyl++){
             if(new_pos_set[cyl]){
