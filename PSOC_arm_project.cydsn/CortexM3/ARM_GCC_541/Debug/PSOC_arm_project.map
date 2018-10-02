@@ -2345,4 +2345,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf elf32-littlearm)
+OUTPUT(C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\CortexM3\ARM_GCC_541\Debug\PSOC_arm_project.elf elf32-littlearm)
