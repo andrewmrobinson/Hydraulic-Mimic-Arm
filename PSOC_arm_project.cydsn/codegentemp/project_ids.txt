@@ -1,6 +1,6 @@
-C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cyprj|779d8be5-af86-4211-93df-0e16ce169585
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e5c65022-eb17-4663-8079-ef77712d5e74
-C:\Users\Andrew\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|fdc49685-5037-4b2d-9660-7da22fc20904
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|77bb7f0f-c428-415c-bfed-3e731f46ca1c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|29e26eb9-dfa7-4e89-87cc-13f308f1d716
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|bfe189a7-0b94-4d9b-b3f7-30e38088b74d
+C:\Users\kevan\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cyprj|6f2b31a8-19be-4fec-a7f0-aaf7e5bdd5fc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|048ca912-f6ad-4554-8d84-1cbf9ac6b317
+C:\Users\kevan\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|f0f18184-8eea-4df3-8330-063b4d83d21c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|6bb5982a-b696-4df6-b2aa-e293361ff5df
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|0104265e-4175-45a1-a14d-8cbf75ad1241
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|34723059-6b90-4d74-91d3-483dfc45840a

@@ -1,6 +1,6 @@
 // ======================================================================
 // PSOC_arm_project.v generated from TopDesign.cysch
-// 09/27/2018 at 16:24
+// 10/01/2018 at 19:54
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
