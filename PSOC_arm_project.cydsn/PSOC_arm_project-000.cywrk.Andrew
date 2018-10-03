@@ -109,40 +109,7 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\project.h</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>PSOC_arm_project-000</v>
-<v>PSOC_arm_project-000\PSOC_arm_project</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\Pins</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\Analog</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\Clocks</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\Interrupts</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\DMA</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\System</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\Directives</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\Flash Security</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.cydwr\EEPROM</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Header Files</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Header Files\common.h</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Header Files\cyapicallbacks.h</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Source Files</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Source Files\debug.c</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Source Files\main.c</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CE210741_UART_Full_Duplex_and_printf_Support_with_PSoC_3_4_5LP.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\cmsis_armcc.h</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\cmsis_compiler.h</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\cmsis_gcc.h</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -162,23 +129,7 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC5\TopDesign.ctl</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>PSOC_arm_project-000</v>
-<v>PSOC_arm_project-000\PSOC_arm_project</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC3</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC3\TopDesign.ctl</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC4</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC4\PSoC 4200</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC4\PSoC 4200\TopDesign.ctl</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC4\PSoC 4200 BLE</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC4\PSoC 4200 BLE\TopDesign.ctl</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC4\PSoC 4200L</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC4\PSoC 4200L\TopDesign.ctl</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC5</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\PSoC5\TopDesign.ctl</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\TopDesign\TopDesign.cysch</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -245,40 +196,7 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project.rpt</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\PSOC_arm_project_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>PSOC_arm_project-000</v>
-<v>PSOC_arm_project-000\PSOC_arm_project</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_Bypass.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_INT.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_IRQ.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_0_theACLK.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_0.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_2.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\adc_pin_3.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\AMux_0.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyScBoostClk.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\debug.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\EEPROM.lst</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -309,29 +227,7 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>PSOC_arm_project-000</v>
-<v>PSOC_arm_project-000\PSOC_arm_project</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PSoC 5LP Architecture TRM</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CY8C58LP Family Datasheet</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\System Reference Guides\cy_boot_v5_60</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ADC_SAR_v3_10.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\AMux_v1_80.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_clock_v2_20.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\EEPROM_v3_0.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\PWM_v3_30\PWM_v3_30.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Timer_v2_80\Timer_v2_80.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\UART_v2_50.pdf</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\ZeroTerminal\ZeroTerminal.pdf</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
@@ -356,7 +252,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 405" SelectedTabbedMdiWindow="e8cc23c1-c72a-4d68-bd8d-048d544f16e7"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="e8cc23c1-c72a-4d68-bd8d-048d544f16e7" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="7818cdd0-0b74-4e3c-8194-a5dc4b0c3e91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="b36695f5-6692-4163-bac0-29a261607b91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="c5b5ce25-c9eb-4a9d-bd94-ca3a8957fb02" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\cyfitter_cfg.c" Guid="4dd6ac0a-a3bb-4235-b553-d7defa2e8e2b" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\UART.c" Guid="e57c9edd-128b-4711-b500-16bd995ed9c0" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\PWM_1.c" Guid="f682c05a-8f14-411f-ba94-3acd6b2733be" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\ADC_0.c" Guid="0d17d2e7-359c-4766-b93b-f915d7fef4e3" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="874, 405" SelectedTabbedMdiWindow="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a"><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\TopDesign\TopDesign.cysch" Guid="cb9f3ee3-8af0-4cab-afa9-8f5e5077422a" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\main.c" Guid="e8cc23c1-c72a-4d68-bd8d-048d544f16e7" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\PSOC_arm_project.cydwr" Guid="7818cdd0-0b74-4e3c-8194-a5dc4b0c3e91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s" Guid="b36695f5-6692-4163-bac0-29a261607b91" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\Cm3Start.c" Guid="c5b5ce25-c9eb-4a9d-bd94-ca3a8957fb02" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\cyfitter_cfg.c" Guid="4dd6ac0a-a3bb-4235-b553-d7defa2e8e2b" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\UART.c" Guid="e57c9edd-128b-4711-b500-16bd995ed9c0" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\PWM_1.c" Guid="f682c05a-8f14-411f-ba94-3acd6b2733be" /><DocumentWindow Key="C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PSOC_arm_project.cydsn\Generated_Source\PSoC5\ADC_0.c" Guid="0d17d2e7-359c-4766-b93b-f915d7fef4e3" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="4268b3a9-659b-4787-84be-a52482330599" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
