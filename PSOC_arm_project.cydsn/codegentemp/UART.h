@@ -36,7 +36,7 @@
 #define UART_INTERNAL_CLOCK_USED            (1u)
 #define UART_RXHW_ADDRESS_ENABLED           (0u)
 #define UART_OVER_SAMPLE_COUNT              (8u)
-#define UART_PARITY_TYPE                    (0u)
+#define UART_PARITY_TYPE                    (1u)
 #define UART_PARITY_TYPE_SW                 (0u)
 #define UART_BREAK_DETECT                   (0u)
 #define UART_BREAK_BITS_TX                  (13u)
