@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSOC_arm_project-000\PSOC_arm_project\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSOC_arm_project-000\PSOC_arm_project\TopDesign">
 <ExpandedNodeIds>
 <v>PSOC_arm_project-000</v>
 <v>PSOC_arm_project-000\PSOC_arm_project</v>
@@ -147,8 +147,6 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\cypins.h</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -295,8 +293,6 @@
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
 <v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2_PM.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3.lst</v>
-<v>PSOC_arm_project-000\PSOC_arm_project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_3_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

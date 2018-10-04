@@ -264,7 +264,7 @@ int main()
             break;
         case 17:
             offsets[0][0] = 117;offsets[0][1] = 218;
-            offsets[1][0] = 60;offsets[1][1] = 243;
+            offsets[1][0] = 50;offsets[1][1] = 230;
             offsets[2][0] = 152;offsets[2][1] = 204;
             offsets[3][0] = 78;offsets[3][1] = 250;
             break;
@@ -435,6 +435,10 @@ int main()
         dts_ct++;
         if(dts_ct>29){
             dts_ct=0;
+        }
+        if(UART_ReadRxStatus()==32)
+        {
+            UART_ClearRxBuffer();
         }
         
     }

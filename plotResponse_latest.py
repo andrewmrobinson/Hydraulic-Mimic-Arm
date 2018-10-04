@@ -1,7 +1,7 @@
 import numpy as np
 # import matplotlib
 # matplotlib.use('Agg')
-
+import pyqtgraph as pg
 import matplotlib.pyplot as plt
 import os
 import re

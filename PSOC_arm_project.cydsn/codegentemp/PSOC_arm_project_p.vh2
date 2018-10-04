@@ -1,5 +1,5 @@
 -- Project:   PSOC_arm_project
--- Generated: 10/01/2018 19:55:05
+-- Generated: 10/03/2018 16:42:50
 -- PSoC Creator  4.2
 
 ENTITY PSOC_arm_project IS
@@ -166,11 +166,15 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     SIGNAL \UART:BUART:rx_fifonotempty\ : bit;
     SIGNAL \UART:BUART:rx_last\ : bit;
     SIGNAL \UART:BUART:rx_load_fifo\ : bit;
+    SIGNAL \UART:BUART:rx_parity_bit\ : bit;
+    SIGNAL \UART:BUART:rx_parity_error_pre\ : bit;
     SIGNAL \UART:BUART:rx_postpoll\ : bit;
+    ATTRIBUTE soft OF \UART:BUART:rx_postpoll\ : SIGNAL IS 1;
     SIGNAL \UART:BUART:rx_state_0\ : bit;
     SIGNAL \UART:BUART:rx_state_2\ : bit;
     SIGNAL \UART:BUART:rx_state_3\ : bit;
     SIGNAL \UART:BUART:rx_state_stop1_reg\ : bit;
+    SIGNAL \UART:BUART:rx_status_2\ : bit;
     SIGNAL \UART:BUART:rx_status_3\ : bit;
     SIGNAL \UART:BUART:rx_status_4\ : bit;
     SIGNAL \UART:BUART:rx_status_5\ : bit;
@@ -180,6 +184,7 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     SIGNAL \UART:BUART:tx_ctrl_mark_last\ : bit;
     SIGNAL \UART:BUART:tx_fifo_empty\ : bit;
     SIGNAL \UART:BUART:tx_fifo_notfull\ : bit;
+    SIGNAL \UART:BUART:tx_parity_bit\ : bit;
     SIGNAL \UART:BUART:tx_shift_out\ : bit;
     SIGNAL \UART:BUART:tx_state_0\ : bit;
     SIGNAL \UART:BUART:tx_state_1\ : bit;
@@ -340,32 +345,36 @@ ARCHITECTURE __DEFAULT__ OF PSOC_arm_project IS
     ATTRIBUTE lib_model OF \UART:BUART:tx_state_2\ : LABEL IS "macrocell18";
     ATTRIBUTE lib_model OF \UART:BUART:tx_bitclk\ : LABEL IS "macrocell19";
     ATTRIBUTE lib_model OF \UART:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell20";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_0\ : LABEL IS "macrocell21";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_load_fifo\ : LABEL IS "macrocell22";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_3\ : LABEL IS "macrocell23";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_2\ : LABEL IS "macrocell24";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "macrocell25";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF \UART:BUART:pollcount_1\ : LABEL IS "macrocell27";
-    ATTRIBUTE lib_model OF \UART:BUART:pollcount_0\ : LABEL IS "macrocell28";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_status_3\ : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF \UART:BUART:rx_last\ : LABEL IS "macrocell30";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell31";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell32";
-    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_0\ : LABEL IS "macrocell33";
-    ATTRIBUTE lib_model OF Net_442 : LABEL IS "macrocell34";
-    ATTRIBUTE lib_model OF \PWM_0:PWMUDB:runmode_enable\ : LABEL IS "macrocell35";
-    ATTRIBUTE lib_model OF \PWM_0:PWMUDB:prevCompare1\ : LABEL IS "macrocell36";
-    ATTRIBUTE lib_model OF \PWM_0:PWMUDB:status_0\ : LABEL IS "macrocell37";
-    ATTRIBUTE lib_model OF Net_75 : LABEL IS "macrocell38";
-    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:runmode_enable\ : LABEL IS "macrocell39";
-    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:prevCompare1\ : LABEL IS "macrocell40";
-    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:status_0\ : LABEL IS "macrocell41";
-    ATTRIBUTE lib_model OF Net_470 : LABEL IS "macrocell42";
-    ATTRIBUTE lib_model OF \PWM_3:PWMUDB:runmode_enable\ : LABEL IS "macrocell43";
-    ATTRIBUTE lib_model OF \PWM_3:PWMUDB:prevCompare1\ : LABEL IS "macrocell44";
-    ATTRIBUTE lib_model OF \PWM_3:PWMUDB:status_0\ : LABEL IS "macrocell45";
-    ATTRIBUTE lib_model OF Net_510 : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF \UART:BUART:tx_parity_bit\ : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_0\ : LABEL IS "macrocell22";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_load_fifo\ : LABEL IS "macrocell23";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_3\ : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_2\ : LABEL IS "macrocell25";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_bitclk_enable\ : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF \UART:BUART:pollcount_1\ : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF \UART:BUART:pollcount_0\ : LABEL IS "macrocell29";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_status_2\ : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_status_3\ : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_parity_error_pre\ : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_last\ : LABEL IS "macrocell33";
+    ATTRIBUTE lib_model OF \UART:BUART:rx_parity_bit\ : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:runmode_enable\ : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:prevCompare1\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \PWM_1:PWMUDB:status_0\ : LABEL IS "macrocell37";
+    ATTRIBUTE lib_model OF Net_442 : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF \PWM_0:PWMUDB:runmode_enable\ : LABEL IS "macrocell39";
+    ATTRIBUTE lib_model OF \PWM_0:PWMUDB:prevCompare1\ : LABEL IS "macrocell40";
+    ATTRIBUTE lib_model OF \PWM_0:PWMUDB:status_0\ : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF Net_75 : LABEL IS "macrocell42";
+    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:runmode_enable\ : LABEL IS "macrocell43";
+    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:prevCompare1\ : LABEL IS "macrocell44";
+    ATTRIBUTE lib_model OF \PWM_2:PWMUDB:status_0\ : LABEL IS "macrocell45";
+    ATTRIBUTE lib_model OF Net_470 : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF \PWM_3:PWMUDB:runmode_enable\ : LABEL IS "macrocell47";
+    ATTRIBUTE lib_model OF \PWM_3:PWMUDB:prevCompare1\ : LABEL IS "macrocell48";
+    ATTRIBUTE lib_model OF \PWM_3:PWMUDB:status_0\ : LABEL IS "macrocell49";
+    ATTRIBUTE lib_model OF Net_510 : LABEL IS "macrocell50";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -1819,6 +1828,7 @@ BEGIN
 
     \UART:BUART:rx_postpoll\:macrocell
         GENERIC MAP(
+            soft => 1,
             eqn_main => "(main_0) + (main_1 * main_2)",
             regmode => 0,
             clken_mode => 1)
@@ -2073,7 +2083,7 @@ BEGIN
             status_5 => \UART:BUART:rx_status_5\,
             status_4 => \UART:BUART:rx_status_4\,
             status_3 => \UART:BUART:rx_status_3\,
-            status_2 => open,
+            status_2 => \UART:BUART:rx_status_2\,
             status_1 => open,
             status_0 => open,
             interrupt => Net_104);
@@ -2813,7 +2823,7 @@ BEGIN
 
     \UART:BUART:txn\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * !main_6) + (main_0 * main_4) + (!main_1 * main_2 * !main_3 * !main_4) + (!main_1 * main_2 * !main_4 * !main_6) + (main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6)",
+            eqn_main => "(!main_0 * main_1 * !main_2 * !main_4 * main_5 * main_6 * main_7) + (main_0 * main_1 * !main_2 * main_5 * !main_7) + (main_0 * main_1 * !main_6) + (main_0 * main_4) + (!main_1 * main_2 * !main_3 * !main_4) + (!main_1 * main_2 * !main_4 * !main_6) + (main_1 * !main_2 * !main_3 * !main_4 * !main_5 * main_6)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -2826,11 +2836,12 @@ BEGIN
             main_3 => \UART:BUART:tx_shift_out\,
             main_4 => \UART:BUART:tx_state_2\,
             main_5 => \UART:BUART:tx_counter_dp\,
-            main_6 => \UART:BUART:tx_bitclk\);
+            main_6 => \UART:BUART:tx_bitclk\,
+            main_7 => \UART:BUART:tx_parity_bit\);
 
     \UART:BUART:tx_state_1\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * main_3) + (main_0 * !main_3 * main_4 * main_5) + (main_1 * !main_3 * main_5)",
+            eqn_main => "(main_0 * main_1 * main_2 * main_3) + (main_1 * !main_3 * main_4)",
             regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
@@ -2841,12 +2852,11 @@ BEGIN
             main_1 => \UART:BUART:tx_state_0\,
             main_2 => \UART:BUART:tx_bitclk_enable_pre\,
             main_3 => \UART:BUART:tx_state_2\,
-            main_4 => \UART:BUART:tx_counter_dp\,
-            main_5 => \UART:BUART:tx_bitclk\);
+            main_4 => \UART:BUART:tx_bitclk\);
 
     \UART:BUART:tx_state_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3) + (!main_0 * !main_1 * !main_3 * !main_4) + (main_0 * main_1 * main_2 * main_3 * main_4) + (main_1 * !main_4 * main_5)",
+            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3) + (!main_0 * !main_1 * !main_3 * !main_4) + (main_0 * main_1 * main_2 * main_3 * main_4) + (main_0 * !main_4 * main_5 * main_6) + (main_1 * !main_4 * main_6)",
             regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
@@ -2858,11 +2868,12 @@ BEGIN
             main_2 => \UART:BUART:tx_bitclk_enable_pre\,
             main_3 => \UART:BUART:tx_fifo_empty\,
             main_4 => \UART:BUART:tx_state_2\,
-            main_5 => \UART:BUART:tx_bitclk\);
+            main_5 => \UART:BUART:tx_counter_dp\,
+            main_6 => \UART:BUART:tx_bitclk\);
 
     \UART:BUART:tx_state_2\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2 * main_3) + (main_0 * main_1 * main_2 * main_3) + (main_0 * main_1 * !main_3 * main_5) + (main_0 * !main_3 * main_4 * main_5)",
+            eqn_main => "(!main_0 * !main_1 * main_2 * main_3) + (main_0 * main_1 * main_2 * main_3) + (main_0 * main_1 * !main_3 * main_4)",
             regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
@@ -2873,8 +2884,7 @@ BEGIN
             main_1 => \UART:BUART:tx_state_0\,
             main_2 => \UART:BUART:tx_bitclk_enable_pre\,
             main_3 => \UART:BUART:tx_state_2\,
-            main_4 => \UART:BUART:tx_counter_dp\,
-            main_5 => \UART:BUART:tx_bitclk\);
+            main_4 => \UART:BUART:tx_bitclk\);
 
     \UART:BUART:tx_bitclk\:macrocell
         GENERIC MAP(
@@ -2900,9 +2910,25 @@ BEGIN
             q => \UART:BUART:tx_ctrl_mark_last\,
             clock_0 => \UART:Net_9\);
 
+    \UART:BUART:tx_parity_bit\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * !main_2 * !main_3 * main_4) + (!main_1 * main_2 * !main_3 * main_4 * main_5)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \UART:BUART:tx_parity_bit\,
+            clock_0 => \UART:Net_9\,
+            main_0 => \UART:BUART:txn\,
+            main_1 => \UART:BUART:tx_state_1\,
+            main_2 => \UART:BUART:tx_state_0\,
+            main_3 => \UART:BUART:tx_state_2\,
+            main_4 => \UART:BUART:tx_bitclk\,
+            main_5 => \UART:BUART:tx_parity_bit\);
+
     \UART:BUART:rx_state_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_8 * !main_9) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_8 * !main_10) + (!main_0 * main_1 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_3 * !main_4 * !main_5 * !main_7)",
+            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5) + (!main_0 * main_1 * !main_4 * !main_5 * !main_6 * !main_7) + (!main_0 * main_1 * !main_4 * !main_5 * !main_6 * !main_8)",
             regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
@@ -2912,18 +2938,16 @@ BEGIN
             main_0 => \UART:BUART:tx_ctrl_mark_last\,
             main_1 => \UART:BUART:rx_state_0\,
             main_2 => \UART:BUART:rx_bitclk_enable\,
-            main_3 => \UART:BUART:rx_state_3\,
-            main_4 => \UART:BUART:rx_state_2\,
-            main_5 => \UART:BUART:rx_count_6\,
-            main_6 => \UART:BUART:rx_count_5\,
-            main_7 => \UART:BUART:rx_count_4\,
-            main_8 => \UART:BUART:pollcount_1\,
-            main_9 => Net_102,
-            main_10 => \UART:BUART:pollcount_0\);
+            main_3 => \UART:BUART:rx_postpoll\,
+            main_4 => \UART:BUART:rx_state_3\,
+            main_5 => \UART:BUART:rx_state_2\,
+            main_6 => \UART:BUART:rx_count_6\,
+            main_7 => \UART:BUART:rx_count_5\,
+            main_8 => \UART:BUART:rx_count_4\);
 
     \UART:BUART:rx_load_fifo\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2 * main_3 * !main_4) + (!main_0 * main_1 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_3 * !main_4 * !main_5 * !main_7)",
+            eqn_main => "(!main_0 * !main_1 * main_2 * main_3 * !main_4)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -2934,10 +2958,7 @@ BEGIN
             main_1 => \UART:BUART:rx_state_0\,
             main_2 => \UART:BUART:rx_bitclk_enable\,
             main_3 => \UART:BUART:rx_state_3\,
-            main_4 => \UART:BUART:rx_state_2\,
-            main_5 => \UART:BUART:rx_count_6\,
-            main_6 => \UART:BUART:rx_count_5\,
-            main_7 => \UART:BUART:rx_count_4\);
+            main_4 => \UART:BUART:rx_state_2\);
 
     \UART:BUART:rx_state_3\:macrocell
         GENERIC MAP(
@@ -2959,7 +2980,7 @@ BEGIN
 
     \UART:BUART:rx_state_2\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2 * main_3) + (!main_0 * !main_1 * main_2 * main_4) + (!main_0 * !main_1 * !main_3 * !main_4 * !main_8 * main_9) + (!main_0 * main_1 * !main_3 * !main_4 * !main_5 * !main_6) + (!main_0 * main_1 * !main_3 * !main_4 * !main_5 * !main_7)",
+            eqn_main => "(!main_0 * !main_1 * main_2 * main_3) + (!main_0 * !main_1 * main_2 * main_4) + (!main_0 * !main_1 * !main_3 * !main_4 * !main_5 * main_6)",
             regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
@@ -2971,11 +2992,8 @@ BEGIN
             main_2 => \UART:BUART:rx_bitclk_enable\,
             main_3 => \UART:BUART:rx_state_3\,
             main_4 => \UART:BUART:rx_state_2\,
-            main_5 => \UART:BUART:rx_count_6\,
-            main_6 => \UART:BUART:rx_count_5\,
-            main_7 => \UART:BUART:rx_count_4\,
-            main_8 => Net_102,
-            main_9 => \UART:BUART:rx_last\);
+            main_5 => Net_102,
+            main_6 => \UART:BUART:rx_last\);
 
     \UART:BUART:rx_bitclk_enable\:macrocell
         GENERIC MAP(
@@ -3033,9 +3051,25 @@ BEGIN
             main_2 => Net_102,
             main_3 => \UART:BUART:pollcount_0\);
 
+    \UART:BUART:rx_status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * main_2 * main_3 * main_4 * main_5)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \UART:BUART:rx_status_2\,
+            clock_0 => \UART:Net_9\,
+            main_0 => \UART:BUART:tx_ctrl_mark_last\,
+            main_1 => \UART:BUART:rx_state_0\,
+            main_2 => \UART:BUART:rx_bitclk_enable\,
+            main_3 => \UART:BUART:rx_state_3\,
+            main_4 => \UART:BUART:rx_state_2\,
+            main_5 => \UART:BUART:rx_parity_error_pre\);
+
     \UART:BUART:rx_status_3\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * !main_7)",
+            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * main_4 * main_5)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
@@ -3045,11 +3079,27 @@ BEGIN
             main_0 => \UART:BUART:tx_ctrl_mark_last\,
             main_1 => \UART:BUART:rx_state_0\,
             main_2 => \UART:BUART:rx_bitclk_enable\,
-            main_3 => \UART:BUART:rx_state_3\,
-            main_4 => \UART:BUART:rx_state_2\,
-            main_5 => \UART:BUART:pollcount_1\,
-            main_6 => Net_102,
-            main_7 => \UART:BUART:pollcount_0\);
+            main_3 => \UART:BUART:rx_postpoll\,
+            main_4 => \UART:BUART:rx_state_3\,
+            main_5 => \UART:BUART:rx_state_2\);
+
+    \UART:BUART:rx_parity_error_pre\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5 * !main_6 * main_7) + (!main_0 * !main_1 * main_2 * main_3 * main_4 * !main_5 * !main_6 * !main_7)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \UART:BUART:rx_parity_error_pre\,
+            clock_0 => \UART:Net_9\,
+            main_0 => \UART:BUART:tx_ctrl_mark_last\,
+            main_1 => \UART:BUART:rx_state_0\,
+            main_2 => \UART:BUART:rx_bitclk_enable\,
+            main_3 => \UART:BUART:rx_postpoll\,
+            main_4 => \UART:BUART:rx_state_3\,
+            main_5 => \UART:BUART:rx_state_2\,
+            main_6 => \UART:BUART:rx_parity_error_pre\,
+            main_7 => \UART:BUART:rx_parity_bit\);
 
     \UART:BUART:rx_last\:macrocell
         GENERIC MAP(
@@ -3061,6 +3111,23 @@ BEGIN
             q => \UART:BUART:rx_last\,
             clock_0 => \UART:Net_9\,
             main_0 => Net_102);
+
+    \UART:BUART:rx_parity_bit\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_1 * main_2 * main_3 * !main_4 * !main_5)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \UART:BUART:rx_parity_bit\,
+            clock_0 => \UART:Net_9\,
+            main_0 => \UART:BUART:tx_ctrl_mark_last\,
+            main_1 => \UART:BUART:rx_state_0\,
+            main_2 => \UART:BUART:rx_bitclk_enable\,
+            main_3 => \UART:BUART:rx_postpoll\,
+            main_4 => \UART:BUART:rx_state_3\,
+            main_5 => \UART:BUART:rx_state_2\,
+            main_6 => \UART:BUART:rx_parity_bit\);
 
     \PWM_1:PWMUDB:runmode_enable\:macrocell
         GENERIC MAP(
