@@ -346,10 +346,10 @@ int main()
             err[cyl] = -pos[cyl] + adcValue[cyl];
             der[cyl] = err[cyl] - prev_err[cyl];
             pid_integral[cyl] = err[cyl]* dt + pid_integral[cyl];
-            if(pid_integral[cyl]>35000){
-                pid_integral[cyl] = 35000;
-            } else if(pid_integral[cyl]<-35000){
-                pid_integral[cyl] = -35000;
+            if(pid_integral[cyl]>3500){
+                pid_integral[cyl] = 3500;
+            } else if(pid_integral[cyl]<-3500){
+                pid_integral[cyl] = -3500;
             }
             pulse_temp[cyl] = pid[0] * err[cyl] + ( pid[1] * pid_integral[cyl] ) + ( pid[2] * der[cyl] / dt );
             
