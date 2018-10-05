@@ -46,7 +46,8 @@ public:
 	long Create(const char *lpszWindowTitle=NULL,
 				int buffer_size_x=-1,int buffer_size_y=-1,
 				const char *logger_name=NULL,
-				const char *helper_executable=NULL);
+				const char *helper_executable=NULL,
+		int			buffer_coord_x = -1, int buffer_coord_y = -1);
 
 	// close everything
 	long Close(void);

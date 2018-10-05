@@ -42,7 +42,8 @@ CConsoleLogger::~CConsoleLogger()
 long CConsoleLogger::Create(const char	*lpszWindowTitle/*=NULL*/,
 							int			buffer_size_x/*=-1*/,int buffer_size_y/*=-1*/,
 							const char	*logger_name/*=NULL*/,
-							const char	*helper_executable/*=NULL*/)
+							const char	*helper_executable/*=NULL*/,
+							int			buffer_coord_x/*=-1*/,int buffer_coord_y/*=-1*/)
 {
 	
 	// Ensure there's no pipe connected
@@ -164,6 +165,7 @@ long CConsoleLogger::Create(const char	*lpszWindowTitle/*=NULL*/,
 		}
 	}
 
+	
 	// Send more headers. you can override the AddHeaders() function to 
 	// extend this class
 	if (AddHeaders())
