@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
   22:Generated_Source\PSoC5/median_timer.c **** ********************************************************************************/
   23:Generated_Source\PSoC5/median_timer.c **** 
   24:Generated_Source\PSoC5/median_timer.c **** #include "median_timer.h"
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 2
 
 
   25:Generated_Source\PSoC5/median_timer.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
   52              		.loc 1 60 0
   53 0014 1F4A     		ldr	r2, .L2+4
   54 0016 1F4B     		ldr	r3, .L2+4
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 3
 
 
   55 0018 1B78     		ldrb	r3, [r3]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
   63 0028 1B78     		ldrb	r3, [r3]
   64 002a DBB2     		uxtb	r3, r3
   65 002c 23F03003 		bic	r3, r3, #48
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 4
 
 
   66 0030 DBB2     		uxtb	r3, r3
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  121:Generated_Source\PSoC5/median_timer.c ****     #if (median_timer_UsingHWCaptureCounter)/* Capture counter is enabled */
  122:Generated_Source\PSoC5/median_timer.c ****         median_timer_CAPTURE_COUNT_CTRL |= median_timer_CNTR_ENABLE;
  123:Generated_Source\PSoC5/median_timer.c ****         median_timer_SetCaptureCount(median_timer_INIT_CAPTURE_COUNT);
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 5
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 5
 
 
  124:Generated_Source\PSoC5/median_timer.c ****     #endif /* Configure capture counter value */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  120              	.LFE0:
  121              		.size	median_timer_Init, .-median_timer_Init
  122              		.section	.text.median_timer_Enable,"ax",%progbits
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 6
 
 
  123              		.align	2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  155 0022 1370     		strb	r3, [r2]
  186:Generated_Source\PSoC5/median_timer.c ****     #endif /* Set Enable bit for enabling Fixed function timer*/
  187:Generated_Source\PSoC5/median_timer.c **** 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 7
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 7
 
 
  188:Generated_Source\PSoC5/median_timer.c ****     /* Remove assignment if control register is removed */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  208:Generated_Source\PSoC5/median_timer.c **** *  void
  209:Generated_Source\PSoC5/median_timer.c **** *
  210:Generated_Source\PSoC5/median_timer.c **** * Global variables:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 8
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 8
 
 
  211:Generated_Source\PSoC5/median_timer.c **** *  median_timer_initVar: Is modified when this function is called for the
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  228              		.thumb_func
  229              		.type	median_timer_Stop, %function
  230              	median_timer_Stop:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 9
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 9
 
 
  231              	.LFB3:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  255 001c 23F00103 		bic	r3, r3, #1
  256 0020 DBB2     		uxtb	r3, r3
  257 0022 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 10
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 10
 
 
  257:Generated_Source\PSoC5/median_timer.c ****         median_timer_GLOBAL_STBY_ENABLE &= ((uint8)(~median_timer_BLOCK_STBY_EN_MASK));
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  277:Generated_Source\PSoC5/median_timer.c **** *
  278:Generated_Source\PSoC5/median_timer.c **** *******************************************************************************/
  279:Generated_Source\PSoC5/median_timer.c **** void median_timer_SetInterruptMode(uint8 interruptMode) 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 11
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 11
 
 
  280:Generated_Source\PSoC5/median_timer.c **** {
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  290:Generated_Source\PSoC5/median_timer.c **** *  This function forces a capture independent of the capture signal.
  291:Generated_Source\PSoC5/median_timer.c **** *
  292:Generated_Source\PSoC5/median_timer.c **** * Parameters:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 12
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 12
 
 
  293:Generated_Source\PSoC5/median_timer.c **** *  void
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  371              	median_timer_ReadStatusRegister:
  372              	.LFB6:
  312:Generated_Source\PSoC5/median_timer.c **** 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 13
 
 
  313:Generated_Source\PSoC5/median_timer.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  403              		.section	.text.median_timer_ReadControlRegister,"ax",%progbits
  404              		.align	2
  405              		.global	median_timer_ReadControlRegister
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 14
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 14
 
 
  406              		.thumb
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  433 0010 7047     		bx	lr
  434              	.L27:
  435 0012 00BF     		.align	2
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 15
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 15
 
 
  436              	.L26:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  467              		.loc 1 386 0
  468 0010 00BF     		nop
  469 0012 0C37     		adds	r7, r7, #12
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 16
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 16
 
 
  470              		.cfi_def_cfa_offset 4
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  408:Generated_Source\PSoC5/median_timer.c ****        return ((uint16)CY_GET_REG16(median_timer_PERIOD_LSB_PTR));
  503              		.loc 1 408 0
  504 0004 034B     		ldr	r3, .L33
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 17
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 17
 
 
  505 0006 1B88     		ldrh	r3, [r3]	@ movhi
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  535              		@ link register save eliminated.
  536 0000 80B4     		push	{r7}
  537              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 18
 
 
  538              		.cfi_offset 7, -4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  447:Generated_Source\PSoC5/median_timer.c **** *  This function returns the last value captured.
  448:Generated_Source\PSoC5/median_timer.c **** *
  449:Generated_Source\PSoC5/median_timer.c **** * Parameters:
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 19
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 19
 
 
  450:Generated_Source\PSoC5/median_timer.c **** *  void
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  466:Generated_Source\PSoC5/median_timer.c **** /*******************************************************************************
  467:Generated_Source\PSoC5/median_timer.c **** * Function Name: median_timer_WriteCounter
  468:Generated_Source\PSoC5/median_timer.c **** ********************************************************************************
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 20
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 20
 
 
  469:Generated_Source\PSoC5/median_timer.c **** *
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  647              	.L43:
  648 001c 064F0040 		.word	1073762054
  649              		.cfi_endproc
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 21
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 21
 
 
  650              	.LFE12:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  674 0008 044B     		ldr	r3, .L47+4
  675 000a 1B88     		ldrh	r3, [r3]	@ movhi
  676 000c 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 22
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 22
 
 
  522:Generated_Source\PSoC5/median_timer.c ****     #else
@@ -1294,15 +1294,15 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  703 000b 01       		.uleb128 0x1
  704 000c 06000000 		.4byte	.LASF36
  705 0010 0C       		.byte	0xc
- 706 0011 91020000 		.4byte	.LASF37
- 707 0015 A5010000 		.4byte	.LASF38
+ 706 0011 92020000 		.4byte	.LASF37
+ 707 0015 46020000 		.4byte	.LASF38
  708 0019 00000000 		.4byte	.Ldebug_ranges0+0
  709 001d 00000000 		.4byte	0
  710 0021 00000000 		.4byte	.Ldebug_line0
  711 0025 02       		.uleb128 0x2
  712 0026 01       		.byte	0x1
  713 0027 06       		.byte	0x6
- 714 0028 EA020000 		.4byte	.LASF0
+ 714 0028 EB020000 		.4byte	.LASF0
  715 002c 02       		.uleb128 0x2
  716 002d 01       		.byte	0x1
  717 002e 08       		.byte	0x8
@@ -1310,7 +1310,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  719 0033 02       		.uleb128 0x2
  720 0034 02       		.byte	0x2
  721 0035 05       		.byte	0x5
- 722 0036 65020000 		.4byte	.LASF2
+ 722 0036 3C020000 		.4byte	.LASF2
  723 003a 02       		.uleb128 0x2
  724 003b 02       		.byte	0x2
  725 003c 07       		.byte	0x7
@@ -1318,10 +1318,10 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  727 0041 02       		.uleb128 0x2
  728 0042 04       		.byte	0x4
  729 0043 05       		.byte	0x5
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 23
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 23
 
 
- 730 0044 B7020000 		.4byte	.LASF4
+ 730 0044 B8020000 		.4byte	.LASF4
  731 0048 02       		.uleb128 0x2
  732 0049 04       		.byte	0x4
  733 004a 07       		.byte	0x7
@@ -1329,11 +1329,11 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  735 004f 02       		.uleb128 0x2
  736 0050 08       		.byte	0x8
  737 0051 05       		.byte	0x5
- 738 0052 49020000 		.4byte	.LASF6
+ 738 0052 20020000 		.4byte	.LASF6
  739 0056 02       		.uleb128 0x2
  740 0057 08       		.byte	0x8
  741 0058 07       		.byte	0x7
- 742 0059 8E010000 		.4byte	.LASF7
+ 742 0059 B0010000 		.4byte	.LASF7
  743 005d 03       		.uleb128 0x3
  744 005e 04       		.byte	0x4
  745 005f 05       		.byte	0x5
@@ -1341,14 +1341,14 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  747 0064 02       		.uleb128 0x2
  748 0065 04       		.byte	0x4
  749 0066 07       		.byte	0x7
- 750 0067 81010000 		.4byte	.LASF8
+ 750 0067 A3010000 		.4byte	.LASF8
  751 006b 04       		.uleb128 0x4
  752 006c 33010000 		.4byte	.LASF9
  753 0070 02       		.byte	0x2
  754 0071 9201     		.2byte	0x192
  755 0073 2C000000 		.4byte	0x2c
  756 0077 04       		.uleb128 0x4
- 757 0078 7A010000 		.4byte	.LASF10
+ 757 0078 9C010000 		.4byte	.LASF10
  758 007c 02       		.byte	0x2
  759 007d 9301     		.2byte	0x193
  760 007f 3A000000 		.4byte	0x3a
@@ -1359,11 +1359,11 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  765 008a 02       		.uleb128 0x2
  766 008b 08       		.byte	0x8
  767 008c 04       		.byte	0x4
- 768 008d 5E010000 		.4byte	.LASF12
+ 768 008d 80010000 		.4byte	.LASF12
  769 0091 02       		.uleb128 0x2
  770 0092 01       		.byte	0x1
  771 0093 08       		.byte	0x8
- 772 0094 C0020000 		.4byte	.LASF13
+ 772 0094 C1020000 		.4byte	.LASF13
  773 0098 04       		.uleb128 0x4
  774 0099 0A010000 		.4byte	.LASF14
  775 009d 02       		.byte	0x2
@@ -1378,17 +1378,17 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  784 00b1 B5000000 		.4byte	0xb5
  785 00b5 05       		.uleb128 0x5
  786 00b6 77000000 		.4byte	0x77
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 24
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 24
 
 
  787 00ba 02       		.uleb128 0x2
  788 00bb 08       		.byte	0x8
  789 00bc 04       		.byte	0x4
- 790 00bd DE020000 		.4byte	.LASF16
+ 790 00bd DF020000 		.4byte	.LASF16
  791 00c1 02       		.uleb128 0x2
  792 00c2 04       		.byte	0x4
  793 00c3 07       		.byte	0x7
- 794 00c4 40020000 		.4byte	.LASF17
+ 794 00c4 17020000 		.4byte	.LASF17
  795 00c8 06       		.uleb128 0x6
  796 00c9 0F010000 		.4byte	.LASF18
  797 00cd 01       		.byte	0x1
@@ -1406,7 +1406,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  809 00e8 01       		.uleb128 0x1
  810 00e9 9C       		.byte	0x9c
  811 00ea 06       		.uleb128 0x6
- 812 00eb 14020000 		.4byte	.LASF20
+ 812 00eb EB010000 		.4byte	.LASF20
  813 00ef 01       		.byte	0x1
  814 00f0 D7       		.byte	0xd7
  815 00f1 00000000 		.4byte	.LFB2
@@ -1422,7 +1422,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  825 010a 01       		.uleb128 0x1
  826 010b 9C       		.byte	0x9c
  827 010c 08       		.uleb128 0x8
- 828 010d 30030000 		.4byte	.LASF25
+ 828 010d 31030000 		.4byte	.LASF25
  829 0111 01       		.byte	0x1
  830 0112 1701     		.2byte	0x117
  831 0114 00000000 		.4byte	.LFB4
@@ -1431,14 +1431,14 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  834 011d 9C       		.byte	0x9c
  835 011e 32010000 		.4byte	0x132
  836 0122 09       		.uleb128 0x9
- 837 0123 57020000 		.4byte	.LASF27
+ 837 0123 2E020000 		.4byte	.LASF27
  838 0127 01       		.byte	0x1
  839 0128 1701     		.2byte	0x117
  840 012a 6B000000 		.4byte	0x6b
  841 012e 02       		.uleb128 0x2
  842 012f 91       		.byte	0x91
  843 0130 77       		.sleb128 -9
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 25
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 25
 
 
  844 0131 00       		.byte	0
@@ -1451,7 +1451,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  851 0142 01       		.uleb128 0x1
  852 0143 9C       		.byte	0x9c
  853 0144 0B       		.uleb128 0xb
- 854 0145 4E030000 		.4byte	.LASF23
+ 854 0145 4F030000 		.4byte	.LASF23
  855 0149 01       		.byte	0x1
  856 014a 4D01     		.2byte	0x14d
  857 014c 6B000000 		.4byte	0x6b
@@ -1460,7 +1460,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  860 0158 01       		.uleb128 0x1
  861 0159 9C       		.byte	0x9c
  862 015a 0B       		.uleb128 0xb
- 863 015b F6020000 		.4byte	.LASF24
+ 863 015b F7020000 		.4byte	.LASF24
  864 015f 01       		.byte	0x1
  865 0160 6401     		.2byte	0x164
  866 0162 6B000000 		.4byte	0x6b
@@ -1469,7 +1469,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  869 016e 01       		.uleb128 0x1
  870 016f 9C       		.byte	0x9c
  871 0170 08       		.uleb128 0x8
- 872 0171 6F020000 		.4byte	.LASF26
+ 872 0171 5E010000 		.4byte	.LASF26
  873 0175 01       		.byte	0x1
  874 0176 7B01     		.2byte	0x17b
  875 0178 00000000 		.4byte	.LFB8
@@ -1487,7 +1487,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  887 0194 77       		.sleb128 -9
  888 0195 00       		.byte	0
  889 0196 0B       		.uleb128 0xb
- 890 0197 FC010000 		.4byte	.LASF29
+ 890 0197 D3010000 		.4byte	.LASF29
  891 019b 01       		.byte	0x1
  892 019c 9501     		.2byte	0x195
  893 019e 77000000 		.4byte	0x77
@@ -1496,9 +1496,9 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  896 01aa 01       		.uleb128 0x1
  897 01ab 9C       		.byte	0x9c
  898 01ac 08       		.uleb128 0x8
- 899 01ad 17030000 		.4byte	.LASF30
+ 899 01ad 18030000 		.4byte	.LASF30
  900 01b1 01       		.byte	0x1
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 26
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 26
 
 
  901 01b2 AF01     		.2byte	0x1af
@@ -1516,7 +1516,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  913 01cf 91       		.byte	0x91
  914 01d0 6E       		.sleb128 -18
  915 01d1 0C       		.uleb128 0xc
- 916 01d2 F0010000 		.4byte	.LASF39
+ 916 01d2 C7010000 		.4byte	.LASF39
  917 01d6 01       		.byte	0x1
  918 01d7 B201     		.2byte	0x1b2
  919 01d9 77000000 		.4byte	0x77
@@ -1525,7 +1525,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  922 01df 76       		.sleb128 -10
  923 01e0 00       		.byte	0
  924 01e1 0B       		.uleb128 0xb
- 925 01e2 27020000 		.4byte	.LASF32
+ 925 01e2 FE010000 		.4byte	.LASF32
  926 01e6 01       		.byte	0x1
  927 01e7 C801     		.2byte	0x1c8
  928 01e9 77000000 		.4byte	0x77
@@ -1552,19 +1552,19 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  949 021b 76       		.sleb128 -10
  950 021c 00       		.byte	0
  951 021d 0B       		.uleb128 0xb
- 952 021e C5020000 		.4byte	.LASF35
+ 952 021e C6020000 		.4byte	.LASF35
  953 0222 01       		.byte	0x1
  954 0223 FC01     		.2byte	0x1fc
  955 0225 77000000 		.4byte	0x77
  956 0229 00000000 		.4byte	.LFB13
  957 022d 20000000 		.4byte	.LFE13-.LFB13
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 27
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 27
 
 
  958 0231 01       		.uleb128 0x1
  959 0232 9C       		.byte	0x9c
  960 0233 0D       		.uleb128 0xd
- 961 0234 65010000 		.4byte	.LASF40
+ 961 0234 87010000 		.4byte	.LASF40
  962 0238 01       		.byte	0x1
  963 0239 1A       		.byte	0x1a
  964 023a 6B000000 		.4byte	0x6b
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  1012 0029 04       		.uleb128 0x4
  1013 002a 16       		.uleb128 0x16
  1014 002b 00       		.byte	0
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 28
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 28
 
 
  1015 002c 03       		.uleb128 0x3
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  1069 0063 01       		.uleb128 0x1
  1070 0064 12       		.uleb128 0x12
  1071 0065 06       		.uleb128 0x6
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 29
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 29
 
 
  1072 0066 40       		.uleb128 0x40
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  1126 009e 0B       		.uleb128 0xb
  1127 009f 3B       		.uleb128 0x3b
  1128 00a0 05       		.uleb128 0x5
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 30
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 30
 
 
  1129 00a1 27       		.uleb128 0x27
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  1183 00d9 00       		.byte	0
  1184 00da 03       		.uleb128 0x3
  1185 00db 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 31
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 31
 
 
  1186 00dc 3A       		.uleb128 0x3a
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  1240 0004 A0000000 		.4byte	.LFE0
  1241 0008 00000000 		.4byte	.LFB1
  1242 000c 48000000 		.4byte	.LFE1
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 32
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 32
 
 
  1243 0010 00000000 		.4byte	.LFB2
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  1279      616E5F74 
  1279      696D6572 
  1279      5F456E61 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 33
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 33
 
 
  1279      626C6500 
@@ -1978,145 +1978,145 @@ ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 1
  1304              	.LASF22:
  1305 0141 6D656469 		.ascii	"median_timer_SoftwareCapture\000"
  1305      616E5F74 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 34
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 34
 
 
  1305      696D6572 
  1305      5F536F66 
  1305      74776172 
- 1306              	.LASF12:
- 1307 015e 646F7562 		.ascii	"double\000"
- 1307      6C6500
- 1308              	.LASF40:
- 1309 0165 6D656469 		.ascii	"median_timer_initVar\000"
- 1309      616E5F74 
- 1309      696D6572 
- 1309      5F696E69 
- 1309      74566172 
- 1310              	.LASF10:
- 1311 017a 75696E74 		.ascii	"uint16\000"
- 1311      313600
- 1312              	.LASF8:
- 1313 0181 756E7369 		.ascii	"unsigned int\000"
- 1313      676E6564 
- 1313      20696E74 
- 1313      00
- 1314              	.LASF7:
- 1315 018e 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1315      206C6F6E 
- 1315      6720756E 
- 1315      7369676E 
- 1315      65642069 
- 1316              	.LASF38:
- 1317 01a5 433A5C55 		.ascii	"C:\\Users\\kevan\\Documents\\GitHub\\Hydraulic-Mimi"
- 1317      73657273 
- 1317      5C6B6576 
- 1317      616E5C44 
- 1317      6F63756D 
- 1318 01d3 632D4172 		.ascii	"c-Arm\\PSOC_arm_project.cydsn\000"
- 1318      6D5C5053 
- 1318      4F435F61 
- 1318      726D5F70 
- 1318      726F6A65 
- 1319              	.LASF39:
- 1320 01f0 70657269 		.ascii	"period_temp\000"
- 1320      6F645F74 
- 1320      656D7000 
- 1321              	.LASF29:
- 1322 01fc 6D656469 		.ascii	"median_timer_ReadPeriod\000"
- 1322      616E5F74 
- 1322      696D6572 
- 1322      5F526561 
- 1322      64506572 
- 1323              	.LASF20:
- 1324 0214 6D656469 		.ascii	"median_timer_Start\000"
- 1324      616E5F74 
- 1324      696D6572 
- 1324      5F537461 
- 1324      727400
- 1325              	.LASF32:
- 1326 0227 6D656469 		.ascii	"median_timer_ReadCapture\000"
- 1326      616E5F74 
- 1326      696D6572 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 35
+ 1306              	.LASF26:
+ 1307 015e 6D656469 		.ascii	"median_timer_WriteControlRegister\000"
+ 1307      616E5F74 
+ 1307      696D6572 
+ 1307      5F577269 
+ 1307      7465436F 
+ 1308              	.LASF12:
+ 1309 0180 646F7562 		.ascii	"double\000"
+ 1309      6C6500
+ 1310              	.LASF40:
+ 1311 0187 6D656469 		.ascii	"median_timer_initVar\000"
+ 1311      616E5F74 
+ 1311      696D6572 
+ 1311      5F696E69 
+ 1311      74566172 
+ 1312              	.LASF10:
+ 1313 019c 75696E74 		.ascii	"uint16\000"
+ 1313      313600
+ 1314              	.LASF8:
+ 1315 01a3 756E7369 		.ascii	"unsigned int\000"
+ 1315      676E6564 
+ 1315      20696E74 
+ 1315      00
+ 1316              	.LASF7:
+ 1317 01b0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1317      206C6F6E 
+ 1317      6720756E 
+ 1317      7369676E 
+ 1317      65642069 
+ 1318              	.LASF39:
+ 1319 01c7 70657269 		.ascii	"period_temp\000"
+ 1319      6F645F74 
+ 1319      656D7000 
+ 1320              	.LASF29:
+ 1321 01d3 6D656469 		.ascii	"median_timer_ReadPeriod\000"
+ 1321      616E5F74 
+ 1321      696D6572 
+ 1321      5F526561 
+ 1321      64506572 
+ 1322              	.LASF20:
+ 1323 01eb 6D656469 		.ascii	"median_timer_Start\000"
+ 1323      616E5F74 
+ 1323      696D6572 
+ 1323      5F537461 
+ 1323      727400
+ 1324              	.LASF32:
+ 1325 01fe 6D656469 		.ascii	"median_timer_ReadCapture\000"
+ 1325      616E5F74 
+ 1325      696D6572 
+ 1325      5F526561 
+ 1325      64436170 
+ 1326              	.LASF17:
+ 1327 0217 73697A65 		.ascii	"sizetype\000"
+ 1327      74797065 
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 35
 
 
- 1326      5F526561 
- 1326      64436170 
- 1327              	.LASF17:
- 1328 0240 73697A65 		.ascii	"sizetype\000"
- 1328      74797065 
- 1328      00
- 1329              	.LASF6:
- 1330 0249 6C6F6E67 		.ascii	"long long int\000"
- 1330      206C6F6E 
- 1330      6720696E 
- 1330      7400
- 1331              	.LASF27:
- 1332 0257 696E7465 		.ascii	"interruptMode\000"
- 1332      72727570 
- 1332      744D6F64 
- 1332      6500
- 1333              	.LASF2:
- 1334 0265 73686F72 		.ascii	"short int\000"
- 1334      7420696E 
- 1334      7400
- 1335              	.LASF26:
- 1336 026f 6D656469 		.ascii	"median_timer_WriteControlRegister\000"
- 1336      616E5F74 
- 1336      696D6572 
- 1336      5F577269 
- 1336      7465436F 
+ 1327      00
+ 1328              	.LASF6:
+ 1329 0220 6C6F6E67 		.ascii	"long long int\000"
+ 1329      206C6F6E 
+ 1329      6720696E 
+ 1329      7400
+ 1330              	.LASF27:
+ 1331 022e 696E7465 		.ascii	"interruptMode\000"
+ 1331      72727570 
+ 1331      744D6F64 
+ 1331      6500
+ 1332              	.LASF2:
+ 1333 023c 73686F72 		.ascii	"short int\000"
+ 1333      7420696E 
+ 1333      7400
+ 1334              	.LASF38:
+ 1335 0246 433A5C55 		.ascii	"C:\\Users\\Andrew\\Documents\\GitHub\\Hydraulic-Mim"
+ 1335      73657273 
+ 1335      5C416E64 
+ 1335      7265775C 
+ 1335      446F6375 
+ 1336 0274 69632D41 		.ascii	"ic-Arm\\PSOC_arm_project.cydsn\000"
+ 1336      726D5C50 
+ 1336      534F435F 
+ 1336      61726D5F 
+ 1336      70726F6A 
  1337              	.LASF37:
- 1338 0291 47656E65 		.ascii	"Generated_Source\\PSoC5\\median_timer.c\000"
+ 1338 0292 47656E65 		.ascii	"Generated_Source\\PSoC5\\median_timer.c\000"
  1338      72617465 
  1338      645F536F 
  1338      75726365 
  1338      5C50536F 
  1339              	.LASF4:
- 1340 02b7 6C6F6E67 		.ascii	"long int\000"
+ 1340 02b8 6C6F6E67 		.ascii	"long int\000"
  1340      20696E74 
  1340      00
  1341              	.LASF13:
- 1342 02c0 63686172 		.ascii	"char\000"
+ 1342 02c1 63686172 		.ascii	"char\000"
  1342      00
  1343              	.LASF35:
- 1344 02c5 6D656469 		.ascii	"median_timer_ReadCounter\000"
+ 1344 02c6 6D656469 		.ascii	"median_timer_ReadCounter\000"
  1344      616E5F74 
  1344      696D6572 
  1344      5F526561 
  1344      64436F75 
  1345              	.LASF16:
- 1346 02de 6C6F6E67 		.ascii	"long double\000"
+ 1346 02df 6C6F6E67 		.ascii	"long double\000"
  1346      20646F75 
  1346      626C6500 
  1347              	.LASF0:
- 1348 02ea 7369676E 		.ascii	"signed char\000"
+ 1348 02eb 7369676E 		.ascii	"signed char\000"
  1348      65642063 
  1348      68617200 
  1349              	.LASF24:
- 1350 02f6 6D656469 		.ascii	"median_timer_ReadControlRegister\000"
+ 1350 02f7 6D656469 		.ascii	"median_timer_ReadControlRegister\000"
  1350      616E5F74 
  1350      696D6572 
-ARM GAS  C:\Users\kevan\AppData\Local\Temp\ccLzUapu.s 			page 36
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccWhAuE0.s 			page 36
 
 
  1350      5F526561 
  1350      64436F6E 
  1351              	.LASF30:
- 1352 0317 6D656469 		.ascii	"median_timer_WritePeriod\000"
+ 1352 0318 6D656469 		.ascii	"median_timer_WritePeriod\000"
  1352      616E5F74 
  1352      696D6572 
  1352      5F577269 
  1352      74655065 
  1353              	.LASF25:
- 1354 0330 6D656469 		.ascii	"median_timer_SetInterruptMode\000"
+ 1354 0331 6D656469 		.ascii	"median_timer_SetInterruptMode\000"
  1354      616E5F74 
  1354      696D6572 
  1354      5F536574 
  1354      496E7465 
  1355              	.LASF23:
- 1356 034e 6D656469 		.ascii	"median_timer_ReadStatusRegister\000"
+ 1356 034f 6D656469 		.ascii	"median_timer_ReadStatusRegister\000"
  1356      616E5F74 
  1356      696D6572 
  1356      5F526561 
