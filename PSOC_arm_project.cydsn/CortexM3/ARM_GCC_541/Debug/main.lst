@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
   17:main.c        **** /* Add an explicit reference to the floating point printf library to allow
   18:main.c        **** the usage of floating point conversion specifier */
   19:main.c        **** #if defined (__GNUC__)
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 2
 
 
   20:main.c        ****     asm (".global _printf_float");
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
   81 0042 9BB2     		uxth	r3, r3
   82 0044 1846     		mov	r0, r3
   83 0046 FFF7FEFF 		bl	PWM_1_WriteCompare
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 3
 
 
   32:main.c        ****                     break;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  127              		.loc 1 42 0
  128              		.cfi_startproc
  129              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 4
 
 
  130              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  179 0042 FB68     		ldr	r3, [r7, #12]
   48:main.c        **** }
  180              		.loc 1 48 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 5
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 5
 
 
  181 0044 1846     		mov	r0, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  234      00000000 
  234      00000000 
  234      00000000 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 6
 
 
  234      00000000 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  284              		.align	2
  285              		.global	adc_update
  286              		.thumb
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 7
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 7
 
 
  287              		.thumb_func
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  303              	.LBB2:
   87:main.c        ****     for(int c = 0;c<CYL_NO;c++){
  304              		.loc 1 87 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 8
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 8
 
 
  305 0006 0023     		movs	r3, #0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  350 0050 FFF7FEFF 		bl	ADC_0_GetResult16
  351 0054 0346     		mov	r3, r0
  352 0056 98B2     		uxth	r0, r3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 9
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 9
 
 
  353 0058 4049     		ldr	r1, .L29
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  401 00b0 2A49     		ldr	r1, .L29
  402 00b2 7A69     		ldr	r2, [r7, #20]
  403 00b4 1346     		mov	r3, r2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 10
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 10
 
 
  404 00b6 DB00     		lsls	r3, r3, #3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  108:main.c        ****         			tempArray[i] = tempArray[j];            //replacing value
  449              		.loc 1 108 0
  450 0102 174A     		ldr	r2, .L29+4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 11
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 11
 
 
  451 0104 7B68     		ldr	r3, [r7, #4]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  494              		.loc 1 87 0 is_stmt 0 discriminator 1
  495 0148 7B69     		ldr	r3, [r7, #20]
  496 014a 032B     		cmp	r3, #3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 12
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 12
 
 
  497 014c 7FF75EAF 		ble	.L28
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  124:main.c        ****     
  125:main.c        ****     do
  126:main.c        ****     {
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 13
 
 
  127:main.c        ****         /* Read receiver status register */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  578 004a CA54     		strb	r2, [r1, r3]
  143:main.c        ****             tt++;
  579              		.loc 1 143 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 14
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 14
 
 
  580 004c 8C4B     		ldr	r3, .L69+12
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  629 0094 062B     		cmp	r3, #6
  630 0096 00F22F81 		bhi	.L33
  631 009a 01A2     		adr	r2, .L40
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 15
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 15
 
 
  632 009c 52F823F0 		ldr	pc, [r2, r3, lsl #2]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  674              		.loc 1 158 0
  675 00e6 6A4B     		ldr	r3, .L69+28
  676 00e8 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 16
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 16
 
 
  677 00ea 0133     		adds	r3, r3, #1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  713              		.loc 1 172 0
  714 011a ECE0     		b	.L68
  715              	.L53:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 17
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 17
 
 
  168:main.c        ****                         data_read_mode = 5;}
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  185:main.c        ****                         temp[0] = '\0';
  186:main.c        ****                         data_read_mode = 0;
  187:main.c        ****                         
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 18
 
 
  188:main.c        ****                     }
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  798              		.loc 1 186 0
  799 01a6 3A4B     		ldr	r3, .L69+28
  800 01a8 0022     		movs	r2, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 19
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 19
 
 
  801 01aa 1A60     		str	r2, [r3]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  839 01e6 1A70     		strb	r2, [r3]
  200:main.c        ****                     }
  840              		.loc 1 200 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 20
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 20
 
 
  841 01e8 294B     		ldr	r3, .L69+28
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  880 0226 0022     		movs	r2, #0
  881 0228 1A70     		strb	r2, [r3]
  213:main.c        ****                     }
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 21
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 21
 
 
  882              		.loc 1 213 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  921 0266 0B4B     		ldr	r3, .L69+32
  922 0268 0022     		movs	r2, #0
  923 026a 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 22
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 22
 
 
  225:main.c        ****                     }
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  240:main.c        ****                 break;
  965              		.loc 1 240 0
  966 02ca 15E0     		b	.L33
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 23
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 23
 
 
  967              	.L64:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1005 0304 00BF     		nop
  1006 0306 0C37     		adds	r7, r7, #12
  1007              		.cfi_def_cfa_offset 12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 24
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 24
 
 
  1008 0308 BD46     		mov	sp, r7
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1044      6F776572 
  1044      204F6666 
  1044      7365743A 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 25
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 25
 
 
  1045 00ab 20414443 		.ascii	" ADC Diff: %d\012\000"
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1084              		.loc 1 258 0
  1085 001c 784B     		ldr	r3, .L104+8
  1086 001e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 26
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 26
 
 
  1087 0020 102B     		cmp	r3, #16
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1132 0068 664B     		ldr	r3, .L104+12
  1133 006a 3222     		movs	r2, #50
  1134 006c 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 27
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 27
 
 
  1135 006e 654B     		ldr	r3, .L104+12
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1178 00b6 FB6B     		ldr	r3, [r7, #60]
  1179 00b8 0021     		movs	r1, #0
  1180 00ba 42F82310 		str	r1, [r2, r3, lsl #2]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 28
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 28
 
 
  279:main.c        ****         pulse_temp[g]   = 0;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  274:main.c        ****         new_pos_set[g]  = 0;
  1228              		.loc 1 274 0 is_stmt 0 discriminator 1
  1229 0128 FB6B     		ldr	r3, [r7, #60]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 29
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 29
 
 
  1230 012a 032B     		cmp	r3, #3
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1261              		.thumb
  1262              		.syntax unified
  1263 015c 26A4     		adr	r4, .L104
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 30
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 30
 
 
  1264 015e D4E90034 		ldrd	r3, [r4]
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1293 019e 4FF6FF70 		movw	r0, #65535
  1294 01a2 FFF7FEFF 		bl	Timer_1_WriteCounter
  333:main.c        ****         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 31
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 31
 
 
  334:main.c        ****         sprintf(sendValue,"%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t",adcValue[0],adcValue[1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1341 0204 00000000 		.word	offsets
  1342 0208 00000000 		.word	new_pos_set
  1343 020c 00000000 		.word	new_pos
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 32
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 32
 
 
  1344 0210 00000000 		.word	pos
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1392 028c D200     		lsls	r2, r2, #3
  1393 028e 0A44     		add	r2, r2, r1
  1394 0290 C2E90034 		strd	r3, [r2]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 33
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 33
 
 
  347:main.c        ****             der[cyl] = err[cyl] - prev_err[cyl];
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1446 0304 DB00     		lsls	r3, r3, #3
  1447 0306 1344     		add	r3, r3, r2
  1448 0308 D3E90001 		ldrd	r0, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 34
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 34
 
 
  1449 030c 68A3     		adr	r3, .L106
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1498 0378 0C46     		mov	r4, r1
  1499 037a 1D46     		mov	r5, r3
  1500 037c 2646     		mov	r6, r4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 35
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 35
 
 
  1501 037e 584B     		ldr	r3, .L106+48
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  356:main.c        ****             pulse[cyl] = pulseCheck(pulse_temp[cyl],offsets[cyl][1],offsets[cyl][0]);
  1554              		.loc 1 356 0 discriminator 2
  1555 03fc 394A     		ldr	r2, .L106+52
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 36
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 36
 
 
  1556 03fe FB6A     		ldr	r3, [r7, #44]
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1600              		.loc 1 364 0 is_stmt 1
  1601 045a 254B     		ldr	r3, .L106+64
  1602 045c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 37
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 37
 
 
  1603 045e 002B     		cmp	r3, #0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1644              		.loc 1 375 0 discriminator 3
  1645 049a 3B69     		ldr	r3, [r7, #16]
  1646 049c 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 38
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 38
 
 
  1647 049e 3B61     		str	r3, [r7, #16]
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1692 0508 FFF7FEFF 		bl	writePWM
  385:main.c        ****                     CyDelay(200);
  1693              		.loc 1 385 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 39
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 39
 
 
  1694 050c C820     		movs	r0, #200
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1738 0558 FFF7FEFF 		bl	writePWM
  396:main.c        ****                     CyDelay(500);
  1739              		.loc 1 396 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 40
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 40
 
 
  1740 055c 4FF4FA70 		mov	r0, #500
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  408:main.c        ****                         lower_check_no = 0;
  1783              		.loc 1 408 0
  1784 05aa 0023     		movs	r3, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 41
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 41
 
 
  1785 05ac BB61     		str	r3, [r7, #24]
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1826              		.loc 1 380 0 is_stmt 0 discriminator 1
  1827 05ee 7B6A     		ldr	r3, [r7, #36]
  1828 05f0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 42
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 42
 
 
  1829 05f2 3FF47FAF 		beq	.L97
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1869 0648 D3E90023 		ldrd	r2, [r3]
  1870 064c FFF7FEFF 		bl	__aeabi_ddiv
  1871 0650 0346     		mov	r3, r0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 43
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 43
 
 
  1872 0652 0C46     		mov	r4, r1
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1915 06ac 44000000 		.word	.LC2
  1916 06b0 00000000 		.word	sendValue
  1917 06b4 80000000 		.word	.LC3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 44
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 44
 
 
  1918 06b8 BC000000 		.word	.LC4
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  1972 0055 07       		.byte	0x7
  1973 0056 A0020000 		.4byte	.LASF5
  1974 005a 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 45
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 45
 
 
  1975 005b 08       		.byte	0x8
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2029 00c7 04       		.byte	0x4
  2030 00c8 07       		.byte	0x7
  2031 00c9 69000000 		.4byte	.LASF18
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 46
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 46
 
 
  2032 00cd 07       		.uleb128 0x7
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2086 0139 01       		.byte	0x1
  2087 013a 2A       		.byte	0x2a
  2088 013b 68000000 		.4byte	0x68
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 47
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 47
 
 
  2089 013f 02       		.uleb128 0x2
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2143 01ab 6900     		.ascii	"i\000"
  2144 01ad 01       		.byte	0x1
  2145 01ae 66       		.byte	0x66
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 48
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 48
 
 
  2146 01af 68000000 		.4byte	0x68
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2200 0215 6C       		.sleb128 -20
  2201 0216 00       		.byte	0
  2202 0217 00       		.byte	0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 49
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 49
 
 
  2203 0218 0E       		.uleb128 0xe
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2257 028c B2010000 		.4byte	.LBE10-.LBB10
  2258 0290 10       		.uleb128 0x10
  2259 0291 73020000 		.4byte	.LASF30
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 50
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 50
 
 
  2260 0295 01       		.byte	0x1
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2314 02fb 10       		.uleb128 0x10
  2315 02fc BF020000 		.4byte	.LASF37
  2316 0300 01       		.byte	0x1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 51
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 51
 
 
  2317 0301 7501     		.2byte	0x175
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2371 036f 68000000 		.4byte	0x68
  2372 0373 05       		.uleb128 0x5
  2373 0374 03       		.byte	0x3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 52
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 52
 
 
  2374 0375 00000000 		.4byte	data_read_mode
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2428 03ed 39       		.byte	0x39
  2429 03ee A4030000 		.4byte	0x3a4
  2430 03f2 05       		.uleb128 0x5
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 53
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 53
 
 
  2431 03f3 03       		.byte	0x3
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2485 0468 03       		.byte	0x3
  2486 0469 00000000 		.4byte	pid_integral
  2487 046d 12       		.uleb128 0x12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 54
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 54
 
 
  2488 046e 1B000000 		.4byte	.LASF49
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2542 04e6 00       		.byte	0
  2543 04e7 12       		.uleb128 0x12
  2544 04e8 6A010000 		.4byte	.LASF52
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 55
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 55
 
 
  2545 04ec 01       		.byte	0x1
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2599 0560 4A       		.byte	0x4a
  2600 0561 4A050000 		.4byte	0x54a
  2601 0565 05       		.uleb128 0x5
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 56
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 56
 
 
  2602 0566 03       		.byte	0x3
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2656 05da E5050000 		.4byte	0x5e5
  2657 05de 14       		.uleb128 0x14
  2658 05df C6000000 		.4byte	0xc6
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 57
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 57
 
 
  2659 05e3 06       		.byte	0x6
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2713 0021 03       		.uleb128 0x3
  2714 0022 0E       		.uleb128 0xe
  2715 0023 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 58
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 58
 
 
  2716 0024 0B       		.uleb128 0xb
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2770 005a 06       		.uleb128 0x6
  2771 005b 40       		.uleb128 0x40
  2772 005c 18       		.uleb128 0x18
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 59
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 59
 
 
  2773 005d 9642     		.uleb128 0x2116
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2827 0095 06       		.uleb128 0x6
  2828 0096 00       		.byte	0
  2829 0097 00       		.byte	0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 60
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 60
 
 
  2830 0098 0B       		.uleb128 0xb
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2884 00ce 11       		.uleb128 0x11
  2885 00cf 01       		.uleb128 0x1
  2886 00d0 12       		.uleb128 0x12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 61
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 61
 
 
  2887 00d1 06       		.uleb128 0x6
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2941 0108 00       		.byte	0
  2942 0109 00       		.byte	0
  2943 010a 12       		.uleb128 0x12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 62
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 62
 
 
  2944 010b 34       		.uleb128 0x34
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  2998 0004 0200     		.2byte	0x2
  2999 0006 00000000 		.4byte	.Ldebug_info0
  3000 000a 04       		.byte	0x4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 63
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 63
 
 
  3001 000b 00       		.byte	0
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  3043              	.LASF47:
  3044 0033 70726576 		.ascii	"prev_err\000"
  3044      5F657272 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 64
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 64
 
 
  3044      00
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  3069              	.LASF42:
  3070 011f 64617461 		.ascii	"data_read_mode\000"
  3070      5F726561 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 65
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 65
 
 
  3070      645F6D6F 
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  3098 01ae 70756C73 		.ascii	"pulse_temp\000"
  3098      655F7465 
  3098      6D7000
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 66
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 66
 
 
  3099              	.LASF34:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  3123 0273 63616C69 		.ascii	"calib_cyl\000"
  3123      625F6379 
  3123      6C00
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 67
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 67
 
 
  3124              	.LASF10:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 1
  3150              	.LASF58:
  3151 030d 6D6F7669 		.ascii	"moving_median\000"
  3151      6E675F6D 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cckh7TPe.s 			page 68
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 68
 
 
  3151      65646961 

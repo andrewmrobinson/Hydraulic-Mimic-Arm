@@ -8,14 +8,14 @@ c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(289): warning C4101: 'noBytesRead_vcom': unreferenced local variable
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(278): warning C4101: 'byteswritten': unreferenced local variable
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(280): warning C4101: 'TempChar': unreferenced local variable
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(704): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(705): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(706): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(707): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(708): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(709): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(710): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(711): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(712): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(713): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(714): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 c:\users\andrew\documents\github\hydraulic-mimic-arm\pc_project_arm\project_arm\pc_project_arm.cpp(464): warning C4101: 'dwWaitResultvcom': unreferenced local variable
   project_arm.vcxproj -> C:\Users\Andrew\Documents\GitHub\Hydraulic-Mimic-Arm\PC_project_arm\x64\Debug\PC_project_arm.exe
   C:\Users\Andrew\Documents\LEAP_SDK\lib\x64\Leap.dll
