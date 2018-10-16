@@ -1,7 +1,7 @@
 clear all
 close all
 clc
-
+subplot = @(m,n,p) subtightplot (m, n, p, [0.05 0.05], [0.1 0.05], [0.1 0.01]);
 specifics = [1,1;...
     2,1;...
     3,1;...
@@ -58,8 +58,8 @@ for j = 1:length(filenames)
                 figure
                 x0=10;
                 y0=10;
-                width=800;
-                height=600;
+                width=500;
+                height=400;
                 set(gcf,'units','points','position',[x0,y0,width,height])
                 %plot(t,error(:,i),t,avg_error,'r');
                 subplot(2,1,1);
@@ -68,7 +68,6 @@ for j = 1:length(filenames)
                 %title([filenames{j} ' - Error of Cyl ' num2str(i-1)]);
                 axis([min(t) max(t) 0 error_max(k)]);
                 legend('Error','Mean Error','Location','NorthEast');
-                xlabel('Time (s)');
                 ylabel('Error');
                 subplot(2,1,2);
                 plot(t,data(:,i),'b',t,data(:,i+4),'r-.');
