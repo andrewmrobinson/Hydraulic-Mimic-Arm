@@ -1,0 +1,54 @@
+14 bar
+
+
+
+Individual Fingers
+Index - not readable
+Middle - not readable
+Ring - 
+Pinky - 
+
+Double Fingers
+IM - 3.5
+IR - 4
+IP - 5
+MR - 2
+MP - 2
+RP - 4
+
+Triple Fingers
+IMR - 5
+IMP - 5
+IRP - 6
+MRP - 5
+
+4 fingers
+IMRP - 8
+
+
+16 bar
+
+
+
+Individual Fingers
+Index - 
+Middle - 
+Ring - 
+Pinky - 
+
+Double Fingers
+IM - 
+IR - 
+IP - 
+MR - 
+MP - 
+RP - 
+
+Triple Fingers
+IMR - 
+IMP - 
+IRP - 
+MRP - 
+
+4 fingers
+IMRP - 
