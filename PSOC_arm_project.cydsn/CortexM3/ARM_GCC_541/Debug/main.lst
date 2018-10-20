@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
   17:main.c        **** /* Add an explicit reference to the floating point printf library to allow
   18:main.c        **** the usage of floating point conversion specifier */
   19:main.c        **** #if defined (__GNUC__)
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 2
 
 
   20:main.c        ****     asm (".global _printf_float");
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
   81 0042 9BB2     		uxth	r3, r3
   82 0044 1846     		mov	r0, r3
   83 0046 FFF7FEFF 		bl	PWM_1_WriteCompare
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 3
 
 
   32:main.c        ****                     break;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  127              		.loc 1 42 0
  128              		.cfi_startproc
  129              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 4
 
 
  130              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  179 0042 FB68     		ldr	r3, [r7, #12]
   48:main.c        **** }
  180              		.loc 1 48 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 5
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 5
 
 
  181 0044 1846     		mov	r0, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  234      00000000 
  234      00000000 
  234      00000000 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 6
 
 
  234      00000000 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  284              		.align	2
  285              		.global	adc_update
  286              		.thumb
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 7
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 7
 
 
  287              		.thumb_func
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  303              	.LBB2:
   87:main.c        ****     for(int c = 0;c<CYL_NO;c++){
  304              		.loc 1 87 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 8
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 8
 
 
  305 0006 0023     		movs	r3, #0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  350 0050 FFF7FEFF 		bl	ADC_0_GetResult16
  351 0054 0346     		mov	r3, r0
  352 0056 98B2     		uxth	r0, r3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 9
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 9
 
 
  353 0058 4049     		ldr	r1, .L29
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  401 00b0 2A49     		ldr	r1, .L29
  402 00b2 7A69     		ldr	r2, [r7, #20]
  403 00b4 1346     		mov	r3, r2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 10
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 10
 
 
  404 00b6 DB00     		lsls	r3, r3, #3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  108:main.c        ****         			tempArray[i] = tempArray[j];            //replacing value
  449              		.loc 1 108 0
  450 0102 174A     		ldr	r2, .L29+4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 11
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 11
 
 
  451 0104 7B68     		ldr	r3, [r7, #4]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  494              		.loc 1 87 0 is_stmt 0 discriminator 1
  495 0148 7B69     		ldr	r3, [r7, #20]
  496 014a 032B     		cmp	r3, #3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 12
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 12
 
 
  497 014c 7FF75EAF 		ble	.L28
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  124:main.c        ****     
  125:main.c        ****     do
  126:main.c        ****     {
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 13
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 13
 
 
  127:main.c        ****         /* Read receiver status register */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  578 004a CA54     		strb	r2, [r1, r3]
  143:main.c        ****             tt++;
  579              		.loc 1 143 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 14
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 14
 
 
  580 004c 8C4B     		ldr	r3, .L69+12
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  629 0094 062B     		cmp	r3, #6
  630 0096 00F22F81 		bhi	.L33
  631 009a 01A2     		adr	r2, .L40
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 15
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 15
 
 
  632 009c 52F823F0 		ldr	pc, [r2, r3, lsl #2]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  674              		.loc 1 158 0
  675 00e6 6A4B     		ldr	r3, .L69+28
  676 00e8 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 16
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 16
 
 
  677 00ea 0133     		adds	r3, r3, #1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  713              		.loc 1 172 0
  714 011a ECE0     		b	.L68
  715              	.L53:
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 17
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 17
 
 
  168:main.c        ****                         data_read_mode = 5;}
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  185:main.c        ****                         temp[0] = '\0';
  186:main.c        ****                         data_read_mode = 0;
  187:main.c        ****                         
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 18
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 18
 
 
  188:main.c        ****                     }
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  798              		.loc 1 186 0
  799 01a6 3A4B     		ldr	r3, .L69+28
  800 01a8 0022     		movs	r2, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 19
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 19
 
 
  801 01aa 1A60     		str	r2, [r3]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  839 01e6 1A70     		strb	r2, [r3]
  200:main.c        ****                     }
  840              		.loc 1 200 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 20
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 20
 
 
  841 01e8 294B     		ldr	r3, .L69+28
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  880 0226 0022     		movs	r2, #0
  881 0228 1A70     		strb	r2, [r3]
  213:main.c        ****                     }
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 21
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 21
 
 
  882              		.loc 1 213 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  921 0266 0B4B     		ldr	r3, .L69+32
  922 0268 0022     		movs	r2, #0
  923 026a 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 22
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 22
 
 
  225:main.c        ****                     }
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  240:main.c        ****                 break;
  965              		.loc 1 240 0
  966 02ca 15E0     		b	.L33
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 23
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 23
 
 
  967              	.L64:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1005 0304 00BF     		nop
  1006 0306 0C37     		adds	r7, r7, #12
  1007              		.cfi_def_cfa_offset 12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 24
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 24
 
 
  1008 0308 BD46     		mov	sp, r7
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1044      6F776572 
  1044      204F6666 
  1044      7365743A 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 25
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 25
 
 
  1045 00ab 20414443 		.ascii	" ADC Diff: %d\012\000"
@@ -1494,141 +1494,143 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1081 0016 1A46     		mov	r2, r3
  1082 0018 794B     		ldr	r3, .L104+8
  1083 001a 1A60     		str	r2, [r3]
- 258:main.c        ****     switch(psoc_id){
- 1084              		.loc 1 258 0
+ 258:main.c        ****     
+ 259:main.c        ****     
+ 260:main.c        ****     switch(psoc_id){
+ 1084              		.loc 1 260 0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 26
+
+
  1085 001c 784B     		ldr	r3, .L104+8
  1086 001e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 26
-
-
  1087 0020 102B     		cmp	r3, #16
  1088 0022 02D0     		beq	.L75
  1089 0024 112B     		cmp	r3, #17
  1090 0026 19D0     		beq	.L76
  1091 0028 31E0     		b	.L74
  1092              	.L75:
- 259:main.c        ****         case 16:
- 260:main.c        ****             offsets[0][0] = 125;offsets[0][1] = 179;
- 1093              		.loc 1 260 0
+ 261:main.c        ****         case 16:
+ 262:main.c        ****             offsets[0][0] = 125;offsets[0][1] = 179;
+ 1093              		.loc 1 262 0
  1094 002a 764B     		ldr	r3, .L104+12
  1095 002c 7D22     		movs	r2, #125
  1096 002e 1A60     		str	r2, [r3]
  1097 0030 744B     		ldr	r3, .L104+12
  1098 0032 B322     		movs	r2, #179
  1099 0034 5A60     		str	r2, [r3, #4]
- 261:main.c        ****             offsets[1][0] = 132;offsets[1][1] = 176;
- 1100              		.loc 1 261 0
+ 263:main.c        ****             offsets[1][0] = 132;offsets[1][1] = 176;
+ 1100              		.loc 1 263 0
  1101 0036 734B     		ldr	r3, .L104+12
  1102 0038 8422     		movs	r2, #132
  1103 003a 9A60     		str	r2, [r3, #8]
  1104 003c 714B     		ldr	r3, .L104+12
  1105 003e B022     		movs	r2, #176
  1106 0040 DA60     		str	r2, [r3, #12]
- 262:main.c        ****             offsets[2][0] = 180;offsets[2][1] = 174;
- 1107              		.loc 1 262 0
+ 264:main.c        ****             offsets[2][0] = 180;offsets[2][1] = 174;
+ 1107              		.loc 1 264 0
  1108 0042 704B     		ldr	r3, .L104+12
  1109 0044 B422     		movs	r2, #180
  1110 0046 1A61     		str	r2, [r3, #16]
  1111 0048 6E4B     		ldr	r3, .L104+12
  1112 004a AE22     		movs	r2, #174
  1113 004c 5A61     		str	r2, [r3, #20]
- 263:main.c        ****             offsets[3][0] = 205;offsets[3][1] = 185;
- 1114              		.loc 1 263 0
+ 265:main.c        ****             offsets[3][0] = 205;offsets[3][1] = 185;
+ 1114              		.loc 1 265 0
  1115 004e 6D4B     		ldr	r3, .L104+12
  1116 0050 CD22     		movs	r2, #205
  1117 0052 9A61     		str	r2, [r3, #24]
  1118 0054 6B4B     		ldr	r3, .L104+12
  1119 0056 B922     		movs	r2, #185
  1120 0058 DA61     		str	r2, [r3, #28]
- 264:main.c        ****             break;
- 1121              		.loc 1 264 0
+ 266:main.c        ****             break;
+ 1121              		.loc 1 266 0
  1122 005a 18E0     		b	.L74
  1123              	.L76:
- 265:main.c        ****         case 17:
- 266:main.c        ****             offsets[0][0] = 117;offsets[0][1] = 218;
- 1124              		.loc 1 266 0
+ 267:main.c        ****         case 17:
+ 268:main.c        ****             offsets[0][0] = 117;offsets[0][1] = 218;
+ 1124              		.loc 1 268 0
  1125 005c 694B     		ldr	r3, .L104+12
  1126 005e 7522     		movs	r2, #117
  1127 0060 1A60     		str	r2, [r3]
  1128 0062 684B     		ldr	r3, .L104+12
  1129 0064 DA22     		movs	r2, #218
  1130 0066 5A60     		str	r2, [r3, #4]
- 267:main.c        ****             offsets[1][0] = 50;offsets[1][1] = 230;
- 1131              		.loc 1 267 0
+ 269:main.c        ****             offsets[1][0] = 50;offsets[1][1] = 230;
+ 1131              		.loc 1 269 0
  1132 0068 664B     		ldr	r3, .L104+12
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 27
+
+
  1133 006a 3222     		movs	r2, #50
  1134 006c 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 27
-
-
  1135 006e 654B     		ldr	r3, .L104+12
  1136 0070 E622     		movs	r2, #230
  1137 0072 DA60     		str	r2, [r3, #12]
- 268:main.c        ****             offsets[2][0] = 152;offsets[2][1] = 204;
- 1138              		.loc 1 268 0
+ 270:main.c        ****             offsets[2][0] = 152;offsets[2][1] = 204;
+ 1138              		.loc 1 270 0
  1139 0074 634B     		ldr	r3, .L104+12
  1140 0076 9822     		movs	r2, #152
  1141 0078 1A61     		str	r2, [r3, #16]
  1142 007a 624B     		ldr	r3, .L104+12
  1143 007c CC22     		movs	r2, #204
  1144 007e 5A61     		str	r2, [r3, #20]
- 269:main.c        ****             offsets[3][0] = 78;offsets[3][1] = 250;
- 1145              		.loc 1 269 0
+ 271:main.c        ****             offsets[3][0] = 78;offsets[3][1] = 250;
+ 1145              		.loc 1 271 0
  1146 0080 604B     		ldr	r3, .L104+12
  1147 0082 4E22     		movs	r2, #78
  1148 0084 9A61     		str	r2, [r3, #24]
  1149 0086 5F4B     		ldr	r3, .L104+12
  1150 0088 FA22     		movs	r2, #250
  1151 008a DA61     		str	r2, [r3, #28]
- 270:main.c        ****             break;
- 1152              		.loc 1 270 0
+ 272:main.c        ****             break;
+ 1152              		.loc 1 272 0
  1153 008c 00BF     		nop
  1154              	.L74:
  1155              	.LBB8:
- 271:main.c        ****     }
- 272:main.c        ****     
- 273:main.c        ****     //initializing variables
- 274:main.c        ****     for(int g = 0;g<CYL_NO;g++){
- 1156              		.loc 1 274 0
+ 273:main.c        ****     }
+ 274:main.c        ****     
+ 275:main.c        ****     //initializing variables
+ 276:main.c        ****     for(int g = 0;g<CYL_NO;g++){
+ 1156              		.loc 1 276 0
  1157 008e 0023     		movs	r3, #0
  1158 0090 FB63     		str	r3, [r7, #60]
  1159 0092 49E0     		b	.L77
  1160              	.L78:
- 275:main.c        ****         new_pos_set[g]  = 0;
- 1161              		.loc 1 275 0 discriminator 3
+ 277:main.c        ****         new_pos_set[g]  = 0;
+ 1161              		.loc 1 277 0 discriminator 3
  1162 0094 5C4A     		ldr	r2, .L104+16
  1163 0096 FB6B     		ldr	r3, [r7, #60]
  1164 0098 0021     		movs	r1, #0
  1165 009a 42F82310 		str	r1, [r2, r3, lsl #2]
- 276:main.c        ****         new_pos[g]      = 0;
- 1166              		.loc 1 276 0 discriminator 3
+ 278:main.c        ****         new_pos[g]      = 0;
+ 1166              		.loc 1 278 0 discriminator 3
  1167 009e 5B4A     		ldr	r2, .L104+20
  1168 00a0 FB6B     		ldr	r3, [r7, #60]
  1169 00a2 0021     		movs	r1, #0
  1170 00a4 42F82310 		str	r1, [r2, r3, lsl #2]
- 277:main.c        ****         pos[g]          = 1300;
- 1171              		.loc 1 277 0 discriminator 3
+ 279:main.c        ****         pos[g]          = 1300;
+ 1171              		.loc 1 279 0 discriminator 3
  1172 00a8 594A     		ldr	r2, .L104+24
  1173 00aa FB6B     		ldr	r3, [r7, #60]
  1174 00ac 40F21451 		movw	r1, #1300
  1175 00b0 42F82310 		str	r1, [r2, r3, lsl #2]
- 278:main.c        ****         pulse[g]        = 0;
- 1176              		.loc 1 278 0 discriminator 3
+ 280:main.c        ****         pulse[g]        = 0;
+ 1176              		.loc 1 280 0 discriminator 3
  1177 00b4 574A     		ldr	r2, .L104+28
  1178 00b6 FB6B     		ldr	r3, [r7, #60]
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 28
+
+
  1179 00b8 0021     		movs	r1, #0
  1180 00ba 42F82310 		str	r1, [r2, r3, lsl #2]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 28
-
-
- 279:main.c        ****         pulse_temp[g]   = 0;
- 1181              		.loc 1 279 0 discriminator 3
+ 281:main.c        ****         pulse_temp[g]   = 0;
+ 1181              		.loc 1 281 0 discriminator 3
  1182 00be 564A     		ldr	r2, .L104+32
  1183 00c0 FB6B     		ldr	r3, [r7, #60]
  1184 00c2 0021     		movs	r1, #0
  1185 00c4 42F82310 		str	r1, [r2, r3, lsl #2]
- 280:main.c        ****         err[g]          = 0;
- 1186              		.loc 1 280 0 discriminator 3
+ 282:main.c        ****         err[g]          = 0;
+ 1186              		.loc 1 282 0 discriminator 3
  1187 00c8 544A     		ldr	r2, .L104+36
  1188 00ca FB6B     		ldr	r3, [r7, #60]
  1189 00cc DB00     		lsls	r3, r3, #3
@@ -1636,14 +1638,14 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1191 00d0 4FF00003 		mov	r3, #0
  1192 00d4 4FF00004 		mov	r4, #0
  1193 00d8 C2E90034 		strd	r3, [r2]
- 281:main.c        ****         adcValue[g]     = 0;
- 1194              		.loc 1 281 0 discriminator 3
+ 283:main.c        ****         adcValue[g]     = 0;
+ 1194              		.loc 1 283 0 discriminator 3
  1195 00dc 504A     		ldr	r2, .L104+40
  1196 00de FB6B     		ldr	r3, [r7, #60]
  1197 00e0 0021     		movs	r1, #0
  1198 00e2 22F81310 		strh	r1, [r2, r3, lsl #1]	@ movhi
- 282:main.c        ****         der[g]          = 0;
- 1199              		.loc 1 282 0 discriminator 3
+ 284:main.c        ****         der[g]          = 0;
+ 1199              		.loc 1 284 0 discriminator 3
  1200 00e6 4F4A     		ldr	r2, .L104+44
  1201 00e8 FB6B     		ldr	r3, [r7, #60]
  1202 00ea DB00     		lsls	r3, r3, #3
@@ -1651,8 +1653,8 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1204 00ee 4FF00003 		mov	r3, #0
  1205 00f2 4FF00004 		mov	r4, #0
  1206 00f6 C2E90034 		strd	r3, [r2]
- 283:main.c        ****         prev_err[g]     = 0;
- 1207              		.loc 1 283 0 discriminator 3
+ 285:main.c        ****         prev_err[g]     = 0;
+ 1207              		.loc 1 285 0 discriminator 3
  1208 00fa 4B4A     		ldr	r2, .L104+48
  1209 00fc FB6B     		ldr	r3, [r7, #60]
  1210 00fe DB00     		lsls	r3, r3, #3
@@ -1660,8 +1662,8 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1212 0102 4FF00003 		mov	r3, #0
  1213 0106 4FF00004 		mov	r4, #0
  1214 010a C2E90034 		strd	r3, [r2]
- 284:main.c        ****         pid_integral[g] = 0;
- 1215              		.loc 1 284 0 discriminator 3
+ 286:main.c        ****         pid_integral[g] = 0;
+ 1215              		.loc 1 286 0 discriminator 3
  1216 010e 474A     		ldr	r2, .L104+52
  1217 0110 FB6B     		ldr	r3, [r7, #60]
  1218 0112 DB00     		lsls	r3, r3, #3
@@ -1669,83 +1671,83 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1220 0116 4FF00003 		mov	r3, #0
  1221 011a 4FF00004 		mov	r4, #0
  1222 011e C2E90034 		strd	r3, [r2]
- 274:main.c        ****         new_pos_set[g]  = 0;
- 1223              		.loc 1 274 0 discriminator 3
+ 276:main.c        ****         new_pos_set[g]  = 0;
+ 1223              		.loc 1 276 0 discriminator 3
  1224 0122 FB6B     		ldr	r3, [r7, #60]
  1225 0124 0133     		adds	r3, r3, #1
  1226 0126 FB63     		str	r3, [r7, #60]
  1227              	.L77:
- 274:main.c        ****         new_pos_set[g]  = 0;
- 1228              		.loc 1 274 0 is_stmt 0 discriminator 1
+ 276:main.c        ****         new_pos_set[g]  = 0;
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 29
+
+
+ 1228              		.loc 1 276 0 is_stmt 0 discriminator 1
  1229 0128 FB6B     		ldr	r3, [r7, #60]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 29
-
-
  1230 012a 032B     		cmp	r3, #3
  1231 012c B2DD     		ble	.L78
  1232              	.LBE8:
- 285:main.c        ****     }
- 286:main.c        ****     //PWM variables
- 287:main.c        ****     PWM_0_Start();
- 1233              		.loc 1 287 0 is_stmt 1
+ 287:main.c        ****     }
+ 288:main.c        ****     //PWM variables
+ 289:main.c        ****     PWM_0_Start();
+ 1233              		.loc 1 289 0 is_stmt 1
  1234 012e FFF7FEFF 		bl	PWM_0_Start
- 288:main.c        ****     PWM_1_Start();
- 1235              		.loc 1 288 0
+ 290:main.c        ****     PWM_1_Start();
+ 1235              		.loc 1 290 0
  1236 0132 FFF7FEFF 		bl	PWM_1_Start
- 289:main.c        ****     PWM_2_Start();
- 1237              		.loc 1 289 0
+ 291:main.c        ****     PWM_2_Start();
+ 1237              		.loc 1 291 0
  1238 0136 FFF7FEFF 		bl	PWM_2_Start
- 290:main.c        ****     PWM_3_Start();
- 1239              		.loc 1 290 0
+ 292:main.c        ****     PWM_3_Start();
+ 1239              		.loc 1 292 0
  1240 013a FFF7FEFF 		bl	PWM_3_Start
- 291:main.c        ****     ADC_0_Start();
- 1241              		.loc 1 291 0
+ 293:main.c        ****     ADC_0_Start();
+ 1241              		.loc 1 293 0
  1242 013e FFF7FEFF 		bl	ADC_0_Start
- 292:main.c        ****     ADC_0_StartConvert();
- 1243              		.loc 1 292 0
+ 294:main.c        ****     ADC_0_StartConvert();
+ 1243              		.loc 1 294 0
  1244 0142 FFF7FEFF 		bl	ADC_0_StartConvert
- 293:main.c        ****     AMux_0_Init();
- 1245              		.loc 1 293 0
+ 295:main.c        ****     AMux_0_Init();
+ 1245              		.loc 1 295 0
  1246 0146 FFF7FEFF 		bl	AMux_0_Start
- 294:main.c        ****     
- 295:main.c        ****     UART_Start();           /* Start communication component */
- 1247              		.loc 1 295 0
+ 296:main.c        ****     
+ 297:main.c        ****     UART_Start();           /* Start communication component */
+ 1247              		.loc 1 297 0
  1248 014a FFF7FEFF 		bl	UART_Start
- 296:main.c        **** 
- 297:main.c        **** #if(INTERRUPT_CODE_ENABLED == ENABLED)
- 298:main.c        ****     isr_rx_StartEx(RxIsr);
- 1249              		.loc 1 298 0
+ 298:main.c        **** 
+ 299:main.c        **** #if(INTERRUPT_CODE_ENABLED == ENABLED)
+ 300:main.c        ****     isr_rx_StartEx(RxIsr);
+ 1249              		.loc 1 300 0
  1250 014e 3848     		ldr	r0, .L104+56
  1251 0150 FFF7FEFF 		bl	isr_rx_StartEx
- 299:main.c        ****     update_median_isr_StartEx(adc_update);
- 1252              		.loc 1 299 0
+ 301:main.c        ****     update_median_isr_StartEx(adc_update);
+ 1252              		.loc 1 301 0
  1253 0154 3748     		ldr	r0, .L104+60
  1254 0156 FFF7FEFF 		bl	update_median_isr_StartEx
- 300:main.c        **** #endif /* INTERRUPT_CODE_ENABLED == ENABLED */
- 301:main.c        ****     
- 302:main.c        ****     CyGlobalIntEnable;      /* Enable global interrupts. */
- 1255              		.loc 1 302 0
+ 302:main.c        **** #endif /* INTERRUPT_CODE_ENABLED == ENABLED */
+ 303:main.c        ****     
+ 304:main.c        ****     CyGlobalIntEnable;      /* Enable global interrupts. */
+ 1255              		.loc 1 304 0
  1256              		.syntax unified
- 1257              	@ 302 "main.c" 1
+ 1257              	@ 304 "main.c" 1
  1258 015a 62B6     		CPSIE   i
  1259              	@ 0 "" 2
- 303:main.c        ****     
- 304:main.c        ****     double dt;
- 305:main.c        ****     double time;
- 306:main.c        ****     
- 307:main.c        ****     dt = 0.025; //initialised dt, corrected by timer  below
- 1260              		.loc 1 307 0
+ 305:main.c        ****     
+ 306:main.c        ****     double dt;
+ 307:main.c        ****     double time;
+ 308:main.c        ****     
+ 309:main.c        ****     dt = 0.025; //initialised dt, corrected by timer  below
+ 1260              		.loc 1 309 0
  1261              		.thumb
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 30
+
+
  1262              		.syntax unified
  1263 015c 26A4     		adr	r4, .L104
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 30
-
-
  1264 015e D4E90034 		ldrd	r3, [r4]
  1265 0162 C7E90C34 		strd	r3, [r7, #48]
- 308:main.c        **** 
- 309:main.c        ****     sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
- 1266              		.loc 1 309 0
+ 310:main.c        **** 
+ 311:main.c        ****     sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+ 1266              		.loc 1 311 0
  1267 0166 2E4B     		ldr	r3, .L104+40
  1268 0168 1B88     		ldrh	r3, [r3]
  1269 016a 1D46     		mov	r5, r3
@@ -1763,46 +1765,46 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1281 0188 2B49     		ldr	r1, .L104+64
  1282 018a 2C48     		ldr	r0, .L104+68
  1283 018c FFF7FEFF 		bl	sprintf
- 310:main.c        ****     UART_PutString(sendValue);
- 1284              		.loc 1 310 0
+ 312:main.c        ****     UART_PutString(sendValue);
+ 1284              		.loc 1 312 0
  1285 0190 2A48     		ldr	r0, .L104+68
  1286 0192 FFF7FEFF 		bl	UART_PutString
- 311:main.c        ****     
- 312:main.c        ****     median_timer_Start();
- 1287              		.loc 1 312 0
+ 313:main.c        ****     
+ 314:main.c        ****     median_timer_Start();
+ 1287              		.loc 1 314 0
  1288 0196 FFF7FEFF 		bl	median_timer_Start
- 313:main.c        ****     Timer_1_Start();
- 1289              		.loc 1 313 0
+ 315:main.c        ****     Timer_1_Start();
+ 1289              		.loc 1 315 0
  1290 019a FFF7FEFF 		bl	Timer_1_Start
  1291              	.L100:
- 314:main.c        ****     
- 315:main.c        ****     for(;;)
- 316:main.c        ****     {
- 317:main.c        ****         /*for(;;){
- 318:main.c        ****             for(int i = 0;i<4;i++){
- 319:main.c        ****                 writePWM(i,499);
- 320:main.c        ****             }
- 321:main.c        ****                 CyDelay(500);
- 322:main.c        ****                 for(int i = 0;i<4;i++){
- 323:main.c        ****                 writePWM(i,-499);
- 324:main.c        ****             }
- 325:main.c        ****                 CyDelay(500);
- 326:main.c        ****                 for(int i = 0;i<4;i++){
- 327:main.c        ****                 writePWM(i,0);
- 328:main.c        ****             }
- 329:main.c        ****                 CyDelay(1000);
- 330:main.c        ****         }*/
- 331:main.c        ****         
- 332:main.c        ****         Timer_1_WriteCounter(65535);
- 1292              		.loc 1 332 0
+ 316:main.c        ****     
+ 317:main.c        ****     for(;;)
+ 318:main.c        ****     {
+ 319:main.c        ****         /*for(;;){
+ 320:main.c        ****             for(int i = 0;i<4;i++){
+ 321:main.c        ****                 writePWM(i,499);
+ 322:main.c        ****             }
+ 323:main.c        ****                 CyDelay(500);
+ 324:main.c        ****                 for(int i = 0;i<4;i++){
+ 325:main.c        ****                 writePWM(i,-499);
+ 326:main.c        ****             }
+ 327:main.c        ****                 CyDelay(500);
+ 328:main.c        ****                 for(int i = 0;i<4;i++){
+ 329:main.c        ****                 writePWM(i,0);
+ 330:main.c        ****             }
+ 331:main.c        ****                 CyDelay(1000);
+ 332:main.c        ****         }*/
+ 333:main.c        ****         
+ 334:main.c        ****         Timer_1_WriteCounter(65535);
+ 1292              		.loc 1 334 0
  1293 019e 4FF6FF70 		movw	r0, #65535
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 31
+
+
  1294 01a2 FFF7FEFF 		bl	Timer_1_WriteCounter
- 333:main.c        ****         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 31
-
-
- 334:main.c        ****         sprintf(sendValue,"%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t",adcValue[0],adcValue[1
- 1295              		.loc 1 334 0
+ 335:main.c        ****         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+ 336:main.c        ****         sprintf(sendValue,"%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t%05d\t",adcValue[0],adcValue[1
+ 1295              		.loc 1 336 0
  1296 01a6 1E4B     		ldr	r3, .L104+40
  1297 01a8 1B88     		ldrh	r3, [r3]
  1298 01aa 1E46     		mov	r6, r3
@@ -1834,17 +1836,17 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1324 01de 1849     		ldr	r1, .L104+72
  1325 01e0 1648     		ldr	r0, .L104+68
  1326 01e2 FFF7FEFF 		bl	sprintf
- 335:main.c        ****         
- 336:main.c        ****         UART_PutString(sendValue);
- 1327              		.loc 1 336 0
+ 337:main.c        ****         
+ 338:main.c        ****         UART_PutString(sendValue);
+ 1327              		.loc 1 338 0
  1328 01e6 1548     		ldr	r0, .L104+68
  1329 01e8 FFF7FEFF 		bl	UART_PutString
  1330              	.LBB9:
- 337:main.c        ****         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
- 338:main.c        ****         //UART_PutString(sendValue);
- 339:main.c        ****         /* START PID CODE */
- 340:main.c        ****         for(int cyl = 0;cyl<CYL_NO;cyl++){
- 1331              		.loc 1 340 0
+ 339:main.c        ****         //sprintf(sendValue,"%08d\t%08.2f\t%08d\t%08.2f",adcValue[0],err[0],adcValue[1],err[1]);
+ 340:main.c        ****         //UART_PutString(sendValue);
+ 341:main.c        ****         /* START PID CODE */
+ 342:main.c        ****         for(int cyl = 0;cyl<CYL_NO;cyl++){
+ 1331              		.loc 1 342 0
  1332 01ec 0023     		movs	r3, #0
  1333 01ee FB62     		str	r3, [r7, #44]
  1334 01f0 2FE1     		b	.L79
@@ -1856,11 +1858,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1339 01fc 9999993F 		.word	1067030937
  1340 0200 00000000 		.word	psoc_id
  1341 0204 00000000 		.word	offsets
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 32
+
+
  1342 0208 00000000 		.word	new_pos_set
  1343 020c 00000000 		.word	new_pos
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 32
-
-
  1344 0210 00000000 		.word	pos
  1345 0214 00000000 		.word	pulse
  1346 0218 00000000 		.word	pulse_temp
@@ -1875,32 +1877,32 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1355 023c 00000000 		.word	sendValue
  1356 0240 18000000 		.word	.LC1
  1357              	.L85:
- 341:main.c        ****             if(new_pos_set[cyl]){
- 1358              		.loc 1 341 0
+ 343:main.c        ****             if(new_pos_set[cyl]){
+ 1358              		.loc 1 343 0
  1359 0244 9E4A     		ldr	r2, .L106+16
  1360 0246 FB6A     		ldr	r3, [r7, #44]
  1361 0248 52F82330 		ldr	r3, [r2, r3, lsl #2]
  1362 024c 002B     		cmp	r3, #0
  1363 024e 0CD0     		beq	.L80
- 342:main.c        ****                 pos[cyl] = new_pos[cyl];
- 1364              		.loc 1 342 0
+ 344:main.c        ****                 pos[cyl] = new_pos[cyl];
+ 1364              		.loc 1 344 0
  1365 0250 9C4A     		ldr	r2, .L106+20
  1366 0252 FB6A     		ldr	r3, [r7, #44]
  1367 0254 52F82320 		ldr	r2, [r2, r3, lsl #2]
  1368 0258 9B49     		ldr	r1, .L106+24
  1369 025a FB6A     		ldr	r3, [r7, #44]
  1370 025c 41F82320 		str	r2, [r1, r3, lsl #2]
- 343:main.c        ****                 new_pos_set[cyl] = 0;
- 1371              		.loc 1 343 0
+ 345:main.c        ****                 new_pos_set[cyl] = 0;
+ 1371              		.loc 1 345 0
  1372 0260 974A     		ldr	r2, .L106+16
  1373 0262 FB6A     		ldr	r3, [r7, #44]
  1374 0264 0021     		movs	r1, #0
  1375 0266 42F82310 		str	r1, [r2, r3, lsl #2]
  1376              	.L80:
- 344:main.c        ****             }
- 345:main.c        ****             
- 346:main.c        ****             err[cyl] = -pos[cyl] + adcValue[cyl];
- 1377              		.loc 1 346 0
+ 346:main.c        ****             }
+ 347:main.c        ****             
+ 348:main.c        ****             err[cyl] = -pos[cyl] + adcValue[cyl];
+ 1377              		.loc 1 348 0
  1378 026a 984A     		ldr	r2, .L106+28
  1379 026c FB6A     		ldr	r3, [r7, #44]
  1380 026e 32F81330 		ldrh	r3, [r2, r3, lsl #1]
@@ -1916,13 +1918,13 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1390 0288 9149     		ldr	r1, .L106+32
  1391 028a FA6A     		ldr	r2, [r7, #44]
  1392 028c D200     		lsls	r2, r2, #3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 33
+
+
  1393 028e 0A44     		add	r2, r2, r1
  1394 0290 C2E90034 		strd	r3, [r2]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 33
-
-
- 347:main.c        ****             der[cyl] = err[cyl] - prev_err[cyl];
- 1395              		.loc 1 347 0
+ 349:main.c        ****             der[cyl] = err[cyl] - prev_err[cyl];
+ 1395              		.loc 1 349 0
  1396 0294 8E4A     		ldr	r2, .L106+32
  1397 0296 FB6A     		ldr	r3, [r7, #44]
  1398 0298 DB00     		lsls	r3, r3, #3
@@ -1943,8 +1945,8 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1413 02ba D200     		lsls	r2, r2, #3
  1414 02bc 0A44     		add	r2, r2, r1
  1415 02be C2E90034 		strd	r3, [r2]
- 348:main.c        ****             pid_integral[cyl] = err[cyl]* dt + pid_integral[cyl];
- 1416              		.loc 1 348 0
+ 350:main.c        ****             pid_integral[cyl] = err[cyl]* dt + pid_integral[cyl];
+ 1416              		.loc 1 350 0
  1417 02c2 834A     		ldr	r2, .L106+32
  1418 02c4 FB6A     		ldr	r3, [r7, #44]
  1419 02c6 DB00     		lsls	r3, r3, #3
@@ -1971,24 +1973,24 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1440 02f8 D200     		lsls	r2, r2, #3
  1441 02fa 0A44     		add	r2, r2, r1
  1442 02fc C2E90034 		strd	r3, [r2]
- 349:main.c        ****             if(pid_integral[cyl]>3500){
- 1443              		.loc 1 349 0
+ 351:main.c        ****             if(pid_integral[cyl]>3500){
+ 1443              		.loc 1 351 0
  1444 0300 764A     		ldr	r2, .L106+44
  1445 0302 FB6A     		ldr	r3, [r7, #44]
  1446 0304 DB00     		lsls	r3, r3, #3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 34
+
+
  1447 0306 1344     		add	r3, r3, r2
  1448 0308 D3E90001 		ldrd	r0, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 34
-
-
  1449 030c 68A3     		adr	r3, .L106
  1450 030e D3E90023 		ldrd	r2, [r3]
  1451 0312 FFF7FEFF 		bl	__aeabi_dcmpgt
  1452 0316 0346     		mov	r3, r0
  1453 0318 002B     		cmp	r3, #0
  1454 031a 09D0     		beq	.L103
- 350:main.c        ****                 pid_integral[cyl] = 3500;
- 1455              		.loc 1 350 0
+ 352:main.c        ****                 pid_integral[cyl] = 3500;
+ 1455              		.loc 1 352 0
  1456 031c 6F4A     		ldr	r2, .L106+44
  1457 031e FB6A     		ldr	r3, [r7, #44]
  1458 0320 DB00     		lsls	r3, r3, #3
@@ -1998,8 +2000,8 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1462 032a C2E90034 		strd	r3, [r2]
  1463 032e 16E0     		b	.L83
  1464              	.L103:
- 351:main.c        ****             } else if(pid_integral[cyl]<-3500){
- 1465              		.loc 1 351 0
+ 353:main.c        ****             } else if(pid_integral[cyl]<-3500){
+ 1465              		.loc 1 353 0
  1466 0330 6A4A     		ldr	r2, .L106+44
  1467 0332 FB6A     		ldr	r3, [r7, #44]
  1468 0334 DB00     		lsls	r3, r3, #3
@@ -2011,8 +2013,8 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1474 0346 0346     		mov	r3, r0
  1475 0348 002B     		cmp	r3, #0
  1476 034a 08D0     		beq	.L83
- 352:main.c        ****                 pid_integral[cyl] = -3500;
- 1477              		.loc 1 352 0
+ 354:main.c        ****                 pid_integral[cyl] = -3500;
+ 1477              		.loc 1 354 0
  1478 034c 634A     		ldr	r2, .L106+44
  1479 034e FB6A     		ldr	r3, [r7, #44]
  1480 0350 DB00     		lsls	r3, r3, #3
@@ -2021,9 +2023,9 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1483 0356 D4E90034 		ldrd	r3, [r4]
  1484 035a C2E90034 		strd	r3, [r2]
  1485              	.L83:
- 353:main.c        ****             }
- 354:main.c        ****             pulse_temp[cyl] = pid[0] * err[cyl] + ( pid[1] * pid_integral[cyl] ) + ( pid[2] * der[c
- 1486              		.loc 1 354 0 discriminator 2
+ 355:main.c        ****             }
+ 356:main.c        ****             pulse_temp[cyl] = pid[0] * err[cyl] + ( pid[1] * pid_integral[cyl] ) + ( pid[2] * der[c
+ 1486              		.loc 1 356 0 discriminator 2
  1487 035e 604B     		ldr	r3, .L106+48
  1488 0360 D3E90001 		ldrd	r0, [r3]
  1489 0364 5A4A     		ldr	r2, .L106+32
@@ -2036,11 +2038,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1496 0372 FFF7FEFF 		bl	__aeabi_dmul
  1497 0376 0346     		mov	r3, r0
  1498 0378 0C46     		mov	r4, r1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 35
+
+
  1499 037a 1D46     		mov	r5, r3
  1500 037c 2646     		mov	r6, r4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 35
-
-
  1501 037e 584B     		ldr	r3, .L106+48
  1502 0380 D3E90201 		ldrd	r0, [r3, #8]
  1503 0384 554A     		ldr	r2, .L106+44
@@ -2094,13 +2096,13 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1551 03f4 3B4A     		ldr	r2, .L106+52
  1552 03f6 FB6A     		ldr	r3, [r7, #44]
  1553 03f8 42F82310 		str	r1, [r2, r3, lsl #2]
- 355:main.c        ****             
- 356:main.c        ****             pulse[cyl] = pulseCheck(pulse_temp[cyl],offsets[cyl][1],offsets[cyl][0]);
- 1554              		.loc 1 356 0 discriminator 2
+ 357:main.c        ****             
+ 358:main.c        ****             pulse[cyl] = pulseCheck(pulse_temp[cyl],offsets[cyl][1],offsets[cyl][0]);
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 36
+
+
+ 1554              		.loc 1 358 0 discriminator 2
  1555 03fc 394A     		ldr	r2, .L106+52
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 36
-
-
  1556 03fe FB6A     		ldr	r3, [r7, #44]
  1557 0400 52F82300 		ldr	r0, [r2, r3, lsl #2]
  1558 0404 384A     		ldr	r2, .L106+56
@@ -2117,17 +2119,17 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1569 041e 334A     		ldr	r2, .L106+60
  1570 0420 FB6A     		ldr	r3, [r7, #44]
  1571 0422 42F82310 		str	r1, [r2, r3, lsl #2]
- 357:main.c        ****             
- 358:main.c        ****             writePWM(cyl,pulse[cyl]);
- 1572              		.loc 1 358 0 discriminator 2
+ 359:main.c        ****             
+ 360:main.c        ****             writePWM(cyl,pulse[cyl]);
+ 1572              		.loc 1 360 0 discriminator 2
  1573 0426 314A     		ldr	r2, .L106+60
  1574 0428 FB6A     		ldr	r3, [r7, #44]
  1575 042a 52F82330 		ldr	r3, [r2, r3, lsl #2]
  1576 042e 1946     		mov	r1, r3
  1577 0430 F86A     		ldr	r0, [r7, #44]
  1578 0432 FFF7FEFF 		bl	writePWM
- 359:main.c        ****             prev_err[cyl] = err[cyl];
- 1579              		.loc 1 359 0 discriminator 2
+ 361:main.c        ****             prev_err[cyl] = err[cyl];
+ 1579              		.loc 1 361 0 discriminator 2
  1580 0436 264A     		ldr	r2, .L106+32
  1581 0438 FB6A     		ldr	r3, [r7, #44]
  1582 043a DB00     		lsls	r3, r3, #3
@@ -2138,105 +2140,105 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1587 0444 D200     		lsls	r2, r2, #3
  1588 0446 0A44     		add	r2, r2, r1
  1589 0448 C2E90034 		strd	r3, [r2]
- 340:main.c        ****             if(new_pos_set[cyl]){
- 1590              		.loc 1 340 0 discriminator 2
+ 342:main.c        ****             if(new_pos_set[cyl]){
+ 1590              		.loc 1 342 0 discriminator 2
  1591 044c FB6A     		ldr	r3, [r7, #44]
  1592 044e 0133     		adds	r3, r3, #1
  1593 0450 FB62     		str	r3, [r7, #44]
  1594              	.L79:
- 340:main.c        ****             if(new_pos_set[cyl]){
- 1595              		.loc 1 340 0 is_stmt 0 discriminator 1
+ 342:main.c        ****             if(new_pos_set[cyl]){
+ 1595              		.loc 1 342 0 is_stmt 0 discriminator 1
  1596 0452 FB6A     		ldr	r3, [r7, #44]
  1597 0454 032B     		cmp	r3, #3
  1598 0456 7FF7F5AE 		ble	.L85
  1599              	.LBE9:
- 360:main.c        ****         }
- 361:main.c        ****         
- 362:main.c        ****         
- 363:main.c        ****         /* END PID CODE */
- 364:main.c        ****         if(start_calib){
- 1600              		.loc 1 364 0 is_stmt 1
+ 362:main.c        ****         }
+ 363:main.c        ****         
+ 364:main.c        ****         
+ 365:main.c        ****         /* END PID CODE */
+ 366:main.c        ****         if(start_calib){
+ 1600              		.loc 1 366 0 is_stmt 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 37
+
+
  1601 045a 254B     		ldr	r3, .L106+64
  1602 045c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 37
-
-
  1603 045e 002B     		cmp	r3, #0
  1604 0460 00F0D980 		beq	.L86
  1605              	.LBB10:
- 365:main.c        ****                 
- 366:main.c        ****             int calib_cyl = 0;
- 1606              		.loc 1 366 0
+ 367:main.c        ****                 
+ 368:main.c        ****             int calib_cyl = 0;
+ 1606              		.loc 1 368 0
  1607 0464 0023     		movs	r3, #0
  1608 0466 FB60     		str	r3, [r7, #12]
- 367:main.c        ****             int upper_offset_set = 0;
- 1609              		.loc 1 367 0
+ 369:main.c        ****             int upper_offset_set = 0;
+ 1609              		.loc 1 369 0
  1610 0468 0023     		movs	r3, #0
  1611 046a BB62     		str	r3, [r7, #40]
- 368:main.c        ****             int lower_offset_set = 0;
- 1612              		.loc 1 368 0
+ 370:main.c        ****             int lower_offset_set = 0;
+ 1612              		.loc 1 370 0
  1613 046c 0023     		movs	r3, #0
  1614 046e 7B62     		str	r3, [r7, #36]
- 369:main.c        ****             int upper_offset = 160;
- 1615              		.loc 1 369 0
+ 371:main.c        ****             int upper_offset = 160;
+ 1615              		.loc 1 371 0
  1616 0470 A023     		movs	r3, #160
  1617 0472 3B62     		str	r3, [r7, #32]
- 370:main.c        ****             int lower_offset = -110;
- 1618              		.loc 1 370 0
+ 372:main.c        ****             int lower_offset = -110;
+ 1618              		.loc 1 372 0
  1619 0474 6FF06D03 		mvn	r3, #109
  1620 0478 FB61     		str	r3, [r7, #28]
- 371:main.c        ****             int lower_check_no = 0;
- 1621              		.loc 1 371 0
+ 373:main.c        ****             int lower_check_no = 0;
+ 1621              		.loc 1 373 0
  1622 047a 0023     		movs	r3, #0
  1623 047c BB61     		str	r3, [r7, #24]
- 372:main.c        ****             int upper_check_no = 0;
- 1624              		.loc 1 372 0
+ 374:main.c        ****             int upper_check_no = 0;
+ 1624              		.loc 1 374 0
  1625 047e 0023     		movs	r3, #0
  1626 0480 7B61     		str	r3, [r7, #20]
- 373:main.c        ****             uint16 prev_adcValue = adcValue[0];
- 1627              		.loc 1 373 0
+ 375:main.c        ****             uint16 prev_adcValue = adcValue[0];
+ 1627              		.loc 1 375 0
  1628 0482 124B     		ldr	r3, .L106+28
  1629 0484 1B88     		ldrh	r3, [r3]	@ movhi
  1630 0486 7B81     		strh	r3, [r7, #10]	@ movhi
- 374:main.c        ****             uint16 diff = 0;
- 1631              		.loc 1 374 0
+ 376:main.c        ****             uint16 diff = 0;
+ 1631              		.loc 1 376 0
  1632 0488 0023     		movs	r3, #0
  1633 048a 3B81     		strh	r3, [r7, #8]	@ movhi
  1634              	.LBB11:
- 375:main.c        ****             for(int g = 0;g<CYL_NO;g++)
- 1635              		.loc 1 375 0
+ 377:main.c        ****             for(int g = 0;g<CYL_NO;g++)
+ 1635              		.loc 1 377 0
  1636 048c 0023     		movs	r3, #0
  1637 048e 3B61     		str	r3, [r7, #16]
  1638 0490 06E0     		b	.L87
  1639              	.L88:
- 376:main.c        ****                 writePWM(g,0);
- 1640              		.loc 1 376 0 discriminator 3
+ 378:main.c        ****                 writePWM(g,0);
+ 1640              		.loc 1 378 0 discriminator 3
  1641 0492 0021     		movs	r1, #0
  1642 0494 3869     		ldr	r0, [r7, #16]
  1643 0496 FFF7FEFF 		bl	writePWM
- 375:main.c        ****             for(int g = 0;g<CYL_NO;g++)
- 1644              		.loc 1 375 0 discriminator 3
+ 377:main.c        ****             for(int g = 0;g<CYL_NO;g++)
+ 1644              		.loc 1 377 0 discriminator 3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 38
+
+
  1645 049a 3B69     		ldr	r3, [r7, #16]
  1646 049c 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 38
-
-
  1647 049e 3B61     		str	r3, [r7, #16]
  1648              	.L87:
- 375:main.c        ****             for(int g = 0;g<CYL_NO;g++)
- 1649              		.loc 1 375 0 is_stmt 0 discriminator 1
+ 377:main.c        ****             for(int g = 0;g<CYL_NO;g++)
+ 1649              		.loc 1 377 0 is_stmt 0 discriminator 1
  1650 04a0 3B69     		ldr	r3, [r7, #16]
  1651 04a2 032B     		cmp	r3, #3
  1652 04a4 F5DD     		ble	.L88
  1653              	.LBE11:
- 377:main.c        ****                 
- 378:main.c        ****             CyDelay(1000);
- 1654              		.loc 1 378 0 is_stmt 1
+ 379:main.c        ****                 
+ 380:main.c        ****             CyDelay(1000);
+ 1654              		.loc 1 380 0 is_stmt 1
  1655 04a6 4FF47A70 		mov	r0, #1000
  1656 04aa FFF7FEFF 		bl	CyDelay
- 379:main.c        ****         
- 380:main.c        ****             while(upper_offset_set==0 || lower_offset_set==0){
- 1657              		.loc 1 380 0
+ 381:main.c        ****         
+ 382:main.c        ****             while(upper_offset_set==0 || lower_offset_set==0){
+ 1657              		.loc 1 382 0
  1658 04ae 9BE0     		b	.L89
  1659              	.L107:
  1660              		.align	3
@@ -2259,32 +2261,32 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1677 04ec 00000000 		.word	pulse
  1678 04f0 00000000 		.word	start_calib
  1679              	.L97:
- 381:main.c        ****                 
- 382:main.c        ****                 prev_adcValue = adcValue[calib_cyl];
- 1680              		.loc 1 382 0
+ 383:main.c        ****                 
+ 384:main.c        ****                 prev_adcValue = adcValue[calib_cyl];
+ 1680              		.loc 1 384 0
  1681 04f4 6C4A     		ldr	r2, .L108+16
  1682 04f6 FB68     		ldr	r3, [r7, #12]
  1683 04f8 32F81330 		ldrh	r3, [r2, r3, lsl #1]	@ movhi
  1684 04fc 7B81     		strh	r3, [r7, #10]	@ movhi
- 383:main.c        ****                 if(upper_offset_set==0){
- 1685              		.loc 1 383 0
+ 385:main.c        ****                 if(upper_offset_set==0){
+ 1685              		.loc 1 385 0
  1686 04fe BB6A     		ldr	r3, [r7, #40]
  1687 0500 002B     		cmp	r3, #0
  1688 0502 2FD1     		bne	.L90
- 384:main.c        ****                     writePWM(calib_cyl,upper_offset);
- 1689              		.loc 1 384 0
+ 386:main.c        ****                     writePWM(calib_cyl,upper_offset);
+ 1689              		.loc 1 386 0
  1690 0504 396A     		ldr	r1, [r7, #32]
  1691 0506 F868     		ldr	r0, [r7, #12]
  1692 0508 FFF7FEFF 		bl	writePWM
- 385:main.c        ****                     CyDelay(200);
- 1693              		.loc 1 385 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 39
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 39
 
 
+ 387:main.c        ****                     CyDelay(200);
+ 1693              		.loc 1 387 0
  1694 050c C820     		movs	r0, #200
  1695 050e FFF7FEFF 		bl	CyDelay
- 386:main.c        ****                     diff = abs(prev_adcValue-adcValue[calib_cyl]);
- 1696              		.loc 1 386 0
+ 388:main.c        ****                     diff = abs(prev_adcValue-adcValue[calib_cyl]);
+ 1696              		.loc 1 388 0
  1697 0512 7B89     		ldrh	r3, [r7, #10]
  1698 0514 6449     		ldr	r1, .L108+16
  1699 0516 FA68     		ldr	r2, [r7, #12]
@@ -2294,32 +2296,32 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1703 0520 B8BF     		it	lt
  1704 0522 5B42     		rsblt	r3, r3, #0
  1705 0524 3B81     		strh	r3, [r7, #8]	@ movhi
- 387:main.c        ****                     if(diff>10){
- 1706              		.loc 1 387 0
+ 389:main.c        ****                     if(diff>10){
+ 1706              		.loc 1 389 0
  1707 0526 3B89     		ldrh	r3, [r7, #8]
  1708 0528 0A2B     		cmp	r3, #10
  1709 052a 03D9     		bls	.L91
- 388:main.c        ****                         upper_check_no ++;;
- 1710              		.loc 1 388 0
+ 390:main.c        ****                         upper_check_no ++;;
+ 1710              		.loc 1 390 0
  1711 052c 7B69     		ldr	r3, [r7, #20]
  1712 052e 0133     		adds	r3, r3, #1
  1713 0530 7B61     		str	r3, [r7, #20]
  1714 0532 04E0     		b	.L92
  1715              	.L91:
- 389:main.c        ****                     }else{
- 390:main.c        ****                         upper_offset = upper_offset + 1;
- 1716              		.loc 1 390 0
+ 391:main.c        ****                     }else{
+ 392:main.c        ****                         upper_offset = upper_offset + 1;
+ 1716              		.loc 1 392 0
  1717 0534 3B6A     		ldr	r3, [r7, #32]
  1718 0536 0133     		adds	r3, r3, #1
  1719 0538 3B62     		str	r3, [r7, #32]
- 391:main.c        ****                         upper_check_no=0;
- 1720              		.loc 1 391 0
+ 393:main.c        ****                         upper_check_no=0;
+ 1720              		.loc 1 393 0
  1721 053a 0023     		movs	r3, #0
  1722 053c 7B61     		str	r3, [r7, #20]
  1723              	.L92:
- 392:main.c        ****                     }
- 393:main.c        ****                     sprintf(sendValue,"UPPER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\
- 1724              		.loc 1 393 0
+ 394:main.c        ****                     }
+ 395:main.c        ****                     sprintf(sendValue,"UPPER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\
+ 1724              		.loc 1 395 0
  1725 053e 3B89     		ldrh	r3, [r7, #8]
  1726 0540 0093     		str	r3, [sp]
  1727 0542 3B6A     		ldr	r3, [r7, #32]
@@ -2327,47 +2329,47 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1729 0546 5949     		ldr	r1, .L108+20
  1730 0548 5948     		ldr	r0, .L108+24
  1731 054a FFF7FEFF 		bl	sprintf
- 394:main.c        ****                     UART_PutString(sendValue);
- 1732              		.loc 1 394 0
+ 396:main.c        ****                     UART_PutString(sendValue);
+ 1732              		.loc 1 396 0
  1733 054e 5848     		ldr	r0, .L108+24
  1734 0550 FFF7FEFF 		bl	UART_PutString
- 395:main.c        ****                     writePWM(calib_cyl,0);
- 1735              		.loc 1 395 0
+ 397:main.c        ****                     writePWM(calib_cyl,0);
+ 1735              		.loc 1 397 0
  1736 0554 0021     		movs	r1, #0
  1737 0556 F868     		ldr	r0, [r7, #12]
  1738 0558 FFF7FEFF 		bl	writePWM
- 396:main.c        ****                     CyDelay(500);
- 1739              		.loc 1 396 0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 40
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 40
 
 
+ 398:main.c        ****                     CyDelay(500);
+ 1739              		.loc 1 398 0
  1740 055c 4FF4FA70 		mov	r0, #500
  1741 0560 FFF7FEFF 		bl	CyDelay
  1742              	.L90:
- 397:main.c        ****                 }
- 398:main.c        ****                 
- 399:main.c        ****                 prev_adcValue = adcValue[calib_cyl];
- 1743              		.loc 1 399 0
+ 399:main.c        ****                 }
+ 400:main.c        ****                 
+ 401:main.c        ****                 prev_adcValue = adcValue[calib_cyl];
+ 1743              		.loc 1 401 0
  1744 0564 504A     		ldr	r2, .L108+16
  1745 0566 FB68     		ldr	r3, [r7, #12]
  1746 0568 32F81330 		ldrh	r3, [r2, r3, lsl #1]	@ movhi
  1747 056c 7B81     		strh	r3, [r7, #10]	@ movhi
- 400:main.c        ****                 if(lower_offset_set==0){
- 1748              		.loc 1 400 0
+ 402:main.c        ****                 if(lower_offset_set==0){
+ 1748              		.loc 1 402 0
  1749 056e 7B6A     		ldr	r3, [r7, #36]
  1750 0570 002B     		cmp	r3, #0
  1751 0572 2FD1     		bne	.L93
- 401:main.c        ****                     writePWM(calib_cyl,lower_offset);
- 1752              		.loc 1 401 0
+ 403:main.c        ****                     writePWM(calib_cyl,lower_offset);
+ 1752              		.loc 1 403 0
  1753 0574 F969     		ldr	r1, [r7, #28]
  1754 0576 F868     		ldr	r0, [r7, #12]
  1755 0578 FFF7FEFF 		bl	writePWM
- 402:main.c        ****                     CyDelay(200);
- 1756              		.loc 1 402 0
+ 404:main.c        ****                     CyDelay(200);
+ 1756              		.loc 1 404 0
  1757 057c C820     		movs	r0, #200
  1758 057e FFF7FEFF 		bl	CyDelay
- 403:main.c        ****                     diff = abs(prev_adcValue-adcValue[calib_cyl]);
- 1759              		.loc 1 403 0
+ 405:main.c        ****                     diff = abs(prev_adcValue-adcValue[calib_cyl]);
+ 1759              		.loc 1 405 0
  1760 0582 7B89     		ldrh	r3, [r7, #10]
  1761 0584 4849     		ldr	r1, .L108+16
  1762 0586 FA68     		ldr	r2, [r7, #12]
@@ -2377,35 +2379,35 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1766 0590 B8BF     		it	lt
  1767 0592 5B42     		rsblt	r3, r3, #0
  1768 0594 3B81     		strh	r3, [r7, #8]	@ movhi
- 404:main.c        ****                     if(diff>10){
- 1769              		.loc 1 404 0
+ 406:main.c        ****                     if(diff>10){
+ 1769              		.loc 1 406 0
  1770 0596 3B89     		ldrh	r3, [r7, #8]
  1771 0598 0A2B     		cmp	r3, #10
  1772 059a 03D9     		bls	.L94
- 405:main.c        ****                         lower_check_no++;
- 1773              		.loc 1 405 0
+ 407:main.c        ****                         lower_check_no++;
+ 1773              		.loc 1 407 0
  1774 059c BB69     		ldr	r3, [r7, #24]
  1775 059e 0133     		adds	r3, r3, #1
  1776 05a0 BB61     		str	r3, [r7, #24]
  1777 05a2 04E0     		b	.L95
  1778              	.L94:
- 406:main.c        ****                     }else{
- 407:main.c        ****                         lower_offset = lower_offset - 1;
- 1779              		.loc 1 407 0
+ 408:main.c        ****                     }else{
+ 409:main.c        ****                         lower_offset = lower_offset - 1;
+ 1779              		.loc 1 409 0
  1780 05a4 FB69     		ldr	r3, [r7, #28]
  1781 05a6 013B     		subs	r3, r3, #1
  1782 05a8 FB61     		str	r3, [r7, #28]
- 408:main.c        ****                         lower_check_no = 0;
- 1783              		.loc 1 408 0
+ 410:main.c        ****                         lower_check_no = 0;
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 41
+
+
+ 1783              		.loc 1 410 0
  1784 05aa 0023     		movs	r3, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 41
-
-
  1785 05ac BB61     		str	r3, [r7, #24]
  1786              	.L95:
- 409:main.c        ****                     }
- 410:main.c        ****                     sprintf(sendValue,"LOWER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\
- 1787              		.loc 1 410 0
+ 411:main.c        ****                     }
+ 412:main.c        ****                     sprintf(sendValue,"LOWER:\tLower Offset: %d \tUpper Offset: %d \t ADC Diff: %d\
+ 1787              		.loc 1 412 0
  1788 05ae 3B89     		ldrh	r3, [r7, #8]
  1789 05b0 0093     		str	r3, [sp]
  1790 05b2 3B6A     		ldr	r3, [r7, #32]
@@ -2413,90 +2415,90 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1792 05b6 3F49     		ldr	r1, .L108+28
  1793 05b8 3D48     		ldr	r0, .L108+24
  1794 05ba FFF7FEFF 		bl	sprintf
- 411:main.c        ****                     UART_PutString(sendValue);
- 1795              		.loc 1 411 0
+ 413:main.c        ****                     UART_PutString(sendValue);
+ 1795              		.loc 1 413 0
  1796 05be 3C48     		ldr	r0, .L108+24
  1797 05c0 FFF7FEFF 		bl	UART_PutString
- 412:main.c        ****                     writePWM(calib_cyl,0);
- 1798              		.loc 1 412 0
+ 414:main.c        ****                     writePWM(calib_cyl,0);
+ 1798              		.loc 1 414 0
  1799 05c4 0021     		movs	r1, #0
  1800 05c6 F868     		ldr	r0, [r7, #12]
  1801 05c8 FFF7FEFF 		bl	writePWM
- 413:main.c        ****                     CyDelay(500);
- 1802              		.loc 1 413 0
+ 415:main.c        ****                     CyDelay(500);
+ 1802              		.loc 1 415 0
  1803 05cc 4FF4FA70 		mov	r0, #500
  1804 05d0 FFF7FEFF 		bl	CyDelay
  1805              	.L93:
- 414:main.c        ****                 }
- 415:main.c        ****                 
- 416:main.c        ****                 if(upper_check_no>2){
- 1806              		.loc 1 416 0
+ 416:main.c        ****                 }
+ 417:main.c        ****                 
+ 418:main.c        ****                 if(upper_check_no>2){
+ 1806              		.loc 1 418 0
  1807 05d4 7B69     		ldr	r3, [r7, #20]
  1808 05d6 022B     		cmp	r3, #2
  1809 05d8 01DD     		ble	.L96
- 417:main.c        ****                     upper_offset_set=1;}
- 1810              		.loc 1 417 0
+ 419:main.c        ****                     upper_offset_set=1;}
+ 1810              		.loc 1 419 0
  1811 05da 0123     		movs	r3, #1
  1812 05dc BB62     		str	r3, [r7, #40]
  1813              	.L96:
- 418:main.c        ****                 if(lower_check_no>2){
- 1814              		.loc 1 418 0
+ 420:main.c        ****                 if(lower_check_no>2){
+ 1814              		.loc 1 420 0
  1815 05de BB69     		ldr	r3, [r7, #24]
  1816 05e0 022B     		cmp	r3, #2
  1817 05e2 01DD     		ble	.L89
- 419:main.c        ****                     lower_offset_set=1;}
- 1818              		.loc 1 419 0
+ 421:main.c        ****                     lower_offset_set=1;}
+ 1818              		.loc 1 421 0
  1819 05e4 0123     		movs	r3, #1
  1820 05e6 7B62     		str	r3, [r7, #36]
  1821              	.L89:
- 380:main.c        ****                 
- 1822              		.loc 1 380 0
+ 382:main.c        ****                 
+ 1822              		.loc 1 382 0
  1823 05e8 BB6A     		ldr	r3, [r7, #40]
  1824 05ea 002B     		cmp	r3, #0
  1825 05ec 82D0     		beq	.L97
- 380:main.c        ****                 
- 1826              		.loc 1 380 0 is_stmt 0 discriminator 1
+ 382:main.c        ****                 
+ 1826              		.loc 1 382 0 is_stmt 0 discriminator 1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 42
+
+
  1827 05ee 7B6A     		ldr	r3, [r7, #36]
  1828 05f0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 42
-
-
  1829 05f2 3FF47FAF 		beq	.L97
- 420:main.c        ****         
- 421:main.c        ****             }
- 422:main.c        ****             
- 423:main.c        ****             sprintf(sendValue,"Lower Offset: %d \t Upper Offset: %d \n",lower_offset,upper_offset);
- 1830              		.loc 1 423 0 is_stmt 1
+ 422:main.c        ****         
+ 423:main.c        ****             }
+ 424:main.c        ****             
+ 425:main.c        ****             sprintf(sendValue,"Lower Offset: %d \t Upper Offset: %d \n",lower_offset,upper_offset);
+ 1830              		.loc 1 425 0 is_stmt 1
  1831 05f6 3B6A     		ldr	r3, [r7, #32]
  1832 05f8 FA69     		ldr	r2, [r7, #28]
  1833 05fa 2F49     		ldr	r1, .L108+32
  1834 05fc 2C48     		ldr	r0, .L108+24
  1835 05fe FFF7FEFF 		bl	sprintf
- 424:main.c        ****             UART_PutString(sendValue);
- 1836              		.loc 1 424 0
+ 426:main.c        ****             UART_PutString(sendValue);
+ 1836              		.loc 1 426 0
  1837 0602 2B48     		ldr	r0, .L108+24
  1838 0604 FFF7FEFF 		bl	UART_PutString
- 425:main.c        ****             
- 426:main.c        ****             //while(1){CyDelay(100);};
- 427:main.c        ****             start_calib = 0;
- 1839              		.loc 1 427 0
+ 427:main.c        ****             
+ 428:main.c        ****             //while(1){CyDelay(100);};
+ 429:main.c        ****             start_calib = 0;
+ 1839              		.loc 1 429 0
  1840 0608 2C4B     		ldr	r3, .L108+36
  1841 060a 0022     		movs	r2, #0
  1842 060c 1A60     		str	r2, [r3]
- 428:main.c        ****             CyDelay(15000);
- 1843              		.loc 1 428 0
+ 430:main.c        ****             CyDelay(15000);
+ 1843              		.loc 1 430 0
  1844 060e 43F69820 		movw	r0, #15000
  1845 0612 FFF7FEFF 		bl	CyDelay
  1846              	.L86:
  1847              	.LBE10:
- 429:main.c        ****         }
- 430:main.c        ****         CyDelay(1);
- 1848              		.loc 1 430 0
+ 431:main.c        ****         }
+ 432:main.c        ****         CyDelay(1);
+ 1848              		.loc 1 432 0
  1849 0616 0120     		movs	r0, #1
  1850 0618 FFF7FEFF 		bl	CyDelay
- 431:main.c        ****         
- 432:main.c        ****         time = Timer_1_ReadCounter();
- 1851              		.loc 1 432 0
+ 433:main.c        ****         
+ 434:main.c        ****         time = Timer_1_ReadCounter();
+ 1851              		.loc 1 434 0
  1852 061c FFF7FEFF 		bl	Timer_1_ReadCounter
  1853 0620 0346     		mov	r3, r0
  1854 0622 1846     		mov	r0, r3
@@ -2504,8 +2506,8 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1856 0628 0346     		mov	r3, r0
  1857 062a 0C46     		mov	r4, r1
  1858 062c C7E90034 		strd	r3, [r7]
- 433:main.c        ****         dt=(double)(65535-time)/1000000;
- 1859              		.loc 1 433 0
+ 435:main.c        ****         dt=(double)(65535-time)/1000000;
+ 1859              		.loc 1 435 0
  1860 0630 D7E90023 		ldrd	r2, [r7]
  1861 0634 18A1     		adr	r1, .L108
  1862 0636 D1E90001 		ldrd	r0, [r1]
@@ -2516,15 +2518,15 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1867 0644 2146     		mov	r1, r4
  1868 0646 16A3     		adr	r3, .L108+8
  1869 0648 D3E90023 		ldrd	r2, [r3]
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 43
+
+
  1870 064c FFF7FEFF 		bl	__aeabi_ddiv
  1871 0650 0346     		mov	r3, r0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 43
-
-
  1872 0652 0C46     		mov	r4, r1
  1873 0654 C7E90C34 		strd	r3, [r7, #48]
- 434:main.c        ****         dts[dts_ct] = dt;
- 1874              		.loc 1 434 0
+ 436:main.c        ****         dts[dts_ct] = dt;
+ 1874              		.loc 1 436 0
  1875 0658 194B     		ldr	r3, .L108+40
  1876 065a 1B68     		ldr	r3, [r3]
  1877 065c 194A     		ldr	r2, .L108+44
@@ -2532,40 +2534,40 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1879 0660 1A44     		add	r2, r2, r3
  1880 0662 D7E90C34 		ldrd	r3, [r7, #48]
  1881 0666 C2E90034 		strd	r3, [r2]
- 435:main.c        ****         dts_ct++;
- 1882              		.loc 1 435 0
+ 437:main.c        ****         dts_ct++;
+ 1882              		.loc 1 437 0
  1883 066a 154B     		ldr	r3, .L108+40
  1884 066c 1B68     		ldr	r3, [r3]
  1885 066e 0133     		adds	r3, r3, #1
  1886 0670 134A     		ldr	r2, .L108+40
  1887 0672 1360     		str	r3, [r2]
- 436:main.c        ****         if(dts_ct>29){
- 1888              		.loc 1 436 0
+ 438:main.c        ****         if(dts_ct>29){
+ 1888              		.loc 1 438 0
  1889 0674 124B     		ldr	r3, .L108+40
  1890 0676 1B68     		ldr	r3, [r3]
  1891 0678 1D2B     		cmp	r3, #29
  1892 067a 02DD     		ble	.L98
- 437:main.c        ****             dts_ct=0;
- 1893              		.loc 1 437 0
+ 439:main.c        ****             dts_ct=0;
+ 1893              		.loc 1 439 0
  1894 067c 104B     		ldr	r3, .L108+40
  1895 067e 0022     		movs	r2, #0
  1896 0680 1A60     		str	r2, [r3]
  1897              	.L98:
- 438:main.c        ****         }
- 439:main.c        ****         if(UART_ReadRxStatus()==32)
- 1898              		.loc 1 439 0
+ 440:main.c        ****         }
+ 441:main.c        ****         if(UART_ReadRxStatus()==32)
+ 1898              		.loc 1 441 0
  1899 0682 FFF7FEFF 		bl	UART_ReadRxStatus
  1900 0686 0346     		mov	r3, r0
  1901 0688 202B     		cmp	r3, #32
  1902 068a 7FF488AD 		bne	.L100
- 440:main.c        ****         {
- 441:main.c        ****             UART_ClearRxBuffer();
- 1903              		.loc 1 441 0
+ 442:main.c        ****         {
+ 443:main.c        ****             UART_ClearRxBuffer();
+ 1903              		.loc 1 443 0
  1904 068e FFF7FEFF 		bl	UART_ClearRxBuffer
- 442:main.c        ****         }
- 443:main.c        ****         
- 444:main.c        ****     }
- 1905              		.loc 1 444 0
+ 444:main.c        ****         }
+ 445:main.c        ****         
+ 446:main.c        ****     }
+ 1905              		.loc 1 446 0
  1906 0692 84E5     		b	.L100
  1907              	.L109:
  1908 0694 AFF30080 		.align	3
@@ -2576,11 +2578,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1913 06a4 80842E41 		.word	1093567616
  1914 06a8 00000000 		.word	adcValue
  1915 06ac 44000000 		.word	.LC2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 44
+
+
  1916 06b0 00000000 		.word	sendValue
  1917 06b4 80000000 		.word	.LC3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 44
-
-
  1918 06b8 BC000000 		.word	.LC4
  1919 06bc 00000000 		.word	start_calib
  1920 06c0 00000000 		.word	dts_ct
@@ -2636,11 +2638,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  1970 0053 02       		.uleb128 0x2
  1971 0054 04       		.byte	0x4
  1972 0055 07       		.byte	0x7
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 45
+
+
  1973 0056 A0020000 		.4byte	.LASF5
  1974 005a 02       		.uleb128 0x2
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 45
-
-
  1975 005b 08       		.byte	0x8
  1976 005c 05       		.byte	0x5
  1977 005d 05010000 		.4byte	.LASF6
@@ -2696,11 +2698,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2027 00c2 00000000 		.4byte	.LASF17
  2028 00c6 02       		.uleb128 0x2
  2029 00c7 04       		.byte	0x4
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 46
+
+
  2030 00c8 07       		.byte	0x7
  2031 00c9 69000000 		.4byte	.LASF18
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 46
-
-
  2032 00cd 07       		.uleb128 0x7
  2033 00ce 61010000 		.4byte	.LASF23
  2034 00d2 01       		.byte	0x1
@@ -2756,11 +2758,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2084 0134 08       		.uleb128 0x8
  2085 0135 5C000000 		.4byte	.LASF22
  2086 0139 01       		.byte	0x1
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 47
+
+
  2087 013a 2A       		.byte	0x2a
  2088 013b 68000000 		.4byte	0x68
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 47
-
-
  2089 013f 02       		.uleb128 0x2
  2090 0140 91       		.byte	0x91
  2091 0141 6C       		.sleb128 -20
@@ -2816,11 +2818,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2141 01a6 60000000 		.4byte	.LBE5-.LBB5
  2142 01aa 0B       		.uleb128 0xb
  2143 01ab 6900     		.ascii	"i\000"
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 48
+
+
  2144 01ad 01       		.byte	0x1
  2145 01ae 66       		.byte	0x66
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 48
-
-
  2146 01af 68000000 		.4byte	0x68
  2147 01b3 02       		.uleb128 0x2
  2148 01b4 91       		.byte	0x91
@@ -2876,11 +2878,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2198 0213 02       		.uleb128 0x2
  2199 0214 91       		.byte	0x91
  2200 0215 6C       		.sleb128 -20
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 49
+
+
  2201 0216 00       		.byte	0
  2202 0217 00       		.byte	0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 49
-
-
  2203 0218 0E       		.uleb128 0xe
  2204 0219 72000000 		.4byte	.LASF28
  2205 021d 01       		.byte	0x1
@@ -2894,7 +2896,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2213 0231 0F       		.uleb128 0xf
  2214 0232 647400   		.ascii	"dt\000"
  2215 0235 01       		.byte	0x1
- 2216 0236 3001     		.2byte	0x130
+ 2216 0236 3201     		.2byte	0x132
  2217 0238 A0000000 		.4byte	0xa0
  2218 023c 02       		.uleb128 0x2
  2219 023d 91       		.byte	0x91
@@ -2902,7 +2904,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2221 023f 10       		.uleb128 0x10
  2222 0240 04020000 		.4byte	.LASF29
  2223 0244 01       		.byte	0x1
- 2224 0245 3101     		.2byte	0x131
+ 2224 0245 3301     		.2byte	0x133
  2225 0247 A0000000 		.4byte	0xa0
  2226 024b 03       		.uleb128 0x3
  2227 024c 91       		.byte	0x91
@@ -2914,7 +2916,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2233 025c 0F       		.uleb128 0xf
  2234 025d 6700     		.ascii	"g\000"
  2235 025f 01       		.byte	0x1
- 2236 0260 1201     		.2byte	0x112
+ 2236 0260 1401     		.2byte	0x114
  2237 0262 68000000 		.4byte	0x68
  2238 0266 02       		.uleb128 0x2
  2239 0267 91       		.byte	0x91
@@ -2927,7 +2929,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2246 0277 0F       		.uleb128 0xf
  2247 0278 63796C00 		.ascii	"cyl\000"
  2248 027c 01       		.byte	0x1
- 2249 027d 5401     		.2byte	0x154
+ 2249 027d 5601     		.2byte	0x156
  2250 027f 68000000 		.4byte	0x68
  2251 0283 02       		.uleb128 0x2
  2252 0284 91       		.byte	0x91
@@ -2936,13 +2938,13 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2255 0287 0A       		.uleb128 0xa
  2256 0288 64040000 		.4byte	.LBB10
  2257 028c B2010000 		.4byte	.LBE10-.LBB10
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 50
+
+
  2258 0290 10       		.uleb128 0x10
  2259 0291 73020000 		.4byte	.LASF30
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 50
-
-
  2260 0295 01       		.byte	0x1
- 2261 0296 6E01     		.2byte	0x16e
+ 2261 0296 7001     		.2byte	0x170
  2262 0298 68000000 		.4byte	0x68
  2263 029c 03       		.uleb128 0x3
  2264 029d 91       		.byte	0x91
@@ -2950,7 +2952,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2266 02a0 10       		.uleb128 0x10
  2267 02a1 4A030000 		.4byte	.LASF31
  2268 02a5 01       		.byte	0x1
- 2269 02a6 6F01     		.2byte	0x16f
+ 2269 02a6 7101     		.2byte	0x171
  2270 02a8 68000000 		.4byte	0x68
  2271 02ac 02       		.uleb128 0x2
  2272 02ad 91       		.byte	0x91
@@ -2958,7 +2960,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2274 02af 10       		.uleb128 0x10
  2275 02b0 8F010000 		.4byte	.LASF32
  2276 02b4 01       		.byte	0x1
- 2277 02b5 7001     		.2byte	0x170
+ 2277 02b5 7201     		.2byte	0x172
  2278 02b7 68000000 		.4byte	0x68
  2279 02bb 02       		.uleb128 0x2
  2280 02bc 91       		.byte	0x91
@@ -2966,7 +2968,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2282 02be 10       		.uleb128 0x10
  2283 02bf 72010000 		.4byte	.LASF33
  2284 02c3 01       		.byte	0x1
- 2285 02c4 7101     		.2byte	0x171
+ 2285 02c4 7301     		.2byte	0x173
  2286 02c6 68000000 		.4byte	0x68
  2287 02ca 02       		.uleb128 0x2
  2288 02cb 91       		.byte	0x91
@@ -2974,7 +2976,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2290 02cd 10       		.uleb128 0x10
  2291 02ce B9010000 		.4byte	.LASF34
  2292 02d2 01       		.byte	0x1
- 2293 02d3 7201     		.2byte	0x172
+ 2293 02d3 7401     		.2byte	0x174
  2294 02d5 68000000 		.4byte	0x68
  2295 02d9 02       		.uleb128 0x2
  2296 02da 91       		.byte	0x91
@@ -2982,7 +2984,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2298 02dc 10       		.uleb128 0x10
  2299 02dd 0C000000 		.4byte	.LASF35
  2300 02e1 01       		.byte	0x1
- 2301 02e2 7301     		.2byte	0x173
+ 2301 02e2 7501     		.2byte	0x175
  2302 02e4 68000000 		.4byte	0x68
  2303 02e8 02       		.uleb128 0x2
  2304 02e9 91       		.byte	0x91
@@ -2990,18 +2992,18 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2306 02eb 10       		.uleb128 0x10
  2307 02ec 85020000 		.4byte	.LASF36
  2308 02f0 01       		.byte	0x1
- 2309 02f1 7401     		.2byte	0x174
+ 2309 02f1 7601     		.2byte	0x176
  2310 02f3 68000000 		.4byte	0x68
  2311 02f7 03       		.uleb128 0x3
  2312 02f8 91       		.byte	0x91
  2313 02f9 BC7F     		.sleb128 -68
  2314 02fb 10       		.uleb128 0x10
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 51
+
+
  2315 02fc BF020000 		.4byte	.LASF37
  2316 0300 01       		.byte	0x1
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 51
-
-
- 2317 0301 7501     		.2byte	0x175
+ 2317 0301 7701     		.2byte	0x177
  2318 0303 8D000000 		.4byte	0x8d
  2319 0307 03       		.uleb128 0x3
  2320 0308 91       		.byte	0x91
@@ -3009,7 +3011,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2322 030b 10       		.uleb128 0x10
  2323 030c 3C000000 		.4byte	.LASF38
  2324 0310 01       		.byte	0x1
- 2325 0311 7601     		.2byte	0x176
+ 2325 0311 7801     		.2byte	0x178
  2326 0313 8D000000 		.4byte	0x8d
  2327 0317 03       		.uleb128 0x3
  2328 0318 91       		.byte	0x91
@@ -3020,7 +3022,7 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2333 0324 0F       		.uleb128 0xf
  2334 0325 6700     		.ascii	"g\000"
  2335 0327 01       		.byte	0x1
- 2336 0328 7701     		.2byte	0x177
+ 2336 0328 7901     		.2byte	0x179
  2337 032a 68000000 		.4byte	0x68
  2338 032e 03       		.uleb128 0x3
  2339 032f 91       		.byte	0x91
@@ -3056,11 +3058,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2369 036d 01       		.byte	0x1
  2370 036e 33       		.byte	0x33
  2371 036f 68000000 		.4byte	0x68
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 52
+
+
  2372 0373 05       		.uleb128 0x5
  2373 0374 03       		.byte	0x3
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 52
-
-
  2374 0375 00000000 		.4byte	data_read_mode
  2375 0379 13       		.uleb128 0x13
  2376 037a 89030000 		.4byte	0x389
@@ -3116,11 +3118,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2426 03e8 AE010000 		.4byte	.LASF45
  2427 03ec 01       		.byte	0x1
  2428 03ed 39       		.byte	0x39
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 53
+
+
  2429 03ee A4030000 		.4byte	0x3a4
  2430 03f2 05       		.uleb128 0x5
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 53
-
-
  2431 03f3 03       		.byte	0x3
  2432 03f4 00000000 		.4byte	pulse_temp
  2433 03f8 13       		.uleb128 0x13
@@ -3176,11 +3178,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2483 0463 F8030000 		.4byte	0x3f8
  2484 0467 05       		.uleb128 0x5
  2485 0468 03       		.byte	0x3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 54
+
+
  2486 0469 00000000 		.4byte	pid_integral
  2487 046d 12       		.uleb128 0x12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 54
-
-
  2488 046e 1B000000 		.4byte	.LASF49
  2489 0472 01       		.byte	0x1
  2490 0473 40       		.byte	0x40
@@ -3236,11 +3238,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2540 04e1 C6000000 		.4byte	0xc6
  2541 04e5 01       		.byte	0x1
  2542 04e6 00       		.byte	0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 55
+
+
  2543 04e7 12       		.uleb128 0x12
  2544 04e8 6A010000 		.4byte	.LASF52
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 55
-
-
  2545 04ec 01       		.byte	0x1
  2546 04ed 45       		.byte	0x45
  2547 04ee D1040000 		.4byte	0x4d1
@@ -3296,11 +3298,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2597 055b 70696400 		.ascii	"pid\000"
  2598 055f 01       		.byte	0x1
  2599 0560 4A       		.byte	0x4a
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 56
+
+
  2600 0561 4A050000 		.4byte	0x54a
  2601 0565 05       		.uleb128 0x5
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 56
-
-
  2602 0566 03       		.byte	0x3
  2603 0567 00000000 		.4byte	pid
  2604 056b 12       		.uleb128 0x12
@@ -3356,11 +3358,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2654 05d5 13       		.uleb128 0x13
  2655 05d6 8D000000 		.4byte	0x8d
  2656 05da E5050000 		.4byte	0x5e5
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 57
+
+
  2657 05de 14       		.uleb128 0x14
  2658 05df C6000000 		.4byte	0xc6
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 57
-
-
  2659 05e3 06       		.byte	0x6
  2660 05e4 00       		.byte	0
  2661 05e5 12       		.uleb128 0x12
@@ -3416,11 +3418,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2711 001f 16       		.uleb128 0x16
  2712 0020 00       		.byte	0
  2713 0021 03       		.uleb128 0x3
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 58
+
+
  2714 0022 0E       		.uleb128 0xe
  2715 0023 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 58
-
-
  2716 0024 0B       		.uleb128 0xb
  2717 0025 3B       		.uleb128 0x3b
  2718 0026 0B       		.uleb128 0xb
@@ -3476,11 +3478,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2768 0058 01       		.uleb128 0x1
  2769 0059 12       		.uleb128 0x12
  2770 005a 06       		.uleb128 0x6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 59
+
+
  2771 005b 40       		.uleb128 0x40
  2772 005c 18       		.uleb128 0x18
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 59
-
-
  2773 005d 9642     		.uleb128 0x2116
  2774 005f 19       		.uleb128 0x19
  2775 0060 01       		.uleb128 0x1
@@ -3536,11 +3538,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2825 0093 01       		.uleb128 0x1
  2826 0094 12       		.uleb128 0x12
  2827 0095 06       		.uleb128 0x6
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 60
+
+
  2828 0096 00       		.byte	0
  2829 0097 00       		.byte	0
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 60
-
-
  2830 0098 0B       		.uleb128 0xb
  2831 0099 34       		.uleb128 0x34
  2832 009a 00       		.byte	0
@@ -3596,11 +3598,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2882 00cc 49       		.uleb128 0x49
  2883 00cd 13       		.uleb128 0x13
  2884 00ce 11       		.uleb128 0x11
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 61
+
+
  2885 00cf 01       		.uleb128 0x1
  2886 00d0 12       		.uleb128 0x12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 61
-
-
  2887 00d1 06       		.uleb128 0x6
  2888 00d2 40       		.uleb128 0x40
  2889 00d3 18       		.uleb128 0x18
@@ -3656,11 +3658,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2939 0106 3C       		.uleb128 0x3c
  2940 0107 19       		.uleb128 0x19
  2941 0108 00       		.byte	0
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 62
+
+
  2942 0109 00       		.byte	0
  2943 010a 12       		.uleb128 0x12
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 62
-
-
  2944 010b 34       		.uleb128 0x34
  2945 010c 00       		.byte	0
  2946 010d 03       		.uleb128 0x3
@@ -3716,11 +3718,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  2996              		.section	.debug_aranges,"",%progbits
  2997 0000 3C000000 		.4byte	0x3c
  2998 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 63
+
+
  2999 0006 00000000 		.4byte	.Ldebug_info0
  3000 000a 04       		.byte	0x4
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 63
-
-
  3001 000b 00       		.byte	0
  3002 000c 0000     		.2byte	0
  3003 000e 0000     		.2byte	0
@@ -3776,11 +3778,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  3042 002b 70736F63 		.ascii	"psoc_id\000"
  3042      5F696400 
  3043              	.LASF47:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 64
+
+
  3044 0033 70726576 		.ascii	"prev_err\000"
  3044      5F657272 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 64
-
-
  3044      00
  3045              	.LASF38:
  3046 003c 64696666 		.ascii	"diff\000"
@@ -3836,11 +3838,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  3068 0118 75696E74 		.ascii	"uint16\000"
  3068      313600
  3069              	.LASF42:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 65
+
+
  3070 011f 64617461 		.ascii	"data_read_mode\000"
  3070      5F726561 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 65
-
-
  3070      645F6D6F 
  3070      646500
  3071              	.LASF20:
@@ -3896,11 +3898,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  3096      7200
  3097              	.LASF45:
  3098 01ae 70756C73 		.ascii	"pulse_temp\000"
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 66
+
+
  3098      655F7465 
  3098      6D7000
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 66
-
-
  3099              	.LASF34:
  3100 01b9 6C6F7765 		.ascii	"lower_offset\000"
  3100      725F6F66 
@@ -3956,11 +3958,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  3121      00
  3122              	.LASF30:
  3123 0273 63616C69 		.ascii	"calib_cyl\000"
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 67
+
+
  3123      625F6379 
  3123      6C00
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 67
-
-
  3124              	.LASF10:
  3125 027d 696E7433 		.ascii	"int32_t\000"
  3125      325F7400 
@@ -4016,11 +4018,11 @@ ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 1
  3149 0306 72784461 		.ascii	"rxData\000"
  3149      746100
  3150              	.LASF58:
+ARM GAS  C:\Users\Andrew\AppData\Local\Temp\cciFY8w6.s 			page 68
+
+
  3151 030d 6D6F7669 		.ascii	"moving_median\000"
  3151      6E675F6D 
-ARM GAS  C:\Users\Andrew\AppData\Local\Temp\ccvhrw5C.s 			page 68
-
-
  3151      65646961 
  3151      6E00
  3152              	.LASF59:
