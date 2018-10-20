@@ -3,6 +3,7 @@ close all
 clc
 data = [];
 pressures = [0.6 0.8 1.0 1.2 1.4 1.6 1.8]*10^6;
+%pressures = [1.8]*10^6;
 for ll = 1:length(pressures)
     %P = 1.8*10^6; %18 bar
     P = pressures(ll);
@@ -20,6 +21,8 @@ for ll = 1:length(pressures)
     for ii = 1:length(finger_names)
         %F_Upper
         Fcyl = P*Acyl;
+        Fcyl = 38.868*(P/1000000) + 0.6985;
+
         
         N1 = Fcyl*cosd((180-guide_angles(2*ii-1))/2); % wire guide at end of potentiometers
         N2 = Fcyl*cosd((180-hand_angles(2*ii-1))/2); % into hand
@@ -29,14 +32,14 @@ for ll = 1:length(pressures)
         %F_Lower
         
         Fcyl = P*Acyl;
-        
+        Fcyl = 38.868*(P/1000000) + 0.6985;
         N1 = Fcyl*cosd((180-guide_angles(2*ii))/2); % wire guide at end of potentiometers
         N2 = ((Fcyl-N1*fric_coeff)*2)*cosd((180-hand_angles(2*ii))/2); % into hand
         
         F_lower(ii) = ((Fcyl-N1*fric_coeff)*2) - N2*fric_coeff;
         
         F_total(ii) = ((F_lower(ii) * r_lower(ii))/R_lower(ii)) + ((F_upper(ii) * r_upper(ii))/R_upper(ii));
-        fprintf('%s finger: %fN\n',finger_names{ii},F_total(ii));
+        %fprintf('%s finger: %fN\n',finger_names{ii},F_total(ii));
     end
     fprintf('%dPa - %fN\n',P,sum(F_total))
     data(end+1,1:2) = [P*10^-6 sum(F_total)/9.81];
@@ -48,4 +51,3 @@ title('Theoretical Horizontal Force from Middle Phalanx');
 xlabel('Pressure (MPa)');
 ylabel('Equivalent Dynamometer Force (kgs)');
 axis([0.4 2 0 max(data(:,2))+2]);
-grid on

@@ -12,7 +12,7 @@ clc
 % positions_1[2] = (angles.ring[0] / 1.377)*(-703.44 * angles.ring[1] + 2065.4) + (1 - (angles.ring[0] / 1.377)) * (-752.06 * angles.ring[1] + 2707.1);
 % positions_1[3] = (angles.pinky[0] / 1.29) *(-705.92 * angles.pinky[1] + 2182.4) + (1 - (angles.pinky[0] / 1.29))  * (-790.62 * angles.pinky[1] + 2852.7);
 
-finger_names = {'Index' 'Middle' 'Ring' 'Pinky'};
+finger_names = {'Index' 'Middle' 'Ring' 'Little'};
 %met-prox prox-mid
 max_angles = [1.239183769 1.417207353;...
     1.499237827 1.523672437;...
