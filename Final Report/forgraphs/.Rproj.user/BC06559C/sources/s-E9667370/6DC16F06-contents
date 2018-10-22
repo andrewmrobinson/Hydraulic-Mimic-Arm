@@ -1,0 +1,385 @@
+---
+title: "ETC1010: Data Modelling and Computing"
+author: "Professor Di Cook, EBS, Monash U."
+output: 
+  learnr::tutorial:
+    css: "css/logo.css"
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = TRUE,   
+                      message = FALSE,
+                      warning = FALSE,
+                      collapse = TRUE,
+                      fig.height = 4,
+                      fig.width = 8,
+                      fig.align = "center",
+                      cache = FALSE)
+tutorial_html_dependency()
+```
+
+```{r echo=FALSE}
+library(tidyverse)
+```
+
+# Making effective data plots
+
+## Course web site
+
+This is a link to the course web site, in case you need to go back and forth between tutorial and web materials: http://dmac.dicook.org
+
+## Overview
+
+- Coordinate systems
+- Mapping variables to graphical elements
+- Scales, transforming your variables
+- Layering statistical summaries
+- Colour palettes and colour blindness
+- Pre-attentive
+- Proximity
+- Change blindness
+- Hierarchy of mappings
+- Adding interactivity
+
+### *FOLLOW ALONG WITH THE NOTES* 
+
+- Open your ETC1010 `Rproj`
+- Download the `Rmd` file from the class web site
+- You should already have the data sets that you need, from last class
+
+### Turn in your group assignment
+
+Go to ED, the assessments tab. Upload your `Rmd`, and `html`, and `csv` files. 
+
+## Coordinate systems
+
+- *Cartesian, polar:* most plots are made in Cartesian coordinates. Just a few are in polar coordinates, primarily the pie chart. Polar coordinates use radius and angle to describe position in 2D space. Occasionally measurements like wind (direction and speed) make sense to be plotted in polar coordinates.
+- *fixed, equal:* When variables are made on scales that should be comparable, it may be important to reflect this in the axes limits and page space that the plot takes. (This is different from `theme(aspect.ratio=1)` which sets the physical size of the plot to be the same, or in some ratio.)
+- *map:* Maps come in conventional formats, most often with a specific aspect ratio of vertical to horizontal axes, that depends on latitude. 
+- *flip:* Useful for generating a plot with a categorical variable on the x axis and then flipping it sideways to look at.
+
+```{r}
+df <- tibble(x=runif(100), y=runif(100)*10)
+ggplot(df, aes(x=x, y=y)) + geom_point() + coord_fixed()
+ggplot(df, aes(x=x, y=y)) + geom_point() + coord_fixed(ratio=0.2)
+ggplot(df, aes(x=x, y=y)) + geom_point() + theme(aspect.ratio=1)
+```
+
+## Layering
+
+- *Statistical summaries:* It is common to layer plots, particularly by adding statistical summaries, like a model fit, or means and standard deviations. The purpose is to show the **trend** in relation to the **variation**. 
+- *Maps:* Commonly maps provide the framework for data collected spatially. One layer for the map, and another for the data.
+
+```{r}
+df <- tibble(x=runif(100), y1=4*x + rnorm(100), 
+             y2= -x + 10*(x-0.5)^2+ rnorm(100))
+ggplot(df, aes(x=x, y=y1)) + geom_point() 
+ggplot(df, aes(x=x, y=y1)) + geom_point() + 
+  geom_smooth(method="lm", se=FALSE)
+ggplot(df, aes(x=x, y=y2)) + geom_point() 
+ggplot(df, aes(x=x, y=y2)) + geom_point() + 
+  geom_smooth(method="lm", se=FALSE)
+ggplot(df, aes(x=x, y=y2)) + geom_point() + 
+  geom_smooth(se=FALSE)
+```
+
+
+## Variable types and mapping
+
+```{r vartype, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+vartype <- 
+"| Type of variable | How to map                  | Common errors |
+ |:-----------------|:----------------------------|:--------------|
+| Categorical, qualitative  | Category + count/proportion displayed, often as an area plot  or with a small number of categories mapped to colour or symbol | Not including 0 on the count/proportion axis. Not ordering categories. |
+| Quantitative | Position along an axis | Displaying as a bar, especially when showing mean values. Mapping to colour. |
+| Date/Time | Time-ordered axis, different temporal resolutions to study long term trend, or seasonal patterns. Lines typically connect measurements to indicate temporal dependence | Time order corrupted |
+| Space | Conventional projections of the sphere, map aspect ratio| Wrong aspect ratio |
+"
+cat(vartype, fill=TRUE)
+```
+
+```{r vartype-hux, echo=FALSE, width=120, eval=FALSE}
+library(huxtable)
+vartype <- hux(
+  Type = c("Categorical, qualitative", "Quantitative, numeric"),
+  Mapping = c("Usually summarised by count or proportion,  and category + statistic displayed, often as an area plot;  or with a small number of categories mapped to colour or symbol", "Position along an axis"),
+  add_colnames = TRUE
+) %>%
+  set_align(everywhere, everywhere, c("left", "left")) %>% 
+  set_col_width(1, 0.3) %>% 
+  set_bold(value=c(TRUE, TRUE, FALSE, FALSE, FALSE, FALSE), byrow=TRUE) %>%
+  set_wrap(everywhere, 2, TRUE) %>%
+  set_width(10)
+vartype
+```
+
+## Colour palettes 
+
+- Qualitative: categorical variables
+- Sequential: low to high numeric values
+- Diverging: negative to positive values
+
+```{r echo=FALSE, fig.height=7, fig.width=12}
+library(RColorBrewer)
+display.brewer.all()
+```
+
+### Choropleth map
+
+```{r echo=TRUE}
+# Read the tb data
+tb <- read_csv("data/TB_notifications_2018-03-18.csv") %>% 
+  select(country, year, new_sp_m04:new_sp_fu) %>%
+  gather(stuff, count, new_sp_m04:new_sp_fu) %>%
+  separate(stuff, c("stuff1", "stuff2", "genderage")) %>%
+  select(-stuff1, -stuff2) %>%
+  mutate(gender=substr(genderage, 1, 1), 
+         age=substr(genderage, 2, length(genderage))) %>%
+  select(-genderage)
+# Compute relative difference between 2012 and 2002
+tb_inc <- tb %>% 
+  filter(year %in% c(2002, 2012)) %>%
+  group_by(country, year) %>%
+  summarise(count = sum(count, na.rm=TRUE)) %>%
+  spread(year, count) %>%
+  mutate(reldif = ifelse(`2002` == 0, 0, (`2012`-`2002`)/(`2002`))) %>%
+  ungroup()
+
+# Join with a world map  
+library(maps)
+library(ggthemes)
+world_map <- map_data("world")
+# Names of countries need to be the same in both data tables
+tb_inc <- tb_inc %>% 
+  mutate(country=recode(country, 
+                       "United States of America"="USA", 
+                       "United Kingdom of Great Britain and Northern Ireland"="UK",
+                       "Russian Federation"="Russia"))
+tb_map <- left_join(world_map, tb_inc, by=c("region"="country"))
+```
+
+#### Sequential
+
+Default
+
+```{r}
+ggplot(tb_map) + 
+  geom_polygon(aes(x=long, y=lat, group=group, fill=reldif)) +
+      theme_map() 
+```
+
+Modified rainbow
+
+```{r}
+library(viridis)
+ggplot(tb_map) + 
+  geom_polygon(aes(x=long, y=lat, group=group, fill=reldif)) +
+      theme_map() +
+    scale_fill_viridis(na.value = "white")  
+```
+
+#### Diverging
+
+```{r}
+ggplot(tb_map) + 
+  geom_polygon(aes(x=long, y=lat, group=group, fill=reldif)) +
+      theme_map() +
+    scale_fill_distiller(palette="PRGn", na.value = "white", 
+                         limits = c(-7, 7))  
+```
+
+## Colour blindness
+
+- About 10% of the population have difficulty distonguishing between red and green. 
+- There are several colour blind tested palettes: RColorbrewer has an associated web site [colorbrewer.org](http://colorbrewer2.org) where the palettes are labelled, and the `colorblind` package has all palettes readable by everyone.
+- You can test your color choices for different forms of colorblindness using the `dichromat` package. Below is the same plot usng the default two colour scheme of ggplot, and what it looks like to a person with red/green colorblindness.
+
+
+```{r fig.show='hold', fig.width=8, fig.height=4}
+library(scales)
+df <- data.frame(x=runif(100), y=runif(100), cl=sample(c(rep("A", 50), rep("B", 50))))
+p <- ggplot(data=df, aes(x, y, colour=cl)) + theme_bw() + 
+  geom_point() + theme(legend.position = "none", aspect.ratio=1)
+library(dichromat)
+clrs <- hue_pal()(3)
+p 
+clrs <- dichromat(hue_pal()(3))
+p + scale_colour_manual("", values=clrs) 
+```
+
+## Pre-attentive
+
+Can you find the odd one out?
+
+```{r}
+df <- data.frame(x=runif(100), y=runif(100), cl=sample(c(rep("A", 1), rep("B", 99))))
+ggplot(data=df, aes(x, y, shape=cl)) + theme_bw() + 
+  geom_point() +
+  theme(legend.position="None", aspect.ratio=1)
+```
+
+Is it easier now?
+
+```{r}
+ggplot(data=df, aes(x, y, colour=cl)) + 
+  geom_point() +
+  theme_bw() + 
+  theme(legend.position="None", aspect.ratio=1) +
+  scale_colour_brewer(palette="Set1")
+```
+
+## Proximity
+
+- Basic rule: place the groups that you want to compare close to each other
+
+```{r echo=FALSE}
+library(tidyverse)
+tb <- read_csv("data/TB_notifications_2018-03-18.csv") %>% 
+  select(country, iso3, year, new_sp_m04:new_sp_fu) %>%
+  gather(stuff, count, new_sp_m04:new_sp_fu) %>%
+  separate(stuff, c("stuff1", "stuff2", "genderage")) %>%
+  select(-stuff1, -stuff2) %>%
+  mutate(gender=substr(genderage, 1, 1), 
+         age=substr(genderage, 2, length(genderage))) %>%
+  select(-genderage)
+
+tb_au <- tb %>% 
+  filter(country == "Australia") %>%
+  filter(!(age %in% c("04", "014", "514", "u"))) %>%
+  filter(year > 1996, year < 2013)
+```
+
+Here are two different arrangements of the tb data. To answer the question "Is the incidence similar for males and females in 2012 across age groups?" the first arrangement is better. It puts males and females right beside each other, so the relative heights of the bars can be seen quickly. The answer to the question would be "No, the numbers were similar in youth, but males are more affected with increasing age."
+
+The second arrangement puts the focus on age groups, and is better to answer the question "Is the incidence similar for age groups in 2012, across gender?" To which the answer would be "No, among females, the incidence is higher at early ages. For males, the incidence is much more uniform across age groups."
+
+```{r echo=TRUE, fig.width=8, fig.height=2}
+tb_au %>% filter(year == 2012) %>%
+  ggplot(aes(x = gender, y = count, fill = gender)) +
+  geom_bar(stat = "identity", position="dodge") +
+  facet_grid( ~ age) +
+  scale_fill_brewer(palette="Dark2")
+```
+
+```{r echo=TRUE, fig.width=8, fig.height=2}
+tb_au %>% filter(year == 2012) %>%
+  ggplot(aes(x = age, y = count, fill = age)) +
+  geom_bar(stat = "identity", position="dodge") +
+  facet_grid( ~ gender) +
+  scale_fill_brewer(palette="Dark2")
+```
+
+## Hierarchy of mappings
+
+1. Position - common scale (BEST): axis system
+2. Position - nonaligned scale: boxes in a side-by-side boxplot
+3. Length, direction, angle: pie charts, regression lines, wind maps
+4. Area: bubble charts
+5. Volume, curvature: 3D plots
+6. Shading, color (WORST): maps, points coloured by numeric variable
+
+[My crowd-sourcing expt](http://visiphilia.org/2016/08/03/CM-hierarchy)
+
+Nice explanation by [Peter Aldous](http://paldhous.github.io/ucb/2016/dataviz/week2.html)
+
+[General plotting advice and a book from Naomi Robbins](https://www.forbes.com/sites/naomirobbins/#2b1e20082a6a)
+
+## Themes
+
+The `ggthemes` package has many different styles for the plots. Other packages such as `xkcd`, `skittles`, `wes anderson`, `beyonce`, `ochre`, ....
+
+```{r}
+library(xkcd)
+ggplot(df, aes(x=x, y=y)) + 
+  geom_point() + 
+  theme_xkcd() +
+  xkcdaxis(c(0,1), c(0,1)) +
+  annotate("text", x=0.5, y=0.5, label="Help, I'm lost in here!", family="xkcd", size=5)
+```
+
+
+## Adding interactivity to plots
+
+Interaction on a plot can help de-clutter it, by making labels only show on mouse over. Occasionally it can be useful to zoom into parts of the plot. Often it is useful to change the aspect ratio.
+
+The `plotly` package makes it easy to add interaction to ggplots.
+
+```{r echo=FALSE}
+library(readxl)
+passengers <- read_xls("data/WebAirport_FY_1986-2017.xls", sheet=3, skip=6)
+library(tidyverse)
+passengers <- passengers %>% 
+  filter(!is.na(AIRPORT)) %>%
+  select(airport = AIRPORT,
+         Year, IN_DOM = INBOUND, OUT_DOM = OUTBOUND,
+         IN_INTL = INBOUND__1, 
+         OUT_INTL = OUTBOUND__1) %>%
+  filter(!airport %in%  "TOTAL AUSTRALIA") %>%
+  gather(key = "where", value = "amount", IN_DOM:OUT_INTL) %>%
+  separate(where, into=c("bound", "type_of_flight"))
+```
+
+```{r}
+library(plotly)
+p <- passengers %>%
+  filter(type_of_flight == "INTL") %>%
+  spread(key = bound, value = amount) %>%
+  ggplot() + geom_point(aes(x=IN, y=OUT, label=airport)) +
+  facet_wrap(~Year, ncol=8) +
+  coord_equal() +
+  scale_x_continuous("Incoming passengers (mil)", breaks=seq(0,8000000,2000000), labels=seq(0,8,2)) +
+  scale_y_continuous("Outgoing passengers (mil)", breaks=seq(0,8000000,2000000), labels=seq(0,8,2))
+ggplotly(p)
+```
+
+```{r eval=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/eechidna")
+library(eechidna)
+launchApp(
+  age = c("Age25_34", "Age35_44", "Age55_64"),
+  religion = c("Christianity", "Catholic", "NoReligion"),
+  other = c("NotOwned", "Indigenous", "Population")
+)
+```
+## Lab exercises
+
+1. Download the data on the [women's AFL](https://github.com/ropenscilabs/ozwomensport). These are the stats the first two seasons. There are two tables, one for players and one for teams. Be careful how you download. It may be easier to download the zip file. 
+2. Make a barchart of the total kicks by team, sorted from highest to lowest, for each season. What do you learn?
+3. To compare teams, should you use average or total numbers? Explain your thinking.
+4. Make a scatterplot of average kicks by average handballs, for each season? Use an aspect ratio of 1. What do you learn? Make the plot interactive and report the name of the team(s) that has(ve) the highest on both variables. 
+5. Make a scatterplot of average frees for by against, for each season? Use an aspect ratio of 1. What do you learn? Make the plot interactive and report the name of the team that has the most frees against and fewest for. 
+6. Make a side-by-side boxplot of the players' average kicks by team, for each season. What do you learn? Which team had the player with the highest average kicks? Do some teams appear to have "star" players, and others have more even skills in this area?
+7. Make a scatterplot of average kicks against handballs, for each season. Overlay a linear model. Add interaction. Which players are more likely to kick vs hand ball? Also handball rather than kick?
+
+```{r eval=FALSE, echo=FALSE}
+library(tidyverse)
+players <- read_csv("data/players.csv")
+teams <- read_csv("data/teams.csv")
+teams <- teams %>% filter(Club != "All Clubs")
+library(forcats)
+teams <- teams %>% rename(Kicks_TOT="Kicks TOT",Kicks_AVG="Kicks AVG",Handballs_AVG="Handballs AVG","Frees For_AVG"="Frees For AVG","Frees Agst_AVG"="Frees Agst AVG")
+players <- players %>% rename(Kicks_AVG = "Kicks AVG",Handballs_AVG="Handballs AVG")
+teams <- teams %>% mutate(Club = fct_reorder(Club, Kicks_TOT, .desc=TRUE))
+ggplot(teams, aes(x=Club, y=Kicks_TOT)) +
+  geom_col()
+ggplot(teams, aes(x=Kicks_AVG, y=Handballs_AVG)) + geom_point() + theme(aspect.ratio=1)
+ggplot(teams, aes(x=`Frees For_AVG`, y=`Frees Agst_AVG`)) + geom_point() + theme(aspect.ratio=1)
+players <- players %>% mutate(Club = fct_reorder(Club, Kicks_AVG, "median", .desc=TRUE))
+ggplot(players, aes(x=Club, y=Kicks_AVG)) + geom_boxplot()
+p <- ggplot(players, aes(x=Kicks_AVG, y=Handballs_AVG, label=Player)) + geom_point() + geom_smooth(method="lm") + theme(aspect.ratio=1)
+ggplotly()
+```
+
+
+## Resources
+
+- Kieran Healy [Data Visualization](http://socviz.co/index.html)
+- Winston Chang (2012) [Cookbook for R](graphics cookbook)
+- Antony Unwin (2014) [Graphical Data Analysis](http://www.gradaanwr.net)
+- Naomi Robbins (2013) [Creating More Effective Charts](http://www.nbr-graphs.com)
+
+## Share and share alike
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
