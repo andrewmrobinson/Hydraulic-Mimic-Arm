@@ -1,7 +1,9 @@
-
 close all
 clear all
 clc
+%2018 FYP - Hydraulic Hand
+%Andrew Robinson
+
 % positions_0[0] = -753.25 * angles.index[0] + 2051.8; // index
 % positions_0[1] = -754.84 * angles.middle[0] + 2252.7; // middle
 % positions_0[2] = -742.33 * angles.ring[0] + 2064.5; // ring

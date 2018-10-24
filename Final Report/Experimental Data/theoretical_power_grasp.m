@@ -1,9 +1,13 @@
+%FYP 2018 Hydraulic Hand
+%Andrew Robinson
+%Produces values for the theoretical force produced by each finger of the
+%hydraulic hand
+
 clear all
 close all
 clc
 data = [];
-pressures = [0.6 0.8 1.0 1.2 1.4 1.6 1.8]*10^6;
-pressures = [1.8]*10^6;
+pressures = [0.6 0.8 1.0 1.2 1.4 1.6 1.8]*10^6; %MPa
 for ll = 1:length(pressures)
     %P = 1.8*10^6; %18 bar
     P = pressures(ll);
@@ -11,10 +15,13 @@ for ll = 1:length(pressures)
     fric_coeff = 0.492;
     assumed_angle = 45; %degrees
     finger_names = {'Index' 'Middle' 'Ring' 'Pinky'};
+    
+    %Dimensions from CAD model scaled x1.5
     r_lower = [7.7700 9.6750 8.3850 8.3850]/1000;
     r_upper = [8.2500 8.2050 8.2350 7.8600]/1000;
     R_lower = [50.8950 53.9250 52.5600 50.1750]/1000;
     R_upper = [18.1050 16.8900 18.0300 21.0150]/1000;
+    
     guide_angles = [16.6 8.3 3 0 6.3 16.7 18 26.7];
     hand_angles = [30 19.6 7 0 0 12.4 23 34];
     
@@ -38,6 +45,7 @@ for ll = 1:length(pressures)
         
         F_lower(ii) = ((Fcyl-N1*fric_coeff)*2) - N2*fric_coeff;
         
+        %F_Total
         F_total(ii) = ((F_lower(ii) * r_lower(ii))/R_lower(ii)) + ((F_upper(ii) * r_upper(ii))/R_upper(ii));
         fprintf('%s finger: %fN\n',finger_names{ii},F_total(ii));
     end

@@ -1,6 +1,9 @@
 clear all
 close all
 clc
+%2018 FYP - Hydraulic Hand
+%Andrew Robinson
+%Makes box and whisker plots displaying error
 
 max_angles = [1.239183769 1.417207353;...
     1.499237827 1.523672437;...

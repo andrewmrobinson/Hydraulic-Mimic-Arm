@@ -1,7 +1,12 @@
-
 close all
 clear all
 clc
+%2018 FYP - Hydraulic Hand
+%Andrew Robinson
+
+%The code plots the finger mapping algorithm used in the project, converted
+%from the C++ code below.
+%
 % positions_0[0] = -753.25 * angles.index[0] + 2051.8; // index
 % positions_0[1] = -754.84 * angles.middle[0] + 2252.7; // middle
 % positions_0[2] = -742.33 * angles.ring[0] + 2064.5; // ring
@@ -13,7 +18,7 @@ clc
 % positions_1[3] = (angles.pinky[0] / 1.29) *(-705.92 * angles.pinky[1] + 2182.4) + (1 - (angles.pinky[0] / 1.29))  * (-790.62 * angles.pinky[1] + 2852.7);
 
 finger_names = {'Index' 'Middle' 'Ring' 'Pinky'};
-%met-prox prox-mid
+%[MCP PIP] joint
 max_angles = [1.239183769 1.417207353;...
     1.499237827 1.523672437;...
     1.249655744 1.425933999;...

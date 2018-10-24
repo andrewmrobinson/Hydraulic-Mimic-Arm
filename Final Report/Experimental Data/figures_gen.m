@@ -1,7 +1,9 @@
 clear all
 close all
 clc
-
+%2018 FYP - Hydraulic Hand
+%Andrew Robinson
+%Makes plots for final report
 width=300;
 height=200;
 x0=10;
