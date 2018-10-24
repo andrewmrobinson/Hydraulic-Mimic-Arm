@@ -1,0 +1,55 @@
+---
+title: "ETC1010: Data Modelling and Computing"
+author: "Professor Di Cook, EBS, Monash U."
+output: 
+  learnr::tutorial:
+    css: "css/logo.css"
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = TRUE,   
+                      message = FALSE,
+                      warning = FALSE,
+                      collapse = TRUE,
+                      fig.height = 4,
+                      fig.width = 8,
+                      fig.align = "center",
+                      cache = FALSE)
+tutorial_html_dependency()
+```
+
+```{r echo=FALSE}
+library(tidyverse)
+library(readxl)
+library(ggplot2)
+library(officer)
+library(rvg)
+library(magrittr)
+```
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r gripstrength}
+grip <- read_xlsx("data/gripstrength.xlsx")
+grip <- grip %>% gather(hand,strength,c("Right","Left"))
+grip <- grip %>% unite(genhan,Gender,hand,sep=" ")
+ggplot(grip)+geom_line(data=grip,aes(x=Age,y=strength,colour=genhan),size=2)+labs(title="Power grasp strength vs Age",y="Strength (kg)",colour="Legend")
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r gripstrength2}
+benchmark <- read_xlsx("data/benchmark.xlsx")
+benchmark$Name <- factor(benchmark$Name,levels=c("i-limb ultra","BeBionic3","Michelangelo","SmartHand","Vanderbilt University Hand","Benchmark"))
+colcolours <- c(NA,NA,NA,NA,NA,"yellow")
+ggplot(benchmark,aes(Name,`Grip Strength`,fill=colcolours))+geom_col()+guides(fill=FALSE)+labs(title="Power grasp comparison of powered prostheses vs Benchmark",y="Grip Strength (kg)",x="")
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

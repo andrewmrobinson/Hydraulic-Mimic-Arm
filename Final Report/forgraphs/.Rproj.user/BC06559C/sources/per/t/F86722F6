@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1540176170444.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2597184421",
+    "id" : "F86722F6",
+    "lastKnownWriteTime" : 1540176181,
+    "last_content_update" : 1540176181304,
+    "path" : "~/GitHub/Hydraulic-Mimic-Arm/Final Report/forgraphs/test.Rmd",
+    "project_path" : "test.Rmd",
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

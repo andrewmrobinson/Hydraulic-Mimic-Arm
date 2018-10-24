@@ -255,6 +255,8 @@ int main()
     EEPROM_Start();
     EEPROM_UpdateTemperature();
     psoc_id = EEPROM_ReadByte(PSOC_ID_BYTE_ADDRESS);
+    
+    
     switch(psoc_id){
         case 16:
             offsets[0][0] = 125;offsets[0][1] = 179;
